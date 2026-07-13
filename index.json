@@ -12,6 +12,17 @@
       }
     },
     {
+      "id": "vol03",
+      "order": 3,
+      "title": "Financial Statement Analysis",
+      "file": "vol03.json",
+      "counts": {
+        "flashcards": 60,
+        "traps": 38,
+        "problems": 16
+      }
+    },
+    {
       "id": "vol04",
       "order": 4,
       "title": "Corporate Issuers",

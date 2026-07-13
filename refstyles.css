@@ -126,3 +126,34 @@
 @media print{.refview .sheet{max-width:none;padding:0 6mm;}
 .refview section, .refview table{page-break-inside:avoid;}
 @page{size:A4;margin:11mm;}}
+
+/* --- estilos de referencia vol03 (FSA: ifrs + signos), scopeados --- */
+.refview{--ink:#000;--soft:#555;--rule:#bbb;--hdr:#ececec;--hdr2:#f6f6f6;}
+.refview .page{max-width:1080px;margin:0 auto;padding:18px 22px 50px;}
+.refview table{border-collapse:collapse;width:100%;font-size:10.5px;margin:3px 0 10px;}
+.refview th, .refview td{border:1px solid var(--ink);padding:4px 7px;vertical-align:top;}
+.refview thead th{background:var(--hdr);font-size:10px;text-transform:uppercase;letter-spacing:.3px;text-align:left;}
+.refview .lmh td{background:var(--ink);color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:10.5px;}
+.refview .topic{font-weight:700;width:20%;}
+.refview .same{font-style:italic;color:var(--soft);}
+.refview .note{font-size:10px;color:var(--soft);margin-top:4px;}
+@media print{.refview .page{max-width:none;padding:0 6mm;}
+@page{size:A4;margin:10mm 8mm;}}
+.refview{--ink:#000;--soft:#555;--rule:#bbb;--hdr:#ececec;--hdr2:#f6f6f6;}
+.refview .page{max-width:1080px;margin:0 auto;padding:18px 22px 50px;}
+.refview h2{font-size:12.5px;text-transform:uppercase;letter-spacing:.4px;border-bottom:2px solid var(--ink);
+    padding-bottom:3px;margin:16px 0 7px;display:flex;align-items:center;gap:6px;}
+.refview h2 i{font-size:16px;}
+.refview table{border-collapse:collapse;width:100%;font-size:10.5px;margin:3px 0;}
+.refview th, .refview td{border:1px solid var(--ink);padding:3px 6px;vertical-align:top;text-align:left;}
+.refview thead th{background:var(--hdr);font-size:10px;text-transform:uppercase;letter-spacing:.3px;}
+.refview .rowh{background:var(--hdr2);font-weight:700;}
+.refview td.c, .refview th.c{text-align:center;}
+.refview .up{font-weight:800;}
+.refview .dn{font-weight:800;}
+.refview .insight{border:1px solid var(--ink);border-left:5px solid var(--ink);padding:6px 10px;margin:7px 0;font-size:10.5px;}
+.refview .insight .lab{font-weight:800;text-transform:uppercase;font-size:9.5px;letter-spacing:.5px;display:flex;gap:5px;margin-bottom:2px;}
+.refview .note{font-size:10px;color:var(--soft);margin-top:3px;}
+@media print{.refview .page{max-width:none;padding:0 6mm;}
+.refview h2{page-break-after:avoid;}
+@page{size:A4;margin:10mm 8mm;}}

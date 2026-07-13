@@ -167,3 +167,8 @@ main{max-width:860px; margin:0 auto; padding:14px;}
 @media (min-width:720px){
   .flashcard .content{font-size:19px;}
 }
+
+/* soporte FSA: ecuaciones en bloque y resaltado inline */
+.content .eq, .sol .eq { display:block; margin:5px 0; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.95em; }
+.content .hl, .sol .hl, .trapcard .hl { color:var(--know); font-weight:700; }
+.sol .eq .hl { color:var(--know); }

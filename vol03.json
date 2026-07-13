@@ -1,0 +1,899 @@
+{
+  "id": "vol03",
+  "order": 3,
+  "title": "Financial Statement Analysis",
+  "lms": [
+    {
+      "id": "LM1",
+      "title": "Intercorporate Investments"
+    },
+    {
+      "id": "LM2",
+      "title": "Employee Compensation (Pensiones y SBC)"
+    },
+    {
+      "id": "LM3",
+      "title": "Multinational Operations"
+    },
+    {
+      "id": "LM4",
+      "title": "Analysis of Financial Institutions"
+    },
+    {
+      "id": "LM5",
+      "title": "Quality of Financial Reports"
+    },
+    {
+      "id": "LM6",
+      "title": "Integration of FSA Techniques"
+    }
+  ],
+  "cardTypes": {
+    "Clasificación": "Clasificación",
+    "Fórmula": "Fórmula",
+    "IFRS vs GAAP": "IFRS vs GAAP",
+    "Concepto": "Concepto",
+    "Método": "Método",
+    "Proceso": "Proceso"
+  },
+  "flashcards": [
+    {
+      "id": "vol03-c001",
+      "lm": "LM1",
+      "tipo": "Clasificación",
+      "q": "Las 4 categorías de inversión intercorporativa y su método",
+      "a": "<b>Financial assets</b> (&lt;20%, sin influencia) → IFRS 9.<br/><b>Associates</b> (20–50%, significant influence) → equity method.<br/><b>Joint venture</b> (shared control) → equity method.<br/><b>Business combination</b> (&gt;50%, control) → acquisition method + consolidación."
+    },
+    {
+      "id": "vol03-c002",
+      "lm": "LM1",
+      "tipo": "Fórmula",
+      "q": "Fórmula del Investment account bajo equity method",
+      "a": "<span class=\"eq\">Inv = Costo + Σ(%·NI) − Σ(%·Div) − Σ amort. del excess price</span>Dividendos = return of capital (reducen la cuenta, no son income). Goodwill va dentro del investment."
+    },
+    {
+      "id": "vol03-c003",
+      "lm": "LM1",
+      "tipo": "Fórmula",
+      "q": "Full goodwill vs Partial goodwill",
+      "a": "<span class=\"eq\">Full = FV de la entidad total − FV identifiable net assets</span><span class=\"eq\">Partial = Precio pagado − %·FV identifiable net assets</span>Full ≥ Partial. La diferencia = goodwill atribuible al NCI."
+    },
+    {
+      "id": "vol03-c004",
+      "lm": "LM1",
+      "tipo": "IFRS vs GAAP",
+      "q": "Goodwill: ¿full o partial? IFRS vs US GAAP",
+      "a": "<b>IFRS:</b> elección de full o partial goodwill (caso por caso).<br/><b>US GAAP:</b> solo <b>full goodwill</b> (NCI medido a fair value, obligatorio)."
+    },
+    {
+      "id": "vol03-c005",
+      "lm": "LM1",
+      "tipo": "IFRS vs GAAP",
+      "q": "Reversal de impairment: IFRS vs US GAAP",
+      "a": "<b>IFRS:</b> permite revertir impairments (equity method e IAS 36).<br/><b>US GAAP:</b> NO permite reversal.<br/>Goodwill: nunca se restaura en ninguno de los dos."
+    },
+    {
+      "id": "vol03-c006",
+      "lm": "LM1",
+      "tipo": "Concepto",
+      "q": "¿El NCI se suma o se resta del equity consolidado?",
+      "a": "Se <b>SUMA</b>. El NCI es equity de terceros en la subsidiaria. Bajo consolidación entra dentro del total equity como línea separada. Bajo full goodwill el NCI (y el equity) es mayor que bajo partial."
+    },
+    {
+      "id": "vol03-c007",
+      "lm": "LM1",
+      "tipo": "Método",
+      "q": "Equity method vs consolidación: ¿qué es igual y qué cambia?",
+      "a": "<b>Igual:</b> net income al parent y total equity neto.<br/><b>Cambia:</b> el tamaño de revenue, assets y liabilities. Equity method comprime en líneas netas → infla margen y ROA, esconde leverage."
+    },
+    {
+      "id": "vol03-c008",
+      "lm": "LM1",
+      "tipo": "Clasificación",
+      "q": "Las 3 categorías de financial assets bajo IFRS 9",
+      "a": "<b>Amortized cost</b> (solo debt; cobrar CF + SPPI).<br/><b>FVPL</b> (Δ FV a P&amp;L).<br/><b>FVOCI</b> (Δ FV a OCI; equity no recicla, solo dividendos a P&amp;L). Equity nunca va a amortized cost."
+    },
+    {
+      "id": "vol03-c009",
+      "lm": "LM1",
+      "tipo": "Concepto",
+      "q": "Un bond a amortized cost: ¿se ajusta a market value?",
+      "a": "NO. El carrying se mantiene a costo amortizado. Si fue comprado <b>a la par</b>, amortized cost = costo. Solo FVPL/FVOCI llevan el carrying a fair value."
+    },
+    {
+      "id": "vol03-c010",
+      "lm": "LM1",
+      "tipo": "Concepto",
+      "q": "Bond comprado con premium vs discount: efecto en interest income",
+      "a": "<b>Premium</b> (coupon &gt; yield): interest income &lt; coupon cobrado → carrying baja hacia par.<br/><b>Discount</b> (coupon &lt; yield): interest income &gt; coupon → carrying sube hacia par."
+    },
+    {
+      "id": "vol03-c011",
+      "lm": "LM1",
+      "tipo": "Concepto",
+      "q": "Goodwill impairment: IFRS vs US GAAP (niveles y pasos)",
+      "a": "<b>IFRS:</b> one-step, nivel CGU (recoverable amount vs carrying).<br/><b>US GAAP:</b> two-step, nivel reporting unit (paso 1: FV &lt; carrying; paso 2: loss = carrying GW − implied GW)."
+    },
+    {
+      "id": "vol03-c012",
+      "lm": "LM1",
+      "tipo": "Concepto",
+      "q": "Upstream vs downstream: tratamiento del unrealized profit",
+      "a": "Ambos eliminan el unrealized profit hasta el % del investor, hasta que el inventario se venda a un tercero. Ajusta el equity income. Upstream: profit en IS del associate. Downstream: profit en IS del investor."
+    },
+    {
+      "id": "vol03-c013",
+      "lm": "LM1",
+      "tipo": "IFRS vs GAAP",
+      "q": "SPE / VIE: ¿quién consolida? IFRS vs US GAAP",
+      "a": "<b>IFRS:</b> consolidar si en sustancia hay control (para beneficio del sponsor). NO existe 'qualifying SPE'.<br/><b>US GAAP:</b> el <b>primary beneficiary</b> consolida la VIE."
+    },
+    {
+      "id": "vol03-c014",
+      "lm": "LM2",
+      "tipo": "Concepto",
+      "q": "¿Cuándo se mide el fair value de la share-based compensation?",
+      "a": "Al <b>grant date</b>, y NO cambia después. Cambios posteriores del precio de la acción no afectan el expense de ese grant. El gasto se reconoce sobre el vesting period."
+    },
+    {
+      "id": "vol03-c015",
+      "lm": "LM2",
+      "tipo": "Método",
+      "q": "RSU vs stock options: cómo se mide el FV",
+      "a": "<b>RSU:</b> FV = precio de la acción al grant (ajustado por dividendos si no participa).<br/><b>Options:</b> FV estimado con modelo (Black-Scholes / binomial) al grant."
+    },
+    {
+      "id": "vol03-c016",
+      "lm": "LM2",
+      "tipo": "Concepto",
+      "q": "Inputs que SUBEN el fair value de una opción",
+      "a": "↑ volatility · ↑ vida estimada · ↑ risk-free rate · <b>↓ dividend yield</b>. La volatility es el input más subjetivo."
+    },
+    {
+      "id": "vol03-c017",
+      "lm": "LM2",
+      "tipo": "Fórmula",
+      "q": "Treasury stock method para diluted shares",
+      "a": "<span class=\"eq\">Diluted = Basic + shares de los awards − (Proceeds ÷ avg price)</span>Proceeds = (strike × #opciones; <b>0 para RSU</b>) + avg unrecognized SBC. Net loss → todo anti-dilutivo → diluted = basic."
+    },
+    {
+      "id": "vol03-c018",
+      "lm": "LM2",
+      "tipo": "IFRS vs GAAP",
+      "q": "Tax windfall/shortfall de SBC: IFRS vs US GAAP",
+      "a": "<b>IFRS:</b> windfall/shortfall va directo a <b>equity</b> → ETR estable.<br/><b>US GAAP:</b> va al <b>IS</b> (↓/↑ income tax expense) → ETR varía con el precio de la acción."
+    },
+    {
+      "id": "vol03-c019",
+      "lm": "LM2",
+      "tipo": "Fórmula",
+      "q": "Funded status de un plan DB",
+      "a": "<span class=\"eq\">Funded status = FV plan assets − Pension obligation</span>Negativo → underfunded → net pension <b>liability</b>. Positivo → overfunded → net pension <b>asset</b>."
+    },
+    {
+      "id": "vol03-c020",
+      "lm": "LM2",
+      "tipo": "Clasificación",
+      "q": "Componentes del periodic pension cost bajo IFRS (3) y dónde van",
+      "a": "<b>Service cost</b> → P&amp;L (operating).<br/><b>Net interest</b> (net liab/asset × discount) → P&amp;L (financing).<br/><b>Remeasurements</b> → OCI (no recicla)."
+    },
+    {
+      "id": "vol03-c021",
+      "lm": "LM2",
+      "tipo": "IFRS vs GAAP",
+      "q": "Componente de interés del pension cost: IFRS vs US GAAP",
+      "a": "<b>IFRS:</b> net interest = net liab/asset × discount rate.<br/><b>US GAAP:</b> gross interest cost (obligation × discount) <b>menos</b> expected return on plan assets (rate elegido por management), por separado."
+    },
+    {
+      "id": "vol03-c022",
+      "lm": "LM2",
+      "tipo": "IFRS vs GAAP",
+      "q": "Past service cost: IFRS vs US GAAP",
+      "a": "<b>IFRS:</b> directo a P&amp;L.<br/><b>US GAAP:</b> a OCI y luego se amortiza a P&amp;L. (Remeasurements/G&amp;L: IFRS a OCI permanente; US GAAP a OCI con corridor que amortiza.)"
+    },
+    {
+      "id": "vol03-c023",
+      "lm": "LM2",
+      "tipo": "Concepto",
+      "q": "¿Cómo afecta al funded status el pago de beneficios?",
+      "a": "Es <b>neutral</b>: reduce plan assets y obligation por igual. El plan es una entidad separada; esos pagos no tocan los FS de la empresa. Solo las contribuciones de la empresa son cash (CFO)."
+    },
+    {
+      "id": "vol03-c024",
+      "lm": "LM2",
+      "tipo": "Concepto",
+      "q": "Tratamiento del funded status en valuation (underfunded vs overfunded)",
+      "a": "<b>Underfunded</b> (net liability) → tratar como <b>deuda</b> (restar del EV).<br/><b>Overfunded</b> (net asset) → <b>ignorar</b> (los assets no se pueden retirar)."
+    },
+    {
+      "id": "vol03-c025",
+      "lm": "LM2",
+      "tipo": "Método",
+      "q": "DC plan vs DB plan: ¿quién lleva el riesgo?",
+      "a": "<b>DC:</b> la empresa define el aporte; el riesgo de inversión lo lleva el <b>empleado</b>. Contabilidad simple (expense = aporte).<br/><b>DB:</b> la empresa define el beneficio; el riesgo lo lleva la <b>empresa</b>."
+    },
+    {
+      "id": "vol03-c026",
+      "lm": "LM3",
+      "tipo": "Clasificación",
+      "q": "Las 3 monedas en multinational operations",
+      "a": "<b>Local (LC):</b> moneda del país de la sub.<br/><b>Functional (FC):</b> moneda del ambiente económico primario.<br/><b>Presentation (PC):</b> moneda de los FS consolidados del parent."
+    },
+    {
+      "id": "vol03-c027",
+      "lm": "LM3",
+      "tipo": "Proceso",
+      "q": "¿Qué método de traducción usar?",
+      "a": "<b>FC = moneda extranjera</b> (≠ PC del parent) → <b>current rate</b> (CTA a OCI).<br/><b>FC = PC del parent</b> → <b>temporal</b> (translation G/L a P&amp;L).<br/>Hiperinflación → especial."
+    },
+    {
+      "id": "vol03-c028",
+      "lm": "LM3",
+      "tipo": "Método",
+      "q": "Current rate method: rates y dónde va el ajuste",
+      "a": "Todos los assets y liabilities a <b>current rate</b>; capital stock a histórico; revenue/expenses a average. El ajuste (CTA) va a <b>OCI</b> (equity)."
+    },
+    {
+      "id": "vol03-c029",
+      "lm": "LM3",
+      "tipo": "Método",
+      "q": "Temporal method: rates y dónde va el ajuste",
+      "a": "Monetarios a <b>current</b>; no-monetarios (inventory at cost, PP&amp;E) a <b>historical</b>; COGS y deprec. a historical; revenue/most expenses a average. Translation G/L va a <b>P&amp;L</b>."
+    },
+    {
+      "id": "vol03-c030",
+      "lm": "LM3",
+      "tipo": "Concepto",
+      "q": "FX transaction gain/loss: ¿dónde se reconoce?",
+      "a": "Siempre en <b>P&amp;L</b> (net income), bajo IFRS y US GAAP — incluso si es <b>unrealized</b> (cuando hay un balance-sheet date entre la transacción y el settlement). Única excepción al principio de realización."
+    },
+    {
+      "id": "vol03-c031",
+      "lm": "LM3",
+      "tipo": "Concepto",
+      "q": "Asset exposure vs liability exposure cuando la FC sube",
+      "a": "<b>Asset exposure</b> (AR en FC): FC sube → <b>ganancia</b>.<br/><b>Liability exposure</b> (AP en FC): FC sube → <b>pérdida</b>. (FC baja: al revés.)"
+    },
+    {
+      "id": "vol03-c032",
+      "lm": "LM3",
+      "tipo": "Concepto",
+      "q": "Temporal + net monetary liabilities + FC sube: ¿qué pasa con el NI?",
+      "a": "<b>El NI BAJA</b> (contraintuitivo). Revenue y assets suben, pero la translation loss (net monetary liability × suba de FC) reduce el NI y el equity. Bajo CR o temporal-net asset, el NI subiría."
+    },
+    {
+      "id": "vol03-c033",
+      "lm": "LM3",
+      "tipo": "IFRS vs GAAP",
+      "q": "Hiperinflación: IFRS vs US GAAP",
+      "a": "<b>IFRS:</b> restatement por inflación (IAS 29) <b>y luego</b> current rate.<br/><b>US GAAP:</b> temporal method directamente (sin restate). Solo coinciden si GPI y tipo de cambio se mueven en proporción inversa exacta."
+    },
+    {
+      "id": "vol03-c034",
+      "lm": "LM3",
+      "tipo": "Concepto",
+      "q": "¿Cuál es el único ratio igual bajo current rate y temporal?",
+      "a": "<b>Receivables turnover</b> (sales/AR). Numerador (sales, average rate) y denominador (AR, current rate) usan el mismo rate bajo ambos métodos. Inventory turnover es igual entre temporal y la moneda local original."
+    },
+    {
+      "id": "vol03-c035",
+      "lm": "LM3",
+      "tipo": "Concepto",
+      "q": "¿Por qué la ETR de una multinacional no es estable?",
+      "a": "Es una mezcla ponderada de las tasas de cada país. Si el profit mix geográfico se mueve hacia países de tasa baja → ETR baja sin cambio operativo. Transfer pricing también la afecta."
+    },
+    {
+      "id": "vol03-c036",
+      "lm": "LM3",
+      "tipo": "Fórmula",
+      "q": "Organic sales growth",
+      "a": "<span class=\"eq\">Sales growth = Volume + Price/Mix + FX effect</span><span class=\"eq\">Organic growth = Volume + Price/Mix</span>(excluye FX y M&amp;A). El FX no es sustentable; el orgánico sí."
+    },
+    {
+      "id": "vol03-c037",
+      "lm": "LM4",
+      "tipo": "Clasificación",
+      "q": "¿Qué significan las letras de CAMELS?",
+      "a": "<b>C</b>apital adequacy · <b>A</b>sset quality · <b>M</b>anagement · <b>E</b>arnings · <b>L</b>iquidity · <b>S</b>ensitivity to market risk. Cada una rating 1 (mejor) a 5 (peor)."
+    },
+    {
+      "id": "vol03-c038",
+      "lm": "LM4",
+      "tipo": "Concepto",
+      "q": "¿El composite CAMELS es un promedio?",
+      "a": "NO. Es <b>ponderado por el juicio</b> del analista/examinador. Dos personas con los mismos ratings por componente pueden dar composites distintos (ej. equity analyst pesa A y E el doble)."
+    },
+    {
+      "id": "vol03-c039",
+      "lm": "LM4",
+      "tipo": "Fórmula",
+      "q": "Risk-weighted assets (RWA) y mínimos de capital Basel III",
+      "a": "<span class=\"eq\">RWA = Σ(activo × risk weight)</span>Mínimos: CET1 ≥ <b>4,5%</b> · Tier 1 ≥ <b>6,0%</b> · Total Capital ≥ <b>8,0%</b> de RWA."
+    },
+    {
+      "id": "vol03-c040",
+      "lm": "LM4",
+      "tipo": "Concepto",
+      "q": "¿Cómo puede mejorar un capital ratio sin emitir capital?",
+      "a": "<b>Reduciendo el RWA</b> (menos préstamos riesgosos, menos market risk). El ratio sube aunque el capital no cambie. (HSBC/Citigroup mejoraron CET1 así.)"
+    },
+    {
+      "id": "vol03-c041",
+      "lm": "LM4",
+      "tipo": "Fórmula",
+      "q": "LCR vs NSFR",
+      "a": "<span class=\"eq\">LCR = HQLA ÷ outflows esperados (30 días estrés) ≥ 100%</span><span class=\"eq\">NSFR = Available stable funding ÷ Required stable funding &gt; 100% (1 año)</span>"
+    },
+    {
+      "id": "vol03-c042",
+      "lm": "LM4",
+      "tipo": "Concepto",
+      "q": "Calidad de earnings de un banco: ¿qué fuente es menos sostenible?",
+      "a": "<b>Trading income</b> (más volátil). Net interest income (NII) y fee/service income son más sostenibles. Mayor proporción de trading = menor calidad de earnings."
+    },
+    {
+      "id": "vol03-c043",
+      "lm": "LM4",
+      "tipo": "Concepto",
+      "q": "¿Qué es el 'float' de una aseguradora?",
+      "a": "El período entre el cobro del premium y el pago del claim. Durante ese tiempo la aseguradora <b>invierte</b> el dinero → segunda fuente de ingreso. Es risk manager y a la vez investment company."
+    },
+    {
+      "id": "vol03-c044",
+      "lm": "LM4",
+      "tipo": "Fórmula",
+      "q": "Combined ratio (P&amp;C insurance)",
+      "a": "<span class=\"eq\">Combined = Loss &amp; LAE ratio + Underwriting expense ratio</span>Loss&amp;LAE usa net premiums <b>earned</b>; underwriting expense usa net premiums <b>written</b>. &gt;100% = underwriting loss."
+    },
+    {
+      "id": "vol03-c045",
+      "lm": "LM4",
+      "tipo": "Método",
+      "q": "P&amp;C vs L&amp;H insurance",
+      "a": "<b>P&amp;C:</b> contratos cortos, claims impredecibles (accidentes, clima). Análisis: combined ratio + loss reserves.<br/><b>L&amp;H:</b> contratos largos, claims predecibles (mortalidad actuarial)."
+    },
+    {
+      "id": "vol03-c046",
+      "lm": "LM5",
+      "tipo": "Concepto",
+      "q": "Reporting quality vs earnings quality",
+      "a": "<b>Reporting quality:</b> la información (relevante + fiel a la realidad).<br/><b>Earnings quality:</b> el negocio (retorno adecuado + sustentable). Reporting alta es <b>necesaria pero no suficiente</b> para earnings alta."
+    },
+    {
+      "id": "vol03-c047",
+      "lm": "LM5",
+      "tipo": "Clasificación",
+      "q": "El quality spectrum de financial reports (de mejor a peor)",
+      "a": "1. GAAP, decision-useful, sustainable.<br/>2. GAAP pero earnings no sustentables.<br/>3. Within GAAP, biased choices.<br/>4. Within GAAP, earnings management.<br/>5. Non-compliant → fictitious transactions."
+    },
+    {
+      "id": "vol03-c048",
+      "lm": "LM5",
+      "tipo": "Concepto",
+      "q": "Aggressive vs conservative accounting: ¿uno es bueno?",
+      "a": "Ambos son <b>sesgo</b>. <b>Aggressive:</b> ↑ período actual, puede ↓ futuro. <b>Conservative:</b> ↓ período actual, puede ↑ futuro. El examen no asume que conservador = buena calidad."
+    },
+    {
+      "id": "vol03-c049",
+      "lm": "LM5",
+      "tipo": "Fórmula",
+      "q": "Beneish M-score: cutoff e interpretación",
+      "a": "8 variables (DSR, GMI, AQI, SGI, DEPI, SGAI, Accruals, LEVI). <b>Más alto (menos negativo) = mayor probabilidad de manipulación.</b> Cutoff: M &gt; <b>−1,78</b> → 3,8% → flag."
+    },
+    {
+      "id": "vol03-c050",
+      "lm": "LM5",
+      "tipo": "Fórmula",
+      "q": "Altman Z-score: ratios e interpretación",
+      "a": "<span class=\"eq\">Z = 1,2·(NWC/TA) + 1,4·(RE/TA) + 3,3·(EBIT/TA) + 0,6·(MVequity/BVliab) + 1,0·(Sales/TA)</span><b>Más alto = mejor.</b> Z&lt;1,81 peligro; Z&gt;3,00 seguro; 1,81–3,00 gris."
+    },
+    {
+      "id": "vol03-c051",
+      "lm": "LM5",
+      "tipo": "Concepto",
+      "q": "¿Qué componente de earnings es más persistente?",
+      "a": "El <b>cash component</b> (β₁ &gt; β₂ en la regresión de Sloan). Mayor proporción de accruals → earnings menos persistentes, de menor calidad, que revierten más rápido a la media."
+    },
+    {
+      "id": "vol03-c052",
+      "lm": "LM5",
+      "tipo": "Fórmula",
+      "q": "Aggregate accruals: balance-sheet-based vs cash-flow-based",
+      "a": "<span class=\"eq\">BS-based = NOA_t − NOA_(t−1)</span><span class=\"eq\">CF-based = NI − (CFO + CFI)</span>Accruals ratio = aggregate accruals ÷ NOA promedio. Ratio alto = baja calidad."
+    },
+    {
+      "id": "vol03-c053",
+      "lm": "LM5",
+      "tipo": "Concepto",
+      "q": "Mean reversion y el rol de los accruals",
+      "a": "Earnings extremos revierten hacia la media (competencia, cierre de operaciones malas). Earnings con <b>mayor componente de accruals revierten MÁS RÁPIDO</b> (menos persistentes)."
+    },
+    {
+      "id": "vol03-c054",
+      "lm": "LM5",
+      "tipo": "Concepto",
+      "q": "Classification choices vs amounts/timing choices",
+      "a": "<b>Classification</b> afecta UN solo estado (ej. Merck: inventory → other assets, mejora ratios sin cambiar el total). <b>Amounts/timing</b> afectan varios estados y períodos."
+    },
+    {
+      "id": "vol03-c055",
+      "lm": "LM6",
+      "tipo": "Proceso",
+      "q": "El framework de análisis de FS — las 6 fases",
+      "a": "1. Define purpose &amp; context.<br/>2. Collect input data.<br/>3. Process data.<br/>4. Analyze/interpret.<br/>5. Develop conclusions &amp; recommendations.<br/>6. Follow-up. (Fases 3 y 4 suelen ir juntas.)"
+    },
+    {
+      "id": "vol03-c056",
+      "lm": "LM6",
+      "tipo": "Fórmula",
+      "q": "DuPont de 5 factores",
+      "a": "<span class=\"eq\">ROE = Tax burden × Interest burden × EBIT margin × Asset turnover × Leverage</span>Tax burden = NI/EBT · Interest burden = EBT/EBIT · EBIT margin = EBIT/Sales."
+    },
+    {
+      "id": "vol03-c057",
+      "lm": "LM6",
+      "tipo": "Concepto",
+      "q": "¿Por qué se aísla el income from associates en el DuPont?",
+      "a": "Es NI puro, <b>sin revenue asociado</b> y fuera del control de la empresa. Si se incluye, infla el net profit margin (no hay sales que lo acompañen) y distorsiona el asset turnover."
+    },
+    {
+      "id": "vol03-c058",
+      "lm": "LM6",
+      "tipo": "Concepto",
+      "q": "Al aislar associates en DuPont, ¿se ajusta el leverage?",
+      "a": "NO. Solo se ajustan <b>margin y turnover</b> (sacando el income y el investment de associates). El leverage se deja igual: se asume el mismo blend debt/equity financia todo."
+    },
+    {
+      "id": "vol03-c059",
+      "lm": "LM6",
+      "tipo": "Proceso",
+      "q": "Valuation: cómo aislar una participación que cotiza aparte (ej. L'Oréal en Nestlé)",
+      "a": "Restar el <b>market value</b> de la participación del market cap <b>Y</b> sus <b>earnings</b> del NI. Recién ahí calcular el P/E del core. Sacar solo uno de los dos da un P/E erróneo."
+    },
+    {
+      "id": "vol03-c060",
+      "lm": "LM6",
+      "tipo": "Concepto",
+      "q": "¿Qué indica OCF vs operating profit sobre la calidad de earnings?",
+      "a": "Si OCF &gt; operating profit (consistentemente) → earnings respaldados por cash, buena calidad. Si OCF es consistentemente menor → sospechar que el operating profit está inflado por accounting choices."
+    }
+  ],
+  "traps": [
+    {
+      "id": "vol03-t-lm1-01",
+      "lm": "LM1",
+      "star": false,
+      "title": "Amortized cost ≠ market value",
+      "body": "El carrying de un debt a amortized cost no se ajusta a mercado. Comprado a la par → carrying = costo."
+    },
+    {
+      "id": "vol03-t-lm1-02",
+      "lm": "LM1",
+      "star": false,
+      "title": "NI al parent: full = partial goodwill",
+      "body": "Mismo NI al parent; solo cambian ROA/ROE/D/E por la base de assets y equity."
+    },
+    {
+      "id": "vol03-t-lm1-03",
+      "lm": "LM1",
+      "star": false,
+      "title": "NCI suma al equity",
+      "body": "El NCI se SUMA al equity consolidado, no se resta. Full goodwill → NCI y equity mayores."
+    },
+    {
+      "id": "vol03-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "Equity method infla el margen",
+      "body": "Equity income entra al NI sin sumar al revenue → net margin sobreestimado y leverage subestimado."
+    },
+    {
+      "id": "vol03-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "Reversal: solo IFRS",
+      "body": "IFRS revierte impairments (no goodwill); US GAAP no. Pregunta clásica de dirección."
+    },
+    {
+      "id": "vol03-t-lm1-06",
+      "lm": "LM1",
+      "star": false,
+      "title": "One-step vs two-step",
+      "body": "Goodwill impairment: IFRS one-step (CGU) vs US GAAP two-step (reporting unit). Niveles distintos = respuestas distintas."
+    },
+    {
+      "id": "vol03-t-lm1-07",
+      "lm": "LM1",
+      "star": false,
+      "title": "Costos de la adquisición",
+      "body": "Legal/advisory/restructuring → gasto, NO parte del costo. Bargain purchase → gain en P&amp;L inmediato."
+    },
+    {
+      "id": "vol03-t-lm1-08",
+      "lm": "LM1",
+      "star": false,
+      "title": "El % no decide solo",
+      "body": "19% puede dar significant influence; 25% puede no darla. Control con &lt;50% es posible."
+    },
+    {
+      "id": "vol03-t-lm2-01",
+      "lm": "LM2",
+      "star": false,
+      "title": "FV se fija en el grant date",
+      "body": "El SBC expense usa el FV del grant y no cambia aunque el precio suba/baje después."
+    },
+    {
+      "id": "vol03-t-lm2-02",
+      "lm": "LM2",
+      "star": false,
+      "title": "Net vs gross interest (pension)",
+      "body": "IFRS: net interest. US GAAP: interest cost − expected return (separados). No mezclar."
+    },
+    {
+      "id": "vol03-t-lm2-03",
+      "lm": "LM2",
+      "star": false,
+      "title": "ETR inestable (US GAAP)",
+      "body": "Windfalls/shortfalls de SBC mueven la ETR bajo US GAAP. No proyectar la histórica como estable."
+    },
+    {
+      "id": "vol03-t-lm2-04",
+      "lm": "LM2",
+      "star": false,
+      "title": "Net loss → basic = diluted",
+      "body": "Con net loss todo es anti-dilutivo. El analista debe sumar manualmente para valuation."
+    },
+    {
+      "id": "vol03-t-lm2-05",
+      "lm": "LM2",
+      "star": false,
+      "title": "Benefits paid = neutral",
+      "body": "Pagar beneficios no cambia el funded status (baja assets y obligation por igual)."
+    },
+    {
+      "id": "vol03-t-lm2-06",
+      "lm": "LM2",
+      "star": false,
+      "title": "Contribución ≠ expense",
+      "body": "La contribución (cash, CFO) no es el periodic cost (accrual non-cash). Pueden diferir."
+    },
+    {
+      "id": "vol03-t-lm2-07",
+      "lm": "LM2",
+      "star": false,
+      "title": "Underfunded = deuda; overfunded = ignorar",
+      "body": "Asimetría en valuation: net liability se resta del EV; net asset no se suma."
+    },
+    {
+      "id": "vol03-t-lm2-08",
+      "lm": "LM2",
+      "star": false,
+      "title": "RSU = cero cash; opciones = CFF",
+      "body": "RSU settlement automático ($0). Opciones: strike × # = CFF al ejercer."
+    },
+    {
+      "id": "vol03-t-lm3-01",
+      "lm": "LM3",
+      "star": false,
+      "title": "CTA vs P&L",
+      "body": "Current rate → CTA a OCI. Temporal → translation G/L a P&amp;L. Trampa #1 del LM."
+    },
+    {
+      "id": "vol03-t-lm3-02",
+      "lm": "LM3",
+      "star": false,
+      "title": "FC sube + temporal + net liab → NI baja",
+      "body": "Contraintuitivo: revenue/assets suben pero el NI y el equity bajan por la translation loss."
+    },
+    {
+      "id": "vol03-t-lm3-03",
+      "lm": "LM3",
+      "star": false,
+      "title": "Único ratio igual en CR y TM",
+      "body": "Receivables turnover (sales/AR): mismo rate en numerador y denominador bajo ambos."
+    },
+    {
+      "id": "vol03-t-lm3-04",
+      "lm": "LM3",
+      "star": false,
+      "title": "FX transaction unrealized → al IS",
+      "body": "Va a net income aunque sea unrealized (balance-sheet date intermedio). No es OCI."
+    },
+    {
+      "id": "vol03-t-lm3-05",
+      "lm": "LM3",
+      "star": false,
+      "title": "Hiperinflación: IFRS ≠ US GAAP",
+      "body": "IFRS restate (IAS 29) + current; US GAAP temporal directo."
+    },
+    {
+      "id": "vol03-t-lm3-06",
+      "lm": "LM3",
+      "star": false,
+      "title": "FX en sales growth no es sustentable",
+      "body": "Buscar organic growth (volume + price). FX favorable puede revertirse."
+    },
+    {
+      "id": "vol03-t-lm4-01",
+      "lm": "LM4",
+      "star": false,
+      "title": "Composite CAMELS ≠ promedio",
+      "body": "Ponderado por juicio. Mismos ratings por componente → composites distintos."
+    },
+    {
+      "id": "vol03-t-lm4-02",
+      "lm": "LM4",
+      "star": false,
+      "title": "Capital ratio mejora bajando RWA",
+      "body": "Puede subir sin más capital — solo reduciendo RWA."
+    },
+    {
+      "id": "vol03-t-lm4-03",
+      "lm": "LM4",
+      "star": false,
+      "title": "Combined ratio: written vs earned",
+      "body": "Loss&amp;LAE usa earned; underwriting expense usa written. No mezclar. &gt;100% = U/W loss."
+    },
+    {
+      "id": "vol03-t-lm4-04",
+      "lm": "LM4",
+      "star": false,
+      "title": "Held for sale ≠ Available for sale",
+      "body": "\"Held for sale\" = discontinued ops. \"Available for sale\" = securities (FVOCI)."
+    },
+    {
+      "id": "vol03-t-lm4-05",
+      "lm": "LM4",
+      "star": false,
+      "title": "Trading income = menos sostenible",
+      "body": "Más trading → earnings más volátiles. NII y fees son preferibles."
+    },
+    {
+      "id": "vol03-t-lm4-06",
+      "lm": "LM4",
+      "star": false,
+      "title": "LCR (30d) vs NSFR (1 año)",
+      "body": "LCR = liquidez corto plazo (≥100%); NSFR = fondeo estable (1 año, &gt;100%)."
+    },
+    {
+      "id": "vol03-t-lm5-01",
+      "lm": "LM5",
+      "star": false,
+      "title": "Reporting quality ≠ earnings quality",
+      "body": "Reporting alta es necesaria pero no suficiente para earnings alta."
+    },
+    {
+      "id": "vol03-t-lm5-02",
+      "lm": "LM5",
+      "star": false,
+      "title": "M-score: más alto = peor",
+      "body": "Beneish: menos negativo = más manipulación. Cutoff −1,78 (3,8%)."
+    },
+    {
+      "id": "vol03-t-lm5-03",
+      "lm": "LM5",
+      "star": false,
+      "title": "Z-score: más alto = mejor",
+      "body": "Altman al revés que Beneish. &lt;1,81 peligro; &gt;3,00 seguro."
+    },
+    {
+      "id": "vol03-t-lm5-04",
+      "lm": "LM5",
+      "star": false,
+      "title": "Cash más persistente que accruals",
+      "body": "Más accruals → menos persistente, revierte más rápido a la media."
+    },
+    {
+      "id": "vol03-t-lm5-05",
+      "lm": "LM5",
+      "star": false,
+      "title": "Conservador también es sesgo",
+      "body": "Aggressive ↑ actual; conservative ↓ actual. No asumir que conservador = buena calidad."
+    },
+    {
+      "id": "vol03-t-lm5-06",
+      "lm": "LM5",
+      "star": false,
+      "title": "OCF también se manipula",
+      "body": "Diferir payables, clasificar inflows financieros como operativos. NI-vs-OCF no detectó a Satyam."
+    },
+    {
+      "id": "vol03-t-lm6-01",
+      "lm": "LM6",
+      "star": false,
+      "title": "Associates inflan el NPM",
+      "body": "NI puro sin revenue → infla el margin. Sacarlo: Nestlé pasó de 16,27% a 7,53%."
+    },
+    {
+      "id": "vol03-t-lm6-02",
+      "lm": "LM6",
+      "star": false,
+      "title": "Leverage NO se ajusta por associates",
+      "body": "Solo margin y turnover. El leverage se deja igual (mismo blend financia todo)."
+    },
+    {
+      "id": "vol03-t-lm6-03",
+      "lm": "LM6",
+      "star": false,
+      "title": "Valuation: ajustar valor Y earnings",
+      "body": "Sacar el market value de la participación del market cap Y sus earnings del NI. Olvidar uno da un P/E erróneo."
+    },
+    {
+      "id": "vol03-t-lm6-04",
+      "lm": "LM6",
+      "star": false,
+      "title": "Cambio contable rompe comparabilidad",
+      "body": "Un cambio de definición de segmentos hace incomparable la serie histórica."
+    }
+  ],
+  "problems": [
+    {
+      "id": "vol03-p01",
+      "lm": "LM1",
+      "title": "investment balance",
+      "given": "Investor compra 30% de un associate por €500.000. FV del PP&amp;E excede el book en €300.000 (vida útil 10 años). El associate reporta NI €100.000 y paga dividendos €50.000. Calculá el <b>investment balance</b> al cierre.",
+      "ask": "",
+      "answer": "€506.000",
+      "solution": "Goodwill amortizable solo el PP&amp;E: excess attrib. = 30%×300.000 = 90.000; amort. anual = 90.000/10 = 9.000.<span class=\"eq\">500.000 + 30%×100.000 − 30%×50.000 − 9.000</span><span class=\"eq\">= 500.000 + 30.000 − 15.000 − 9.000 = <span class=\"hl\">€506.000</span></span>"
+    },
+    {
+      "id": "vol03-p02",
+      "lm": "LM1",
+      "title": "Problema 2",
+      "given": "Acquirer paga $800.000 por el 80% de una empresa. FV de los net identifiable assets = $900.000; FV de toda la entidad = $1.000.000. Calculá el goodwill bajo <b>full</b> y bajo <b>partial</b>.",
+      "ask": "",
+      "answer": "$100.000",
+      "solution": "<span class=\"eq\">Full = 1.000.000 − 900.000 = <span class=\"hl\">$100.000</span></span><span class=\"eq\">Partial = 800.000 − 80%×900.000 = 800.000 − 720.000 = <span class=\"hl\">$80.000</span></span>La diferencia ($20.000) = goodwill atribuible al NCI."
+    },
+    {
+      "id": "vol03-p03",
+      "lm": "LM1",
+      "title": "impairment loss",
+      "given": "Una CGU bajo IFRS tiene carrying value €1.400.000 (incluye goodwill €300.000) y recoverable amount €1.300.000. Calculá el <b>impairment loss</b>.",
+      "ask": "",
+      "answer": "€100.000",
+      "solution": "IFRS one-step: <span class=\"eq\">Loss = carrying − recoverable = 1.400.000 − 1.300.000 = <span class=\"hl\">€100.000</span></span>Se aplica primero al goodwill."
+    },
+    {
+      "id": "vol03-p04",
+      "lm": "LM1",
+      "title": "impairment loss",
+      "given": "Mismo caso pero US GAAP: reporting unit FV $1.300.000, carrying $1.400.000 (goodwill $300.000), FV de net assets $1.200.000. Calculá el <b>impairment loss</b>.",
+      "ask": "",
+      "answer": "$200.000",
+      "solution": "US GAAP two-step. Paso 1: FV (1.300.000) &lt; carrying (1.400.000) → hay impairment. Paso 2: implied goodwill = 1.300.000 − 1.200.000 = 100.000.<span class=\"eq\">Loss = carrying GW − implied GW = 300.000 − 100.000 = <span class=\"hl\">$200.000</span></span>"
+    },
+    {
+      "id": "vol03-p05",
+      "lm": "LM1",
+      "title": "equity income",
+      "given": "Investor 25% en associate (upstream). NI del associate €20.000. Building infravaluado €40.000 (vida 20 años). Unrealized profit en inventario €8.000. Calculá el <b>equity income</b>.",
+      "ask": "",
+      "answer": "€2.500",
+      "solution": "Tres componentes: share del NI, menos amortización del excess atribuible al investor, menos el unrealized profit.<span class=\"eq\">Share NI = 25% × 20.000 = 5.000</span><span class=\"eq\">Amort. building = (25%×40.000) / 20 = 10.000/20 = 500</span><span class=\"eq\">Unrealized profit = 25% × 8.000 = 2.000</span><span class=\"eq\">Equity income = 5.000 − 500 − 2.000 = <span class=\"hl\">€2.500</span></span>"
+    },
+    {
+      "id": "vol03-p06",
+      "lm": "LM1",
+      "title": "interest income",
+      "given": "Bond par 100.000, comprado a 102.773 (premium). Coupon 5%, effective yield 4%. Calculá el <b>interest income</b> y la <b>amortización</b> del año 1, y el carrying al cierre.",
+      "ask": "",
+      "answer": "4.111",
+      "solution": "<span class=\"eq\">Interest income = 102.773 × 4% = <span class=\"hl\">4.111</span></span><span class=\"eq\">Amortización = 4.111 − 5.000 (coupon) = <span class=\"hl\">−889</span> (reduce premium)</span><span class=\"eq\">Carrying cierre = 102.773 − 889 = <span class=\"hl\">101.884</span></span>Interest income &lt; coupon → carrying baja hacia par."
+    },
+    {
+      "id": "vol03-p07",
+      "lm": "LM2",
+      "title": "SBC expense neto",
+      "given": "1.200.000 RSUs vested &amp; settled (grant-date FV $12). 300.000 forfeited (grant-date FV $18). Calculá el <b>SBC expense neto</b> del año.",
+      "ask": "",
+      "answer": "$9.000.000",
+      "solution": "<span class=\"eq\">Vested: 1.200.000 × 12 = 14.400.000</span><span class=\"eq\">Forfeited (reversal): 300.000 × 18 = 5.400.000</span><span class=\"eq\">SBC neto = 14.400.000 − 5.400.000 = <span class=\"hl\">$9.000.000</span></span>"
+    },
+    {
+      "id": "vol03-p08",
+      "lm": "LM2",
+      "title": "efecto en income tax expense",
+      "given": "Esas 1.200.000 RSUs settlearon cuando el precio de mercado era $28 (grant FV $12). Tax rate 25%. Calculá el <b>efecto en income tax expense</b> bajo US GAAP.",
+      "ask": "",
+      "answer": "↓ $4.800.000 en income tax expense",
+      "solution": "Windfall: deducción fiscal &gt; gasto contable.<span class=\"eq\">Exceso = 1.200.000 × (28 − 12) = 19.200.000</span><span class=\"eq\">Efecto = 19.200.000 × 25% = <span class=\"hl\">↓ $4.800.000 en income tax expense</span></span>(Bajo IFRS iría a equity, sin tocar el IS.)"
+    },
+    {
+      "id": "vol03-p09",
+      "lm": "LM2",
+      "title": "diluted shares",
+      "given": "Basic shares 100.000.000. Unvested RSUs 3.500.000. Unrecognized SBC: inicio $24M, fin $56M. Precio promedio $28. Calculá las <b>diluted shares</b> (treasury stock method).",
+      "ask": "",
+      "answer": "102.071.429",
+      "solution": "<span class=\"eq\">Avg unrecognized = (24M + 56M)/2 = 40M</span><span class=\"eq\">Shares recompradas = 40M / 28 = 1.428.571</span><span class=\"eq\">Diluted = 100.000.000 + 3.500.000 − 1.428.571 = <span class=\"hl\">102.071.429</span></span>"
+    },
+    {
+      "id": "vol03-p10",
+      "lm": "LM2",
+      "title": "net interest",
+      "given": "Plan DB: FV plan assets €23.432, pension obligation €28.416, discount rate 5,48%. Calculá el <b>net interest</b> (IFRS) y verificá vía gross.",
+      "ask": "",
+      "answer": "£273",
+      "solution": "<span class=\"eq\">Net interest = (28.416 − 23.432) × 5,48% = 4.984 × 5,48% = <span class=\"hl\">£273</span></span>Verificación gross: (28.416×5,48%) − (23.432×5,48%) = 1.557 − 1.284 = 273. ✓ (En el P&amp;L va solo el neto.)"
+    },
+    {
+      "id": "vol03-p11",
+      "lm": "LM3",
+      "title": "Problema 11",
+      "given": "Bajo temporal method: activos monetarios C$1.880.000, pasivos monetarios C$3.450.000. El C$ se fortalece. ¿Hay translation gain o loss? Explicá la exposición.",
+      "ask": "",
+      "answer": "translation LOSS",
+      "solution": "Exposición = <b>net monetary liability</b> de C$1.570.000 (3.450.000 − 1.880.000). El C$ se fortalece → cuesta más liquidar las deudas monetarias netas → <span class=\"hl\">translation LOSS</span> (va al P&amp;L bajo temporal). Regla: net monetary liability + FC sube = loss."
+    },
+    {
+      "id": "vol03-p12",
+      "lm": "LM4",
+      "title": "Problema 12",
+      "given": "Banco: $10 cash (RW 0%), $1.000 performing loans (RW 100%), $10 non-performing loans (RW 150%). Calculá el <b>RWA</b>. Si el CET1 es $150, calculá el <b>CET1 ratio</b>.",
+      "ask": "",
+      "answer": "$1.015",
+      "solution": "<span class=\"eq\">RWA = 10×0% + 1.000×100% + 10×150% = 0 + 1.000 + 15 = <span class=\"hl\">$1.015</span></span><span class=\"eq\">CET1 ratio = 150 / 1.015 = <span class=\"hl\">14,78%</span></span>(Por encima del mínimo 4,5%.)"
+    },
+    {
+      "id": "vol03-p13",
+      "lm": "LM4",
+      "title": "combined ratio",
+      "given": "Aseguradora P&amp;C: loss &amp; LAE ratio 61,4%, underwriting expense ratio 32,6%. Calculá el <b>combined ratio</b> e interpretá.",
+      "ask": "",
+      "answer": "94,0%",
+      "solution": "<span class=\"eq\">Combined = 61,4% + 32,6% = <span class=\"hl\">94,0%</span></span>&lt; 100% → underwriting <b>profitable</b> (gana plata en el negocio asegurador, antes del investment income del float)."
+    },
+    {
+      "id": "vol03-p14",
+      "lm": "LM4",
+      "title": "Problema 14",
+      "given": "Banco: HQLA $403,7B; net outflows esperados (30 días) $332,5B. Calculá el <b>LCR</b> y los <b>días</b> de estrés que cubre.",
+      "ask": "",
+      "answer": "121%",
+      "solution": "<span class=\"eq\">LCR = 403,7 / 332,5 = <span class=\"hl\">121%</span></span><span class=\"eq\">Días = 121% × 30 = <span class=\"hl\">36,3 días</span></span>Por encima del target Basel III (≥100%)."
+    },
+    {
+      "id": "vol03-p15",
+      "lm": "LM6",
+      "title": "NPM Nestlé-only",
+      "given": "Nestlé: profit excl. associates €6.901; sales €91.612; EBIT margin 11,90%, interest burden 94,16%, tax burden 67,21%. Verificá el <b>NPM Nestlé-only</b> por las dos vías.",
+      "ask": "",
+      "answer": "7,53%",
+      "solution": "Vía directa: <span class=\"eq\">6.901 / 91.612 = <span class=\"hl\">7,53%</span></span>Vía componentes: <span class=\"eq\">11,90% × 94,16% × 67,21% = <span class=\"hl\">7,53%</span></span> ✓ (vs 16,27% incluyendo associates)"
+    },
+    {
+      "id": "vol03-p16",
+      "lm": "LM6",
+      "title": "P/E Nestlé-only",
+      "given": "Market cap CHF 231.135; holding L'Oréal CHF 21.747. Consolidated earnings 14.904; L'Oréal earnings 934; NCI 448. Calculá el <b>P/E Nestlé-only</b>.",
+      "ask": "",
+      "answer": "15,5×",
+      "solution": "<span class=\"eq\">Implied value Nestlé = 231.135 − 21.747 = 209.388</span><span class=\"eq\">Standalone earnings = 14.904 − 934 − 448 = 13.522</span><span class=\"eq\">P/E = 209.388 / 13.522 = <span class=\"hl\">15,5×</span></span>Hay que ajustar tanto el numerador (valor) como el denominador (earnings)."
+    }
+  ],
+  "highlights": [],
+  "tables": [
+    {
+      "id": "vol03-ifrs",
+      "title": "IFRS vs US GAAP (FSA)",
+      "lms": [
+        "LM1",
+        "LM2",
+        "LM3"
+      ],
+      "html": "<div class=\"page\">\n\n<table>\n<thead><tr><th class=\"topic\">Tema</th><th style=\"width:40%\">IFRS</th><th style=\"width:40%\">US GAAP</th></tr></thead>\n<tbody>\n<tr class=\"lmh\"><td colspan=\"3\">LM1 · Intercorporate Investments</td></tr>\n<tr><td class=\"topic\">Goodwill (consolidación)</td><td>Elección de <b>full o partial</b> goodwill (caso por caso)</td><td>Solo <b>full goodwill</b> (NCI a fair value, obligatorio)</td></tr>\n<tr><td class=\"topic\">Goodwill impairment</td><td><b>One-step</b>, nivel <b>CGU</b>: recoverable amount vs carrying</td><td><b>Two-step</b>, nivel <b>reporting unit</b>: (1) FV&lt;carrying, (2) loss = carrying GW − implied GW</td></tr>\n<tr><td class=\"topic\">Reversal de impairment</td><td><b>Permitido</b> (equity method, IAS 36); goodwill nunca</td><td><b>No permitido</b> (ni equity ni activos); goodwill nunca</td></tr>\n<tr><td class=\"topic\">Contingent liabilities (en combinación)</td><td>Reconocer si el <b>FV es medible confiablemente</b></td><td>Reconocer solo si <b>probable + reasonably estimable</b></td></tr>\n<tr><td class=\"topic\">Contingent assets</td><td><b>No</b> se reconocen</td><td><b>Sí</b> (contractual a FV; non-contractual si \"more likely than not\")</td></tr>\n<tr><td class=\"topic\">Fair value option (associates)</td><td>Solo para <b>VC / mutual funds</b> y similares</td><td>Disponible para <b>todos</b> los inversores</td></tr>\n<tr><td class=\"topic\">SPE / VIE</td><td>Consolidar si en sustancia hay control; <b>no existe \"qualifying SPE\"</b></td><td>El <b>primary beneficiary</b> consolida la VIE</td></tr>\n<tr><td class=\"topic\">Financial assets (equity)</td><td>FVPL o FVOCI (elección irrevocable)</td><td>Equity siempre a <b>FVPL</b>; categorías HTM/Trading/AFS solo para <b>debt</b></td></tr>\n<tr class=\"lmh\"><td colspan=\"3\">LM2 · Employee Compensation</td></tr>\n<tr><td class=\"topic\">Tax windfall / shortfall (SBC)</td><td>Directo a <b>equity</b> → ETR estable</td><td>Al <b>income statement</b> (↓/↑ income tax expense) → ETR varía con el precio</td></tr>\n<tr><td class=\"topic\">Componente de interés (pension)</td><td><b>Net interest</b> = net liab/asset × discount rate</td><td><b>Gross:</b> interest cost − <b>expected return</b> on plan assets (rate elegido por mgmt), por separado</td></tr>\n<tr><td class=\"topic\">Past service cost</td><td>Directo a <b>P&amp;L</b></td><td>A <b>OCI</b>, luego se <b>amortiza</b> a P&amp;L</td></tr>\n<tr><td class=\"topic\">Remeasurements / actuarial G&amp;L</td><td>A <b>OCI</b>, permanente (no recicla)</td><td>A <b>OCI</b> con <b>corridor</b> (exceso del 10% se amortiza a P&amp;L)</td></tr>\n<tr class=\"lmh\"><td colspan=\"3\">LM3 · Multinational Operations</td></tr>\n<tr><td class=\"topic\">Hiperinflación</td><td><b>Restate</b> por inflación (IAS 29) <b>y luego</b> current rate</td><td><b>Temporal method</b> directamente (sin restate)</td></tr>\n<tr><td class=\"topic\">Method selection (general)</td><td class=\"same\" colspan=\"2\">Igual en ambos: FC = foreign → current rate; FC = parent → temporal. (US GAAP llama \"remeasurement\" al temporal.) FX transaction G/L → P&amp;L en ambos.</td></tr>\n<tr class=\"lmh\"><td colspan=\"3\">LM4 · Financial Institutions</td></tr>\n<tr><td class=\"topic\">Securities (clasificación)</td><td>IFRS 9: amortized cost / FVOCI / FVPL (business model + SPPI)</td><td>HTM / Trading / AFS para debt; equity a FVPL</td></tr>\n<tr><td class=\"topic\">Marco regulatorio</td><td class=\"same\" colspan=\"2\">Basel III es común a ambos. La diferencia operativa está en el reconocimiento de securities (arriba) y en el modelo de pérdidas (IFRS 9 expected credit loss vs incurred loss histórico de US GAAP, ahora CECL).</td></tr>\n<tr class=\"lmh\"><td colspan=\"3\">LM5 &amp; LM6 · Quality / Integration</td></tr>\n<tr><td class=\"topic\">Modelos (Beneish, Altman, accruals)</td><td class=\"same\" colspan=\"2\">Universales — no dependen de la norma. El analista igual debe ajustar por diferencias de standards/methods al comparar empresas (LM6).</td></tr>\n<tr><td class=\"topic\">Decision-useful characteristics</td><td class=\"same\" colspan=\"2\">Idénticas bajo IFRS y US GAAP: relevance + faithful representation (completa, neutral, sin error).</td></tr>\n</tbody>\n</table>\n<p class=\"note\"><b>Cómo cae en el examen:</b> casi siempre te dan un escenario y preguntan \"si reportara bajo la otra norma, ¿el ratio X sería mayor/menor/igual?\". Memorizá la <b>dirección</b> del efecto. Las tres más recurrentes: (1) windfall SBC → ETR menor bajo US GAAP; (2) impairment reversal solo IFRS; (3) full vs partial goodwill.</p>\n</div>"
+    },
+    {
+      "id": "vol03-signos",
+      "title": "Signos y Direcciones",
+      "lms": [
+        "LM1",
+        "LM2",
+        "LM3",
+        "LM4"
+      ],
+      "html": "<div class=\"page\">\n\n<h2>LM1 · Método de inversión → efecto en FS</h2>\n<table>\n<thead><tr><th>Dimensión</th><th class=\"c\">Financial assets</th><th class=\"c\">Equity method</th><th class=\"c\">Proportionate</th><th class=\"c\">Consolidación</th></tr></thead>\n<tbody>\n<tr><td class=\"rowh\">Revenue reportado</td><td class=\"c\">no</td><td class=\"c\">no (1 línea)</td><td class=\"c\">% del revenue</td><td class=\"c\">100%</td></tr>\n<tr><td class=\"rowh\">Total assets</td><td class=\"c\">el investment</td><td class=\"c\">1 línea net</td><td class=\"c\">% de c/u</td><td class=\"c\">100% + GW</td></tr>\n<tr><td class=\"rowh\">Net income al parent</td><td class=\"c\">varía</td><td class=\"c\" colspan=\"3\">IGUAL entre los tres</td></tr>\n<tr><td class=\"rowh\">Net profit margin</td><td class=\"c\">—</td><td class=\"c\"><span class=\"up\">↑ inflado</span></td><td class=\"c\">intermedio</td><td class=\"c\"><span class=\"dn\">↓ realista</span></td></tr>\n<tr><td class=\"rowh\">D/E (leverage)</td><td class=\"c\">bajo</td><td class=\"c\"><span class=\"dn\">↓ esconde deuda</span></td><td class=\"c\">intermedio</td><td class=\"c\"><span class=\"up\">↑ deuda visible</span></td></tr>\n<tr><td class=\"rowh\">ROA / ROE</td><td class=\"c\">—</td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\">intermedio</td><td class=\"c\"><span class=\"dn\">↓</span></td></tr>\n</tbody>\n</table>\n<table>\n<thead><tr><th>Full vs Partial goodwill</th><th class=\"c\">Goodwill</th><th class=\"c\">NCI</th><th class=\"c\">Assets/Equity</th><th class=\"c\">NI al parent</th><th class=\"c\">ROA/ROE</th><th class=\"c\">D/E</th></tr></thead>\n<tbody>\n<tr><td class=\"rowh\">Full goodwill</td><td class=\"c\">mayor</td><td class=\"c\">mayor (a FV)</td><td class=\"c\">mayores</td><td class=\"c\">IGUAL</td><td class=\"c\"><span class=\"dn\">↓ menor</span></td><td class=\"c\"><span class=\"dn\">↓ menor</span></td></tr>\n<tr><td class=\"rowh\">Partial goodwill</td><td class=\"c\">menor</td><td class=\"c\">menor</td><td class=\"c\">menores</td><td class=\"c\">IGUAL</td><td class=\"c\"><span class=\"up\">↑ mayor</span></td><td class=\"c\"><span class=\"up\">↑ mayor</span></td></tr>\n</tbody>\n</table>\n<h2>LM3 · Movimiento del tipo de cambio (Exhibit 5)</h2>\n<table>\n<thead><tr><th>FC respecto a PC</th><th>Temporal · net monetary liab.</th><th>Temporal · net monetary assets</th><th>Current rate</th></tr></thead>\n<tbody>\n<tr><td class=\"rowh\">FC sube (fortalece)</td><td>Rev/Assets/Liab ↑ · <span class=\"dn\">NI ↓ · Equity ↓</span> (translation LOSS)</td><td>Rev/Assets ↑ · <span class=\"up\">NI ↑ · Equity ↑</span> (GAIN)</td><td>Rev/Assets ↑ · <span class=\"up\">NI ↑ · Equity ↑</span> (CTA + → OCI)</td></tr>\n<tr><td class=\"rowh\">FC baja (debilita)</td><td>Rev/Assets/Liab ↓ · <span class=\"up\">NI ↑ · Equity ↑</span> (GAIN)</td><td>Rev/Assets ↓ · <span class=\"dn\">NI ↓ · Equity ↓</span> (LOSS)</td><td>Rev/Assets ↓ · <span class=\"dn\">NI ↓ · Equity ↓</span> (CTA −)</td></tr>\n</tbody>\n</table>\n<div class=\"insight\">\n<div class=\"lab\">La trampa contraintuitiva</div>\n  Bajo <b>temporal con net monetary liabilities</b> (caso típico, ej. Canadaco): FC sube → revenue y assets suben PERO <b>el NI y el equity BAJAN</b> por la translation loss. Bajo current rate o temporal-net asset, todo sube junto.\n</div>\n<h2>LM3 · Ratios: Current rate vs Temporal (cuando la FC se fortaleció)</h2>\n<table>\n<thead><tr><th>Ratio</th><th class=\"c\">Current rate vs original</th><th class=\"c\">Temporal vs original</th><th>Razón</th></tr></thead>\n<tbody>\n<tr><td class=\"rowh\">Profit margins (gross/net)</td><td class=\"c\">= preserva</td><td class=\"c\"><span class=\"up\">↑ gross / ↓ net</span></td><td>TM: COGS a H (gross↑); translation loss (net↓)</td></tr>\n<tr><td class=\"rowh\">D/E, D/A</td><td class=\"c\">= preserva</td><td class=\"c\"><span class=\"up\">↑ mayor</span></td><td>TM: equity/assets menores, deuda igual</td></tr>\n<tr><td class=\"rowh\">Asset / inventory turnover</td><td class=\"c\"><span class=\"dn\">↓</span></td><td class=\"c\">≈ preserva</td><td>TM: COGS e inventory ambos a H</td></tr>\n<tr><td class=\"rowh\">Receivables turnover</td><td class=\"c\" colspan=\"2\"><b>IGUAL en CR y TM</b></td><td>sales (A) / AR (C) — mismo rate en ambos</td></tr>\n</tbody>\n</table>\n<div class=\"note\">Regla: <b>CR preserva</b> los ratios BS-only e IS-only respecto al original. Los ratios que mezclan IS (rate A) y BS (rate C) difieren bajo ambos métodos.</div>\n<h2>LM5 · Decisión contable agresiva → ecuación contable</h2>\n<table>\n<thead><tr><th>Choice (aggressive)</th><th class=\"c\">Income</th><th class=\"c\">Equity</th><th class=\"c\">Assets</th><th class=\"c\">Liabilities</th></tr></thead>\n<tbody>\n<tr><td class=\"rowh\">Revenue prematuro/ficticio</td><td class=\"c\">↑</td><td class=\"c\">↑</td><td class=\"c\">↑ (AR)</td><td class=\"c\">=</td></tr>\n<tr><td class=\"rowh\">Omitir/diferir expenses</td><td class=\"c\">↑</td><td class=\"c\">↑</td><td class=\"c\">↑</td><td class=\"c\">↓</td></tr>\n<tr><td class=\"rowh\">Subestimar deprec./amort.</td><td class=\"c\">↑</td><td class=\"c\">↑</td><td class=\"c\">↑ (asset)</td><td class=\"c\">=</td></tr>\n<tr><td class=\"rowh\">Subestimar contingent liab.</td><td class=\"c\">↑</td><td class=\"c\">↑</td><td class=\"c\">=</td><td class=\"c\">↓</td></tr>\n<tr><td class=\"rowh\">Reclasificar inventory → other assets (Merck)</td><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"c\">= (se mueve)</td><td class=\"c\">=</td></tr>\n</tbody>\n</table>\n<div class=\"note\">Merck: current ratio ↓, days of inventory ↓, inventory turnover mejora — sin cambiar el total de activos. Classification afecta UN estado; amounts/timing afectan varios.</div>\n<h2>LM5 · Dirección de los modelos (no confundir el signo)</h2>\n<table>\n<thead><tr><th>Modelo</th><th>Dirección \"peor\"</th><th>Cutoffs</th></tr></thead>\n<tbody>\n<tr><td class=\"rowh\">Beneish M-score</td><td><b>Más alto (menos negativo) = peor</b> (más manipulación)</td><td>M &gt; −1,78 → 3,8% → flag</td></tr>\n<tr><td class=\"rowh\">Altman Z-score</td><td><b>Más bajo = peor</b> (más bankruptcy)</td><td>&lt;1,81 peligro · 1,81–3,00 gris · &gt;3,00 seguro</td></tr>\n<tr><td class=\"rowh\">Accruals ratio</td><td><b>Más alto = peor</b> (menor calidad)</td><td>—</td></tr>\n</tbody>\n</table>\n<h2>LM6 · Aislar associates en el DuPont</h2>\n<table>\n<thead><tr><th>Componente</th><th class=\"c\">¿Se ajusta?</th><th>Efecto al sacar associates (caso Nestlé)</th></tr></thead>\n<tbody>\n<tr><td class=\"rowh\">Net profit margin</td><td class=\"c\">SÍ</td><td><span class=\"dn\">↓</span> de 16,27% a 7,53% (se saca el NI sin revenue)</td></tr>\n<tr><td class=\"rowh\">Asset turnover</td><td class=\"c\">SÍ</td><td><span class=\"up\">↑</span> de 0,722 a 0,787 (se saca el investment de assets)</td></tr>\n<tr><td class=\"rowh\">Leverage</td><td class=\"c\"><b>NO</b></td><td>se deja igual (mismo blend debt/equity financia todo)</td></tr>\n</tbody>\n</table>\n</div>"
+    }
+  ]
+}
