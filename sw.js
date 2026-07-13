@@ -1,5 +1,5 @@
 /* Service worker: offline para la PWA de repaso CFA */
-const VERSION = 'cfa-repaso-v1';
+const VERSION = 'cfa-repaso-v2';
 const SHELL = [
   './',
   './index.html',

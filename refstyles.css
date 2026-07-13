@@ -76,3 +76,31 @@
 .refview .ci-box p{margin:2px 0 0 25px;font-size:9.4px;}
 .refview sub{font-size:.72em;}
 .refview sup{font-size:.72em;}
+
+/* --- estilos de referencia vol05 (Equity: ifrs + signos), scopeados --- */
+.refview h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;border-bottom:1.5px solid #111;padding-bottom:4px;margin:18px 0 8px;display:flex;align-items:center;gap:6px;}
+.refview table{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:6px;}
+.refview th{background:#e9e9e9;border:1px solid #111;padding:5px 7px;text-align:left;font-weight:600;font-size:10.5px;}
+.refview td{border:1px solid #999;padding:5px 7px;vertical-align:top;}
+.refview td:first-child{font-weight:600;width:26%;}
+.refview .note{font-size:10.5px;color:#333;margin:2px 0 4px;}
+.refview .box{border:1.5px solid #111;padding:9px 12px;margin-top:14px;}
+.refview .box .tag{font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #111;display:inline-block;margin-bottom:5px;}
+@media print{@page{size:A4;margin:12mm;}
+.refview h3, .refview table, .refview .box{break-inside:avoid;}}
+.refview .legend{font-size:10.5px;margin-bottom:14px;border:1px solid #111;padding:6px 10px;}
+.refview .legend b{font-weight:700;}
+.refview h3{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.03em;border-bottom:1.5px solid #111;padding-bottom:4px;margin:18px 0 8px;display:flex;align-items:center;gap:6px;}
+.refview table{width:100%;border-collapse:collapse;font-size:10.5px;margin-bottom:6px;}
+.refview th{background:#e9e9e9;border:1px solid #111;padding:4px 6px;text-align:center;font-weight:600;font-size:10px;}
+.refview th:first-child{text-align:left;}
+.refview td{border:1px solid #999;padding:4px 6px;vertical-align:top;text-align:center;}
+.refview td:first-child{text-align:left;font-weight:600;width:30%;}
+.refview td.note{text-align:left;font-weight:400;}
+.refview .up{font-weight:700;}
+.refview .dn{font-weight:700;}
+.refview .trap{border-left:3px solid #111;padding-left:6px;}
+.refview .box{border:1.5px solid #111;padding:9px 12px;margin-top:14px;}
+.refview .box .tag{font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #111;display:inline-block;margin-bottom:5px;}
+@media print{@page{size:A4;margin:11mm;}
+.refview h3, .refview table, .refview .box{break-inside:avoid;}}

@@ -10,6 +10,17 @@
         "traps": 76,
         "problems": 18
       }
+    },
+    {
+      "id": "vol05",
+      "order": 5,
+      "title": "Equity Valuation",
+      "file": "vol05.json",
+      "counts": {
+        "flashcards": 80,
+        "traps": 40,
+        "problems": 18
+      }
     }
   ]
 }

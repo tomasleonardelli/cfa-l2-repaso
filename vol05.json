@@ -1,0 +1,1071 @@
+{
+  "id": "vol05",
+  "order": 5,
+  "title": "Equity Valuation",
+  "lms": [
+    {
+      "id": "LM1",
+      "title": "Equity Valuation: Applications & Processes"
+    },
+    {
+      "id": "LM2",
+      "title": "Discounted Dividend Valuation"
+    },
+    {
+      "id": "LM3",
+      "title": "Free Cash Flow Valuation"
+    },
+    {
+      "id": "LM4",
+      "title": "Market-Based Valuation"
+    },
+    {
+      "id": "LM5",
+      "title": "Residual Income Valuation"
+    },
+    {
+      "id": "LM6",
+      "title": "Private Company Valuation"
+    }
+  ],
+  "cardTypes": {
+    "concepto": "Concepto",
+    "formula": "Fórmula",
+    "clasificacion": "Clasificación",
+    "proceso": "Proceso",
+    "ifrs-gaap": "IFRS vs GAAP",
+    "metodo": "Método vs método"
+  },
+  "flashcards": [
+    {
+      "id": "vol05-c001",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Los 5 pasos del equity valuation process",
+      "a": "1) Entender el negocio (industry/competitive analysis, financial analysis) · 2) Forecast de performance · 3) Elegir el modelo de valuacion · 4) Convertir forecasts en valuacion · 5) Aplicar las conclusiones (recomendacion/informe)"
+    },
+    {
+      "id": "vol05-c002",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Modelos absolutos vs relativos de valuacion",
+      "a": "Absolutos: estiman intrinsic value directo (DDM, FCF, RI, asset-based). Relativos: valor respecto de un benchmark via multiplos (P/E, P/B, EV/EBITDA) — 'law of one price'."
+    },
+    {
+      "id": "vol05-c003",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Intrinsic value y la 'mispricing' del analista",
+      "a": "Intrinsic value = valor si el mercado tuviera info perfecta. Mispricing percibido = IV_analista − precio. Se descompone en (IV_real − precio) [error de mercado] + (IV_analista − IV_real) [error del analista]."
+    },
+    {
+      "id": "vol05-c004",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Going-concern value vs liquidation value",
+      "a": "Going-concern: la empresa sigue operando indefinidamente. Liquidation value: valor de vender los activos por separado y cancelar pasivos. Se usa el mayor de los dos como piso."
+    },
+    {
+      "id": "vol05-c005",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Las 5 fuerzas de Porter",
+      "a": "1) Amenaza de nuevos entrantes · 2) Poder de proveedores · 3) Poder de compradores · 4) Amenaza de sustitutos · 5) Rivalidad entre competidores."
+    },
+    {
+      "id": "vol05-c006",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Top-down vs bottom-up forecasting",
+      "a": "Top-down: de macro/industria hacia la empresa (economia → sector → company). Bottom-up: de la empresa hacia agregados (proyectar cada linea y sumar). Se pueden combinar (hybrid)."
+    },
+    {
+      "id": "vol05-c007",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Quality of earnings — red flags",
+      "a": "Non-recurring items en operating income, crecimiento de accruals divergente del CFO, cambios de estimaciones contables, revenue recognition agresivo, off-balance-sheet financing. Menor accrual component = mayor calidad."
+    },
+    {
+      "id": "vol05-c008",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Absolute vs relative: fortaleza/debilidad principal",
+      "a": "Absoluto: fundamentado en cash flows, pero sensible a inputs (r, g). Relativo: simple y de mercado, pero hereda el mispricing de los comparables (valor relativo, no intrinseco)."
+    },
+    {
+      "id": "vol05-c009",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Gordon Growth Model (GGM)",
+      "a": "V0 = D1/(r − g) = D0(1+g)/(r − g). Asume g constante < r a perpetuidad."
+    },
+    {
+      "id": "vol05-c010",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Required return despejado de GGM",
+      "a": "r = D1/P0 + g = (dividend yield) + (capital gains yield). g suele estimarse via g = b×ROE."
+    },
+    {
+      "id": "vol05-c011",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Justified LEADING P/E (GGM)",
+      "a": "P0/E1 = (1 − b)/(r − g). Basado en earnings del proximo año."
+    },
+    {
+      "id": "vol05-c012",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Justified TRAILING P/E (GGM)",
+      "a": "P0/E0 = (1 − b)(1+g)/(r − g). Basado en earnings del ultimo año."
+    },
+    {
+      "id": "vol05-c013",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "PVGO (present value of growth opportunities)",
+      "a": "V0 = E1/r + PVGO. La empresa vale el no-growth value (E1/r) mas el valor presente de las oportunidades de reinversion rentable."
+    },
+    {
+      "id": "vol05-c014",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Two-stage DDM (estructura)",
+      "a": "Descontar dividendos explicitos de la etapa 1 uno por uno + PV del terminal value = D_(n+1)/(r − gL) descontado a t=n. Terminal value via GGM con g de largo plazo."
+    },
+    {
+      "id": "vol05-c015",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "H-model",
+      "a": "V0 = [D0(1+gL) + D0·H·(gS − gL)] / (r − gL). H = mitad del periodo supernormal (periodo = 2H años). gS decae linealmente a gL."
+    },
+    {
+      "id": "vol05-c016",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Sustainable growth rate",
+      "a": "g = b × ROE, donde b = retention rate = (1 − payout)."
+    },
+    {
+      "id": "vol05-c017",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "PRAT / DuPont del sustainable growth",
+      "a": "g = b × (Net profit margin) × (Asset turnover) × (Financial leverage). = Retention × ROE expandido en DuPont."
+    },
+    {
+      "id": "vol05-c018",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Valor de preferred stock no-callable perpetuo",
+      "a": "V0 = D/r (perpetuidad simple, sin crecimiento)."
+    },
+    {
+      "id": "vol05-c019",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Cuando es apropiado el DDM",
+      "a": "Empresa paga dividendos, con politica de dividendos estable y ligada a earnings; perspectiva de accionista minoritario (no control); no aplica bien si no paga dividendos o si el payout no refleja capacidad."
+    },
+    {
+      "id": "vol05-c020",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "GGM vs two-stage vs H-model — cuando cada uno",
+      "a": "GGM: maduras, g estable. Two-stage: g alto por un periodo y luego cae abruptamente a gL. H-model: g alto que DECAE LINEALMENTE (gradual) a gL."
+    },
+    {
+      "id": "vol05-c021",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Strengths/weaknesses del GGM",
+      "a": "Fortaleza: simple, aplicable a maduras e indices. Debilidad: muy sensible a r y g; requiere g < r; inutil sin dividendos."
+    },
+    {
+      "id": "vol05-c022",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Componente de PVGO en el leading P/E",
+      "a": "P0/E1 = 1/r + PVGO/E1. La parte 1/r es el valor no-growth; el resto del P/E viene de PVGO."
+    },
+    {
+      "id": "vol05-c023",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Dividendo vs FCFE — perspectiva",
+      "a": "DDM = accionista minoritario (recibe solo lo declarado). FCFE = perspectiva de control (accede a toda la caja distribuible). Convergen solo si payout = 100% del FCFE (mutually consistent)."
+    },
+    {
+      "id": "vol05-c024",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Terminal value en two-stage DDM",
+      "a": "TV_n = D_(n+1)/(r − gL), calculado al inicio de la etapa estable (t=n) y luego descontado n periodos a t=0."
+    },
+    {
+      "id": "vol05-c025",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "FCFF desde Net Income",
+      "a": "FCFF = NI + NCC + Int(1 − Tax rate) − FCInv − WCInv. Se suma el interes after-tax porque el FCFF es pre-financiamiento (flujo a deuda+equity)."
+    },
+    {
+      "id": "vol05-c026",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "FCFF desde CFO",
+      "a": "FCFF = CFO + Int(1 − Tax rate) − FCInv. (Asume interes clasificado en operating bajo US GAAP)."
+    },
+    {
+      "id": "vol05-c027",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "FCFF desde EBIT",
+      "a": "FCFF = EBIT(1 − Tax rate) + Dep − FCInv − WCInv. Ojo: suma Dep COMPLETA (no ×Tax)."
+    },
+    {
+      "id": "vol05-c028",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "FCFF desde EBITDA",
+      "a": "FCFF = EBITDA(1 − Tax rate) + Dep(Tax rate) − FCInv − WCInv. Ojo: suma solo el TAX SHIELD de Dep (Dep×Tax), no Dep completa."
+    },
+    {
+      "id": "vol05-c029",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "FCFE desde FCFF",
+      "a": "FCFE = FCFF − Int(1 − Tax rate) + Net borrowing."
+    },
+    {
+      "id": "vol05-c030",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "FCFE desde Net Income",
+      "a": "FCFE = NI + NCC − FCInv − WCInv + Net borrowing."
+    },
+    {
+      "id": "vol05-c031",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "FCFE desde CFO",
+      "a": "FCFE = CFO − FCInv + Net borrowing."
+    },
+    {
+      "id": "vol05-c032",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Single-stage (constant growth) FCFF y FCFE",
+      "a": "Firm value = FCFF1/(WACC − g). Equity value = FCFE1/(r − g). FCFF se descuenta a WACC; FCFE a costo del equity."
+    },
+    {
+      "id": "vol05-c033",
+      "lm": "LM3",
+      "tipo": "ifrs-gaap",
+      "q": "Clasificacion de INTERES pagado (CFO/CFF)",
+      "a": "US GAAP: interes pagado siempre en CFO. IFRS: opcion — CFO o CFF. Afecta el punto de partida del bridge de FCFF."
+    },
+    {
+      "id": "vol05-c034",
+      "lm": "LM3",
+      "tipo": "ifrs-gaap",
+      "q": "Clasificacion de INTERES/DIVIDENDOS recibidos y dividendos pagados",
+      "a": "US GAAP: interes/div recibidos en CFO; div pagados en CFF. IFRS: recibidos en CFO o CFI; interes pagado en CFO o CFF; div pagados en CFO o CFF."
+    },
+    {
+      "id": "vol05-c035",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Cuando FCFE NO es apropiado",
+      "a": "Si FCFE es frecuentemente negativo o muy volatil, o si la estructura de capital es inestable → mejor FCFF (a WACC). FCFF preferido con leverage cambiante."
+    },
+    {
+      "id": "vol05-c036",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Non-operating assets",
+      "a": "Value of firm = Value of operating assets (del FCFF) + Value of non-operating assets (excess cash, inversiones, pension surplus). Se suman aparte porque NO estan en los operating cash flows."
+    },
+    {
+      "id": "vol05-c037",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Target debt ratio en el forecast de FCFE",
+      "a": "El DR objetivo = % de la inversion incremental (FCInv−Dep y WCInv) financiada con deuda. Es financiamiento MARGINAL, NO el peso de deuda en el WACC."
+    },
+    {
+      "id": "vol05-c038",
+      "lm": "LM3",
+      "tipo": "metodo",
+      "q": "FCFF vs FCFE — que descuento y que da",
+      "a": "FCFF → descontar a WACC → firm value; restar deuda para equity. FCFE → descontar a r (cost of equity) → equity value directo. Usados en M&A por perspectiva de control."
+    },
+    {
+      "id": "vol05-c039",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Justified LEADING P/E (fundamentals)",
+      "a": "P0/E1 = (1 − b)/(r − g)."
+    },
+    {
+      "id": "vol05-c040",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Justified TRAILING P/E (fundamentals)",
+      "a": "P0/E0 = (1 − b)(1+g)/(r − g)."
+    },
+    {
+      "id": "vol05-c041",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Justified P/B",
+      "a": "P0/B0 = (ROE − g)/(r − g). Deriva de E1=B0×ROE y g=b×ROE en la GGM. NO es (1−b)/(r−g)."
+    },
+    {
+      "id": "vol05-c042",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Justified P/S",
+      "a": "P0/S0 = (E0/S0)(1 − b)(1+g)/(r − g). E0/S0 = profit margin."
+    },
+    {
+      "id": "vol05-c043",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Justified dividend yield",
+      "a": "D0/P0 = (r − g)/(1+g). Positivamente ligado a r, NEGATIVAMENTE a g (inverso al P/E)."
+    },
+    {
+      "id": "vol05-c044",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "PEG ratio",
+      "a": "PEG = P/E / expected earnings growth (en %). PEG < 1 = atractivo. Ignora riesgo y duracion del growth; asume relacion lineal."
+    },
+    {
+      "id": "vol05-c045",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Terminal value con multiplos (P/E)",
+      "a": "Vn = trailing terminal P/E × En, o Vn = forward terminal P/E × En+1."
+    },
+    {
+      "id": "vol05-c046",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Enterprise Value (EV) — composicion",
+      "a": "EV = MV equity + MV preferred + minority interest + MV deuda − cash y short-term investments. Se resta el cash."
+    },
+    {
+      "id": "vol05-c047",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Harmonic mean y weighted harmonic",
+      "a": "XH = n / Σ(1/Xi). XWH = 1 / Σ(wi/Xi). La weighted harmonic reproduce el P/E real del portafolio agregado."
+    },
+    {
+      "id": "vol05-c048",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Inverse price ratios",
+      "a": "P/E→E/P (earnings yield); P/B→B/P; P/S→S/P; P/CF→CF/P; P/D→D/P (dividend yield). Se usan para rankear cuando el numerador puede ser negativo."
+    },
+    {
+      "id": "vol05-c049",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "4 definiciones de cash flow en P/CF",
+      "a": "(1) EPS + noncash charges [='P/CF'] · (2) FCFE · (3) EBITDA · (4) P/FCFE. Teoria prefiere FCFE."
+    },
+    {
+      "id": "vol05-c050",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "EV multiples principales",
+      "a": "EV/EBITDA (el mas usado), EV/S, EV/FCFF (mejor link teorico), EV/EBITDAR (aerolineas, R=rent)."
+    },
+    {
+      "id": "vol05-c051",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Normalized EPS — 2 metodos",
+      "a": "(1) Historical average EPS: promedio del ciclo (no ajusta tamaño). (2) Average ROE × BVPS actual: refleja tamaño actual (preferido)."
+    },
+    {
+      "id": "vol05-c052",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Molodovsky effect",
+      "a": "P/Es contra-ciclicos: EPS deprimido en el piso → P/E artificialmente ALTO; EPS inflado en el pico → P/E BAJO. Por eso se normaliza."
+    },
+    {
+      "id": "vol05-c053",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Earnings yield (E/P) — cuando",
+      "a": "Inverse ratio usado cuando EPS es cero/negativo (rankea consistente, precio nunca negativo). P/E negativo se reporta como NM."
+    },
+    {
+      "id": "vol05-c054",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Comparables vs forecasted fundamentals",
+      "a": "Comparables: multiplos de similares (law of one price), valor RELATIVO. Fundamentals: justified multiple desde DCF, valor mas cercano al intrinseco."
+    },
+    {
+      "id": "vol05-c055",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "SUE vs scaled earnings surprise",
+      "a": "Scaled surprise: UE / σ de los FORECASTS actuales de analistas. SUE: UE / σ de las SORPRESAS historicas. Denominadores distintos."
+    },
+    {
+      "id": "vol05-c056",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "P/S relacion con P/E",
+      "a": "(P/E) × (net profit margin) = P/S. Dos stocks con igual P/E: el de mayor P/S tiene mayor margen."
+    },
+    {
+      "id": "vol05-c057",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Residual Income (RI)",
+      "a": "RI = Net income − Equity charge, donde Equity charge = r × Equity capital (book value). RI por accion = Et − r·Bt−1."
+    },
+    {
+      "id": "vol05-c058",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Economic Value Added (EVA)",
+      "a": "EVA = NOPAT − (C% × TC). NOPAT = net operating profit after taxes; C% = WACC; TC = total capital."
+    },
+    {
+      "id": "vol05-c059",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Market Value Added (MVA)",
+      "a": "MVA = MV de la empresa − total capital invertido."
+    },
+    {
+      "id": "vol05-c060",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Modelo de Residual Income (general)",
+      "a": "V0 = B0 + Σ RIt/(1+r)^t. Valor = book value actual + PV de todos los residual incomes futuros."
+    },
+    {
+      "id": "vol05-c061",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Single-stage (constant growth) RI",
+      "a": "V0 = B0 + [(ROE − r)/(r − g)]·B0. Equivale a P/B = 1 + (ROE−r)/(r−g) = (ROE−g)/(r−g)."
+    },
+    {
+      "id": "vol05-c062",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Terminal value con persistence factor ω",
+      "a": "PV_TV = (ET − r·BT−1) / [(1 + r − ω)(1+r)^(T−1)]. ω∈[0,1]; mayor ω = mayor persistencia del RI."
+    },
+    {
+      "id": "vol05-c063",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Clean surplus relation",
+      "a": "Bt = Bt−1 + Et − Dt. Todo cambio en book value (salvo transacciones con dueños) pasa por el income statement. OCI (dirty surplus) lo viola."
+    },
+    {
+      "id": "vol05-c064",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Tobin's q",
+      "a": "q = (MV deuda + equity) / replacement cost de los activos. Similar a P/B pero incluye deuda y usa replacement cost (refleja inflacion)."
+    },
+    {
+      "id": "vol05-c065",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Strengths del RI model",
+      "a": "El terminal value NO domina el PV total (grueso en B0); usa datos contables disponibles; sirve para empresas sin dividendos ni FCF positivo."
+    },
+    {
+      "id": "vol05-c066",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Cuando usar RI",
+      "a": "Sin dividendos o impredecibles; FCF negativo; gran incertidumbre en el terminal value de otros modelos. Requiere clean surplus."
+    },
+    {
+      "id": "vol05-c067",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "RI vs DDM/FCF — equivalencia",
+      "a": "Con los mismos pro forma statements y el mismo r, RI = DDM = FCF dan el MISMO valor. RI es otra descomposicion, no otro valor."
+    },
+    {
+      "id": "vol05-c068",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Continuing RI — 4 supuestos",
+      "a": "(1) RI perpetuo (ω=1) · (2) RI=0 tras T (ω=0) · (3) RI decae gradual (0<ω<1) · (4) ROE se desvanece a r → RI→0, TV=0."
+    },
+    {
+      "id": "vol05-c069",
+      "lm": "LM6",
+      "tipo": "formula",
+      "q": "Discount for lack of control (DLOC)",
+      "a": "DLOC = 1 − [1/(1 + control premium)]. Se DERIVA del control premium observado."
+    },
+    {
+      "id": "vol05-c070",
+      "lm": "LM6",
+      "tipo": "formula",
+      "q": "CAPM / Expanded CAPM / Build-up",
+      "a": "CAPM: re = rf + β(rm−rf). Expanded CAPM: CAPM + SSP + CSRP. Build-up: rf + ERP + SSP + CSRP + IRP (sin beta, β=1 implicito)."
+    },
+    {
+      "id": "vol05-c071",
+      "lm": "LM6",
+      "tipo": "formula",
+      "q": "Capitalized Cash Flow Method (CCM)",
+      "a": "Value = FCFF1/(WACC − g) [firm] o FCFE1/(r − g) [equity]. Denominador = capitalization rate. Sin proyecciones detalladas."
+    },
+    {
+      "id": "vol05-c072",
+      "lm": "LM6",
+      "tipo": "formula",
+      "q": "Descuentos combinados (control + marketability)",
+      "a": "Valor = Valor × (1 − DLOC) × (1 − DLOM). MULTIPLICATIVO, nunca sumar. Ej 20% y 18% → 34.4% total, no 38%."
+    },
+    {
+      "id": "vol05-c073",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Standards of value",
+      "a": "Fair market value (comprador/vendedor hipoteticos, arm's length), market value, fair value (reporting/legal), investment value (comprador especifico, incluye sinergias), intrinsic value."
+    },
+    {
+      "id": "vol05-c074",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Normalizacion de earnings en privates",
+      "a": "Ajustar owner compensation a mercado, transacciones con el controlling shareholder, gastos personales, real estate (imputar alquiler de mercado), taxes normalizados."
+    },
+    {
+      "id": "vol05-c075",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Cuando usar asset-based approach",
+      "a": "El MENOS usado. Financieras, investment/holding companies, recursos naturales, empresas en liquidacion (no going concern)."
+    },
+    {
+      "id": "vol05-c076",
+      "lm": "LM6",
+      "tipo": "clasificacion",
+      "q": "3 approaches de valuacion de privates",
+      "a": "Income (DCF/CCM/EEM, absoluto), Market (multiplos de comparables, relativo), Asset-based (activos−pasivos a fair value, absoluto)."
+    },
+    {
+      "id": "vol05-c077",
+      "lm": "LM6",
+      "tipo": "clasificacion",
+      "q": "Motivos de valuacion de privates",
+      "a": "Transaction-related (VC, IPO, M&A, bankruptcy, ESOP), Compliance (financial/tax reporting), Litigation (disputas)."
+    },
+    {
+      "id": "vol05-c078",
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "GPCM vs GTM vs prior transaction",
+      "a": "GPCM: multiplos de publicas comparables (sin control premium). GTM: multiplos de adquisiciones reales (YA incluyen control premium). Prior transaction: transacciones previas de la misma empresa."
+    },
+    {
+      "id": "vol05-c079",
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Excess Earnings Method (EEM)",
+      "a": "= residual income aplicado a privates. Earnings normalizados − retorno requerido sobre activos tangibles = excess earnings (RI de intangibles) → capitalizar → valor de intangibles. Total = tangibles + intangibles."
+    },
+    {
+      "id": "vol05-c080",
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Expanded CAPM vs build-up — diferencia clave",
+      "a": "Build-up no aplica beta al ERP (β=1 implicito) y agrega IRP. Con β>1 e IRP bajo, build-up puede dar MENOR que expanded CAPM (ej FLI: 12.8% vs 13.3%)."
+    }
+  ],
+  "traps": [
+    {
+      "id": "vol05-t-lm1-01",
+      "lm": "LM1",
+      "star": false,
+      "title": "VE−P = (V−P) + (VE−V)",
+      "body": "(V−P) es el true mispricing (genera el alpha); (VE−V) es el ERROR de estimación del analista. No invertir los términos."
+    },
+    {
+      "id": "vol05-t-lm1-02",
+      "lm": "LM1",
+      "star": false,
+      "title": "Going-concern vs liquidation",
+      "body": "Going-concern NO siempre vale más. Un negocio persistentemente no rentable puede valer más \"muerto\" que \"vivo\"."
+    },
+    {
+      "id": "vol05-t-lm1-03",
+      "lm": "LM1",
+      "star": false,
+      "title": "Fair value vs fair market value vs investment value",
+      "body": "Tres conceptos distintos: fair market value (transacción hipotética, uso fiscal); fair value (definición contable IFRS/GAAP, impairment); investment value (comprador específico con sinergias)."
+    },
+    {
+      "id": "vol05-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "\"Undervalued\" vs \"relatively undervalued\"",
+      "body": "Un stock puede ser relatively undervalued vs su industria, y esa industria estar overvalued en absoluto. Dos analistas pueden tener razón si comparan contra benchmarks distintos."
+    },
+    {
+      "id": "vol05-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "Quality of earnings: accruals",
+      "body": "Mayor proporción de accruals (vs cash component) = MENOR calidad de earnings (Sloan 1996), no mayor."
+    },
+    {
+      "id": "vol05-t-lm1-06",
+      "lm": "LM1",
+      "star": false,
+      "title": "Sell-side vs buy-side",
+      "body": "Sell-side = brokerage, research externo. Buy-side = investment management, uso interno para el PM/comité."
+    },
+    {
+      "id": "vol05-t-lm2-01",
+      "lm": "LM2",
+      "star": false,
+      "title": "r &gt; g siempre en GGM",
+      "body": "Si r≤g, el modelo da valor infinito o negativo (no válido). Señal de que la empresa no califica para GGM — usar multistage."
+    },
+    {
+      "id": "vol05-t-lm2-02",
+      "lm": "LM2",
+      "star": false,
+      "title": "D0 vs D1 en la fórmula",
+      "body": "El numerador de la GGM lleva D1=D0(1+g), NUNCA D0 solo. Error típico de examen."
+    },
+    {
+      "id": "vol05-t-lm2-03",
+      "lm": "LM2",
+      "star": false,
+      "title": "PVGO negativo",
+      "body": "Es matemáticamente posible. Sugiere destrucción de valor esperada, o que E1 está sobreestimado / r subestimado."
+    },
+    {
+      "id": "vol05-t-lm2-04",
+      "lm": "LM2",
+      "star": false,
+      "title": "H en el H-model",
+      "body": "H es la MITAD de la duración del período de alto crecimiento (período total = 2H años), no la duración completa."
+    },
+    {
+      "id": "vol05-t-lm2-05",
+      "lm": "LM2",
+      "star": false,
+      "title": "Terminal value domina",
+      "body": "En multistage, típicamente &gt;75–90% del valor viene del terminal value → sensibilidad enorme a gL y r."
+    },
+    {
+      "id": "vol05-t-lm2-06",
+      "lm": "LM2",
+      "star": false,
+      "title": "Sustainable growth rate",
+      "body": "g=b×ROE asume estructura de capital CONSTANTE y sin nuevas emisiones. Es para la fase madura/terminal, no corto plazo."
+    },
+    {
+      "id": "vol05-t-lm3-01",
+      "lm": "LM3",
+      "star": false,
+      "title": "FCFF descuenta a WACC; FCFE a r",
+      "body": "FCFF (a todos los proveedores) → WACC after-tax. FCFE (solo equity) → required return on equity. No mezclar la tasa."
+    },
+    {
+      "id": "vol05-t-lm3-02",
+      "lm": "LM3",
+      "star": false,
+      "title": "Int(1−Tax): quién lo suma",
+      "body": "FCFF SÍ lo suma (interés va a acreedores = proveedores de capital). FCFE NO (ya se le pagó a la deuda)."
+    },
+    {
+      "id": "vol05-t-lm3-03",
+      "lm": "LM3",
+      "star": false,
+      "title": "Net borrowing: quién lo suma",
+      "body": "FCFE SÍ (deuda nueva = cash para equity). FCFF NO. Espejo del punto anterior."
+    },
+    {
+      "id": "vol05-t-lm3-04",
+      "lm": "LM3",
+      "star": false,
+      "title": "Dep en EBIT vs EBITDA",
+      "body": "Desde EBIT: sumar Dep COMPLETA. Desde EBITDA: sumar solo Dep×Tax (tax shield). Confundirlos rompe el resultado."
+    },
+    {
+      "id": "vol05-t-lm3-05",
+      "lm": "LM3",
+      "star": false,
+      "title": "Working capital para FCF",
+      "body": "EXCLUYE cash/equivalents y short-term debt (notes payable, porción corriente de LT debt). No es el WC contable estándar."
+    },
+    {
+      "id": "vol05-t-lm3-06",
+      "lm": "LM3",
+      "star": false,
+      "title": "Interés bajo IFRS financing",
+      "body": "Si el interés se clasificó como financing (permitido IFRS), NO está en CFO → no re-sumarlo al partir de CFO."
+    },
+    {
+      "id": "vol05-t-lm3-07",
+      "lm": "LM3",
+      "star": false,
+      "title": "FCFE puede superar a FCFF",
+      "body": "Ocurre cuando el net borrowing del año es grande. No es un error."
+    },
+    {
+      "id": "vol05-t-lm4-01",
+      "lm": "LM4",
+      "star": false,
+      "title": "Comparables = valor RELATIVO",
+      "body": "NO da valor intrínseco. Una acción puede estar \"relatively undervalued\" y aun así sobrevaluada si los comps están caros."
+    },
+    {
+      "id": "vol05-t-lm4-02",
+      "lm": "LM4",
+      "star": false,
+      "title": "Trailing vs forward P/E",
+      "body": "Con earnings crecientes, forward P/E &lt; trailing P/E (denominador mayor). Ser consistente en la definición."
+    },
+    {
+      "id": "vol05-t-lm4-03",
+      "lm": "LM4",
+      "star": false,
+      "title": "Justified P/B usa (ROE−g)",
+      "body": "P/B = (ROE−g)/(r−g), NO (1−b)/(r−g). Deriva de E1=B0×ROE y g=b×ROE en la GGM."
+    },
+    {
+      "id": "vol05-t-lm4-04",
+      "lm": "LM4",
+      "star": false,
+      "title": "Dividend yield justificado",
+      "body": "D0/P0 = (r−g)/(1+g). Inverso a la lógica del P/E: yield POSITIVAMENTE ligado a r, NEGATIVAMENTE a g."
+    },
+    {
+      "id": "vol05-t-lm4-05",
+      "lm": "LM4",
+      "star": false,
+      "title": "EV resta el cash",
+      "body": "EV = equity + preferred + minority + deuda − cash/ST investments. Olvidar restar el cash es error clásico."
+    },
+    {
+      "id": "vol05-t-lm4-06",
+      "lm": "LM4",
+      "star": false,
+      "title": "SUE vs scaled surprise",
+      "body": "SUE escala por σ de sorpresas HISTÓRICAS; scaled surprise por σ de los FORECASTS actuales. Denominadores distintos."
+    },
+    {
+      "id": "vol05-t-lm4-07",
+      "lm": "LM4",
+      "star": false,
+      "title": "Weighted harmonic mean",
+      "body": "Única media que reproduce el P/E real del portafolio agregado. Harmonic ≤ aritmética siempre (salvo valores iguales)."
+    },
+    {
+      "id": "vol05-t-lm4-08",
+      "lm": "LM4",
+      "star": false,
+      "title": "Múltiplos cross-border",
+      "body": "P/E, P/B y los basados en EBITDA son los MÁS afectados por diferencias contables; P/S y EV/S los más robustos."
+    },
+    {
+      "id": "vol05-t-lm5-01",
+      "lm": "LM5",
+      "star": false,
+      "title": "RI resta el equity charge",
+      "body": "RI = net income − (r × equity). Net income positivo NO implica RI positivo (costo de oportunidad del equity)."
+    },
+    {
+      "id": "vol05-t-lm5-02",
+      "lm": "LM5",
+      "star": false,
+      "title": "EVA usa NOPAT y WACC",
+      "body": "EVA = NOPAT − (C%×TC): nivel de TODO el capital. RI es a nivel de EQUITY (costo del equity, book value del equity)."
+    },
+    {
+      "id": "vol05-t-lm5-03",
+      "lm": "LM5",
+      "star": false,
+      "title": "V0 = B0 + PV(RI)",
+      "body": "El book value actual ya es parte del valor; solo se descuenta el RI FUTURO. No descontar los earnings completos."
+    },
+    {
+      "id": "vol05-t-lm5-04",
+      "lm": "LM5",
+      "star": false,
+      "title": "ROE = r → cotiza a book",
+      "body": "Si ROE = costo del equity, RI = 0 y V0 = B0 (P/B = 1). ROE&gt;r → premium; ROE&lt;r → descuento."
+    },
+    {
+      "id": "vol05-t-lm5-05",
+      "lm": "LM5",
+      "star": false,
+      "title": "Persistence factor ω",
+      "body": "ω=1: RI perpetuo. ω=0: RI termina en T. El TV con ω usa (1+r−ω) en el denominador — error clásico usar (1+r) o (r−g)."
+    },
+    {
+      "id": "vol05-t-lm5-06",
+      "lm": "LM5",
+      "star": false,
+      "title": "Consistencia entre modelos",
+      "body": "Con inputs consistentes y el mismo r, RI = DDM = FCF. RI no es \"otro\" valor, es otra descomposición del mismo."
+    },
+    {
+      "id": "vol05-t-lm6-01",
+      "lm": "LM6",
+      "star": false,
+      "title": "Investment vs fair market value",
+      "body": "Investment value incluye sinergias para un comprador ESPECÍFICO; fair market value usa comprador/vendedor hipotéticos."
+    },
+    {
+      "id": "vol05-t-lm6-02",
+      "lm": "LM6",
+      "star": false,
+      "title": "Build-up puede dar &lt; expanded CAPM",
+      "body": "Su ERP no se multiplica por beta. Con β&gt;1 e IRP bajo/cero, puede terminar MENOR que expanded CAPM (FLI: 12.8% vs 13.3%)."
+    },
+    {
+      "id": "vol05-t-lm6-03",
+      "lm": "LM6",
+      "star": false,
+      "title": "IRP solo en build-up",
+      "body": "El industry risk premium existe SOLO en el build-up. Ni CAPM ni expanded CAPM lo incluyen."
+    },
+    {
+      "id": "vol05-t-lm6-04",
+      "lm": "LM6",
+      "star": false,
+      "title": "Descuentos multiplicativos",
+      "body": "(1−DLOC)(1−DLOM), NUNCA sumar. DLOC 20% + DLOM 18% = 34.4% total, no 38%."
+    },
+    {
+      "id": "vol05-t-lm6-05",
+      "lm": "LM6",
+      "star": false,
+      "title": "GTM ya trae control",
+      "body": "Los múltiplos de guideline TRANSACTIONS incluyen control premium; los de guideline PUBLIC companies no."
+    },
+    {
+      "id": "vol05-t-lm6-06",
+      "lm": "LM6",
+      "star": false,
+      "title": "EEM = residual income",
+      "body": "El excess earnings method es el RI de LM5 aplicado a privates (excess earnings sobre activos tangibles = intangibles)."
+    },
+    {
+      "id": "vol05-t-lm6-07",
+      "lm": "LM6",
+      "star": false,
+      "title": "Asset-based = el menos usado",
+      "body": "Para going concerns rara vez apropiado. Holding/investment companies, recursos naturales, liquidación."
+    }
+  ],
+  "problems": [
+    {
+      "id": "vol05-p01",
+      "lm": "LM2",
+      "title": "GGM básico",
+      "given": "Una acción paga D0 = $2.00, con g = 5% a perpetuidad y required return r = 9%. Calcular el valor intrínseco.",
+      "ask": "",
+      "answer": "V0 = $52.50",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>D1 = 2.00 × 1.05 = $2.10</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>V0 = D1/(r − g) = 2.10 / (0.09 − 0.05)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 2.10 / 0.04</span></div><div class=\"res\">V0 = $52.50</div>"
+    },
+    {
+      "id": "vol05-p02",
+      "lm": "LM2",
+      "title": "Justified leading P/E",
+      "given": "Payout ratio = 54% (b = 46%), r = 5.6%, g = 4.25%. Calcular el justified leading P/E.",
+      "ask": "",
+      "answer": "Leading P/E = 40.0",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>P0/E1 = (1 − b)/(r − g) = 0.54 / (0.056 − 0.0425)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0.54 / 0.0135</span></div><div class=\"res\">Leading P/E = 40.0</div>"
+    },
+    {
+      "id": "vol05-p03",
+      "lm": "LM2",
+      "title": "PVGO",
+      "given": "Precio = $43.20, E1 = $1.52, r = 6.8%. ¿Qué parte del precio es PVGO?",
+      "ask": "",
+      "answer": "PVGO ≈ $20.85 (≈48% del precio)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>No-growth value = E1/r = 1.52 / 0.068 = $22.35</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>PVGO = 43.20 − 22.35</span></div><div class=\"res\">PVGO ≈ $20.85 (≈48% del precio)</div>"
+    },
+    {
+      "id": "vol05-p04",
+      "lm": "LM2",
+      "title": "H-model",
+      "given": "D0 = 0.55, gS = 9%, gL = 5%, transición lineal en 10 años (H = 5), r = 7.35%. Calcular el valor.",
+      "ask": "",
+      "answer": "V0 ≈ €29.26/acción (Meditec: €78.13 con sus cifras completas)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>V0 = [D0(1+gL) + D0·H·(gS−gL)] / (r − gL)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= [0.55(1.05) + 0.55(5)(0.09−0.05)] / (0.0735 − 0.05)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= [0.5775 + 0.11] / 0.0235 = 0.6875 / 0.0235</span></div><div class=\"res\">V0 ≈ €29.26/acción (Meditec: €78.13 con sus cifras completas)</div>"
+    },
+    {
+      "id": "vol05-p05",
+      "lm": "LM2",
+      "title": "Sustainable growth",
+      "given": "ROE = 13%, dividend payout = 50%. Calcular g.",
+      "ask": "",
+      "answer": "g = 6.5%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>b = 1 − 0.50 = 0.50</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>g = b × ROE = 0.50 × 0.13</span></div><div class=\"res\">g = 6.5%</div>"
+    },
+    {
+      "id": "vol05-p06",
+      "lm": "LM3",
+      "title": "FCFF desde NI",
+      "given": "NI = 100, Dep = 40, Int = 20, tax = 30%, FCInv = 50, WCInv = 10. Calcular FCFF.",
+      "ask": "",
+      "answer": "FCFF = 94",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>FCFF = NI + NCC + Int(1−T) − FCInv − WCInv</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 100 + 40 + 20(0.70) − 50 − 10</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 100 + 40 + 14 − 60</span></div><div class=\"res\">FCFF = 94</div>"
+    },
+    {
+      "id": "vol05-p07",
+      "lm": "LM3",
+      "title": "FCFF desde EBIT",
+      "given": "EBIT = 500, tax = 40%, Dep = 120, FCInv = 150, WCInv = 30. Calcular FCFF.",
+      "ask": "",
+      "answer": "FCFF = 240",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>FCFF = EBIT(1−T) + Dep − FCInv − WCInv</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 500(0.60) + 120 − 150 − 30</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 300 + 120 − 180</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>(ojo: se suma Dep COMPLETA, no ×Tax)</span></div><div class=\"res\">FCFF = 240</div>"
+    },
+    {
+      "id": "vol05-p08",
+      "lm": "LM3",
+      "title": "FCFF desde EBITDA",
+      "given": "EBITDA = 800, tax = 40%, Dep = 300, FCInv = 150, WCInv = 30. Calcular FCFF.",
+      "ask": "",
+      "answer": "FCFF = 420",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>FCFF = EBITDA(1−T) + Dep(T) − FCInv − WCInv</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 800(0.60) + 300(0.40) − 150 − 30</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 480 + 120 − 180</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>(ojo: solo el tax shield Dep×T)</span></div><div class=\"res\">FCFF = 420</div>"
+    },
+    {
+      "id": "vol05-p09",
+      "lm": "LM3",
+      "title": "FCFE desde FCFF",
+      "given": "FCFF = 155, Int = 25, tax = 40%, Net borrowing = 75. Calcular FCFE.",
+      "ask": "",
+      "answer": "FCFE = 215",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>FCFE = FCFF − Int(1−T) + Net borrowing</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 155 − 25(0.60) + 75</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 155 − 15 + 75</span></div><div class=\"res\">FCFE = 215</div>"
+    },
+    {
+      "id": "vol05-p10",
+      "lm": "LM3",
+      "title": "Single-stage FCFE",
+      "given": "FCFE0 = 2.50, g = 4%, r = 10%. Calcular el equity value por acción.",
+      "ask": "",
+      "answer": "V0 = $43.33",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>FCFE1 = 2.50 × 1.04 = 2.60</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>V0 = FCFE1/(r − g) = 2.60 / (0.10 − 0.04)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 2.60 / 0.06</span></div><div class=\"res\">V0 = $43.33</div>"
+    },
+    {
+      "id": "vol05-p11",
+      "lm": "LM4",
+      "title": "Normalized EPS (avg ROE)",
+      "given": "ROE promedio del ciclo = 22.6%, BVPS actual = $4.82, precio ADR = $18.21. Calcular normalized EPS y P/E.",
+      "ask": "",
+      "answer": "EPS = $1.09 · P/E = 16.7 (Zenlandia)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Normalized EPS = 0.226 × 4.82 = $1.09</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>P/E = 18.21 / 1.09</span></div><div class=\"res\">EPS = $1.09 · P/E = 16.7 (Zenlandia)</div>"
+    },
+    {
+      "id": "vol05-p12",
+      "lm": "LM4",
+      "title": "Justified P/S",
+      "given": "Profit margin E0/S0 = 9%, payout = 35% (b = 65%), g = 7%, r = 9%. Calcular justified P/S.",
+      "ask": "",
+      "answer": "P/S = 1.575 (GETI)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>P0/S0 = (E0/S0)(1−b)/(r−g)  [≈ con (1+g) para trailing]</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0.09 × 0.35 / (0.09 − 0.07)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0.0315 / 0.02</span></div><div class=\"res\">P/S = 1.575 (GETI)</div>"
+    },
+    {
+      "id": "vol05-p13",
+      "lm": "LM4",
+      "title": "Terminal value: comparables vs GGM",
+      "given": "E3 = $3.00, industry P/E = 14.3, payout = 0.45, ROE = 0.13, r = 0.10. Calcular TV por ambos métodos.",
+      "ask": "",
+      "answer": "Comparables $42.90 · GGM $50.76",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Comparables: Vn = 14.3 × 3.00 = $42.90</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>GGM: b = 0.55, g = 0.55×0.13 = 7.15%, Dn = 3.00×0.45 = 1.35</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Vn = 1.35(1.0715)/(0.10−0.0715) = 1.4465/0.0285</span></div><div class=\"res\">Comparables $42.90 · GGM $50.76</div>"
+    },
+    {
+      "id": "vol05-p14",
+      "lm": "LM4",
+      "title": "Weighted harmonic mean P/E",
+      "given": "Stock 1: P/E 10, peso 55%. Stock 2: P/E 20, peso 45%. Calcular el P/E del portafolio (weighted harmonic).",
+      "ask": "",
+      "answer": "P/E = 12.90 (= P/E real del portafolio)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>XWH = 1 / Σ(wi/Xi) = 1 / (0.55/10 + 0.45/20)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 1 / (0.055 + 0.0225) = 1 / 0.0775</span></div><div class=\"res\">P/E = 12.90 (= P/E real del portafolio)</div>"
+    },
+    {
+      "id": "vol05-p15",
+      "lm": "LM5",
+      "title": "Residual income",
+      "given": "Equity = €1,000,000, NI = €91,000, costo del equity = 12%. Calcular el RI.",
+      "ask": "",
+      "answer": "RI = −€29,000 (AXCI)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Equity charge = 0.12 × 1,000,000 = €120,000</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>RI = NI − equity charge = 91,000 − 120,000</span></div><div class=\"res\">RI = −€29,000 (AXCI)</div>"
+    },
+    {
+      "id": "vol05-p16",
+      "lm": "LM5",
+      "title": "Single-stage RI value",
+      "given": "B0 = $20.00, ROE = 12%, r = 10%, g = 4%. Calcular V0.",
+      "ask": "",
+      "answer": "V0 = $26.67 (P/B = 1.33)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>V0 = B0 + [(ROE−r)/(r−g)]·B0</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 20 + [(0.12−0.10)/(0.10−0.04)]×20</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 20 + (0.02/0.06)×20 = 20 + 6.67</span></div><div class=\"res\">V0 = $26.67 (P/B = 1.33)</div>"
+    },
+    {
+      "id": "vol05-p17",
+      "lm": "LM6",
+      "title": "Discount rate: CAPM / expanded / build-up",
+      "given": "rf = 3.8%, ERP = 5%, β = 1.1, SSP = 3%, CSRP = 1%, IRP = 0%. Calcular los tres.",
+      "ask": "",
+      "answer": "9.3% · 13.3% · 12.8% (FLI)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>CAPM = 3.8 + 1.1(5) = 9.3%</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Expanded CAPM = 9.3 + 3 + 1 = 13.3%</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Build-up = 3.8 + 5 + 3 + 1 + 0 = 12.8%</span></div><div class=\"res\">9.3% · 13.3% · 12.8% (FLI)</div>"
+    },
+    {
+      "id": "vol05-p18",
+      "lm": "LM6",
+      "title": "Descuentos combinados",
+      "given": "Valor pre-descuento = 130. DLOC = 20%, DLOM = 18%. Calcular el valor final.",
+      "ask": "",
+      "answer": "Valor final ≈ 85.3",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Valor = 130 × (1 − 0.20) × (1 − 0.18)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 130 × 0.80 × 0.82</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 130 × 0.656</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>(descuento total = 34.4%, NO 38%)</span></div><div class=\"res\">Valor final ≈ 85.3</div>"
+    }
+  ],
+  "highlights": [],
+  "tables": [
+    {
+      "id": "vol05-ifrs",
+      "title": "IFRS vs US GAAP (Equity)",
+      "lms": [
+        "LM3",
+        "LM4",
+        "LM5"
+      ],
+      "html": "<h3>LM3 · Clasificación de interés y dividendos en el Statement of Cash Flows (Exhibit 5)</h3>\n<table>\n<tr><th>Partida</th><th>IFRS</th><th>US GAAP</th></tr>\n<tr><td>Interest received</td><td>Operating o Investing</td><td>Operating</td></tr>\n<tr><td>Interest paid</td><td>Operating o Financing</td><td>Operating</td></tr>\n<tr><td>Dividends received</td><td>Operating o Investing</td><td>Operating</td></tr>\n<tr><td>Dividends paid</td><td>Operating o Financing</td><td>Financing</td></tr>\n</table>\n<div class=\"note\"><b>Por qué importa para FCFF:</b> si se parte de CFO, hay que sumar el interés after-tax SOLO si estaba dentro de CFO (siempre bajo US GAAP; opcional bajo IFRS). Si bajo IFRS el interés pagado se clasificó en Financing, ya NO está en CFO → no se vuelve a sumar.</div>\n<h3>LM3 · Ajustes non-cash a NI para llegar a FCFF (dirección)</h3>\n<table>\n<tr><th>Ítem non-cash</th><th>Ajuste sobre NI</th></tr>\n<tr><td>Depreciation / Amortization / impairment de intangibles</td><td>+ Se suma</td></tr>\n<tr><td>Restructuring charge (gasto)</td><td>+ Se suma</td></tr>\n<tr><td>Restructuring (ingreso por reversión)</td><td>− Se resta</td></tr>\n<tr><td>Amortización de bond DISCOUNT</td><td>+ Se suma</td></tr>\n<tr><td>Amortización de bond PREMIUM</td><td>− Se resta</td></tr>\n<tr><td>Pérdidas por actividad no-operativa</td><td>+ Se suma (ganancias se restan)</td></tr>\n</table>\n<div class=\"note\">No es estrictamente IFRS-vs-GAAP, pero es el mismo tipo de \"dirección de ajuste\" que el examen combina con la clasificación anterior.</div>\n<h3>LM4/LM5 · Efectos contables sobre multiplos y book value</h3>\n<table>\n<tr><th>Tema</th><th>IFRS</th><th>US GAAP</th></tr>\n<tr><td>LIFO (inventarios)</td><td>NO permitido</td><td>Permitido → en EVA se suma la LIFO reserve al capital y el aumento de la reserve a NOPAT</td></tr>\n<tr><td>R&amp;D interno</td><td>Development costs se pueden CAPITALIZAR (si cumplen criterios); research se gastan</td><td>Generalmente se GASTA todo (salvo software/casos puntuales)</td></tr>\n<tr><td>Reversión de impairments (activos no-financieros)</td><td>Permitida (salvo goodwill)</td><td>Prohibida</td></tr>\n<tr><td>Efecto en P/B, ROE, book value</td><td colspan=\"2\">Estas diferencias distorsionan book value y earnings → afectan P/E, P/B y multiplos basados en EBITDA. P/S y EV/S son más robustos.</td></tr>\n</table>\n<div class=\"note\">En LM5 el modelo de RI asume <b>clean surplus</b>; los items de OCI (dirty surplus) — fair value de ciertos securities, translation, pensiones — lo violan y pueden requerir ajuste. La disponibilidad de OCI depende del marco contable.</div>\n<div class=\"box\">\n<div class=\"tag\">Las 3 diferencias más recurrentes en el examen</div>\n<ol style=\"margin:0;padding-left:18px;font-size:11.5px;line-height:1.6;\">\n<li><b>Interest/dividends paid en el cash flow statement:</b> US GAAP fija (interés en CFO, dividendos en CFF); IFRS da opción. Es el que más aparece porque cambia el punto de partida del bridge de FCFF desde CFO.</li>\n<li><b>LIFO:</b> solo US GAAP. Gatilla los ajustes de EVA (LIFO reserve → capital y NOPAT) y afecta comparabilidad de márgenes.</li>\n<li><b>Capitalización de R&amp;D / reversión de impairments:</b> IFRS capitaliza development y permite reversar impairments (no goodwill); US GAAP no. Distorsiona book value, ROE y por lo tanto P/B y RI.</li>\n</ol>\n</div>"
+    },
+    {
+      "id": "vol05-signos",
+      "title": "Hoja de Signos y Direcciones",
+      "lms": [
+        "LM2",
+        "LM3",
+        "LM4",
+        "LM5"
+      ],
+      "html": "<div class=\"legend\"><b>↑</b> sube · <b>↓</b> baja · <b>=</b> sin efecto · <b>?</b> depende. Fila con <span class=\"trap\">barra a la izquierda</span> = efecto contra-intuitivo (los que más se equivocan).</div>\n<h3>Palancas de valor en modelos DCF (dirección sobre el valor y el multiplo justificado)</h3>\n<table>\n<tr><th>Cambio (ceteris paribus)</th><th>Valor / V0</th><th>Justified P/E</th><th>Justified P/B</th><th>Div. yield</th></tr>\n<tr><td>↑ growth rate (g)</td><td class=\"up\">↑</td><td class=\"up\">↑</td><td class=\"up\">↑</td><td class=\"dn\">↓</td></tr>\n<tr><td>↑ required return (r)</td><td class=\"dn\">↓</td><td class=\"dn\">↓</td><td class=\"dn\">↓</td><td class=\"up\">↑</td></tr>\n<tr><td>↑ ROE</td><td class=\"up\">↑</td><td>?</td><td class=\"up\">↑</td><td>?</td></tr>\n<tr class=\"trap\"><td>↑ retention (b), a ROE dado</td><td>?</td><td class=\"dn\">↓</td><td>?</td><td class=\"up\">↑</td><td class=\"note\">Sube g (=b·ROE) PERO baja el payout (1−b): el efecto neto en P/E depende de si ROE≷r. Si ROE=r, no cambia nada.</td></tr>\n</table>\n<div style=\"font-size:10px;margin:2px 0 0;\">Nota: en el div yield la relación se invierte respecto del P/E — yield ↑ con r y ↓ con g.</div>\n<h3>LM3 · Construcción de FCFF/FCFE (qué suma y qué resta)</h3>\n<table>\n<tr><th>Partida</th><th>FCFF</th><th>FCFE</th><th>Nota</th></tr>\n<tr><td>Net income (NI)</td><td>base</td><td>base</td><td class=\"note\">Punto de partida</td></tr>\n<tr><td>Non-cash charges (Dep, amort)</td><td class=\"up\">+</td><td class=\"up\">+</td><td class=\"note\">Se re-agregan</td></tr>\n<tr class=\"trap\"><td>Interés after-tax · Int(1−T)</td><td class=\"up\">+</td><td class=\"up\">= (no aparece)</td><td class=\"note\">Se suma en FCFF (pre-financiamiento). En FCFE NO se suma: ya lo pagó el equity.</td></tr>\n<tr><td>FCInv (capex neto)</td><td class=\"dn\">−</td><td class=\"dn\">−</td><td class=\"note\">Inversión en fijos</td></tr>\n<tr><td>WCInv</td><td class=\"dn\">−</td><td class=\"dn\">−</td><td class=\"note\">Inversión en working capital</td></tr>\n<tr class=\"trap\"><td>Net borrowing</td><td class=\"up\">= (no aparece)</td><td class=\"up\">+</td><td class=\"note\">Solo en FCFE (+ si se toma deuda). Ausente en FCFF.</td></tr>\n</table>\n<h3>LM3 · Bridge desde EBIT vs EBITDA (el clásico error de la depreciación)</h3>\n<table>\n<tr><th>Fórmula</th><th>Term de depreciación</th></tr>\n<tr class=\"trap\"><td>FCFF = EBIT(1−T) + Dep − FCInv − WCInv</td><td class=\"note\">Suma Dep <b>COMPLETA</b> (ya se le sacó el impuesto al EBIT operativo).</td></tr>\n<tr class=\"trap\"><td>FCFF = EBITDA(1−T) + Dep(T) − FCInv − WCInv</td><td class=\"note\">Suma <b>solo el tax shield</b> Dep×T (el EBITDA nunca restó la Dep, así que solo se recupera el escudo fiscal).</td></tr>\n</table>\n<h3>LM4/LM6 · Ajustes de valuación (dirección sobre el valor de la acción)</h3>\n<table>\n<tr><th>Ajuste / decisión</th><th>Efecto en valor</th><th>Nota</th></tr>\n<tr><td>Restar cash en EV</td><td class=\"dn\">↓ EV</td><td class=\"note\">EV = equity+preferred+minority+deuda − cash</td></tr>\n<tr><td>Sumar non-operating assets (LM3)</td><td class=\"up\">↑ firm value</td><td class=\"note\">Excess cash, pension surplus, inversiones</td></tr>\n<tr class=\"trap\"><td>Aplicar DLOC y DLOM juntos</td><td class=\"dn\">↓↓ (multiplicativo)</td><td class=\"note\">(1−DLOC)(1−DLOM). NO sumar: 20% y 18% → 34.4%, no 38%.</td></tr>\n<tr><td>Control premium (GTM ya lo trae)</td><td class=\"up\">↑</td><td class=\"note\">GPCM no lo incluye; GTM sí</td></tr>\n<tr class=\"trap\"><td>↑ inflación con pass-through &lt;100%</td><td class=\"dn\">↓ justified P/E</td><td class=\"note\">Con pass-through completo (λ=1) la inflación no afecta el P/E</td></tr>\n</table>\n<h3>LM5 · Residual income: efecto de decisiones contables (con clean surplus)</h3>\n<table>\n<tr><th>Decisión contable agresiva</th><th>Book value</th><th>Earnings futuros</th><th>Valor RI final</th></tr>\n<tr class=\"trap\"><td>Elección que ↑ book value inicial</td><td class=\"up\">↑</td><td class=\"dn\">↓ (mayor equity charge)</td><td>= (se compensan)</td></tr>\n</table>\n<div style=\"font-size:10px;margin:2px 0 0;\">Este efecto balanceador (Bauman) es la razón por la que el RI es robusto: sobre/subvaluar book value se auto-corrige vía el income futuro, si se cumple clean surplus.</div>\n<div class=\"box\">\n<div class=\"tag\">Los 5 efectos contra-intuitivos que más cazan</div>\n<ol style=\"margin:0;padding-left:18px;font-size:11px;line-height:1.6;\">\n<li><b>Div yield vs P/E:</b> el yield SUBE con r y BAJA con g (al revés del P/E).</li>\n<li><b>EBIT bridge suma Dep completa; EBITDA bridge suma solo Dep×Tax.</b></li>\n<li><b>Interés after-tax:</b> se suma en FCFF pero NO en FCFE (net borrowing es lo que aparece en FCFE).</li>\n<li><b>DLOC×DLOM multiplicativo</b>, jamás aditivo.</li>\n<li><b>Retención (b):</b> subir b no siempre sube el valor — sube g pero baja el payout; neto depende de ROE≷r.</li>\n</ol>\n</div>"
+    }
+  ]
+}
