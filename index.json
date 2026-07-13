@@ -12,6 +12,17 @@
       }
     },
     {
+      "id": "vol04",
+      "order": 4,
+      "title": "Corporate Issuers",
+      "file": "vol04.json",
+      "counts": {
+        "flashcards": 80,
+        "traps": 52,
+        "problems": 20
+      }
+    },
+    {
       "id": "vol05",
       "order": 5,
       "title": "Equity Valuation",

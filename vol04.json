@@ -1,0 +1,1153 @@
+{
+  "id": "vol04",
+  "order": 4,
+  "title": "Corporate Issuers",
+  "lms": [
+    {
+      "id": "LM1",
+      "title": "Análisis de Dividendos y Recompras"
+    },
+    {
+      "id": "LM2",
+      "title": "Consideraciones ESG y Governance"
+    },
+    {
+      "id": "LM3",
+      "title": "Cost of Capital: Advanced Topics"
+    },
+    {
+      "id": "LM4",
+      "title": "Corporate Restructuring"
+    }
+  ],
+  "cardTypes": {
+    "concepto": "Concepto",
+    "fórmula": "Fórmula",
+    "clasificación": "Clasificación",
+    "proceso": "Proceso",
+    "método": "Método"
+  },
+  "flashcards": [
+    {
+      "id": "vol04-c001",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Ex-dividend date: ¿qué pasa con el precio?",
+      "a": "Cae por el <b>monto</b> del dividendo (no por el yield)."
+    },
+    {
+      "id": "vol04-c002",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Liquidating dividend",
+      "a": "<b>Return of capital</b> (no de earnings/RE): cierre, venta de parte del negocio, o pago que excede RE."
+    },
+    {
+      "id": "vol04-c003",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Stock dividend / split: efecto en liquidity y leverage ratios",
+      "a": "<b>Ninguno</b> (cero efecto). Solo el cash dividend los mueve (↓ liquidez, ↑ leverage)."
+    },
+    {
+      "id": "vol04-c004",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "MM dividend irrelevance",
+      "a": "En mercados perfectos la dividend <b>policy</b> es irrelevante; homemade dividend. Es la policy, no los dividendos per se."
+    },
+    {
+      "id": "vol04-c005",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Bird-in-the-hand",
+      "a": "Inversor prefiere dividendo cierto hoy → menor cost of equity → mayor precio. MM lo rebate (no cambia el riesgo de los flujos)."
+    },
+    {
+      "id": "vol04-c006",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Tax argument (dividend policy)",
+      "a": "Si dividendos tributan &gt; capital gains → preferir bajo payout / recompras. Extremo: payout cero."
+    },
+    {
+      "id": "vol04-c007",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Signaling: iniciación/aumento vs corte",
+      "a": "Aumento = señal <b>positiva</b> (costosa de imitar). Corte = negativa (pero se puede cortar y señalizar positivo si reinvierte)."
+    },
+    {
+      "id": "vol04-c008",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Jensen FCF hypothesis (agency cost)",
+      "a": "Managers sobre-invierten en NPV negativo; pagar FCFE los disciplina. Conflicto shareholder ↔ bondholder (covenants)."
+    },
+    {
+      "id": "vol04-c009",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Stable vs constant payout policy",
+      "a": "Stable: dividendo sobre <b>sustainable long-run earnings</b> (Lintner). Constant: % fijo de earnings corrientes → fluctúa."
+    },
+    {
+      "id": "vol04-c010",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Razones para recomprar (no equivalencia)",
+      "a": "Tax, señal de subvaluación, flexibilidad, compensar dilución de options, ↑ leverage."
+    },
+    {
+      "id": "vol04-c011",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Greenmail / direct negotiation a premium",
+      "a": "Transfiere wealth <b>desde</b> los accionistas que quedan <b>hacia</b> el vendedor (conserva el total, no lo distribuye igual)."
+    },
+    {
+      "id": "vol04-c012",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Señales de dividendo NO sostenible",
+      "a": "Payout alto/coverage bajo, above-average leverage, sostener payout cortando capex o sumando deuda, FCFE coverage &lt;1."
+    },
+    {
+      "id": "vol04-c013",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "Efecto de las formas de distribución en wealth",
+      "a": "Stock div/split/reverse: <b>sin cambio</b>. Cash/extra: cash + ↓ precio (neto igual). Liquidating: devuelve capital."
+    },
+    {
+      "id": "vol04-c014",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "4 métodos de recompra",
+      "a": "Open market (flexible), fixed-price tender (premium, rápido), Dutch auction (precio mínimo), direct negotiation (greenmail)."
+    },
+    {
+      "id": "vol04-c015",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "6 factores del dividend policy",
+      "a": "Investment opportunities, earnings volatility, financial flexibility, tax, flotation costs, contractual/legal restrictions."
+    },
+    {
+      "id": "vol04-c016",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Lintner expected dividend",
+      "a": "Div previo + [(E[EPS]×target payout − div previo) × (1/años)]. Luna: 0.40 + [(0.84−0.40)×0.25] = 0.51."
+    },
+    {
+      "id": "vol04-c017",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Effective tax rate — double taxation",
+      "a": "(corp tax + shareholder tax)/pretax. Ej: NI100, 35% corp, 15% sh → (35+9.75)/100 = <b>44.8%</b>."
+    },
+    {
+      "id": "vol04-c018",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Effective tax rate — imputation",
+      "a": "= <b>tasa marginal del accionista</b> (15%→15%, 47%→47%). Paga sobre pretax y descuenta corp tax como franking credit."
+    },
+    {
+      "id": "vol04-c019",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Effective tax rate — split-rate",
+      "a": "corp tax (porción distribuida) + shareholder tax. Ej: 20% + (80×0.35)% = <b>48%</b>."
+    },
+    {
+      "id": "vol04-c020",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Repurchase EPS con surplus cash",
+      "a": "EPS = NI / shares post-buyback. Takemiya: 100M/8.3M = <b>¥12</b> (+20%). Sube si el cash no gana su cost of capital."
+    },
+    {
+      "id": "vol04-c021",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Repurchase EPS con deuda",
+      "a": "(Earnings − after-tax cost of funds)/shares post. <b>Accretive si E/P &gt; after-tax cost</b>. Selamat: 5%→¥3.00; 6%→¥2.94."
+    },
+    {
+      "id": "vol04-c022",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "BVPS post-recompra y FCFE coverage",
+      "a": "Price&gt;BVPS → BVPS ↓; Price&lt;BVPS → BVPS ↑. FCFE = CFO − FCInv + Net borrowing; coverage = FCFE/(Div+Repurchases)."
+    },
+    {
+      "id": "vol04-c023",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Dispersed vs concentrated ownership",
+      "a": "Dispersed: nadie controla (AU/IE/UK/US). Concentrated: un grupo controla (la más común a nivel global)."
+    },
+    {
+      "id": "vol04-c024",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Principal–agent vs principal–principal",
+      "a": "Agent = manager vs accionista (ownership+voting dispersos). Principal-principal = controlling vs minoritarios (voting concentrado)."
+    },
+    {
+      "id": "vol04-c025",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Matriz 2×2 (ownership × voting)",
+      "a": "Disp/disp → principal-agent. Voting concentrado → principal-principal. Concentrado/disperso → voting caps (restricción legal)."
+    },
+    {
+      "id": "vol04-c026",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Tipos de influential shareholders",
+      "a": "Banks, families (interlocking directorates), SOEs (mixed-ownership), institutional, group cos, PE, foreign, insiders."
+    },
+    {
+      "id": "vol04-c027",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "One-tier vs two-tier board",
+      "a": "One-tier: un board (exec + non-exec). Two-tier: <b>supervisory</b> board vigila al <b>management</b> board (AR/DE/RU obligatorio)."
+    },
+    {
+      "id": "vol04-c028",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Governance codes vs stewardship codes",
+      "a": "Codes: 'comply or explain' para la empresa. Stewardship: alienta al <b>inversor</b> a ejercer derechos (UK Stewardship Code)."
+    },
+    {
+      "id": "vol04-c029",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Materialidad ESG",
+      "a": "Lo que afecta operaciones/performance/valuación. Las empresas exageran lo positivo y omiten lo negativo → el analista juzga."
+    },
+    {
+      "id": "vol04-c030",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Horizonte de inversión ESG",
+      "a": "Algunos issues son de corto, otros de largo plazo; el horizonte puede moverse de golpe (regulación, controversia)."
+    },
+    {
+      "id": "vol04-c031",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "3 enfoques de identificación ESG",
+      "a": "Proprietary methods; ESG data providers (MSCI/Sustainalytics); frameworks no-for-profit (GRI/SASB/IIRC)."
+    },
+    {
+      "id": "vol04-c032",
+      "lm": "LM2",
+      "tipo": "método",
+      "q": "Transition vs physical risk",
+      "a": "Transition: política/carbon tax/building standards → ↑ costos. Physical: eventos climáticos → stranded assets."
+    },
+    {
+      "id": "vol04-c033",
+      "lm": "LM2",
+      "tipo": "método",
+      "q": "Integración ESG: equity vs fixed income",
+      "a": "Equity: oportunidades + downside (discount rate/multiples). FI: sobre todo downside (redime a par; credit spread/CDS)."
+    },
+    {
+      "id": "vol04-c034",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Green bonds",
+      "a": "Proceeds <b>earmarked</b>; <b>mismo credit rating y recourse</b> que el convencional. Posible spread más ajustado (ICMA Green Bond Principles)."
+    },
+    {
+      "id": "vol04-c035",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Greenwashing",
+      "a": "Riesgo de que los fondos del green bond no se usen en proyectos verdes. + riesgo de liquidez (buy-and-hold)."
+    },
+    {
+      "id": "vol04-c036",
+      "lm": "LM2",
+      "tipo": "método",
+      "q": "Data providers vs frameworks",
+      "a": "Providers (MSCI/Sustainalytics) dan <b>scores</b>. Frameworks (GRI/SASB/IIRC) dan <b>estándares</b> de disclosure."
+    },
+    {
+      "id": "vol04-c037",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "WACC",
+      "a": "w<sub>d</sub>·r<sub>d</sub>(1−t) + w<sub>p</sub>·r<sub>p</sub> + w<sub>e</sub>·r<sub>e</sub>. Pesos ≥0 y suman 1."
+    },
+    {
+      "id": "vol04-c038",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Cost of debt (base)",
+      "a": "r<sub>d</sub> = r<sub>f</sub> + credit spread. After-tax = r<sub>d</sub>(1−t) si el interés es deducible y hay taxable income."
+    },
+    {
+      "id": "vol04-c039",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Top-down vs bottom-up factors",
+      "a": "Top-down: r<sub>f</sub> y ERP (capital availability, market, country, tax). Bottom-up: spread y β (volatilidad, activos, leverage, features)."
+    },
+    {
+      "id": "vol04-c040",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Security features → yield al emitir",
+      "a": "Callable: <b>↑ yield</b> (issuer). Putable/convertible: <b>↓ yield</b> (investor). Cumulative pref &lt; non-cumulative."
+    },
+    {
+      "id": "vol04-c041",
+      "lm": "LM3",
+      "tipo": "clasificación",
+      "q": "Cost of debt por tipo de deuda",
+      "a": "Traded: YTM. Non-traded: matrix pricing / synthetic rating. Bank: tasa nueva. Leases: RIIL. International: + CRR."
+    },
+    {
+      "id": "vol04-c042",
+      "lm": "LM3",
+      "tipo": "clasificación",
+      "q": "Synthetic rating",
+      "a": "Deducir el rating con IC y D/E. Si IC y D/E dan ratings <b>distintos</b> → ambiguo, mirar tendencias y juicio."
+    },
+    {
+      "id": "vol04-c043",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Lease RIIL: jerarquía si falta info",
+      "a": "RIIL → IBR (incremental borrowing rate, colateralizado) → método de non-traded debt."
+    },
+    {
+      "id": "vol04-c044",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Lease RIIL: ecuación",
+      "a": "PV(lease pmts) + PV(residual) = FV(asset) + lessor direct costs. El residual va en el último flujo. G&S: <b>4.08%</b>."
+    },
+    {
+      "id": "vol04-c045",
+      "lm": "LM3",
+      "tipo": "clasificación",
+      "q": "ERP histórico: 4 decisiones",
+      "a": "(1) Índice, (2) período, (3) tipo de media (arith/geom), (4) proxy del risk-free (short/long)."
+    },
+    {
+      "id": "vol04-c046",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Arithmetic vs geometric mean (ERP)",
+      "a": "Arith: single-period, consistente con CAPM; sobreestima terminal wealth. Geom: <b>preferida</b> (menos outliers, terminal wealth)."
+    },
+    {
+      "id": "vol04-c047",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Risk-free proxy: short vs long",
+      "a": "Short bill: exacto (zero-coupon) pero no matchea duración. Long bond: matchea duración pero reinvestment risk. Industria: <b>long</b>."
+    },
+    {
+      "id": "vol04-c048",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Survivorship bias (ERP)",
+      "a": "Infla el ERP histórico (las empresas que quiebran salen del índice → solo quedan ganadoras)."
+    },
+    {
+      "id": "vol04-c049",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Gordon DDM: ERP forward",
+      "a": "ERP = D<sub>1</sub>/V<sub>0</sub> + g − r<sub>f</sub>. FTSE: 1.94% + 5.0% − 1.63% = <b>5.31%</b>. Asume P/E constante."
+    },
+    {
+      "id": "vol04-c050",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Grinold-Kroner: ERP",
+      "a": "[DY + Δ(P/E) + i + g − ΔS] − r<sub>f</sub>. ↑inflación → sin efecto (i y r<sub>f</sub> se cancelan). Ej: <b>5.0%</b>."
+    },
+    {
+      "id": "vol04-c051",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Inflación implícita (Treasury/TIPS)",
+      "a": "i = (1+YTM<sub>T</sub>)/(1+YTM<sub>TIPS</sub>) − 1 ≈ YTM<sub>T</sub> − YTM<sub>TIPS</sub>. Ej: 2.3% vs 0.66% → <b>1.6%</b>."
+    },
+    {
+      "id": "vol04-c052",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "DDM: cost of equity",
+      "a": "r<sub>e</sub> = D<sub>1</sub>/P<sub>0</sub> + g. Ej: 1.04/40 + 4% = <b>6.6%</b>. Multi-period → resolver IRR."
+    },
+    {
+      "id": "vol04-c053",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "BYPRP",
+      "a": "r<sub>e</sub> = r<sub>d</sub> + RP. r<sub>d</sub> = YTM del bono <b>de la empresa</b> (no el risk-free). Ej: 4.3% + 6.1% = <b>10.40%</b>."
+    },
+    {
+      "id": "vol04-c054",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "CAPM",
+      "a": "r<sub>e</sub> = r<sub>f</sub> + β·ERP. β del market model (regresión de excess returns). Privadas: unlever/relever β del comparable."
+    },
+    {
+      "id": "vol04-c055",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Fama-French 3 factores",
+      "a": "r<sub>e</sub> = r<sub>f</sub> + β1·ERP + β2·SMB + β3·HML (size, value)."
+    },
+    {
+      "id": "vol04-c056",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Fama-French 5 factores",
+      "a": "FF3 + β4·RMW (profitability) + β5·CMA (investment). Ej: <b>12.2%</b>."
+    },
+    {
+      "id": "vol04-c057",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Expanded CAPM (privadas)",
+      "a": "r<sub>e</sub> = r<sub>f</sub> + β<sub>peer</sub>·ERP + SP + SCRP. Usa beta de comparables públicos."
+    },
+    {
+      "id": "vol04-c058",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Build-up approach (privadas)",
+      "a": "r<sub>e</sub> = r<sub>f</sub> + ERP + SP + IP + SCRP. <b>Sin beta</b> (β implícito = 1). r<sub>f</sub>+ERP = large-cap; +SP → micro-cap."
+    },
+    {
+      "id": "vol04-c059",
+      "lm": "LM3",
+      "tipo": "método",
+      "q": "Expanded CAPM vs build-up",
+      "a": "Expanded usa β<sub>peer</sub>; build-up no tiene beta. SP es beta-adjusted. Iliquidez = <b>discount</b>, no prima en r<sub>e</sub>."
+    },
+    {
+      "id": "vol04-c060",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Damodaran CRP",
+      "a": "sovereign yield spread × σ<sub>Equity</sub>/σ<sub>Bond</sub>, después × exposición λ. Makinassi: 1.7%×1.6×0.40 = <b>1.088%</b>."
+    },
+    {
+      "id": "vol04-c061",
+      "lm": "LM3",
+      "tipo": "fórmula",
+      "q": "Country spread model: ERP",
+      "a": "ERP = ERP developed + (λ × CRP). CRP = sovereign yield spread (bono emerging en moneda developed − bono developed)."
+    },
+    {
+      "id": "vol04-c062",
+      "lm": "LM3",
+      "tipo": "método",
+      "q": "GCAPM vs ICAPM",
+      "a": "GCAPM: 1 factor global (slope baja/negativa). ICAPM: 2 factores (índice global + foreign currency index, wealth-weighted)."
+    },
+    {
+      "id": "vol04-c063",
+      "lm": "LM4",
+      "tipo": "clasificación",
+      "q": "Investment / divestment / restructuring",
+      "a": "Investment: ↑ size. Divestment: ↓ size. Restructuring: mismo size, mejora costo/financiamiento."
+    },
+    {
+      "id": "vol04-c064",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Synergies: cost vs revenue",
+      "a": "Cost → economies of <b>scale</b> (funciones redundantes). Revenue → economies of <b>scope</b> (cross-selling)."
+    },
+    {
+      "id": "vol04-c065",
+      "lm": "LM4",
+      "tipo": "clasificación",
+      "q": "Los 9 tipos de restructuring",
+      "a": "Inv: equity inv/JV/acquisition. Div: sale/spin-off. Rest: cost/balance sheet/reorganization. LBO combina las 3."
+    },
+    {
+      "id": "vol04-c066",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Equity inv vs JV vs acquisition",
+      "a": "Eq inv/JV: &lt;50%/control conjunto → equity method. Acquisition: control pleno → consolidation, el target deja de existir."
+    },
+    {
+      "id": "vol04-c067",
+      "lm": "LM4",
+      "tipo": "método",
+      "q": "Sale vs spin-off",
+      "a": "Sale: control por cash → <b>más liquidez</b>. Spin-off: stock dividend a accionistas del parent → menos liquidez, menos scrutiny."
+    },
+    {
+      "id": "vol04-c068",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Conglomerate discount",
+      "a": "EV de mercado &lt; sum-of-the-parts (peer multiples). El spin-off lo realiza (Benefit: 1,621 vs 1,437 = 184)."
+    },
+    {
+      "id": "vol04-c069",
+      "lm": "LM4",
+      "tipo": "clasificación",
+      "q": "Initial evaluation: 4 preguntas",
+      "a": "What, Why, Is it <b>material</b> (size + fit), When."
+    },
+    {
+      "id": "vol04-c070",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Materialidad: regla del 10%",
+      "a": "Transaction value &gt; <b>10% del EV</b> del acquirer = 'large'. Para large-caps, la mayoría de adquisiciones es inmaterial."
+    },
+    {
+      "id": "vol04-c071",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Reacción del precio al anuncio",
+      "a": "Predictor <b>débil</b> del valor de largo plazo (Rehm-West, Ben-David). No es veredicto."
+    },
+    {
+      "id": "vol04-c072",
+      "lm": "LM4",
+      "tipo": "método",
+      "q": "Comparable company vs transaction",
+      "a": "Company: trading multiples → fair trading price → <b>sumar</b> premium. Transaction: ya <b>incluye</b> el premium."
+    },
+    {
+      "id": "vol04-c073",
+      "lm": "LM4",
+      "tipo": "fórmula",
+      "q": "Premium paid (PRM)",
+      "a": "PRM = (DP − SP)/SP. SP = <b>unaffected price</b> (pre-rumor, ~1 semana antes). Mediana histórica ~30%."
+    },
+    {
+      "id": "vol04-c074",
+      "lm": "LM4",
+      "tipo": "proceso",
+      "q": "Pro forma IS modeling (pasos)",
+      "a": "Revenue ± synergies; OpEx ∓ synergies; D&A + amort. intangibles; interest + nueva deuda; taxes EBT-weighted; shares + emitidas."
+    },
+    {
+      "id": "vol04-c075",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Pro forma WACC",
+      "a": "Cambia pesos (w<sub>d</sub>/w<sub>e</sub>) y costos (r<sub>d</sub>/r<sub>e</sub>). IG → speculative = +cientos de bps en WACC."
+    },
+    {
+      "id": "vol04-c076",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Sale-leaseback",
+      "a": "Recibe cash + reconoce lease liability (PV de pagos); D&A → lease expense (con interés). + liquidez, − costo total mayor + indebtedness."
+    },
+    {
+      "id": "vol04-c077",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Dividend recapitalization",
+      "a": "Equity → debt (dividendo/recompra con deuda) para ↓ WACC. Sube leverage (solo issuers con CF estable)."
+    },
+    {
+      "id": "vol04-c078",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Reorganization vs liquidation",
+      "a": "Reorganization (Ch.11): opera, mgmt sigue, deuda→equity. Liquidation: la corte vende activos y reparte a acreedores."
+    },
+    {
+      "id": "vol04-c079",
+      "lm": "LM4",
+      "tipo": "método",
+      "q": "Equity method → consolidation (buyout JV)",
+      "a": "Un buyout parcial del JV lleva al <b>comprador</b> de equity method a consolidation (reconoce NCI)."
+    },
+    {
+      "id": "vol04-c080",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Income from associates (signo)",
+      "a": "% del investor × NI (o <b>loss</b>) del investee + amort. de FV adj. Una pérdida reduce EBIT/EBITDA (Dilmun: −145)."
+    }
+  ],
+  "traps": [
+    {
+      "id": "vol04-t-lm1-01",
+      "lm": "LM1",
+      "star": false,
+      "title": "Stock dividend/split → cero efecto",
+      "body": "en liquidity y leverage ratios; el cash dividend sí (↓ liquidez, ↑ leverage). P/E igual."
+    },
+    {
+      "id": "vol04-t-lm1-02",
+      "lm": "LM1",
+      "star": false,
+      "title": "Ex-dividend:",
+      "body": "el precio cae por el <b>monto</b> del dividendo, no por su yield."
+    },
+    {
+      "id": "vol04-t-lm1-03",
+      "lm": "LM1",
+      "star": false,
+      "title": "MM:",
+      "body": "es la dividend <b>policy</b> la irrelevante, no los dividendos per se. Reverse split solo: sin efecto en wealth."
+    },
+    {
+      "id": "vol04-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "Imputation:",
+      "body": "el effective rate = tasa marginal <b>del accionista</b> (no la corporativa). Paga sobre pretax, descuenta corp tax como credit."
+    },
+    {
+      "id": "vol04-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "Split-rate:",
+      "body": "effective rate = corp tax (porción distribuida) + shareholder tax. Sigue siendo doble tributación, atenuada."
+    },
+    {
+      "id": "vol04-t-lm1-06",
+      "lm": "LM1",
+      "star": false,
+      "title": "Lintner:",
+      "body": "adjustment factor = 1/años. El dividendo se mueve <b>parcialmente</b> al target; el payout puede caer aunque el dividendo suba."
+    },
+    {
+      "id": "vol04-t-lm1-07",
+      "lm": "LM1",
+      "star": false,
+      "title": "Recompra con deuda:",
+      "body": "compará <b>E/P</b> vs <b>after-tax</b> cost of debt. E/P &gt; after-tax = accretive. Trampa: usar el costo pre-tax."
+    },
+    {
+      "id": "vol04-t-lm1-08",
+      "lm": "LM1",
+      "star": false,
+      "title": "Recompra con cash:",
+      "body": "↑ EPS solo si el cash retenido no ganaría su cost of capital."
+    },
+    {
+      "id": "vol04-t-lm1-09",
+      "lm": "LM1",
+      "star": false,
+      "title": "BVPS:",
+      "body": "price &gt; BVPS → BVPS <b>baja</b>; price &lt; BVPS → BVPS <b>sube</b>."
+    },
+    {
+      "id": "vol04-t-lm1-10",
+      "lm": "LM1",
+      "star": false,
+      "title": "↑ EPS por recompra ≠ ↑ wealth",
+      "body": "(FCFE total constante; sube el required return por leverage)."
+    },
+    {
+      "id": "vol04-t-lm1-11",
+      "lm": "LM1",
+      "star": false,
+      "title": "FCFE = CFO − FCInv + Net borrowing.",
+      "body": "Net borrowing suma si es positivo, resta si hay repago. Trampa de signo."
+    },
+    {
+      "id": "vol04-t-lm1-12",
+      "lm": "LM1",
+      "star": false,
+      "title": "FCFE coverage",
+      "body": "lleva <b>Dividends + Repurchases</b> en el denominador. El earnings coverage puede lucir sano (1.06×) con FCFE cov &lt;1."
+    },
+    {
+      "id": "vol04-t-lm1-13",
+      "lm": "LM1",
+      "star": false,
+      "title": "Greenmail / negociación a premium:",
+      "body": "transfiere wealth desde los que quedan hacia el vendedor."
+    },
+    {
+      "id": "vol04-t-lm2-01",
+      "lm": "LM2",
+      "star": false,
+      "title": "Principal-agent vs principal-principal.",
+      "body": "Agent = manager vs accionista (todo disperso). Principal-principal = controlling vs minoritarios (voting concentrado)."
+    },
+    {
+      "id": "vol04-t-lm2-02",
+      "lm": "LM2",
+      "star": false,
+      "title": "Control ≠ % propiedad.",
+      "body": "Dual-class y pyramid dan control con &lt;50%. Voting caps = ownership concentrado + voting disperso."
+    },
+    {
+      "id": "vol04-t-lm2-03",
+      "lm": "LM2",
+      "star": false,
+      "title": "reduce",
+      "body": "Un controlling shareholder  el principal-agent pero <b>crea</b> el principal-principal."
+    },
+    {
+      "id": "vol04-t-lm2-04",
+      "lm": "LM2",
+      "star": false,
+      "title": "Two-tier",
+      "body": "= supervisory + management board. El \"exec + non-exec\" es el <b>one-tier</b>. No los inviertas."
+    },
+    {
+      "id": "vol04-t-lm2-05",
+      "lm": "LM2",
+      "star": false,
+      "title": "Independent director",
+      "body": "= sin relación material. % más alto en jurisdicciones <b>dispersas</b>. CEO duality → mitigante = lead independent director."
+    },
+    {
+      "id": "vol04-t-lm2-06",
+      "lm": "LM2",
+      "star": false,
+      "title": "Tenure &gt;10 años = \"largo\"",
+      "body": ", y es ambiguo: + conocimiento, − posible pérdida de independencia."
+    },
+    {
+      "id": "vol04-t-lm2-07",
+      "lm": "LM2",
+      "star": false,
+      "title": "Integración ESG:",
+      "body": "equity = oportunidades + downside; FI = sobre todo downside (par). Bonos de mayor maturity = más expuestos a riesgo ESG de largo plazo."
+    },
+    {
+      "id": "vol04-t-lm2-08",
+      "lm": "LM2",
+      "star": false,
+      "title": "Green bond:",
+      "body": "mismo credit rating y recourse que el convencional; solo cambia el uso de fondos. Riesgo único = greenwashing."
+    },
+    {
+      "id": "vol04-t-lm2-09",
+      "lm": "LM2",
+      "star": false,
+      "title": "Materialidad ESG:",
+      "body": "las empresas rotulan lo positivo como material y minimizan lo negativo → el analista juzga la materialidad real."
+    },
+    {
+      "id": "vol04-t-lm2-10",
+      "lm": "LM2",
+      "star": false,
+      "title": "Data providers",
+      "body": "(MSCI/Sustainalytics) ≠ <b>frameworks</b> (GRI/SASB/IIRC). Los primeros dan scores; los segundos, estándares."
+    },
+    {
+      "id": "vol04-t-lm2-11",
+      "lm": "LM2",
+      "star": false,
+      "title": "E",
+      "body": "No hay best practice global para  y <b>S</b> (sí más en <b>G</b>). Factores materiales por industria: energía → E; bancos → S."
+    },
+    {
+      "id": "vol04-t-lm3-01",
+      "lm": "LM3",
+      "star": false,
+      "title": "After-tax cost = r<sub>d</sub>(1−t)",
+      "body": "solo si el interés es deducible, hay taxable income y no se llegó al cap. En el cap, no ajustes por impuestos."
+    },
+    {
+      "id": "vol04-t-lm3-02",
+      "lm": "LM3",
+      "star": false,
+      "title": "Features:",
+      "body": "callable → yield <b>más alto</b> al emitir (issuer). Putable/convertible → <b>más bajo</b> (investor). Cumulative pref &lt; non-cumulative."
+    },
+    {
+      "id": "vol04-t-lm3-03",
+      "lm": "LM3",
+      "star": false,
+      "title": "Synthetic rating:",
+      "body": "si IC y D/E dan ratings distintos → ambiguo; mirar tendencias + juicio."
+    },
+    {
+      "id": "vol04-t-lm3-04",
+      "lm": "LM3",
+      "star": false,
+      "title": "Lease (RIIL):",
+      "body": "PV(pmts)+PV(residual) = FV(asset)+lessor costs. El residual va en el <b>último</b> flujo. Jerarquía: RIIL → IBR → non-traded."
+    },
+    {
+      "id": "vol04-t-lm3-05",
+      "lm": "LM3",
+      "star": false,
+      "title": "Media ERP:",
+      "body": "arithmetic = consistente con CAPM pero sobreestima terminal wealth; geometric = preferida. Período largo → menor standard error."
+    },
+    {
+      "id": "vol04-t-lm3-06",
+      "lm": "LM3",
+      "star": false,
+      "title": "Risk-free:",
+      "body": "short bill = exacto pero no matchea duración; long bond = matchea pero reinvestment risk. Industria: long."
+    },
+    {
+      "id": "vol04-t-lm3-07",
+      "lm": "LM3",
+      "star": false,
+      "title": "Survivorship bias",
+      "body": "infla el ERP histórico."
+    },
+    {
+      "id": "vol04-t-lm3-08",
+      "lm": "LM3",
+      "star": false,
+      "title": "Gordon ERP = D<sub>1</sub>/V<sub>0</sub> + g − r<sub>f</sub>:",
+      "body": "asume P/E constante; si no, ajustá por expansión/contracción del múltiplo."
+    },
+    {
+      "id": "vol04-t-lm3-09",
+      "lm": "LM3",
+      "star": false,
+      "title": "Grinold-Kroner:",
+      "body": "↑ inflación → <b>sin efecto</b> (i y r<sub>f</sub> se cancelan). ↓ income → ↓ DY → ↓ ERP. Ojo el signo de ΔS (se resta). No apto para developing."
+    },
+    {
+      "id": "vol04-t-lm3-10",
+      "lm": "LM3",
+      "star": false,
+      "title": "BYPRP = r<sub>d</sub> + RP:",
+      "body": "r<sub>d</sub> = YTM del bono <b>de la empresa</b>, no el risk-free. RP algo arbitrario."
+    },
+    {
+      "id": "vol04-t-lm3-11",
+      "lm": "LM3",
+      "star": false,
+      "title": "Build-up sin beta",
+      "body": "(β=1): r<sub>f</sub>+ERP+SP+IP+SCRP. <b>Expanded CAPM sí</b>: r<sub>f</sub>+β<sub>peer</sub>·ERP+SP+SCRP. SP beta-adjusted."
+    },
+    {
+      "id": "vol04-t-lm3-12",
+      "lm": "LM3",
+      "star": false,
+      "title": "Iliquidez de privadas:",
+      "body": "NO es prima en r<sub>e</sub>; va como <b>discount for lack of marketability</b> (baja el valor)."
+    },
+    {
+      "id": "vol04-t-lm3-13",
+      "lm": "LM3",
+      "star": false,
+      "title": "Damodaran CRP",
+      "body": "= spread × σ<sub>Eq</sub>/σ<sub>Bond</sub>, <b>después</b> × exposición λ. Makinassi: 1.7%×1.6×0.40 = 1.088%."
+    },
+    {
+      "id": "vol04-t-lm3-14",
+      "lm": "LM3",
+      "star": false,
+      "title": "GCAPM",
+      "body": "= 1 factor global (slope baja/negativa). <b>ICAPM</b> = 2 factores (global + foreign currency index)."
+    },
+    {
+      "id": "vol04-t-lm4-01",
+      "lm": "LM4",
+      "star": false,
+      "title": "PRM = (DP − SP)/SP",
+      "body": ", con SP = unaffected price (excluir el run-up por rumores; ~1 semana antes)."
+    },
+    {
+      "id": "vol04-t-lm4-02",
+      "lm": "LM4",
+      "star": false,
+      "title": "Comparable COMPANY",
+      "body": "= trading → fair trading price → <b>sumar</b> premium. <b>Comparable TRANSACTION</b> = ya <b>incluye</b> premium. No doble-contar."
+    },
+    {
+      "id": "vol04-t-lm4-03",
+      "lm": "LM4",
+      "star": false,
+      "title": "spin-offs",
+      "body": "Comparable company mejor para  (sin control premium); acquisitions/sales necesitan premium."
+    },
+    {
+      "id": "vol04-t-lm4-04",
+      "lm": "LM4",
+      "star": false,
+      "title": "Contabilidad:",
+      "body": "equity inv y JV → equity method; acquisition → consolidation. Buyout parcial de JV → equity method a consolidation."
+    },
+    {
+      "id": "vol04-t-lm4-05",
+      "lm": "LM4",
+      "star": false,
+      "title": "Income from associates",
+      "body": "= %×NI (o <b>loss</b>) + amort. de FV. Si el investee da pérdida (ítem operativo), baja EBIT/EBITDA."
+    },
+    {
+      "id": "vol04-t-lm4-06",
+      "lm": "LM4",
+      "star": false,
+      "title": "Dilución de EPS en acquisition:",
+      "body": "suele venir de la <b>emisión de acciones</b>, no solo de interés/amort. Aunque EBITDA suba, el EBT puede caer."
+    },
+    {
+      "id": "vol04-t-lm4-07",
+      "lm": "LM4",
+      "star": false,
+      "title": "Deal con deuda:",
+      "body": "interés extra = rate × deuda incremental. Sube el net debt/EBITDA."
+    },
+    {
+      "id": "vol04-t-lm4-08",
+      "lm": "LM4",
+      "star": false,
+      "title": "Materialidad:",
+      "body": "transaction value &gt; <b>10% del EV</b> = \"large\". Para large-caps, la mayoría es inmaterial. La reacción al anuncio es predictor débil."
+    },
+    {
+      "id": "vol04-t-lm4-09",
+      "lm": "LM4",
+      "star": false,
+      "title": "Múltiplo de adquisición &gt; trading",
+      "body": "por control + synergies (16× vs 8×; con synergies → 10×). No digas \"overpaid\" sin ajustar por synergies."
+    },
+    {
+      "id": "vol04-t-lm4-10",
+      "lm": "LM4",
+      "star": false,
+      "title": "Sale vs spin-off:",
+      "body": "sale = cash → más liquidez; spin-off = stock dividend a accionistas del parent, menos liquidez y scrutiny."
+    },
+    {
+      "id": "vol04-t-lm4-11",
+      "lm": "LM4",
+      "star": false,
+      "title": "Sale-leaseback:",
+      "body": "recibe cash + reconoce lease liability (PV); D&amp;A → lease expense (con interés) → costo total mayor + indebtedness."
+    },
+    {
+      "id": "vol04-t-lm4-12",
+      "lm": "LM4",
+      "star": false,
+      "title": "Net debt:",
+      "body": "financiar con cash on hand impacta el net debt <b>igual</b> que pedir prestado (baja el cash → sube el net debt)."
+    },
+    {
+      "id": "vol04-t-lm4-13",
+      "lm": "LM4",
+      "star": false,
+      "title": "WACC:",
+      "body": "IG → speculative = salto de varios cientos de bps. Los IG estructuran deals para no perder el rating."
+    },
+    {
+      "id": "vol04-t-lm4-14",
+      "lm": "LM4",
+      "star": false,
+      "title": "Reorganization ≠ liquidation.",
+      "body": "Reorganization (Ch.11): opera, mgmt sigue, deuda→equity. Liquidation: la corte vende y reparte."
+    }
+  ],
+  "problems": [
+    {
+      "id": "vol04-p01",
+      "lm": "LM1",
+      "title": "Stock dividend",
+      "given": "Una empresa tiene 1,000,000 acciones, EPS $1.00 y precio $20. Declara un <b>stock dividend del 3%</b>. Calculá el nuevo EPS, el nuevo precio y verificá el market value del equity.",
+      "ask": "",
+      "answer": "EPS $0.97 · precio $19.42 · MV $20M igual",
+      "solution": "NI = 1,000,000 × $1.00 = $1,000,000. Shares = 1,000,000 × 1.03 = 1,030,000.<br/>\nEPS = 1,000,000 / 1,030,000 = <b>$0.9709</b>. Precio = $20 / 1.03 = <b>$19.4175</b>.<br/>\nMV = 1,030,000 × $19.4175 = $20,000,000 · P/E = 20 (sin cambio).\n<div class=\"res\">EPS $0.97 · precio $19.42 · MV $20M igual</div>"
+    },
+    {
+      "id": "vol04-p02",
+      "lm": "LM1",
+      "title": "Effective tax — double",
+      "given": "NI before tax = $100. Corporate tax 35%; shareholder tax sobre dividendos 15% (100% payout). Effective tax rate del dividendo.",
+      "ask": "",
+      "answer": "44.8%",
+      "solution": "Corp tax = $35 → dividendo $65. Shareholder tax = 65 × 15% = $9.75 → neto $55.25.<br/>\nEffective = (35 + 9.75)/100.\n<div class=\"res\">44.8%</div>"
+    },
+    {
+      "id": "vol04-p03",
+      "lm": "LM1",
+      "title": "Effective tax — imputation",
+      "given": "Pretax income A$100, corporate tax 30%, marginal del accionista <b>47%</b>, 100% payout. Effective tax rate del dividendo.",
+      "ask": "",
+      "answer": "47% (= tasa del accionista)",
+      "solution": "Corp tax = A$30 → NI/dividendo A$70. Shareholder tax sobre <b>pretax</b> = 100 × 47% = 47. Menos franking credit 30 → tax due 17.<br/>\nTotal = 30 + 17 = 47 sobre 100.\n<div class=\"res\">47% (= tasa del accionista)</div>"
+    },
+    {
+      "id": "vol04-p04",
+      "lm": "LM1",
+      "title": "Effective tax — split-rate",
+      "given": "€100 asignados a dividendos. Corporate tax sobre lo distribuido 20%; shareholder 35%. Effective tax rate.",
+      "ask": "",
+      "answer": "48%",
+      "solution": "Corp tax = €20 → dividendo €80. Shareholder tax = 80 × 35% = €28 → after-tax €52.<br/>\nEffective = 20% + (80 × 0.35)% = 20% + 28%.\n<div class=\"res\">48%</div>"
+    },
+    {
+      "id": "vol04-p05",
+      "lm": "LM1",
+      "title": "Lintner",
+      "given": "Dividendo previo $0.40. E[EPS] $2.80, target payout 30%, ajuste en <b>4 años</b>. Dividendo esperado.",
+      "ask": "",
+      "answer": "$0.51",
+      "solution": "Target = 2.80 × 0.30 = $0.84. Gap = 0.84 − 0.40 = 0.44. Adjustment = 1/4 = 0.25.<br/>\nDiv = 0.40 + (0.44 × 0.25) = 0.40 + 0.11.\n<div class=\"res\">$0.51</div>"
+    },
+    {
+      "id": "vol04-p06",
+      "lm": "LM1",
+      "title": "Repurchase — surplus cash",
+      "given": "10M acciones, NI ¥100M (EPS ¥10). Recompra ¥240M a ¥140/acción con surplus cash. Nuevo EPS.",
+      "ask": "",
+      "answer": "≈ ¥12.00 (+20%)",
+      "solution": "Shares recompradas = 240,000,000 / 140 ≈ 1.7M → quedan 8.3M. NI sin cambio ¥100M.<br/>\nEPS = 100M / 8.3M ≈ ¥12.05.\n<div class=\"res\">≈ ¥12.00 (+20%)</div>"
+    },
+    {
+      "id": "vol04-p07",
+      "lm": "LM1",
+      "title": "Repurchase — con deuda",
+      "given": "Selamat: earnings after tax MYR6.6M, 2.2M acciones (EPS MYR3, E/P 5%). Pide MYR12M, recompra 200,000 acciones a MYR60. Si el <b>after-tax cost de la deuda es 6%</b>, ¿EPS?",
+      "ask": "",
+      "answer": "MYR2.94 (dilutivo)",
+      "solution": "After-tax cost of funds = 12M × 0.06 = MYR0.72M. Shares post = 2.2 − 0.2 = 2.0M.<br/>\nEPS = (6.6 − 0.72)/2.0 = 5.88/2.0. Como 6% &gt; E/P 5% → dilutivo.\n<div class=\"res\">MYR2.94 (dilutivo)</div>"
+    },
+    {
+      "id": "vol04-p08",
+      "lm": "LM1",
+      "title": "BVPS post-recompra",
+      "given": "Equity $100M, 10M acciones (BVPS $10). Recompra $5M a precio de mercado $20 (250,000 acciones). Nuevo BVPS.",
+      "ask": "",
+      "answer": "$9.74 (baja)",
+      "solution": "Equity = 100 − 5 = $95M. Shares = 10M − 0.25M = 9.75M. BVPS = 95/9.75.<br/>\nComo price $20 &gt; BVPS $10 → el BVPS <b>baja</b>.\n<div class=\"res\">$9.74 (baja)</div>"
+    },
+    {
+      "id": "vol04-p09",
+      "lm": "LM1",
+      "title": "FCFE coverage",
+      "given": "CFO 700, FCInv 250, Net borrowing 12. Dividends 400 + Repurchases 156. Calculá FCFE y el FCFE coverage; ¿es sostenible?",
+      "ask": "",
+      "answer": "FCFE 462 · coverage 0.83× · insostenible",
+      "solution": "FCFE = CFO − FCInv + Net borrowing = 700 − 250 + 12 = 462.<br/>\nCoverage = 462 / (400 + 156) = 462 / 556 = 0.83×. Menor a 1.0× → <b>insostenible</b> (financia distribuciones con deuda/menos capex).\n<div class=\"res\">FCFE 462 · coverage 0.83× · insostenible</div>"
+    },
+    {
+      "id": "vol04-p10",
+      "lm": "LM3",
+      "title": "Lease RIIL",
+      "given": "Lease a 15 años, PMT €9.0M anual, FV del activo €100M, lessor direct costs €5M, residual €10M. Calculá el RIIL.",
+      "ask": "",
+      "answer": "4.08%",
+      "solution": "Net CF: t0 = −(100+5) = −105; t1–14 = +9; t15 = 9 + 10 = 19.<br/>\nResolver el discount rate: N=15, PMT=9.0, PV=−105.0, FV=10.0 → RATE.\n<div class=\"res\">4.08%</div>"
+    },
+    {
+      "id": "vol04-p11",
+      "lm": "LM3",
+      "title": "ERP histórico",
+      "given": "Smith: retorno índice 12.96%, r<sub>f</sub> (30y bond) 6.25%, media aritmética. Müller: 11.23%, r<sub>f</sub> (3m bill) 3.11%, geométrica. Estimá ambos ERP.",
+      "ask": "",
+      "answer": "Smith 6.71% · Müller 8.12%",
+      "solution": "Smith = 12.96% − 6.25% = 6.71%. Müller = 11.23% − 3.11% = 8.12%. Ambos válidos (distintas de las 4 decisiones).\n<div class=\"res\">Smith 6.71% · Müller 8.12%</div>"
+    },
+    {
+      "id": "vol04-p12",
+      "lm": "LM3",
+      "title": "Gordon ERP",
+      "given": "FTSE 100: forward dividend yield 1.94%, long-term earnings growth 5.0%, Gilt yield 1.63%. ERP forward (constant growth DDM).",
+      "ask": "",
+      "answer": "5.31%",
+      "solution": "ERP = D<sub>1</sub>/V<sub>0</sub> + g − r<sub>f</sub> = 1.94% + 5.0% − 1.63%.\n<div class=\"res\">5.31%</div>"
+    },
+    {
+      "id": "vol04-p13",
+      "lm": "LM3",
+      "title": "Grinold-Kroner + inflación",
+      "given": "Treasury 10y 2.3%, TIPS 0.66% → estimá i. Luego, con DY 2.2%, Δ(P/E) 0, g 3.0%, ΔS −0.7%, r<sub>f</sub> 2.5%, calculá el ERP (Grinold-Kroner).",
+      "ask": "",
+      "answer": "i = 1.6% · ERP = 5.0%",
+      "solution": "i = (1.023/1.0066) − 1 = 1.6%.<br/>\nERP = [2.2 + 0 + 1.6 + 3.0 − (−0.7)] − 2.5 = 7.5 − 2.5.\n<div class=\"res\">i = 1.6% · ERP = 5.0%</div>"
+    },
+    {
+      "id": "vol04-p14",
+      "lm": "LM3",
+      "title": "DDM cost of equity",
+      "given": "D<sub>1</sub> = €1.04, P<sub>0</sub> = €40, g = 4%. Required return on equity.",
+      "ask": "",
+      "answer": "6.6%",
+      "solution": "r<sub>e</sub> = D<sub>1</sub>/P<sub>0</sub> + g = 1.04/40 + 0.04 = 0.026 + 0.04.\n<div class=\"res\">6.6%</div>"
+    },
+    {
+      "id": "vol04-p15",
+      "lm": "LM3",
+      "title": "BYPRP",
+      "given": "Yield del bono de la empresa 4.3%; risk premium histórico equity-sobre-corporate-bonds 6.1%. Required return on equity (BYPRP).",
+      "ask": "",
+      "answer": "10.40%",
+      "solution": "r<sub>e</sub> = r<sub>d</sub> + RP = 4.3% + 6.1%.\n<div class=\"res\">10.40%</div>"
+    },
+    {
+      "id": "vol04-p16",
+      "lm": "LM3",
+      "title": "Fama-French 5",
+      "given": "r<sub>f</sub> = 3.82%. Betas × premiums: Market 1.2×6.5%; SMB 0.10×1.8%; HML −0.20×4.0%; RMW 0.5×2.0%; CMA 0.2×1.0%. Required return on equity.",
+      "ask": "",
+      "answer": "12.2%",
+      "solution": "= 3.82 + 7.80 + 0.18 − 0.80 + 1.00 + 0.20. (Ojo el HML negativo resta.)\n<div class=\"res\">12.2%</div>"
+    },
+    {
+      "id": "vol04-p17",
+      "lm": "LM3",
+      "title": "Damodaran CRP",
+      "given": "Makinassi (HQ en X, 40% de ventas en Y). Sovereign yield: X 1.5%, Y 3.2%. σ equity Y = 4.0%, σ bond Y = 2.5%. CRP a sumar al cost of equity.",
+      "ask": "",
+      "answer": "1.088%",
+      "solution": "Spread = 3.2% − 1.5% = 1.7%. CRP país = 1.7% × (4.0/2.5) = 1.7% × 1.6 = 2.72%.<br/>\nAjustado por exposición: 2.72% × 0.40.\n<div class=\"res\">1.088%</div>"
+    },
+    {
+      "id": "vol04-p18",
+      "lm": "LM4",
+      "title": "Premium paid (PRM)",
+      "given": "Deal price por acción $274; unaffected price (1 semana antes) $222.76. Calculá el takeover premium.",
+      "ask": "",
+      "answer": "≈ 23%",
+      "solution": "PRM = (DP − SP)/SP = (274 − 222.76)/222.76 = 51.24/222.76.\n<div class=\"res\">≈ 23%</div>"
+    },
+    {
+      "id": "vol04-p19",
+      "lm": "LM4",
+      "title": "Comparable transaction (Hofer)",
+      "given": "Estimated takeover values: P/E $47.95 (peso 20%), P/CF $44.17 (40%), P/BV $46.81 (20%), P/S $55.15 (20%). El comprador pagó $55.00. ¿Sobrepagó?",
+      "ask": "",
+      "answer": "$47.65 · 13% por debajo → overpaid",
+      "solution": "Weighted = 47.95×0.20 + 44.17×0.40 + 46.81×0.20 + 55.15×0.20 = 9.59 + 17.67 + 9.36 + 11.03 = $47.65.<br/>\n(47.65 − 55)/55 = −13% → sí, <b>overpaid</b>.\n<div class=\"res\">$47.65 · 13% por debajo → overpaid</div>"
+    },
+    {
+      "id": "vol04-p20",
+      "lm": "LM4",
+      "title": "Equity investment (Dilmun)",
+      "given": "Dilmun invierte 30% en Spina, financiado con USD1,200M de deuda a 600 bps. Spina 20X4E net loss USD450M; amort. de FV USD10M/año; tax rate ≈ 24.4%. Pre-inversión: EBITDA 10,140; total debt 13,894. Estimá el nuevo debt/EBITDA.",
+      "ask": "",
+      "answer": "1.51× (desde 1.37×)",
+      "solution": "Income from associates = 0.30 × (−450) = −135; con amort. −10 → EBITDA cae 145 → 10,140 − 145 = 9,995.<br/>\nNueva deuda = 13,894 + 1,200 = 15,094. (Interés extra = 1,200 × 6% = 72; EPS cae 3.94 → 3.85.)<br/>\nDebt/EBITDA = 15,094 / 9,995.\n<div class=\"res\">1.51× (desde 1.37×)</div>"
+    }
+  ],
+  "highlights": [],
+  "tables": [
+    {
+      "id": "vol04-signos",
+      "title": "Hoja de Signos y Direcciones",
+      "lms": [
+        "LM1",
+        "LM3",
+        "LM4"
+      ],
+      "html": "<div class=\"sheet\">\n<div class=\"doc-head\">\n<div class=\"doc-eyebrow\">CFA® 2026 · Level II · Volume 4 — Corporate Issuers</div>\n<div class=\"doc-title\">Hoja de signos y direcciones</div>\n<div class=\"doc-sub\">Para cada decisión / método: qué pasa con assets, liabilities, equity, net income y ratios clave. <span class=\"tag\">CI</span> = contra-intuitivo.</div>\n<div class=\"legend\">\n<span><b>↑</b> aumenta</span><span><b>↓</b> disminuye</span><span><b>=</b> sin cambio</span><span><span class=\"tag\">CI</span> donde el examen caza</span>\n</div>\n</div>\n<!-- LM1 -->\n<section>\n<div class=\"sec-head\"><span class=\"sec-num\">LM1</span><span class=\"sec-title\">Dividends &amp; Share Repurchases</span></div>\n<table>\n<thead><tr><th style=\"width:22%\">Decisión</th><th>Assets</th><th>Liab.</th><th>Equity</th><th>Net income / EPS</th><th>Liquidez</th><th>Leverage</th><th style=\"width:22%\">Nota</th></tr></thead>\n<tbody>\n<tr><th>Cash dividend (pago)</th><td class=\"c\">↓</td><td class=\"c\">=</td><td class=\"c\">↓</td><td class=\"c\">NI = · EPS =</td><td class=\"c\">↓</td><td class=\"c\">↑</td><td class=\"note\">Ex-div: precio ↓ por el monto del dividendo.</td></tr>\n<tr><th>Stock dividend</th><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"c\">NI = · EPS ↓</td><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"note\"><span class=\"tag\">CI</span> RE→contributed capital; cero efecto en ratios. P/E =.</td></tr>\n<tr><th>Stock split</th><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"c\">NI = · EPS ↓</td><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"note\"><span class=\"tag\">CI</span> Sin asiento contable. Precio ↓, P/E =, yield =.</td></tr>\n<tr><th>Reverse split</th><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"c\">NI = · EPS ↑</td><td class=\"c\">=</td><td class=\"c\">=</td><td class=\"note\">Precio ↑, shares ↓, wealth =.</td></tr>\n<tr><th>Liquidating dividend</th><td class=\"c\">↓</td><td class=\"c\">=</td><td class=\"c\">↓</td><td class=\"c\">NI =</td><td class=\"c\">↓</td><td class=\"c\">↑</td><td class=\"note\">Return of capital (baja contributed capital, no RE).</td></tr>\n<tr><th>Repurchase con cash</th><td class=\"c\">↓</td><td class=\"c\">=</td><td class=\"c\">↓</td><td class=\"c\">EPS ↑*</td><td class=\"c\">↓</td><td class=\"c\">↑</td><td class=\"note\">*↑ si el cash no gana su cost of capital. BVPS: price&gt;BV → ↓; price&lt;BV → ↑ <span class=\"tag\">CI</span></td></tr>\n<tr><th>Repurchase con deuda</th><td class=\"c\">=</td><td class=\"c\">↑</td><td class=\"c\">↓</td><td class=\"c\">EPS ↑/=/↓</td><td class=\"c\">↓</td><td class=\"c\">↑↑</td><td class=\"note\">EPS ↑ si <b>E/P &gt; after-tax cost</b>; = si igual; ↓ si menor. <span class=\"tag\">CI</span></td></tr>\n<tr><th>↑ EPS por recompra</th><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"c\">EPS ↑</td><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"note\"><span class=\"tag\">CI</span> ↑ EPS ≠ ↑ wealth (FCFE total constante; sube required return).</td></tr>\n</tbody></table>\n</section>\n<!-- LM3 -->\n<section>\n<div class=\"sec-head\"><span class=\"sec-num\">LM3</span><span class=\"sec-title\">Cost of Capital: Advanced Topics</span></div>\n<table>\n<thead><tr><th style=\"width:30%\">Cambio</th><th>Cost of debt</th><th>Cost of equity</th><th>WACC</th><th style=\"width:34%\">Nota</th></tr></thead>\n<tbody>\n<tr><th>↑ marginal tax rate</th><td class=\"c\">↓ (after-tax)</td><td class=\"c\">=</td><td class=\"c\">↓</td><td class=\"note\"><span class=\"tag\">CI</span> Más impuesto = mayor tax shield → menor after-tax r<sub>d</sub> (si deducible).</td></tr>\n<tr><th>Callable bond</th><td class=\"c\">↑</td><td class=\"c\">—</td><td class=\"c\">↑</td><td class=\"note\">Yield ↑ al emitir (beneficia al issuer).</td></tr>\n<tr><th>Putable / convertible</th><td class=\"c\">↓</td><td class=\"c\">—</td><td class=\"c\">↓</td><td class=\"note\">Yield ↓ al emitir (beneficia al investor).</td></tr>\n<tr><th>↑ financial leverage</th><td class=\"c\">↑</td><td class=\"c\">↑</td><td class=\"c\">∪</td><td class=\"note\">Ambos costos ↑; WACC tiene mínimo (estructura óptima).</td></tr>\n<tr><th>↑ inflación esperada (G-K)</th><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"c\">ERP =</td><td class=\"note\"><span class=\"tag\">CI</span> i se suma y r<sub>f</sub> se resta → se cancelan en el ERP.</td></tr>\n<tr><th>↓ expected income (G-K/DDM)</th><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"c\">ERP ↓</td><td class=\"note\">Baja el DY → baja el ERP.</td></tr>\n<tr><th>↑ share price (DDM)</th><td class=\"c\">—</td><td class=\"c\">↓ r<sub>e</sub></td><td class=\"c\">↓</td><td class=\"note\"><span class=\"tag\">CI</span> Sube P<sub>0</sub> → baja D<sub>1</sub>/P<sub>0</sub> → baja r<sub>e</sub>.</td></tr>\n<tr><th>↑ dividend growth g (DDM)</th><td class=\"c\">—</td><td class=\"c\">↑ r<sub>e</sub></td><td class=\"c\">↑</td><td class=\"note\">Suben tanto el yield como g.</td></tr>\n<tr><th>Arithmetic vs geometric mean</th><td class=\"c\">—</td><td class=\"c\">Arith ≥ Geom</td><td class=\"c\">—</td><td class=\"note\">Arith sobreestima terminal wealth; geom preferida.</td></tr>\n<tr><th>↑ período de estimación (ERP)</th><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"note\">Standard error del ERP ↓ (pero quizá menos representativo).</td></tr>\n</tbody></table>\n</section>\n<!-- LM4 -->\n<section>\n<div class=\"sec-head\"><span class=\"sec-num\">LM4</span><span class=\"sec-title\">Corporate Restructuring</span></div>\n<table>\n<thead><tr><th style=\"width:22%\">Acción</th><th>Assets</th><th>Liab.</th><th>Equity</th><th>EPS</th><th>Net debt / EBITDA · WACC</th><th style=\"width:26%\">Nota</th></tr></thead>\n<tbody>\n<tr><th>Acquisition cash + deuda</th><td class=\"c\">↑</td><td class=\"c\">↑</td><td class=\"c\">=</td><td class=\"c\">↑/↓</td><td class=\"c\">ND/EBITDA ↑ · w<sub>d</sub> ↑</td><td class=\"note\">Consolidation. Interés ↑ = rate × deuda nueva.</td></tr>\n<tr><th>Acquisition con acciones</th><td class=\"c\">↑</td><td class=\"c\">=</td><td class=\"c\">↑</td><td class=\"c\">↓</td><td class=\"c\">w<sub>e</sub> ↑</td><td class=\"note\"><span class=\"tag\">CI</span> Aunque EBITDA ↑, la emisión diluye EPS (Tulor 0.96→0.70).</td></tr>\n<tr><th>Equity investment (deuda)</th><td class=\"c\">↑</td><td class=\"c\">↑</td><td class=\"c\">=</td><td class=\"c\">↓</td><td class=\"c\">ND/EBITDA ↑</td><td class=\"note\"><span class=\"tag\">CI</span> Income from associates = %×NI(o loss)+amort → loss ↓ EBIT/EBITDA (Dilmun −145).</td></tr>\n<tr><th>JV → consolidation (buyout)</th><td class=\"c\">↑ (bruto)</td><td class=\"c\">↑ (bruto)</td><td class=\"c\">+NCI</td><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"note\">Desaparece la línea de JV income; se consolidan revenues/expenses.</td></tr>\n<tr><th>Sale por cash → retirar deuda</th><td class=\"c\">=</td><td class=\"c\">↓</td><td class=\"c\">=</td><td class=\"c\">—</td><td class=\"c\">ND ↓ · w<sub>d</sub> ↓, w<sub>e</sub> ↑</td><td class=\"note\">Cash entra y sale a bajar deuda; capital structure de debt→equity.</td></tr>\n<tr><th>Spin-off</th><td class=\"c\">↓</td><td class=\"c\">↓</td><td class=\"c\">↓</td><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"note\">Stock dividend a los accionistas del parent; menos liquidez que un sale.</td></tr>\n<tr><th>Sale-leaseback</th><td class=\"c\">↓ activo / ↑ cash</td><td class=\"c\">↑</td><td class=\"c\">=</td><td class=\"c\">—</td><td class=\"c\">Leverage ↑</td><td class=\"note\">D&amp;A → lease expense (con interés) → costo total mayor.</td></tr>\n<tr><th>Dividend recapitalization</th><td class=\"c\">↓ (cash)</td><td class=\"c\">↑</td><td class=\"c\">↓</td><td class=\"c\">↑</td><td class=\"c\">WACC ↓ · leverage ↑</td><td class=\"note\">Equity→debt para bajar WACC (solo con CF estable).</td></tr>\n<tr><th>IG → speculative rating</th><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"c\">—</td><td class=\"c\">WACC ↑ (+cientos bps)</td><td class=\"note\">Por eso los IG estructuran deals para mantener el rating.</td></tr>\n</tbody></table>\n</section>\n<!-- RECURRENTES -->\n<section>\n<div class=\"sec-head\"><span class=\"sec-num\"></span><span class=\"sec-title\">Los contra-intuitivos que más pinchan</span></div>\n<table>\n<tbody>\n<tr><th style=\"width:26%\">Stock dividend / split</th><td>Cero efecto en liquidity y leverage ratios (a diferencia del cash dividend). P/E igual.</td></tr>\n<tr><th>BVPS post-recompra</th><td>Price &gt; BVPS → BVPS <b>baja</b>; price &lt; BVPS → BVPS <b>sube</b>.</td></tr>\n<tr><th>↑ tax rate → ↓ cost of debt</th><td>Un impuesto más alto <b>baja</b> el after-tax cost of debt (mayor tax shield).</td></tr>\n<tr><th>↑ inflación → ERP igual</th><td>En Grinold-Kroner, i y r<sub>f</sub> se cancelan → el ERP no cambia.</td></tr>\n<tr><th>Acquisition con acciones</th><td>La <b>emisión</b> puede diluir el EPS aunque el EBITDA suba (efecto share count).</td></tr>\n<tr><th>↑ EPS por recompra</th><td>No equivale a ↑ wealth: con FCFE constante no se crea valor.</td></tr>\n</tbody></table>\n</section>\n<div class=\"note\" style=\"text-align:center;border-top:1px solid var(--hair);padding-top:9px;margin-top:6px;\">\nCFA® 2026 Level II · Volume 4 Corporate Issuers · Hoja de signos y direcciones · efectos anclados al curriculum oficial\n</div>\n</div>"
+    }
+  ]
+}
