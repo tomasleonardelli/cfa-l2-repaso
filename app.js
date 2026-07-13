@@ -20,7 +20,7 @@ function setStatus(id, status){
 /* ---------- carga de datos ---------- */
 async function boot(){
   try{
-    INDEX = await (await fetch('index.json')).json();
+    INDEX = await (await fetch('index.json', {cache:'no-store'})).json();
   }catch(e){
     document.querySelector('main').innerHTML = '<div class="empty">No pude cargar los datos. Serví la app desde un servidor (http), no abriendo el archivo directo.</div>';
     return;
