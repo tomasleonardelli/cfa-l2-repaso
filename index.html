@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#4f46e5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="refstyles.css">
+<title>CFA L2 — Repaso</title>
+</head>
+<body>
+<header class="appbar">
+  <div class="brand">CFA L2 Repaso<small id="volLabel">Fixed Income</small></div>
+  <span class="spacer"></span>
+  <select id="volSelect" class="vol-select" aria-label="Volumen"></select>
+</header>
+
+<main>
+  <!-- FLASHCARDS -->
+  <section id="view-cards" class="view active">
+    <div class="filters" id="cardFilters"></div>
+    <div class="progressbar" id="cardBar"><div class="k" style="width:0"></div><div class="r" style="width:0"></div></div>
+    <div class="counter" id="cardCounter"></div>
+    <div class="stagewrap">
+      <div class="flashcard" id="flashcard">
+        <div class="meta"><span class="tag" id="fcLM"></span><span class="side" id="fcSide">PREGUNTA</span><span class="tag" id="fcTipo"></span></div>
+        <div class="content" id="fcContent"></div>
+        <div class="tap">tocá para dar vuelta</div>
+      </div>
+      <div class="controls">
+        <button class="rev" id="btnRev">A repasar</button>
+        <button class="know" id="btnKnow">La sé</button>
+      </div>
+      <div class="nav">
+        <button id="btnPrev">‹</button>
+        <span class="pos" id="cardPos"></span>
+        <button id="btnShuffle">⇄</button>
+        <button id="btnNext">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAMPAS -->
+  <section id="view-traps" class="view">
+    <div class="filters" id="trapFilters"></div>
+    <div class="counter" id="trapCounter"></div>
+    <div class="stagewrap">
+      <div class="trapcard" id="trapcard">
+        <div class="th" id="trapTitle"></div>
+        <div class="body hidden" id="trapBody"></div>
+      </div>
+      <div class="controls">
+        <button class="rev" id="btnTrapRev">A repasar</button>
+        <button class="know" id="btnTrapKnow">La sé</button>
+      </div>
+      <div class="nav">
+        <button id="btnTrapPrev">‹</button>
+        <span class="pos" id="trapPos"></span>
+        <button id="btnTrapReveal">👁 revelar</button>
+        <button id="btnTrapNext">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="view-quiz" class="view">
+    <div class="filters" id="quizFilters"></div>
+    <div id="quizList"></div>
+  </section>
+
+  <!-- PROGRESO -->
+  <section id="view-progress" class="view">
+    <div class="statgrid" id="statGrid"></div>
+    <div class="section-title">Dominio por Learning Module</div>
+    <div id="lmProgress"></div>
+    <div class="rowtools">
+      <button id="btnExport">⬇ Exportar progreso</button>
+      <button id="btnImport">⬆ Importar</button>
+      <button id="btnReset" class="danger">↺ Reiniciar progreso</button>
+      <input type="file" id="importFile" accept="application/json" hidden>
+    </div>
+    <p class="hint" style="margin-top:14px">El progreso se guarda en este dispositivo. Exportá de vez en cuando para no perderlo y para pasarlo entre celu y compu.</p>
+  </section>
+
+  <!-- REFERENCIA -->
+  <section id="view-ref" class="view">
+    <div class="refbtns" id="refBtns"></div>
+    <div class="refview" id="refContent"></div>
+  </section>
+</main>
+
+<nav class="tabbar" id="tabbar">
+  <button data-view="cards" class="on"><span class="ic">🗂️</span>Flashcards</button>
+  <button data-view="traps"><span class="ic">⚠️</span>Trampas</button>
+  <button data-view="quiz"><span class="ic">🧮</span>Quiz</button>
+  <button data-view="progress"><span class="ic">📊</span>Progreso</button>
+  <button data-view="ref"><span class="ic">📑</span>Ref</button>
+</nav>
+
+<script src="app.js"></script>
+</body>
+</html>

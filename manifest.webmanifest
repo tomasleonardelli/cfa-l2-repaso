@@ -1,0 +1,15 @@
+{
+  "name": "CFA L2 — Repaso",
+  "short_name": "CFA Repaso",
+  "description": "Flashcards, trampas y quiz de cálculo para CFA Level II. Offline.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f1220",
+  "theme_color": "#4f46e5",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
