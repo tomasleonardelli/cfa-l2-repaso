@@ -1,5 +1,5 @@
 /* Service worker: offline para la PWA de repaso CFA */
-const VERSION = 'cfa-repaso-v2';
+const VERSION = 'cfa-repaso-v3';
 const SHELL = [
   './',
   './index.html',
@@ -13,9 +13,7 @@ const SHELL = [
 ];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(
-    caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())
-  );
+  e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
@@ -26,20 +24,26 @@ self.addEventListener('activate', (e) => {
   );
 });
 
-// Cache-first con relleno en runtime (los vol*.json nuevos se cachean al primer fetch online)
 self.addEventListener('fetch', (e) => {
   const req = e.request;
   if (req.method !== 'GET') return;
-  e.respondWith(
-    caches.match(req).then((hit) => {
-      if (hit) return hit;
-      return fetch(req).then((res) => {
-        if (res && res.ok && res.type === 'basic') {
-          const copy = res.clone();
-          caches.open(VERSION).then((c) => c.put(req, copy));
-        }
+  const isData = new URL(req.url).pathname.endsWith('.json');
+
+  if (isData) {
+    // network-first: datos frescos online, cache como respaldo offline
+    e.respondWith(
+      fetch(req).then((res) => {
+        if (res && res.ok) { const copy = res.clone(); caches.open(VERSION).then((c) => c.put(req, copy)); }
         return res;
-      }).catch(() => hit);
-    })
-  );
+      }).catch(() => caches.match(req))
+    );
+  } else {
+    // cache-first para el shell y assets
+    e.respondWith(
+      caches.match(req).then((hit) => hit || fetch(req).then((res) => {
+        if (res && res.ok && res.type === 'basic') { const copy = res.clone(); caches.open(VERSION).then((c) => c.put(req, copy)); }
+        return res;
+      }).catch(() => hit))
+    );
+  }
 });
