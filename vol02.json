@@ -1,0 +1,1029 @@
+{
+  "id": "vol02",
+  "order": 2,
+  "title": "Economics",
+  "lms": [
+    {
+      "id": "LM1",
+      "title": "Currency Exchange Rates"
+    },
+    {
+      "id": "LM2",
+      "title": "Economic Growth"
+    }
+  ],
+  "cardTypes": {
+    "concepto": "Concepto",
+    "clasificación": "Clasificación",
+    "proceso": "Proceso",
+    "fórmula": "Fórmula",
+    "método": "Método",
+    "modelo": "Modelo"
+  },
+  "flashcards": [
+    {
+      "id": "vol02-c001",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "En la notación P/B, ¿qué representa cada moneda?",
+      "a": "<b>B = base currency</b> (la que se compra/vende, el denominador). <b>P = price currency</b> (en la que se expresa el precio). Ej: USD/EUR = 1.1650 → 1 EUR cuesta 1.1650 USD."
+    },
+    {
+      "id": "vol02-c002",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué significa \"hit the bid\" y \"pay the offer\"?",
+      "a": "<b>Hit the bid</b> = el cliente VENDE la base al dealer. <b>Pay the offer</b> = el cliente COMPRA la base. El offer siempre &gt; bid."
+    },
+    {
+      "id": "vol02-c003",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué es un pip? ¿Cuál es la excepción?",
+      "a": "Pip = 4º decimal (0.0001). <b>Excepción JPY</b>: pip = 2º decimal (0.01)."
+    },
+    {
+      "id": "vol02-c004",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "¿Qué 3 factores determinan el spread en el mercado INTERBANCARIO?",
+      "a": "1. <b>Par de monedas</b> (liquidez: majors vs crosses obscuros)<br>2. <b>Hora del día</b> (overlap London–NY = más líquido)<br>3. <b>Volatilidad</b> del mercado"
+    },
+    {
+      "id": "vol02-c005",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "¿Qué factores determinan el spread DEALER → CLIENTE?",
+      "a": "1. El spread <b>interbancario</b> subyacente<br>2. <b>Tamaño</b> de la transacción (más grande → más ancho)<br>3. <b>Relación</b> dealer-cliente<br>4. <span style='border:1px solid #000;padding:0 3px'>+FORWARDS</span> <b>Plazo</b> (más largo → más ancho)"
+    },
+    {
+      "id": "vol02-c006",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Triangular arbitrage: ¿cuál es la regla base para armar un cross?",
+      "a": "Armar la ecuación que <b>cancele la moneda común</b>.<br>Sin inversión: <b>bid×bid</b> y <b>offer×offer</b>.<br>Ej: (JPY/EUR)bid = (JPY/USD)bid × (USD/EUR)bid"
+    },
+    {
+      "id": "vol02-c007",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "¿Cuándo hay que INVERTIR un quote al armar un cross, y qué hay que recordar?",
+      "a": "Cuando la moneda común está en el <b>numerador de ambos</b> pares.<br>Hacer: <b>1 ÷ quote</b> Y ADEMÁS <b>intercambiar bid ↔ offer</b>.<br>Olvidar el swap de lados es el error #1."
+    },
+    {
+      "id": "vol02-c008",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Fórmula de Covered Interest Rate Parity (CIRP)",
+      "a": "F<sub>P/B</sub> = S<sub>P/B</sub> × (1 + i<sub>P</sub>·[Act/360]) / (1 + i<sub>B</sub>·[Act/360])<br><br>Relación de <b>no-arbitraje</b> → se cumple SIEMPRE. GBP usa Act/365."
+    },
+    {
+      "id": "vol02-c009",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Fórmula del forward premium / discount",
+      "a": "F − S = S × [Act/360] / (1 + i<sub>B</sub>·[Act/360]) × (i<sub>P</sub> − i<sub>B</sub>)<br><br>Positivo = base a <b>premium</b>. Negativo = base a <b>discount</b>."
+    },
+    {
+      "id": "vol02-c010",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "⚠ CONTRA-INTUITIVO: ¿qué moneda cotiza a forward DISCOUNT?",
+      "a": "La moneda con la tasa de interés <b>MÁS ALTA</b> cotiza a forward <b>DISCOUNT</b>.<br><br>El descuento compensa exactamente la ventaja de yield. La base cotiza a premium solo si i<sub>P</sub> &gt; i<sub>B</sub>."
+    },
+    {
+      "id": "vol02-c011",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "¿Cómo se convierten los forward points al spot?",
+      "a": "<b>÷ 10,000</b> (÷ 100 para JPY) y <b>sumar</b> al spot.<br>Ya están escalados al plazo — NO anualizados.<br>Cuidar el lado: vendés la base → bid; comprás → offer."
+    },
+    {
+      "id": "vol02-c012",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Mark-to-market de un forward: los 4 pasos",
+      "a": "<b>1.</b> Armar posición opuesta igual y contraria (mismo settlement)<br><b>2.</b> All-in forward rate de esa posición (vendés base → bid)<br><b>3.</b> CF = Notional × (rate paso 2 − rate original)<br><b>4.</b> Descontar con MRR de la <b>moneda del cash flow</b>, por el <b>tiempo restante</b>"
+    },
+    {
+      "id": "vol02-c013",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "MTM — ¿con qué tasa se descuenta el cash flow?",
+      "a": "Con la tasa MRR de la <b>moneda en la que está denominado el cash flow</b>, no la otra.<br>Y por el <b>tiempo restante</b> hasta settlement, no el plazo original."
+    },
+    {
+      "id": "vol02-c014",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "Covered Interest Rate Parity — ¿qué dice y se cumple?",
+      "a": "F<sub>f/d</sub> = S<sub>f/d</sub>(1+i<sub>f</sub>)/(1+i<sub>d</sub>)<br>El forward iguala el yield diferencial cubierto.<br><b>SE CUMPLE SIEMPRE</b> — es la única enforced por arbitraje."
+    },
+    {
+      "id": "vol02-c015",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "Uncovered Interest Rate Parity — ¿qué dice y se cumple?",
+      "a": "%ΔS<sup>e</sup> = i<sub>f</sub> − i<sub>d</sub><br>La moneda de mayor tasa se espera que <b>deprecie</b>.<br><b>Suele FALLAR</b> corto/medio plazo. Asume <b>risk-neutral</b>. Es la base del carry trade."
+    },
+    {
+      "id": "vol02-c016",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "Forward Rate Parity — ¿qué dice y qué requiere?",
+      "a": "F<sub>f/d</sub> = S<sup>e</sup><sub>f/d</sub><br>El forward es predictor <b>insesgado</b> (no perfecto) del spot futuro.<br>Requiere <b>CIRP + UIRP</b>. NO requiere real IRP."
+    },
+    {
+      "id": "vol02-c017",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "PPP: absoluta vs relativa vs ex ante",
+      "a": "<b>Absoluta:</b> S = P<sub>f</sub>/P<sub>d</sub> — raramente se cumple<br><b>Relativa:</b> %ΔS ≈ π<sub>f</sub> − π<sub>d</sub> — válida a <b>largo plazo</b> (≥5 años)<br><b>Ex ante:</b> %ΔS<sup>e</sup> = π<sup>e</sup><sub>f</sub> − π<sup>e</sup><sub>d</sub> — con inflación esperada"
+    },
+    {
+      "id": "vol02-c018",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "Real interest rate parity — ¿qué dice y qué requiere?",
+      "a": "r<sub>f</sub> − r<sub>d</sub> = 0 (las tasas reales convergen)<br>Se cumple si se cumplen <b>UIRP + ex ante PPP</b>."
+    },
+    {
+      "id": "vol02-c019",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "International Fisher effect — ¿qué dice y qué requiere?",
+      "a": "i<sub>f</sub> − i<sub>d</sub> = π<sup>e</sup><sub>f</sub> − π<sup>e</sup><sub>d</sub><br>Spread nominal = diferencial de inflación esperada.<br>Requiere <b>real IRP + ex ante PPP</b>."
+    },
+    {
+      "id": "vol02-c020",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Si TODAS las parity conditions se cumplen, ¿cuánto vale el real yield spread?",
+      "a": "<b>CERO.</b><br><br>Y el cambio esperado del spot iguala simultáneamente: el forward premium %, el spread de tasas nominales, y el diferencial de inflación esperada. → Imposible ganar consistentemente con FX."
+    },
+    {
+      "id": "vol02-c021",
+      "lm": "LM1",
+      "tipo": "método",
+      "q": "Pronosticar spot futuro: los 4 métodos y qué asume cada uno",
+      "a": "<b>Spot actual:</b> random walk (solo si diferencial tasas = 0)<br><b>Forward rate:</b> UIRP + FRP → inversores risk-neutral<br><b>UIRP:</b> %ΔS<sup>e</sup> = i<sub>f</sub> − i<sub>d</sub><br><b>PPP:</b> converge al long-run fair value (lento)"
+    },
+    {
+      "id": "vol02-c022",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué es el carry trade y qué condición debe FALLAR para que sea rentable?",
+      "a": "Long moneda high-yield, short moneda low-yield (funding currency).<br><br>Rentable cuando <b>UIRP NO se cumple</b> (las high-yield no se deprecian como predice UIRP).<br>NO depende de que falle CIRP ni Fisher."
+    },
+    {
+      "id": "vol02-c023",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Distribución de retornos del carry trade — ¿qué forma tiene?",
+      "a": "Más apuntada (peaked), <b>fat tails</b> y <b>negative skew</b>.<br>→ <b>Crash risk</b> en turbulencia (flight-to-quality + apalancamiento amplifican pérdidas).<br>La volatilidad sobre el equity se explica por el <b>apalancamiento</b>."
+    },
+    {
+      "id": "vol02-c024",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "Balance of payments: los 3 canales del current account",
+      "a": "<b>1. Flow supply/demand:</b> surplus → ↑demanda de moneda → apreciación. Pass-through limitado (1% deval → ~0.5% import prices).<br><b>2. Portfolio balance:</b> rebalanceo de activos extranjeros presiona la moneda deficitaria.<br><b>3. Debt sustainability:</b> déficit persistente → mercado revisa a la baja el fair value LT."
+    },
+    {
+      "id": "vol02-c025",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "⚠ ¿Un déficit de current account deprecia la moneda de inmediato?",
+      "a": "<b>NO.</b> Deprecia a <b>largo plazo</b>, pero los <b>capital flows dominan</b> corto/medio plazo (precios financieros ajustan más rápido que bienes).<br><br>Ej: el USD subió en los 80s y 90s pese a déficits, atraído por tasas reales altas."
+    },
+    {
+      "id": "vol02-c026",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "⚠ ¿Cuál es la correlación entre el equity market y la moneda de un país?",
+      "a": "<b>Inestable, y tiende a ≈ 0 a largo plazo.</b><br><br>Post-GFC el USD muestra correlación <b>negativa</b> con el equity (rol de <b>safe haven</b>): risk-on → ↓USD; risk-off → ↑USD."
+    },
+    {
+      "id": "vol02-c027",
+      "lm": "LM1",
+      "tipo": "método",
+      "q": "Mundell–Fleming con ALTA movilidad de capital: matriz",
+      "a": "Vía <b>tasas reales</b>.<br><b>MP restrictiva + FP expansiva → APRECIA ↑↑</b> (muy bullish)<br>MP expansiva + FP restrictiva → deprecia<br>Ambas iguales → indeterminado"
+    },
+    {
+      "id": "vol02-c028",
+      "lm": "LM1",
+      "tipo": "método",
+      "q": "Mundell–Fleming con BAJA movilidad de capital (EM): matriz",
+      "a": "Vía <b>trade flows</b>.<br><b>Ambas expansivas → DEPRECIA</b> (↑imports)<br>Ambas restrictivas → aprecia<br>Mixtas → indeterminado<br><br>⚠ No mezclar con la matriz de alta movilidad."
+    },
+    {
+      "id": "vol02-c029",
+      "lm": "LM1",
+      "tipo": "método",
+      "q": "Monetary model PURO vs Dornbusch",
+      "a": "<b>Puro:</b> PPP se cumple siempre. ↑X% money supply → ↑X% precios → depreciación proporcional.<br><b>Dornbusch (overshooting):</b> precios rígidos corto plazo → la moneda se deprecia <b>DE MÁS</b> (por debajo de su senda PPP), luego recupera."
+    },
+    {
+      "id": "vol02-c030",
+      "lm": "LM1",
+      "tipo": "método",
+      "q": "Portfolio balance approach — ¿qué dice sobre la política fiscal?",
+      "a": "Largo plazo: déficits fiscales sostenidos → ↑oferta de bonos → la moneda <b>CAE</b>.<br><br>Integrado con Mundell-Fleming: FP expansiva es <b>positiva corto plazo, NEGATIVA largo plazo</b>."
+    },
+    {
+      "id": "vol02-c031",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Efectividad de la intervención cambiaria: DM vs EM",
+      "a": "<b>DM:</b> limitada (reservas chicas vs turnover diario).<br><b>EM:</b> mixta pero con más \"firepower\" (ratio reservas/turnover sizable). Baja la <b>volatilidad</b> pero sin relación significativa con el <b>nivel</b>."
+    },
+    {
+      "id": "vol02-c032",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "Warning signs de crisis cambiaria (1–5 de 9)",
+      "a": "1. Mercados de capital <b>liberalizados</b> previamente<br>2. Grandes <b>inflows</b> (deuda corto plazo en FX)<br>3. Coinciden con <b>crisis bancarias</b><br>4. Tipos <b>fijos/semi-fijos</b> más vulnerables<br>5. Reservas FX <b>caen</b> precipitadamente"
+    },
+    {
+      "id": "vol02-c033",
+      "lm": "LM1",
+      "tipo": "clasificación",
+      "q": "Warning signs de crisis cambiaria (6–9 de 9)",
+      "a": "6. La moneda <b>subió</b> mucho vs su media histórica<br>7. <b>Terms of trade</b> (exports/imports) se deterioran<br>8. ↑ <b>broad money</b> y ratio M2/reservas bancarias<br>9. <b>Inflación</b> significativamente mayor pre-crisis"
+    },
+    {
+      "id": "vol02-c034",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Cómo define el currículo los \"terms of trade\"?",
+      "a": "<b>El ratio de exportaciones a importaciones</b> (\"exports relative to imports\").<br><br>Se <b>deterioran</b> antes de una crisis (warning sign #7). Definición simplificada — no distingue precio vs cantidad."
+    },
+    {
+      "id": "vol02-c035",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Capital flows excesivos a EM: ¿qué 5 vulnerabilidades siembran?",
+      "a": "1. Apreciación injustificada de la moneda<br>2. Buildup de <b>deuda externa</b> (corto plazo, en FX)<br>3. <b>Burbuja</b> de activos<br>4. Boom de <b>consumo/crédito</b><br>5. <b>Sobreinversión</b> en proyectos riesgosos"
+    },
+    {
+      "id": "vol02-c036",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué son los capital controls y cuál es la posición del IMF?",
+      "a": "Restricciones a los flujos de capital: tasas, depósitos no remunerados, límites cuantitativos.<br><br>El <b>IMF acepta</b> que los beneficios pueden exceder los costos."
+    },
+    {
+      "id": "vol02-c037",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Retorno del carry trade — descomposición",
+      "a": "Return = <b>yield spread</b> ± apreciación/depreciación de la moneda ± retorno de la inversión foránea.<br><br>Ejemplo Tokyo: Gross = (1/71.78)(1.017)(71.65) − 1 = 1.52% → Neto = 1.52% − 0.10% = <b>1.42%</b>"
+    },
+    {
+      "id": "vol02-c038",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Por qué el spread de un forward es más ancho que el de un spot?",
+      "a": "Por el <b>plazo</b>: a mayor tenor →<br>• ↓ liquidez<br>• ↑ riesgo de contraparte<br>• ↑ riesgo de tasa de interés"
+    },
+    {
+      "id": "vol02-c039",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Constraint de arbitraje: ¿cuándo NO hay arbitraje con un dealer?",
+      "a": "El <b>bid del dealer</b> no puede ser &gt; offer interbancario.<br>Su <b>offer</b> no puede ser &lt; bid interbancario.<br><br>Si interbank = 79.84/79.86 y dealer = 79.82/79.87 → <b>NO hay arbitraje</b>."
+    },
+    {
+      "id": "vol02-c040",
+      "lm": "LM1",
+      "tipo": "fórmula",
+      "q": "Fisher effect (doméstico)",
+      "a": "i = r + π<sup>e</sup><br><br>Tasa nominal = tasa real + inflación esperada. Se aplica por país."
+    },
+    {
+      "id": "vol02-c041",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es el potential GDP y por qué es un límite?",
+      "a": "El máximo output que una economía puede producir de forma sostenible <b>sin acelerar la inflación</b>.<br><br>A largo plazo, el GDP real crece al ritmo del potential GDP → es el <b>techo</b> del crecimiento sostenible."
+    },
+    {
+      "id": "vol02-c042",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Grinold–Kroner: descomposición del retorno de equity",
+      "a": "E(R<sub>e</sub>) = <b>dy + Δ(P/E) + i + g − ΔS</b><br><br>dy = dividend yield · Δ(P/E) = repricing · i = inflación · g = real GDP growth · ΔS = dilución"
+    },
+    {
+      "id": "vol02-c043",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "¿Cómo se descompone el efecto de dilución (ΔS)?",
+      "a": "<b>ΔS = nbb + rd</b><br><br><b>nbb</b> = net buybacks (recompras netas de acciones)<br><b>rd</b> = relative dynamism (crecimiento que ocurre fuera de las empresas cotizadas)"
+    },
+    {
+      "id": "vol02-c044",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "⚠ ¿Alto crecimiento del GDP garantiza altos retornos de equity?",
+      "a": "<b>NO.</b> La dilución puede destruir la relación.<br><br>China 1997–2017: GDP real per cápita <b>+8.2%</b>/año → retorno real en equity <b>+0.7%</b>. Motivo: nbb = <b>−26.5%</b> (privatización masiva de SOEs)."
+    },
+    {
+      "id": "vol02-c045",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Por qué el real earnings growth no puede exceder el potential GDP growth a largo plazo?",
+      "a": "Porque requeriría que la <b>cuota de ganancias corporativas en el GDP suba para siempre</b>.<br><br>Eso es insostenible: el ingreso laboral estancado desincentivaría trabajar y erosionaría la demanda."
+    },
+    {
+      "id": "vol02-c046",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Potential GDP para fixed income: los 4 usos",
+      "a": "1. <b>Output gap</b>: actual &gt; potential → ↑inflación → ↑tasas → ↓precios de bonos<br>2. <b>Crédito soberano</b>: ↓potential → ↓rating<br>3. <b>Tasas reales</b>: ↑potential → ↑tasas reales<br>4. <b>Structural deficit</b>: déficit si GDP = potential"
+    },
+    {
+      "id": "vol02-c047",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Función de producción Cobb–Douglas",
+      "a": "<b>Y = AK<sup>α</sup>L<sup>1−α</sup></b><br><br>A = TFP · α = capital share (≈0.3 USA) · (1−α) = labor share (≈0.7 USA)<br>Constant returns to scale + diminishing marginal productivity a cada input."
+    },
+    {
+      "id": "vol02-c048",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Marginal product of capital (MPK)",
+      "a": "<b>MPK = αY/K</b><br><br>En competencia, MPK = alquiler del capital (r) → α = rK/Y = capital income / GDP.<br>Por eso α es simultáneamente la <b>elasticidad</b> y la <b>capital share</b>."
+    },
+    {
+      "id": "vol02-c049",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Growth accounting equation (Solow, Eq. 4)",
+      "a": "<b>ΔY/Y = ΔA/A + α·ΔK/K + (1−α)·ΔL/L</b><br><br>USA (α=0.3): 1%↑K → +0.3% Y. 1%↑L → +0.7% Y.<br>El trabajo tiene el <b>doble</b> de impacto."
+    },
+    {
+      "id": "vol02-c050",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Labor productivity growth accounting (Eq. 5)",
+      "a": "<b>Potential GDP growth = Δ(labor force) + Δ(labor productivity)</b><br><br>Ventaja: evita estimar K y TFP.<br>Desventaja: mezcla capital deepening con TFP en un solo término."
+    },
+    {
+      "id": "vol02-c051",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "¿Cómo crece la productividad del trabajo? (per worker)",
+      "a": "<b>Δ(Y/L) = ΔA/A + α·Δ(K/L)</b><br><br>Solo dos fuentes: <b>TFP</b> y <b>capital deepening</b>. Nada más."
+    },
+    {
+      "id": "vol02-c052",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "⚠ ¿Se pueden sumar TFP + capital deepening + labor productivity?",
+      "a": "<b>NO — es doble conteo.</b><br><br>El capital deepening YA está dentro del labor productivity growth: Δ(Y/L) = α·Δ(K/L) + ΔA/A.<br>Los dos enfoques (Solow vs labor productivity) son <b>alternativos</b>, no combinables."
+    },
+    {
+      "id": "vol02-c053",
+      "lm": "LM2",
+      "tipo": "método",
+      "q": "Capital deepening vs. progreso tecnológico (TFP)",
+      "a": "<b>Capital deepening:</b> ↑k = K/L → movimiento <b>a lo largo</b> de la curva (A→B). Auto-limitante por rendimientos decrecientes.<br><b>TFP (θ):</b> ↑A → desplazamiento <b>hacia arriba</b> de toda la curva (B→C). Única fuente de crecimiento per cápita <b>sostenido</b>."
+    },
+    {
+      "id": "vol02-c054",
+      "lm": "LM2",
+      "tipo": "método",
+      "q": "Developed vs Developing: ¿de dónde viene su crecimiento?",
+      "a": "<b>Developing (punto A):</b> capital bajo → MPK alto → crecen por <b>capital deepening Y TFP</b>.<br><b>Developed (punto B):</b> capital alto → MPK bajo → crecen <b>solo por TFP</b> (el capital deepening ya no rinde)."
+    },
+    {
+      "id": "vol02-c055",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "⚠ Educación: ¿dónde invertir según el tipo de país?",
+      "a": "<b>Developed</b> (frontera tecnológica): educación <b>terciaria</b> → innovación → TFP.<br><b>Developing</b> (imitadores): educación <b>primaria/secundaria</b> → absorber tecnología existente. Mayor impacto marginal."
+    },
+    {
+      "id": "vol02-c056",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es el \"resource curse\" y cuáles son sus 2 mecanismos?",
+      "a": "Países ricos en recursos crecen MÁS LENTO.<br><b>1. Falla institucional:</b> los ingresos de recursos reducen el incentivo de desarrollar instituciones.<br><b>2. Dutch disease:</b> ver tarjeta específica."
+    },
+    {
+      "id": "vol02-c057",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Dutch disease — mecanismo completo",
+      "a": "Recursos abundantes → ↑demanda de exportaciones → <b>↑apreciación cambiaria</b> → la <b>manufactura pierde competitividad</b> global → el país queda fuera del <b>TFP progress</b> que generan los sectores manufactureros activos.<br><br>Origen: gas natural en Países Bajos → guilder se apreció."
+    },
+    {
+      "id": "vol02-c058",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿La escasez de recursos naturales limita el crecimiento?",
+      "a": "El currículo dice que la preocupación está <b>sobrestimada</b>:<br>• TFP permite usar <b>menos recursos por unidad</b> de output<br>• ↑precio del recurso escaso → shift a <b>sustitutos</b><br>• El share de tierra/recursos en el ingreso nacional <b>viene cayendo</b>"
+    },
+    {
+      "id": "vol02-c059",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Labor supply: los 4 drivers",
+      "a": "1. <b>Crecimiento poblacional</b> (fertilidad + mortalidad)<br>2. <b>Labor force participation rate</b><br>3. <b>Net migration</b><br>4. <b>Average hours worked</b>"
+    },
+    {
+      "id": "vol02-c060",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "⚠ ¿El crecimiento poblacional aumenta el GDP per cápita?",
+      "a": "<b>NO.</b> Aumenta el GDP <b>total</b> pero NO tiene impacto sobre el <b>per cápita GDP</b>.<br><br>En cambio, ↑ <b>participation rate</b> SÍ puede subir el per cápita GDP. El examen confunde los dos constantemente."
+    },
+    {
+      "id": "vol02-c061",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Preconditions for growth (las 7)",
+      "a": "1. Ahorro e inversión<br>2. Mercados financieros desarrollados<br>3. Sistema legal / rule of law<br>4. Property rights + estabilidad política<br>5. Educación y salud<br>6. Política fiscal/regulatoria pro-entrepreneurship<br>7. Comercio y flujos de capital abiertos"
+    },
+    {
+      "id": "vol02-c062",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "ICT capital vs non-ICT capital: ¿cuál es la diferencia clave?",
+      "a": "<b>ICT</b> (3–5% GDP): genera <b>network externalities</b> → puede aumentar la <b>TASA</b> de crecimiento potencial. Los efectos se capturan en TFP.<br><b>Non-ICT</b>: es capital deepening puro → rendimientos decrecientes → no fuente permanente."
+    },
+    {
+      "id": "vol02-c063",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es la \"creative destruction\" (Schumpeter)?",
+      "a": "La innovación tecnológica es de <b>doble filo</b>: eleva output y productividad a largo plazo, pero puede causar un <b>enlentecimiento cíclico</b> del crecimiento mientras empresas y trabajadores son desplazados."
+    },
+    {
+      "id": "vol02-c064",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "⚠ ¿Cómo se mide el TFP?",
+      "a": "<b>Como RESIDUAL — no es directamente observable.</b><br><br>ΔA/A = ΔY/Y − α·ΔK/K − (1−α)·ΔL/L<br><br>Es \"lo que no explican K y L\". Muy sensible a errores de medición de los inputs."
+    },
+    {
+      "id": "vol02-c065",
+      "lm": "LM2",
+      "tipo": "modelo",
+      "q": "Modelo CLÁSICO (Malthus): mecanismo y por qué falló",
+      "a": "<b>Mecanismo:</b> ingreso per cápita &gt; subsistencia → ↑población → ↓productividad marginal → ingreso vuelve a subsistencia. Tecnología → población más grande, no más rica.<br><b>Falló porque:</b> (1) el vínculo ingreso-población se rompió; (2) el TFP superó a los rendimientos decrecientes."
+    },
+    {
+      "id": "vol02-c066",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Steady-state growth rate — modelo NEOCLÁSICO (Eq. 8)",
+      "a": "Growth per cápita = <b>θ/(1−α)</b><br>Growth total = <b>θ/(1−α) + n</b><br><br>θ = TFP growth · α = capital share · n = labor force growth<br><b>Solo θ determina la tasa.</b> s, δ y n NO aparecen."
+    },
+    {
+      "id": "vol02-c067",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "¿Cómo se deriva θ/(1−α)?",
+      "a": "En steady state, Y/K es constante → Δk/k = Δy/y.<br>De y = Ak<sup>α</sup>: Δy/y = θ + α·Δk/k<br>Sustituyendo: Δy/y = θ + α·Δy/y<br>→ Δy/y(1−α) = θ<br>→ <b>Δy/y = θ/(1−α)</b>"
+    },
+    {
+      "id": "vol02-c068",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Output-to-capital ratio en steady state (Ψ, Eq. 9)",
+      "a": "<b>Ψ = Y/K = (1/s)·[θ/(1−α) + δ + n]</b><br><br>s = saving rate · δ = depreciation · n = labor force growth<br>La <b>pendiente</b> de la required investment line = δ + n + θ/(1−α)"
+    },
+    {
+      "id": "vol02-c069",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Crecimiento durante la TRANSICIÓN al steady state (Eq. 10)",
+      "a": "<b>Δy/y = θ/(1−α) + αs(Y/K − Ψ)</b><br><br>Si Y/K &gt; Ψ → crecimiento <b>por encima</b> del steady state (converge hacia abajo).<br>Si Y/K &lt; Ψ → crecimiento por debajo."
+    },
+    {
+      "id": "vol02-c070",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Efecto de ↑s (saving rate) en el modelo neoclásico",
+      "a": "k* ↑, y* ↑ (<b>NIVEL</b> sube)<br>Tasa de crecimiento LT: <b>SIN CAMBIO</b> (sigue en θ/(1−α))<br><br>Solo hay un boost <b>transitorio</b> mientras la economía se ajusta al nuevo steady state."
+    },
+    {
+      "id": "vol02-c071",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "⚠ Efecto de ↑n (labor force growth) en el steady state",
+      "a": "<b>k* ↓, y* ↓</b> (CONTRA-INTUITIVO)<br><br>Más trabajadores necesitan más capital → dado el mismo s, cada trabajador recibe <b>menos</b> capital.<br>Growth total ↑ (≈+n), pero el <b>per cápita NO cambia</b>."
+    },
+    {
+      "id": "vol02-c072",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "⚠ Efecto de ↑θ (TFP growth) en el steady state",
+      "a": "<b>k* ↓, y* ↓ en el momento actual</b> (CONTRA-INTUITIVO)<br>Pero la <b>tasa de crecimiento futuro ↑ permanentemente</b>.<br><br>La economía está en una trayectoria <b>más empinada desde una base más baja</b>."
+    },
+    {
+      "id": "vol02-c073",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Efecto de ↑δ (depreciación) en el steady state",
+      "a": "k* ↓, y* ↓ (nivel baja)<br>Tasa de crecimiento: <b>SIN CAMBIO</b><br><br>Más desgaste → el mismo ahorro bruto genera menos capital neto."
+    },
+    {
+      "id": "vol02-c074",
+      "lm": "LM2",
+      "tipo": "fórmula",
+      "q": "Modelo ENDÓGENO: función de producción y growth rate (Eq. 12)",
+      "a": "<b>y<sub>e</sub> = c·k<sub>e</sub></b> (línea recta — c = MPK constante)<br><br><b>Δy<sub>e</sub>/y<sub>e</sub> = sc − δ − n</b><br><br>s = ahorro · c = MPK · δ = depreciación · n = labor growth"
+    },
+    {
+      "id": "vol02-c075",
+      "lm": "LM2",
+      "tipo": "modelo",
+      "q": "⚠ Neoclásico vs Endógeno: ¿dónde importa el saving rate (s)?",
+      "a": "<b>Neoclásico:</b> ↑s → sube el <b>NIVEL</b> (k*, y*), NO la tasa. Boost transitorio.<br><b>Endógeno:</b> ↑s → sube la <b>TASA</b> de crecimiento <b>PERMANENTEMENTE</b>.<br><br>Motivo: en el endógeno Y/K = c es fijo → no hay autorregulación."
+    },
+    {
+      "id": "vol02-c076",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Modelo endógeno: ¿por qué NO hay rendimientos decrecientes al capital?",
+      "a": "Por las <b>externalidades / spillovers del R&amp;D y knowledge capital</b>.<br><br>Las empresas privadas SÍ tienen constant returns (no hay ventaja al monopolio). Pero el conocimiento se derrama a <b>todas</b> las empresas → en el agregado hay <b>increasing returns to scale</b>."
+    },
+    {
+      "id": "vol02-c077",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Por qué el gobierno debe subsidiar el R&D según el modelo endógeno?",
+      "a": "Porque hay <b>market failure</b>: las empresas privadas <b>sub-invierten</b> en R&amp;D.<br><br>El beneficio <b>social</b> excede al beneficio <b>privado</b> (la empresa no captura todos los spillovers). → Justifica gasto público directo, tax breaks o subsidios."
+    },
+    {
+      "id": "vol02-c078",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Convergencia ABSOLUTA — definición",
+      "a": "Los países en desarrollo, <b>sin importar sus características</b>, eventualmente alcanzan a los desarrollados en output per cápita.<br><br>El neoclásico implica convergencia de <b>TASAS</b> de crecimiento (todos acceden a la misma tecnología), pero <b>NO</b> implica convergencia de <b>NIVELES</b>."
+    },
+    {
+      "id": "vol02-c079",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Convergencia CONDICIONAL — definición",
+      "a": "Convergen los países que tengan el <b>mismo saving rate (s), population growth (n) y función de producción</b>.<br><br>Si esas condiciones se cumplen → mismo nivel de y* Y misma tasa. Si difieren en s/n → distintos niveles, pero <b>misma tasa</b>."
+    },
+    {
+      "id": "vol02-c080",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Convergencia CLUB — definición",
+      "a": "Solo los países ricos y de ingreso medio <b>miembros del club</b> convergen. Los de afuera <b>siguen cayendo</b>.<br><br>Un país pobre puede <b>unirse</b> al club si hace las reformas institucionales necesarias. Es la que más apoya la evidencia empírica."
+    },
+    {
+      "id": "vol02-c081",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es un \"non-convergence trap\"?",
+      "a": "Un país que NO implementa las reformas institucionales necesarias queda atrapado.<br><br>⚠ Instituciones que <b>inicialmente ayudan</b> pueden convertirse en trampa si se mantienen demasiado tiempo. Ej: import substitution en LATAM (éxito 50s–60s, estancamiento 70s–80s)."
+    },
+    {
+      "id": "vol02-c082",
+      "lm": "LM2",
+      "tipo": "modelo",
+      "q": "¿El modelo ENDÓGENO predice convergencia?",
+      "a": "<b>NO.</b><br><br>Los países de alto ingreso y más capital pueden seguir creciendo <b>tan rápido o más rápido</b> que los pobres. Si las externalidades del knowledge capital son grandes, el líder <b>mantiene su ventaja</b>."
+    },
+    {
+      "id": "vol02-c083",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Convergencia: los 2 mecanismos",
+      "a": "<b>1. Capital deepening:</b> EM en punto A de la curva → MPK alta → la inversión rinde mucho más.<br><b>2. Imitación tecnológica:</b> importar tecnología ya usada en DM.<br><br>⚠ La segunda requiere <b>gastar para dominar la tecnología</b> (similar a R&amp;D). Sin ese gasto, el país queda afuera."
+    },
+    {
+      "id": "vol02-c084",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Economía abierta: los 5 canales que aceleran el crecimiento",
+      "a": "1. Inversión <b>no limitada al ahorro doméstico</b><br>2. Especialización por <b>ventaja comparativa</b><br>3. Acceso a mercados globales → <b>economías de escala</b><br>4. <b>Importar tecnología</b><br>5. <b>Competencia</b> extranjera → ↑eficiencia doméstica"
+    },
+    {
+      "id": "vol02-c085",
+      "lm": "LM2",
+      "tipo": "clasificación",
+      "q": "Comercio libre en el modelo ENDÓGENO: los 3 efectos",
+      "a": "<b>Selection effect:</b> la competencia elimina empresas ineficientes → ↑productividad promedio<br><b>Scale effect:</b> mercado más grande → economías de escala (beneficia a países <b>chicos</b>)<br><b>Backwardness effect:</b> knowledge spillovers → los atrasados se acercan (beneficia a <b>EM pobres</b>)"
+    },
+    {
+      "id": "vol02-c086",
+      "lm": "LM2",
+      "tipo": "método",
+      "q": "Economía abierta: ¿qué predice el NEOCLÁSICO vs el ENDÓGENO?",
+      "a": "<b>Neoclásico:</b> tras la reasignación del ahorro mundial, <b>NO hay aumento permanente</b> de la tasa. Ambos vuelven al steady state.<br><b>Endógeno:</b> una política comercial más abierta eleva la tasa de crecimiento <b>PERMANENTEMENTE</b>."
+    },
+    {
+      "id": "vol02-c087",
+      "lm": "LM2",
+      "tipo": "método",
+      "q": "Inward-oriented vs Outward-oriented policies",
+      "a": "<b>Inward (import substitution):</b> proteger industria doméstica. → Africa y LATAM 50s–80s: baja calidad, estancamiento.<br><b>Outward:</b> exportaciones como motor, IED bienvenida. → East Asia (Corea, Singapur): convergencia a DM.<br><br>La evidencia apoya fuertemente el outward."
+    },
+    {
+      "id": "vol02-c088",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Economía abierta: ¿qué balanza comercial tiene un país capital-poor?",
+      "a": "<b>Trade DEFICIT</b> — pide prestado globalmente para financiar inversión doméstica.<br><br>Los países desarrollados (capital-exporters) corren <b>trade surplus</b>.<br>⚠ Excepción del currículo: <b>China</b> ha corrido surplus, contra la predicción del modelo, por su altísima tasa de ahorro doméstico."
+    },
+    {
+      "id": "vol02-c089",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "⚠ ¿Puede el comercio libre RETRASAR el crecimiento?",
+      "a": "<b>Sí, en casos específicos.</b><br><br>Especialmente en <b>países chicos que están muy atrás</b> de los líderes tecnológicos: abrirse puede <b>desincentivar la innovación doméstica</b>, porque las empresas saben que aun innovando pueden perder frente a competidores extranjeros más eficientes."
+    },
+    {
+      "id": "vol02-c090",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Por qué comparar GDP entre países usando PPP y no el tipo de cambio de mercado?",
+      "a": "1. El tipo de mercado es muy <b>volátil</b> → grandes swings sin crecimiento real<br>2. Los bienes <b>no transables</b> (peluquería, taxi) son más baratos en EM → el tipo de mercado <b>subestima</b> el nivel de vida de los EM"
+    },
+    {
+      "id": "vol02-c091",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Augmented Solow approach — ¿qué hace?",
+      "a": "Sigue en la tradición neoclásica (rendimientos decrecientes, tecnología exógena), pero <b>agrega inputs</b> a la función de producción (human capital, R&amp;D, infraestructura pública) para <b>reducir el residual</b> atribuido a TFP.<br><br>NO explica la tecnología — solo la mide mejor."
+    }
+  ],
+  "traps": [
+    {
+      "id": "vol02-t-lm1-01",
+      "lm": "LM1",
+      "star": false,
+      "title": "Signo del forward premium",
+      "body": "<span class=\"no\">NO</span> es que la moneda de tasa alta cotice a premium. <span class=\"si\">SÍ</span>: <b>la moneda con la tasa MÁS ALTA cotiza a forward DISCOUNT</b> — el descuento compensa exactamente su ventaja de yield. Identificá siempre <b>quién es la base</b> en el par antes de decidir el signo."
+    },
+    {
+      "id": "vol02-t-lm1-02",
+      "lm": "LM1",
+      "star": false,
+      "title": "Inversión de cross rates",
+      "body": "Cuando la moneda común está en el <b>numerador de ambos</b> pares, hay que hacer <b>1 ÷ quote</b> <u>Y ADEMÁS</u> <b>intercambiar bid ↔ offer</b>. Olvidar el swap de lados es el error más frecuente. Chequeo final: el offer resultante debe ser &gt; bid."
+    },
+    {
+      "id": "vol02-t-lm1-03",
+      "lm": "LM1",
+      "star": false,
+      "title": "MTM: tasa de descuento y plazo",
+      "body": "Descontá el cash flow con la MRR de la <b>moneda en la que está denominado el cash flow</b>, no la otra. Y usá el <b>tiempo restante</b> hasta settlement, no el plazo original del contrato."
+    },
+    {
+      "id": "vol02-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "CIRP vs UIRP — cuál se cumple",
+      "body": "Solo <b>CIRP es no-arbitraje</b> → se cumple SIEMPRE. <b>UIRP</b> no está enforced por arbitraje, asume inversores <b>risk-neutral</b> y suele fallar en el corto/medio plazo. Ese fracaso es precisamente lo que hace rentable el carry trade."
+    },
+    {
+      "id": "vol02-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "Qué requiere cada parity condition",
+      "body": "<b>Forward Rate Parity</b> requiere CIRP + UIRP (<u>NO</u> real IRP).<br/>\n<b>International Fisher effect</b> requiere real IRP + <b>ex ante</b> PPP (<u>NO</u> PPP absoluta).<br/>\nCuidado: algunos autores llaman \"international Fisher effect\" a UIRP — <b>el currículo los distingue</b>."
+    },
+    {
+      "id": "vol02-t-lm1-06",
+      "lm": "LM1",
+      "star": false,
+      "title": "Si todas las parity se cumplen",
+      "body": "El <b>real yield spread = CERO</b>. El cambio esperado del spot iguala el forward premium %, el spread nominal y el diferencial de inflación esperada — pero el real yield spread no \"iguala\" nada: <b>es cero</b>."
+    },
+    {
+      "id": "vol02-t-lm1-07",
+      "lm": "LM1",
+      "star": false,
+      "title": "Carry trade: qué condición debe fallar",
+      "body": "El carry trade es rentable cuando <b>UIRP NO se cumple</b>. <span class=\"no\">NO</span> depende de que falle CIRP ni el Fisher effect. Y la volatilidad del retorno sobre el equity se explica por el <b>apalancamiento</b>, no por el spread ni el funding rate."
+    },
+    {
+      "id": "vol02-t-lm1-08",
+      "lm": "LM1",
+      "star": false,
+      "title": "Mundell–Fleming: no mezclar las dos matrices",
+      "body": "Con <b>ALTA</b> movilidad (vía tasas reales): ambas expansivas → <b>indeterminado</b>.<br/>\nCon <b>BAJA</b> movilidad (vía trade flows): ambas expansivas → <b>DEPRECIA</b> (↑imports).<br/>\nEl caso más bullish (alta movilidad): <b>MP restrictiva + FP expansiva → aprecia ↑↑</b>."
+    },
+    {
+      "id": "vol02-t-lm1-09",
+      "lm": "LM1",
+      "star": false,
+      "title": "Dornbusch overshooting: dirección",
+      "body": "↑ money supply con precios rígidos → ↓tasas → outflow → la moneda se deprecia <b>DE MÁS</b> (por debajo de su senda PPP de largo plazo) en el corto plazo, y <b>luego recupera</b>. El overshooting es <b>por debajo</b> del nuevo nivel de LT."
+    },
+    {
+      "id": "vol02-t-lm1-10",
+      "lm": "LM1",
+      "star": false,
+      "title": "Fiscal: el signo se invierte con el horizonte",
+      "body": "Política fiscal expansiva: <b>positiva para la moneda en el corto plazo</b> (Mundell-Fleming) pero <b>negativa en el largo plazo</b> (portfolio balance: ↑oferta de bonos → deuda insostenible → moneda cae). El mismo shock, direcciones opuestas según el horizonte."
+    },
+    {
+      "id": "vol02-t-lm1-11",
+      "lm": "LM1",
+      "star": false,
+      "title": "Current account deficit ≠ depreciación inmediata",
+      "body": "Déficit persistente → depreciación a <b>largo plazo</b>, pero los <b>capital flows dominan</b> corto/medio plazo. El USD subió en los 80s y 90s <b>pese a déficits</b>, atraído por tasas reales altas."
+    },
+    {
+      "id": "vol02-t-lm1-12",
+      "lm": "LM1",
+      "star": false,
+      "title": "Correlación equity ↔ FX",
+      "body": "<span class=\"no\">NO</span> es estable y tiende a <b>≈ 0 a largo plazo</b>. Si una opción dice \"altamente positiva siempre\", es falsa. Post-GFC el USD muestra correlación <b>negativa</b> con el equity (safe haven: risk-on → ↓USD; risk-off → ↑USD)."
+    },
+    {
+      "id": "vol02-t-lm1-13",
+      "lm": "LM1",
+      "star": false,
+      "title": "Efectividad de la intervención cambiaria",
+      "body": "<b>EM</b> tienen más \"firepower\" que DM (ratio reservas/turnover), pero la intervención <b>baja la volatilidad</b> — <span class=\"no\">no</span> tiene relación significativa con el <b>nivel</b> del tipo de cambio. En <b>DM</b> es limitada (reservas chicas vs turnover diario)."
+    },
+    {
+      "id": "vol02-t-lm2-01",
+      "lm": "LM2",
+      "star": false,
+      "title": "Población ↑ vs. Participación ↑",
+      "body": "<b>Crecimiento poblacional ↑</b> → ↑ GDP <b>total</b> pero <b>SIN efecto sobre el per cápita GDP</b>.<br/>\n<b>Labor force participation ↑</b> → <b>SÍ</b> puede subir el per cápita GDP.<br/>\nEl examen confunde los dos constantemente."
+    },
+    {
+      "id": "vol02-t-lm2-02",
+      "lm": "LM2",
+      "star": false,
+      "title": "Ahorro en el neoclásico: NIVEL vs. TASA",
+      "body": "↑ s → sube el <b>nivel</b> de k* y y*, pero <b>NO la tasa de crecimiento de largo plazo</b> (sigue siendo θ/(1−α)). Solo hay un boost <b>transitorio</b>. Contrastá con el <b>endógeno</b>, donde ↑s → ↑ tasa <b>permanentemente</b>."
+    },
+    {
+      "id": "vol02-t-lm2-03",
+      "lm": "LM2",
+      "star": false,
+      "title": "⚠ ↑n BAJA k* y y* (contra-intuitivo)",
+      "body": "Más crecimiento de la fuerza laboral → <b>menos</b> capital por trabajador en el steady state (el mismo ahorro debe equipar a más gente). Resultado: <b>k* ↓, y* ↓</b>. La tasa del output <b>total</b> sube (+n) pero la <b>per cápita no cambia</b>."
+    },
+    {
+      "id": "vol02-t-lm2-04",
+      "lm": "LM2",
+      "star": false,
+      "title": "⚠ ↑θ TAMBIÉN baja k* y y* (máxima contra-intuición)",
+      "body": "Más TFP growth → empina la required investment line → corta la curva sf(k) <b>más abajo</b> → k* y y* <b>menores en el momento actual</b>. Pero la <b>tasa de crecimiento futuro sube permanentemente</b>. La economía está en una <b>trayectoria más empinada desde una base más baja</b>.<br/>\nSi el examen dice \"mayor TFP growth eleva el output per worker en el steady state\" → <b>FALSO</b> en el punto actual."
+    },
+    {
+      "id": "vol02-t-lm2-05",
+      "lm": "LM2",
+      "star": false,
+      "title": "El doble conteo en growth accounting",
+      "body": "<b>NUNCA sumes TFP + capital deepening + labor productivity.</b> El capital deepening <b>ya está dentro</b> del labor productivity: Δ(Y/L) = α·Δ(K/L) + ΔA/A.<br/>\nLos dos enfoques (Solow vs. labor productivity) son <b>alternativos</b>, no combinables. Si te dan datos de sobra, identificá qué método te piden e <b>ignorá el resto</b>."
+    },
+    {
+      "id": "vol02-t-lm2-06",
+      "lm": "LM2",
+      "star": false,
+      "title": "α: doble rol",
+      "body": "α es simultáneamente la <b>elasticidad del output respecto al capital</b> Y la <b>capital share del GDP</b> (son lo mismo por la condición de profit maximization en competencia). Si te dicen <b>\"share of GDP paid to labor = 65%\"</b> → <b>α = 0.35</b>."
+    },
+    {
+      "id": "vol02-t-lm2-07",
+      "lm": "LM2",
+      "star": false,
+      "title": "TFP no es observable — es un RESIDUAL",
+      "body": "ΔA/A = ΔY/Y − α·ΔK/K − (1−α)·ΔL/L. Es \"lo que no explican K y L\". Muy sensible a errores de medición de los inputs. Por eso el neoclásico trata la tecnología como <b>exógena</b>: no la explica, la asume."
+    },
+    {
+      "id": "vol02-t-lm2-08",
+      "lm": "LM2",
+      "star": false,
+      "title": "Endógeno: por qué no hay rendimientos decrecientes",
+      "body": "Las empresas privadas <b>SÍ</b> tienen constant returns (por eso no todo termina en monopolio). Pero los <b>spillovers del R&amp;D y knowledge capital</b> benefician a <b>todas</b> las empresas → en el <b>agregado</b> hay increasing returns to scale.<br/>\nNo es que el capital sea distinto: son las <b>externalidades del conocimiento</b> las que compensan."
+    },
+    {
+      "id": "vol02-t-lm2-09",
+      "lm": "LM2",
+      "star": false,
+      "title": "Convergencia absoluta: TASAS sí, NIVELES no",
+      "body": "La convergencia absoluta significa que los países en desarrollo <b>alcanzan a los desarrollados en tasas de crecimiento per cápita</b> (el neoclásico asume que todos acceden a la misma tecnología).<br/>\n<span class=\"no\">NO</span> implica que los <b>niveles</b> de ingreso per cápita sean iguales independientemente de las características subyacentes.<br/>\nLa convergencia <b>club</b> es la que más apoya la evidencia empírica."
+    },
+    {
+      "id": "vol02-t-lm2-10",
+      "lm": "LM2",
+      "star": false,
+      "title": "El endógeno NO predice convergencia",
+      "body": "Los países ricos con más capital pueden seguir creciendo <b>tan rápido o más rápido</b> que los pobres. Si las externalidades del knowledge capital son grandes, el líder <b>mantiene su ventaja</b>."
+    },
+    {
+      "id": "vol02-t-lm2-11",
+      "lm": "LM2",
+      "star": false,
+      "title": "Dutch disease: el mecanismo completo",
+      "body": "Recursos abundantes → ↑exportaciones → <b>apreciación cambiaria</b> → la <b>manufactura pierde competitividad</b> global → el país queda <b>fuera del TFP progress</b> que generan los sectores manufactureros activos.<br/>\nNo confundir con el efecto directo de los recursos sobre el crecimiento. El otro mecanismo del resource curse es la <b>falla institucional</b>."
+    },
+    {
+      "id": "vol02-t-lm2-12",
+      "lm": "LM2",
+      "star": false,
+      "title": "Grinold–Kroner: la dilución destruye la relación GDP↔equity",
+      "body": "Long-run real earnings growth ≤ potential GDP growth. Pero <b>aun así</b>, si ΔS = nbb + rd es grande, el <b>retorno al inversor existente</b> puede divergir masivamente del crecimiento del GDP.<br/>\nCaso curricular: <b>China 1997–2017</b>: GDP real per cápita <b>+8.2%</b>/año → retorno real en equity <b>+0.7%</b> (nbb = −26.5%, por privatización de SOEs).<br/>\n<b>Nunca supongas que ↑GDP → ↑equity returns.</b>"
+    },
+    {
+      "id": "vol02-t-lm2-13",
+      "lm": "LM2",
+      "star": false,
+      "title": "El comercio libre puede RETRASAR el crecimiento",
+      "body": "En <b>países chicos muy atrasados</b> respecto de los líderes tecnológicos, abrirse puede <b>desincentivar la innovación doméstica</b>: las empresas saben que aun innovando pueden perder frente a competidores extranjeros más eficientes. No es un beneficio universal."
+    },
+    {
+      "id": "vol02-t-lm2-14",
+      "lm": "LM2",
+      "star": false,
+      "title": "China rompe la predicción del modelo abierto",
+      "body": "El neoclásico predice que un país <b>capital-poor</b> corre <b>trade DEFICIT</b> (importa capital). India lo cumple. <b>China NO</b>: corre <b>surplus</b>, por su altísima tasa de ahorro doméstico. El currículo lo señala explícitamente como excepción."
+    }
+  ],
+  "problems": [
+    {
+      "id": "vol02-p01",
+      "lm": "LM1",
+      "title": "Triangular arbitrage — detectar la oportunidad",
+      "given": "<div>Implied interbank <b>JPY/CAD = 79.84 / 79.86</b></div>\n<div>Un dealer cotiza <b>JPY/CAD = 79.81 / 79.83</b></div>",
+      "ask": "¿Hay arbitraje? Si sí, ¿cuál es el profit por CAD?",
+      "answer": "JPY 0.01 por CAD",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>El <b>offer</b> del dealer (79.83) es <b>menor</b> que el <b>bid</b> interbancario (79.84) → el dealer vende CAD demasiado barato. <b>SÍ hay arbitraje.</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Comprás CAD al dealer (pay the offer) @ <b>79.83</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Vendés CAD en el interbancario (hit the bid) @ <b>79.84</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Profit = 79.84 − 79.83</span></div><div class=\"res\">JPY 0.01 por CAD</div><div class=\"warn\"><b>Constraint:</b> el bid del dealer no puede ser &gt; offer interbancario, y su offer no puede ser &lt; bid interbancario. Si el dealer cotizara 79.82 / <b>79.87</b> → <b>NO habría arbitraje</b>.</div>"
+    },
+    {
+      "id": "vol02-p02",
+      "lm": "LM1",
+      "title": "Forward points — calcular el forward premium/discount",
+      "given": "<div>Spot <b>CAD/AUD = 0.9000</b> · Plazo: <b>270 días</b></div>\n<div>270d MRR (AUD) = <b>1.47%</b> · 270d MRR (CAD) = <b>0.41%</b></div>\n<div>Day count: Actual/360</div>",
+      "ask": "Calculá F − S. ¿El AUD cotiza a premium o a discount?",
+      "answer": "F − S = −0.0071 → AUD a DISCOUNT",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Identificar: <b>AUD = base (B)</b>, <b>CAD = price (P)</b> → i<sub>B</sub> = 1.47%, i<sub>P</sub> = 0.41%</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>F − S = S × [Act/360] / (1 + i<sub>B</sub>·[Act/360]) × (i<sub>P</sub> − i<sub>B</sub>)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0.9000 × (270/360) ÷ (1 + 0.0147 × 270/360) × (0.0041 − 0.0147)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>= 0.9000 × 0.75 ÷ 1.011025 × (−0.0106)</span></div><div class=\"res\">F − S = −0.0071 → AUD a DISCOUNT</div><div class=\"warn\"><b>La lógica:</b> el AUD (base) tiene la tasa <b>más alta</b> (1.47% &gt; 0.41%) → por lo tanto cotiza a <b>discount</b>. El descuento compensa exactamente su ventaja de yield. Contra-intuitivo pero es la regla.</div>"
+    },
+    {
+      "id": "vol02-p03",
+      "lm": "LM1",
+      "title": "Mark-to-market de un forward — los 4 pasos",
+      "given": "<div>Posición: <b>LARGO GBP 10,000,000</b> a un forward rate de <b>1.8100 AUD/GBP</b></div>\n<div>Faltan <b>3 meses (90 días)</b> para el settlement.</div>\n<div>Spot actual: <b>AUD/GBP 1.8210 / 1.8215</b></div>\n<div>Forward points a 3 meses: <b>130 / 140</b></div>\n<div>3m MRR (AUD) = <b>2.40%</b></div>",
+      "ask": "Calculá el valor mark-to-market de la posición.",
+      "answer": "MTM = +AUD 238,569",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Paso 1 — posición opuesta:</b> estás largo GBP → armás un <b>corto GBP 10M</b> al mismo settlement.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span><b>Paso 2 — all-in rate:</b> vas a <b>vender</b> GBP (la base) → usás el <b>BID</b>.<br/><span class=\"fx\">All-in bid = 1.8210 + 130/10,000 = <b>1.8340</b></span></span></div><div class=\"step\"><span class=\"sn\">3.</span><span><b>Paso 3 — cash flow al settlement:</b><br/><span class=\"fx\">CF = (1.8340 − 1.8100) × 10,000,000 = <b>+AUD 240,000</b></span><br/>Positivo porque estás largo GBP y el GBP se apreció.</span></div><div class=\"step\"><span class=\"sn\">4.</span><span><b>Paso 4 — descontar al presente:</b> el cash flow está en <b>AUD</b> → usás la MRR del <b>AUD</b>, por los <b>90 días restantes</b>.<br/><span class=\"fx\">MTM = 240,000 ÷ (1 + 0.024 × 90/360) = 240,000 ÷ 1.006</span></span></div><div class=\"res\">MTM = +AUD 238,569</div><div class=\"warn\"><b>Las 2 trampas:</b> (1) usar el <b>bid</b>, no el offer, porque vendés la base; (2) descontar con la MRR de la <b>moneda del cash flow</b> (AUD) y por el <b>tiempo restante</b> (90d), no el plazo original.</div>"
+    },
+    {
+      "id": "vol02-p04",
+      "lm": "LM1",
+      "title": "Carry trade — retorno neto",
+      "given": "<div>Pedís prestado <b>JPY al 0.10%</b> · Invertís en <b>AUD al 1.70%</b></div>\n<div>Spot hoy: <b>JPY/AUD = 71.78</b></div>\n<div>Spot en 1 año: <b>JPY/AUD = 71.65</b></div>",
+      "ask": "Calculá el retorno neto del carry trade.",
+      "answer": "Retorno neto = 1.42%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Gross return</b> (convertir JPY → AUD, invertir, volver a JPY):</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= (1 / 71.78) × (1.017) × (71.65) − 1</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0.013931 × 1.017 × 71.65 − 1 = 1.0152 − 1 = <b>1.52%</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span><b>Neto</b> = gross − costo del funding en JPY:</span></div><div class=\"step\"><span class=\"sn\">5.</span><span>= 1.52% − 0.10%</span></div><div class=\"res\">Retorno neto = 1.42%</div><div class=\"warn\">El AUD se <b>depreció</b> levemente (71.78 → 71.65), lo que restó al retorno. Pero el <b>yield spread</b> (1.70% − 0.10% = 1.60%) más que lo compensó. <b>La volatilidad del retorno sobre el equity viene del apalancamiento</b>, no del spread.</div>"
+    },
+    {
+      "id": "vol02-p05",
+      "lm": "LM1",
+      "title": "Covered Interest Rate Parity — calcular el forward",
+      "given": "<div>Spot <b>USD/EUR = 1.1600</b></div>\n<div>Tasa a 1 año: <b>USD = 3.00%</b> · <b>EUR = 1.00%</b></div>",
+      "ask": "Calculá el forward a 1 año. ¿El EUR cotiza a premium o discount?",
+      "answer": "F = 1.1830 USD/EUR → EUR a PREMIUM",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Identificar: <b>EUR = base</b>, <b>USD = price</b> → i<sub>B</sub> = 1.00%, i<sub>P</sub> = 3.00%</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>F = S × (1 + i<sub>P</sub>) / (1 + i<sub>B</sub>)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 1.1600 × (1.03 / 1.01) = 1.1600 × 1.019802</span></div><div class=\"res\">F = 1.1830 USD/EUR → EUR a PREMIUM</div><div class=\"warn\">El EUR (base) tiene la tasa <b>más baja</b> (1% &lt; 3%) → cotiza a <b>premium</b>. Consistente con la regla: <b>la moneda de tasa más ALTA (USD) cotiza a DISCOUNT</b>.</div>"
+    },
+    {
+      "id": "vol02-p06",
+      "lm": "LM1",
+      "title": "Triangular arbitrage — armar el cross con inversión",
+      "given": "<div><b>USD/GBP = 1.2500 / 1.2505</b></div>\n<div><b>USD/EUR = 1.1600 / 1.1605</b></div>",
+      "ask": "Calculá el cross <b>EUR/GBP</b> (bid y offer).",
+      "answer": "EUR/GBP = 1.0771 / 1.0780",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>El <b>USD está en el numerador de ambos</b> → hay que <b>invertir uno</b>.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Quiero EUR/GBP = (USD/GBP) × (EUR/USD). Necesito EUR/USD = <b>1 ÷ (USD/EUR)</b>, <b>y swap de lados</b>:</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>(EUR/USD)<sub>bid</sub> = 1 / (USD/EUR)<sub>offer</sub> = 1/1.1605 = 0.86169</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>(EUR/USD)<sub>offer</sub> = 1 / (USD/EUR)<sub>bid</sub> = 1/1.1600 = 0.86207</span></div><div class=\"step\"><span class=\"sn\">5.</span><span>Ahora bid×bid y offer×offer:</span></div><div class=\"step\"><span class=\"sn\">6.</span><span>(EUR/GBP)<sub>bid</sub> = 1.2500 × 0.86169 = <b>1.0771</b></span></div><div class=\"step\"><span class=\"sn\">7.</span><span>(EUR/GBP)<sub>offer</sub> = 1.2505 × 0.86207 = <b>1.0780</b></span></div><div class=\"res\">EUR/GBP = 1.0771 / 1.0780</div><div class=\"warn\"><b>La trampa:</b> al invertir hay que hacer <b>1÷quote Y ADEMÁS swap bid↔offer</b>. Verificación final: offer (1.0780) &gt; bid (1.0771) ✓. Si te da al revés, olvidaste el swap.</div>"
+    },
+    {
+      "id": "vol02-p07",
+      "lm": "LM1",
+      "title": "Uncovered IRP — spot esperado",
+      "given": "<div>Spot <b>MXN/USD = 20.00</b></div>\n<div>Tasa a 1 año: <b>MXN = 9.00%</b> · <b>USD = 4.00%</b></div>",
+      "ask": "Según UIRP, ¿cuál es el spot esperado en 1 año?",
+      "answer": "S e = 21.00 MXN/USD",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>USD = base, MXN = price. UIRP: <span class=\"fx\">%ΔS<sup>e</sup> = i<sub>MXN</sub> − i<sub>USD</sub></span></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>%ΔS<sup>e</sup> = 9.00% − 4.00% = <b>+5.00%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>El USD (base) se <b>aprecia</b> 5% frente al MXN:</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>S<sup>e</sup> = 20.00 × 1.05</span></div><div class=\"res\">S e = 21.00 MXN/USD</div><div class=\"warn\">El <b>MXN</b> (la moneda de <b>tasa alta</b>) se <b>deprecia</b> — eso es exactamente lo que predice UIRP. El carry trade apuesta a que esto <b>NO ocurra</b>.</div>"
+    },
+    {
+      "id": "vol02-p08",
+      "lm": "LM1",
+      "title": "PPP relativa — cambio esperado del spot",
+      "given": "<div>Inflación esperada: <b>país A (price) = 6%</b> · <b>país B (base) = 2%</b></div>\n<div>Spot actual <b>A/B = 5.00</b></div>",
+      "ask": "Según PPP relativa, ¿cuál es el spot esperado en 1 año?",
+      "answer": "S e = 5.20 A/B",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>%ΔS<sub>A/B</sub> ≈ π<sub>A</sub> − π<sub>B</sub> = 6% − 2% = <b>+4%</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>La moneda de <b>mayor inflación (A)</b> se <b>deprecia</b> → hacen falta más unidades de A por cada B:</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>S<sup>e</sup> = 5.00 × 1.04</span></div><div class=\"res\">S e = 5.20 A/B</div><div class=\"warn\">PPP relativa es válida a <b>largo plazo (≥5 años)</b> — falla claramente a 1 año. En el examen, si te preguntan por el <b>fair value de largo plazo</b>, usás PPP.</div>"
+    },
+    {
+      "id": "vol02-p09",
+      "lm": "LM2",
+      "title": "Growth accounting (Solow) — con datos de sobra",
+      "given": "<div>Growth due to capital deepening = <b>2.3%</b></div>\n<div>Population growth = <b>3.4%</b></div>\n<div>Growth rate of TFP = <b>−0.6%</b></div>\n<div>Growth in labor productivity = <b>1.7%</b></div>\n<div>Growth in capital = <b>6.1%</b></div>\n<div>Share of GDP paid to labor = <b>65%</b></div>",
+      "ask": "Usando la <b>growth accounting equation de Solow</b>, estimá el crecimiento del output (ΔY/Y).",
+      "answer": "ΔY/Y = 3.745% ≈ 3.7%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Labor share = 65% → <b>α = 1 − 0.65 = 0.35</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>ΔY/Y = ΔA/A + α·ΔK/K + (1−α)·ΔL/L</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= (−0.6%) + 0.35 × 6.1% + 0.65 × 3.4%</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>= −0.60% + 2.135% + 2.210%</span></div><div class=\"res\">ΔY/Y = 3.745% ≈ 3.7%</div><div class=\"warn\"><b>Distractores:</b> \"capital deepening\" (2.3%) y \"labor productivity\" (1.7%) <b>NO se usan</b> en el enfoque de Solow. Sirven para el enfoque <b>alternativo</b> (labor productivity: 1.7% + 3.4% = 5.1%). <b>NUNCA sumes los dos sets</b> — sería doble conteo.</div>"
+    },
+    {
+      "id": "vol02-p10",
+      "lm": "LM2",
+      "title": "Productividad del trabajo — descomposición",
+      "given": "<div>ΔA/A (TFP) = <b>1.2%</b> · ΔK/K = <b>5.0%</b> · ΔL/L = <b>1.5%</b> · <b>α = 0.30</b></div>",
+      "ask": "Calculá el crecimiento de la productividad laboral, Δ(Y/L).",
+      "answer": "Δ(Y/L) = 2.25%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Primero, el capital deepening: <span class=\"fx\">Δ(K/L) = ΔK/K − ΔL/L = 5.0% − 1.5% = <b>3.5%</b></span></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Δ(Y/L) = ΔA/A + α·Δ(K/L)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 1.2% + 0.30 × 3.5% = 1.2% + 1.05%</span></div><div class=\"res\">Δ(Y/L) = 2.25%</div><div class=\"warn\">La productividad laboral tiene <b>solo dos fuentes</b>: <b>TFP</b> y <b>capital deepening</b>. Nada más. Verificación: ΔY/Y = 1.2 + 0.30(5.0) + 0.70(1.5) = 3.75% → Δ(Y/L) = 3.75% − 1.5% = <b>2.25%</b> ✓</div>"
+    },
+    {
+      "id": "vol02-p11",
+      "lm": "LM2",
+      "title": "Steady state neoclásico — China, Japan, Ireland",
+      "given": "<div><b>China:</b> labor share (1−α) = <b>0.561</b> · TFP growth (θ) = <b>2.9%</b> · labor force growth (n) = <b>1.2%</b></div>\n<div><b>Japan:</b> (1−α) = <b>0.538</b> · θ = <b>0.2%</b> · n = <b>0.0%</b></div>\n<div><b>Ireland:</b> (1−α) = <b>0.574</b> · θ = <b>0.9%</b> · n = <b>0.3%</b></div>",
+      "ask": "Calculá la steady-state growth rate del output para los tres países.",
+      "answer": "China 6.37% · Japan 0.37% · Ireland 1.87%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Steady-state growth = θ/(1−α) + n</span></div><div class=\"step\"><span class=\"sn\">2.</span><span><b>China:</b> <span class=\"fx\">2.9% / 0.561 + 1.2% = 5.169% + 1.2% = <b>6.37%</b></span></span></div><div class=\"step\"><span class=\"sn\">3.</span><span><b>Japan:</b> <span class=\"fx\">0.2% / 0.538 + 0.0% = <b>0.37%</b></span></span></div><div class=\"step\"><span class=\"sn\">4.</span><span><b>Ireland:</b> <span class=\"fx\">0.9% / 0.574 + 0.3% = 1.568% + 0.3% = <b>1.87%</b></span></span></div><div class=\"res\">China 6.37% · Japan 0.37% · Ireland 1.87%</div><div class=\"warn\"><b>Interpretación (viene en el examen):</b> el potential GDP de China estimado por otra vía era <b>8.5%</b> — muy por encima de su steady state (6.37%). Motivo: China <b>todavía está en transición</b>, con capital deepening masivo. Japan (1.0% vs 0.37%) e Ireland (2.0% vs 1.87%) ya operan <b>en</b> el steady state.</div>"
+    },
+    {
+      "id": "vol02-p12",
+      "lm": "LM2",
+      "title": "Output-to-capital ratio en steady state (Ψ)",
+      "given": "<div>θ (TFP growth) = <b>0.02</b> · α = <b>0.35</b> · δ = <b>0.10</b> · n = <b>0.01</b></div>\n<div>Saving rate inicial: <b>s = 20%</b>. Sube a <b>s = 30%</b>.</div>",
+      "ask": "Calculá Ψ antes y después. ¿Qué pasa con la tasa de crecimiento de largo plazo?",
+      "answer": "Ψ: 0.7040 → 0.4693 · Tasa LT: 3.08% → 3.08% (SIN CAMBIO)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Primero, la tasa de crecimiento per cápita en steady state:</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Δy/y = θ/(1−α) = 0.02 / (1 − 0.35) = 0.02/0.65 = <b>0.0308 = 3.08%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Ahora el bracket: <span class=\"fx\">θ/(1−α) + δ + n = 0.0308 + 0.10 + 0.01 = <b>0.1408</b></span></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Ψ = (1/s) × [θ/(1−α) + δ + n]</span></div><div class=\"step\"><span class=\"sn\">5.</span><span><b>Con s = 20%:</b> <span class=\"fx\">Ψ = 0.1408 / 0.20 = <b>0.7040</b></span></span></div><div class=\"step\"><span class=\"sn\">6.</span><span><b>Con s = 30%:</b> <span class=\"fx\">Ψ = 0.1408 / 0.30 = <b>0.4693</b></span></span></div><div class=\"res\">Ψ: 0.7040 → 0.4693 · Tasa LT: 3.08% → 3.08% (SIN CAMBIO)</div><div class=\"warn\"><b>La clave del modelo neoclásico:</b> ↑s cambia el <b>NIVEL</b> (Ψ baja, k* y y* suben) pero <b>NO la tasa de crecimiento de largo plazo</b>, que sigue siendo θ/(1−α) = 3.08%.</div>"
+    },
+    {
+      "id": "vol02-p13",
+      "lm": "LM2",
+      "title": "Crecimiento durante la TRANSICIÓN (Eq. 10)",
+      "given": "<div>Mismos datos que el problema 12: θ/(1−α) = <b>3.08%</b> · α = <b>0.35</b> · nuevo s = <b>0.30</b></div>\n<div>Y/K inmediatamente después del cambio = <b>0.7040</b> (aún no se ajustó)</div>\n<div>Nuevo Ψ = <b>0.4693</b></div>",
+      "ask": "Calculá la tasa de crecimiento per cápita <b>inmediatamente después</b> del aumento del saving rate.",
+      "answer": "Δy/y = 5.54%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Δy/y = θ/(1−α) + α·s·(Y/K − Ψ)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0.0308 + (0.35)(0.30)(0.7040 − 0.4693)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0.0308 + (0.105)(0.2347)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>= 0.0308 + 0.02464</span></div><div class=\"res\">Δy/y = 5.54%</div><div class=\"warn\">El crecimiento <b>\"salta\"</b> de 3.08% a 5.54%. Pero es <b>transitorio</b>: a medida que k sube, la MPK cae, Y/K baja hacia Ψ, y el crecimiento <b>vuelve a 3.08%</b>. A los 10 años ya se disipó ~2/3 de la aceleración.</div>"
+    },
+    {
+      "id": "vol02-p14",
+      "lm": "LM2",
+      "title": "Modelo ENDÓGENO — la misma tasa, pero permanente",
+      "given": "<div>c (output-to-capital ratio, constante) = <b>0.7040</b></div>\n<div>δ = <b>0.10</b> · n = <b>0.01</b></div>\n<div>El saving rate sube a <b>s = 23.5%</b></div>",
+      "ask": "Calculá la nueva tasa de crecimiento per cápita según el modelo endógeno.",
+      "answer": "Δy/y = 5.54% — y es PERMANENTE",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Δy<sub>e</sub>/y<sub>e</sub> = s·c − δ − n</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= (0.235)(0.7040) − 0.10 − 0.01</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0.16544 − 0.11</span></div><div class=\"res\">Δy/y = 5.54% — y es PERMANENTE</div><div class=\"warn\"><b>El contraste que define el LM:</b> es la <b>misma</b> tasa (5.54%) que el neoclásico alcanzaba en el problema 13 — pero allá era <b>transitoria</b> (y con un aumento del ahorro mucho mayor, a 30%). Acá con <b>menos ahorro (23.5%)</b> y de forma <b>PERMANENTE</b>. Motivo: en el endógeno <b>Y/K = c es fijo</b> → no hay autorregulación → no hay rendimientos decrecientes.</div>"
+    },
+    {
+      "id": "vol02-p15",
+      "lm": "LM2",
+      "title": "Grinold–Kroner — retorno esperado de equity",
+      "given": "<div>Dividend yield = <b>2.5%</b></div>\n<div>Real GDP growth (largo plazo) = <b>3.25%</b> · Inflación = <b>3.75%</b></div>\n<div>Δ(P/E) = <b>0%</b> · ΔS = <b>0%</b></div>",
+      "ask": "¿Cuál es un forecast razonable del retorno de equity de largo plazo? (Un vendor proyecta 13.5%.)",
+      "answer": "E(Re) = 9.5%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>E(R<sub>e</sub>) = dy + Δ(P/E) + i + g − ΔS</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Nominal GDP growth = <span class=\"fx\">3.25% + 3.75% = <b>7.00%</b></span></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>E(R<sub>e</sub>) = 2.5% + 0% + 7.00% − 0%</span></div><div class=\"res\">E(Re) = 9.5%</div><div class=\"warn\"><b>Por qué el 13.5% del vendor no puede sostenerse:</b> implica 11% de apreciación anual. Con nominal GDP creciendo al 7%, eso requeriría un <b>4% anual</b> permanente de expansión del P/E y/o de la cuota de ganancias en el GDP. <b>Ninguna de las dos puede crecer para siempre.</b></div>"
+    },
+    {
+      "id": "vol02-p16",
+      "lm": "LM2",
+      "title": "Labor productivity approach — potential GDP",
+      "given": "<div><b>China (1995–2018):</b> growth en hours worked = <b>0.6%</b> · labor productivity growth = <b>7.9%</b></div>\n<div><b>India (1995–2018):</b> growth en hours worked = <b>1.6%</b> · labor productivity growth = <b>5.2%</b></div>",
+      "ask": "Estimá el potential GDP growth de cada país.",
+      "answer": "China 8.5% · India 6.8%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Potential GDP growth = Δ(labor force) + Δ(labor productivity)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span><b>China:</b> <span class=\"fx\">0.6% + 7.9% = <b>8.5%</b></span></span></div><div class=\"step\"><span class=\"sn\">3.</span><span><b>India:</b> <span class=\"fx\">1.6% + 5.2% = <b>6.8%</b></span></span></div><div class=\"res\">China 8.5% · India 6.8%</div><div class=\"warn\"><b>Implicancia de inversión (viene en el vignette):</b> el long-term earnings growth está atado al potential GDP growth. → Se proyecta que las ganancias en China crezcan al <b>8.5%</b> vs. <b>6.8%</b> en India. Ignorando valuaciones, el equity chino outperformaría.<br/><b>Pero cuidado:</b> ese razonamiento ignora la <b>dilución (ΔS)</b> — y justamente China tuvo nbb = −26.5%.</div>"
+    },
+    {
+      "id": "vol02-p17",
+      "lm": "LM2",
+      "title": "Compounding — por qué las tasas importan",
+      "given": "<div><b>Argentina 1950:</b> GDP per cápita = <b>$6,164</b> · <b>2018:</b> $18,255 (68 años)</div>\n<div><b>Japan:</b> creció al <b>3.8%</b> anual en el mismo período</div>",
+      "ask": "(a) ¿A qué tasa creció Argentina? (b) ¿Cuánto habría sido su GDP per cápita de 2018 si hubiera crecido como Japón?",
+      "answer": "(a) 1.6% · (b) $77,854 (vs. $18,255 real)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>(a) Tasa de Argentina:</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= ($18,255 / $6,164)<sup>1/68</sup> − 1 = (2.9615)<sup>0.0147</sup> − 1</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= <b>1.6% anual</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span><b>(b) Si hubiera crecido al 3.8% (como Japón):</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>= $6,164 × (1.038)<sup>68</sup> = $6,164 × 12.63</span></div><div class=\"res\">(a) 1.6% · (b) $77,854 (vs. $18,255 real)</div><div class=\"warn\"><b>El punto del currículo:</b> una diferencia de solo <b>2.2 puntos</b> en la tasa anual (1.6% vs 3.8%), sostenida 68 años, produce una diferencia de <b>más de 4×</b> en el nivel de ingreso. Por eso \"even small differences in the growth rate translate into large differences in the level of income over time\".</div>"
+    },
+    {
+      "id": "vol02-p18",
+      "lm": "LM2",
+      "title": "Impacto proporcional del ahorro sobre k y y",
+      "given": "<div>α = <b>0.35</b></div>\n<div>Y/K <b>viejo</b> (s=20%) = <b>0.7040</b> · Y/K <b>nuevo</b> a los 5 años = <b>0.5947</b></div>\n<div>Fórmulas: <span class=\"fx\">k<sub>new</sub>/k<sub>old</sub> = [(Y/K)<sub>new</sub> / (Y/K)<sub>old</sub>]<sup>1/(α−1)</sup></span> · <span class=\"fx\">y<sub>new</sub>/y<sub>old</sub> = (k<sub>new</sub>/k<sub>old</sub>)<sup>α</sup></span></div>",
+      "ask": "¿Cuánto mayores serán el capital-to-labor ratio y el ingreso per cápita a los 5 años?",
+      "answer": "k/l: +29.64% · Ingreso per cápita: +9.51%",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Exponente: <span class=\"fx\">1/(α−1) = 1/(0.35−1) = 1/(−0.65) = <b>−1.5385</b></span></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>k<sub>new</sub>/k<sub>old</sub> = [0.5947 / 0.7040]<sup>−1/0.65</sup> = (0.8447)<sup>−1.5385</sup> = <b>1.2964</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>y<sub>new</sub>/y<sub>old</sub> = (1.2964)<sup>0.35</sup> = <b>1.0951</b></span></div><div class=\"res\">k/l: +29.64% · Ingreso per cápita: +9.51%</div><div class=\"warn\"><b>En el nuevo steady state</b> (100 años), los valores convergen a: <b>k/l = +86.68%</b> y <b>per cápita = +24.42%</b> — permanentemente más altos. Pero <b>ambos crecen a la MISMA tasa (3.08%)</b> que en el steady state viejo. <b>Nivel más alto, misma tasa.</b></div>"
+    }
+  ],
+  "highlights": [],
+  "tables": [
+    {
+      "id": "vol02-signos",
+      "title": "Hoja de Signos y Direcciones",
+      "lms": [
+        "LM1",
+        "LM2"
+      ],
+      "html": "<div class=\"page\">\n<h1>Economics · Hoja de Signos y Direcciones</h1>\n<div class=\"sub\">CFA 2026 Level II · Dónde caza el examen · LM1 Currency Exchange Rates + LM2 Economic Growth<br/>\n<b>Nota:</b> este volumen no contiene contabilidad (0 menciones de IFRS/GAAP/balance sheet). Las \"direcciones\" acá son cambiario-macro, no contables.</div>\n<div class=\"legend\">\n<span><span class=\"up\">↑</span> sube / aprecia</span>\n<span><span class=\"dn\">↓</span> baja / deprecia</span>\n<span><span class=\"eq\">=</span> sin cambio</span>\n<span><b>?</b> indeterminado</span>\n<span><span class=\"ci\">CI</span> = efecto CONTRA-INTUITIVO — acá pincha el examen</span>\n</div>\n<!-- ===== 1 ===== -->\n<section>\n<h2> 1. Forward premium / discount — dirección según el diferencial de tasas</h2>\n<table>\n<tr><th style=\"width:30%\">Situación (par P/B)</th><th class=\"c\" style=\"width:16%\">F vs S</th><th class=\"c\" style=\"width:20%\">La BASE cotiza a…</th><th>Regla / intuición</th></tr>\n<tr><td>i<sub>P</sub> &gt; i<sub>B</sub> (price currency paga más)</td><td class=\"c\">F &gt; S <span class=\"up\">↑</span></td><td class=\"c\"><b>PREMIUM</b></td><td>La base gana valor a futuro porque rinde menos hoy.</td></tr>\n<tr><td>i<sub>B</sub> &gt; i<sub>P</sub> (base paga más)</td><td class=\"c\">F &lt; S <span class=\"dn\">↓</span></td><td class=\"c\"><b>DISCOUNT</b> <span class=\"ci\">CI</span></td><td>La base pierde valor a futuro: el descuento <b>compensa exactamente</b> su ventaja de yield.</td></tr>\n<tr><td>i<sub>P</sub> = i<sub>B</sub></td><td class=\"c\">F = S <span class=\"eq\">=</span></td><td class=\"c\">Ni una ni otra</td><td>Sin diferencial → sin puntos forward.</td></tr>\n</table>\n<div class=\"insight\"><span class=\"h\">La regla en una línea</span><br/><b>La moneda con la tasa de interés MÁS ALTA cotiza a forward DISCOUNT.</b> Si el examen te dice \"la moneda X tiene tasas altas, ¿cotiza a premium?\" → NO. Y ojo: siempre identificá primero <b>quién es la base</b> en el par.</div>\n<p class=\"note\">Ejemplo curricular: CAD/AUD, spot 0.9000, MRR AUD 1.47% &gt; MRR CAD 0.41% → AUD (base) es la de tasa alta → F−S = <b>−0.0071</b> → AUD a <b>discount</b>. ✓</p>\n</section>\n<!-- ===== 2 ===== -->\n<section>\n<h2> 2. Bid / offer — qué lado usar en cada operación</h2>\n<table>\n<tr><th style=\"width:26%\">Qué hacés con la BASE</th><th class=\"c\" style=\"width:18%\">Lado que usás</th><th>Aparece en…</th></tr>\n<tr><td><b>Vendés</b> la base</td><td class=\"c\"><b>BID</b> (hit the bid)</td><td>MTM paso 2 cuando cerrás un <b>largo</b>. Triangular arbitrage: vender al bid del dealer.</td></tr>\n<tr><td><b>Comprás</b> la base</td><td class=\"c\"><b>OFFER</b> (pay the offer)</td><td>MTM paso 2 cuando cerrás un <b>corto</b>. Triangular arbitrage: comprar al offer del dealer.</td></tr>\n</table>\n<h3> Inversión de un cross: qué cambia</h3>\n<table>\n<tr><th style=\"width:28%\">Caso</th><th class=\"c\" style=\"width:22%\">Operación</th><th>Cuidado</th></tr>\n<tr><td>Moneda común en <b>denominador</b> de uno y <b>numerador</b> del otro</td><td class=\"c\">bid × bid<br/>offer × offer</td><td>Directo, sin inversión. La moneda común se cancela sola.</td></tr>\n<tr><td>Moneda común en el <b>numerador de AMBOS</b></td><td class=\"c\"><b>1 ÷ quote</b><br/><b>Y swap bid ↔ offer</b> <span class=\"ci\">CI</span></td><td>Olvidar el <b>swap de lados</b> es el error #1. Verificá al final: offer debe ser &gt; bid.</td></tr>\n</table>\n</section>\n<!-- ===== 3 ===== -->\n<section>\n<h2> 3. Mark-to-market — dirección del cash flow</h2>\n<table>\n<tr><th style=\"width:22%\">Tu posición</th><th style=\"width:26%\">Qué pasó con la moneda que estás LARGO</th><th class=\"c\" style=\"width:16%\">Cash flow</th><th>Verificación</th></tr>\n<tr><td rowspan=\"2\"><b>LARGO</b> la base</td><td>Se <b>apreció</b> (F<sub>nuevo</sub> &gt; F<sub>original</sub>)</td><td class=\"c\"><b>+ INFLOW</b></td><td rowspan=\"2\">CF = Notional × (rate<sub>nuevo</sub> − rate<sub>original</sub>)</td></tr>\n<tr><td>Se <b>depreció</b></td><td class=\"c\"><b>− OUTFLOW</b></td></tr>\n<tr><td rowspan=\"2\"><b>CORTO</b> la base</td><td>Se <b>apreció</b></td><td class=\"c\"><b>− OUTFLOW</b></td><td rowspan=\"2\">Signo invertido respecto del largo.</td></tr>\n<tr><td>Se <b>depreció</b></td><td class=\"c\"><b>+ INFLOW</b></td></tr>\n</table>\n<div class=\"insight\"><span class=\"h\">Las 2 trampas del MTM</span><br/><b>1. Tasa de descuento:</b> usá la MRR de la <b>moneda en la que está el cash flow</b> (la price currency del par), NO la otra.<br/><b>2. Plazo:</b> descontá por el <b>tiempo restante</b> hasta settlement, NO por el plazo original del contrato.</div>\n<p class=\"note\">Ejemplo curricular: largo GBP 10M @ 1.8100 AUD/GBP, 3 meses antes del vencimiento. Vender GBP (base) → <b>bid</b>: 1.8210 + 130/10,000 = 1.8340. CF = (1.8340 − 1.8100) × 10M = <b>+AUD 240,000</b>. MTM = 240,000 / (1 + 0.024 × 90/360) = <b>+AUD 238,569</b>. ✓</p>\n</section>\n<!-- ===== 4 ===== -->\n<section>\n<h2> 4. Parity conditions — qué requiere cada una y si se cumple</h2>\n<table>\n<tr><th style=\"width:19%\">Condición</th><th style=\"width:26%\">Requiere…</th><th class=\"c\" style=\"width:17%\">¿Se cumple?</th><th>Nota clave</th></tr>\n<tr><td class=\"em\">Covered IRP</td><td>Nada (arbitraje puro)</td><td class=\"c\"><b>SIEMPRE</b></td><td>La <b>única</b> enforced por arbitraje. Es la que define el forward.</td></tr>\n<tr><td class=\"em\">Uncovered IRP</td><td>Inversores <b>risk-neutral</b></td><td class=\"c\"><b>Suele FALLAR</b></td><td>Su fracaso es lo que hace rentable el <b>carry trade</b>.</td></tr>\n<tr><td class=\"em\">Forward Rate Parity</td><td><b>CIRP + UIRP</b> <span class=\"ci\">CI</span></td><td class=\"c\">Si se cumple UIRP</td><td>NO requiere real IRP. El forward es predictor <b>insesgado</b>, no perfecto.</td></tr>\n<tr><td class=\"em\">PPP relativa</td><td>—</td><td class=\"c\">Solo a <b>LARGO plazo</b></td><td>≥5 años. Falla claramente a 1 año.</td></tr>\n<tr><td class=\"em\">Real IRP</td><td><b>UIRP + ex ante PPP</b></td><td class=\"c\">Condicional</td><td>Implica r<sub>f</sub> − r<sub>d</sub> = 0.</td></tr>\n<tr><td class=\"em\">International Fisher</td><td><b>Real IRP + ex ante PPP</b> <span class=\"ci\">CI</span></td><td class=\"c\">Condicional</td><td>NO requiere PPP <b>absoluta</b>. Ojo: algunos autores llaman así a UIRP — el currículo los distingue.</td></tr>\n</table>\n<div class=\"insight\"><span class=\"h\">Si TODAS se cumplen a la vez</span><br/>El <b>real yield spread = CERO</b>. Y el cambio esperado del spot iguala simultáneamente el <b>forward premium %</b>, el <b>spread de tasas nominales</b> y el <b>diferencial de inflación esperada</b>. → Imposible ganar consistentemente con movimientos de moneda.</div>\n</section>\n<!-- ===== 5 ===== -->\n<section>\n<h2> 5. Mundell–Fleming — las DOS matrices (no mezclar)</h2>\n<div style=\"display:flex;gap:14px\">\n<div style=\"flex:1\">\n<h3> ALTA movilidad (G-10) — vía tasas reales</h3>\n<table>\n<tr><th></th><th class=\"c\">FP expansiva</th><th class=\"c\">FP restrictiva</th></tr>\n<tr><th>MP expansiva</th><td class=\"c\"><b>?</b></td><td class=\"c\"><b>DEPRECIA ↓</b></td></tr>\n<tr><th>MP restrictiva</th><td class=\"c\"><b>APRECIA ↑↑</b></td><td class=\"c\"><b>?</b></td></tr>\n</table>\n<p class=\"note\">MP restrictiva + FP expansiva = <b>máximo bullish</b> para la moneda (ambas empujan las tasas arriba).</p>\n</div>\n<div style=\"flex:1\">\n<h3> BAJA movilidad (EM) — vía trade flows</h3>\n<table>\n<tr><th></th><th class=\"c\">FP expansiva</th><th class=\"c\">FP restrictiva</th></tr>\n<tr><th>MP expansiva</th><td class=\"c\"><b>DEPRECIA ↓</b> <span class=\"ci\">CI</span></td><td class=\"c\"><b>?</b></td></tr>\n<tr><th>MP restrictiva</th><td class=\"c\"><b>?</b></td><td class=\"c\"><b>APRECIA ↑</b></td></tr>\n</table>\n<p class=\"note\">Ambas expansivas → ↑ demanda agregada → <b>↑ imports</b> → <b>deprecia</b>. No es \"indeterminado\" como en alta movilidad.</p>\n</div>\n</div>\n<div class=\"insight\"><span class=\"h\">El error de examen</span><br/>Con <b>alta</b> movilidad, ambas expansivas → <b>indeterminado</b> (efectos opuestos sobre las tasas). Con <b>baja</b> movilidad, ambas expansivas → <b>DEPRECIA</b> (el canal comercial domina). Fijate siempre <b>qué canal</b> te está pidiendo el vignette.</div>\n</section>\n<!-- ===== 6 ===== -->\n<section>\n<h2> 6. Modelos monetarios y fiscales — dirección de la moneda</h2>\n<table>\n<tr><th style=\"width:22%\">Modelo</th><th style=\"width:30%\">Shock</th><th class=\"c\" style=\"width:18%\">Dirección</th><th>Mecanismo</th></tr>\n<tr><td class=\"em\">Monetary PURO</td><td>↑ X% money supply</td><td class=\"c\"><b>Deprecia X%</b></td><td>PPP se cumple siempre → ↑X% precios → depreciación <b>proporcional</b>.</td></tr>\n<tr><td class=\"em\">Dornbusch (overshooting)</td><td>↑ money supply, precios rígidos CP</td><td class=\"c\"><b>Deprecia DE MÁS</b> <span class=\"ci\">CI</span></td><td>Sobre-reacciona <b>por debajo</b> de su senda PPP de LT; luego, al subir las tasas nominales, <b>recupera</b>.</td></tr>\n<tr><td class=\"em\">Portfolio balance</td><td>Déficit fiscal sostenido</td><td class=\"c\"><b>Cae (LT)</b></td><td>↑ oferta de bonos → los inversores exigen más retorno → moneda <b>cae</b> en el largo plazo.</td></tr>\n</table>\n<div class=\"insight\"><span class=\"h\">Fiscal: el signo se INVIERTE con el horizonte</span><br/>Política fiscal expansiva es <b>POSITIVA para la moneda en el corto plazo</b> (Mundell-Fleming: ↑tasas → entra capital → aprecia) pero <b>NEGATIVA en el largo plazo</b> (portfolio balance: deuda insostenible → riesgo de monetización → deprecia). El examen puede darte el mismo shock y pedirte direcciones opuestas según el horizonte.</div>\n</section>\n<!-- ===== 7 ===== -->\n<section>\n<h2> 7. Steady state neoclásico — efecto de cada parámetro</h2>\n<table>\n<tr><th style=\"width:15%\">Parámetro ↑</th><th class=\"c\" style=\"width:11%\">k* (nivel)</th><th class=\"c\" style=\"width:11%\">y* (nivel)</th><th class=\"c\" style=\"width:20%\">TASA de crecimiento LT</th><th>Intuición</th></tr>\n<tr><td class=\"em\">↑ s (ahorro)</td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><b><span class=\"eq\">= SIN CAMBIO</span></b></td><td>Más ahorro → más capital y más output, pero la tasa LT sigue siendo θ/(1−α). <b>Boost solo transitorio.</b></td></tr>\n<tr><td class=\"em\">↑ n (labor growth)</td><td class=\"c\"><span class=\"dn\">↓</span> <span class=\"ci\">CI</span></td><td class=\"c\"><span class=\"dn\">↓</span> <span class=\"ci\">CI</span></td><td class=\"c\">Total: <span class=\"up\">↑</span> (+n)<br/>Per cápita: <span class=\"eq\">=</span></td><td>Más trabajadores necesitan más capital → con el mismo s, <b>cada uno recibe menos</b>.</td></tr>\n<tr><td class=\"em\">↑ δ (depreciación)</td><td class=\"c\"><span class=\"dn\">↓</span></td><td class=\"c\"><span class=\"dn\">↓</span></td><td class=\"c\"><b><span class=\"eq\">= SIN CAMBIO</span></b></td><td>Más desgaste → el mismo ahorro bruto genera menos capital <b>neto</b>.</td></tr>\n<tr><td class=\"em\">↑ θ (TFP growth)</td><td class=\"c\"><span class=\"dn\">↓</span> <span class=\"ci\">CI</span></td><td class=\"c\"><span class=\"dn\">↓</span> <span class=\"ci\">CI</span></td><td class=\"c\"><b><span class=\"up\">↑ PERMANENTE</span></b></td><td>Trayectoria <b>más empinada desde una base más baja</b>. El nivel hoy es menor, pero crece más rápido.</td></tr>\n</table>\n<div class=\"insight\"><span class=\"h\">La distinción que define el LM</span><br/>En el neoclásico, <b>s, n y δ mueven el NIVEL. Solo θ mueve la TASA.</b> Todo el modelo se resume en eso.<br/>Los dos efectos marcados <span class=\"ci\">CI</span> (↑n y ↑θ <b>bajan</b> k* y y*) son los que el examen explota: ambos <b>empinan la required investment line</b> [δ + n + θ/(1−α)]·k, que corta la curva sf(k) más abajo y a la izquierda.</div>\n</section>\n<!-- ===== 8 ===== -->\n<section>\n<h2> 8. Neoclásico vs. Endógeno — dónde divergen</h2>\n<table>\n<tr><th style=\"width:24%\">Dimensión</th><th style=\"width:38%\">NEOCLÁSICO (Solow)</th><th>ENDÓGENO (Romer)</th></tr>\n<tr><td class=\"em\">Función de producción</td><td>y = Ak<sup>α</sup> — <b>curva</b> (se aplana)</td><td>y<sub>e</sub> = c·k<sub>e</sub> — <b>línea recta</b></td></tr>\n<tr><td class=\"em\">Rendimientos al capital</td><td><b>Decrecientes</b></td><td><b>Constantes</b> en el agregado (por spillovers de R&amp;D)</td></tr>\n<tr><td class=\"em\">Growth rate</td><td>θ/(1−α) + n</td><td>sc − δ − n</td></tr>\n<tr><td class=\"em\">Efecto de ↑s sobre la TASA</td><td><b>NINGUNO</b> (solo nivel) — boost transitorio</td><td><b>↑ PERMANENTE</b> <span class=\"ci\">CI</span></td></tr>\n<tr><td class=\"em\">Tecnología</td><td><b>Exógena</b> (θ dado, es un residual)</td><td><b>Endógena</b> (sale del modelo, vía R&amp;D)</td></tr>\n<tr><td class=\"em\">Convergencia</td><td><b>SÍ</b> — condicional (y de tasas para todos)</td><td><b>NO necesariamente</b> — el líder mantiene su ventaja</td></tr>\n<tr><td class=\"em\">Comercio abierto</td><td>Sin efecto <b>permanente</b> sobre la tasa</td><td>Eleva la tasa <b>PERMANENTEMENTE</b> (selection + scale + backwardness)</td></tr>\n<tr><td class=\"em\">Rol del gobierno en R&amp;D</td><td>No justificado por el modelo</td><td><b>Justificado</b>: market failure (beneficio social &gt; privado)</td></tr>\n</table>\n<p class=\"note\">Por qué s importa en el endógeno y no en el neoclásico: en el endógeno <b>Y/K = c es fijo por construcción</b> → no hay autorregulación. En el neoclásico, ↑s hace caer Y/K hasta que la economía vuelve al steady state.</p>\n</section>\n<!-- ===== 9 ===== -->\n<section>\n<h2> 9. Convergencia — qué predice cada cosa</h2>\n<table>\n<tr><th style=\"width:18%\">Tipo</th><th class=\"c\" style=\"width:18%\">¿Convergen las TASAS?</th><th class=\"c\" style=\"width:18%\">¿Convergen los NIVELES?</th><th>Condición</th></tr>\n<tr><td class=\"em\">Absoluta</td><td class=\"c\"><b>SÍ</b></td><td class=\"c\"><b>NO necesariamente</b> <span class=\"ci\">CI</span></td><td>El neoclásico implica convergencia de <b>tasas</b> (todos acceden a la misma tecnología), pero NO de <b>niveles</b>.</td></tr>\n<tr><td class=\"em\">Condicional</td><td class=\"c\"><b>SÍ</b></td><td class=\"c\"><b>SÍ</b>, si comparten s, n y producción</td><td>Distintos s/n → distintos niveles de y*, <b>pero misma tasa</b>.</td></tr>\n<tr><td class=\"em\">Club</td><td class=\"c\">Solo los miembros</td><td class=\"c\">Solo los miembros</td><td>Los de afuera <b>siguen cayendo</b>. Un país pobre puede unirse haciendo reformas institucionales. <b>Es la que más apoya la evidencia.</b></td></tr>\n</table>\n<div class=\"insight\"><span class=\"h\">La trampa exacta (aparece en preguntas tipo vignette)</span><br/>Si alguien dice <i>\"esperamos que nuestras TASAS de crecimiento per cápita alcancen a las de los países desarrollados\"</i> → <b>CORRECTO</b>, eso es convergencia absoluta.<br/>Si además dice <i>\"y eventualmente llegaremos a los mismos NIVELES de ingreso per cápita\"</i> → <b>INCORRECTO</b>: la convergencia absoluta NO implica igualdad de niveles independientemente de las características subyacentes.</div>\n</section>\n<!-- ===== 10 ===== -->\n<section>\n<h2> 10. Crecimiento: qué mueve el GDP TOTAL vs. el PER CÁPITA</h2>\n<table>\n<tr><th style=\"width:26%\">Shock</th><th class=\"c\" style=\"width:18%\">GDP total</th><th class=\"c\" style=\"width:20%\">GDP per cápita</th><th>Nota</th></tr>\n<tr><td class=\"em\">↑ Crecimiento poblacional</td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><b><span class=\"eq\">= SIN EFECTO</span></b> <span class=\"ci\">CI</span></td><td>Más gente produce más, pero también hay más gente entre quien repartir.</td></tr>\n<tr><td class=\"em\">↑ Labor force participation</td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><b><span class=\"up\">↑ SÍ SUBE</span></b></td><td>Más trabajadores <b>sobre la misma población</b> → más output por habitante. Pero es transición a un nuevo nivel, no permanente.</td></tr>\n<tr><td class=\"em\">↑ Net migration</td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\">Depende del mix</td><td>Ej. España 2000–2010: sin inmigración, la población habría crecido 0.2%/año en vez de 1.35%.</td></tr>\n<tr><td class=\"em\">↑ Average hours worked</td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td>Tendencia LT es a la <b>baja</b> en DM (legislación, efecto riqueza, impuestos).</td></tr>\n<tr><td class=\"em\">↑ TFP (θ)</td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><b><span class=\"up\">↑ PERMANENTE</span></b></td><td><b>La única fuente de crecimiento per cápita sostenido.</b></td></tr>\n<tr><td class=\"em\">↑ Capital deepening</td><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"up\">↑</span> pero <b>se agota</b></td><td>Auto-limitante por rendimientos decrecientes. No sostenible indefinidamente.</td></tr>\n</table>\n</section>\n<!-- ===== 11 ===== -->\n<section>\n<h2> 11. Growth accounting — qué fórmula usar y qué NO sumar</h2>\n<table>\n<tr><th style=\"width:24%\">Enfoque</th><th style=\"width:34%\">Fórmula</th><th>Cuándo usarlo</th></tr>\n<tr><td class=\"em\">Solow (growth accounting)</td><td>ΔY/Y = ΔA/A + α·ΔK/K + (1−α)·ΔL/L</td><td>Cuando te dan <b>TFP + ΔK + ΔL + shares</b>.</td></tr>\n<tr><td class=\"em\">Labor productivity</td><td>ΔY/Y = ΔL/L + Δ(Y/L)</td><td>Cuando te dan <b>labor productivity growth + ΔL</b>. Evita estimar K y TFP.</td></tr>\n<tr><td class=\"em\">Productividad per worker</td><td>Δ(Y/L) = ΔA/A + α·Δ(K/L)</td><td>Para descomponer la productividad laboral en sus <b>dos únicas</b> fuentes.</td></tr>\n</table>\n<div class=\"insight\"><span class=\"h\">⚠ El doble conteo — el error más común</span><br/><b>NUNCA sumes TFP + capital deepening + labor productivity.</b><br/>El capital deepening <b>ya está dentro</b> del labor productivity growth: Δ(Y/L) = α·Δ(K/L) + ΔA/A.<br/>Los dos enfoques son <b>alternativos</b>, no combinables. Si el examen te da datos de sobra, identificá <b>qué método te pide</b> e ignorá el resto.</div>\n<p class=\"note\">Recordá: <b>α cumple doble rol</b> — es simultáneamente la <b>elasticidad del output respecto al capital</b> Y la <b>capital share del GDP</b> (por la condición de profit maximization). Si te dan \"share of GDP paid to labor = 65%\" → α = 0.35.</p>\n</section>\n<hr/>\n<p class=\"note\">Fuente: CFA 2026 Level II, Economics (LM1 + LM2). Todas las direcciones y cifras verificadas contra el texto del currículo.</p>\n</div>"
+    }
+  ]
+}

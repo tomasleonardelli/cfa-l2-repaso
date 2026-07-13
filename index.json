@@ -12,6 +12,17 @@
       }
     },
     {
+      "id": "vol02",
+      "order": 2,
+      "title": "Economics",
+      "file": "vol02.json",
+      "counts": {
+        "flashcards": 91,
+        "traps": 27,
+        "problems": 18
+      }
+    },
+    {
       "id": "vol03",
       "order": 3,
       "title": "Financial Statement Analysis",
