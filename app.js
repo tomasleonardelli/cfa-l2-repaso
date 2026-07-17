@@ -72,7 +72,7 @@ function buildCardFilters(){
   wrap.appendChild(r2);
   // Estado
   const r3 = row('Estado');
-  [['all','Todas'],['pend','Pendientes'],['know','La sé'],['rev','A repasar']].forEach(([k,lab])=>{
+  [['all','Todas'],['pend','Pendientes'],['know','La sé'],['rev','A repasar'],['disc','A descartar']].forEach(([k,lab])=>{
     r3.appendChild(chip(lab, fEstado===k, ()=>{ fEstado=k; afterCardFilter(); }));
   });
   wrap.appendChild(r3);
@@ -87,6 +87,7 @@ function passCard(c){
   if(fEstado==='pend' && st) return false;
   if(fEstado==='know' && st!=='know') return false;
   if(fEstado==='rev'  && st!=='rev')  return false;
+  if(fEstado==='disc' && st!=='disc') return false;
   return true;
 }
 
@@ -115,7 +116,7 @@ function renderCard(){
   card.classList.toggle('back', flipped);
   $('fcLM').textContent = c.lm;
   $('fcTipo').textContent = VOL.cardTypes[c.tipo];
-  const st = progress[c.id]==='know' ? ' · LA SÉ' : (progress[c.id]==='rev' ? ' · A REPASAR' : '');
+  const st = progress[c.id]==='know' ? ' · LA SÉ' : (progress[c.id]==='rev' ? ' · A REPASAR' : (progress[c.id]==='disc' ? ' · DESCARTADA' : ''));
   $('fcSide').textContent = (flipped ? 'RESPUESTA' : 'PREGUNTA') + st;
   $('fcContent').innerHTML = flipped ? c.a : c.q;
   $('cardPos').textContent = `${idx+1} / ${deck.length}`;
@@ -125,13 +126,15 @@ function renderCardStats(){
   const total = VOL.flashcards.length;
   const k = VOL.flashcards.filter(c=>progress[c.id]==='know').length;
   const r = VOL.flashcards.filter(c=>progress[c.id]==='rev').length;
+  const dd = VOL.flashcards.filter(c=>progress[c.id]==='disc').length;
   const bar = $('cardBar');
   bar.children[0].style.width = (k/total*100)+'%';
   bar.children[1].style.width = (r/total*100)+'%';
   $('cardCounter').innerHTML =
     `<span><span class="dot k"></span><b>${k}</b> la sé</span>`+
     `<span><span class="dot r"></span><b>${r}</b> a repasar</span>`+
-    `<span><span class="dot p"></span><b>${total-k-r}</b> pendientes</span>`;
+    `<span><span class="dot p"></span><b>${total-k-r-dd}</b> pendientes</span>`+
+    `<span><span class="dot d"></span><b>${dd}</b> a descartar</span>`;
 }
 
 function flip(){ if(!deck.length) return;
@@ -246,22 +249,26 @@ function renderProgress(){
   const items=[...cards, ...traps];
   const k=items.filter(i=>progress[i.id]==='know').length;
   const r=items.filter(i=>progress[i.id]==='rev').length;
+  const dd=items.filter(i=>progress[i.id]==='disc').length;
   const total=items.length;
   $('statGrid').innerHTML =
     `<div class="stat k"><div class="big">${k}</div><div class="lab">La sé</div></div>`+
     `<div class="stat r"><div class="big">${r}</div><div class="lab">A repasar</div></div>`+
-    `<div class="stat p"><div class="big">${total-k-r}</div><div class="lab">Pendientes</div></div>`;
+    `<div class="stat p"><div class="big">${total-k-r-dd}</div><div class="lab">Pendientes</div></div>`+
+    `<div class="stat d"><div class="big">${dd}</div><div class="lab">A descartar</div></div>`;
   const wrap=$('lmProgress'); wrap.innerHTML='';
   VOL.lms.forEach(lm=>{
     const its=items.filter(i=>i.lm===lm.id);
     if(!its.length) return;
     const kk=its.filter(i=>progress[i.id]==='know').length;
     const rr=its.filter(i=>progress[i.id]==='rev').length;
-    const pct=Math.round(kk/its.length*100);
+    const dd2=its.filter(i=>progress[i.id]==='disc').length;
+    const denom=Math.max(1,its.length-dd2);
+    const pct=Math.round(kk/denom*100);
     const div=document.createElement('div'); div.className='lmrow';
     div.innerHTML =
-      `<div class="lmhead"><span class="name">${lm.id} · ${lm.title}</span><span class="pct">${pct}% dominado · ${its.length} ítems</span></div>`+
-      `<div class="progressbar"><div class="k" style="width:${kk/its.length*100}%"></div><div class="r" style="width:${rr/its.length*100}%"></div></div>`;
+      `<div class="lmhead"><span class="name">${lm.id} · ${lm.title}</span><span class="pct">${pct}% dominado · ${its.length} ítems${dd2?' · '+dd2+' descart.':''}</span></div>`+
+      `<div class="progressbar"><div class="k" style="width:${kk/denom*100}%"></div><div class="r" style="width:${rr/denom*100}%"></div></div>`;
     wrap.appendChild(div);
   });
 }
@@ -327,6 +334,7 @@ function wire(){
   $('flashcard').onclick=flip;
   $('btnKnow').onclick=()=>markCard('know');
   $('btnRev').onclick=()=>markCard('rev');
+  $('btnDisc').onclick=()=>markCard('disc');
   $('btnNext').onclick=nextCard; $('btnPrev').onclick=prevCard; $('btnShuffle').onclick=shuffleDeck;
   $('btnTrapReveal').onclick=trapReveal;
   $('btnTrapKnow').onclick=()=>trapMark('know'); $('btnTrapRev').onclick=()=>trapMark('rev');
@@ -344,6 +352,7 @@ function wire(){
     else if(e.key==='ArrowLeft') prevCard();
     else if(e.key==='1') markCard('rev');
     else if(e.key==='2') markCard('know');
+    else if(e.key==='3') markCard('disc');
   });
 }
 
