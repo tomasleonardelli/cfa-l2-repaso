@@ -1,0 +1,1710 @@
+{
+  "id": "vol09",
+  "order": 9,
+  "title": "Portfolio Management",
+  "lms": [
+    {
+      "id": "LM1",
+      "title": "Economics and Investment Markets"
+    },
+    {
+      "id": "LM2",
+      "title": "Analysis of Active Portfolio Management"
+    },
+    {
+      "id": "LM3",
+      "title": "Exchange-Traded Funds: Mechanics and Applications"
+    },
+    {
+      "id": "LM4",
+      "title": "Using Multifactor Models"
+    },
+    {
+      "id": "LM5",
+      "title": "Measuring and Managing Market Risk"
+    },
+    {
+      "id": "LM6",
+      "title": "Backtesting and Simulation"
+    }
+  ],
+  "cardTypes": {
+    "concepto": "Concepto",
+    "formula": "Fórmula",
+    "clasificacion": "Clasificación",
+    "proceso": "Proceso",
+    "metodo": "Método vs método"
+  },
+  "flashcards": [
+    {
+      "id": "vol09-c001",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Fundamental pricing equation (Eq. 1): ¿cómo se escribe el precio de un activo?",
+      "a": "P<sub>t</sub><sup>i</sup> = &Sigma;<sub>s=1</sub><sup>N</sup> <span class=\"eq\">E<sub>t</sub>[CF<sub>t+s</sub>] / (1 + l<sub>t,s</sub> + &theta;<sub>t,s</sub> + &rho;<sub>t,s</sub><sup>i</sup>)<sup>s</sup></span> donde <b>l</b> = tasa real libre de riesgo, <b>&theta;</b> = inflación esperada, <b>&rho;</b> = risk premium del activo."
+    },
+    {
+      "id": "vol09-c002",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "¿Cuáles son los 3 canales por los que la economía afecta el precio de un activo?",
+      "a": "1) <b>Default-free interest rates</b> a lo largo de las maturities. 2) <b>Timing y/o magnitud</b> de los cash flows esperados. 3) <b>Risk premiums</b> exigidos."
+    },
+    {
+      "id": "vol09-c003",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué es la \"news\" y por qué un precio puede CAER ante buenas noticias?",
+      "a": "News = <b>sorpresa vs. lo anticipado</b>. Lo ya esperado <b>ya está en el precio</b>. Si el mercado esperaba algo aún mejor, una \"buena\" noticia es una sorpresa negativa y el precio cae."
+    },
+    {
+      "id": "vol09-c004",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Por qué canal afecta el investor sentiment al valor de un activo?",
+      "a": "Vía el <b>discount rate</b> (subiendo o bajando los risk premiums). <b>NO</b> por un canal directo de cash flows."
+    },
+    {
+      "id": "vol09-c005",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "¿Cómo se obtiene la tasa real l a partir de m (inter-temporal rate of substitution)? (Eq. 4)",
+      "a": "<span class=\"eq\">l<sub>t,1</sub> = (1 &minus; P<sub>t,1</sub>) / P<sub>t,1</sub> = 1/E<sub>t</sub>(m<sub>t,1</sub>) &minus; 1</span><br>La tasa real es <b>inversamente</b> proporcional a m."
+    },
+    {
+      "id": "vol09-c006",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿La tasa real l sube o baja con la VOLATILIDAD del crecimiento del GDP?",
+      "a": "<b>SUBE</b> (relación positiva). Contra-intuitivo: mayor incertidumbre del ingreso futuro hace que el inversor risk-averse <b>exija más</b> retorno real. También sube con el crecimiento tendencial del GDP."
+    },
+    {
+      "id": "vol09-c007",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Signo de cov(P, m) y el risk premium: ¿qué relación hay?",
+      "a": "cov <b>NEGATIVA</b> &rarr; risk premium <b>POSITIVO</b> (mal hedge de consumo; retorno &gt; risk-free). cov <b>POSITIVA</b> &rarr; premium <b>NEGATIVO</b> (es un hedge; retorno <b>menor</b> al risk-free)."
+    },
+    {
+      "id": "vol09-c008",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Discount rate de un bono REAL default-free (index-linked) — Eq. 9",
+      "a": "<span class=\"eq\">1 + l<sub>t,s</sub></span><br>Solo lleva la tasa real. Sin &theta;, sin &pi;."
+    },
+    {
+      "id": "vol09-c009",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Discount rate de un bono NOMINAL default-free — Eq. 10",
+      "a": "<span class=\"eq\">1 + l<sub>t,s</sub> + &theta;<sub>t,s</sub> + &pi;<sub>t,s</sub></span><br><b>&theta;</b> = inflación esperada; <b>&pi;</b> = premio por <b>incertidumbre</b> de inflación."
+    },
+    {
+      "id": "vol09-c010",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Discount rate de un T-BILL: ¿qué componente se elimina y por qué? (Eq. 11)",
+      "a": "<span class=\"eq\">1 + l + &theta;</span> — se <b>elimina &pi;</b> porque a ~3 meses la incertidumbre de inflación es despreciable. El T-bill es buen hedge de consumo &rarr; premio &asymp; 0."
+    },
+    {
+      "id": "vol09-c011",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Discount rate de un bono CREDIT-RISKY — Eq. 13",
+      "a": "<span class=\"eq\">1 + l + &theta; + &pi; + &gamma;<sub>t,s</sub><sup>i</sup></span><br><b>&gamma;</b> = credit premium (compensa PD y recovery rate incierta)."
+    },
+    {
+      "id": "vol09-c012",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Discount rate de EQUITY y relación entre &lambda;, &gamma; y &kappa; — Eq. 15-16",
+      "a": "<span class=\"eq\">1 + l + &theta; + &pi; + &lambda;<sub>t,s</sub><sup>i</sup></span> con <b>&lambda; = &gamma; + &kappa;</b>.<br>&kappa; = premio de equity <b>sobre el bono corporativo</b>. &lambda; = equity risk premium <b>vs. el default-free</b>. Siempre <b>&lambda; &gt; &gamma;</b>."
+    },
+    {
+      "id": "vol09-c013",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Discount rate de COMMERCIAL REAL ESTATE — Eq. 17",
+      "a": "<span class=\"eq\">1 + l + &theta; + &pi; + &gamma; + &kappa; + &phi;<sub>t,s</sub><sup>i</sup></span><br><b>&phi;</b> = liquidity premium. El CRE lleva <b>todos</b> los componentes."
+    },
+    {
+      "id": "vol09-c014",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Taylor rule (Eq. 12): ¿cuáles son los pesos de la inflación y del output gap?",
+      "a": "<span class=\"eq\">pr<sub>t</sub> = l<sub>t</sub> + &iota;<sub>t</sub> + 0.5(&iota;<sub>t</sub> &minus; &iota;*) + 0.5(Y<sub>t</sub> &minus; Y*)</span><br>Equivale a <b>1.5</b> en inflación (aparece 2 veces) y <b>0.5</b> en el output gap."
+    },
+    {
+      "id": "vol09-c015",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Cuál es la NEUTRAL RATE según la Taylor rule?",
+      "a": "<b>pr = l + &iota;*</b> (cuando inflación = target y output gap = 0). No estimula ni frena la economía."
+    },
+    {
+      "id": "vol09-c016",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿La curva de rendimientos se EMPINA o se APLANA en recesión?",
+      "a": "Se <b>EMPINA</b> (steepens): el central recorta el corto y el largo queda anclado. Se <b>aplana o invierte</b> al <b>final de la expansión</b>. Curva invertida = <b>predictor de recesión</b>."
+    },
+    {
+      "id": "vol09-c017",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Por qué el TERM PREMIUM sube con la maturity?",
+      "a": "Los bonos largos son <b>peor hedge de consumo</b> (menos negativamente correlacionados con los malos tiempos). Pendiente promedio post-1945: US 0.50%, UK 0.40%."
+    },
+    {
+      "id": "vol09-c018",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Break-even inflation (BEI): ¿qué es y qué contiene?",
+      "a": "<span class=\"eq\">BEI = yield nominal &minus; yield real</span> = <b>&theta; + &pi;</b>.<br><b>NO</b> es la inflación esperada pura: la <b>sobreestima</b> por incluir el premio &pi;."
+    },
+    {
+      "id": "vol09-c019",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Pérdida esperada de un bono con riesgo de crédito (Eq. 14)",
+      "a": "<span class=\"eq\">E[loss] = PD &times; (1 &minus; RR)</span><br><b>NO</b> es PD &times; RR. PD = probability of default; RR = recovery rate."
+    },
+    {
+      "id": "vol09-c020",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿El credit spread es pro-cíclico o counter-cíclico? ¿Y las recovery rates?",
+      "a": "Credit spread: <b>COUNTER-cíclico</b> (sube en recesión). Recovery rates: <b>PRO-cíclicas</b>. Loss rates: <b>counter-cíclicas</b>."
+    },
+    {
+      "id": "vol09-c021",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Ranking de recovery rates por seniority",
+      "a": "<b>Senior secured &gt; senior unsecured &gt; subordinated.</b>"
+    },
+    {
+      "id": "vol09-c022",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿El efecto de un aumento del real GDP growth sobre el equity market es positivo?",
+      "a": "<b>AMBIGUO.</b> Sube el numerador (earnings) <b>y</b> sube el denominador (la tasa real l). No se puede saber cuál domina."
+    },
+    {
+      "id": "vol09-c023",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "CAPE (Shiller P/E): ¿qué usa en el numerador y el denominador?",
+      "a": "P = precio <b>real</b>. E = media móvil de <b>10 años</b> de earnings <b>reales</b>. CAPE alto históricamente &rarr; <b>retornos futuros bajos</b>."
+    },
+    {
+      "id": "vol09-c024",
+      "lm": "LM1",
+      "tipo": "metodo",
+      "q": "CRE: ¿cómo se comporta el ingreso por renta vs. el capital value en el ciclo?",
+      "a": "Renta: <b>estable</b> (~6.5% nominal/año, casi inmune al ciclo). Capital value: <b>muy pro-cíclico</b> (Irlanda 2008-09: &minus;55.5%). Por eso el CRE es mal hedge de consumo."
+    },
+    {
+      "id": "vol09-c025",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Active return (value added): ¿cómo se calcula?",
+      "a": "<span class=\"eq\">R<sub>A</sub> = R<sub>P</sub> &minus; R<sub>B</sub> = &Sigma;<sub>i</sub> &Delta;w<sub>i</sub> R<sub>i</sub> = &Sigma;<sub>i</sub> &Delta;w<sub>i</sub> R<sub>Ai</sub></span><br>Con &Delta;w<sub>i</sub> = w<sub>P,i</sub> &minus; w<sub>B,i</sub> (los active weights <b>suman cero</b>)."
+    },
+    {
+      "id": "vol09-c026",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Underponderar un activo perdedor agrega o resta valor?",
+      "a": "<b>AGREGA valor.</b> En R<sub>A</sub> = &Sigma;&Delta;w<sub>i</sub>R<sub>Ai</sub>, un &Delta;w negativo sobre un R<sub>Ai</sub> negativo da contribución <b>positiva</b>."
+    },
+    {
+      "id": "vol09-c027",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "Sharpe ratio vs. Information ratio: ¿qué va en el denominador de cada uno?",
+      "a": "<b>SR</b> = (R<sub>P</sub> &minus; R<sub>F</sub>) / <b>&sigma;<sub>P</sub></b> (total risk, vs. risk-free).<br><b>IR</b> = (R<sub>P</sub> &minus; R<sub>B</sub>) / <b>&sigma;<sub>A</sub></b> (active risk = tracking error, vs. benchmark)."
+    },
+    {
+      "id": "vol09-c028",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Agregar cash o leverage afecta al Sharpe ratio? ¿Y al Information ratio?",
+      "a": "<b>SR: NO afecta</b> (two-fund separation). <b>IR: SÍ afecta</b> (el cash lo encoge)."
+    },
+    {
+      "id": "vol09-c029",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Escalar todos los active weights por una constante c cambia el IR?",
+      "a": "<b>NO.</b> Suben R<sub>A</sub> y &sigma;<sub>A</sub> en la misma proporción &rarr; la c se cancela. El IR mide la <b>calidad</b> de las apuestas, no su tamaño."
+    },
+    {
+      "id": "vol09-c030",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "¿Cómo se relaciona el Sharpe del portfolio total con el IR? (Eq. 7)",
+      "a": "<span class=\"eq\">SR<sup>2</sup><sub>P</sub> = SR<sup>2</sup><sub>B</sub> + IR<sup>2</sup></span><br>Está <b>al cuadrado</b>. Por eso el <b>IR esperado es el mejor criterio</b> para elegir manager."
+    },
+    {
+      "id": "vol09-c031",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Nivel ÓPTIMO de active risk (sin restricciones) — Eq. 8",
+      "a": "<span class=\"eq\">&sigma;(R<sub>A</sub>) = (IR / SR<sub>B</sub>) &times; &sigma;<sub>B</sub></span><br>Con restricciones: <b>&sigma;<sub>A</sub> = TC &times; (IR* / SR<sub>B</sub>) &times; &sigma;<sub>B</sub></b>."
+    },
+    {
+      "id": "vol09-c032",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Fundamental Law — versión BASIC (sin restricciones)",
+      "a": "<span class=\"eq\">E(R<sub>A</sub>)* = IC &times; &radic;BR &times; &sigma;<sub>A</sub></span> &rarr; <b>IR* = IC &times; &radic;BR</b>"
+    },
+    {
+      "id": "vol09-c033",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Fundamental Law — versión FULL (con restricciones)",
+      "a": "<span class=\"eq\">E(R<sub>A</sub>) = TC &times; IC &times; &radic;BR &times; &sigma;<sub>A</sub></span> &rarr; <b>IR = TC &times; IC &times; &radic;BR</b>"
+    },
+    {
+      "id": "vol09-c034",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Cómo entra el breadth en la Fundamental Law?",
+      "a": "Como <b>&radic;BR</b>, no BR. Cuadruplicar las decisiones <b>duplica</b> el IR (&radic;4 = 2), no lo cuadruplica."
+    },
+    {
+      "id": "vol09-c035",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué mide el IC (information coefficient)?",
+      "a": "La <b>calidad de la señal (skill)</b>: correlación entre los forecasts y los retornos realizados (risk-weighted). Rango &minus;1 a +1; usualmente &lt;0.20. <b>Debe ser &gt;0 ex ante</b> o no se justifica gestionar activamente."
+    },
+    {
+      "id": "vol09-c036",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué mide el TC (transfer coefficient)?",
+      "a": "Cuánto se <b>trasladan los forecasts a los pesos reales</b>: correlación entre &mu;<sub>i</sub>/&sigma;<sub>i</sub> y &Delta;w<sub>i</sub>&sigma;<sub>i</sub>. =1 sin restricciones; típico <b>0.20–0.90</b>. <b>TC=0 &rarr; invertir en el benchmark</b>."
+    },
+    {
+      "id": "vol09-c037",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Grinold rule: ¿cómo se escalan los scores a forecasts?",
+      "a": "<span class=\"eq\">&mu;<sub>i</sub> = IC &times; &sigma;<sub>i</sub> &times; S<sub>i</sub></span><br>Con scores S de varianza cross-seccional = 1."
+    },
+    {
+      "id": "vol09-c038",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Active weight óptimo de cada activo",
+      "a": "<span class=\"eq\">&Delta;w<sub>i</sub>* = (&mu;<sub>i</sub> / &sigma;<sub>i</sub><sup>2</sup>) &times; (&sigma;<sub>A</sub> / (IC &times; &radic;BR))</span><br>La estructura relativa la da <b>&mu;<sub>i</sub>/&sigma;<sub>i</sub><sup>2</sup></b>; el segundo término es un escalar común que ajusta al &sigma;<sub>A</sub> objetivo."
+    },
+    {
+      "id": "vol09-c039",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Market timing: ¿cómo se calcula el IC?",
+      "a": "<span class=\"eq\">IC = (% aciertos) &minus; (% errores) = 2 &times; (% aciertos) &minus; 1</span><br>Ej.: 55% correcto &rarr; IC = <b>0.10</b> (no 0.55)."
+    },
+    {
+      "id": "vol09-c040",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Por qué el market timing rinde IR bajos aun con skill?",
+      "a": "Porque el <b>breadth es bajo</b> (una decisión trimestral &rarr; BR=4). Con IC=0.10: IR = 0.10&times;&radic;4 = <b>0.20</b>. Si fueran 250 decisiones diarias independientes: IR = <b>1.58</b>."
+    },
+    {
+      "id": "vol09-c041",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿El IR es invariante al nivel de active risk con y sin restricciones?",
+      "a": "<b>SIN restricciones: invariante.</b> <b>CON restricciones: DECRECE</b> al ser más agresivo — al subir &sigma;<sub>A</sub> los pesos óptimos crecen, chocan más con los límites y <b>baja el TC</b>."
+    },
+    {
+      "id": "vol09-c042",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Ex post: ¿cómo se descompone la varianza del active return?",
+      "a": "<b>TC<sup>2</sup></b> = proporción del forecasting <b>skill</b>. <b>1 &minus; TC<sup>2</sup></b> = <b>noise</b> inducido por las restricciones.<br>Ej.: TC=0.80 &rarr; 64% skill, 36% noise."
+    },
+    {
+      "id": "vol09-c043",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "Strategy risk (Qian-Hua): ¿qué limitación de la Fundamental Law captura?",
+      "a": "La <b>incertidumbre del IC</b> (se sobreestima por exceso de confianza). Efecto: los IR reales caen a <b>45%–91%</b> de la estimación original.<br><span class=\"eq\">E(R<sub>A</sub>) = (IC / &sigma;<sub>IC</sub>) &times; &sigma;<sub>A</sub></span>"
+    },
+    {
+      "id": "vol09-c044",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "¿Cuándo el breadth real es MENOR que N?",
+      "a": "Con <b>dependencia cross-seccional</b> (apostar a todo un sector/región) y con <b>dependencia temporal</b> (una señal que cambia lento, como low-P/E, persiste varios meses &rarr; rebalancear más seguido NO agrega breadth real)."
+    },
+    {
+      "id": "vol09-c045",
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "¿Quién puede crear o redimir shares de un ETF y en qué mercado?",
+      "a": "Solo los <b>Authorized Participants (APs)</b>, en el <b>mercado primario</b> (OTC, con el emisor, intercambio <b>in-kind</b>). El inversor común solo opera en el <b>secundario</b> (la bolsa)."
+    },
+    {
+      "id": "vol09-c046",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué es el creation basket y cuál es el tamaño típico de una creation unit?",
+      "a": "<b>Creation basket</b>: canasta de títulos que el emisor publica cada día (también define el iNAV). <b>Creation unit</b>: bloque grande, usualmente <b>50.000 shares</b> (rango 10.000–600.000)."
+    },
+    {
+      "id": "vol09-c047",
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "ETF a PREMIUM (price &gt; NAV): ¿qué hace el AP?",
+      "a": "<b>VENDE el ETF</b> (caro) y <b>COMPRA el basket</b> (fair value) &rarr; <b>CREA</b> shares. Esto empuja el precio del ETF <b>a la baja</b>."
+    },
+    {
+      "id": "vol09-c048",
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "ETF a DISCOUNT (price &lt; NAV): ¿qué hace el AP?",
+      "a": "<b>COMPRA el ETF</b> (barato) y <b>VENDE el basket</b> &rarr; <b>REDIME</b> shares. Esto empuja el precio del ETF <b>al alza</b>."
+    },
+    {
+      "id": "vol09-c049",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Tax FAIRNESS vs. tax EFFICIENCY en ETFs: ¿cuál es la diferencia?",
+      "a": "<b>Fairness</b>: las ventas de otros inversores <b>no gatillan tus</b> capital gains (la redención in-kind no es evento gravable). <b>Efficiency</b>: el PM entrega los lots de <b>bajo costo</b> para reducir las ganancias no realizadas del fondo."
+    },
+    {
+      "id": "vol09-c050",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Return of capital (ROC): ¿es gravable?",
+      "a": "<b>Generalmente NO al recibirlo</b> — es una distribución <b>en exceso de los earnings</b> (devuelve capital). Pero <b>reduce el cost basis</b> por ese monto &rarr; el impuesto se <b>difiere</b> a la venta."
+    },
+    {
+      "id": "vol09-c051",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Tracking error de un ETF: ¿cómo se define?",
+      "a": "<b>Desvío estándar de las diferencias diarias</b> de performance entre el fondo (NAV) y su índice (ventana típica de 12 meses).<br>Cuidado: <b>tracking error &ne; tracking difference</b> — el TE no indica la dirección (over/under)."
+    },
+    {
+      "id": "vol09-c052",
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "¿Qué fuente de tracking error es un costo NEGATIVO (mejora el retorno)?",
+      "a": "<b>Asset manager operations</b>: <b>securities lending</b> y <b>dividend recapture</b> &rarr; mejoran el retorno vs. el índice."
+    },
+    {
+      "id": "vol09-c053",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué determina principalmente el bid-ask spread de un ETF?",
+      "a": "La <b>liquidez del SUBYACENTE</b>, no solo el volumen del ETF. Un ETF muy líquido (SPY) puede tener un spread <b>más ajustado que sus propios subyacentes</b>."
+    },
+    {
+      "id": "vol09-c054",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Premium/discount de un ETF: intradiario vs. end-of-day",
+      "a": "End-of-day: <span class=\"eq\">(ETF price &minus; NAV) / NAV</span><br>Intradiario: usa el <b>iNAV</b> (indicated NAV, estimación intradiaria del fair value)."
+    },
+    {
+      "id": "vol09-c055",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Un premium/discount en un ETF de bonos o de acciones extranjeras es mispricing?",
+      "a": "<b>Generalmente NO</b> — refleja <b>price discovery</b>: el NAV está <b>stale</b> (los subyacentes cerraron en otro horario o no cotizan). El precio del ETF es la mejor estimación del mercado."
+    },
+    {
+      "id": "vol09-c056",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Round-trip trading cost de un ETF",
+      "a": "<span class=\"eq\">= (comisión one-way % &times; 2) + (½ &times; bid-ask % &times; 2)</span><br>La comisión se paga en cada punta; del spread se paga <b>la mitad</b> en cada punta."
+    },
+    {
+      "id": "vol09-c057",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué costo domina en un horizonte corto vs. uno largo?",
+      "a": "Horizonte <b>CORTO</b> &rarr; dominan los <b>trading costs</b> (los tactical traders eligen por liquidez/spread). Horizonte <b>LARGO</b> &rarr; domina el <b>management fee</b>."
+    },
+    {
+      "id": "vol09-c058",
+      "lm": "LM3",
+      "tipo": "metodo",
+      "q": "ETF físico vs. ETF sintético vs. ETN: ¿qué posee cada uno?",
+      "a": "<b>Físico</b>: posee los títulos reales (full replication o sampling). <b>Sintético</b>: usa <b>swaps OTC</b> &rarr; settlement risk. <b>ETN</b>: <b>NO posee nada</b> — es <b>deuda no garantizada</b> del banco emisor."
+    },
+    {
+      "id": "vol09-c059",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Cuál es el riesgo distintivo de un ETN y cómo se monitorea?",
+      "a": "<b>Counterparty risk teórico del 100%</b> (si quiebra el emisor vale ~$0). Se monitorea con el <b>CDS del emisor</b> (CDS &gt;5% = alarma). Lehman 2008: 3 ETNs."
+    },
+    {
+      "id": "vol09-c060",
+      "lm": "LM3",
+      "tipo": "metodo",
+      "q": "Leveraged/inverse ETFs: ¿por qué el retorno multi-día no es el múltiplo naive?",
+      "a": "Por el <b>reset diario</b> de la exposición notional + el <b>compounding</b>. Ej.: un &minus;2× con el índice a &minus;1% en 3 días da <b>&minus;4%</b> (no +2%). <b>No son buy-and-hold.</b>"
+    },
+    {
+      "id": "vol09-c061",
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "¿Qué es un smart beta / factor ETF y por qué puede publicar sus holdings?",
+      "a": "ETF <b>rules-based</b> cuyo índice filtra y/o pondera por un <b>factor</b> (value, momentum, quality, low-vol, size). Puede hacer disclosure porque la selección la fija una <b>regla</b> (index methodology), no un PM discrecional."
+    },
+    {
+      "id": "vol09-c062",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Thematic ETFs: ¿cómo se evalúan?",
+      "a": "Holdings <b>pasivos</b> pero <b>visión activa</b> sobre un nicho (cybersecurity, robotics). Son tácticos y hay que <b>evaluarlos como acciones</b> (volatilidad comparable), no como índices amplios."
+    },
+    {
+      "id": "vol09-c063",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "¿Cuáles son las 3 assumptions de la APT?",
+      "a": "1) Un <b>factor model</b> describe los retornos. 2) Con muchos activos se pueden formar portfolios <b>well-diversified</b> (elimina el riesgo asset-specific). 3) <b>No existen arbitrage opportunities</b>."
+    },
+    {
+      "id": "vol09-c064",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Ecuación APT del expected return de equilibrio (Eq. 2)",
+      "a": "<span class=\"eq\">E(R<sub>p</sub>) = R<sub>F</sub> + &lambda;<sub>1</sub>&beta;<sub>p,1</sub> + … + &lambda;<sub>K</sub>&beta;<sub>p,K</sub></span><br><b>&lambda;<sub>j</sub></b> = factor risk premium (factor price). Sin risk-free se usa <b>&lambda;<sub>0</sub></b>."
+    },
+    {
+      "id": "vol09-c065",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "APT vs. CAPM: 3 diferencias",
+      "a": "APT: <b>múltiples factores</b> (K no especificado), <b>no identifica</b> los factores, supuestos <b>más débiles</b> (no exige market portfolio eficiente). El <b>CAPM es el caso especial de un solo factor</b>."
+    },
+    {
+      "id": "vol09-c066",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué es un pure factor portfolio?",
+      "a": "Un portfolio con <b>sensibilidad 1 a un factor y 0 a todos los demás</b>. Su exceso de retorno sobre R<sub>F</sub> es exactamente <b>&lambda;<sub>j</sub></b>."
+    },
+    {
+      "id": "vol09-c067",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué define una arbitrage opportunity?",
+      "a": "Una operación <b>sin inversión neta</b>, <b>sin riesgo</b> y con <b>profit esperado positivo</b>. Existe si se puede replicar la factor sensitivity de un activo con otros pero a distinto expected return."
+    },
+    {
+      "id": "vol09-c068",
+      "lm": "LM4",
+      "tipo": "proceso",
+      "q": "Si un activo está UNDERVALUED (rinde más de lo que su beta justifica), ¿qué hago?",
+      "a": "<b>LONG el activo barato</b> (D) y <b>SHORT la réplica cara</b> con idéntica beta. El arbitraje sube el precio de D hasta que su retorno cae al de equilibrio."
+    },
+    {
+      "id": "vol09-c069",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Carhart four-factor model: ¿cuáles son los 4 factores? (Eq. 3)",
+      "a": "<b>RMRF</b> (market) · <b>SMB</b> = small minus big (size) · <b>HML</b> = high minus low book-to-market (value) · <b>WML</b> = winners minus losers (momentum)."
+    },
+    {
+      "id": "vol09-c070",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Modelo MACRO vs. FUNDAMENTAL: ¿en qué orden se estiman?",
+      "a": "<b>Macro</b>: factor surprises <b>primero</b>, luego las sensitivities por regresión. <b>Fundamental</b>: las sensitivities (atributos) <b>primero</b>, luego los factor returns por regresión. <b>El examen los intercambia.</b>"
+    },
+    {
+      "id": "vol09-c071",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "El intercepto a<sub>i</sub>: ¿es el expected return en el modelo macro? ¿Y en el fundamental?",
+      "a": "<b>Macro: SÍ</b>, a<sub>i</sub> = expected return. <b>Fundamental: NO</b> — es solo un intercepto (los factores son retornos, no surprises, y no tienen media cero)."
+    },
+    {
+      "id": "vol09-c072",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "En un modelo macro, ¿los factores son niveles o surprises?",
+      "a": "<b>SURPRISES</b> (actual &minus; expected). Solo la sorpresa mueve precios: lo predicho ya está incorporado."
+    },
+    {
+      "id": "vol09-c073",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Signo del risk premium del GDP growth y de la inflación",
+      "a": "<b>GDP growth: POSITIVO.</b> <b>Inflación: típicamente NEGATIVO</b> &rarr; un activo con sensibilidad <b>positiva</b> a la inflación tiene <b>MENOR</b> required return (se lo demanda como hedge). Contra-intuitivo."
+    },
+    {
+      "id": "vol09-c074",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Standardized beta en un modelo fundamental (Eq. 5)",
+      "a": "<span class=\"eq\">b<sub>ik</sub> = (valor del atributo &minus; media) / &sigma;(atributo)</span><br>Ej.: dividend yield 3.5%, media 2.5%, std 2% &rarr; b = <b>0.50</b>. <b>Excepción</b>: industria = dummy (0/1)."
+    },
+    {
+      "id": "vol09-c075",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Los 3 grupos de factores fundamentales (equities)",
+      "a": "<b>Company fundamental</b> (earnings growth, leverage) · <b>Company share-related</b> (earnings yield, book-to-market, market cap, momentum) · <b>Macroeconomic/industry</b> (industry membership, CAPM beta)."
+    },
+    {
+      "id": "vol09-c076",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Statistical models: factor analysis vs. PCA",
+      "a": "<b>Factor analysis</b>: los factores reproducen mejor las <b>COVARIANZAS</b> históricas. <b>PCA</b>: reproducen mejor las <b>VARIANZAS</b>. Ventaja: supuestos mínimos. Desventaja: <b>difíciles de interpretar</b>."
+    },
+    {
+      "id": "vol09-c077",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Return attribution: ¿cómo se descompone el active return? (Eq. 8)",
+      "a": "<span class=\"eq\">R<sub>p</sub> &minus; R<sub>B</sub> = &Sigma;<sub>k</sub>[(&beta;<sub>p,k</sub> &minus; &beta;<sub>B,k</sub>) &times; factor return<sub>k</sub>] + security selection</span><br>1er término = <b>factor tilts</b>; 2do = <b>security selection</b>."
+    },
+    {
+      "id": "vol09-c078",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Puede un \"stock picker\" tener security selection negativa y aun así active return positivo?",
+      "a": "<b>SÍ.</b> En el ejemplo del currículo, el bet en <b>HML aportó ~98%</b> del active return (+2.04% de 2.07%) y la <b>security selection fue &minus;0.05%</b>. Ganó por una apuesta de <b>estilo</b>, no por elegir acciones."
+    },
+    {
+      "id": "vol09-c079",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Risk attribution: ¿qué es aditivo, la varianza o el desvío? (Eq. 11-12)",
+      "a": "La <b>VARIANZA</b>:<br><span class=\"eq\">Active risk squared = Active factor risk + Active specific risk</span><br>Recién al final se toma la raíz para obtener el tracking error."
+    },
+    {
+      "id": "vol09-c080",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Active specific risk: ¿cómo se calcula?",
+      "a": "<span class=\"eq\">Active specific risk = &Sigma;<sub>i</sub> (w<sub>i</sub><sup>a</sup>)<sup>2</sup> &times; &sigma;<sup>2</sup><sub>&epsilon;i</sub></span><br>Usa los <b>active weights al cuadrado</b> y la <b>varianza residual</b> de cada activo."
+    },
+    {
+      "id": "vol09-c081",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Tracking error e Information ratio (Eq. 9-10) y cómo anualizar",
+      "a": "<span class=\"eq\">TE = s(R<sub>p</sub> &minus; R<sub>B</sub>) ; IR = (R<sub>p</sub> &minus; R<sub>B</sub>) / TE</span><br>Anualizar TE: <b>&times;&radic;12</b> (mensual), <b>&times;&radic;250</b> (diaria)."
+    },
+    {
+      "id": "vol09-c082",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Rangos orientativos de tracking error (US equity)",
+      "a": "Pasiva bien ejecutada: <b>&le;0.10%</b> · Enhanced index: <b>~2%</b> · Activa diversificada large-cap: <b>2%–6%</b> · Activa agresiva: <b>6%–10%+</b>."
+    },
+    {
+      "id": "vol09-c083",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Definición exacta de VaR",
+      "a": "La pérdida <b>MÍNIMA</b> que se espera un cierto % del tiempo, sobre un horizonte dado, bajo las condiciones de mercado asumidas.<br><b>NO</b> es la pérdida máxima ni la esperada."
+    },
+    {
+      "id": "vol09-c084",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "\"El 5% VaR es €2.2M en un día\": ¿cuáles son los 3 elementos y cómo se reformula?",
+      "a": "<b>Frecuencia</b> (5%), <b>horizonte</b> (1 día), <b>magnitud mínima</b> (€2.2M).<br>Reformulado: se esperaría una pérdida de <b>al menos</b> €2.2M ~<b>una vez por mes</b> (1 de cada 20 días)."
+    },
+    {
+      "id": "vol09-c085",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "z-thresholds del VaR (distribución normal)",
+      "a": "5% VaR &rarr; <b>1.65&sigma;</b> · 1% VaR &rarr; <b>2.33&sigma;</b> · 16% VaR &rarr; <b>1.0&sigma;</b> por debajo de la media.<br>Mayor nivel de confianza &rarr; <b>mayor</b> VaR."
+    },
+    {
+      "id": "vol09-c086",
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Los 4 pasos del VaR paramétrico",
+      "a": "1) Escalar &sigma; al z-threshold (z &times; &sigma;).<br>2) Restar del expected return: E(R) &minus; z&sigma;.<br>3) Cambiar el signo &rarr; VaR en % del portfolio.<br>4) Multiplicar por el valor del portfolio &rarr; VaR en moneda."
+    },
+    {
+      "id": "vol09-c087",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Se puede anualizar el VaR diario multiplicando por &radic;250?",
+      "a": "<b>NO.</b> Hay que anualizar <b>E(R) (&times;250)</b> y <b>&sigma; (&times;&radic;250)</b> por separado y recién entonces calcular. Usar &radic;250 sobre el VaR diario equivale a asumir <b>expected return = 0</b>."
+    },
+    {
+      "id": "vol09-c088",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Método paramétrico: ¿qué distribución asume y cuál es su gran debilidad?",
+      "a": "Asume <b>normalidad</b>. Usa E(R), &sigma; y correlaciones. Debilidades: muy <b>sensible a los parámetros</b> (sobre todo covarianzas) y funciona <b>mal con opciones</b> (distribución truncada/no-normal)."
+    },
+    {
+      "id": "vol09-c089",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Historical simulation VaR: ¿qué distribución usa?",
+      "a": "<b>Ninguna asumida</b> — usa <b>la que dictan los datos</b>. Reprecia el portfolio actual con los cambios históricos reales, ordena y toma el percentil. <b>Maneja opciones.</b> Límite: el pasado puede no repetirse."
+    },
+    {
+      "id": "vol09-c090",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Monte Carlo VaR: ¿qué distribución usa y cuándo converge al paramétrico?",
+      "a": "La que <b>elige el usuario</b> (cualquiera). Genera miles de outcomes, ordena y toma el percentil. <b>Converge al paramétrico</b> con la misma distribución y parámetros + muestra suficientemente grande."
+    },
+    {
+      "id": "vol09-c091",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Conditional VaR (CVaR): ¿qué mide?",
+      "a": "La <b>pérdida promedio DADO que se excede el VaR</b> (= expected shortfall = expected tail loss). Mejor estimado con <b>historical o Monte Carlo</b>, no con el paramétrico."
+    },
+    {
+      "id": "vol09-c092",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Incremental VaR vs. Marginal VaR",
+      "a": "<b>IVaR</b>: cambio del VaR al variar el <b>tamaño</b> de una posición (VaR después &minus; antes). <b>MVaR</b>: efecto de un cambio <b>muy pequeño</b> (cálculo); los MVaR ponderados <b>suman al VaR total</b>. MVaR <b>no</b> es \"margin calls\"."
+    },
+    {
+      "id": "vol09-c093",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Relative VaR (= ex ante tracking error): ¿cómo se construye?",
+      "a": "VaR de la <b>diferencia</b> portfolio &minus; benchmark: se meten los holdings como <b>long</b> y el <b>benchmark como short</b>. Mide el riesgo de la <b>active position</b>. Suele expresarse a <b>1&sigma; anualizado</b>."
+    },
+    {
+      "id": "vol09-c094",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Ex ante vs. ex post tracking error",
+      "a": "<b>Ex ante</b>: holdings de <b>HOY</b> expuestos a la variabilidad de mercados pasados &rarr; riesgo <b>prospectivo</b>. <b>Ex post</b>: holdings <b>históricos</b> en mercados históricos &rarr; mide <b>skill</b>. Si el benchmark es cash: <b>VaR = ex ante TE</b>."
+    },
+    {
+      "id": "vol09-c095",
+      "lm": "LM5",
+      "tipo": "clasificacion",
+      "q": "Limitaciones del VaR (nombrá 4)",
+      "a": "<b>Subjetividad</b> (cutoff, horizonte, método) · <b>subestima eventos extremos</b> (left tail) · ignora la <b>liquidez</b> · <b>correlation risk</b> (las correlaciones tienden a 1 en stress) · <b>trending</b> · <b>NO es el peor caso</b>."
+    },
+    {
+      "id": "vol09-c096",
+      "lm": "LM5",
+      "tipo": "clasificacion",
+      "q": "Medidas de sensibilidad de 1er y 2do orden por clase de activo",
+      "a": "<b>Equity</b>: beta. <b>Fixed income</b>: <b>duration</b> (1er) y <b>convexity</b> (2do). <b>Options</b>: <b>delta</b> (1er) y <b>gamma</b> (2do), más <b>vega</b> (sensibilidad a la <b>volatilidad</b>)."
+    },
+    {
+      "id": "vol09-c097",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Rangos del delta de una call y de una put; ¿cuándo es máximo el gamma?",
+      "a": "<b>Call delta: 0 a 1. Put delta: 0 a &minus;1.</b><br>El <b>gamma es máximo</b> cuando la opción está <b>at-the-money y cerca del vencimiento</b> (máxima incertidumbre)."
+    },
+    {
+      "id": "vol09-c098",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "En un scenario analysis con opciones, ¿se pueden usar delta y gamma?",
+      "a": "<b>NO</b> — hay que <b>repreciar completamente</b>. Los movimientos del escenario son demasiado grandes para una aproximación de 2do orden."
+    },
+    {
+      "id": "vol09-c099",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Historical vs. hypothetical scenario: ventaja de cada uno",
+      "a": "<b>Historical</b>: es <b>incontrovertible</b> (ya pasó), pero no se repetirá igual. <b>Hypothetical</b>: permite <b>stressear correlaciones</b> y eventos nunca vistos, pero es difícil asignarle probabilidad."
+    },
+    {
+      "id": "vol09-c100",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Las medidas de escenario asumen alguna distribución? ¿Y dan probabilidades?",
+      "a": "<b>NO asumen distribución</b> — eso es una <b>VENTAJA</b>, no una limitación. Y <b>NO dan probabilidad</b>: dado un movimiento, dicen la respuesta. Solo el <b>VaR</b> da la probabilidad de pérdidas."
+    },
+    {
+      "id": "vol09-c101",
+      "lm": "LM5",
+      "tipo": "clasificacion",
+      "q": "Los 4 constraints de riesgo",
+      "a": "<b>Risk budgeting</b> (reparte el risk appetite) · <b>Position limits</b> (tope al valor de una posición; anti-concentración) · <b>Scenario limits</b> (tope a la pérdida de un escenario) · <b>Stop-loss limits</b> (ataca el <b>trending</b>)."
+    },
+    {
+      "id": "vol09-c102",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Risk budgeting vs. capital allocation: ¿a qué nivel de confianza mira cada uno?",
+      "a": "<b>Risk budgeting</b>: pérdidas a ~<b>1 desvío estándar</b>. <b>Capital allocation</b>: <b>economic capital</b> a muy alta confianza (<b>99–99.99%</b>, 1 año) para capturar tail risk."
+    },
+    {
+      "id": "vol09-c103",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Por qué con marginal VaR los sub-budgets suman al total?",
+      "a": "Porque los MVaR ponderados son aditivos. Con <b>VaR simple</b> hay <b>sub-utilización</b> del budget (por el efecto diversificación) &rarr; hace falta <b>over-allocation</b>."
+    },
+    {
+      "id": "vol09-c104",
+      "lm": "LM5",
+      "tipo": "clasificacion",
+      "q": "¿Qué mide un pension fund (DB) y con qué métrica?",
+      "a": "El <b>funding</b> (assets vs. liabilities). Métrica clave: <b>surplus at risk</b> (assets como long + liabilities como short FI). <b>Funding ratio = assets / PV(liabilities)</b>. Enfoque: <b>LDI</b> (liability-driven investing)."
+    },
+    {
+      "id": "vol09-c105",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Asset managers (long-only) vs. hedge funds: ¿qué medida de riesgo prioriza cada uno?",
+      "a": "<b>Asset managers</b>: <b>position limits</b> (lo más usado) y <b>ex ante TE</b>; les preocupa la <b>underperformance</b>, no la insolvencia. <b>Hedge funds</b>: <b>gross exposure</b> (|long|+|short|), leverage, <b>drawdown</b>, VaR de alta confianza."
+    },
+    {
+      "id": "vol09-c106",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Qué es el correlation risk y por qué es peligroso?",
+      "a": "En condiciones de <b>stress las correlaciones tienden a 1</b> &rarr; se <b>pierde la diversificación</b> justo cuando más se la necesita. Es una limitación clave del VaR."
+    },
+    {
+      "id": "vol09-c107",
+      "lm": "LM6",
+      "tipo": "clasificacion",
+      "q": "Las 4 técnicas de evaluación de una estrategia",
+      "a": "<b>Backtesting</b> (historia real, en orden) · <b>Historical scenario analysis</b> (= stress testing; regímenes discretos) · <b>Simulation</b> (historical o Monte Carlo) · <b>Sensitivity analysis</b> (cambiar un supuesto)."
+    },
+    {
+      "id": "vol09-c108",
+      "lm": "LM6",
+      "tipo": "proceso",
+      "q": "¿Cómo funciona el rolling window y en cuántas muestras divide los datos?",
+      "a": "Entrena en el <b>in-sample</b> y testea en el <b>out-of-sample</b>; el OOS pasa a ser in-sample del siguiente período. Divide en <b>MUCHAS</b> sub-muestras (<b>no dos</b>). Es <b>determinístico</b>."
+    },
+    {
+      "id": "vol09-c109",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "¿Por qué el risk parity multifactor necesita el rolling window DOS veces?",
+      "a": "Una vez para estimar los <b>factor returns</b>, y otra para estimar la <b>matriz de covarianzas</b> (necesaria para los pesos de equal risk contribution). El segundo paso <b>evita look-ahead bias</b>."
+    },
+    {
+      "id": "vol09-c110",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Survivorship bias: ¿qué es y de qué sesgo es un caso especial?",
+      "a": "Concluir a partir de datos que solo reflejan a los <b>sobrevivientes</b>. Es un <b>CASO ESPECIAL de look-ahead bias</b> (no se podía saber quién sobreviviría). Solución: <b>point-in-time data</b>."
+    },
+    {
+      "id": "vol09-c111",
+      "lm": "LM6",
+      "tipo": "clasificacion",
+      "q": "Las 3 formas de look-ahead bias",
+      "a": "1) <b>Reporting lags</b> (el dato no estaba disponible aún). 2) <b>Data revisions</b> (las bases guardan solo el dato revisado). 3) <b>Index additions</b> (los vendors agregan historia de empresas nuevas)."
+    },
+    {
+      "id": "vol09-c112",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Data snooping: ¿qué es y cómo se mitiga?",
+      "a": "Hacer la inferencia <b>DESPUÉS</b> de mirar los resultados (p-hacking; probar muchos modelos y elegir el mejor). Se mitiga con un hurdle más alto (<b>t-stat &gt; 3.0</b>) y con <b>cross-validation</b>."
+    },
+    {
+      "id": "vol09-c113",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "¿El point-in-time data corrige el data snooping?",
+      "a": "<b>NO.</b> Corrige <b>look-ahead</b> y <b>survivorship</b>, pero con datos PIT igual se puede p-hackear probando muchos modelos."
+    },
+    {
+      "id": "vol09-c114",
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Historical simulation vs. Monte Carlo: ¿de dónde saca los retornos cada una?",
+      "a": "<b>Historical</b>: de la <b>historia real</b>, al azar y <b>sin respetar el orden temporal</b>, con reemplazo (<b>bootstrapping</b>). <b>Monte Carlo</b>: de una <b>distribución asignada</b> a cada variable (calibrada con la historia)."
+    },
+    {
+      "id": "vol09-c115",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "¿Alguna de las dos simulaciones NO usa random number generator?",
+      "a": "<b>Ambas usan RNG.</b> \"Ninguna usa random number generator\" es FALSO. Monte Carlo <b>no es determinística</b> (es aleatoria); el rolling-window backtest sí es determinístico."
+    },
+    {
+      "id": "vol09-c116",
+      "lm": "LM6",
+      "tipo": "proceso",
+      "q": "En Monte Carlo con varios factores correlacionados, ¿qué hay que especificar?",
+      "a": "Una <b>multivariate distribution</b> (no modelar cada factor por separado). La <b>multivariate normal</b> es el primer approach (K medias, K desvíos, K(K&minus;1)/2 correlaciones) pero <b>NO captura</b> skewness, excess kurtosis ni <b>tail dependence</b>."
+    },
+    {
+      "id": "vol09-c117",
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Sensitivity analysis del currículo: ¿qué se cambia exactamente?",
+      "a": "Se reemplaza la <b>multivariate normal</b> por una <b>multivariate skewed Student's t-distribution</b> y se re-corre el Monte Carlo (solo cambian los <b>pasos 4 y 5</b>). La skewed t captura <b>skewness y fat tails</b>."
+    },
+    {
+      "id": "vol09-c118",
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Scenario vs. sensitivity vs. ninguna: clasificá los 3 casos",
+      "a": "Dividir por <b>recesión/volatilidad</b> = <b>SCENARIO</b>. Cambiar la <b>distribución</b> (normal &rarr; skewed t) = <b>SENSITIVITY</b>. Cambiar el <b>universo</b> (Nikkei &rarr; TOPIX) = <b>NINGUNA</b> (no hay régimen estructural)."
+    }
+  ],
+  "traps": [
+    {
+      "id": "vol09-t-lm1-01",
+      "lm": "LM1",
+      "star": true,
+      "title": "cov negativa &rarr; premium POSITIVO",
+      "body": "cov(P, m) <b>NEGATIVA &rarr; risk premium POSITIVO</b> (mal hedge; retorno &gt; risk-free). cov <b>POSITIVA &rarr; premium NEGATIVO</b> (es un hedge; retorno <b>menor</b> al risk-free). <b>Contra-intuitivo:</b> el activo que paga bien en malos tiempos exige <b>menos</b> retorno, no más."
+    },
+    {
+      "id": "vol09-t-lm1-02",
+      "lm": "LM1",
+      "star": true,
+      "title": "l sube con la VOLATILIDAD del GDP",
+      "body": "La tasa real <b>l</b> es <b>POSITIVA con la volatilidad</b> del crecimiento del GDP. <b>Contra-intuitivo:</b> uno esperaría más ahorro precautorio y una tasa menor. El currículo dice positiva: el inversor risk-averse <b>exige más</b> retorno real. También sube con el crecimiento tendencial."
+    },
+    {
+      "id": "vol09-t-lm1-03",
+      "lm": "LM1",
+      "star": false,
+      "title": "BEI &ne; inflación esperada",
+      "body": "<b>BEI = &theta; + &pi;</b>, así que <b>SOBREESTIMA</b> la inflación esperada pura (incluye el premio por incertidumbre de inflación). Si &theta; sube pero &pi; baja, el efecto sobre el BEI es <b>indeterminado</b>. \"Es el mejor pronóstico de inflación del mercado\" es FALSO."
+    },
+    {
+      "id": "vol09-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "Credit spread &ne; credit premium",
+      "body": "El <b>credit spread medido</b> es \"conceptually akin <i>but not equal</i>\" al credit premium <b>&gamma;</b>. No los iguales en el examen."
+    },
+    {
+      "id": "vol09-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "&lambda; = &gamma; + &kappa;",
+      "body": "<b>&lambda;</b> es el equity risk premium medido <b>contra el bono default-free</b>. <b>&kappa;</b> es el extra de equity <b>sobre el bono corporativo</b>. Por construcción <b>&lambda; &gt; &gamma;</b> siempre. No los confundas."
+    },
+    {
+      "id": "vol09-t-lm1-06",
+      "lm": "LM1",
+      "star": true,
+      "title": "GDP growth &rarr; equity = AMBIGUO",
+      "body": "Un aumento del real GDP growth sube el <b>numerador</b> (earnings) <b>y</b> el <b>denominador</b> (la tasa real l). El efecto neto sobre el equity market es <b>AMBIGUO</b>. Nunca contestes \"sube\"."
+    },
+    {
+      "id": "vol09-t-lm1-07",
+      "lm": "LM1",
+      "star": true,
+      "title": "Qué premio lleva cada activo",
+      "body": "Bono <b>real</b>: solo <b>l</b>. <b>T-bill</b>: l + &theta; (<b>suelta &pi;</b>, el corto plazo hace despreciable la incertidumbre de inflación). Bono <b>nominal</b>: + &pi;. <b>Credit</b>: + &gamma;. <b>Equity</b>: + &kappa;. <b>CRE</b>: + &phi; (los lleva <b>todos</b>). Orden: <b>l &rarr; &theta; &rarr; &pi; &rarr; &gamma; &rarr; &kappa; &rarr; &phi;</b>."
+    },
+    {
+      "id": "vol09-t-lm1-08",
+      "lm": "LM1",
+      "star": false,
+      "title": "E[loss] = PD &times; (1 &minus; RR)",
+      "body": "La pérdida esperada es <b>PD &times; (1 &minus; RR)</b>, <b>NO</b> PD &times; RR. Y el premio implícito se despeja como: <b>premium = FV/Precio &minus; (1 + suma de los componentes previos)</b>."
+    },
+    {
+      "id": "vol09-t-lm1-09",
+      "lm": "LM1",
+      "star": true,
+      "title": "En recesión la curva SE EMPINA",
+      "body": "En <b>recesión la curva se EMPINA</b> (steepens): el central recorta el corto y el largo queda anclado. Se <b>aplana o invierte al FINAL de la expansión</b>. Curva invertida = <b>predictor de recesión</b>. <b>Contra-intuitivo</b> si uno piensa \"crisis = aplanamiento\"."
+    },
+    {
+      "id": "vol09-t-lm1-10",
+      "lm": "LM1",
+      "star": false,
+      "title": "Recovery pro-cíclica, loss counter-cíclica",
+      "body": "<b>Recovery rates: PRO-cíclicas.</b> <b>Loss rates: COUNTER-cíclicas.</b> Ranking de recovery: <b>senior secured &gt; senior unsecured &gt; subordinated</b>. El credit spread es <b>counter-cíclico</b>."
+    },
+    {
+      "id": "vol09-t-lm1-11",
+      "lm": "LM1",
+      "star": false,
+      "title": "Trailing P/E &gt; forward P/E si crece el EPS",
+      "body": "Cuando se espera que el EPS <b>crezca</b>, el <b>trailing/historical P/E es MAYOR</b> que el forward P/E (mayor E futuro &rarr; menor múltiplo forward). Suele invertirse por error."
+    },
+    {
+      "id": "vol09-t-lm1-12",
+      "lm": "LM1",
+      "star": false,
+      "title": "Taylor rule: pesos 1.5 y 0.5",
+      "body": "Peso <b>1.5 en la inflación</b> (aparece dos veces) y <b>0.5 en el output gap</b>. <b>Neutral rate = l + &iota;*</b> (inflación = target y gap = 0)."
+    },
+    {
+      "id": "vol09-t-lm1-13",
+      "lm": "LM1",
+      "star": false,
+      "title": "Sentiment actúa por el discount rate",
+      "body": "El <b>investor sentiment</b> afecta el valor <b>vía el discount rate</b> (subiendo/bajando risk premiums), <b>no</b> por un canal directo de cash flows. Y \"news\" es <b>sorpresa vs. lo anticipado</b>: los precios pueden <b>caer</b> ante \"buenas\" noticias si se esperaba algo aún mejor."
+    },
+    {
+      "id": "vol09-t-lm1-14",
+      "lm": "LM1",
+      "star": false,
+      "title": "CAPE: 10 años de earnings REALES",
+      "body": "En el CAPE (Shiller), <b>E = media móvil de 10 años de earnings REALES</b> y <b>P = precio REAL</b>. <b>CAPE alto &rarr; retornos futuros BAJOS</b> (no al revés)."
+    },
+    {
+      "id": "vol09-t-lm2-01",
+      "lm": "LM2",
+      "star": true,
+      "title": "SR vs IR: qué va en el denominador",
+      "body": "<b>SR</b> = excess return / <b>TOTAL risk</b> (referencia: <b>risk-free</b>). <b>IR</b> = active return / <b>ACTIVE risk</b> = tracking error (referencia: <b>benchmark</b>). No mezcles las referencias ni los denominadores."
+    },
+    {
+      "id": "vol09-t-lm2-02",
+      "lm": "LM2",
+      "star": true,
+      "title": "Cash afecta el IR pero no el SR",
+      "body": "Agregar <b>cash o leverage</b>: el <b>SR NO cambia</b> (two-fund separation); el <b>IR SÍ cambia</b> (el cash lo encoge). Pero <b>escalar los active weights</b> (agresividad) <b>NO</b> cambia el IR (suben R<sub>A</sub> y &sigma;<sub>A</sub> en proporción). <b>Fácil de invertir.</b>"
+    },
+    {
+      "id": "vol09-t-lm2-03",
+      "lm": "LM2",
+      "star": true,
+      "title": "Breadth entra como &radic;BR",
+      "body": "El breadth entra como <b>&radic;BR</b>, <b>no BR</b>. Cuadruplicar las decisiones independientes solo <b>DUPLICA</b> el IR (&radic;4 = 2), no lo cuadruplica."
+    },
+    {
+      "id": "vol09-t-lm2-04",
+      "lm": "LM2",
+      "star": false,
+      "title": "Market timing: IC = 2p &minus; 1",
+      "body": "<b>IC = (% aciertos) &minus; (% errores) = 2 &times; (% aciertos) &minus; 1.</b> No es \"el % de aciertos\". Acertar el <b>55%</b> da <b>IC = 0.10</b>, no 0.55."
+    },
+    {
+      "id": "vol09-t-lm2-05",
+      "lm": "LM2",
+      "star": true,
+      "title": "Breadth real &lt; N con correlación",
+      "body": "<b>BR &ne; N</b> cuando las decisiones están correlacionadas. Mismo sector/región (correlación positiva) &rarr; <b>BR &lt; N</b>. Cuasi-arbitraje (correlación negativa) &rarr; <b>BR &gt; N</b>. Y rebalancear más seguido sube el breadth <b>solo si</b> las decisiones son <b>independientes en el tiempo</b> (una señal low-P/E que persiste 3 meses = <b>una</b> decisión, no tres)."
+    },
+    {
+      "id": "vol09-t-lm2-06",
+      "lm": "LM2",
+      "star": true,
+      "title": "El IR con restricciones DECRECE al ser agresivo",
+      "body": "<b>Sin restricciones el IR es INVARIANTE</b> al nivel de active risk. <b>Con restricciones el IR DECRECE</b> al ser más agresivo: al subir &sigma;<sub>A</sub> los pesos óptimos crecen, chocan más con los límites y <b>cae el TC</b>. Concepto central del LOS 4."
+    },
+    {
+      "id": "vol09-t-lm2-07",
+      "lm": "LM2",
+      "star": false,
+      "title": "Varianza ex post: TC² y 1&minus;TC²",
+      "body": "La descomposición ex post usa <b>TC²</b> (proporción de <b>skill</b>) y <b>1 &minus; TC²</b> (<b>noise</b> por restricciones) &mdash; <b>no</b> TC y (1&minus;TC). Con TC = 0.80 &rarr; <b>64% skill, 36% noise</b>."
+    },
+    {
+      "id": "vol09-t-lm2-08",
+      "lm": "LM2",
+      "star": false,
+      "title": "SR²P = SR²B + IR² (al cuadrado)",
+      "body": "<b>SR²<sub>P</sub> = SR²<sub>B</sub> + IR²</b> (o + TC²&times;IR*² con restricciones). Está <b>AL CUADRADO</b>: no se suman los ratios directamente."
+    },
+    {
+      "id": "vol09-t-lm2-09",
+      "lm": "LM2",
+      "star": false,
+      "title": "Underponderar un perdedor AGREGA valor",
+      "body": "En <b>R<sub>A</sub> = &Sigma;&Delta;w<sub>i</sub>R<sub>Ai</sub></b>, un &Delta;w <b>negativo</b> sobre un activo con R<sub>Ai</sub> <b>negativo</b> da contribución <b>POSITIVA</b>. Ej.: &minus;0.10 &times; (2.0 &minus; 9.2) = <b>+0.7%</b>. Cuidado con los signos."
+    },
+    {
+      "id": "vol09-t-lm2-10",
+      "lm": "LM2",
+      "star": false,
+      "title": "TC = 0 &rarr; invertir en el benchmark",
+      "body": "Si <b>TC = 0</b>, el active risk óptimo es <b>0</b> &rarr; hay que <b>invertir en el benchmark</b>. Y el <b>IC esperado debe ser &gt; 0 ex ante</b>, o no se justifica gestionar activamente."
+    },
+    {
+      "id": "vol09-t-lm2-11",
+      "lm": "LM2",
+      "star": false,
+      "title": "IC negativo + TC alto = destruir valor eficientemente",
+      "body": "Un <b>TC alto con IC negativo</b> es la peor combinación: implementás fielmente pronósticos sistemáticamente equivocados. Un TC bajo, paradójicamente, te <b>protege</b>. Primero asegurate del <b>IC positivo</b>; recién después importa el TC."
+    },
+    {
+      "id": "vol09-t-lm2-12",
+      "lm": "LM2",
+      "star": false,
+      "title": "Strategy risk &ne; efecto de las restricciones",
+      "body": "El <b>strategy risk</b> (incertidumbre del IC, Qian-Hua) reduce el IR real a <b>45%–91%</b> de la estimación de la ley. Es <b>DISTINTO</b> del efecto de las restricciones (TC). El examen pide reconocer <b>ambas limitaciones por separado</b>."
+    },
+    {
+      "id": "vol09-t-lm2-13",
+      "lm": "LM2",
+      "star": false,
+      "title": "Alpha &ne; active return (salvo &beta;=1)",
+      "body": "<b>&alpha;<sub>P</sub> = R<sub>P</sub> &minus; &beta;<sub>P</sub>R<sub>B</sub></b>. Solo coincide con el active return si <b>&beta;<sub>P</sub> = 1</b>. Y si el benchmark es el <b>risk-free</b> (market-neutral L/S) &rarr; <b>SR = IR</b>."
+    },
+    {
+      "id": "vol09-t-lm3-01",
+      "lm": "LM3",
+      "star": false,
+      "title": "Solo los APs crean y rediman",
+      "body": "<b>Solo los Authorized Participants</b> crean/rediman shares, en el <b>mercado primario</b> (OTC, in-kind, con el emisor). El inversor común <b>solo</b> opera en el <b>secundario</b> (la bolsa) &mdash; el emisor <b>ni se entera</b> de esas ventas ni recibe flujo."
+    },
+    {
+      "id": "vol09-t-lm3-02",
+      "lm": "LM3",
+      "star": true,
+      "title": "Dirección del arbitraje del AP",
+      "body": "ETF a <b>PREMIUM</b> (price &gt; NAV) &rarr; el AP <b>VENDE el ETF y COMPRA el basket</b> &rarr; <b>CREA</b> shares &rarr; baja el precio. ETF a <b>DISCOUNT</b> (price &lt; NAV) &rarr; el AP <b>COMPRA el ETF y VENDE el basket</b> &rarr; <b>REDIME</b> &rarr; sube el precio. <b>Muy fácil de invertir.</b>"
+    },
+    {
+      "id": "vol09-t-lm3-03",
+      "lm": "LM3",
+      "star": true,
+      "title": "Tax fairness vs. tax efficiency",
+      "body": "<b>Fairness:</b> las ventas de otros inversores <b>NO gatillan TUS</b> capital gains (a diferencia del mutual fund, donde el fondo vende para pagar rescates). <b>Efficiency:</b> el PM entrega los lots de <b>bajo costo</b> en la redención in-kind para reducir las ganancias no realizadas. Son <b>dos cosas distintas</b>."
+    },
+    {
+      "id": "vol09-t-lm3-04",
+      "lm": "LM3",
+      "star": false,
+      "title": "Tracking error &ne; tracking difference",
+      "body": "El <b>tracking error</b> es el <b>desvío estándar</b> de las diferencias diarias: <b>NO dice la dirección</b> (over/under-performance) ni la distribución. Para eso se usa la <b>media/mediana de la tracking difference</b>."
+    },
+    {
+      "id": "vol09-t-lm3-05",
+      "lm": "LM3",
+      "star": false,
+      "title": "Securities lending = costo NEGATIVO",
+      "body": "<b>Asset manager operations</b> (securities lending, dividend recapture) son <b>costos NEGATIVOS</b>: <b>MEJORAN</b> el retorno vs. el índice. Y el <b>sampling/optimization</b> amplía el <b>rango</b> de tracking (en ambas direcciones)."
+    },
+    {
+      "id": "vol09-t-lm3-06",
+      "lm": "LM3",
+      "star": true,
+      "title": "El ETN NO es un fondo",
+      "body": "El <b>ETN es deuda no garantizada y no subordinada</b> del banco emisor: <b>no posee ningún título</b>. Tiene el mayor counterparty risk de todos los ETPs (<b>teórico 100%</b>) y se monitorea con el <b>CDS del emisor</b> (&gt;5% = alarma). El ETF <b>sintético</b>, en cambio, tiene <b>settlement risk</b> (swaps), no 100%."
+    },
+    {
+      "id": "vol09-t-lm3-07",
+      "lm": "LM3",
+      "star": true,
+      "title": "Leveraged/inverse: el compounding muerde",
+      "body": "El <b>reset diario</b> + el compounding hacen que el retorno <b>multi-día &ne; múltiplo naive</b>. Un <b>&minus;2×</b> con el índice a <b>&minus;1%</b> en 3 días entrega <b>&minus;4%</b>, no +2%. <b>No son buy-and-hold</b> más de ~1 mes sin rebalanceo."
+    },
+    {
+      "id": "vol09-t-lm3-08",
+      "lm": "LM3",
+      "star": false,
+      "title": "El spread lo manda el SUBYACENTE",
+      "body": "El bid–ask spread del ETF lo determina la <b>liquidez del SUBYACENTE</b>, no solo el volumen del ETF. Un ETF muy líquido (SPY) puede tener un spread <b>MÁS AJUSTADO que sus propios subyacentes</b>."
+    },
+    {
+      "id": "vol09-t-lm3-09",
+      "lm": "LM3",
+      "star": false,
+      "title": "Premium/discount = price discovery, no mispricing",
+      "body": "El premium/discount <b>intradiario usa iNAV</b>; el <b>end-of-day usa NAV</b>. En ETFs con subyacentes <b>extranjeros o bonos</b>, el premium/discount suele reflejar <b>price discovery</b> (el NAV está <b>stale</b>), <b>NO</b> un mispricing."
+    },
+    {
+      "id": "vol09-t-lm3-10",
+      "lm": "LM3",
+      "star": false,
+      "title": "Round-trip: comisión &times;2, medio spread &times;2",
+      "body": "<b>Round-trip = (comisión one-way &times; 2) + (½ &times; bid-ask &times; 2).</b> La comisión se paga <b>entera en cada punta</b>; del spread se paga <b>la mitad</b> en cada punta."
+    },
+    {
+      "id": "vol09-t-lm3-11",
+      "lm": "LM3",
+      "star": false,
+      "title": "Corto plazo = trading costs; largo = fee",
+      "body": "Horizonte <b>CORTO</b> &rarr; dominan los <b>trading costs</b> (los tactical traders eligen por <b>liquidez/spread</b>). Horizonte <b>LARGO</b> &rarr; domina el <b>management fee</b> (los buy-and-hold eligen por fee)."
+    },
+    {
+      "id": "vol09-t-lm3-12",
+      "lm": "LM3",
+      "star": false,
+      "title": "Los smart beta SÍ publican holdings",
+      "body": "Los <b>factor / smart beta ETFs SÍ pueden hacer disclosure</b> de sus holdings, porque la selección la fija una <b>REGLA</b> (index methodology), no un PM discrecional. Su éxito depende de <b>DOS</b> cosas: que el <b>factor</b> performe <b>y</b> que el ETF lo <b>replique bien</b>."
+    },
+    {
+      "id": "vol09-t-lm3-13",
+      "lm": "LM3",
+      "star": false,
+      "title": "Capital gains del ETF: bajas, no nulas",
+      "body": "Los ETFs distribuyen <b>far less</b> capital gains, principalmente por su <b>bajo TURNOVER</b> (index-based), reforzado por el in-kind. Pero <b>no son cero</b>: el rebalanceo del índice, corporate actions y los fondos con derivados/cash creation igual realizan ganancias. <b>Return of capital (ROC)</b>: no gravable al recibirlo, pero <b>reduce el cost basis</b> (el impuesto se <b>difiere</b>)."
+    },
+    {
+      "id": "vol09-t-lm3-14",
+      "lm": "LM3",
+      "star": false,
+      "title": "Thematic = evaluarlos como acciones",
+      "body": "Los <b>thematic ETFs</b> tienen holdings <b>pasivos</b> pero <b>visión activa</b> sobre un nicho &rarr; hay que <b>evaluarlos como acciones</b> (volatilidad comparable), no como índices amplios. Los <b>multi-factor</b>: menor volatilidad, pero <b>menos potencial para factor timing</b>."
+    },
+    {
+      "id": "vol09-t-lm3-15",
+      "lm": "LM3",
+      "star": false,
+      "title": "ETN: creation halts rompen el arbitraje",
+      "body": "Como el ETN es <b>deuda en el balance</b> del emisor, este puede <b>FRENAR las creations</b> si no quiere más deuda. Sin creations <b>el arbitraje se rompe</b> y el ETN puede cotizar a un <b>premium grande</b> (&gt;5%). Mucho más común en ETNs que en ETFs."
+    },
+    {
+      "id": "vol09-t-lm4-01",
+      "lm": "LM4",
+      "star": false,
+      "title": "APT &ne; CAPM",
+      "body": "La APT es <b>multifactor</b>, <b>no especifica</b> el número ni la identidad de los factores, <b>no exige</b> que el market portfolio sea eficiente y tiene supuestos <b>más débiles</b>. El <b>CAPM es el caso especial</b> de un solo factor."
+    },
+    {
+      "id": "vol09-t-lm4-02",
+      "lm": "LM4",
+      "star": false,
+      "title": "Las 3 assumptions de la APT",
+      "body": "1) Un <b>factor model</b> describe los retornos. 2) Se pueden formar portfolios <b>well-diversified</b> (elimina el riesgo asset-specific). 3) <b>No hay arbitrage opportunities</b>. <b>NO</b> incluye \"todos optimizan media-varianza\" ni \"el market portfolio es eficiente\"."
+    },
+    {
+      "id": "vol09-t-lm4-03",
+      "lm": "LM4",
+      "star": true,
+      "title": "Factores macro = SURPRISES, no niveles",
+      "body": "En un modelo macro los factores son <b>SURPRISES</b> (<b>actual &minus; expected</b>), <b>no niveles</b>: lo predicho ya está en los precios. Y el <b>intercepto a<sub>i</sub> = expected return</b>."
+    },
+    {
+      "id": "vol09-t-lm4-04",
+      "lm": "LM4",
+      "star": true,
+      "title": "Orden de estimación INVERTIDO",
+      "body": "<b>Macro:</b> factor surprises <b>PRIMERO</b> &rarr; sensitivities por regresión. <b>Fundamental:</b> sensitivities (atributos) <b>PRIMERO</b> &rarr; factor returns por regresión. <b>El examen los intercambia.</b>"
+    },
+    {
+      "id": "vol09-t-lm4-05",
+      "lm": "LM4",
+      "star": false,
+      "title": "El intercepto fundamental NO es el expected return",
+      "body": "En el modelo <b>fundamental</b> el intercepto <b>NO</b> es el expected return (a diferencia del <b>macro</b>, donde sí lo es): los factores son <b>retornos</b>, no surprises, y no tienen media cero. Las sensibilidades son <b>standardized betas</b> (excepción: industria = dummy 0/1)."
+    },
+    {
+      "id": "vol09-t-lm4-06",
+      "lm": "LM4",
+      "star": true,
+      "title": "Inflación: risk premium NEGATIVO",
+      "body": "El risk premium del <b>GDP growth es POSITIVO</b>; el de la <b>INFLACIÓN es típicamente NEGATIVO</b>. <b>Contra-intuitivo:</b> un activo con sensibilidad <b>positiva</b> a la inflación tiene un <b>MENOR</b> required return &mdash; se lo demanda por su capacidad de <b>hedge</b>."
+    },
+    {
+      "id": "vol09-t-lm4-07",
+      "lm": "LM4",
+      "star": true,
+      "title": "Security selection negativa con active return positivo",
+      "body": "<b>Active return = factor tilts + security selection.</b> Un \"stock picker\" puede tener <b>security selection NEGATIVA</b> (&minus;0.05%) y aun así un active return positivo (2.07%), si ganó por una <b>apuesta de estilo</b>: en el ejemplo, <b>HML aportó +2.04% (~98%)</b>."
+    },
+    {
+      "id": "vol09-t-lm4-08",
+      "lm": "LM4",
+      "star": true,
+      "title": "La VARIANZA es aditiva, no el desvío",
+      "body": "<b>Active risk SQUARED = active factor risk + active specific risk.</b> Se suman <b>varianzas</b>, no desvíos. La raíz se toma <b>al final</b> para obtener el tracking error."
+    },
+    {
+      "id": "vol09-t-lm4-09",
+      "lm": "LM4",
+      "star": false,
+      "title": "Active specific risk: pesos al cuadrado",
+      "body": "<b>Active specific risk = &Sigma;(w<sub>i</sub><sup>a</sup>)² &times; &sigma;²<sub>&epsilon;i</sub></b> &mdash; usa los <b>active weights AL CUADRADO</b> y la <b>varianza residual</b> de cada activo."
+    },
+    {
+      "id": "vol09-t-lm4-10",
+      "lm": "LM4",
+      "star": false,
+      "title": "&lambda; es el factor PREMIUM, no el retorno",
+      "body": "<b>&lambda;<sub>j</sub></b> es el <b>factor risk PREMIUM</b> (factor price), no el retorno del factor. Un <b>pure factor portfolio</b> tiene <b>&beta; = 1 a un factor y 0 a todos los demás</b>; su exceso sobre R<sub>F</sub> es exactamente &lambda;<sub>j</sub>."
+    },
+    {
+      "id": "vol09-t-lm4-11",
+      "lm": "LM4",
+      "star": false,
+      "title": "Factor analysis = covarianzas; PCA = varianzas",
+      "body": "<b>Factor analysis</b> &rarr; los factores reproducen mejor las <b>COVARIANZAS</b>. <b>PCA</b> &rarr; reproducen mejor las <b>VARIANZAS</b>. Fácil de intercambiar."
+    },
+    {
+      "id": "vol09-t-lm4-12",
+      "lm": "LM4",
+      "star": false,
+      "title": "Sin risk-free &rarr; usar &lambda;<sub>0</sub>",
+      "body": "Si no hay risk-free asset, se usa <b>&lambda;<sub>0</sub></b> (el retorno de un portfolio con <b>sensibilidad cero a todos los factores</b>) en lugar de R<sub>F</sub>."
+    },
+    {
+      "id": "vol09-t-lm4-13",
+      "lm": "LM4",
+      "star": false,
+      "title": "El TE se anualiza con &radic;t",
+      "body": "El tracking error se anualiza multiplicando por <b>&radic;t</b>: <b>&times;&radic;12</b> (mensual), <b>&times;&radic;250</b> (diaria). <b>No &times;t.</b>"
+    },
+    {
+      "id": "vol09-t-lm4-14",
+      "lm": "LM4",
+      "star": false,
+      "title": "Direcciones de los factores Carhart",
+      "body": "<b>SMB</b> = <b>small</b> minus big (size). <b>HML</b> = <b>high</b> minus low book-to-market (value). <b>WML</b> = <b>winners</b> minus losers (momentum). No inviertas los signos."
+    },
+    {
+      "id": "vol09-t-lm5-01",
+      "lm": "LM5",
+      "star": true,
+      "title": "VaR = pérdida MÍNIMA, no máxima",
+      "body": "El VaR es la pérdida <b>MÍNIMA</b> esperada un cierto % del tiempo. <b>NO</b> es la máxima ni la esperada. \"5% VaR = $12.5M\" significa: se esperaría perder <b>al menos</b> $12.5M el 5% del tiempo. <b>Incorrecto:</b> \"hay 5% de chance de perder $12.5M\" o \"el expected loss es $12.5M\"."
+    },
+    {
+      "id": "vol09-t-lm5-02",
+      "lm": "LM5",
+      "star": false,
+      "title": "z-thresholds: 1.65 / 2.33 / 1.0",
+      "body": "<b>5% VaR &rarr; 1.65&sigma;</b> · <b>1% VaR &rarr; 2.33&sigma;</b> · <b>16% VaR &rarr; 1.0&sigma;</b>. <b>Mayor nivel de confianza &rarr; MAYOR VaR.</b> Un \"1% VaR\" <b>no</b> implica un movimiento del 1%."
+    },
+    {
+      "id": "vol09-t-lm5-03",
+      "lm": "LM5",
+      "star": true,
+      "title": "NO se anualiza el VaR diario con &radic;250",
+      "body": "Hay que anualizar <b>E(R) (&times;250)</b> y <b>&sigma; (&times;&radic;250)</b> <b>POR SEPARADO</b> y recién entonces recalcular el VaR. Multiplicar el VaR diario por &radic;250 equivale a <b>ASUMIR expected return = 0</b>. (El 5% VaR anual correcto del ejemplo es <b>$25.171.500</b>.)"
+    },
+    {
+      "id": "vol09-t-lm5-04",
+      "lm": "LM5",
+      "star": false,
+      "title": "El paramétrico anda mal con opciones",
+      "body": "El método <b>paramétrico funciona MAL con opciones</b> (distribución truncada / no-normal). <b>Historical</b> y <b>Monte Carlo SÍ</b> las manejan. Y para <b>CVaR</b>: mejor historical/MC, no parametric."
+    },
+    {
+      "id": "vol09-t-lm5-05",
+      "lm": "LM5",
+      "star": true,
+      "title": "Qué distribución usa cada método",
+      "body": "<b>Parametric:</b> normal <b>asumida</b>. <b>Historical:</b> <b>la que dictan los datos</b> (ninguna asumida; no estima media ni varianza) &mdash; su límite es que el pasado puede no repetirse. <b>Monte Carlo:</b> <b>la que elige el usuario</b>; converge al paramétrico con misma distribución/parámetros + muestra grande."
+    },
+    {
+      "id": "vol09-t-lm5-06",
+      "lm": "LM5",
+      "star": false,
+      "title": "CVaR = pérdida promedio DADO que se excede el VaR",
+      "body": "El <b>Conditional VaR</b> (= expected shortfall = expected tail loss) es la <b>pérdida PROMEDIO condicionada</b> a que se exceda el VaR. Se estima mejor con <b>historical o Monte Carlo</b>."
+    },
+    {
+      "id": "vol09-t-lm5-07",
+      "lm": "LM5",
+      "star": true,
+      "title": "Incremental VaR vs. Marginal VaR",
+      "body": "<b>IVaR:</b> cambio del VaR al variar el <b>TAMAÑO</b> de una posición (VaR después &minus; antes). <b>MVaR:</b> efecto de un cambio <b>MUY PEQUEÑO</b> (cálculo); los MVaR ponderados <b>SUMAN al VaR total</b>. El MVaR <b>NO</b> es \"margin calls\" ni es igual al incremental."
+    },
+    {
+      "id": "vol09-t-lm5-08",
+      "lm": "LM5",
+      "star": false,
+      "title": "El VaR NO es el peor caso + correlation risk",
+      "body": "Las pérdidas <b>pueden y van a EXCEDER</b> el VaR: no es el peor caso. Además, en <b>stress las correlaciones tienden a 1</b> (<b>correlation risk</b>) &rarr; se <b>pierde la diversificación</b> justo cuando más se la necesita."
+    },
+    {
+      "id": "vol09-t-lm5-09",
+      "lm": "LM5",
+      "star": false,
+      "title": "Delta, gamma y el orden de los greeks",
+      "body": "<b>Call delta: 0 a +1. Put delta: 0 a &minus;1.</b> <b>Delta</b> y <b>duration</b> = 1er orden; <b>gamma</b> y <b>convexity</b> = 2do orden. El <b>GAMMA es MÁXIMO at-the-money y CERCA del vencimiento</b>. El <b>vega</b> mide la sensibilidad a la <b>volatilidad</b>."
+    },
+    {
+      "id": "vol09-t-lm5-10",
+      "lm": "LM5",
+      "star": false,
+      "title": "En escenarios con opciones: REPRECIAR",
+      "body": "En un scenario analysis con opciones hay que <b>REPRECIAR COMPLETAMENTE</b> &mdash; <b>no</b> usar delta/gamma. Los movimientos del escenario son <b>demasiado grandes</b> para una aproximación de 2do orden."
+    },
+    {
+      "id": "vol09-t-lm5-11",
+      "lm": "LM5",
+      "star": true,
+      "title": "Escenario: no asumir distribución es VENTAJA",
+      "body": "Las medidas de <b>escenario NO asumen ninguna distribución</b> &mdash; eso es una <b>VENTAJA</b>, no una limitación (trampa clásica). Y <b>ni sensibilidad ni escenario dan PROBABILIDAD</b>: solo el <b>VaR</b> la da. Las sensibilidades tampoco distinguen por <b>volatilidad</b> (1 bp de HY = 1 bp de IG en sensibilidad, pero el HY se mueve más)."
+    },
+    {
+      "id": "vol09-t-lm5-12",
+      "lm": "LM5",
+      "star": false,
+      "title": "Marginal VaR: los sub-budgets suman al total",
+      "body": "Con <b>marginal VaR</b> los sub-budgets <b>SUMAN al total</b>. Con <b>VaR simple</b> hay <b>SUB-UTILIZACIÓN</b> del budget (por el efecto diversificación) &rarr; hace falta <b>over-allocation</b> para aprovecharla."
+    },
+    {
+      "id": "vol09-t-lm5-13",
+      "lm": "LM5",
+      "star": false,
+      "title": "Surplus at risk (pensions)",
+      "body": "El <b>surplus at risk</b> es una aplicación del VaR: <b>assets como long + liabilities como short FI</b>. <b>Funding ratio = assets / PV(liabilities)</b>. Enfoque: <b>LDI</b> (liability-driven investing)."
+    },
+    {
+      "id": "vol09-t-lm5-14",
+      "lm": "LM5",
+      "star": false,
+      "title": "Ex ante vs. ex post tracking error",
+      "body": "<b>Ex ante TE</b> (= relative VaR): holdings de <b>HOY</b> expuestos a la variabilidad de <b>mercados pasados</b> &rarr; riesgo <b>PROSPECTIVO</b>. <b>Ex post TE</b>: holdings <b>históricos</b> en mercados históricos &rarr; mide <b>SKILL</b>. Si el <b>benchmark es cash &rarr; VaR = ex ante TE</b>. (Ojo: el <b>active share</b> = ½&Sigma;|&Delta;w| es <b>otra</b> medida &mdash; % del portfolio que difiere &mdash; no es el relative VaR.)"
+    },
+    {
+      "id": "vol09-t-lm5-15",
+      "lm": "LM5",
+      "star": false,
+      "title": "Stop-loss, risk budgeting y capital allocation",
+      "body": "El <b>stop-loss</b> ataca el <b>\"trending\"</b> (estar bajo el límite de VaR diario pero acumulando pérdidas). El <b>risk budgeting</b> mira ~<b>1&sigma;</b>; el <b>capital allocation</b> (economic capital) mira la cola a <b>99–99.99%</b>, 1 año. Los <b>position limits</b> son la medida <b>más usada por los asset managers</b>."
+    },
+    {
+      "id": "vol09-t-lm6-01",
+      "lm": "LM6",
+      "star": true,
+      "title": "Survivorship es un CASO ESPECIAL de look-ahead",
+      "body": "El <b>survivorship bias es una FORMA de look-ahead bias</b> (en el pasado no se podía saber qué empresa sobreviviría). El <b>reporting lag</b> también lo es. Y el survivorship <b>puede INVERTIR la conclusión</b>, no solo inflarla: con solo survivors, el <b>low-vol anomaly se da vuelta</b>."
+    },
+    {
+      "id": "vol09-t-lm6-02",
+      "lm": "LM6",
+      "star": true,
+      "title": "El point-in-time NO corrige el data snooping",
+      "body": "El <b>point-in-time data</b> corrige <b>look-ahead</b> y <b>survivorship</b>, pero <b>NO el data snooping</b>: con datos PIT igual podés p-hackear probando muchos modelos."
+    },
+    {
+      "id": "vol09-t-lm6-03",
+      "lm": "LM6",
+      "star": false,
+      "title": "Data snooping: inferir DESPUÉS de ver los resultados",
+      "body": "<b>Data snooping</b> (p-hacking) = hacer la inferencia <b>DESPUÉS</b> de mirar los resultados / elegir el mejor de muchos modelos (model selection bias). Se mitiga con un hurdle más alto (<b>t-stat &gt; 3.0</b>) y con <b>cross-validation</b> (incl. testear en otras regiones). El rolling window es cross-validation <b>determinística</b>."
+    },
+    {
+      "id": "vol09-t-lm6-04",
+      "lm": "LM6",
+      "star": false,
+      "title": "Las 3 formas de look-ahead bias",
+      "body": "1) <b>Reporting lags</b> (el dato aún no estaba disponible; compensar con lag introduce datos <b>stale</b> en large-caps). 2) <b>Data revisions</b>. 3) <b>Index additions</b>. Efecto: resultados <b>demasiado optimistas</b> (infló la estrategia US de value <b>~100%</b>)."
+    },
+    {
+      "id": "vol09-t-lm6-05",
+      "lm": "LM6",
+      "star": false,
+      "title": "Historical simulation = bootstrap SIN orden",
+      "body": "La <b>historical simulation</b> extrae retornos de la historia real <b>al azar y SIN respetar el orden temporal</b>, con reemplazo (<b>bootstrapping</b>). Es un <b>rolling-window backtest NO determinístico</b>."
+    },
+    {
+      "id": "vol09-t-lm6-06",
+      "lm": "LM6",
+      "star": true,
+      "title": "Ambas simulaciones usan RNG",
+      "body": "<b>Tanto la historical como la Monte Carlo usan random number generator.</b> \"Ninguna usa RNG\" es <b>FALSO</b>. Y la <b>Monte Carlo NO es determinística</b> (es aleatoria); el <b>rolling-window backtest SÍ</b> lo es."
+    },
+    {
+      "id": "vol09-t-lm6-07",
+      "lm": "LM6",
+      "star": false,
+      "title": "Con factores correlacionados &rarr; multivariate obligatoria",
+      "body": "En Monte Carlo con varios activos/factores <b>correlacionados</b> hay que especificar una <b>MULTIVARIATE distribution</b> (no modelar cada uno standalone). La <b>multivariate normal NO captura</b> skewness negativa, excess kurtosis ni <b>tail dependence</b>."
+    },
+    {
+      "id": "vol09-t-lm6-08",
+      "lm": "LM6",
+      "star": true,
+      "title": "Scenario vs. sensitivity vs. ninguna",
+      "body": "Dividir por <b>recesión / volatilidad</b> = <b>SCENARIO</b>. Cambiar la <b>distribución</b> (multivariate normal &rarr; <b>multivariate skewed Student's t</b>) = <b>SENSITIVITY</b>. Cambiar el <b>universo</b> (Nikkei 225 &rarr; TOPIX 1000) = <b>NINGUNA</b> (no hay régimen estructural)."
+    },
+    {
+      "id": "vol09-t-lm6-09",
+      "lm": "LM6",
+      "star": false,
+      "title": "Sensitivity: solo cambian los pasos 4 y 5",
+      "body": "En el sensitivity analysis del currículo se reemplaza la <b>multivariate normal</b> por una <b>multivariate skewed Student's t</b> y se re-corre el Monte Carlo: solo cambian los <b>pasos 4 (calibrar) y 5 (simular)</b>. La skewed t captura <b>skewness y fat tails</b>, pero requiere estimar <b>más parámetros</b>."
+    },
+    {
+      "id": "vol09-t-lm6-10",
+      "lm": "LM6",
+      "star": false,
+      "title": "Risk parity: rolling window DOS veces",
+      "body": "El multifactor <b>risk parity</b> requiere el rolling window <b>DOS veces</b>: una para los <b>factor returns</b> y otra para la <b>matriz de covarianzas</b> (necesaria para los pesos de equal risk contribution). El segundo paso <b>evita look-ahead bias</b>."
+    },
+    {
+      "id": "vol09-t-lm6-11",
+      "lm": "LM6",
+      "star": false,
+      "title": "Rolling window: MUCHAS muestras, no dos",
+      "body": "El rolling window divide los datos en <b>MUCHAS</b> sub-muestras (<b>no en dos</b>): el <b>out-of-sample</b> de un período pasa a ser parte del <b>in-sample</b> del siguiente. Replica el proceso real de inversión."
+    },
+    {
+      "id": "vol09-t-lm6-12",
+      "lm": "LM6",
+      "star": false,
+      "title": "Historia larga: más confianza pero non-stationary",
+      "body": "Una historia <b>larga</b> da más confianza estadística, <b>PERO</b> los datos financieros son <b>non-stationary</b> &rarr; hay que <b>complementar con scenario analysis</b> de regímenes discretos. Un período <b>corto</b> cubre <b>pocos regímenes</b> macro. Y el <b>cumulative performance</b> se grafica en escala <b>LOGARÍTMICA</b>."
+    }
+  ],
+  "problems": [
+    {
+      "id": "vol09-p01",
+      "lm": "LM1",
+      "title": "Tasa real libre de riesgo desde m",
+      "given": "Dos estados de la economía: <b>malo</b> (probabilidad 0.4) y <b>bueno</b> (probabilidad 0.6). La voluntad de invertir (inter-temporal rate of substitution, m) por estado es: <b>0.954676</b> en el estado malo y <b>0.954379</b> en el estado bueno.",
+      "ask": "Calcular la tasa real libre de riesgo a 1 año (l).",
+      "answer": "l = 0.047671 &rarr; <b>4.7671%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Calcular E(m) como el promedio ponderado por probabilidades: E(m) = 0.4 &times; 0.954676 + 0.6 &times; 0.954379</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>E(m) = 0.3818704 + 0.5726274 = <b>0.954498</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Aplicar Eq. 4: l = (1 &minus; P) / P, donde P = E(m) = 0.954498</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>l = (1 &minus; 0.954498) / 0.954498 = 0.045502 / 0.954498</span></div><div class=\"res\">l = 0.047671 &rarr; <b>4.7671%</b></div><div class=\"warn\">El precio del bono <b>ES</b> E(m) (Eq. 3): P = E(m). Ojo: $1 vale <b>más</b> en el estado malo (0.954676 &gt; 0.954379) porque ahí la utilidad marginal del consumo es mayor.</div>"
+    },
+    {
+      "id": "vol09-p02",
+      "lm": "LM1",
+      "title": "Taylor rule",
+      "given": "Tasa real <b>l = 2.0%</b> · inflación actual <b>&iota; = 3.0%</b> · target de inflación <b>&iota;* = 2.0%</b> · <b>output gap = 2.0%</b>.",
+      "ask": "Calcular la policy rate \"apropiada\" según la Taylor rule.",
+      "answer": "pr = <b>6.5%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Eq. 12: pr = l + &iota; + 0.5(&iota; &minus; &iota;*) + 0.5(Y &minus; Y*)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Reagrupando: pr = l + <b>1.5</b>&iota; &minus; 0.5&iota;* + <b>0.5</b>(output gap)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>pr = 2.0 + 1.5(3.0) &minus; 0.5(2.0) + 0.5(2.0)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>pr = 2.0 + 4.5 &minus; 1.0 + 1.0</span></div><div class=\"res\">pr = <b>6.5%</b></div><div class=\"warn\">El peso de la inflación es <b>1.5</b> (aparece dos veces: una sola y otra dentro del 0.5&times;), no 1.0. Si inflación = target y gap = 0, la fórmula colapsa a la <b>neutral rate = l + &iota;* = 4.0%</b>.</div>"
+    },
+    {
+      "id": "vol09-p03",
+      "lm": "LM1",
+      "title": "Credit premium implícito (&gamma;)",
+      "given": "Bono corporativo a <b>1 año</b>, face value <b>£100</b>, precio de mercado <b>£94.21</b>. Componentes conocidos: <b>l = 1.25%</b> · <b>&theta; = 2.50%</b> · <b>&pi; = 0.50%</b>.",
+      "ask": "Calcular el credit premium (&gamma;) implícito en el precio.",
+      "answer": "&gamma; &asymp; <b>1.90%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>El discount rate total del bono credit-risky (Eq. 13) es: 1 + l + &theta; + &pi; + &gamma;</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Ese factor de descuento total se despeja del precio: FV / Precio = 100 / 94.21 = <b>1.06146</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>La suma de los componentes conocidos es: 1 + 0.0125 + 0.0250 + 0.0050 = <b>1.0425</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>&gamma; = 1.06146 &minus; 1.0425 = 0.01896</span></div><div class=\"res\">&gamma; &asymp; <b>1.90%</b></div><div class=\"warn\">Método general para despejar cualquier premio: <b>premium = FV/Precio &minus; (1 + suma de los componentes previos)</b>. No confundas el <b>credit spread medido</b> con el <b>credit premium &gamma;</b>: son \"conceptually akin <i>but not equal</i>\".</div>"
+    },
+    {
+      "id": "vol09-p04",
+      "lm": "LM1",
+      "title": "Decisión de inversión en Commercial Real Estate",
+      "given": "Un bono <b>senior unsecured</b> a 10 años de Supermarket plc rinde <b>5.75%</b> (que ya incluye un credit spread de 1.50%). El inversor exige además: <b>+0.50%</b> por la incertidumbre del valor y de la renta, y <b>+1.00%</b> por iliquidez. La propiedad paga una renta de <b>$500.000 anuales</b> (en arrears) por 10 años, más un <b>valor terminal de $10.000.000</b> en el año 10. Precio de venta ofrecido: <b>$8.200.000</b>.",
+      "ask": "Calcular el required return y el valor implícito de la propiedad, y decidir si conviene comprar.",
+      "answer": "Valor implícito = <b>$8.437.796</b> &rarr; como el precio ($8.2M) es <b>menor</b>, el retorno sería <b>superior</b> al hurdle de 7.25% &rarr; <b>RECOMENDAR LA COMPRA</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Required return = yield del bono + premio por incertidumbre + premio por iliquidez</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Required return = 5.75% + 0.50% + 1.00% = <b>7.25%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Descontar los flujos a 7.25%: PV de una anualidad de $500.000 por 10 años + PV del valor terminal de $10.000.000 en el año 10</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Valor implícito = <b>$8.437.796</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>Comparar con el precio ofrecido: $8.200.000 &lt; $8.437.796</span></div><div class=\"res\">Valor implícito = <b>$8.437.796</b> &rarr; como el precio ($8.2M) es <b>menor</b>, el retorno sería <b>superior</b> al hurdle de 7.25% &rarr; <b>RECOMENDAR LA COMPRA</b></div><div class=\"warn\">Cualquier precio <b>por encima</b> de $8.437.796 implicaría un retorno <b>menor</b> al hurdle rate. El CRE apila todos los premios: l + &theta; + &pi; + &gamma; + &kappa; + <b>&phi;</b> (liquidez).</div>"
+    },
+    {
+      "id": "vol09-p05",
+      "lm": "LM2",
+      "title": "Value added: asset allocation 60/40 &rarr; 70/30",
+      "given": "Benchmark: <b>60% stocks / 40% bonds</b>. Portfolio: <b>70% stocks / 30% bonds</b>. Retornos realizados: <b>stocks +14.0%</b>, <b>bonds +2.0%</b>.",
+      "ask": "Calcular el retorno del benchmark y el value added (active return), descompuesto por activo.",
+      "answer": "R<sub>A</sub> = 0.5% + 0.7% = <b>1.2%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>R<sub>B</sub> = 0.60(14.0) + 0.40(2.0) = 8.4 + 0.8 = <b>9.2%</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Active weights: &Delta;w<sub>stocks</sub> = 70 &minus; 60 = <b>+10%</b> ; &Delta;w<sub>bonds</sub> = 30 &minus; 40 = <b>&minus;10%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>R<sub>A</sub> = &Sigma; &Delta;w<sub>i</sub> &times; (R<sub>i</sub> &minus; R<sub>B</sub>)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Contribución stocks: 0.10 &times; (14.0 &minus; 9.2) = 0.10 &times; 4.8 = <b>+0.5%</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>Contribución bonds: &minus;0.10 &times; (2.0 &minus; 9.2) = &minus;0.10 &times; (&minus;7.2) = <b>+0.7%</b></span></div><div class=\"res\">R<sub>A</sub> = 0.5% + 0.7% = <b>1.2%</b></div><div class=\"warn\"><b>Gotcha de signo:</b> underponderar bonds (un perdedor) <b>AGREGA</b> +0.7%. Negativo &times; negativo = positivo. La mayor contribución vino de <b>evitar</b> el activo malo, no de sobreponderar el bueno.</div>"
+    },
+    {
+      "id": "vol09-p06",
+      "lm": "LM2",
+      "title": "Active return y active risk desde los active weights",
+      "given": "Cuatro activos. Active weights: #1 <b>+0.18</b>, #2 <b>+0.09</b>, #3 <b>&minus;0.18</b>, #4 <b>&minus;0.09</b>. Active returns: #1 <b>+5.0%</b>, #2 <b>+10.0%</b>, #3 <b>&minus;5.0%</b>, #4 <b>&minus;10.0%</b>. Volatilidad activa: #1 y #3 = <b>25.0%</b>; #2 y #4 = <b>50.0%</b>.",
+      "ask": "Calcular el active return y el active risk del portfolio.",
+      "answer": "R<sub>A</sub> = <b>3.6%</b> · &sigma;<sub>A</sub> = <b>9.0%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Active return: R<sub>A</sub> = &Sigma; &Delta;w<sub>i</sub> &times; R<sub>Ai</sub></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>R<sub>A</sub> = 0.18(5.0) + 0.09(10.0) &minus; 0.18(&minus;5.0) &minus; 0.09(&minus;10.0)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>R<sub>A</sub> = 0.9 + 0.9 + 0.9 + 0.9 = <b>3.6%</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Active risk: &sigma;<sub>A</sub> = [&Sigma; (&Delta;w<sub>i</sub>)² &times; (&sigma;<sub>i</sub>)²]<sup>½</sup></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>&sigma;<sub>A</sub> = [0.18²(25.0²) + 0.09²(50.0²) + (&minus;0.18)²(25.0²) + (&minus;0.09)²(50.0²)]<sup>½</sup></span></div><div class=\"step\"><span class=\"sn\">6.</span><span>&sigma;<sub>A</sub> = [20.25 + 20.25 + 20.25 + 20.25]<sup>½</sup> = 81<sup>½</sup></span></div><div class=\"res\">R<sub>A</sub> = <b>3.6%</b> · &sigma;<sub>A</sub> = <b>9.0%</b></div><div class=\"warn\">Los <b>cuatro</b> activos contribuyen <b>positivamente</b> al active return: los dos con peso negativo tienen active return negativo. En el active risk los pesos van <b>al cuadrado</b> (el signo desaparece).</div>"
+    },
+    {
+      "id": "vol09-p07",
+      "lm": "LM2",
+      "title": "Fundamental Law — basic (sin restricciones)",
+      "given": "<b>IC = 0.20</b> · <b>BR = 4</b> (cuatro activos no correlacionados, forecasts independientes) · <b>&sigma;<sub>A</sub> = 9.0%</b>.",
+      "ask": "Calcular el active return esperado y el information ratio (versión basic).",
+      "answer": "E(R<sub>A</sub>)* = <b>3.6%</b> · IR* = <b>0.40</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>E(R<sub>A</sub>)* = IC &times; &radic;BR &times; &sigma;<sub>A</sub></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>E(R<sub>A</sub>)* = 0.20 &times; &radic;4 &times; 9.0 = 0.20 &times; 2 &times; 9.0</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>IR* = IC &times; &radic;BR = 0.20 &times; 2</span></div><div class=\"res\">E(R<sub>A</sub>)* = <b>3.6%</b> · IR* = <b>0.40</b></div><div class=\"warn\">El breadth entra como <b>&radic;BR</b>: con BR = 4, el multiplicador es <b>2</b>, no 4. La versión basic asume <b>TC &asymp; 1</b> (sin restricciones).</div>"
+    },
+    {
+      "id": "vol09-p08",
+      "lm": "LM2",
+      "title": "Fundamental Law — full (con restricciones)",
+      "given": "Mismos forecasts que el problema anterior: <b>IC = 0.20</b> · <b>BR = 4</b> · <b>&sigma;<sub>A</sub> = 9.0%</b>. Pero al optimizar con restricciones, el transfer coefficient resulta <b>TC = 0.58</b>.",
+      "ask": "Calcular el active return esperado con restricciones y cuantificar cuánto se pierde por ellas.",
+      "answer": "E(R<sub>A</sub>) = <b>2.1%</b> (vs. 3.6% sin restricciones)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>E(R<sub>A</sub>) = TC &times; IC &times; &radic;BR &times; &sigma;<sub>A</sub></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>E(R<sub>A</sub>) = 0.58 &times; 0.20 &times; &radic;4 &times; 9.0</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>E(R<sub>A</sub>) = 0.58 &times; 0.20 &times; 2 &times; 9.0 = 0.58 &times; 3.6</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Pérdida por restricciones: 3.6% &minus; 2.1% = <b>1.5%</b> (el TC traslada solo el <b>58%</b> del skill)</span></div><div class=\"res\">E(R<sub>A</sub>) = <b>2.1%</b> (vs. 3.6% sin restricciones)</div><div class=\"warn\">El TC es un <b>multiplicador directo</b>: TC = 0.58 significa que solo el 58% del valor potencial del skill llega al portfolio. Con <b>TC = 0</b>, el active risk óptimo sería 0 &rarr; invertir en el <b>benchmark</b>.</div>"
+    },
+    {
+      "id": "vol09-p09",
+      "lm": "LM2",
+      "title": "Ex post: IC realizado y noise",
+      "given": "<b>BR = 100</b> · <b>IC esperado = 0.05</b> · <b>TC = 0.80</b> · <b>&sigma;<sub>A</sub> = 4.0%</b>. Al cierre del período, el <b>IC realizado fue &minus;0.10</b> y el active return real fue <b>&minus;2.6%</b>.",
+      "ask": "Calcular (a) el active return esperado ex ante, (b) el esperado condicionado al IC realizado, (c) el noise, y (d) la descomposición de varianza.",
+      "answer": "(a) <b>1.6%</b> · (b) <b>&minus;3.2%</b> · (c) noise = <b>+0.6%</b> · (d) <b>64% skill / 36% noise</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>(a) Ex ante: E(R<sub>A</sub>) = TC &times; IC &times; &radic;BR &times; &sigma;<sub>A</sub> = 0.80 &times; 0.05 &times; &radic;100 &times; 4.0 = 0.80 &times; 0.05 &times; 10 &times; 4.0 = <b>1.6%</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>(b) Condicionado al IC realizado: E(R<sub>A</sub>|IC<sub>R</sub>) = TC &times; IC<sub>R</sub> &times; &radic;BR &times; &sigma;<sub>A</sub></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>E(R<sub>A</sub>|IC<sub>R</sub>) = 0.80 &times; (&minus;0.10) &times; 10 &times; 4.0 = <b>&minus;3.2%</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>(c) Noise = R<sub>A</sub> real &minus; E(R<sub>A</sub>|IC<sub>R</sub>) = &minus;2.6 &minus; (&minus;3.2) = <b>+0.6%</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>(d) Varianza: skill = TC² = 0.80² = <b>64%</b> ; noise = 1 &minus; TC² = <b>36%</b></span></div><div class=\"res\">(a) <b>1.6%</b> · (b) <b>&minus;3.2%</b> · (c) noise = <b>+0.6%</b> · (d) <b>64% skill / 36% noise</b></div><div class=\"warn\">La descomposición de varianza usa <b>TC²</b> y <b>1 &minus; TC²</b>, <b>no</b> TC y (1 &minus; TC). Un IC realizado negativo hace que el active return esperado sea <b>negativo</b> aunque el IC ex ante fuera positivo.</div>"
+    },
+    {
+      "id": "vol09-p10",
+      "lm": "LM2",
+      "title": "Active risk óptimo y Sharpe resultante",
+      "given": "Un manager tiene un <b>IR esperado = 0.30</b>. El benchmark tiene <b>SR<sub>B</sub> = 0.40</b> y <b>&sigma;<sub>B</sub> = 16%</b>.",
+      "ask": "Calcular el nivel óptimo de active risk y el Sharpe ratio resultante del portfolio total.",
+      "answer": "&sigma;<sub>A</sub>* = <b>12%</b> · SR<sub>P</sub> = <b>0.50</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Active risk óptimo (Eq. 8): &sigma;(R<sub>A</sub>) = (IR / SR<sub>B</sub>) &times; &sigma;<sub>B</sub></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>&sigma;(R<sub>A</sub>) = (0.30 / 0.40) &times; 16% = 0.75 &times; 16% = <b>12%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Sharpe del portfolio (Eq. 7): SR²<sub>P</sub> = SR²<sub>B</sub> + IR²</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>SR²<sub>P</sub> = 0.40² + 0.30² = 0.16 + 0.09 = 0.25</span></div><div class=\"step\"><span class=\"sn\">5.</span><span>SR<sub>P</sub> = &radic;0.25</span></div><div class=\"res\">&sigma;<sub>A</sub>* = <b>12%</b> · SR<sub>P</sub> = <b>0.50</b></div><div class=\"warn\">La relación es <b>al cuadrado</b>: no se suman los ratios (0.40 + 0.30 = 0.70 es <b>incorrecto</b>). Por eso el <b>IR esperado es el mejor criterio</b> para elegir manager: maximiza el Sharpe del portfolio total.</div>"
+    },
+    {
+      "id": "vol09-p11",
+      "lm": "LM2",
+      "title": "Market timing: IC, IR y el efecto del breadth",
+      "given": "Un manager hace timing entre investment grade y high yield con una decisión <b>trimestral</b>. Acierta el <b>55%</b> de las veces. El active risk objetivo es <b>&sigma;<sub>A</sub> = 2.0%</b>.",
+      "ask": "Calcular el IC, el active return esperado y el IR. Luego, comparar con el caso de 250 decisiones diarias independientes.",
+      "answer": "IC = <b>0.10</b> · E(R<sub>A</sub>) = <b>40 bps</b> · IR = <b>0.20</b> (vs. <b>1.58</b> con BR = 250)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>IC = (% aciertos) &minus; (% errores) = 0.55 &minus; 0.45 = <b>0.10</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Breadth: una decisión por trimestre &rarr; <b>BR = 4</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>E(R<sub>A</sub>) = IC &times; &radic;BR &times; &sigma;<sub>A</sub> = 0.10 &times; &radic;4 &times; 2.0 = 0.10 &times; 2 &times; 2.0 = <b>0.40%</b> (40 bps)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>IR = IC &times; &radic;BR = 0.10 &times; 2 = <b>0.20</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>Con 250 decisiones diarias independientes: IR = 0.10 &times; &radic;250 = 0.10 &times; 15.81 = <b>1.58</b></span></div><div class=\"res\">IC = <b>0.10</b> · E(R<sub>A</sub>) = <b>40 bps</b> · IR = <b>0.20</b> (vs. <b>1.58</b> con BR = 250)</div><div class=\"warn\"><b>El IC NO es 0.55.</b> Es <b>2p &minus; 1</b> = 2(0.55) &minus; 1 = 0.10. El <b>breadth bajo es el cuello de botella</b> del market timing: mismo skill, IR ocho veces menor.</div>"
+    },
+    {
+      "id": "vol09-p12",
+      "lm": "LM3",
+      "title": "Costo total de poseer un ETF por horizonte",
+      "given": "ETF con <b>management fee = 0.15%</b> anual · <b>comisión one-way = 0.05%</b> · <b>bid-ask spread = 0.15%</b>.",
+      "ask": "Calcular el round-trip trading cost y el costo total para horizontes de 3 meses, 12 meses y 3 años.",
+      "answer": "Round-trip = <b>0.25%</b> · Total: <b>0.29%</b> (3m) · <b>0.40%</b> (12m) · <b>0.70%</b> (3a)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Round-trip = (comisión one-way &times; 2) + (½ &times; spread &times; 2)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Round-trip = (0.05% &times; 2) + (½ &times; 0.15% &times; 2) = 0.10% + 0.15% = <b>0.25%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span><b>3 meses:</b> 0.25% + (3/12 &times; 0.15%) = 0.25% + 0.0375% = <b>0.29%</b> (trading = <b>86%</b> del total)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span><b>12 meses:</b> 0.25% + 0.15% = <b>0.40%</b> (trading = <b>62.5%</b> del total)</span></div><div class=\"step\"><span class=\"sn\">5.</span><span><b>3 años:</b> 0.25% + (3 &times; 0.15%) = 0.25% + 0.45% = <b>0.70%</b> (trading = <b>36%</b> del total)</span></div><div class=\"res\">Round-trip = <b>0.25%</b> · Total: <b>0.29%</b> (3m) · <b>0.40%</b> (12m) · <b>0.70%</b> (3a)</div><div class=\"warn\">La <b>comisión se paga entera en cada punta</b> (&times;2), pero del <b>spread solo se paga la mitad</b> en cada punta. Horizonte <b>corto &rarr; dominan los trading costs</b> (elegir por liquidez/spread); horizonte <b>largo &rarr; domina el fee</b>.</div>"
+    },
+    {
+      "id": "vol09-p13",
+      "lm": "LM3",
+      "title": "ETF inverso &minus;2×: el efecto del compounding",
+      "given": "Un ETF <b>&minus;2×</b> parte de un NAV de <b>100</b> con el índice en <b>100</b>. Día 2: el índice sube a <b>110</b> (+10%). Día 3: el índice cae a <b>99</b> (&minus;10%).",
+      "ask": "Calcular el NAV del ETF cada día y el retorno del ETF a 3 días. Compararlo con el múltiplo naive.",
+      "answer": "El ETF entregó <b>&minus;4%</b>, no el <b>+2%</b> que sugiere el múltiplo naive.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Día 2 — el índice sube <b>+10%</b> &rarr; el ETF hace &minus;2 &times; 10% = <b>&minus;20%</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>NAV día 2 = 100 &times; (1 &minus; 0.20) = <b>80</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Día 3 — el índice cae <b>&minus;10%</b> (de 110 a 99) &rarr; el ETF hace &minus;2 &times; (&minus;10%) = <b>+20%</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>NAV día 3 = 80 &times; (1 + 0.20) = <b>96</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>Retorno del ETF a 3 días = (96 &minus; 100) / 100 = <b>&minus;4%</b></span></div><div class=\"step\"><span class=\"sn\">6.</span><span>Retorno del índice a 3 días = (99 &minus; 100) / 100 = <b>&minus;1%</b></span></div><div class=\"step\"><span class=\"sn\">7.</span><span>Múltiplo <b>naive</b> esperado: &minus;2 &times; (&minus;1%) = <b>+2%</b></span></div><div class=\"res\">El ETF entregó <b>&minus;4%</b>, no el <b>+2%</b> que sugiere el múltiplo naive.</div><div class=\"warn\">El <b>reset diario</b> de la exposición + el <b>compounding</b> rompen la relación multi-día. Por eso los leveraged/inverse <b>NO son buy-and-hold</b> más de ~1 mes sin rebalanceo. El objetivo del múltiplo es estrictamente <b>DIARIO</b>.</div>"
+    },
+    {
+      "id": "vol09-p14",
+      "lm": "LM4",
+      "title": "APT: despejar R<sub>F</sub> y &lambda; de un modelo de un factor",
+      "given": "Modelo APT de <b>un solo factor</b>. Portfolio A: E(R) = <b>0.0750</b>, &beta; = <b>0.50</b>. Portfolio B: E(R) = <b>0.1500</b>, &beta; = <b>2.00</b>.",
+      "ask": "Despejar R<sub>F</sub> y &lambda;, y calcular el expected return de un Portfolio C con &beta; = 0.40.",
+      "answer": "&lambda; = <b>0.05</b> · R<sub>F</sub> = <b>0.05</b> · E(R<sub>C</sub>) = <b>0.07 (7%)</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Plantear el sistema con E(R<sub>p</sub>) = R<sub>F</sub> + &lambda;&beta;<sub>p</sub>:</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>(1) 0.0750 = R<sub>F</sub> + 0.50&lambda; &nbsp;&nbsp; (2) 0.1500 = R<sub>F</sub> + 2.00&lambda;</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Restar (1) de (2): 0.0750 = 1.50&lambda; &rarr; &lambda; = <b>0.05</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Sustituir en (1): 0.0750 = R<sub>F</sub> + 0.50(0.05) = R<sub>F</sub> + 0.025 &rarr; R<sub>F</sub> = <b>0.05</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>Modelo: E(R<sub>p</sub>) = 0.05 + 0.05&beta;<sub>p</sub></span></div><div class=\"step\"><span class=\"sn\">6.</span><span>Portfolio C: E(R<sub>C</sub>) = 0.05 + 0.05(0.40) = 0.05 + 0.02</span></div><div class=\"res\">&lambda; = <b>0.05</b> · R<sub>F</sub> = <b>0.05</b> · E(R<sub>C</sub>) = <b>0.07 (7%)</b></div><div class=\"warn\"><b>&lambda;</b> es el <b>factor risk PREMIUM</b> (el reward por una sensibilidad de 1 al factor), no el retorno del factor. Si el modelo no tuviera risk-free, se usaría <b>&lambda;<sub>0</sub></b>.</div>"
+    },
+    {
+      "id": "vol09-p15",
+      "lm": "LM4",
+      "title": "Detectar y explotar una arbitrage opportunity",
+      "given": "Modelo de equilibrio (del problema anterior): <b>E(R<sub>p</sub>) = 0.05 + 0.05&beta;<sub>p</sub></b>. Portfolio A: E = 0.0750, &beta; = 0.50. Portfolio C: E = 0.0700, &beta; = 0.40. <b>Portfolio D: E = 0.0800, &beta; = 0.45.</b> Se invierten <b>$10.000</b>.",
+      "ask": "Determinar si existe arbitraje y calcular el profit.",
+      "answer": "Arbitrage profit = <b>$75</b> — sin inversión neta y con factor risk neto = 0 (0.45 &minus; 0.45)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Retorno de equilibrio de D según el modelo: E(R<sub>D</sub>) = 0.05 + 0.05(0.45) = <b>0.0725 (7.25%)</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Pero el mercado le asigna a D un expected return de <b>8.00%</b> &rarr; D está <b>UNDERVALUED</b> (rinde de más para su riesgo)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Construir la réplica: portfolio equally weighted de A y C (0.5A + 0.5C)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>&beta; de la réplica: 0.50(0.50) + 0.50(0.40) = <b>0.45</b> &rarr; <b>coincide con la &beta; de D</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>E(R) de la réplica: 0.50(0.0750) + 0.50(0.0700) = <b>0.0725 (7.25%)</b></span></div><div class=\"step\"><span class=\"sn\">6.</span><span>Estrategia: <b>LONG $10.000 en D</b> · <b>SHORT $10.000 en (0.5A + 0.5C)</b></span></div><div class=\"step\"><span class=\"sn\">7.</span><span>Cash flow final: $10.000(1.08) &minus; $10.000(1.0725) = $10.800 &minus; $10.725</span></div><div class=\"res\">Arbitrage profit = <b>$75</b> — sin inversión neta y con factor risk neto = 0 (0.45 &minus; 0.45)</div><div class=\"warn\">Comprás el <b>barato</b> (D, alto retorno para su &beta;) y shorteás la <b>réplica cara</b> de idéntica &beta;. El arbitraje <b>sube el precio de D</b> hasta que su retorno cae a 7.25% y la oportunidad desaparece.</div>"
+    },
+    {
+      "id": "vol09-p16",
+      "lm": "LM4",
+      "title": "Return attribution con el modelo Carhart",
+      "given": "Diferencias de sensibilidad (portfolio &minus; benchmark) y retornos de los factores:<br>RMRF: <b>&minus;0.05</b> &times; <b>5.52%</b> · SMB: <b>&minus;0.05</b> &times; <b>&minus;3.35%</b> · HML: <b>+0.40</b> &times; <b>5.10%</b> · WML: <b>+0.02</b> &times; <b>9.63%</b>. El <b>active return total fue 2.07%</b>.",
+      "ask": "Calcular la contribución de cada factor y, por diferencia, la security selection. Interpretar.",
+      "answer": "Security selection = <b>&minus;0.05%</b>. El bet en <b>HML aportó +2.04% (~98%)</b> del active return.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Contribución = (diferencia de sensibilidad) &times; (retorno del factor)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>RMRF: (&minus;0.05) &times; 5.52% = <b>&minus;0.28%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>SMB: (&minus;0.05) &times; (&minus;3.35%) = <b>+0.17%</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>HML: (+0.40) &times; 5.10% = <b>+2.04%</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>WML: (+0.02) &times; 9.63% = <b>+0.19%</b></span></div><div class=\"step\"><span class=\"sn\">6.</span><span>Total factor tilts = &minus;0.28 + 0.17 + 2.04 + 0.19 = <b>+2.12%</b></span></div><div class=\"step\"><span class=\"sn\">7.</span><span>Security selection = active return total &minus; factor tilts = 2.07% &minus; 2.12%</span></div><div class=\"res\">Security selection = <b>&minus;0.05%</b>. El bet en <b>HML aportó +2.04% (~98%)</b> del active return.</div><div class=\"warn\"><b>Gotcha conceptual:</b> el manager se vende como \"stock picker\" pero su <b>security selection fue NEGATIVA</b>. Todo el valor vino de una <b>apuesta de estilo</b> (value/HML). Ojo con los signos: una sensibilidad negativa &times; un factor negativo da contribución <b>positiva</b> (SMB).</div>"
+    },
+    {
+      "id": "vol09-p17",
+      "lm": "LM4",
+      "title": "Standardized beta",
+      "given": "El dividend yield de un activo es <b>3.5%</b>. En el universo, la <b>media</b> del dividend yield es <b>2.5%</b> y el <b>desvío estándar</b> es <b>2%</b>.",
+      "ask": "Calcular la standardized beta (sensibilidad al factor dividend yield).",
+      "answer": "b = <b>0.50</b> (media desviación estándar por encima del promedio)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Eq. 5: b = (valor del atributo &minus; media del atributo) / &sigma;(atributo)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>b = (3.5% &minus; 2.5%) / 2%</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>b = 1.0% / 2%</span></div><div class=\"res\">b = <b>0.50</b> (media desviación estándar por encima del promedio)</div><div class=\"warn\">La estandarización permite comparar factores con <b>distintas unidades</b>: atributo en la media &rarr; b = 0; una &sigma; arriba &rarr; b = +1. <b>Excepción:</b> la pertenencia a una <b>industria</b> se modela como <b>dummy (0/1)</b>, no se estandariza.</div>"
+    },
+    {
+      "id": "vol09-p18",
+      "lm": "LM5",
+      "title": "VaR paramétrico — los 4 pasos",
+      "given": "Portfolio de <b>$150.000.000</b>: <b>80% SPY</b> (equity) y <b>20% SPLB</b> (bonos corporativos). Datos <b>anuales</b>: E(R<sub>SPY</sub>) = <b>10.5%</b>, E(R<sub>SPLB</sub>) = <b>6.0%</b>. El desvío estándar <b>anual del portfolio</b> es <b>15.99%</b>. Asumir <b>250 días</b> de trading.",
+      "ask": "Calcular el 5% VaR diario en moneda.",
+      "answer": "5% VaR diario = <b>$2.445.150</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Expected return anual del portfolio: E(R<sub>p</sub>) = 0.80(10.5%) + 0.20(6.0%) = 8.4% + 1.2% = <b>9.6%</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Pasar a diario: E(R<sub>p</sub>) = 9.6% / 250 = <b>0.0384%</b> ; &sigma;<sub>p</sub> = 15.99% / &radic;250 = <b>1.0112%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span><b>Paso 1</b> — escalar &sigma; al z-threshold del 5%: 1.65 &times; 0.010112 = <b>0.016685</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span><b>Paso 2</b> — restar del expected return: 0.000384 &minus; 0.016685 = <b>&minus;0.016301</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span><b>Paso 3</b> — cambiar el signo (el VaR se expresa positivo): <b>1.6301%</b></span></div><div class=\"step\"><span class=\"sn\">6.</span><span><b>Paso 4</b> — multiplicar por el valor del portfolio: 0.016301 &times; $150.000.000</span></div><div class=\"res\">5% VaR diario = <b>$2.445.150</b></div><div class=\"warn\"><b>El expected return se RESTA</b> (paso 2), no se suma. Ojo: el desvío se divide por <b>&radic;250</b> pero el retorno por <b>250</b>. Los asset managers suelen <b>parar en el paso 3</b> (VaR en % del portfolio).</div>"
+    },
+    {
+      "id": "vol09-p19",
+      "lm": "LM5",
+      "title": "VaR anual: el error de escalado",
+      "given": "Mismo portfolio: <b>$150.000.000</b>, E(R<sub>p</sub>) anual = <b>9.6%</b>, &sigma;<sub>p</sub> anual = <b>15.99%</b>. El 5% VaR <b>diario</b> calculado antes fue <b>$2.445.150</b>.",
+      "ask": "Calcular el 5% VaR ANUAL correctamente. ¿Se puede obtener multiplicando el VaR diario por &radic;250?",
+      "answer": "5% VaR anual = <b>$25.171.500</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>NO</b> se puede escalar el VaR diario por &radic;250: hay que usar los parámetros anuales directamente</span></div><div class=\"step\"><span class=\"sn\">2.</span><span><b>Paso 1</b> — escalar &sigma; anual al z del 5%: 1.65 &times; 0.1599 = <b>0.263835</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span><b>Paso 2</b> — restar del expected return anual: 0.096 &minus; 0.263835 = <b>&minus;0.167835</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span><b>Paso 3</b> — cambiar el signo: <b>16.7810%</b> (aprox., por redondeo del currículo: 0.167810)</span></div><div class=\"step\"><span class=\"sn\">5.</span><span><b>Paso 4</b> — multiplicar por el valor: 0.167810 &times; $150.000.000</span></div><div class=\"res\">5% VaR anual = <b>$25.171.500</b></div><div class=\"warn\">Escalar el VaR diario con &radic;250 daría $2.445.150 &times; 15.81 &asymp; $38.7M — <b>incorrecto</b>. Ese atajo equivale a <b>asumir expected return = 0</b>. Hay que anualizar <b>E(R) (&times;250)</b> y <b>&sigma; (&times;&radic;250)</b> por separado y recalcular.</div>"
+    },
+    {
+      "id": "vol09-p20",
+      "lm": "LM5",
+      "title": "VaR al 1% y al 16%",
+      "given": "Mismo portfolio diario: E(R<sub>p</sub>) = <b>0.0384%</b>, &sigma;<sub>p</sub> = <b>1.0112%</b>, valor <b>$150.000.000</b>.",
+      "ask": "Calcular el 1% VaR diario en moneda.",
+      "answer": "1% VaR diario = <b>$3.476.550</b> (mayor que el 5% VaR de $2.445.150)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>El z-threshold para el <b>1%</b> es <b>2.33</b> (vs. 1.65 para el 5%)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span><b>Paso 1</b>: 2.33 &times; 0.010112 = <b>0.023561</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span><b>Paso 2</b>: 0.000384 &minus; 0.023561 = <b>&minus;0.023177</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span><b>Paso 3</b>: cambiar el signo &rarr; <b>2.3177%</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span><b>Paso 4</b>: 0.023177 &times; $150.000.000</span></div><div class=\"res\">1% VaR diario = <b>$3.476.550</b> (mayor que el 5% VaR de $2.445.150)</div><div class=\"warn\"><b>Mayor nivel de confianza &rarr; MAYOR VaR.</b> Un \"1% VaR\" <b>no</b> significa un movimiento del 1%: significa que se espera perder <b>al menos</b> ese monto el 1% del tiempo. (El 16% VaR usaría z = <b>1.0</b>.)</div>"
+    },
+    {
+      "id": "vol09-p21",
+      "lm": "LM5",
+      "title": "Incremental VaR (IVaR)",
+      "given": "El 5% VaR diario del portfolio actual (80% SPY / 20% SPLB) es <b>$2.445.150</b>. Si se sube la asignación a SPY al <b>90%</b> (y SPLB al 10%), el 5% VaR diario pasa a ser <b>$2.752.500</b>.",
+      "ask": "Calcular el incremental VaR de ese cambio de posición.",
+      "answer": "IVaR = <b>$307.350</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>IVaR = VaR (después del cambio) &minus; VaR (antes del cambio)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>IVaR = $2.752.500 &minus; $2.445.150</span></div><div class=\"res\">IVaR = <b>$307.350</b></div><div class=\"warn\">El <b>incremental VaR</b> mide el efecto de cambiar el <b>TAMAÑO</b> de una posición. No lo confundas con el <b>marginal VaR</b>, que mide el efecto de un cambio <b>muy pequeño</b> (derivada) y cuyos valores ponderados <b>SUMAN al VaR total</b>. El MVaR <b>no</b> tiene nada que ver con \"margin calls\".</div>"
+    }
+  ],
+  "highlights": [
+    {
+      "rank": 1,
+      "title": "VaR = pérdida MÍNIMA, y no se anualiza con &radic;250",
+      "body": "El VaR es la pérdida <b>mínima</b> esperada un % del tiempo (no la máxima ni la esperada). Y para anualizarlo hay que escalar <b>E(R) &times;250</b> y <b>&sigma; &times;&radic;250</b> <b>por separado</b> — usar &radic;250 sobre el VaR diario asume <b>expected return = 0</b>. z: 5%&rarr;1.65, 1%&rarr;2.33, 16%&rarr;1.0."
+    },
+    {
+      "rank": 2,
+      "title": "cov negativa &rarr; risk premium POSITIVO",
+      "body": "El signo se <b>invierte</b> respecto de la intuición. Un activo que paga bien en los malos tiempos (cov <b>positiva</b> con m) es un <b>hedge</b> &rarr; premium <b>negativo</b> y retorno <b>menor</b> al risk-free. En la misma línea: el risk premium de la <b>inflación es NEGATIVO</b> (sensibilidad positiva &rarr; required return <b>menor</b>)."
+    },
+    {
+      "rank": 3,
+      "title": "Breadth entra como &radic;BR, y el IR con restricciones DECRECE",
+      "body": "Cuadruplicar las decisiones solo <b>duplica</b> el IR. Y mientras el <b>IR sin restricciones es INVARIANTE</b> al nivel de active risk, el <b>IR con restricciones DECRECE</b> al ser más agresivo (los pesos chocan con los límites &rarr; cae el <b>TC</b>)."
+    },
+    {
+      "rank": 4,
+      "title": "Macro vs. fundamental: el orden de estimación está INVERTIDO",
+      "body": "<b>Macro:</b> surprises primero &rarr; sensitivities por regresión; el <b>intercepto SÍ es el expected return</b>. <b>Fundamental:</b> atributos (standardized betas) primero &rarr; factor returns por regresión; el <b>intercepto NO es el expected return</b>."
+    },
+    {
+      "rank": 5,
+      "title": "Dirección del arbitraje del AP en ETFs",
+      "body": "ETF a <b>PREMIUM</b> &rarr; el AP <b>VENDE el ETF y COMPRA el basket</b> (crea). ETF a <b>DISCOUNT</b> &rarr; <b>COMPRA el ETF y VENDE el basket</b> (redime). Y el <b>ETN no es un fondo</b>: es deuda no garantizada del emisor (counterparty risk teórico <b>100%</b>)."
+    },
+    {
+      "rank": 6,
+      "title": "En risk attribution la VARIANZA es aditiva, no el desvío",
+      "body": "<b>Active risk SQUARED</b> = active factor risk + active specific risk. La raíz se toma al final. Y la <b>security selection puede ser NEGATIVA</b> con un active return positivo (el bet de estilo HML aportó ~98%)."
+    },
+    {
+      "rank": 7,
+      "title": "En recesión la curva SE EMPINA",
+      "body": "No se aplana: el central recorta el corto y el largo queda anclado. Se <b>aplana o invierte al FINAL de la expansión</b> (curva invertida = predictor de recesión). Y un &uarr; del GDP growth sobre el <b>equity es AMBIGUO</b> (sube earnings <b>y</b> sube l)."
+    },
+    {
+      "rank": 8,
+      "title": "Point-in-time NO corrige el data snooping",
+      "body": "Corrige <b>look-ahead</b> y <b>survivorship</b> (que es un caso especial del primero), pero no el p-hacking &rarr; para eso, <b>t-stat &gt; 3.0</b> y <b>cross-validation</b>. Recordá: <b>ambas simulaciones usan RNG</b> y la Monte Carlo <b>no es determinística</b>."
+    }
+  ],
+  "tables": [
+    {
+      "id": "vol09-metodos",
+      "title": "Tabla maestra de métodos y modelos",
+      "lms": [
+        "LM1",
+        "LM2",
+        "LM3",
+        "LM4",
+        "LM5",
+        "LM6"
+      ],
+      "html": "<div class=\"sheet\">\n<header>\n<div class=\"kick\">CFA 2026 · Level II · Volumen 9 · Paquete de repaso · Archivo 3</div>\n<h1>Tabla maestra de métodos y modelos</h1>\n<div class=\"sub\">Todas las comparaciones <b>método-vs-método</b> examinables del volumen, en una hoja.</div>\n<div class=\"nota\"><b>Nota:</b> este volumen (Portfolio Management) <b>no tiene contenido de accounting standards</b>, por lo que no hay diferencias IFRS vs. US GAAP examinables. Este archivo reemplaza esa tabla por las comparaciones que sí son recurrentes en el examen.</div>\n</header>\n<!-- 1. VaR -->\n<section>\n<div class=\"sh\"><span class=\"n\">1</span><h2>Los tres métodos de VaR</h2><span class=\"lm\">LM5</span></div>\n<table>\n<thead><tr><th>Dimensión</th><th>Parametric (variance–covariance)</th><th>Historical simulation</th><th>Monte Carlo</th></tr></thead>\n<tbody>\n<tr><th>Cómo estima</th><td>fórmula con E(R), σ y correlaciones</td><td>reprecia el portfolio actual con los cambios históricos reales; ordena; toma el percentil</td><td>el usuario fija la distribución; genera miles de outcomes (~10.000); ordena; toma el percentil</td></tr>\n<tr><th>Distribución</th><td><b>Normal (asumida)</b></td><td><b>La que dictan los datos</b> (ninguna asumida)</td><td><b>Cualquiera</b> (la elige el usuario)</td></tr>\n<tr><th>¿Maneja opciones?</th><td><b>Mal</b> (distribución truncada / no-normal)</td><td><b>Sí</b></td><td><b>Sí</b></td></tr>\n<tr><th>¿Requiere historia?</th><td>No (solo parámetros)</td><td><b>Sí, obligatoria</b></td><td>No (solo supuestos)</td></tr>\n<tr><th>Debilidad clave</th><td>muy sensible a los parámetros (sobre todo covarianzas); subestima colas</td><td>el pasado puede no repetirse</td><td>computacionalmente costoso; no hay estándar de n.º de simulaciones</td></tr>\n<tr><th>Ejemplo currículo<br/>(5% VaR, $150M)</th><td class=\"c\"><b>$2.445.150</b></td><td class=\"c\"><b>$1.622.272</b></td><td class=\"c\"><b>$2.517.702</b></td></tr>\n</tbody>\n</table>\n<div class=\"key\"><span class=\"tag\"> Clave</span>\n<p>Monte Carlo <b>converge al paramétrico</b> si usa la misma distribución y parámetros + muestra suficientemente grande. Los tres discrepan porque son muy sensibles a los inputs. Para <b>CVaR</b>, mejor historical o Monte Carlo (no parametric).</p></div>\n</section>\n<!-- 2. Multifactor models -->\n<section>\n<div class=\"sh\"><span class=\"n\">2</span><h2>Los tres tipos de multifactor model</h2><span class=\"lm\">LM4</span></div>\n<table>\n<thead><tr><th>Dimensión</th><th>Macroeconomic</th><th>Fundamental</th><th>Statistical</th></tr></thead>\n<tbody>\n<tr><th>Qué son los factores</th><td><b>Surprises</b> en variables macro (actual − expected)</td><td><b>Atributos</b> de la empresa/acción (P/E, B/M, size, leverage)</td><td>Portfolios <b>derivados estadísticamente</b> de los retornos</td></tr>\n<tr><th>Orden de estimación</th><td>factor surprises <b>primero</b> → sensitivities por regresión</td><td>sensitivities (atributos) <b>primero</b> → factor returns por regresión</td><td>se extraen de la matriz de retornos</td></tr>\n<tr><th>Intercepto a<sub>i</sub></th><td><b>= expected return</b></td><td><b>NO</b> es el expected return</td><td>—</td></tr>\n<tr><th>Sensibilidades</th><td>betas por regresión</td><td><b>standardized beta</b> = (valor − media)/σ</td><td>pesos de portfolio</td></tr>\n<tr><th>Subtipos</th><td>—</td><td>company fundamental · share-related · macro/industry</td><td><b>factor analysis</b> (covarianzas) · <b>PCA</b> (varianzas)</td></tr>\n<tr><th>Ventaja / límite</th><td>parsimonioso; incorpora views macro</td><td>detallado e interpretable; muy usado en attribution</td><td>supuestos mínimos, pero <b>difícil de interpretar</b></td></tr>\n</tbody>\n</table>\n<div class=\"key\"><span class=\"tag\"> Contra-intuitivo</span>\n<p>El <b>orden de estimación está invertido</b> entre macro y fundamental — es el punto que más intercambia el examen. Y el intercepto <b>solo</b> es el expected return en el <b>macro</b>.</p></div>\n</section>\n<!-- 3. APT vs CAPM -->\n<section>\n<div class=\"sh\"><span class=\"n\">3</span><h2>APT vs. CAPM</h2><span class=\"lm\">LM4</span></div>\n<table>\n<thead><tr><th>Dimensión</th><th>APT</th><th>CAPM</th></tr></thead>\n<tbody>\n<tr><th>N.º de factores</th><td><b>Múltiples</b> (K, no especificado)</td><td><b>Uno</b> (market)</td></tr>\n<tr><th>Identidad de los factores</th><td>la teoría <b>no la especifica</b></td><td>el market portfolio</td></tr>\n<tr><th>Supuestos</th><td>más <b>débiles</b> (no exige market portfolio eficiente)</td><td>más <b>fuertes</b></td></tr>\n<tr><th>Relación</th><td colspan=\"2\">El <b>CAPM es un caso especial</b> de la APT con un solo factor. K debe ser mucho menor que el n.º de activos.</td></tr>\n<tr><th>Las 3 assumptions APT</th><td colspan=\"2\">1) un factor model describe los retornos · 2) se pueden formar portfolios <b>well-diversified</b> · 3) <b>no hay arbitrage opportunities</b><br/><span class=\"eq\">E(R<sub>p</sub>) = R<sub>F</sub> + λ<sub>1</sub>β<sub>p,1</sub> + … + λ<sub>K</sub>β<sub>p,K</sub></span></td></tr>\n</tbody>\n</table>\n</section>\n<!-- 4. Fundamental Law -->\n<section>\n<div class=\"sh\"><span class=\"n\">4</span><h2>Fundamental Law: basic vs. full</h2><span class=\"lm\">LM2</span></div>\n<table>\n<thead><tr><th>Dimensión</th><th>Basic (sin restricciones)</th><th>Full / Expanded (con restricciones)</th></tr></thead>\n<tbody>\n<tr><th>Fórmula</th><td class=\"eq\">E(R<sub>A</sub>)* = IC × √BR × σ<sub>A</sub><br/><b>IR* = IC × √BR</b></td><td class=\"eq\">E(R<sub>A</sub>) = TC × IC × √BR × σ<sub>A</sub><br/><b>IR = TC × IC × √BR</b></td></tr>\n<tr><th>Transfer coefficient</th><td>TC ≈ <b>1</b> (long–short, sin límites)</td><td>TC <b>&lt; 1</b> (típico 0.20–0.90)</td></tr>\n<tr><th>IR vs. agresividad (σ<sub>A</sub>)</th><td><b>INVARIANTE</b> al nivel de active risk</td><td><b>DECRECE</b> al ser más agresivo (los pesos chocan con los límites → cae el TC)</td></tr>\n<tr><th>Active risk óptimo</th><td class=\"eq\">σ<sub>A</sub> = (IR / SR<sub>B</sub>) × σ<sub>B</sub></td><td class=\"eq\">σ<sub>A</sub> = TC × (IR* / SR<sub>B</sub>) × σ<sub>B</sub></td></tr>\n<tr><th>Sharpe resultante</th><td class=\"eq\">SR²<sub>P</sub> = SR²<sub>B</sub> + IR²</td><td class=\"eq\">SR²<sub>P</sub> = SR²<sub>B</sub> + TC² × (IR*)²</td></tr>\n<tr><th>Ejemplo currículo</th><td class=\"c\">IC 0.20 · BR 4 · σ<sub>A</sub> 9% → <b>3.6%</b></td><td class=\"c\">mismo, con TC 0.58 → <b>2.1%</b></td></tr>\n</tbody>\n</table>\n<div class=\"key\"><span class=\"tag\"> Clave</span>\n<p><b>IC</b> = problema de <b>conocimiento</b> (¿predecís bien?). <b>TC</b> = problema de <b>implementación</b> (¿podés actuar en consecuencia?). Con <b>IC negativo</b>, un TC alto solo sirve para <b>destruir valor con más eficiencia</b>.</p></div>\n</section>\n<!-- 5. ETP structures -->\n<section>\n<div class=\"sh\"><span class=\"n\">5</span><h2>Estructuras de ETP: físico vs. sintético vs. ETN</h2><span class=\"lm\">LM3</span></div>\n<table>\n<thead><tr><th>Dimensión</th><th>ETF físico</th><th>ETF sintético (swap-based)</th><th>ETN</th></tr></thead>\n<tbody>\n<tr><th>¿Qué posee?</th><td><b>Los títulos reales</b> (full replication o sampling)</td><td>Colateral + <b>swaps OTC</b> que entregan el retorno del índice</td><td><b>NADA</b> — es <b>deuda no garantizada y no subordinada</b> del banco emisor</td></tr>\n<tr><th>Estructura legal</th><td>Fondo</td><td>Fondo</td><td><b>Título de deuda</b> (no es un fondo)</td></tr>\n<tr><th>Riesgo distintivo</th><td>tracking error por sampling</td><td><b>Settlement risk</b>: las ganancias mark-to-market expuestas al default del counterparty</td><td><b>Counterparty risk teórico 100%</b> (si quiebra el emisor, vale ~$0)</td></tr>\n<tr><th>Cómo se monitorea</th><td>—</td><td>settlement frecuente (diario/semanal) + sobre-colateral en T-bills</td><td><b>CDS del emisor</b> (CDS &gt;5% = alarma). Lehman 2008: 3 ETNs</td></tr>\n<tr><th>Creation/redemption</th><td><b>In-kind</b> (no gravable → tax efficiency)</td><td>suele ser en <b>cash</b></td><td>el emisor puede <b>frenar creations</b> → se rompe el arbitraje → premium grande</td></tr>\n</tbody>\n</table>\n<div class=\"key\"><span class=\"tag\"> Contra-intuitivo</span>\n<p><b>Leveraged / inverse:</b> el <b>reset diario</b> + el compounding hacen que el retorno multi-día <b>NO</b> sea el múltiplo naive. Un −2× con el índice en −1% a 3 días entrega <b>−4%</b>, no +2%. <b>No son buy-and-hold.</b></p></div>\n</section>\n<!-- 6. Backtesting techniques -->\n<section>\n<div class=\"sh\"><span class=\"n\">6</span><h2>Las cuatro técnicas de evaluación</h2><span class=\"lm\">LM6</span></div>\n<table>\n<thead><tr><th>Técnica</th><th>Naturaleza</th><th>Fuente de los datos</th><th>Pregunta que responde</th></tr></thead>\n<tbody>\n<tr><th>Backtesting<br/>(rolling window)</th><td><b>Determinístico</b>, cronológico</td><td>historia real, <b>en orden</b></td><td>¿cómo habría rendido en el pasado?</td></tr>\n<tr><th>Historical scenario analysis</th><td>Determinístico, por régimen</td><td>sub-períodos históricos discretos (recesión, alta vol)</td><td>¿cómo rinde en cada régimen estructural?</td></tr>\n<tr><th>Historical simulation</th><td><b>Aleatorio</b> (bootstrap)</td><td>historia real, <b>sin orden</b>, con reemplazo</td><td>¿qué rango de resultados da la historia re-barajada?</td></tr>\n<tr><th>Monte Carlo simulation</th><td><b>Aleatorio</b></td><td><b>distribución asignada</b> y calibrada</td><td>¿qué resultados da una distribución especificada (con fat tails)?</td></tr>\n<tr><th>Sensitivity analysis</th><td>Variación de un supuesto</td><td>re-corre el MC con <b>otra distribución</b></td><td>¿el resultado es robusto al cambiar el supuesto?</td></tr>\n</tbody>\n</table>\n<div class=\"key\"><span class=\"tag\"> Distinción de examen</span>\n<p>Dividir por <b>recesión/volatilidad</b> = <b>SCENARIO</b>. Cambiar la <b>distribución</b> (multivariate normal → <b>multivariate skewed Student's t</b>) = <b>SENSITIVITY</b>. Cambiar el <b>universo</b> (Nikkei 225 → TOPIX 1000) = <b>NINGUNA</b> (no hay régimen estructural). <b>Ambas simulaciones usan random number generator.</b></p></div>\n</section>\n<!-- 7. Scenario types + measures -->\n<section>\n<div class=\"sh\"><span class=\"n\">7</span><h2>Medidas de riesgo: VaR vs. sensibilidad vs. escenario</h2><span class=\"lm\">LM5</span></div>\n<table>\n<thead><tr><th>Dimensión</th><th>VaR</th><th>Sensitivity measures</th><th>Scenario measures</th></tr></thead>\n<tbody>\n<tr><th>¿Da probabilidad?</th><td><b>SÍ</b> (es su rasgo distintivo)</td><td><b>NO</b> — dado un movimiento, da la respuesta</td><td><b>NO</b></td></tr>\n<tr><th>¿Asume distribución?</th><td>Sí (parametric) / implícita</td><td>No aplica</td><td><b>NO</b> — y eso es una <b>VENTAJA</b>, no una limitación</td></tr>\n<tr><th>N.º de factores</th><td>Todos, agregados</td><td><b>Uno</b> por vez</td><td><b>Múltiples a la vez</b>, con movimientos grandes</td></tr>\n<tr><th>Medidas</th><td>VaR · CVaR · IVaR · MVaR · relative VaR</td><td>beta · duration/convexity · delta/gamma/vega</td><td>historical (incontrovertible) vs. hypothetical (stressea correlaciones)</td></tr>\n<tr><th>Con opciones</th><td>parametric falla; usar historical/MC</td><td>delta + gamma + vega</td><td><b>Repreciar completamente</b> (no usar delta/gamma: los movimientos son demasiado grandes)</td></tr>\n</tbody>\n</table>\n<div class=\"key\"><span class=\"tag\"> Clave</span>\n<p>Se usan <b>en combinación</b>: ninguna sola resuelve todo. Escenario y stress son el <b>filtro final</b>, después de position / exposure / VaR limits — nunca el primero.</p></div>\n</section>\n<!-- TOP 3 -->\n<div class=\"top3\">\n<div class=\"bar\"> Las 3 comparaciones más recurrentes del volumen</div>\n<div class=\"bd\">\n<div class=\"t3\"><div class=\"r\">1</div><div class=\"tx\"><b>Macro vs. fundamental: el ORDEN DE ESTIMACIÓN está invertido.</b> Macro: surprises primero → sensitivities por regresión, y el <b>intercepto SÍ es el expected return</b>. Fundamental: atributos (standardized betas) primero → factor returns por regresión, y el <b>intercepto NO es el expected return</b>. Es la confusión que más explota el examen en LM4.</div></div>\n<div class=\"t3\"><div class=\"r\">2</div><div class=\"tx\"><b>Los tres métodos de VaR: qué distribución asume cada uno y quién maneja opciones.</b> Parametric = <b>normal asumida</b>, falla con opciones. Historical = <b>la distribución de los datos</b> (ninguna asumida), maneja opciones. Monte Carlo = <b>la que elige el usuario</b>, maneja opciones. Además: <b>no se anualiza el VaR diario con √250</b> (hay que anualizar E(R) y σ por separado).</div></div>\n<div class=\"t3\"><div class=\"r\">3</div><div class=\"tx\"><b>Fundamental Law basic vs. full: el efecto de las restricciones sobre el IR.</b> Sin restricciones el <b>IR es invariante</b> al nivel de active risk; con restricciones el <b>IR DECRECE</b> al ser más agresivo, porque los pesos óptimos chocan con los límites y <b>cae el TC</b>. Y el breadth entra como <b>√BR</b>, no BR.</div></div>\n</div>\n</div>\n<div class=\"foot\">CFA 2026 Level II · Volumen 9 — <em>Portfolio Management</em> · Archivo 3 del paquete de repaso. Reemplaza la tabla IFRS vs. US GAAP (no aplicable a este volumen). Cifras ancladas al texto oficial. Print-friendly B/N.</div>\n</div>"
+    },
+    {
+      "id": "vol09-signos",
+      "title": "Hoja de signos y direcciones",
+      "lms": [
+        "LM1",
+        "LM2",
+        "LM3",
+        "LM4",
+        "LM5",
+        "LM6"
+      ],
+      "html": "<div class=\"sheet\">\n<header>\n<div class=\"kick\">CFA 2026 · Level II · Volumen 9 · Paquete de repaso · Archivo 4</div>\n<h1>Hoja de signos y direcciones</h1>\n<div class=\"sub\">Dónde caza el examen: qué <b>sube</b>, <b>baja</b> o <b>queda igual</b> ante cada cambio. Los efectos <b>contra-intuitivos</b> están marcados.</div>\n<div class=\"lg\">\n<b>Leyenda:</b> <span class=\"up\">↑ SUBE</span>  ·  <span class=\"dn\">↓ BAJA</span>  ·  <span class=\"eq\">= IGUAL</span>  ·  <span class=\"amb\">? AMBIGUO</span>  ·  <span class=\"ci\">CI</span> = efecto <b>contra-intuitivo</b> (fila marcada con barra gruesa a la izquierda).<br/>\n<b>Nota:</b> este volumen no tiene contenido de accounting, por lo que los ejes no son assets/liabilities/equity/NI sino las <b>variables de riesgo y retorno</b> del currículo de Portfolio Management.\n    </div>\n</header>\n<!-- 1. TASA REAL Y PREMIUMS -->\n<section>\n<div class=\"sh\"><span class=\"n\">1</span><h2>Tasa real (l) y risk premiums</h2><span class=\"lm\">LM1</span></div>\n<table>\n<thead><tr><th style=\"width:30%\">Si esto SUBE …</th><th class=\"c\">→ l (tasa real)</th><th>Comentario / mecanismo</th></tr></thead>\n<tbody>\n<tr><th>Crecimiento tendencial del GDP</th><td class=\"c\"><span class=\"up\">↑</span></td><td>Más bienes futuros → menos ganas de ahorrar → sube la tasa para inducir el ahorro.</td></tr>\n<tr class=\"ci-row\"><th>Volatilidad del crecimiento del GDP <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"up\">↑</span></td><td><b>Contra-intuitivo:</b> uno esperaría ahorro precautorio y tasa menor. El currículo dice <b>positiva</b>: el inversor risk-averse <b>exige más</b> retorno real.</td></tr>\n<tr><th>m (inter-temporal rate of substitution)</th><td class=\"c\"><span class=\"dn\">↓</span></td><td>Relación <b>inversa</b> (Eq. 4): más voluntad de diferir consumo → menor tasa real.</td></tr>\n</tbody>\n</table>\n<table>\n<thead><tr><th style=\"width:30%\">Covarianza cov(P, m)</th><th class=\"c\">→ Risk premium</th><th class=\"c\">→ Retorno exigido</th><th>Interpretación</th></tr></thead>\n<tbody>\n<tr class=\"ci-row\"><th>cov <b>NEGATIVA</b> <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"up\">POSITIVO</span></td><td class=\"c\"><span class=\"up\">&gt; risk-free</span></td><td>El activo paga poco en los malos tiempos → <b>mal hedge de consumo</b> → se exige premio.</td></tr>\n<tr class=\"ci-row\"><th>cov <b>POSITIVA</b> <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"dn\">NEGATIVO</span></td><td class=\"c\"><span class=\"dn\">&lt; risk-free</span></td><td>Paga bien en los malos tiempos → <b>es un hedge</b> → se acepta <b>menos</b> retorno. El signo se invierte respecto de la intuición.</td></tr>\n</tbody>\n</table>\n</section>\n<!-- 2. CICLO -->\n<section>\n<div class=\"sh\"><span class=\"n\">2</span><h2>Ciclo económico: qué hace cada variable</h2><span class=\"lm\">LM1</span></div>\n<table>\n<thead><tr><th style=\"width:26%\">Variable</th><th class=\"c\">En RECESIÓN</th><th class=\"c\">En EXPANSIÓN</th><th>Nota</th></tr></thead>\n<tbody>\n<tr class=\"ci-row\"><th>Pendiente de la curva <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"up\">SE EMPINA</span></td><td class=\"c\"><span class=\"dn\">se aplana / invierte</span></td><td><b>Contra-intuitivo:</b> en recesión <b>se EMPINA</b> (no se aplana): el central recorta el corto y el largo queda anclado. Se <b>aplana o invierte al FINAL de la expansión</b>. Curva invertida = predictor de recesión.</td></tr>\n<tr><th>Credit spread / γ</th><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"dn\">↓</span></td><td><b>COUNTER-cíclico.</b> Al estrecharse, los <b>peor calificados y los cíclicos mejoran más</b>; al ampliarse, los de <b>buena calidad outperform</b>.</td></tr>\n<tr><th>Recovery rates</th><td class=\"c\"><span class=\"dn\">↓</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td><b>PRO-cíclicas.</b> Ranking: senior secured &gt; senior unsecured &gt; subordinated.</td></tr>\n<tr><th>Loss rates</th><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"dn\">↓</span></td><td><b>COUNTER-cíclicas.</b> E[loss] = PD × (1 − RR) — <b>no</b> PD × RR.</td></tr>\n<tr><th>Equity risk premium λ</th><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"dn\">↓</span></td><td>Sube en los malos tiempos (mal hedge de consumo). Siempre <b>λ &gt; γ</b> (λ = γ + κ).</td></tr>\n<tr><th>Earnings</th><td class=\"c\"><span class=\"dn\">↓</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td><b>PRO-cíclicos</b> (US 2009: ~−60%). Pueden <b>liderar</b> la salida de la recesión (rebote sobre base baja).</td></tr>\n<tr><th>P/E</th><td class=\"c\"><span class=\"dn\">↓</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td><b>PRO-cíclico.</b></td></tr>\n<tr><th>CRE: ingreso por renta</th><td class=\"c\"><span class=\"eq\">= estable</span></td><td class=\"c\"><span class=\"eq\">= estable</span></td><td>~6.5% nominal/año, casi <b>inmune al ciclo</b>.</td></tr>\n<tr class=\"ci-row\"><th>CRE: capital value <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"dn\">↓↓</span></td><td class=\"c\"><span class=\"up\">↑↑</span></td><td><b>Muy PRO-cíclico</b> (Irlanda 2008-09: −55.5%). La renta engaña: el CRE es <b>mal hedge de consumo</b> por el capital value.</td></tr>\n</tbody>\n</table>\n<div class=\"warn\"><span class=\"tag\"> El ambiguo clásico</span>\n<p><b>↑ Real GDP growth → equity market = <span class=\"amb\">? AMBIGUO</span>.</b> Sube el <b>numerador</b> (earnings) <b>y</b> sube el <b>denominador</b> (la tasa real l). No se puede saber cuál domina. Nunca contestes \"sube\".</p></div>\n</section>\n<!-- 3. FUNDAMENTAL LAW -->\n<section>\n<div class=\"sh\"><span class=\"n\">3</span><h2>Fundamental Law: qué mueve el IR</h2><span class=\"lm\">LM2</span></div>\n<table>\n<thead><tr><th style=\"width:32%\">Si esto SUBE …</th><th class=\"c\">→ IR</th><th class=\"c\">→ E(R<sub>A</sub>)</th><th>Nota</th></tr></thead>\n<tbody>\n<tr><th>IC (skill)</th><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td>Lineal. Si <b>IC &lt; 0</b> → IR negativo: destruís valor (y un TC alto lo hace <b>más eficientemente</b>).</td></tr>\n<tr><th>Breadth (BR)</th><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td>Entra como <b>√BR</b>, no BR. Cuadruplicar las decisiones solo <b>duplica</b> el IR.</td></tr>\n<tr><th>TC (implementación)</th><td class=\"c\"><span class=\"up\">↑</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td>TC = 0 → active risk óptimo = 0 → <b>invertir en el benchmark</b>.</td></tr>\n<tr class=\"ci-row\"><th>σ<sub>A</sub> (agresividad) — SIN restricciones <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"eq\">= INVARIANTE</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td><b>Contra-intuitivo:</b> escalar todos los active weights por c sube R<sub>A</sub> y σ<sub>A</sub> en la <b>misma proporción</b> → el IR <b>no cambia</b>.</td></tr>\n<tr class=\"ci-row\"><th>σ<sub>A</sub> (agresividad) — CON restricciones <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"dn\">↓ DECRECE</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td><b>Concepto central del LOS 4:</b> al subir σ<sub>A</sub> los pesos óptimos crecen, <b>chocan más con los límites</b> y <b>cae el TC</b> → baja el IR.</td></tr>\n</tbody>\n</table>\n<table>\n<thead><tr><th style=\"width:32%\">Acción</th><th class=\"c\">→ Sharpe (SR)</th><th class=\"c\">→ Information ratio (IR)</th><th>Nota</th></tr></thead>\n<tbody>\n<tr class=\"ci-row\"><th>Agregar cash / leverage <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"eq\">= NO cambia</span></td><td class=\"c\"><span class=\"dn\">↓ SÍ cambia</span></td><td>SR: two-fund separation → invariante. IR: el cash lo <b>encoge</b>. <b>Fácil de invertir en el examen.</b></td></tr>\n<tr class=\"ci-row\"><th>Escalar los active weights ×c <span class=\"ci\">CI</span></th><td class=\"c\">n/a</td><td class=\"c\"><span class=\"eq\">= NO cambia</span></td><td>Justo al revés del caso anterior. Ojo con confundirlos.</td></tr>\n</tbody>\n</table>\n<div class=\"warn\"><span class=\"tag\"> Signo del active return</span>\n<p><b>Underponderar un PERDEDOR AGREGA valor.</b> En R<sub>A</sub> = ΣΔw<sub>i</sub>R<sub>Ai</sub>, un Δw <b>negativo</b> sobre un R<sub>Ai</sub> <b>negativo</b> da contribución <b>positiva</b>. (Ej. currículo: −0.10 × (2.0 − 9.2) = <b>+0.7%</b>.)</p></div>\n</section>\n<!-- 4. MULTIFACTOR -->\n<section>\n<div class=\"sh\"><span class=\"n\">4</span><h2>Multifactor: signos de los premiums y de la attribution</h2><span class=\"lm\">LM4</span></div>\n<table>\n<thead><tr><th style=\"width:30%\">Factor / situación</th><th class=\"c\">Risk premium</th><th class=\"c\">→ Required return si la sensibilidad es POSITIVA</th><th>Nota</th></tr></thead>\n<tbody>\n<tr><th>GDP growth</th><td class=\"c\"><span class=\"up\">POSITIVO</span></td><td class=\"c\"><span class=\"up\">↑</span></td><td>Lo esperable.</td></tr>\n<tr class=\"ci-row\"><th>Inflación <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"dn\">NEGATIVO</span></td><td class=\"c\"><span class=\"dn\">↓ MENOR</span></td><td><b>Contra-intuitivo:</b> un activo que <b>sube</b> con la inflación inesperada se demanda como <b>hedge</b> → se acepta <b>menor</b> retorno exigido.</td></tr>\n</tbody>\n</table>\n<table>\n<thead><tr><th style=\"width:30%\">Concepto</th><th>Regla de signo / dirección</th></tr></thead>\n<tbody>\n<tr><th>Factores macro</th><td>Son <b>SURPRISES</b> (actual − expected), <b>no niveles</b>. Lo predicho ya está en los precios → no mueve nada.</td></tr>\n<tr class=\"ci-row\"><th>Return attribution <span class=\"ci\">CI</span></th><td><b>La security selection puede ser NEGATIVA y el active return positivo.</b> En el ejemplo del currículo el bet en <b>HML aportó +2.04% (~98%)</b> del active return de 2.07%, mientras la <b>security selection fue −0.05%</b>: el \"stock picker\" ganó por una <b>apuesta de estilo</b>, no eligiendo acciones.</td></tr>\n<tr class=\"ci-row\"><th>Risk attribution <span class=\"ci\">CI</span></th><td><b>La VARIANZA es aditiva, NO el desvío.</b><br/>Active risk <b>squared</b> = active factor risk + active specific risk. La raíz se toma <b>al final</b>.</td></tr>\n<tr><th>Active specific risk</th><td>= Σ(w<sub>i</sub><sup>a</sup>)<sup>2</sup> × σ<sup>2</sup><sub>εi</sub> — active weights <b>al cuadrado</b> por la <b>varianza residual</b>.</td></tr>\n</tbody>\n</table>\n</section>\n<!-- 5. VaR -->\n<section>\n<div class=\"sh\"><span class=\"n\">5</span><h2>VaR y medidas de riesgo: qué lo mueve</h2><span class=\"lm\">LM5</span></div>\n<table>\n<thead><tr><th style=\"width:32%\">Si esto SUBE …</th><th class=\"c\">→ VaR</th><th>Nota</th></tr></thead>\n<tbody>\n<tr><th>Nivel de confianza (95% → 99%)</th><td class=\"c\"><span class=\"up\">↑</span></td><td>z pasa de <b>1.65</b> a <b>2.33</b>. Mayor confianza → <b>mayor</b> VaR. (16% VaR usa z = <b>1.0</b>.)</td></tr>\n<tr><th>Horizonte temporal</th><td class=\"c\"><span class=\"up\">↑</span></td><td>Pero <b>OJO</b> con cómo se escala (ver aviso abajo).</td></tr>\n<tr><th>Volatilidad σ</th><td class=\"c\"><span class=\"up\">↑</span></td><td>Directo.</td></tr>\n<tr><th>Expected return E(R)</th><td class=\"c\"><span class=\"dn\">↓</span></td><td>Se <b>resta</b>: VaR = −[E(R) − zσ]. Un E(R) mayor <b>reduce</b> el VaR.</td></tr>\n<tr><th>Correlaciones entre activos</th><td class=\"c\"><span class=\"up\">↑</span></td><td><b>Correlation risk:</b> en stress las correlaciones <b>tienden a 1</b> → se <b>pierde la diversificación</b> justo cuando más se la necesita.</td></tr>\n</tbody>\n</table>\n<div class=\"warn\"><span class=\"tag\"> El error de escalado más caro</span>\n<p><b>NO se anualiza el VaR diario multiplicando por √250.</b> Hay que anualizar <b>E(R) (×250)</b> y <b>σ (×√250)</b> <b>por separado</b> y recién entonces recalcular. Usar √250 sobre el VaR diario equivale a <b>asumir expected return = 0</b>. (Ejemplo: el 5% VaR diario de $2.445.150 → el anual correcto es <b>$25.171.500</b>, no $2.445.150 × √250.)</p></div>\n<table>\n<thead><tr><th style=\"width:32%\">Concepto</th><th>Dirección / regla</th></tr></thead>\n<tbody>\n<tr class=\"ci-row\"><th>Qué mide el VaR <span class=\"ci\">CI</span></th><td>Es la pérdida <b>MÍNIMA</b> esperada un % del tiempo — <b>NO la máxima ni la esperada</b>. Las pérdidas <b>pueden y van a exceder</b> el VaR. No es el peor caso.</td></tr>\n<tr><th>Delta (call / put)</th><td>Call: <b>0 a +1</b>. Put: <b>0 a −1</b>. Delta y duration = <b>1er orden</b>; gamma y convexity = <b>2do orden</b>.</td></tr>\n<tr class=\"ci-row\"><th>Gamma <span class=\"ci\">CI</span></th><td><b>Máximo cuando la opción está at-the-money y CERCA del vencimiento</b> (máxima incertidumbre sobre si terminará in o out of the money). No es máximo cuando falta mucho.</td></tr>\n<tr class=\"ci-row\"><th>Escenarios con opciones <span class=\"ci\">CI</span></th><td><b>Hay que REPRECIAR completamente</b> — no usar delta/gamma. Los movimientos del escenario son demasiado grandes para una aproximación de 2do orden.</td></tr>\n<tr class=\"ci-row\"><th>Escenario: \"no asume distribución\" <span class=\"ci\">CI</span></th><td>Eso es una <b>VENTAJA</b>, no una limitación. Y las medidas de sensibilidad y de escenario <b>NO dan probabilidad</b>; solo el <b>VaR</b> la da.</td></tr>\n<tr><th>Risk budgeting vs. capital allocation</th><td>Risk budgeting mira <b>~1σ</b>. Capital allocation (economic capital) mira la <b>cola a 99–99.99%</b>, 1 año.</td></tr>\n<tr><th>Marginal VaR</th><td>Los MVaR ponderados <b>SUMAN al VaR total</b>. Con VaR simple hay <b>sub-utilización</b> del budget (por diversificación) → hace falta <b>over-allocation</b>.</td></tr>\n</tbody>\n</table>\n</section>\n<!-- 6. ETFs -->\n<section>\n<div class=\"sh\"><span class=\"n\">6</span><h2>ETFs: direcciones del arbitraje y de los costos</h2><span class=\"lm\">LM3</span></div>\n<table>\n<thead><tr><th style=\"width:22%\">Situación</th><th class=\"c\">Acción del AP</th><th class=\"c\">→ Shares</th><th class=\"c\">→ Precio del ETF</th></tr></thead>\n<tbody>\n<tr><th>ETF a <b>PREMIUM</b><br/>(price &gt; NAV)</th><td class=\"c\"><b>VENDE</b> el ETF (caro)<br/><b>COMPRA</b> el basket</td><td class=\"c\"><span class=\"up\">CREA</span></td><td class=\"c\"><span class=\"dn\">↓ baja</span></td></tr>\n<tr><th>ETF a <b>DISCOUNT</b><br/>(price &lt; NAV)</th><td class=\"c\"><b>COMPRA</b> el ETF (barato)<br/><b>VENDE</b> el basket</td><td class=\"c\"><span class=\"dn\">REDIME</span></td><td class=\"c\"><span class=\"up\">↑ sube</span></td></tr>\n</tbody>\n</table>\n<table>\n<thead><tr><th style=\"width:32%\">Concepto</th><th>Dirección / regla</th></tr></thead>\n<tbody>\n<tr class=\"ci-row\"><th>Securities lending y dividend recapture <span class=\"ci\">CI</span></th><td>Son <b>costos NEGATIVOS</b>: <b>MEJORAN</b> el retorno del ETF vs. su índice (asset manager operations).</td></tr>\n<tr class=\"ci-row\"><th>Bid–ask spread del ETF <span class=\"ci\">CI</span></th><td>Lo manda la <b>liquidez del SUBYACENTE</b>, no solo el volumen del ETF. Un ETF muy líquido (SPY) puede tener un spread <b>MÁS AJUSTADO que sus propios subyacentes</b>.</td></tr>\n<tr class=\"ci-row\"><th>Premium/discount en ETFs de bonos o acciones extranjeras <span class=\"ci\">CI</span></th><td><b>NO es mispricing</b> → es <b>price discovery</b>: el NAV está <b>stale</b> (subyacentes cerrados / sin cotizar). El precio del ETF es la mejor estimación.</td></tr>\n<tr><th>Horizonte de tenencia</th><td><b>CORTO</b> → dominan los <b>trading costs</b> (elegir por liquidez/spread). <b>LARGO</b> → domina el <b>management fee</b>.<br/>Round-trip = (comisión × 2) + (½ × spread × 2).</td></tr>\n<tr class=\"ci-row\"><th>Leveraged / inverse ETF <span class=\"ci\">CI</span></th><td><b>El retorno multi-día NO es el múltiplo naive.</b> Por el <b>reset diario</b> + compounding: un <b>−2×</b> con el índice a <b>−1%</b> en 3 días entrega <b>−4%</b> (no +2%). <b>No son buy-and-hold.</b></td></tr>\n<tr><th>Capital gains de ETFs</th><td><b>Bajas, NO nulas.</b> Por el <b>bajo turnover</b> (index-based) + la <b>redención in-kind</b> (no gravable). El rebalanceo del índice igual realiza ganancias.</td></tr>\n</tbody>\n</table>\n</section>\n<!-- 7. BACKTESTING -->\n<section>\n<div class=\"sh\"><span class=\"n\">7</span><h2>Backtesting: dirección de los sesgos</h2><span class=\"lm\">LM6</span></div>\n<table>\n<thead><tr><th style=\"width:26%\">Sesgo</th><th class=\"c\">→ Efecto sobre los resultados</th><th>Nota</th></tr></thead>\n<tbody>\n<tr><th>Look-ahead bias</th><td class=\"c\"><span class=\"up\">↑ INFLA</span></td><td>Resultados <b>demasiado optimistas</b>. Infló la estrategia US de value <b>~100%</b>. Se corrige con <b>point-in-time data</b>.</td></tr>\n<tr class=\"ci-row\"><th>Survivorship bias <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"amb\">? PUEDE INVERTIR LA CONCLUSIÓN</span></td><td>No solo infla: puede <b>dar vuelta el resultado</b>. Con solo survivors, el <b>low-vol anomaly se invierte</b> (los high-vol \"ganan\"). Es un <b>CASO ESPECIAL de look-ahead</b>.</td></tr>\n<tr class=\"ci-row\"><th>Data snooping <span class=\"ci\">CI</span></th><td class=\"c\"><span class=\"up\">↑ false positives</span></td><td><b>El point-in-time data NO lo corrige.</b> Se mitiga con <b>t-stat &gt; 3.0</b> y <b>cross-validation</b>.</td></tr>\n<tr><th>Mayor rebalancing frequency</th><td class=\"c\"><span class=\"up\">↑ transaction costs</span></td><td>Muchas anomalías <b>desaparecen</b> al incluir los costos.</td></tr>\n</tbody>\n</table>\n</section>\n<!-- TOP CONTRA-INTUITIVOS -->\n<div class=\"ciblock\">\n<div class=\"bar\"> Los 8 efectos contra-intuitivos que más cazan</div>\n<div class=\"bd\">\n<div class=\"ci1\"><div class=\"r\">1</div><div class=\"tx\"><b>cov(P, m) NEGATIVA → risk premium POSITIVO.</b> El signo se invierte. Un activo que paga bien en malos tiempos (cov positiva) es un hedge → premium <b>negativo</b> y retorno <b>menor</b> al risk-free.</div></div>\n<div class=\"ci1\"><div class=\"r\">2</div><div class=\"tx\"><b>La tasa real l SUBE con la VOLATILIDAD del GDP.</b> No baja por ahorro precautorio: el inversor risk-averse exige más.</div></div>\n<div class=\"ci1\"><div class=\"r\">3</div><div class=\"tx\"><b>En recesión la curva SE EMPINA</b> (no se aplana). Se aplana/invierte al <b>final de la expansión</b>.</div></div>\n<div class=\"ci1\"><div class=\"r\">4</div><div class=\"tx\"><b>El risk premium de la INFLACIÓN es NEGATIVO.</b> Sensibilidad positiva a la inflación → required return <b>MENOR</b> (se demanda como hedge).</div></div>\n<div class=\"ci1\"><div class=\"r\">5</div><div class=\"tx\"><b>El IR con restricciones DECRECE al ser más agresivo</b> (cae el TC), mientras que sin restricciones es <b>invariante</b>. Y el cash <b>no</b> afecta el SR pero <b>sí</b> el IR.</div></div>\n<div class=\"ci1\"><div class=\"r\">6</div><div class=\"tx\"><b>La security selection puede ser NEGATIVA con active return positivo.</b> HML aportó el 98% del retorno del \"stock picker\". Y en risk attribution es la <b>VARIANZA</b> la que suma, no el desvío.</div></div>\n<div class=\"ci1\"><div class=\"r\">7</div><div class=\"tx\"><b>VaR = pérdida MÍNIMA, no máxima.</b> Y <b>no se anualiza con √250</b>: hay que anualizar E(R) y σ por separado. El √250 asume E(R) = 0.</div></div>\n<div class=\"ci1\"><div class=\"r\">8</div><div class=\"tx\"><b>Leveraged/inverse: −2× con índice a −1% da −4% en 3 días</b> (no +2%), por el reset diario. Y el <b>survivorship bias puede INVERTIR</b> la conclusión (low-vol anomaly), no solo inflarla.</div></div>\n</div>\n</div>\n<div class=\"foot\">CFA 2026 Level II · Volumen 9 — <em>Portfolio Management</em> · Archivo 4 del paquete de repaso. Ejes adaptados al contenido del volumen (no hay accounting). Cifras ancladas al texto oficial. Print-friendly B/N.</div>\n</div>"
+    }
+  ]
+}

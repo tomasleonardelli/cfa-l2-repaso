@@ -1,0 +1,812 @@
+{
+  "id": "vol07",
+  "order": 7,
+  "title": "Derivatives",
+  "lms": [
+    {
+      "id": "LM1",
+      "title": "Pricing and Valuation of Forward Commitments"
+    },
+    {
+      "id": "LM2",
+      "title": "Valuation of Contingent Claims"
+    }
+  ],
+  "cardTypes": {
+    "concepto": "Concepto",
+    "formula": "Fórmula",
+    "clasificacion": "Clasificación",
+    "proceso": "Proceso",
+    "metodo": "Método vs método"
+  },
+  "flashcards": [
+    {
+      "id": "vol07-c001",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué dice la <b>law of one price</b>?",
+      "a": "Dos inversiones con los mismos cash flows futuros, pase lo que pase, deben tener el <b>mismo precio hoy</b>. Base del no-arbitraje junto con value additivity."
+    },
+    {
+      "id": "vol07-c002",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Las dos reglas del arbitrajista",
+      "a": "<b>#1</b> no usar dinero propio (pedir/prestar). <b>#2</b> no tomar riesgo de precio (offsetear toda exposición)."
+    },
+    {
+      "id": "vol07-c003",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Propiedad de <b>convergencia</b> en expiración",
+      "a": "F<sub>T</sub> = f<sub>T</sub> = S<sub>T</sub>. Para futuros, el <b>basis</b> (S &minus; f) &rarr; 0 al acercarse el vencimiento."
+    },
+    {
+      "id": "vol07-c004",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Valor: ¿en qué difiere un futuro de un forward?",
+      "a": "El <b>futuro resetea su valor a 0</b> con el mark-to-market diario; el <b>forward acumula</b> (o pierde) valor entre settlements."
+    },
+    {
+      "id": "vol07-c005",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Carry benefits vs carry costs: ¿cuál suma y cuál resta en F<sub>0</sub>?",
+      "a": "Costs <b>suman</b> (financiamiento, storage, insurance); benefits <b>restan</b> (dividendos, cupones, interés extranjero). <b>Contra-intuitivo.</b>"
+    },
+    {
+      "id": "vol07-c006",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué significa <b>advanced set, advanced settled</b>?",
+      "a": "La tasa se fija en h y el pago también se hace en h &rarr; el payoff <b>se descuenta</b>. Es lo típico de los FRAs; swaps y rate options son settled in arrears."
+    },
+    {
+      "id": "vol07-c007",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Quién es el <b>long</b> de un FRA y cuándo gana?",
+      "a": "Fixed-rate payer = floating-rate receiver. <b>Gana si SUBEN las tasas.</b> El short (recibe-fijo) gana si bajan."
+    },
+    {
+      "id": "vol07-c008",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "<b>Conversion factor</b> y cheapest-to-deliver",
+      "a": "CF = precio decimal si el bono rindiera <b>6% YTM</b>; iguala los deliverables. El <b>CTD</b> es el más barato de comprar y entregar."
+    },
+    {
+      "id": "vol07-c009",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Forward price genérico (sin cash flows)",
+      "a": "<span class=\"eq\">F<sub>0</sub> = S<sub>0</sub>(1+r)<sup>T</sup></span> (anual) &nbsp;·&nbsp; <span class=\"eq\">F<sub>0</sub> = S<sub>0</sub> e<sup>r<sub>c</sub>T</sup></span> (continuo)."
+    },
+    {
+      "id": "vol07-c010",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Forward price con carry (discreto)",
+      "a": "<span class=\"eq\">F<sub>0</sub> = FV[S<sub>0</sub> + CC<sub>0</sub> &minus; CB<sub>0</sub>]</span>"
+    },
+    {
+      "id": "vol07-c011",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Forward price con carry (continuo)",
+      "a": "<span class=\"eq\">F<sub>0</sub> = S<sub>0</sub> e<sup>(r<sub>c</sub>+CC&minus;CB)T</sup></span>"
+    },
+    {
+      "id": "vol07-c012",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Valor de un forward long antes del vencimiento (t)",
+      "a": "<span class=\"eq\">V<sub>t</sub> = PV(F<sub>t</sub> &minus; F<sub>0</sub>) = S<sub>t</sub> &minus; PV(F<sub>0</sub>)</span>"
+    },
+    {
+      "id": "vol07-c013",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Valor de un forward en expiración (T)",
+      "a": "Long: <span class=\"eq\">V<sub>T</sub> = S<sub>T</sub> &minus; F<sub>0</sub></span> · Short: <span class=\"eq\">F<sub>0</sub> &minus; S<sub>T</sub></span>"
+    },
+    {
+      "id": "vol07-c014",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Valor intradía de un futuro (antes del MTM)",
+      "a": "<span class=\"eq\">v<sub>t</sub> = N<sub>f</sub>(f<sub>t</sub> &minus; f<sub>t&minus;1</sub>)</span>. Tras el mark-to-market diario, <b>v<sub>t</sub> = 0</b>."
+    },
+    {
+      "id": "vol07-c015",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Tasa fija de un FRA (FRA<sub>0</sub>)",
+      "a": "<span class=\"eq\">FRA<sub>0</sub> = &#123;[1+L<sub>T</sub>t<sub>T</sub>]/[1+L<sub>h</sub>t<sub>h</sub>] &minus; 1&#125; / t<sub>m</sub></span>"
+    },
+    {
+      "id": "vol07-c016",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Settlement de un FRA en h (long / short)",
+      "a": "Long: <span class=\"eq\">NA·[L<sub>m</sub>&minus;FRA<sub>0</sub>]t<sub>m</sub> / (1+D<sub>m</sub>t<sub>m</sub>)</span> · Short: numerador [FRA<sub>0</sub>&minus;L<sub>m</sub>]."
+    },
+    {
+      "id": "vol07-c017",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Valor de un FRA long en Time g",
+      "a": "<span class=\"eq\">V<sub>g</sub> = NA·[FRA<sub>g</sub>&minus;FRA<sub>0</sub>]t<sub>m</sub> / (1+D<sub>(T&minus;g)</sub>t<sub>(T&minus;g)</sub>)</span>"
+    },
+    {
+      "id": "vol07-c018",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Quoted futures price de un bono (Q<sub>0</sub>)",
+      "a": "<span class=\"eq\">Q<sub>0</sub> = (1/CF)&#123;FV[B<sub>0</sub>+AI<sub>0</sub>] &minus; AI<sub>T</sub> &minus; FVCI&#125;</span>. Ojo: F<sub>0</sub> = Q<sub>0</sub>&times;CF."
+    },
+    {
+      "id": "vol07-c019",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Accrued interest de un bono",
+      "a": "<span class=\"eq\">AI = (NAD/NTD)(C/n)</span>, en unidades monetarias. NTD depende de la frecuencia del cupón."
+    },
+    {
+      "id": "vol07-c020",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Tasa fija de un interest rate swap",
+      "a": "<span class=\"eq\">r<sub>FIX</sub> = [1 &minus; PV<sub>n</sub>(1)] / &Sigma;PV<sub>i</sub>(1) &times; (1/AP)</span>"
+    },
+    {
+      "id": "vol07-c021",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Valor de un swap receive-fixed en t",
+      "a": "<span class=\"eq\">V = NA·(FS<sub>0</sub> &minus; FS<sub>t</sub>)·&Sigma;PV<sub>i</sub></span>. Pay-fixed = negativo."
+    },
+    {
+      "id": "vol07-c022",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Currency swap: notional y valor",
+      "a": "Notional: <span class=\"eq\">NA<sub>a</sub> = S<sub>0</sub>·NA<sub>b</sub></span> · Valor: <span class=\"eq\">V<sub>CS</sub> = V<sub>a</sub> &minus; S<sub>t</sub>V<sub>b</sub></span>"
+    },
+    {
+      "id": "vol07-c023",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Valor de un equity swap en t",
+      "a": "<span class=\"eq\">V<sub>EQ,t</sub> = V<sub>FIX</sub>(C<sub>0</sub>) &minus; (S<sub>t</sub>/S<sub>t&minus;1</sub>)NA<sub>E</sub> &minus; PV(Par&minus;NA<sub>E</sub>)</span>"
+    },
+    {
+      "id": "vol07-c024",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Ejemplos de carry <b>costs</b> vs <b>benefits</b>",
+      "a": "Costs: financiamiento (r), storage, insurance. Benefits: dividendos, cupones (bond coupons), interés en moneda extranjera."
+    },
+    {
+      "id": "vol07-c025",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Forward vs Futures (4 features)",
+      "a": "Forward: OTC, counterparty risk, valor acumula. Futures: exchange, clearinghouse, MTM diario &rarr; valor 0. Ambos: valor inicial = 0."
+    },
+    {
+      "id": "vol07-c026",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "¿Quién gana con tasas que suben: receive-fixed o pay-fixed?",
+      "a": "<b>Pay-fixed</b> (=recibe-flotante) gana si <b>suben</b>. <b>Receive-fixed</b> (=long fixed bond) gana si <b>bajan</b>."
+    },
+    {
+      "id": "vol07-c027",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Carry arbitrage cuando F<sub>0</sub> &gt; FV(S<sub>0</sub>): 3 pasos",
+      "a": "1) Vender el forward. 2) Pedir prestado los fondos. 3) Comprar el subyacente. (Carry = estás long el subyacente.)"
+    },
+    {
+      "id": "vol07-c028",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Reverse carry cuando F<sub>0</sub> &lt; FV(S<sub>0</sub>): 3 pasos",
+      "a": "1) Comprar el forward. 2) Short-sell el subyacente. 3) Prestar los fondos del short."
+    },
+    {
+      "id": "vol07-c029",
+      "lm": "LM1",
+      "tipo": "metodo",
+      "q": "Discrete vs continuous compounding en F<sub>0</sub>",
+      "a": "Discreto: F<sub>0</sub>=S<sub>0</sub>(1+r)<sup>T</sup>. Continuo: F<sub>0</sub>=S<sub>0</sub>e<sup>r<sub>c</sub>T</sup>. Usar la convención correcta o el error es grande."
+    },
+    {
+      "id": "vol07-c030",
+      "lm": "LM1",
+      "tipo": "metodo",
+      "q": "¿Cómo se precifica un equity swap vs un interest rate swap?",
+      "a": "<b>Igual</b>: r<sub>FIX</sub> del equity swap = r<sub>FIX</sub> del IRS comparable (misma Eq 13), aunque los cash flows sean muy distintos."
+    },
+    {
+      "id": "vol07-c031",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es un <b>contingent claim</b>?",
+      "a": "Un derivado que da a su dueño el <b>derecho, no la obligación</b>, a un payoff determinado por un subyacente. Las opciones son el caso central."
+    },
+    {
+      "id": "vol07-c032",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Significado del <b>hedge ratio</b> h (signo call vs put)",
+      "a": "Nº de unidades del subyacente para replicar. Call: <b>h &ge; 0</b> (comprar). Put: <b>h &le; 0</b> (short-sell)."
+    },
+    {
+      "id": "vol07-c033",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es la probabilidad &pi; (risk-neutral)?",
+      "a": "Probabilidad <b>derivada del arbitraje</b>, no la real ni una creencia. No refleja preferencia por riesgo. El descuento es a la risk-free."
+    },
+    {
+      "id": "vol07-c034",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Put–call parity",
+      "a": "<span class=\"eq\">S + p = PV(X) + c</span>. Vale con cualquier modelo de valuación."
+    },
+    {
+      "id": "vol07-c035",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Self-financing y dynamic replication",
+      "a": "Dynamic: el payoff se replica con una estrategia de trading que cambia h por nodo. Self-financing: no requiere fondos extra del arbitrajista durante la vida."
+    },
+    {
+      "id": "vol07-c036",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Interpretación de N(d<sub>1</sub>) y N(d<sub>2</sub>) en BSM",
+      "a": "N(d<sub>1</sub>): base de la delta / nº de acciones a replicar. <b>N(d<sub>2</sub>) = prob RN de que el call termine ITM.</b>"
+    },
+    {
+      "id": "vol07-c037",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Escrow method (dividendos en el binomial)",
+      "a": "Se modela la incertidumbre sobre <span class=\"eq\">&Scaron; = S &minus; &gamma;</span>, donde &gamma; = PV de los dividendos. En expiración &Scaron;<sub>T</sub> = S<sub>T</sub>."
+    },
+    {
+      "id": "vol07-c038",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>gamma risk</b>?",
+      "a": "El riesgo de que el subyacente <b>salte</b> (no se mueva de forma continua) y deje la posición delta-hedged súbitamente desprotegida."
+    },
+    {
+      "id": "vol07-c039",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es la implied volatility?",
+      "a": "La &sigma; que, metida en el BSM, reproduce el <b>precio de mercado</b> de la opción (se invierte el modelo). Análogo al YTM de un bono."
+    },
+    {
+      "id": "vol07-c040",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Hedge ratio en el binomial (call / put)",
+      "a": "<span class=\"eq\">h = (c<sup>+</sup>&minus;c<sup>&minus;</sup>)/(S<sup>+</sup>&minus;S<sup>&minus;</sup>)</span> · para put, con p<sup>+</sup>,p<sup>&minus;</sup> (resulta &le; 0)."
+    },
+    {
+      "id": "vol07-c041",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Valor de la opción por no-arbitraje (1 período)",
+      "a": "<span class=\"eq\">c = hS + PV(&minus;hS<sup>&minus;</sup> + c<sup>&minus;</sup>)</span>. Call = posición apalancada en el subyacente."
+    },
+    {
+      "id": "vol07-c042",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Probabilidad risk-neutral &pi;",
+      "a": "<span class=\"eq\">&pi; = [FV(1) &minus; d] / (u &minus; d)</span>, con FV(1) = (1+r)."
+    },
+    {
+      "id": "vol07-c043",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Valor por expectations approach (1 período)",
+      "a": "<span class=\"eq\">c = PV[&pi;c<sup>+</sup> + (1&minus;&pi;)c<sup>&minus;</sup>]</span>. Descuento a la risk-free."
+    },
+    {
+      "id": "vol07-c044",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Call por binomial de dos períodos",
+      "a": "<span class=\"eq\">c = PV[&pi;<sup>2</sup>c<sup>++</sup> + 2&pi;(1&minus;&pi;)c<sup>+&minus;</sup> + (1&minus;&pi;)<sup>2</sup>c<sup>&minus;&minus;</sup>]</span>. PV al cuadrado."
+    },
+    {
+      "id": "vol07-c045",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "BSM: call y put",
+      "a": "<span class=\"eq\">c = S·N(d<sub>1</sub>) &minus; e<sup>&minus;rT</sup>X·N(d<sub>2</sub>)</span> · <span class=\"eq\">p = e<sup>&minus;rT</sup>X·N(&minus;d<sub>2</sub>) &minus; S·N(&minus;d<sub>1</sub>)</span>"
+    },
+    {
+      "id": "vol07-c046",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "BSM: d<sub>1</sub> y d<sub>2</sub>",
+      "a": "<span class=\"eq\">d<sub>1</sub> = [ln(S/X) + (r + &sigma;<sup>2</sup>/2)T] / (&sigma;&radic;T)</span> · <span class=\"eq\">d<sub>2</sub> = d<sub>1</sub> &minus; &sigma;&radic;T</span>"
+    },
+    {
+      "id": "vol07-c047",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "BSM ajustado por carry (&gamma;)",
+      "a": "<span class=\"eq\">c = S·e<sup>&minus;&gamma;T</sup>N(d<sub>1</sub>) &minus; e<sup>&minus;rT</sup>X·N(d<sub>2</sub>)</span>; d<sub>1</sub> lleva (r &minus; &gamma; + &sigma;<sup>2</sup>/2). Equity: &gamma;=&delta; · currency: &gamma;=r<sub>f</sub>."
+    },
+    {
+      "id": "vol07-c048",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Black model (opciones sobre futuros)",
+      "a": "<span class=\"eq\">c = e<sup>&minus;rT</sup>[F<sub>0</sub>(T)N(d<sub>1</sub>) &minus; X·N(d<sub>2</sub>)]</span>; en d<sub>1</sub> solo &sigma;<sup>2</sup>/2 (sin r&minus;&gamma;)."
+    },
+    {
+      "id": "vol07-c049",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Standard market model (rate options): ¿a qué plazo descuenta?",
+      "a": "<span class=\"eq\">c = (AP)e<sup>&minus;r(t<sub>j&minus;1</sub>+t<sub>m</sub>)</sup>[FRA·N(d<sub>1</sub>) &minus; R<sub>X</sub>·N(d<sub>2</sub>)]</span>. Descuenta a <b>(t<sub>j&minus;1</sub>+t<sub>m</sub>)</b>, no a la expiración."
+    },
+    {
+      "id": "vol07-c050",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Swaption payer / receiver",
+      "a": "<span class=\"eq\">PAY = (AP)PVA[R<sub>FIX</sub>N(d<sub>1</sub>) &minus; R<sub>X</sub>N(d<sub>2</sub>)]</span>. El PVA (annuity) embebe el descuento &rarr; <b>sin factor separado</b>."
+    },
+    {
+      "id": "vol07-c051",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Delta de call y put (con dividend yield)",
+      "a": "<span class=\"eq\">Delta<sub>c</sub> = e<sup>&minus;&delta;T</sup>N(d<sub>1</sub>)</span> &isin; [0, e<sup>&minus;&delta;T</sup>] · <span class=\"eq\">Delta<sub>p</sub> = &minus;e<sup>&minus;&delta;T</sup>N(&minus;d<sub>1</sub>)</span>."
+    },
+    {
+      "id": "vol07-c052",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "¿Cuándo conviene el early exercise?",
+      "a": "Call sin dividendos: <b>nunca</b> (American=European). Put deep ITM: <b>sí</b> (American&ge;European). Call con dividendos: puede convenir (capturar el dividendo)."
+    },
+    {
+      "id": "vol07-c053",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Signos de los Greeks",
+      "a": "Delta call &ge;0 / put &le;0 · Gamma y Vega <b>&ge;0 e iguales</b> call=put (máx ATM) · Theta usualmente &lt;0 · Rho call &gt;0, put &lt;0."
+    },
+    {
+      "id": "vol07-c054",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Payer vs receiver swaption",
+      "a": "<b>Payer</b> = opción a pay-fixed/rec-floating; gana si <b>suben</b> tasas. <b>Receiver</b> = opción a rec-fixed/pay-floating; gana si <b>bajan</b>."
+    },
+    {
+      "id": "vol07-c055",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Cap, floor y su equivalencia con swaps",
+      "a": "Cap = strip de rate <b>calls</b> (caplets); floor = strip de rate <b>puts</b> (floorlets). Long cap + short floor (strike=swap rate) = receive-floating swap."
+    },
+    {
+      "id": "vol07-c056",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Backward induction para americanas",
+      "a": "Trabajar de atrás hacia adelante y en cada nodo tomar <b>Max(valor modelo, exercise value)</b>. Solo el no-arbitrage approach las valúa."
+    },
+    {
+      "id": "vol07-c057",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Delta hedge: nº de unidades del hedge",
+      "a": "<span class=\"eq\">N<sub>H</sub> = &minus; Portfolio delta / Delta<sub>H</sub></span>. N<sub>H</sub>&lt;0 &rarr; short el hedge; &gt;0 &rarr; long."
+    },
+    {
+      "id": "vol07-c058",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Orden para hedgear gamma y delta",
+      "a": "Primero ajustar <b>gamma</b> con opciones (el stock tiene gamma=0), luego llevar <b>delta</b> a 0 comprando/vendiendo stock."
+    },
+    {
+      "id": "vol07-c059",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "No-arbitrage vs expectations approach",
+      "a": "Dan el mismo valor para europeas. Pero las <b>americanas</b> (early exercise) requieren <b>no-arbitrage</b>: no basta la expectativa de payoffs futuros."
+    },
+    {
+      "id": "vol07-c060",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "BSM vs Black",
+      "a": "BSM: subyacente = <b>spot</b>, d<sub>1</sub> lleva (r&minus;&gamma;). Black: subyacente = <b>futuro/forward</b>, costless-to-carry, d<sub>1</sub> solo con &sigma;<sup>2</sup>/2."
+    }
+  ],
+  "traps": [
+    {
+      "id": "vol07-t-lm1-01",
+      "lm": "LM1",
+      "star": true,
+      "title": "F<sub>0</sub> no es expectativa del spot",
+      "body": "El precio forward depende solo de S<sub>0</sub>, r, T y carry &mdash; nunca de la visión sobre el spot futuro."
+    },
+    {
+      "id": "vol07-t-lm1-02",
+      "lm": "LM1",
+      "star": true,
+      "title": "Costs suman, benefits restan",
+      "body": "En <span class=\"eq\">F<sub>0</sub>=FV(S<sub>0</sub>+CC&minus;CB)</span>: carry costs aumentan F<sub>0</sub>; carry benefits (dividendos, cupones, interés extranjero) lo bajan."
+    },
+    {
+      "id": "vol07-t-lm1-03",
+      "lm": "LM1",
+      "star": true,
+      "title": "Long FRA gana si SUBEN las tasas",
+      "body": "Long FRA = paga-fijo/recibe-flotante. El short (recibe-fijo) gana si bajan."
+    },
+    {
+      "id": "vol07-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "FRA: descuento por advanced settled",
+      "body": "El payoff se paga al expirar (h) pero el interés es settled in arrears &rarr; se divide por <span class=\"eq\">[1+D<sub>m</sub>t<sub>m</sub>]</span>. Suele asumirse D<sub>m</sub>=L<sub>m</sub>, pero pueden diferir."
+    },
+    {
+      "id": "vol07-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "F<sub>0</sub> vs Q<sub>0</sub> en bonos",
+      "body": "Q<sub>0</sub>=F<sub>0</sub>/CF. Sumar AI<sub>T</sub> al comparar con el spot. El futuro settlea contra el quoted (clean) price."
+    },
+    {
+      "id": "vol07-t-lm1-06",
+      "lm": "LM1",
+      "star": true,
+      "title": "Futuro: valor resetea a 0",
+      "body": "Tras el MTM diario v<sub>t</sub>=0. El forward acumula valor entre settlements."
+    },
+    {
+      "id": "vol07-t-lm1-07",
+      "lm": "LM1",
+      "star": true,
+      "title": "Receive-fixed swap gana si BAJAN las tasas",
+      "body": "= long fixed bond. Pay-fixed (=recibe-flotante) gana si suben."
+    },
+    {
+      "id": "vol07-t-lm1-08",
+      "lm": "LM1",
+      "star": false,
+      "title": "Currency swap: NA<sub>a</sub>=S<sub>0</sub>NA<sub>b</sub> y V=V<sub>a</sub>&minus;S<sub>t</sub>V<sub>b</sub>",
+      "body": "Identificar la moneda a (numerador del FX). Pagos no se netean; notionals se intercambian al inicio y al final."
+    },
+    {
+      "id": "vol07-t-lm1-09",
+      "lm": "LM1",
+      "star": false,
+      "title": "Day count / AP",
+      "body": "30/360 vs ACT/ACT y la frecuencia entran vía AP; un error de convención mueve todos los resultados."
+    },
+    {
+      "id": "vol07-t-lm1-10",
+      "lm": "LM1",
+      "star": false,
+      "title": "Equity swap con R<sub>E</sub> &lt; 0",
+      "body": "El receive-equity paga equity + fijo (doble outflow). El floating leg no se precifica: vale par en reset."
+    },
+    {
+      "id": "vol07-t-lm2-01",
+      "lm": "LM2",
+      "star": true,
+      "title": "&pi; usa FV(1)=(1+r), no probabilidades reales",
+      "body": "&pi;=[FV(1)&minus;d]/(u&minus;d) es risk-neutral. El descuento es a la risk-free, no ajustado por riesgo."
+    },
+    {
+      "id": "vol07-t-lm2-02",
+      "lm": "LM2",
+      "star": true,
+      "title": "Call sin dividendos: nunca se ejerce antes",
+      "body": "American call (no div) = European call. El put sí puede ejercerse antes (deep ITM) &rarr; American &ge; European."
+    },
+    {
+      "id": "vol07-t-lm2-03",
+      "lm": "LM2",
+      "star": false,
+      "title": "Two-period: descuento al cuadrado",
+      "body": "PV = 1/(1+r)<sup>2</sup>. No descontar un solo período en un árbol de dos."
+    },
+    {
+      "id": "vol07-t-lm2-04",
+      "lm": "LM2",
+      "star": false,
+      "title": "Rate option en árbol: descuenta por nodo",
+      "body": "PV<sup>+</sup> &ne; PV<sup>&minus;</sup> porque el subyacente es la tasa. &pi;=50% asumida."
+    },
+    {
+      "id": "vol07-t-lm2-05",
+      "lm": "LM2",
+      "star": true,
+      "title": "Black usa el precio futuro/forward, no spot",
+      "body": "En d<sub>1</sub> del Black solo aparece &sigma;<sup>2</sup>/2 (sin r&minus;&gamma;): el futuro es costless-to-carry."
+    },
+    {
+      "id": "vol07-t-lm2-06",
+      "lm": "LM2",
+      "star": false,
+      "title": "Standard market model: descuenta a (t<sub>j&minus;1</sub>+t<sub>m</sub>)",
+      "body": "Advanced set, settled in arrears &rarr; el pago es al vencimiento del FRA, no a la expiración de la opción. Ajuste por AP y notional."
+    },
+    {
+      "id": "vol07-t-lm2-07",
+      "lm": "LM2",
+      "star": false,
+      "title": "Swaption: sin factor de descuento separado",
+      "body": "El descuento va embebido en el PVA (annuity). Payer gana si suben tasas; receiver si bajan."
+    },
+    {
+      "id": "vol07-t-lm2-08",
+      "lm": "LM2",
+      "star": true,
+      "title": "N(d<sub>2</sub>) = prob RN de call ITM",
+      "body": "N(&minus;d<sub>2</sub>) = prob RN de put ITM. N(d<sub>1</sub>) es la base de la delta, no una probabilidad."
+    },
+    {
+      "id": "vol07-t-lm2-09",
+      "lm": "LM2",
+      "star": false,
+      "title": "Signos de Greeks",
+      "body": "Delta call &isin; [0,e<sup>&minus;&delta;T</sup>], put &isin; [&minus;e<sup>&minus;&delta;T</sup>,0]. Gamma y vega iguales call=put y máximas ATM. Rho: call +, put &minus;. Theta usualmente &lt; 0."
+    },
+    {
+      "id": "vol07-t-lm2-10",
+      "lm": "LM2",
+      "star": false,
+      "title": "Delta hedge: N<sub>H</sub> = &minus;Portfolio delta/Delta<sub>H</sub>",
+      "body": "Cuidado con el signo: un short put tiene delta positiva. Comprar opciones siempre sube el gamma neto."
+    }
+  ],
+  "problems": [
+    {
+      "id": "vol07-p01",
+      "lm": "LM1",
+      "title": "Forward price de una acción sin dividendos",
+      "given": "S<sub>0</sub>=A$63,31 · r=2,75% (anual) · T=0,25.",
+      "ask": "Forward price de 3 meses.",
+      "answer": "<b>A$63,7408</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>F<sub>0</sub>=FV(S<sub>0</sub>)=S<sub>0</sub>(1+r)<sup>T</sup></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=63,31(1,0275)<sup>0,25</sup></span></div><div class=\"res\"><b>A$63,7408</b></div><div class=\"warn\">Si r baja, F<sub>0</sub> baja (relación directa).</div>"
+    },
+    {
+      "id": "vol07-p02",
+      "lm": "LM1",
+      "title": "Valor de un forward long antes del vencimiento",
+      "given": "F<sub>0</sub>=105 · S<sub>0,75</sub>=110 · r=5% · T&minus;t=0,25.",
+      "ask": "Valor del forward existente.",
+      "answer": "<b>6,2729</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>F<sub>t</sub>=FV(S<sub>t</sub>)=110(1,05)<sup>0,25</sup>=111,3499</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>V<sub>t</sub>=PV(F<sub>t</sub>&minus;F<sub>0</sub>)=(111,3499&minus;105)/(1,05)<sup>0,25</sup></span></div><div class=\"res\"><b>6,2729</b></div><div class=\"warn\">Alternativa: V<sub>t</sub>=S<sub>t</sub>&minus;PV(F<sub>0</sub>)=110&minus;105/1,05<sup>0,25</sup>.</div>"
+    },
+    {
+      "id": "vol07-p03",
+      "lm": "LM1",
+      "title": "Forward price con dividendo discreto",
+      "given": "S<sub>0</sub>=$1.000 · D=$10 en 2 meses · r=5% · T=0,25.",
+      "ask": "Forward price de 3 meses.",
+      "answer": "<b>$1.002,23</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>F<sub>0</sub>=FV(S<sub>0</sub>)&minus;FV(D)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=1.000(1,05)<sup>3/12</sup>&minus;10(1,05)<sup>1/12</sup></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>=1.012,2722&minus;10,0407</span></div><div class=\"res\"><b>$1.002,23</b></div><div class=\"warn\">El dividendo se compone solo desde que se cobra (mes 2) hasta T.</div>"
+    },
+    {
+      "id": "vol07-p04",
+      "lm": "LM1",
+      "title": "Futures price de un índice (continuo)",
+      "given": "S<sub>0</sub>=3.500 · r<sub>c</sub>=0,15% · CB=3% div yield · T=0,25.",
+      "ask": "Futures price de 3 meses.",
+      "answer": "<b>3.475,15</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>f<sub>0</sub>=S<sub>0</sub>e<sup>(r<sub>c</sub>+CC&minus;CB)T</sup></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=3.500 e<sup>(0,0015+0&minus;0,03)(0,25)</sup></span></div><div class=\"res\"><b>3.475,15</b></div><div class=\"warn\">CB &gt; r<sub>c</sub> &rarr; el futuro queda por debajo del spot.</div>"
+    },
+    {
+      "id": "vol07-p05",
+      "lm": "LM1",
+      "title": "Tasa fija de un 6&times;9 FRA",
+      "given": "L<sub>180</sub>=1,5% · L<sub>270</sub>=1,75% · 30/360.",
+      "ask": "FRA<sub>0</sub>.",
+      "answer": "<b>2,23%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>FRA<sub>0</sub>=&#123;[1+L<sub>T</sub>t<sub>T</sub>]/[1+L<sub>h</sub>t<sub>h</sub>]&minus;1&#125;/t<sub>m</sub></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=&#123;[1+0,0175(0,75)]/[1+0,015(0,5)]&minus;1&#125;/0,25</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>=[(1,013125/1,0075)&minus;1]/0,25</span></div><div class=\"res\"><b>2,23%</b></div><div class=\"warn\">Chequeo: promedio simple daría 2,25% (siempre un poco alto).</div>"
+    },
+    {
+      "id": "vol07-p06",
+      "lm": "LM1",
+      "title": "Settlement de un FRA (short / receive-fixed)",
+      "given": "NA=£10M · FRA<sub>0</sub>=2,60% · L<sub>90</sub>=2,55% · D=2,40% · t<sub>m</sub>=0,25.",
+      "ask": "Pago recibido al settlear.",
+      "answer": "<b>£1.242,54</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Short: NA·&#123;[FRA<sub>0</sub>&minus;L<sub>m</sub>]t<sub>m</sub>&#125;/[1+D<sub>m</sub>t<sub>m</sub>]</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=10M·&#123;[0,026&minus;0,0255](0,25)&#125;/[1+0,024(0,25)]</span></div><div class=\"res\"><b>£1.242,54</b></div><div class=\"warn\">El short paga flotante &rarr; se beneficia de la caída de tasas. Acá D<sub>m</sub>&ne;L<sub>m</sub>.</div>"
+    },
+    {
+      "id": "vol07-p07",
+      "lm": "LM1",
+      "title": "Valor de un FRA long en Time g",
+      "given": "NA=C$10M · FRA<sub>0</sub>=0,877% · a 90 días: FRA<sub>g</sub>=1,445%, L<sub>180</sub>=1,35% (descuento).",
+      "ask": "Valor del 6&times;9 receive-floating.",
+      "answer": "<b>C$14.105</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>V<sub>g</sub>=NA·&#123;[FRA<sub>g</sub>&minus;FRA<sub>0</sub>]t<sub>m</sub>&#125;/[1+D<sub>(T&minus;g)</sub>t<sub>(T&minus;g)</sub>]</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=10M·&#123;(0,01445&minus;0,00877)(0,25)&#125;/(1+0,0135·0,5)</span></div><div class=\"res\"><b>C$14.105</b></div><div class=\"warn\">Subieron las tasas &rarr; el long (receive-floating) gana valor.</div>"
+    },
+    {
+      "id": "vol07-p08",
+      "lm": "LM1",
+      "title": "Quoted futures price de un euro-bund",
+      "given": "B<sub>0</sub>=108 · AI<sub>0</sub>=0,083 · AI<sub>T</sub>=0,25 · FVCI=0 · r=0,1% · T=1/12 · CF=0,729535.",
+      "ask": "Q<sub>0</sub> de equilibrio.",
+      "answer": "<b>€147,82</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Q<sub>0</sub>=(1/CF)&#123;FV[B<sub>0</sub>+AI<sub>0</sub>]&minus;AI<sub>T</sub>&minus;FVCI&#125;</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=(1/0,729535)[(1,001)<sup>1/12</sup>(108,083)&minus;0,25]</span></div><div class=\"res\"><b>€147,82</b></div><div class=\"warn\">F<sub>0</sub>=Q<sub>0</sub>×CF=107,84; no confundir F<sub>0</sub> con Q<sub>0</sub>.</div>"
+    },
+    {
+      "id": "vol07-p09",
+      "lm": "LM1",
+      "title": "Tasa fija y valor de un IRS receive-fixed",
+      "given": "5y annual · &Sigma;PV=4,822107 · PV<sub>5</sub>=0,937467 · NA=€100M · FS<sub>0</sub>=2,0% · FS<sub>t</sub>=1,3%.",
+      "ask": "r<sub>FIX</sub> y valor receive-fixed.",
+      "answer": "<b>r<sub>FIX</sub>=1,2968% · V=€3.375.000</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>r<sub>FIX</sub>=[1&minus;PV<sub>n</sub>]/&Sigma;PV=(1&minus;0,937467)/4,822107=1,2968%</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>V=NA·(FS<sub>0</sub>&minus;FS<sub>t</sub>)·&Sigma;PV=100M(0,02&minus;0,013)(4,822107)</span></div><div class=\"res\"><b>r<sub>FIX</sub>=1,2968% · V=€3.375.000</b></div><div class=\"warn\">Pay-fixed = &minus;€3.375.000 (el negativo).</div>"
+    },
+    {
+      "id": "vol07-p10",
+      "lm": "LM2",
+      "title": "Call de un período (no-arbitraje / expectations)",
+      "given": "S=100 · X=100 · r=5,15% · u=1,35 · d=0,74.",
+      "ask": "Hedge ratio, &pi; y valor del call.",
+      "answer": "<b>h=0,5738 · &pi;=0,5107 · c=€16,998</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>S<sup>+</sup>=135, S<sup>&minus;</sup>=74; c<sup>+</sup>=35, c<sup>&minus;</sup>=0</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>h=(35&minus;0)/(135&minus;74)=0,5738</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>&pi;=[(1,0515)&minus;0,74]/(1,35&minus;0,74)=0,510656</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>c=PV[&pi;c<sup>+</sup>]=0,951022(0,510656·35)</span></div><div class=\"res\"><b>h=0,5738 · &pi;=0,5107 · c=€16,998</b></div><div class=\"warn\">El no-arbitraje da idéntico: c=hS+PV(&minus;hS<sup>&minus;</sup>+c<sup>&minus;</sup>).</div>"
+    },
+    {
+      "id": "vol07-p11",
+      "lm": "LM2",
+      "title": "Put de un período",
+      "given": "Mismos datos que p10; X=100.",
+      "ask": "Valor del put.",
+      "answer": "<b>€12,10</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>p<sup>+</sup>=Max(0,100&minus;135)=0; p<sup>&minus;</sup>=Max(0,100&minus;74)=26</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>p=PV[&pi;p<sup>+</sup>+(1&minus;&pi;)p<sup>&minus;</sup>]=0,951022[(1&minus;0,510656)26]</span></div><div class=\"res\"><b>€12,10</b></div><div class=\"warn\">Verificable por parity: p=c+PV(X)&minus;S.</div>"
+    },
+    {
+      "id": "vol07-p12",
+      "lm": "LM2",
+      "title": "Call europeo de dos períodos",
+      "given": "S=50 · X=50 · r=5% · u=1,356 · d=0,744.",
+      "ask": "Valor del call.",
+      "answer": "<b>€9,71</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>&pi;=[(1,05)&minus;0,744]/(1,356&minus;0,744)=0,50</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>c<sup>++</sup>=Max(0,1,356<sup>2</sup>·50&minus;50)=41,9368; c<sup>+&minus;</sup>=0,44320; c<sup>&minus;&minus;</sup>=0</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>c=(1/1,05)<sup>2</sup>[0,5<sup>2</sup>(41,9368)+2(0,5)(0,5)(0,44320)]</span></div><div class=\"res\"><b>€9,71</b></div><div class=\"warn\">El PV va al cuadrado: (1/1,05)<sup>2</sup>.</div>"
+    },
+    {
+      "id": "vol07-p13",
+      "lm": "LM2",
+      "title": "Put europeo por put–call parity",
+      "given": "c=9,71 (p12) · X=50 · r=5% · T=2 · S=50.",
+      "ask": "Valor del put.",
+      "answer": "<b>€5,06</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>p=c+PV(X)&minus;S</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=9,71+[1/(1,05)<sup>2</sup>]50&minus;50</span></div><div class=\"res\"><b>€5,06</b></div><div class=\"warn\">Parity vale con cualquier modelo.</div>"
+    },
+    {
+      "id": "vol07-p14",
+      "lm": "LM2",
+      "title": "Early-exercise premium de un put americano",
+      "given": "S<sub>0</sub>=26 · X=25 · u=1,466 · d=0,656 · r=2,05% · n=2. En t=1 (down) el modelo europeo da 7,4436.",
+      "ask": "Early-exercise premium en t=0.",
+      "answer": "<b>0,27</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>En t=1 down: EV=Max(0,25&minus;17,056)=7,944 &gt; 7,4436 &rarr; se ejerce; se reemplaza 7,4436 por 7,944</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>p<sub>Am</sub>=(1/1,0205)[0,45(0)+0,55(7,944)]=4,28</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Premium=p<sub>Am</sub>&minus;p<sub>Eur</sub>=4,28&minus;4,01</span></div><div class=\"res\"><b>0,27</b></div><div class=\"warn\">Solo el no-arbitrage approach captura el early exercise.</div>"
+    },
+    {
+      "id": "vol07-p15",
+      "lm": "LM2",
+      "title": "Opción sobre tasas en árbol binomial",
+      "given": "NA=US$1M · X=3,25% · &pi;=50% · S<sup>++</sup>=3,9706%, S<sup>+&minus;</sup>=3,2542%, S<sup>&minus;&minus;</sup>=2,2593%; descuentos por nodo.",
+      "ask": "Valor del call y del put.",
+      "answer": "<b>Call=US$1.702,16 · Put=US$2.342,66</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Payoffs t=2: c<sup>++</sup>=0,007206; c<sup>+&minus;</sup>=0,000042; resto 0; p<sup>&minus;&minus;</sup>=0,009907</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Rolar backward descontando por nodo (0,962386 / 0,974627 / 0,970446)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>c=0,00170216 · p=0,00234266 (por US$1)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>×US$1M</span></div><div class=\"res\"><b>Call=US$1.702,16 · Put=US$2.342,66</b></div><div class=\"warn\">PV<sup>+</sup>&ne;PV<sup>&minus;</sup>: el subyacente es la tasa.</div>"
+    },
+    {
+      "id": "vol07-p16",
+      "lm": "LM2",
+      "title": "Call por BSM (componentes)",
+      "given": "S=100 · X=100 · r=5% · T=1 · &sigma;=30% · N(d<sub>1</sub>)=0,624 · N(d<sub>2</sub>)=0,507 · PV(X)=95,123.",
+      "ask": "Valor del call.",
+      "answer": "<b>14,23</b> (14,17 sin redondeo)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>c=S·N(d<sub>1</sub>)&minus;e<sup>&minus;rT</sup>X·N(d<sub>2</sub>)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=100(0,624)&minus;95,123(0,507)</span></div><div class=\"res\"><b>14,23</b> (14,17 sin redondeo)</div><div class=\"warn\">Réplica: comprar 0,624 acciones, short 0,507 bonos.</div>"
+    },
+    {
+      "id": "vol07-p17",
+      "lm": "LM2",
+      "title": "Delta hedge de un short put",
+      "given": "Short put sobre 10.000 acciones · Delta<sub>p</sub>=&minus;0,419 · Delta<sub>c</sub>=0,532.",
+      "ask": "Hedge con stock y con calls.",
+      "answer": "<b>Short 4.190 acciones · Vender 7.876 calls</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Short put &rarr; delta de posición = +0,419; Portfolio delta=10.000(0,419)=4.190</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Con stock (Delta<sub>H</sub>=1): N<sub>H</sub>=&minus;4.190/1</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Con calls (Delta<sub>H</sub>=0,532): N<sub>H</sub>=&minus;4.190/0,532</span></div><div class=\"res\"><b>Short 4.190 acciones · Vender 7.876 calls</b></div><div class=\"warn\">Ojo el signo: un short put tiene delta positiva.</div>"
+    },
+    {
+      "id": "vol07-p18",
+      "lm": "LM2",
+      "title": "Probabilidad risk-neutral",
+      "given": "r=5% · u=1,356 · d=0,744.",
+      "ask": "&pi; (up move).",
+      "answer": "<b>0,50</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>&pi;=[FV(1)&minus;d]/(u&minus;d)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>=[(1,05)&minus;0,744]/(1,356&minus;0,744)</span></div><div class=\"res\"><b>0,50</b></div><div class=\"warn\">&pi; es risk-neutral, no la probabilidad real del mercado.</div>"
+    }
+  ],
+  "highlights": [
+    {
+      "rank": 1,
+      "title": "F<sub>0</sub> no es expectativa del spot futuro",
+      "body": "Depende solo de S<sub>0</sub>, r, T y carry."
+    },
+    {
+      "rank": 2,
+      "title": "Costs suman, benefits restan",
+      "body": "En F<sub>0</sub>=FV(S<sub>0</sub>+CC&minus;CB): dividendos/cupones lo bajan."
+    },
+    {
+      "rank": 3,
+      "title": "Long FRA gana si SUBEN las tasas",
+      "body": "Long = paga-fijo/recibe-flotante."
+    },
+    {
+      "rank": 4,
+      "title": "El futuro resetea su valor a 0",
+      "body": "Tras el MTM diario; el forward acumula valor."
+    },
+    {
+      "rank": 5,
+      "title": "&pi; es risk-neutral, no probabilidad real",
+      "body": "&pi;=[FV(1)&minus;d]/(u&minus;d); descuento a la risk-free."
+    },
+    {
+      "rank": 6,
+      "title": "Call sin dividendos nunca se ejerce antes",
+      "body": "American call (no div) = European; el put sí puede."
+    },
+    {
+      "rank": 7,
+      "title": "Black usa el precio futuro, no el spot",
+      "body": "Su d<sub>1</sub> solo lleva &sigma;<sup>2</sup>/2 (sin r&minus;&gamma;)."
+    },
+    {
+      "rank": 8,
+      "title": "N(d<sub>2</sub>) = prob RN de call ITM",
+      "body": "N(d<sub>1</sub>) es la base de la delta, no una probabilidad."
+    }
+  ],
+  "tables": [
+    {
+      "id": "vol07-metodo",
+      "title": "Método vs Método",
+      "lms": [
+        "LM1",
+        "LM2"
+      ],
+      "html": "<header class=\"mast\">\n<div class=\"eyebrow\">CFA 2026 · Level II · Vol. 7 Derivatives</div>\n<h1>Método vs Método — hoja de referencia</h1>\n</header>\n<h2 class=\"lmh\">LM1 — Forward Commitments</h2>\n<table>\n<caption>Forward vs Futures</caption>\n<thead><tr><th class=\"dim\">Dimensión</th><th>Forward</th><th>Futures</th></tr></thead>\n<tbody>\n<tr><td class=\"dim\">Mercado</td><td>OTC, bilateral, customizado</td><td>Exchange, estandarizado</td></tr>\n<tr><td class=\"dim\">Riesgo</td><td>Counterparty risk</td><td>Garantizado por clearinghouse</td></tr>\n<tr><td class=\"dim\">Pricing</td><td colspan=\"2\" style=\"text-align:center\">Igual: <span class=\"eq\">F<sub>0</sub>=FV(S<sub>0</sub>+CC<sub>0</sub>−CB<sub>0</sub>)</span></td></tr>\n<tr><td class=\"dim\">Valuation</td><td><span class=\"eq\">V<sub>t</sub>=PV(F<sub>t</sub>−F<sub>0</sub>)</span>; acumula valor</td><td><b>0</b> tras MTM diario; v<sub>t</sub>=N<sub>f</sub>(f<sub>t</sub>−f<sub>t−1</sub>) intradía <span class=\"flag\">clave</span></td></tr>\n</tbody>\n</table>\n<table>\n<caption>Carry vs Reverse carry arbitrage</caption>\n<thead><tr><th class=\"dim\">Dimensión</th><th>Carry (F<sub>0</sub> &gt; FV(S<sub>0</sub>))</th><th>Reverse carry (F<sub>0</sub> &lt; FV(S<sub>0</sub>))</th></tr></thead>\n<tbody>\n<tr><td class=\"dim\">Forward</td><td>Vender</td><td>Comprar</td></tr>\n<tr><td class=\"dim\">Subyacente</td><td>Comprar (long / carry)</td><td>Short-sell</td></tr>\n<tr><td class=\"dim\">Financiamiento</td><td>Pedir prestado</td><td>Prestar los fondos del short</td></tr>\n<tr><td class=\"dim\">Interés</td><td>Paga el costo de financiar</td><td>Recibe el beneficio de prestar</td></tr>\n</tbody>\n</table>\n<table>\n<caption>Discrete vs Continuous compounding</caption>\n<thead><tr><th class=\"dim\">Dimensión</th><th>Discrete (r)</th><th>Continuous (r<sub>c</sub>)</th></tr></thead>\n<tbody>\n<tr><td class=\"dim\">Sin carry</td><td class=\"eq\">F<sub>0</sub>=S<sub>0</sub>(1+r)<sup>T</sup></td><td class=\"eq\">F<sub>0</sub>=S<sub>0</sub>e<sup>r<sub>c</sub>T</sup></td></tr>\n<tr><td class=\"dim\">Con carry</td><td class=\"eq\">FV[S<sub>0</sub>+CC<sub>0</sub>−CB<sub>0</sub>]</td><td class=\"eq\">S<sub>0</sub>e<sup>(r<sub>c</sub>+CC−CB)T</sup></td></tr>\n<tr><td class=\"dim\">Ojo</td><td colspan=\"2\">Usar la convención con la que se quotea la tasa; mezclarlas produce errores materiales. <span class=\"flag\">trampa</span></td></tr>\n</tbody>\n</table>\n<table>\n<caption>Long FRA vs Short FRA · Receive-fixed vs Pay-fixed swap (dirección)</caption>\n<thead><tr><th class=\"dim\">Posición</th><th>Equivale a</th><th>Gana cuando…</th></tr></thead>\n<tbody>\n<tr><td class=\"dim\">Long FRA</td><td>Paga-fijo / recibe-flotante</td><td>tasas <b>suben</b></td></tr>\n<tr><td class=\"dim\">Short FRA</td><td>Recibe-fijo / paga-flotante</td><td>tasas <b>bajan</b></td></tr>\n<tr><td class=\"dim\">Pay-fixed swap</td><td>Short fixed bond / long floating</td><td>tasas <b>suben</b></td></tr>\n<tr><td class=\"dim\">Receive-fixed swap</td><td>Long fixed bond / short floating</td><td>tasas <b>bajan</b> <span class=\"flag\">contra-intuitivo</span></td></tr>\n</tbody>\n</table>\n<h2 class=\"lmh\">LM2 — Contingent Claims</h2>\n<table>\n<caption>No-arbitrage vs Expectations approach</caption>\n<thead><tr><th class=\"dim\">Dimensión</th><th>No-arbitrage</th><th>Expectations</th></tr></thead>\n<tbody>\n<tr><td class=\"dim\">Idea</td><td>Replicar con subyacente + financiamiento (h)</td><td>PV del payoff esperado bajo π (RN)</td></tr>\n<tr><td class=\"dim\">Europeas</td><td colspan=\"2\" style=\"text-align:center\">Dan el <b>mismo</b> valor</td></tr>\n<tr><td class=\"dim\">Americanas</td><td>Requerido (permite testear early exercise) <span class=\"flag\">clave</span></td><td>No sirve solo (no captura early exercise)</td></tr>\n</tbody>\n</table>\n<table>\n<caption>European vs American (early exercise)</caption>\n<thead><tr><th class=\"dim\">Opción</th><th>Early exercise</th><th>Relación de valor</th></tr></thead>\n<tbody>\n<tr><td class=\"dim\">Call sin dividendos</td><td>Nunca</td><td>American = European</td></tr>\n<tr><td class=\"dim\">Put</td><td>Sí (deep ITM: gana interés)</td><td>American ≥ European <span class=\"flag\">clave</span></td></tr>\n<tr><td class=\"dim\">Call con dividendos</td><td>Puede (antes del ex-dividend)</td><td>American ≥ European</td></tr>\n</tbody>\n</table>\n<table>\n<caption>BSM vs Black · Binomial vs BSM</caption>\n<thead><tr><th class=\"dim\">Dimensión</th><th>BSM</th><th>Black</th></tr></thead>\n<tbody>\n<tr><td class=\"dim\">Subyacente</td><td>Spot (equity, currency)</td><td>Precio futuro/forward <span class=\"flag\">trampa</span></td></tr>\n<tr><td class=\"dim\">d<sub>1</sub></td><td class=\"eq\">…+(r−γ+σ<sup>2</sup>/2)T</td><td class=\"eq\">…+(σ<sup>2</sup>/2)T (sin r−γ)</td></tr>\n<tr><td class=\"dim\">Carry</td><td>Equity γ=δ; currency γ=r<sub>f</sub></td><td>Costless-to-carry</td></tr>\n<tr><td class=\"dim\">Binomial vs BSM</td><td colspan=\"2\">Binomial valúa <b>path-dependent</b> (americanas); BSM solo <b>path-independent</b> (europeas). Binomial de ∞ pasos → BSM.</td></tr>\n</tbody>\n</table>\n<table>\n<caption>Payer vs Receiver swaption · Delta vs Delta-plus-gamma</caption>\n<thead><tr><th class=\"dim\">Comparación</th><th>Opción A</th><th>Opción B</th></tr></thead>\n<tbody>\n<tr><td class=\"dim\">Swaption</td><td><b>Payer</b>: opción a pay-fixed; gana si tasas <b>suben</b></td><td><b>Receiver</b>: opción a rec-fixed; gana si tasas <b>bajan</b></td></tr>\n<tr><td class=\"dim\">Aproximación</td><td><b>Delta</b>: lineal; sesga bajo en subidas y bajadas</td><td><b>Delta+gamma</b>: agrega curvatura; mucho más precisa <span class=\"flag\">clave</span></td></tr>\n</tbody>\n</table>\n<p style=\"font-size:11px;border:1px solid var(--ink);border-left:5px solid var(--ink);padding:7px 10px;margin-top:14px\">\n<b>Las 3 más recurrentes:</b> (1) forward y futuro se <b>pricean igual</b> pero el futuro <b>vale 0</b> tras el MTM; (2) receive-fixed swap gana si <b>bajan</b> las tasas (contra-intuitivo); (3) Black usa el <b>precio futuro</b> y su d<sub>1</sub> no lleva (r−γ).</p>"
+    },
+    {
+      "id": "vol07-signos",
+      "title": "Signos y direcciones",
+      "lms": [
+        "LM1",
+        "LM2"
+      ],
+      "html": "<header class=\"mast\">\n<div class=\"eyebrow\">CFA 2026 · Level II · Vol. 7 Derivatives</div>\n<h1>Hoja de signos y direcciones</h1>\n<div class=\"legend\">↑ sube · ↓ baja · = sin cambio. Se marcan los efectos <b>contra-intuitivos</b>. Todo \"manteniendo lo demás constante\".</div>\n</header>\n<h2 class=\"lmh\">LM1 — Forwards, futuros, FRAs y swaps</h2>\n<table>\n<caption>¿Qué le pasa al precio / valor cuando el driver sube (↑)?</caption>\n<thead>\n<tr><th class=\"k\">Driver ↑</th><th class=\"c\">Forward price F<sub>0</sub></th><th class=\"c\">Long fwd value V<sub>t</sub></th><th class=\"c\">Long FRA value</th><th class=\"c\">Receive-fixed swap</th><th>Nota</th></tr>\n</thead>\n<tbody>\n<tr><td class=\"k\">Risk-free rate r</td><td class=\"c up\">↑</td><td class=\"c up\">↑</td><td class=\"c up\">↑</td><td class=\"c dn\">↓</td><td>Rec-fixed baja con tasas altas <span class=\"flag\">contra-intuitivo</span></td></tr>\n<tr><td class=\"k\">Carry benefit (dividendo, cupón, r extranjero)</td><td class=\"c dn\">↓</td><td class=\"c dn\">↓</td><td class=\"c c\">—</td><td class=\"c c\">—</td><td>Benefits <b>restan</b> en F<sub>0</sub> <span class=\"flag\">contra-intuitivo</span></td></tr>\n<tr><td class=\"k\">Carry cost (storage, insurance)</td><td class=\"c up\">↑</td><td class=\"c up\">↑</td><td class=\"c c\">—</td><td class=\"c c\">—</td><td>Costs suman en F<sub>0</sub></td></tr>\n<tr><td class=\"k\">Spot S<sub>t</sub></td><td class=\"c c\">—</td><td class=\"c up\">↑</td><td class=\"c c\">—</td><td class=\"c c\">—</td><td>F<sub>t</sub>=FV(S<sub>t</sub>) sube → V<sub>t</sub> sube</td></tr>\n<tr><td class=\"k\">Dividendo anunciado entre valuación y expiración (spot igual)</td><td class=\"c dn\">↓</td><td class=\"c dn\">↓</td><td class=\"c c\">—</td><td class=\"c c\">—</td><td>Baja el nuevo F<sub>t</sub> → baja V<sub>t</sub> <span class=\"flag\">contra-intuitivo</span></td></tr>\n<tr><td class=\"k\">Tiempo (paso de calendario) en un futuro</td><td class=\"c c\">—</td><td class=\"c c\">= 0</td><td class=\"c c\">—</td><td class=\"c c\">—</td><td>Futuro resetea a 0 tras el MTM diario</td></tr>\n</tbody>\n</table>\n<p style=\"font-size:11px;border:1px solid var(--ink);padding:6px 9px;margin-bottom:16px\">\n<b>Regla de dirección de swaps:</b> receive-fixed = long fixed bond → gana si <b>bajan</b> las tasas. Pay-fixed = recibe-flotante → gana si <b>suben</b>. En reset, el floating bond vale <b>par</b>.</p>\n<h2 class=\"lmh\">LM2 — Valor de la opción</h2>\n<table>\n<caption>¿Qué le pasa al valor de la opción cuando el driver sube (↑)?</caption>\n<thead><tr><th class=\"k\">Driver ↑</th><th class=\"c\">Call</th><th class=\"c\">Put</th><th>Greek / nota</th></tr></thead>\n<tbody>\n<tr><td class=\"k\">Subyacente S</td><td class=\"c up\">↑</td><td class=\"c dn\">↓</td><td>Delta (call ≥0, put ≤0)</td></tr>\n<tr><td class=\"k\">Exercise price X</td><td class=\"c dn\">↓</td><td class=\"c up\">↑</td><td>—</td></tr>\n<tr><td class=\"k\">Volatilidad σ</td><td class=\"c up\">↑</td><td class=\"c up\">↑</td><td>Vega &gt; 0 (call = put, máx ATM). Parámetro más sensible.</td></tr>\n<tr><td class=\"k\">Paso de calendario (tiempo a expiración ↓)</td><td class=\"c dn\">↓</td><td class=\"c dn\">↓</td><td>Theta &lt; 0 (time decay). Stock theta = 0.</td></tr>\n<tr><td class=\"k\">Risk-free rate r</td><td class=\"c up\">↑</td><td class=\"c dn\">↓</td><td>Rho (call +, put −). Impacto chico.</td></tr>\n<tr><td class=\"k\">Carry benefit γ (dividendo δ / r<sub>f</sub>)</td><td class=\"c dn\">↓</td><td class=\"c up\">↑</td><td>Baja d<sub>1</sub>,d<sub>2</sub> → baja prob RN ITM del call <span class=\"flag\">contra-intuitivo</span></td></tr>\n</tbody>\n</table>\n<table>\n<caption>Greeks — signo y comportamiento</caption>\n<thead><tr><th class=\"k\">Greek</th><th class=\"c\">Call</th><th class=\"c\">Put</th><th>Comportamiento</th></tr></thead>\n<tbody>\n<tr><td class=\"k\">Delta</td><td class=\"c\">∈ [0, e<sup>−δT</sup>]</td><td class=\"c\">∈ [−e<sup>−δT</sup>, 0]</td><td>Stock delta = ±1</td></tr>\n<tr><td class=\"k\">Gamma</td><td class=\"c\" colspan=\"2\"><b>≥ 0 · igual call = put</b></td><td>Máximo ATM; solo opciones tienen gamma</td></tr>\n<tr><td class=\"k\">Theta</td><td class=\"c\" colspan=\"2\"><b>&lt; 0 (usual)</b></td><td>Stock theta = 0</td></tr>\n<tr><td class=\"k\">Vega</td><td class=\"c\" colspan=\"2\"><b>&gt; 0 · igual call = put</b></td><td>Máximo ATM</td></tr>\n<tr><td class=\"k\">Rho</td><td class=\"c up\">&gt; 0</td><td class=\"c dn\">&lt; 0</td><td>Efecto chico vs σ y S</td></tr>\n</tbody>\n</table>\n<p style=\"font-size:11px;border:1px solid var(--ink);border-left:5px solid var(--ink);padding:7px 10px\">\n<b>Los 3 signos que más se pinchan:</b> (1) carry benefit ↑ → F<sub>0</sub> ↓, call ↓, put ↑; (2) receive-fixed swap → gana si tasas <b>bajan</b>; (3) volatilidad ↑ → call <b>y</b> put suben (vega positiva para ambos).</p>"
+    }
+  ]
+}

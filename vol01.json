@@ -1,31 +1,35 @@
 {
   "id": "vol01",
   "order": 1,
-  "title": "Fixed Income",
+  "title": "Quantitative Methods",
   "lms": [
     {
       "id": "LM1",
-      "title": "The Term Structure and Interest Rate Dynamics"
+      "title": "Basics of Multiple Regression and Underlying Assumptions"
     },
     {
       "id": "LM2",
-      "title": "The Arbitrage-Free Valuation Framework"
+      "title": "Evaluating Regression Model Fit and Interpreting Model Results"
     },
     {
       "id": "LM3",
-      "title": "Valuation and Analysis of Bonds with Embedded Options"
+      "title": "Model Misspecification"
     },
     {
       "id": "LM4",
-      "title": "Credit Analysis Models"
+      "title": "Extensions of Multiple Regression"
     },
     {
       "id": "LM5",
-      "title": "Credit Default Swaps"
+      "title": "Time-Series Analysis"
     },
     {
-      "id": "ANEXO",
-      "title": "Anexo (trampas transversales)"
+      "id": "LM6",
+      "title": "Machine Learning"
+    },
+    {
+      "id": "LM7",
+      "title": "Big Data Projects"
     }
   ],
   "cardTypes": {
@@ -33,1528 +37,935 @@
     "formula": "Fórmula",
     "clasificacion": "Clasificación",
     "proceso": "Proceso",
-    "modelo": "Modelo vs Modelo",
-    "direccion": "Dirección / Signo"
+    "metodo": "Método vs método"
   },
   "flashcards": [
     {
       "id": "vol01-c001",
       "lm": "LM1",
       "tipo": "concepto",
-      "q": "¿Qué es un <b>spot rate</b> y qué lo hace especial?",
-      "a": "YTM de un <b>zero-coupon bond</b>. Al no tener cupones intermedios, <b>no tiene reinvestment risk</b>.<br>DF<sub>N</sub> = 1/(1+z<sub>N</sub>)<sup>N</sup>"
+      "q": "¿Qué agrega la multiple regression frente a la simple?",
+      "a": "Usa <b>dos o más</b> variables independientes para explicar la variación de Y. Mejor predicción/entendimiento… o relaciones espurias si se usa mal."
     },
     {
       "id": "vol01-c002",
       "lm": "LM1",
-      "tipo": "concepto",
-      "q": "Si la curva spot es <b>upward sloping</b>, ¿dónde queda el forward respecto del spot?",
-      "a": "El <b>forward queda POR ENCIMA</b> del spot: f<sub>A,B−A</sub> &gt; z<sub>B</sub>.<br><b>Intuición:</b> el spot es un <b>promedio</b>; el forward es el dato <b>marginal</b>. Si el promedio sube, el próximo marginal está arriba.<br>Downward ⇒ forward <b>debajo</b>."
+      "tipo": "formula",
+      "q": "Modelo de regresión múltiple",
+      "a": "Y<sub>i</sub> = b<sub>0</sub> + b<sub>1</sub>X<sub>1i</sub> + b<sub>2</sub>X<sub>2i</sub> + … + b<sub>k</sub>X<sub>ki</sub> + ε<sub>i</sub>. Cada b<sub>j</sub> = efecto de X<sub>j</sub> <b>manteniendo las demás constantes</b>."
     },
     {
       "id": "vol01-c003",
       "lm": "LM1",
-      "tipo": "concepto",
-      "q": "¿Qué significa <b>\"if forward rates are realized\"</b>?",
-      "a": "Si los spots futuros evolucionan <b>exactamente</b> como predicen los forwards de hoy, <b>TODO</b> bono (cualquier maturity) rinde el <b>mismo one-period spot rate</b> en el período. El precio forward <b>no cambia</b>."
+      "tipo": "clasificacion",
+      "q": "Las 5 assumptions de la regresión",
+      "a": "1) Linealidad · 2) Homoskedasticity (varianza constante del error) · 3) Independencia de los errores (sin serial correlation) · 4) Normalidad de los errores · 5) Independencia entre las X (sin multicolinealidad exacta)."
     },
     {
       "id": "vol01-c004",
       "lm": "LM1",
-      "tipo": "concepto",
-      "q": "¿Por qué la <b>YTM</b> suele ser un mal estimador del retorno esperado? (4 razones)",
-      "a": "1. Tasas <b>volátiles</b> (reinversión ≠ YTM)<br>2. Curva <b>con pendiente</b> (no flat)<br>3. Riesgo de <b>default</b><br>4. <b>Embedded options</b><br><i>YTM ≈ retorno esperado SOLO si la curva es flat.</i>"
+      "tipo": "proceso",
+      "q": "Interpretar un residual plot para linealidad",
+      "a": "Residuos vs. X: si hay <b>patrón/curvatura</b> → la relación no es lineal (mala especificación de forma). Deben verse aleatorios alrededor de 0."
     },
     {
       "id": "vol01-c005",
       "lm": "LM1",
       "tipo": "concepto",
-      "q": "¿Qué es el <b>swap rate</b> y por qué la swap curve es un <i>par curve</i>?",
-      "a": "Es la tasa de la <b>pata fija</b> de un IRS. Como el swap es un <b>par swap</b> (valor = 0 al inicio y la pata flotante vale 1), la swap curve es un tipo de <b>par curve</b>.<br>Se deriva de <b>MRR</b>, no de tasas risk-free."
+      "q": "Residual plot que revela heteroskedasticity",
+      "a": "Residuos que se <b>abren en abanico</b> (varían más al crecer X/Ŷ) → varianza del error no constante."
     },
     {
       "id": "vol01-c006",
       "lm": "LM1",
       "tipo": "concepto",
-      "q": "¿Qué es el <b>bond risk premium</b> y qué driver domina en cada tramo?",
-      "a": "Exceso de retorno esperado de un bono <b>largo</b> default-free sobre uno corto. Es <b>forward-looking</b>.<br><b>Corto/intermedio:</b> política monetaria (≈⅔)<br><b>Largo:</b> <b>inflación</b> (≈⅔)"
+      "q": "¿Para qué sirve el supuesto de normalidad de los errores?",
+      "a": "Permite inferencia válida (t/F) especialmente en muestras chicas. Con n grande, el teorema central del límite ayuda aunque no sean normales."
     },
     {
       "id": "vol01-c007",
-      "lm": "LM1",
+      "lm": "LM2",
       "tipo": "formula",
-      "q": "<b>Forward rate model</b> (relación spot ⇄ forward)",
-      "a": "(1 + z<sub>B</sub>)<sup>B</sup> = (1 + z<sub>A</sub>)<sup>A</sup> × (1 + f<sub>A,B−A</sub>)<sup>B−A</sup><br><br><b>Notación:</b> f<sub>A,B−A</sub> = (fecha de inicio , <b>TENOR</b>) — ¡no (inicio, fin)!"
+      "q": "Adjusted R²",
+      "a": "R̄² = 1 − [(n−1)/(n−k−1)]·(1 − R²). Ajusta por grados de libertad; <b>no</b> sube automáticamente al agregar variables."
     },
     {
       "id": "vol01-c008",
-      "lm": "LM1",
-      "tipo": "formula",
-      "q": "<b>Forward pricing model</b> (con discount factors)",
-      "a": "DF<sub>B</sub> = DF<sub>A</sub> × F<sub>A,B−A</sub><br>⇒ <b>F<sub>A,B−A</sub> = DF<sub>B</sub> / DF<sub>A</sub></b>"
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Adjusted R²: dos cosas contra-intuitivas",
+      "a": "Puede <b>bajar</b> al agregar una variable, y puede ser <b>negativo</b> (R² nunca baja de 0). Con k≥1, R² &gt; R̄² siempre."
     },
     {
       "id": "vol01-c009",
-      "lm": "LM1",
-      "tipo": "formula",
-      "q": "Spot rate como <b>media geométrica</b> de forwards",
-      "a": "z<sub>T</sub> = [(1+z<sub>1</sub>)(1+f<sub>1,1</sub>)(1+f<sub>2,1</sub>)…(1+f<sub>T−1,1</sub>)]<sup>1/T</sup> − 1"
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Regla del |t| = 1 en adjusted R²",
+      "a": "Al agregar una variable: si su |t-stat| &gt; 1 → R̄² <b>sube</b>; si |t-stat| &lt; 1 → R̄² <b>baja</b>. (|t|=1 no implica significancia al 5%.)"
     },
     {
       "id": "vol01-c010",
-      "lm": "LM1",
+      "lm": "LM2",
       "tipo": "formula",
-      "q": "<b>Key rate durations</b>: fórmulas de level, steepness y curvature",
-      "a": "K<sub>L</sub> = K<sub>1</sub> + K<sub>5</sub> + K<sub>10</sub> &nbsp;<i>(= effective duration)</i><br><b>K<sub>S</sub> = −K<sub>1</sub> + K<sub>10</sub></b> &nbsp;⚠ ¡signo NEGATIVO en el corto!<br>K<sub>C</sub> = K<sub>1</sub> + K<sub>10</sub><br><br>%ΔP ≈ −Σ KeyDur<sub>i</sub> × Δz<sub>i</sub>"
+      "q": "AIC (Akaike)",
+      "a": "AIC = n·ln(SSE/n) + <b>2(k+1)</b>. Penalidad por parámetros = 2(k+1). Menor = mejor."
     },
     {
       "id": "vol01-c011",
-      "lm": "LM1",
+      "lm": "LM2",
       "tipo": "formula",
-      "q": "<b>Term structure of yield volatilities</b>",
-      "a": "σ(t,T) = σ[Δr(t,T)/r(t,T)] ÷ √Δt<br><br>Desv. estándar anualizada del <b>cambio proporcional</b> del yield (modelo lognormal).<br>Ej: σ mensual 0.1015 ⇒ anual = 0.1015 ÷ √(1/12) = <b>35.15%</b>"
+      "q": "BIC (Schwarz)",
+      "a": "BIC = n·ln(SSE/n) + <b>ln(n)·(k+1)</b>. Penaliza <b>más</b> que AIC (ln n &gt; 2) → prefiere modelos más parsimoniosos."
     },
     {
       "id": "vol01-c012",
-      "lm": "LM1",
-      "tipo": "clasificacion",
-      "q": "Las <b>4 formas</b> de la yield curve y qué señala cada una",
-      "a": "<b>Upward (normal):</b> inflación estable/creciente + term premium<br><b>Inverted:</b> inflación decreciente; suele preceder <b>recesiones</b><br><b>Flat:</b> transición<br><b>Humped:</b> intermedios &gt; cortos y largos (raro)"
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "AIC vs. BIC: cuándo usar cada uno",
+      "a": "<b>AIC</b> → si el objetivo es <b>predicción</b>. <b>BIC</b> → si el objetivo es el mejor <b>goodness of fit</b>. En ambos, menor es mejor y solo importan los valores <b>relativos</b>."
     },
     {
       "id": "vol01-c013",
-      "lm": "LM1",
-      "tipo": "clasificacion",
-      "q": "Los <b>3 factores</b> de Litterman–Scheinkman y su peso",
-      "a": "<b>1. Level</b> (shift paralelo) — <b>&gt;75%</b> del cambio total ⟵ EL MAYOR<br><b>2. Steepness</b> (no paralelo; cortos se mueven más)<br><b>3. Curvature</b> (extremos ↑, medio ↓) ⟵ EL MENOR"
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "F-statistic global",
+      "a": "F = MSR / MSE = (SSR/k) / (SSE/(n−k−1)). Tests si <b>al menos un</b> coeficiente ≠ 0."
     },
     {
       "id": "vol01-c014",
-      "lm": "LM1",
-      "tipo": "proceso",
-      "q": "<b>Bootstrapping</b>: ¿cómo se pasa del par curve al spot curve?",
-      "a": "Forward substitution: resolver los zeros <b>uno por uno, del más corto al más largo</b>, sustituyendo los ya conocidos.<br>1 = c/(1+z<sub>1</sub>) + c/(1+z<sub>2</sub>)² + … + (1+c)/(1+z<sub>N</sub>)<sup>N</sup><br><i>El zero de 1 año = par de 1 año.</i>"
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Joint F-test (nested models)",
+      "a": "F = [(SSE<sub>restricted</sub> − SSE<sub>unrestricted</sub>)/q] / [SSE<sub>unrestricted</sub>/(n−k−1)], con q y (n−k−1) g.l. q = nº de restricciones."
     },
     {
       "id": "vol01-c015",
-      "lm": "LM1",
+      "lm": "LM2",
       "tipo": "proceso",
-      "q": "<b>Rolling down the yield curve</b>: ¿qué se compra y por qué?",
-      "a": "Con curva <b>upward y estática</b>: comprar bonos con maturity <b>MAYOR</b> al horizonte y <b>venderlos antes</b> del vencimiento.<br>Al \"rodar\" hacia abajo se valúan a yields menores ⇒ <b>precios mayores</b>.<br>⚠ NO se compra maturity = horizonte."
+      "q": "¿Por qué un joint F-test y no t individuales?",
+      "a": "Con variables correlacionadas hay <b>poder explicativo compartido</b> que los t individuales no captan. El F conjunto lo considera."
     },
     {
       "id": "vol01-c016",
-      "lm": "LM1",
-      "tipo": "proceso",
-      "q": "¿Cómo se decide si un bono está <b>over/undervalued</b> con forwards?",
-      "a": "Comparar el <b>spot ESPERADO</b> con el <b>forward implícito</b>:<br>Spot esperado <b>&lt;</b> forward ⇒ <b>UNDERvalued</b> (retorno &gt; risk-free)<br>Spot esperado <b>=</b> forward ⇒ fair (retorno = risk-free)<br>Spot esperado <b>&gt;</b> forward ⇒ <b>OVERvalued</b>"
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Componentes de la ANOVA table",
+      "a": "Regression (SSR, df=k) · Residual (SSE, df=n−k−1) · Total (SST, df=n−1). MSR=SSR/k, MSE=SSE/(n−k−1). R²=SSR/SST."
     },
     {
       "id": "vol01-c017",
-      "lm": "LM1",
-      "tipo": "modelo",
-      "q": "<b>Unbiased</b> vs <b>Local</b> expectations theory",
-      "a": "<b>Unbiased (pure):</b> todas las maturities tienen <b>igual retorno esperado</b>; forward = predictor <b>insesgado</b>; investors <b>risk-neutral</b>.<br><b>Local:</b> el retorno = risk-free <b>solo en períodos CORTOS</b>; <b>SÍ admite risk premiums</b> en plazos largos ⇒ aplica a <b>bonos con riesgo</b>."
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "Fallas de forma funcional (misspecification)",
+      "a": "Variables <b>omitidas</b> · forma inapropiada de una variable · <b>escala</b> inapropiada · <b>pooling</b> inapropiado de datos. Pueden violar los supuestos."
     },
     {
       "id": "vol01-c018",
-      "lm": "LM1",
-      "tipo": "modelo",
-      "q": "<b>Segmented markets</b> vs <b>Preferred habitat</b>",
-      "a": "Ambas parten de preferencias por maturity.<br><b>Segmented:</b> RÍGIDA — no salen del segmento <b>jamás</b>. <i>(Ej: fallen angels que los fondos DEBEN vender.)</i><br><b>Preferred habitat:</b> FLEXIBLE — <b>se desvían</b> si el excess yield compensa. Más realista."
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Unconditional vs. conditional heteroskedasticity",
+      "a": "<b>Unconditional</b>: varianza del error <b>no</b> correlacionada con las X → sin problema mayor. <b>Conditional</b>: correlacionada con las X → problemática."
     },
     {
       "id": "vol01-c019",
-      "lm": "LM1",
-      "tipo": "modelo",
-      "q": "<b>Liquidity preference theory</b>: ¿qué implica para los forwards?",
-      "a": "El <b>liquidity premium</b> compensa el riesgo de tasa de prestar largo y <b>crece con el maturity</b>.<br>⇒ El forward es un estimador <b>SESGADO AL ALZA</b> del future spot.<br>⇒ Predice una curva <b>típicamente UPWARD</b>."
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Efecto de la conditional heteroskedasticity",
+      "a": "<b>Subestima</b> los standard errors → t-stats <b>inflados</b> → más <b>errores Type I</b> (falsos positivos de significancia)."
     },
     {
       "id": "vol01-c020",
-      "lm": "LM1",
-      "tipo": "direccion",
-      "q": "Volatilidad: ¿qué tramo es más volátil, en <b>yield</b> y en <b>precio</b>?",
-      "a": "En <b>YIELD</b>: los <b>CORTOS</b> son más volátiles (35.15% a 0.25y vs 11.69% a 30y).<br>En <b>PRECIO</b>: los <b>LARGOS</b> varían más (efecto duration).<br>⚠ El examen mezcla ambos deliberadamente.<br><i>Vol corta ← política monetaria · Vol larga ← inflación + economía real</i>"
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "Test y corrección de heteroskedasticity",
+      "a": "Test: <b>Breusch–Pagan</b> (regresa residuos² sobre las X). Corrección: <b>robust/White</b> standard errors."
     },
     {
       "id": "vol01-c021",
-      "lm": "LM1",
-      "tipo": "direccion",
-      "q": "<b>Bull/Bear × Flatten/Steepen</b>: los 4 cuadrantes",
-      "a": "<b>Bull</b> = yields BAJAN · <b>Bear</b> = yields SUBEN<br><br><b>Bull flattening:</b> largo baja más (<i>flight to quality</i>)<br><b>Bull steepening:</b> corto baja más (<i>recorte de tasas</i>)<br><b>Bear flattening:</b> corto sube más (<i>alza de tasas</i>)<br><b>Bear steepening:</b> largo sube más"
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Efecto de la serial correlation (positiva)",
+      "a": "Serial correlation positiva → SE <b>subestimados</b> → t-stats inflados → <b>Type I</b>. (Los coeficientes siguen insesgados.)"
     },
     {
       "id": "vol01-c022",
-      "lm": "LM1",
-      "tipo": "direccion",
-      "q": "Trades: ¿qué hago si espero que las tasas <b>bajen</b>? ¿Y un <b>steepener</b>?",
-      "a": "<b>Tasas bajan</b> ⇒ <b>EXTENDER</b> duration<br><b>Tasas suben</b> ⇒ <b>ACORTAR</b> duration<br><br><b>Steepener</b> (largo sube vs corto) ⇒ <b>SHORT largos + comprar cortos</b> (duration-neutral)<br><b>Bullish flattening esperado</b> ⇒ rotar de <b>bullet → barbell</b>"
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "Durbin–Watson: cómo leerlo",
+      "a": "DW ≈ 0 a 4. <b>DW ≈ 2</b> → sin serial correlation. <b>DW &lt; 2</b> → positiva. <b>DW &gt; 2</b> → negativa. DW ≈ 2(1−r)."
     },
     {
       "id": "vol01-c023",
-      "lm": "LM2",
-      "tipo": "concepto",
-      "q": "¿Qué es <b>arbitrage-free valuation</b>?",
-      "a": "Valuar de forma consistente con la <b>ausencia de arbitraje</b>: una operación con <b>cero desembolso neto</b> que genera <b>ganancia sin riesgo</b>.<br><b>Law of one price:</b> dos sustitutos perfectos valen lo mismo."
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "Corrección de serial correlation",
+      "a": "<b>Newey–West</b> standard errors (robustos a serial correlation y heteroskedasticity). También Breusch–Godfrey para detectar."
     },
     {
       "id": "vol01-c024",
-      "lm": "LM2",
+      "lm": "LM3",
       "tipo": "concepto",
-      "q": "Los <b>2 tipos</b> de arbitraje",
-      "a": "<b>1. Value additivity:</b> el todo ≠ suma de las partes. <i>(Vender 105 zeros a 100 + comprar el bono a 97 ⇒ +3 hoy.)</i><br><b>2. Dominance:</b> un payoff risk-free futuro con precio \"barato\". <i>(Vender 2C a 200 + comprar 1D a 200 ⇒ +10 en 1 año.)</i>"
+      "q": "Efecto de la multicolinealidad",
+      "a": "SE <b>inflados</b> → t-stats muy chicos → <b>Type II</b>. Señal clásica: <b>R² alto pero coeficientes individualmente no significativos</b>."
     },
     {
       "id": "vol01-c025",
-      "lm": "LM2",
-      "tipo": "concepto",
-      "q": "¿Por qué el <b>lognormal random walk</b>? (2 ventajas)",
-      "a": "<b>1.</b> Las tasas <b>no pueden ser negativas</b><br><b>2.</b> Mayor <b>volatilidad a tasas altas</b><br><br>Std dev de la short rate = <b>i<sub>0</sub> × σ</b> (¡no σ sola!). Ej: i₀=2%, σ=10% ⇒ 20 bps."
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "VIF (variance inflation factor)",
+      "a": "VIF<sub>j</sub> = 1/(1 − R²<sub>j</sub>), donde R²<sub>j</sub> es de regresar X<sub>j</sub> sobre las otras X. <b>VIF &gt; 5</b> preocupa; <b>&gt; 10</b> serio. Corrección: quitar variables."
     },
     {
       "id": "vol01-c026",
-      "lm": "LM2",
-      "tipo": "concepto",
-      "q": "¿Cuándo el árbol binomial <b>agrega valor</b> vs la spot curve?",
-      "a": "Para <b>option-free</b>: NO agrega nada — ambos dan <b>el mismo valor</b> (102.3254 = 102.3254). Diferencias = redondeo.<br><b>El árbol es imprescindible cuando los flujos son RATE-DEPENDENT</b> (embedded options)."
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "High-leverage point vs. outlier",
+      "a": "<b>High-leverage point</b>: valor extremo en una <b>X</b> (independiente). <b>Outlier</b>: valor extremo en la <b>Y</b> (dependiente). Ambos pueden ser influyentes."
     },
     {
       "id": "vol01-c027",
-      "lm": "LM2",
-      "tipo": "concepto",
-      "q": "¿Qué son <b>stripping</b> y <b>reconstitution</b>?",
-      "a": "<b>Stripping:</b> el dealer separa los flujos del bono y los vende como <b>zeros</b>.<br><b>Reconstitution:</b> recombina zeros para reproducir el bono cupón.<br>El enfoque AF <b>impide ganar arbitraje</b> por esta vía (se cumple value additivity)."
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Umbral de leverage",
+      "a": "Influyente si leverage &gt; <b>3·(k+1)/n</b>, con k = nº de X y n = observaciones."
     },
     {
       "id": "vol01-c028",
-      "lm": "LM2",
+      "lm": "LM4",
       "tipo": "formula",
-      "q": "<b>Backward induction</b>: la fórmula del valor en un nodo",
-      "a": "V<sub>nodo</sub> = [ C + (0.5 × V<sub>H</sub> + 0.5 × V<sub>L</sub>) ] / (1 + i)<br><br>· Probabilidades <b>0.5 / 0.5</b><br>· Se descuenta a la tasa <b>i del NODO</b> (inicio del período)<br>· Se arranca en <b>maturity (=par)</b> y se va de <b>derecha a izquierda</b>"
+      "q": "Studentized residual: grados de libertad",
+      "a": "Residuo / su adjusted standard error. Influyente si &gt; el t crítico con <b>(n − k − 2)</b> g.l."
     },
     {
       "id": "vol01-c029",
-      "lm": "LM2",
-      "tipo": "formula",
-      "q": "Relación entre nodos <b>adyacentes</b> y entre <b>extremos</b>",
-      "a": "Adyacentes (2 std dev): <b>i<sub>1,H</sub> = i<sub>1,L</sub> × e<sup>2σ</sup></b><br>Extremos de Time 2 (4 std dev): <b>i<sub>2,HH</sub> = i<sub>2,LL</sub> × e<sup>4σ</sup></b><br><br>⚠ No uses 2σ entre los extremos."
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Dummy (indicator) variable",
+      "a": "Representa una variable cualitativa; toma <b>1</b> (verdadero) o <b>0</b> (falso)."
     },
     {
       "id": "vol01-c030",
-      "lm": "LM2",
-      "tipo": "formula",
-      "q": "<b>Proceso estocástico</b> general de un term structure model",
-      "a": "<b>dr = θ<sub>t</sub> · dt + σ<sub>t</sub> · dZ</b><br><br><b>Drift</b> (θ·dt): el path esperado (zero-vol)<br><b>Término estocástico</b> (σ·dZ): la volatilidad<br>Z = proceso de Wiener"
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Cuántas dummies para n categorías?",
+      "a": "<b>(n − 1)</b> dummies (la omitida es la categoría base). Incluir n cae en la <b>dummy variable trap</b> (colinealidad perfecta)."
     },
     {
       "id": "vol01-c031",
-      "lm": "LM2",
-      "tipo": "clasificacion",
-      "q": "<b>Pathwise valuation</b>: ¿cuántos paths y cómo se combinan?",
-      "a": "El nº de paths = fila del <b>TRIÁNGULO DE PASCAL</b>. Un bono de <b>3 años ⇒ 4 paths</b> (HH/HT/TH/TT).<br>Se calcula el <b>PV por cada path</b> y se <b>PROMEDIA</b> (⚠ no se suma).<br>Ej: promedio = <b>102.8105</b> = mismo valor que backward induction."
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Intercept dummy vs. slope dummy",
+      "a": "<b>Intercept dummy</b>: suma/resta al intercepto (desplaza la recta). <b>Slope dummy</b> (interacción): cambia la <b>pendiente</b> (D×X)."
     },
     {
       "id": "vol01-c032",
-      "lm": "LM2",
-      "tipo": "proceso",
-      "q": "<b>Calibración</b> del árbol al term structure: los 4 pasos",
-      "a": "1. Elegir un <b>rate de prueba</b> i<sub>1,L</sub> &lt; forward implícito<br>2. Calcular i<sub>1,H</sub> = i<sub>1,L</sub> × e<sup>2σ</sup><br>3. Descontar el bono <b>par de 2 años</b> por el árbol; si ≠ 100 ⇒ <b>ajustar y repetir</b> (Solver)<br>4. Calibrado Time 1, avanzar a Time 2 con el bono de 3 años"
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Logistic regression (logit)",
+      "a": "ln[P/(1−P)] = b<sub>0</sub> + b<sub>1</sub>X<sub>1</sub> + … El lado izquierdo es el <b>log odds</b> (logit). P = 1/(1+e<sup>−(…)</sup>)."
     },
     {
       "id": "vol01-c033",
-      "lm": "LM2",
-      "tipo": "proceso",
-      "q": "<b>Monte Carlo</b>: los 5 pasos",
-      "a": "1. Simular muchos paths (ej. <b>500</b>) de la short rate<br>2. Generar los <b>spot rates</b> de esas short rates<br>3. Cash flow a lo largo de cada path<br>4. <b>PV</b> de cada path<br>5. <b>PROMEDIAR</b> los PV"
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Estimación e interpretación del logit",
+      "a": "Se estima por <b>maximum likelihood</b> (no OLS). Cada pendiente = cambio en el <b>log odds</b> por unidad de X, con lo demás constante."
     },
     {
       "id": "vol01-c034",
-      "lm": "LM2",
-      "tipo": "proceso",
-      "q": "Monte Carlo: ¿qué es el <b>drift adjustment</b>?",
-      "a": "El modelo calza el mercado <b>solo por azar</b>. Se suma una <b>CONSTANTE (drift term)</b> a <b>todas</b> las short rates hasta que el PV promedio de cada benchmark = <b>su precio de mercado</b>.<br>⇒ Modelo <b>drift-adjusted</b> = arbitrage-free."
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Por qué logistic y no lineal para binaria?",
+      "a": "La lineal puede dar probabilidades &lt; 0 o &gt; 1 y viola supuestos. La logística acota P en (0,1) vía la función sigmoide."
     },
     {
       "id": "vol01-c035",
-      "lm": "LM2",
-      "tipo": "proceso",
-      "q": "¿Cuándo se usa <b>Monte Carlo</b> y no el árbol?",
-      "a": "Cuando los flujos son <b>PATH-DEPENDENT</b>: el flujo depende del <b>camino recorrido</b>, no solo del nivel actual de tasas.<br><b>Caso típico: MBS</b> (los prepayments suben cuando las tasas bajan).<br><i>Mean reversion pone cotas al proceso.</i>"
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Linear trend vs. log-linear trend",
+      "a": "<b>Linear</b>: cambio <b>absoluto</b> constante por período (y = b0 + b1·t). <b>Log-linear</b>: tasa de <b>crecimiento</b> constante / exponencial (ln y = b0 + b1·t)."
     },
     {
       "id": "vol01-c036",
-      "lm": "LM2",
-      "tipo": "modelo",
-      "q": "<b>Equilibrium</b> vs <b>Arbitrage-free</b> models",
-      "a": "<b>EQUILIBRIUM (CIR, Vasicek):</b> parten de variables económicas <b>fundamentales</b>. <b>NO calzan</b> los precios de mercado. Probabilidades <b>reales</b>. <b>Pocos</b> parámetros.<br><br><b>ARBITRAGE-FREE (Ho-Lee, KWF):</b> parten de los <b>precios observados</b>. <b>SÍ calzan la curva actual</b> (drift θ<sub>t</sub> <b>time-dependent</b>). Probabilidades <b>risk-neutral</b>. Preferidos para <b>embedded options</b>."
+      "lm": "LM5",
+      "tipo": "clasificacion",
+      "q": "Covariance stationary: 3 condiciones",
+      "a": "1) Media constante · 2) Varianza constante · 3) Covarianza constante con valores rezagados. <b>Requisito para usar AR.</b>"
     },
     {
       "id": "vol01-c037",
-      "lm": "LM2",
-      "tipo": "modelo",
-      "q": "Los 4 modelos: ¿cuáles permiten <b>tasas negativas</b>?",
-      "a": "<b>SÍ permiten (vol constante/normal):</b> <b>Vasicek</b> y <b>Ho-Lee</b><br><b>NO permiten:</b> <b>CIR</b> (vol varía con <b>√r</b> ⇒ σ→0 al bajar r) y <b>KWF</b> (lognormal, modela <b>d ln r</b>)<br><br><i>CIR y Vasicek tienen el MISMO drift (mean reversion); difieren solo en la volatilidad.</i>"
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Mean-reverting level de un AR(1)",
+      "a": "x<sub>t</sub> = b<sub>0</sub> / (1 − b<sub>1</sub>). Si el valor actual está por debajo → sube; por encima → baja."
     },
     {
       "id": "vol01-c038",
-      "lm": "LM2",
-      "tipo": "direccion",
-      "q": "¿Qué le pasa al árbol si <b>σ → 0</b>? ¿Y si σ sube?",
-      "a": "<b>σ → 0:</b> el árbol <b>COLAPSA a la forward curve implícita</b> (los nodos se juntan).<br><b>σ ↑:</b> las tasas se <b>separan más</b>.<br><br>⚠ Tras calibrar, el <b>promedio</b> de i<sub>H</sub>/i<sub>L</sub> queda <b>LIGERAMENTE POR ENCIMA</b> del forward implícito (por lognormalidad)."
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Chain rule of forecasting",
+      "a": "Para x<sub>t+2</sub>: primero se predice x<sub>t+1</sub> y se sustituye en el AR(1). Ej. Intel: x<sub>t+2</sub> = 0,1513 + 0,7462·(0,6214) = <b>0,6150</b>."
     },
     {
       "id": "vol01-c039",
-      "lm": "LM3",
-      "tipo": "concepto",
-      "q": "¿Quién tiene el <b>call</b>? ¿Y el <b>put</b>? ¿Cuándo ejerce cada uno?",
-      "a": "<b>CALL = del ISSUER.</b> Ejerce si las tasas <b>BAJAN</b> (refinancia más barato) o mejora su crédito.<br><b>PUT = del INVESTOR.</b> Ejerce si las tasas <b>SUBEN</b> (reinvierte a mayor yield).<br><i>No existe putable American-style.</i>"
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "¿El AR ajusta bien? — autocorrelación de residuos",
+      "a": "Se testea si las <b>autocorrelaciones de los residuos</b> son significativas. Si <b>ninguna</b> lo es → el modelo está bien especificado."
     },
     {
       "id": "vol01-c040",
-      "lm": "LM3",
-      "tipo": "concepto",
-      "q": "¿Qué es un <b>make-whole call</b> y qué implica?",
-      "a": "El call price se calcula descontando los flujos a un <b>spread angosto sobre un soberano</b> ⇒ el call price <b>sube junto con el valor del bono</b>.<br>⇒ El refunding económico es <b>virtualmente imposible</b>.<br>⇒ El bono se comporta como <b>OPTION-FREE</b> (duration ≈ straight, convexity positiva)."
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "In-sample vs. out-of-sample; criterio RMSE",
+      "a": "Out-of-sample = datos fuera del período de estimación. Se compara con <b>RMSE</b>; <b>menor RMSE out-of-sample</b> = mejor modelo de forecasting."
     },
     {
       "id": "vol01-c041",
-      "lm": "LM3",
-      "tipo": "concepto",
-      "q": "¿Por qué el <b>sinking fund bond</b> es un \"long straddle\" para el emisor?",
-      "a": "Combina: <b>call</b> + <b>acceleration provision</b> (\"triple up\": beneficia si las tasas <b>BAJAN</b>) + <b>delivery option</b> (entregar bonos comprados en mercado: beneficia si las tasas <b>SUBEN</b>).<br>⇒ El emisor gana <b>en ambas direcciones</b>. Más volatilidad = peor para el inversor."
+      "lm": "LM5",
+      "tipo": "clasificacion",
+      "q": "Random walk",
+      "a": "x<sub>t</sub> = x<sub>t−1</sub> + ε<sub>t</sub> (es decir b<sub>0</sub>=0, b<sub>1</sub>=1). <b>Con drift</b>: b<sub>0</sub> ≠ 0, b<sub>1</sub>=1."
     },
     {
       "id": "vol01-c042",
-      "lm": "LM3",
+      "lm": "LM5",
       "tipo": "concepto",
-      "q": "¿Qué es el <b>OAS</b> y por qué se llama \"option-adjusted\"?",
-      "a": "El spread <b>CONSTANTE</b> que, sumado a <b>TODOS los one-period forward rates del árbol</b>, hace que el valor AF <b>iguale el precio de mercado</b>. Se halla por <b>trial and error</b>.<br>\"Option-adjusted\" porque en cada nodo se ajusta el valor según se ejerza o no ⇒ <b>remueve el componente de opción</b>; queda solo <b>crédito + liquidez</b>."
+      "q": "¿Por qué un random walk no es estacionario?",
+      "a": "Mean-reverting level = b<sub>0</sub>/(1−b<sub>1</sub>) = 0/0 <b>indefinido</b>, y la <b>varianza crece sin límite</b> con el tiempo."
     },
     {
       "id": "vol01-c043",
-      "lm": "LM3",
+      "lm": "LM5",
       "tipo": "concepto",
-      "q": "¿Por qué en la valuación se usan <b>FORWARDS</b> y no spots?",
-      "a": "Porque para decidir el <b>ejercicio</b> hay que conocer el <b>valor del bono en cada fecha futura</b>.<br>Los <b>one-period forwards</b> permiten avanzar período a período (backward induction).<br>Los <b>spots solo dan el valor de hoy</b>."
+      "q": "Unit root",
+      "a": "b<sub>1</sub> = 1 → la serie tiene una raíz unitaria y es <b>no estacionaria</b>. Un AR estimado sobre ella da resultados inválidos."
     },
     {
       "id": "vol01-c044",
-      "lm": "LM3",
-      "tipo": "concepto",
-      "q": "<b>Convertible: minimum (floor) value</b> — ¿qué es y cuál es la trampa?",
-      "a": "<b>Minimum value = MAX(Conversion value ; Straight value)</b><br>⚠ Es el <b>MÁXIMO</b>, no el mínimo ni el promedio.<br>⚠ Es un <b>PISO MÓVIL</b>: el straight value cambia con <b>tasas y credit spreads</b>."
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Dickey–Fuller test",
+      "a": "Se regresa Δx<sub>t</sub> = (b<sub>1</sub>−1)·x<sub>t−1</sub> + … y se testea H<sub>0</sub>: (b<sub>1</sub>−1) = 0 con <b>valores críticos DF</b> (no t normales). No rechazar → unit root."
     },
     {
       "id": "vol01-c045",
-      "lm": "LM3",
-      "tipo": "formula",
-      "q": "Las <b>2 ecuaciones madre</b> de los bonos con opciones",
-      "a": "<b>V<sub>callable</sub> = V<sub>straight</sub> − V<sub>call</sub></b><br><i>(el inversor está short el call ⇒ RESTA)</i><br><br><b>V<sub>putable</sub> = V<sub>straight</sub> + V<sub>put</sub></b><br><i>(el inversor está long el put ⇒ SUMA)</i>"
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Corregir un unit root",
+      "a": "<b>First-differencing</b>: modelar y<sub>t</sub> = x<sub>t</sub> − x<sub>t−1</sub>, que sí es covariance stationary, y correr el AR sobre las diferencias."
     },
     {
       "id": "vol01-c046",
-      "lm": "LM3",
-      "tipo": "formula",
-      "q": "<b>Effective duration</b>",
-      "a": "EffDur = <b>(PV<sub>−</sub> − PV<sub>+</sub>) / (2 × ΔCurve × PV<sub>0</sub>)</b><br><br>⚠ El <b>OAS se mantiene CONSTANTE</b> entre PV<sub>−</sub> y PV<sub>+</sub>.<br>Ej: (101.599 − 100.407) / (2 × 0.0030 × 101.000) = <b>1.97</b>"
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Seasonality: detección y corrección",
+      "a": "Autocorrelación de residuos significativa en el <b>lag estacional</b> (ej. lag 4 trimestral, 12 mensual). Se corrige <b>agregando un término de lag estacional</b> al AR."
     },
     {
       "id": "vol01-c047",
-      "lm": "LM3",
-      "tipo": "formula",
-      "q": "<b>Effective convexity</b>",
-      "a": "EffCon = <b>[PV<sub>−</sub> + PV<sub>+</sub> − 2×PV<sub>0</sub>] / [(ΔCurve)² × PV<sub>0</sub>]</b><br><br>Ej: (101.381 + 100.146 − 2×100.785) / (0.003² × 100.785) = <b>−47.41</b> ⇒ NEGATIVA"
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "ARCH(1)",
+      "a": "La varianza del error depende del error² del período anterior: σ²<sub>t</sub> = a<sub>0</sub> + a<sub>1</sub>·ε²<sub>t−1</sub>. Se testea regresando residuos² sobre residuos² rezagados; a<sub>1</sub> significativo → ARCH."
     },
     {
       "id": "vol01-c048",
-      "lm": "LM3",
-      "tipo": "formula",
-      "q": "<b>Capped</b> y <b>floored floaters</b>",
-      "a": "<b>V<sub>capped</sub> = V<sub>straight</sub> − V<sub>cap</sub></b><br><i>Cap = opción del ISSUER ⇒ RESTA</i><br><br><b>V<sub>floored</sub> = V<sub>straight</sub> + V<sub>floor</sub></b><br><i>Floor = opción del INVESTOR ⇒ SUMA</i><br><br>Ejercicio <b>AUTOMÁTICO</b>, no discrecional."
+      "lm": "LM6",
+      "tipo": "clasificacion",
+      "q": "Las 3 clases de ML",
+      "a": "<b>Supervised</b> (hay target Y, labeled) · <b>Unsupervised</b> (sin target) · <b>Deep learning / Reinforcement</b> (tareas complejas no-lineales)."
     },
     {
       "id": "vol01-c049",
-      "lm": "LM3",
-      "tipo": "formula",
-      "q": "Convertible: las <b>4 métricas</b> principales",
-      "a": "Conversion price = <b>Par / Conversion ratio</b><br>Conversion (parity) value = <b>Share price × Conv. ratio</b><br>Market conversion price = <b>Precio del convertible / Conv. ratio</b><br>Mkt conv. premium/share = <b>Mkt conv. price − Share price</b>"
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Bias error vs. variance error",
+      "a": "<b>Bias</b> → underfitting → alto error <b>in-sample</b>. <b>Variance</b> → overfitting → alto error <b>out-of-sample</b>."
     },
     {
       "id": "vol01-c050",
-      "lm": "LM3",
-      "tipo": "formula",
-      "q": "Convertible: <b>premium over straight value</b> — ¿por qué es defectuosa?",
-      "a": "Premium over straight value = <b>(Precio del convertible / Straight value) − 1</b><br><br>⚠ Es una medida <b>DEFECTUOSA</b> del downside risk: el <b>straight value NO es fijo</b> — se mueve con tasas y credit spreads (<b>moving floor</b>)."
+      "lm": "LM6",
+      "tipo": "proceso",
+      "q": "K-fold cross-validation",
+      "a": "Datos en k submuestras; k−1 entrenan, 1 valida; se repite k veces. Media de errores ≈ E<sub>out</sub>. <b>k típico 5 o 10</b>. <b>No sirve con time-series.</b>"
     },
     {
       "id": "vol01-c051",
-      "lm": "LM3",
-      "tipo": "clasificacion",
-      "q": "Los <b>estilos</b> de call option",
-      "a": "<b>European:</b> una sola fecha<br><b>American:</b> continuo, desde la 1ª call date<br><b>Bermudan:</b> fechas predeterminadas<br><br>Suele haber un <b>call protection period</b>. <i>El putable NO tiene versión American.</i>"
+      "lm": "LM6",
+      "tipo": "formula",
+      "q": "Penalty de LASSO",
+      "a": "Penalty = λ·Σ|b̂<sub>k</sub>|, con λ &gt; 0. Minimiza SSR + penalty. Hace <b>feature selection</b> (lleva coeficientes a 0). Si λ=0 → OLS."
     },
     {
       "id": "vol01-c052",
-      "lm": "LM3",
-      "tipo": "clasificacion",
-      "q": "¿Qué opciones son del <b>issuer</b> y cuáles del <b>investor</b>?",
-      "a": "<b>ISSUER:</b> Call · <b>Cap</b> (floater)<br><b>INVESTOR:</b> Put · Extension · Conversion · Estate put (survivor's option) · <b>Floor</b> (floater)<br><br><i>Regla: las del issuer RESTAN valor; las del investor SUMAN.</i>"
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "SVM en una línea",
+      "a": "Clasificador lineal que halla el hyperplane con <b>máximo margen</b>; los <b>support vectors</b> son los puntos más cercanos que lo definen."
     },
     {
       "id": "vol01-c053",
-      "lm": "LM3",
-      "tipo": "clasificacion",
-      "q": "Convertibles: los <b>3 estados</b> de risk-return",
-      "a": "<b>Busted convertible</b> (acción MUY por debajo del conv. price) ⇒ se mueve como <b>BONO</b>; tasas y spreads pesan <b>MUCHO</b><br><b>Hybrid</b> (acción cerca) ⇒ mixto<br><b>Equity-like</b> (acción por encima) ⇒ se mueve como <b>ACCIÓN</b>; tasas y spreads casi <b>no lo afectan</b>"
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "KNN: elegir k",
+      "a": "Clasifica por mayoría de los k vecinos. k par → empates; k chico → sensible a outliers; k grande → diluye. No-paramétrico."
     },
     {
       "id": "vol01-c054",
-      "lm": "LM3",
-      "tipo": "proceso",
-      "q": "Valuar un bono con opción desde el árbol: los <b>3 pasos</b>",
-      "a": "1. <b>Generar</b> el árbol según curva + σ<br>2. En <b>CADA NODO</b> chequear si la opción se ejerce y <b>RESETEAR el valor al strike</b> si corresponde<br>3. <b>Backward induction</b> de derecha a izquierda<br><br>⚠ El <b>valor reseteado</b> es el que se usa al descontar hacia atrás. Olvidarlo = error de cálculo #1."
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "CART",
+      "a": "Árbol binario (root/decision/terminal). Sirve para <b>clasificación y regresión</b>. Terminal: mayoría (clasif.) o media (regr.). <b>Interpretable.</b>"
     },
     {
       "id": "vol01-c055",
-      "lm": "LM3",
-      "tipo": "proceso",
-      "q": "<b>Reglas de ejercicio</b>: ¿qué compara cada parte?",
-      "a": "<b>ISSUER (call):</b> ejerce si <b>PV de flujos futuros &gt; call price</b><br><b>INVESTOR (put):</b> ejerce si <b>PV de flujos futuros &lt; put price</b><br><br>⚠ Se compara <b>PV vs STRIKE</b>, nunca contra el precio de mercado."
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Voting vs. bagging",
+      "a": "<b>Voting</b>: distintos algoritmos, voto mayoritario (heterogéneo). <b>Bagging</b>: mismo algoritmo, n datasets por muestreo <b>con reemplazo</b> (homogéneo)."
     },
     {
       "id": "vol01-c056",
-      "lm": "LM3",
-      "tipo": "proceso",
-      "q": "¿Cómo se calcula la <b>effective duration</b>? (4 pasos)",
-      "a": "1. Dado PV<sub>0</sub> (precio), calcular el <b>OAS</b> implícito<br>2. <b>Bajar</b> la curva ΔCurve, <b>REGENERAR el árbol</b>, revaluar <b>con el MISMO OAS</b> → PV<sub>−</sub><br>3. <b>Subir</b> la curva, regenerar, revaluar con el <b>mismo OAS</b> → PV<sub>+</sub><br>4. Aplicar la fórmula"
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Random forest",
+      "a": "Muchos CART vía bagging + <b>subset aleatorio de m &lt; n features</b> por nodo. Reduce variance/overfitting, pero es <b>black box</b>."
     },
     {
       "id": "vol01-c057",
-      "lm": "LM3",
-      "tipo": "modelo",
-      "q": "<b>Effective duration</b>: callable vs putable vs straight",
-      "a": "<b>EffDur<sub>callable</sub> ≤ EffDur<sub>straight</sub></b><br><b>EffDur<sub>putable</sub> ≤ EffDur<sub>straight</sub></b><br><br>⚠ <b>AMBAS</b> opciones <b>ACORTAN</b> la duration. Nunca la alargan.<br>Callable se acorta cuando las tasas <b>BAJAN</b>; putable cuando <b>SUBEN</b>.<br><i>Deep in the money ⇒ duration ≈ la de un straight que vence en la 1ª fecha de ejercicio.</i>"
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Eigenvector vs. eigenvalue (PCA)",
+      "a": "<b>Eigenvector</b> = dirección / variable compuesta no correlacionada. <b>Eigenvalue</b> = % de varianza explicada. Retener hasta 85–95% (scree plot)."
     },
     {
       "id": "vol01-c058",
-      "lm": "LM3",
-      "tipo": "modelo",
-      "q": "<b>Effective convexity</b>: ¿quién puede ser negativa?",
-      "a": "<b>Straight:</b> SIEMPRE positiva (baja)<br><b>Putable:</b> <b>SIEMPRE POSITIVA</b> (el precio tiene un <b>piso</b>)<br><b>Callable:</b> <b>PUEDE SER NEGATIVA</b> cuando el call está <b>near the money</b> (el precio queda <b>capado</b>)<br><br>⚠ <b>Solo el callable</b> puede tener convexity negativa."
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "K-means vs. hierarchical",
+      "a": "<b>K-means</b>: k fijo a priori, sin relación entre clusters. <b>Hierarchical</b>: agglomerative (chicos) o divisive (grandes), con jerarquía; dendrograma."
     },
     {
       "id": "vol01-c059",
-      "lm": "LM3",
-      "tipo": "modelo",
-      "q": "<b>One-sided durations</b>: ¿quién es más sensible a qué?",
-      "a": "<b>CALLABLE: up-dur &gt; down-dur</b> ⇒ más sensible a <b>SUBAS</b> de tasa (la baja está <b>capada</b> por el call)<br><i>Ej: EffDur 1.39 · up 1.94 · down 0.84</i><br><br><b>PUTABLE: down-dur &gt; up-dur</b> ⇒ más sensible a <b>BAJAS</b> (la suba está frenada por el put)<br><i>Ej: EffDur 3.00 · up 1.49 · down 4.51</i>"
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Neural network: estructura",
+      "a": "Input · hidden layer(s) · output. Cada nodo = summation + <b>activation no-lineal</b> (ReLU/sigmoid). <b>DNN</b> = ≥ 2 hidden layers."
     },
     {
       "id": "vol01-c060",
-      "lm": "LM3",
-      "tipo": "modelo",
-      "q": "Componentes de valor de un <b>callable putable convertible</b>",
-      "a": "Straight bond<br><b>+</b> call option <b>sobre la ACCIÓN</b> (del inversor)<br><b>= Convertible</b><br><b>−</b> issuer call option (sobre el bono)<br><b>= Callable convertible</b><br><b>+</b> investor put option<br><b>= Callable putable convertible</b>"
+      "lm": "LM7",
+      "tipo": "proceso",
+      "q": "5 pasos de un proyecto de datos",
+      "a": "1 Conceptualization · 2 Data collection · 3 Data prep &amp; wrangling · 4 Data exploration · 5 Model training. (Iterativo.)"
     },
     {
       "id": "vol01-c061",
-      "lm": "LM3",
-      "tipo": "direccion",
-      "q": "σ ↑ : ¿qué pasa con el <b>valor de la opción</b> y con el <b>valor del bono</b>?",
-      "a": "<b>La opción SIEMPRE sube</b> (call y put).<br>Pero el <b>BONO</b> va al revés:<br>· <b>Callable: BAJA</b> (se resta más)<br>· <b>Putable: SUBE</b> (se suma más)<br><br>⚠ No confundas \"valor de la opción\" con \"valor del bono\"."
+      "lm": "LM7",
+      "tipo": "clasificacion",
+      "q": "6 errores de cleansing (structured)",
+      "a": "Incompleteness · Invalidity · Inaccuracy · Inconsistency · Non-uniformity · Duplication."
     },
     {
       "id": "vol01-c062",
-      "lm": "LM3",
-      "tipo": "direccion",
-      "q": "σ → <b>OAS</b>: ¿qué pasa con el callable y con el putable?",
-      "a": "<b>Precio de mercado FIJO.</b> El OAS sigue al <b>valor del modelo</b>.<br><b>σ ↑ ⇒ Callable:</b> valor del modelo <b>baja</b> ⇒ <b>OAS BAJA</b> (relación <b>INVERSA</b>)<br><b>σ ↑ ⇒ Putable:</b> valor del modelo <b>sube</b> ⇒ <b>OAS SUBE</b> (relación <b>DIRECTA</b>)<br><i>Todo sale del signo: − callable, + putable.</i><br>Cifras: OAS callable cae de <b>138.2 bps</b> (σ=0%) a <b>1.2 bps</b> (σ=30%)."
+      "lm": "LM7",
+      "tipo": "clasificacion",
+      "q": "5 transformaciones de preprocessing",
+      "a": "Extraction · Aggregation · <b>Filtration</b> (filas) · <b>Selection</b> (columnas) · Conversion."
     },
     {
       "id": "vol01-c063",
-      "lm": "LM3",
-      "tipo": "direccion",
-      "q": "<b>Forma de la curva</b>: ¿qué le pasa al call y al put?",
-      "a": "⚠ <b>VAN EN DIRECCIONES OPUESTAS.</b><br><b>Curva UPWARD:</b> call vale <b>MENOS</b> · put vale <b>MÁS</b><br><b>Curva se APLANA/INVIERTE:</b> call vale <b>MÁS</b> · put vale <b>MENOS</b><br><br><b>Razón:</b> curva upward ⇒ forwards <b>altos</b> en el árbol ⇒ <b>pocas</b> chances de llamar, <b>muchas</b> de poner."
+      "lm": "LM7",
+      "tipo": "metodo",
+      "q": "Normalization vs. standardization",
+      "a": "<b>Norm</b>: (X−X<sub>min</sub>)/(X<sub>max</sub>−X<sub>min</sub>) → [0,1], sensible a outliers. <b>Std</b>: (X−μ)/σ → media 0/sd 1, requiere normalidad."
     },
     {
       "id": "vol01-c064",
-      "lm": "LM3",
-      "tipo": "direccion",
-      "q": "<b>Nivel de tasas</b>: ¿cómo reacciona el callable vs el putable?",
-      "a": "<b>Tasas BAJAN:</b> el <b>callable</b> queda <b>CAPADO</b> (straight sube +40% pero callable solo +27%)<br><b>Tasas SUBEN:</b> el <b>putable</b> queda <b>AMORTIGUADO</b> (straight cae −30% pero putable solo −22%)<br><br>⇒ El <b>put es un hedge contra suba de tasas</b>."
+      "lm": "LM7",
+      "tipo": "metodo",
+      "q": "Trimming vs. winsorization",
+      "a": "<b>Trimming</b>: <b>eliminar</b> los extremos (ej. 5% trimmed). <b>Winsorization</b>: <b>reemplazar</b> por el máx/mín no-outlier."
     },
     {
       "id": "vol01-c065",
-      "lm": "LM3",
-      "tipo": "direccion",
-      "q": "<b>Key rate durations</b> con opciones: ¿qué tramo domina?",
-      "a": "Depende del <b>CUPÓN</b> (= probabilidad de ejercicio), no solo del maturity.<br><b>Callable 30-yr callable en 10:</b> cupón <b>bajo</b> (2%) ⇒ no lo llaman ⇒ pesa el <b>30-yr</b>. Cupón <b>alto</b> (10%) ⇒ lo llaman ⇒ pesa el <b>10-yr</b>.<br><b>Putable:</b> <b>AL REVÉS</b> — cupón bajo ⇒ lo ponen ⇒ pesa el 10-yr.<br><i>KRD pueden ser NEGATIVAS en maturities cortos si el cupón es muy bajo (10-yr zero: 5-yr KRD = −0.93).</i>"
+      "lm": "LM7",
+      "tipo": "proceso",
+      "q": "Normalización de texto (4 pasos)",
+      "a": "Lowercasing · remover stop words · <b>stemming</b> (stem, rule-based) · <b>lemmatization</b> (lemma, real, más caro)."
     },
     {
       "id": "vol01-c066",
-      "lm": "LM3",
-      "tipo": "direccion",
-      "q": "<b>Casos límite</b>: ¿cuándo vale CERO la opción?",
-      "a": "<b>Call price muy ALTO</b> (ej. 102) ⇒ nunca se llama ⇒ V<sub>callable</sub> = V<sub>straight</sub><br><b>Put price muy BAJO</b> (ej. 95) ⇒ nunca se pone ⇒ V<sub>putable</sub> = V<sub>straight</sub><br><b>Cap por encima de TODA tasa del árbol</b> ⇒ floater vale <b>100</b><br><b>Floor por debajo de toda tasa</b> ⇒ floater vale <b>100</b>"
+      "lm": "LM7",
+      "tipo": "concepto",
+      "q": "BOW vs. N-grams",
+      "a": "<b>BOW</b>: conjunto de tokens, <b>sin orden</b>. <b>N-grams</b>: secuencias (uni/bi/trigram) que <b>rescatan el orden</b>. DTM = filas docs × columnas tokens."
     },
     {
       "id": "vol01-c067",
-      "lm": "LM4",
-      "tipo": "concepto",
-      "q": "<b>Default risk</b> vs <b>Credit risk</b>",
-      "a": "<b>Default risk:</b> SOLO la <b>probabilidad</b> del evento (más angosto).<br><b>Credit risk:</b> probabilidad <b>+ cuánto se pierde</b> si ocurre (más amplio).<br><br><i>Un préstamo colateralizado puede tener default risk ALTO y credit risk BAJO.</i>"
+      "lm": "LM7",
+      "tipo": "formula",
+      "q": "Precision y Recall",
+      "a": "P = TP/(TP+FP) (costo de <b>FP/Type I</b> alto). R = TP/(TP+FN) (costo de <b>FN/Type II</b> alto). R = sensitivity = TPR."
     },
     {
       "id": "vol01-c068",
-      "lm": "LM4",
-      "tipo": "concepto",
-      "q": "¿Qué es la <b>expected exposure</b>? (¡ojo con el detalle!)",
-      "a": "Monto proyectado que el inversor <b>podría perder</b> si hay default, <b>ANTES</b> de considerar recovery.<br><br>⚠ <b>INCLUYE EL CUPÓN</b> de esa fecha. Exposure = valor del bono (PV de flujos restantes) <b>+ cupón</b>.<br><i>Olvidarse del cupón es el error de cálculo #1.</i>"
+      "lm": "LM7",
+      "tipo": "formula",
+      "q": "Accuracy y F1",
+      "a": "Accuracy = (TP+TN)/total (solo si balanceado). <b>F1</b> = 2PR/(P+R), media armónica (mejor si <b>desbalanceado</b>)."
     },
     {
       "id": "vol01-c069",
-      "lm": "LM4",
-      "tipo": "concepto",
-      "q": "¿Qué es el <b>hazard rate</b>?",
-      "a": "La <b>POD condicional</b>: probabilidad de default en esa fecha <b>DADO que no defaulteó antes</b>.<br><br>POD<sub>t</sub> = h × (1−h)<sup>t−1</sup> &nbsp;<i>(solo si h es CONSTANTE)</i><br>POS<sub>t</sub> = (1−h)<sup>t</sup><br><br>✔ <b>Chequeo:</b> Σ POD + POS<sub>final</sub> = <b>100%</b>"
+      "lm": "LM7",
+      "tipo": "metodo",
+      "q": "Parameter vs. hyperparameter",
+      "a": "<b>Parameter</b>: aprendido de los datos (weights, coeficientes, support vectors). <b>Hyperparameter</b>: seteado a mano (λ, k, nº capas, p-threshold)."
     },
     {
       "id": "vol01-c070",
-      "lm": "LM4",
-      "tipo": "concepto",
-      "q": "¿Por qué se usan probabilidades <b>RISK-NEUTRAL</b> y no históricas?",
-      "a": "Porque se <b>descuenta al risk-free rate</b>.<br>Las risk-neutral son <b>MAYORES</b> que las históricas (ej. <b>1.60% vs 1.00%</b>).<br><br><b>Por qué:</b> (1) las históricas no incluyen el <b>default risk premium</b> por la incertidumbre del <b>TIMING</b>; (2) el spread observado también tiene <b>liquidez e impuestos</b>."
+      "lm": "LM7",
+      "tipo": "formula",
+      "q": "TF-IDF",
+      "a": "TF-IDF = TF × IDF, con IDF = log(1/DF). <b>Alto</b> = frecuente en <b>pocos</b> docs (único, importante); bajo = en muchos docs."
     },
     {
       "id": "vol01-c071",
-      "lm": "LM4",
+      "lm": "LM7",
       "tipo": "concepto",
-      "q": "¿Qué mide la <b>YTM de un bono riesgoso</b>?",
-      "a": "Es el retorno <b>ASUMIENDO QUE NO HAY DEFAULT</b>.<br><br>Si defaultea, los IRR son catastróficos y dependen del <b>timing</b>:<br>Date 1 → <b>−57.24%</b> · Date 3 → −23.16% · Date 5 → −13.61% · <b>sin default → +3.77%</b><br><i>Ese rango enorme es la fuente del default risk premium.</i>"
-    },
-    {
-      "id": "vol01-c072",
-      "lm": "LM4",
-      "tipo": "concepto",
-      "q": "¿Qué es el <b>NOTCHING</b> y por qué son \"credit\" ratings?",
-      "a": "El issuer rating es para <b>senior unsecured</b>. La deuda <b>subordinada</b> se \"notchea\" <b>1–2 escalones abajo</b> por su <b>menor recovery</b> (mayor LGD).<br>⇒ Al incluir <b>LGD además de POD</b>, son <b>CREDIT</b> ratings, no solo default ratings.<br><i>Ej: emisor A (rec 40%, spread 1.10%); su subordinada (rec 30%) ⇒ spread 1.30% ⇒ baja a A−/BBB+.</i>"
-    },
-    {
-      "id": "vol01-c073",
-      "lm": "LM4",
-      "tipo": "formula",
-      "q": "La cadena completa: <b>Exposure → CVA</b>",
-      "a": "<b>LGD = Exposure × (1 − Recovery rate)</b><br><b>Expected Loss = LGD × POD</b><br><b>CVA = Σ PV(Expected Loss)</b><br><br><b>Fair value = VND − CVA</b><br><i>(VND = Value assuming No Default)</i>"
-    },
-    {
-      "id": "vol01-c074",
-      "lm": "LM4",
-      "tipo": "formula",
-      "q": "<b>Aproximación</b> del credit spread",
-      "a": "<b>Credit spread ≈ POD anual × (1 − Recovery rate)</b><br><br>Ej: 1.25% × 0.60 = <b>0.75%</b> ≈ 77 bps exactos ✔<br><i>Sirve para chequear el orden de magnitud.</i>"
-    },
-    {
-      "id": "vol01-c075",
-      "lm": "LM4",
-      "tipo": "formula",
-      "q": "<b>Expected return</b> con transición de rating",
-      "a": "%ΔPrecio = <b>−ModDur × ΔSpread</b><br>E[%ΔValor] = <b>Σ (Prob<sub>i</sub> × %ΔPrecio<sub>i</sub>)</b><br><b>Expected return ≈ YTM − |E[%ΔValor]|</b><br><br>Ej: A-rated, ModDur 7.2 ⇒ E[%ΔValor] = <b>−0.6342%</b>"
-    },
-    {
-      "id": "vol01-c076",
-      "lm": "LM4",
-      "tipo": "formula",
-      "q": "<b>Structural model</b>: las 3 ecuaciones",
-      "a": "D(T) + E(T) = A(T) &nbsp;<i>(identidad del balance)</i><br><b>E(T) = max[A(T) − K , 0]</b><br>D(T) = A(T) − max[A(T) − K , 0]<br><br><b>K = face value de la deuda = el DEFAULT BARRIER</b>"
-    },
-    {
-      "id": "vol01-c077",
-      "lm": "LM4",
-      "tipo": "formula",
-      "q": "<b>Expected exposure</b> con árbol binomial",
-      "a": "<b>E[Exposure]<sub>t</sub> = Σ (prob<sub>nodo</sub> × valor<sub>nodo</sub>) + Cupón</b><br><br>Probs = <b>Triángulo de Pascal</b> / 2<sup>n</sup>.<br>Date 4 ⇒ <b>1-4-6-4-1 / 16</b> = 0.0625 / 0.25 / <b>0.375</b> / 0.25 / 0.0625<br>Date 5 ⇒ 1-5-10-10-5-1 / 32"
-    },
-    {
-      "id": "vol01-c078",
-      "lm": "LM4",
-      "tipo": "clasificacion",
-      "q": "<b>FICO</b>: los 5 factores y sus pesos",
-      "a": "<b>35% — Payment history</b><br><b>30% — Debt burden</b><br>15% — Length of credit history<br>10% — Types of credit used<br>10% — Recent (hard) inquiries<br><br>⚠ <b>NO incluye:</b> raza, sexo, <b>edad</b>, <b>salario</b>, ocupación, domicilio."
-    },
-    {
-      "id": "vol01-c079",
-      "lm": "LM4",
-      "tipo": "clasificacion",
-      "q": "Securitized debt: ¿qué <b>enfoque</b> de análisis según el pool?",
-      "a": "<b>Granular + homogéneo + CORTO plazo</b> (ABCP, credit cards) ⇒ <b>BOOK</b><br><b>Granular + homogéneo + MEDIO plazo</b> (Auto/Consumer ABS) ⇒ <b>PORTFOLIO</b><br><b>NON-granular + heterogéneo</b> (CMBS, CLOs) ⇒ <b>LOAN BY LOAN</b>"
-    },
-    {
-      "id": "vol01-c080",
-      "lm": "LM4",
-      "tipo": "clasificacion",
-      "q": "<b>Covered bonds</b>: qué los distingue de un ABS",
-      "a": "<b>DUAL RECOURSE:</b> recurso al <b>originator/issuer</b> Y al <b>cover pool</b> (el ABS: solo al pool)<br><b>Pool DINÁMICO:</b> el sponsor <b>DEBE reemplazar</b> activos prepagados o non-performing (el MBS: pool <b>estático</b> ⇒ prepayment risk)<br>⇒ Se ratean <b>varios notches POR ENCIMA</b> del emisor.<br><i>Regímenes: hard-bullet · soft-bullet · conditional pass-through</i>"
-    },
-    {
-      "id": "vol01-c081",
-      "lm": "LM4",
-      "tipo": "proceso",
-      "q": "Valuar un bono riesgoso con el árbol: los pasos",
-      "a": "1. Calcular el <b>VND</b> (con el árbol calibrado o los DF del benchmark)<br>2. Calcular el <b>CVA</b> usando la <b>expected exposure</b> de cada fecha<br>3. <b>Fair value = VND − CVA</b><br><br>Ej: VND 103.5450 − CVA 3.5394 = <b>100.0056</b> ⇒ spread <b>74.88 bps</b>"
-    },
-    {
-      "id": "vol01-c082",
-      "lm": "LM4",
-      "tipo": "proceso",
-      "q": "¿Cómo se halla el <b>Discount Margin (DM)</b> de un floater riesgoso?",
-      "a": "Por <b>trial and error</b>: se suma un DM de prueba a <b>TODAS</b> las tasas del árbol hasta que el valor en Date 0 = <b>fair value</b> (VND − CVA).<br><br>⚠ <b>DM ≠ Quoted Margin.</b> El QM es <b>contractual y fijo</b>; el DM es una medida de <b>YIELD</b> (como la YTM).<br>Precio <b>BAJO</b> la par ⇒ <b>DM &gt; QM</b>"
-    },
-    {
-      "id": "vol01-c083",
-      "lm": "LM4",
-      "tipo": "proceso",
-      "q": "Si el <b>hazard rate CAMBIA</b> a mitad de camino, ¿cómo se calcula la POD?",
-      "a": "<b>NO</b> hay fórmula con potencias. Hay que <b>arrastrar el POS</b> paso a paso:<br><b>POD<sub>t</sub> = h<sub>NUEVO</sub> × POS<sub>VIEJO</sub></b><br><br>Ej: h pasa de 0.50% a 0.75% en D4:<br>POS tras D3 = (1−0.005)³ = 98.5075%<br>POD<sub>D4</sub> = 0.75% × 98.5075% = <b>0.7388%</b>"
-    },
-    {
-      "id": "vol01-c084",
-      "lm": "LM4",
-      "tipo": "modelo",
-      "q": "<b>Structural</b> vs <b>Reduced-form</b>: la diferencia esencial",
-      "a": "<b>STRUCTURAL:</b> explica el <b>POR QUÉ</b>. Default <b>ENDÓGENO</b> (assets &lt; barrier). Inputs <b>NO observables</b> (los activos no cotizan). Usado para <b>risk management interno</b> y <b>ratings</b>.<br><br><b>REDUCED-FORM:</b> explica el <b>CUÁNDO</b>. Default <b>EXÓGENO</b> y aleatorio (<b>Poisson</b>). Inputs <b>OBSERVABLES</b> (se estima por <b>regresión</b>). Usado para <b>valuar deuda riesgosa y credit derivatives</b>."
-    },
-    {
-      "id": "vol01-c085",
-      "lm": "LM4",
-      "tipo": "modelo",
-      "q": "<b>Structural</b>: la interpretación de opciones (visión call y visión put)",
-      "a": "<b>VISIÓN CALL:</b> Shareholders = <b>LONG un call</b> sobre los activos (strike K). Debtholders = dueños de los activos + <b>SHORT el call</b>.<br><br><b>VISIÓN PUT:</b> Shareholders = dueños de A−K + <b>LONG un put</b> (= su <b>limited liability</b>). Debtholders = <b>long bono risk-free + SHORT el put</b>.<br><br><i>La POD sube con: ↑varianza de los activos, ↑tiempo, ↑leverage.</i>"
-    },
-    {
-      "id": "vol01-c086",
-      "lm": "LM4",
-      "tipo": "modelo",
-      "q": "<b>Debilidades</b> de cada modelo",
-      "a": "<b>STRUCTURAL:</b> difícil de implementar — hay que estimar el <b>valor y volatilidad de los activos</b>, que <b>NO cotizan</b>. El barrier es difícil de medir (Enron, Lehman <b>escondían deuda</b>).<br><br><b>REDUCED-FORM:</b> <b>no explica</b> las razones económicas. Asume que el default llega <b>\"de sorpresa\"</b> — pero en la realidad hay <b>downgrades previos</b> (<b>RadioShack</b>: AAA en 1983 → D en 2015)."
-    },
-    {
-      "id": "vol01-c087",
-      "lm": "LM4",
-      "tipo": "direccion",
-      "q": "¿Qué pesa más: <b>duplicar la POD</b> o <b>halvear el recovery</b>?",
-      "a": "<b>DUPLICAR LA POD pega MÁS.</b><br>Base (POD 1.50%, Rec 40%) ⇒ spread 0.90%<br>POD × 2 ⇒ spread <b>1.82%</b> (<b>+92 bps</b>)<br>Rec ÷ 2 ⇒ spread <b>1.21%</b> (+31 bps)<br><br>⚠ El <b>VND NO cambia nunca</b> — todo el efecto pasa por el <b>CVA</b>."
-    },
-    {
-      "id": "vol01-c088",
-      "lm": "LM4",
-      "tipo": "direccion",
-      "q": "POD y recovery: la correlación <b>contraintuitiva</b>",
-      "a": "Dado un <b>PRECIO y SPREAD FIJOS</b>: si asumís un recovery <b>MENOR</b>, la POD implícita es <b>MENOR</b>. ⇒ <b>Correlación POSITIVA.</b><br><br><i>Ej: precio 83.1060 ⇒ rec 40% ⇒ POD 1.25% · rec 30% ⇒ POD <b>1.0675%</b></i><br><b>Por qué:</b> el CVA está fijo. Si sube el LGD, la POD debe <b>bajar</b> para compensar."
-    },
-    {
-      "id": "vol01-c089",
-      "lm": "LM4",
-      "tipo": "direccion",
-      "q": "¿La <b>volatilidad</b> afecta a un bono option-free? (¡trampa!)",
-      "a": "<b>VND: NO</b> — es idéntico a σ=10% y σ=20% (103.5450). La vol no afecta a un bono <b>default-free</b>.<br><b>CVA: SÍ</b> — baja levemente (3.5394 → 3.5390) ⇒ fair value <b>sube</b> un poco.<br><br><b>Por qué:</b> por la <b>lognormalidad</b> las tasas se abren <b>asimétricamente</b> ⇒ la expected exposure <b>baja</b>."
-    },
-    {
-      "id": "vol01-c090",
-      "lm": "LM4",
-      "tipo": "direccion",
-      "q": "<b>Term structure of credit spreads</b>: cómo leer la forma",
-      "a": "<b>FLAT</b> ⇒ POD estable<br><b>UPWARD</b> ⇒ POD <b>creciente</b> (típica de IG; 62→86→132 bps a 3/5/10 años)<br><b>INVERTIDA</b> ⇒ <b>2 causas OPUESTAS</b>: (a) expectativa de <b>MEJORA</b> (LBO, cíclica en el fondo) o (b) <b>DISTRESS</b><br><br>⚠ En <b>distress</b> el bono cotiza <b>al recovery</b> y el spread es un <b>ARTEFACTO ÓPTICO</b> (17.11% a 5yr vs 6.60% a 10yr). <b>CVA = VND − Recovery.</b><br><i>Spreads y benchmark yields son CONTRACÍCLICOS.</i>"
-    },
-    {
-      "id": "vol01-c091",
-      "lm": "LM5",
-      "tipo": "concepto",
-      "q": "¿Qué es un <b>CDS</b> y a qué se parece?",
-      "a": "Contrato donde el <b>protection buyer</b> paga primas al <b>protection seller</b> y recibe la promesa de <b>compensación si ocurre un credit event</b>.<br><br>Pese al nombre \"swap\", <b>se parece a un PUT</b> (el pago del seller es <b>contingente</b>).<br><i>Si hay default, los pagos del buyer TERMINAN.</i>"
-    },
-    {
-      "id": "vol01-c092",
-      "lm": "LM5",
-      "tipo": "concepto",
-      "q": "¿Qué es la <b>cheapest-to-deliver obligation</b>?",
-      "a": "El instrumento <b>MÁS BARATO</b> que tenga seniority <b>IGUAL O SUPERIOR</b> a la reference obligation.<br><br>⚠ Un <b>subordinado NO califica</b>, por más barato que esté.<br>⚠ El payoff se calcula sobre el <b>CTD</b>, aunque vos tengas otro bono."
-    },
-    {
-      "id": "vol01-c093",
-      "lm": "LM5",
-      "tipo": "concepto",
-      "q": "¿Qué es un <b>naked CDS</b>?",
-      "a": "Comprar protección <b>SIN tener exposición</b> al deudor = apostar a que el crédito <b>empeore</b>.<br><br><b>Controversia:</b> criticado tras 2008-09. <b>Contraargumento:</b> es igual que un long put o un short sale, y aporta <b>liquidez</b>.<br><b>Prohibido en Europa SOLO para deuda soberana.</b>"
-    },
-    {
-      "id": "vol01-c094",
-      "lm": "LM5",
-      "tipo": "concepto",
-      "q": "¿Por qué alguien <b>vendería</b> protección?",
-      "a": "Un bondholder está <b>long credit risk + long interest rate risk</b>.<br>Si querés <b>SOLO el credit risk</b>: <b>vendé protección</b>.<br>⇒ Requiere <b>mucho menos capital</b>, menores costos, y el CDS es <b>más líquido</b> que el bono."
-    },
-    {
-      "id": "vol01-c095",
-      "lm": "LM5",
-      "tipo": "concepto",
-      "q": "¿El CDS <b>elimina</b> el credit risk?",
-      "a": "<b>NO.</b><br>1. La definición de default del contrato puede <b>no coincidir</b> con el evento real<br>2. El buyer asume <b>COUNTERPARTY RISK</b> contra el seller (ver 2008)<br><br><i>Sin default, el spread del CDS <b>converge a CERO</b> al vencimiento (como un bono a la par).</i>"
-    },
-    {
-      "id": "vol01-c096",
-      "lm": "LM5",
-      "tipo": "formula",
-      "q": "<b>CDS spread</b> (aproximación) y <b>payout</b>",
-      "a": "<b>CDS spread ≈ (1 − RR) × POD</b><br><i>Ej: POD 2%, RR 60% ⇒ 0.40 × 2% = <b>80 bps</b></i><br><br><b>LGD (%) = 1 − Recovery rate</b><br><b>Payout = LGD × Notional</b>"
-    },
-    {
-      "id": "vol01-c097",
-      "lm": "LM5",
-      "tipo": "formula",
-      "q": "<b>Upfront premium</b> y <b>precio</b> del CDS",
-      "a": "<b>Upfront ≈ (Credit spread − Fixed coupon) × Duration</b><br><b>Precio (por 100) = 100 − Upfront %</b><br><br>Ej: spread 600, coupon 500, dur 8 ⇒ upfront = <b>8%</b> ⇒ precio = <b>92</b><br><i>La duration acá es EFFECTIVE duration (los cupones son contingentes).</i>"
-    },
-    {
-      "id": "vol01-c098",
-      "lm": "LM5",
-      "tipo": "formula",
-      "q": "<b>P&L</b> y cambio de precio del CDS",
-      "a": "<b>% Δ precio ≈ Δ spread (bps) × Duration</b><br><b>P&L del BUYER ≈ Δ spread × Duration × Notional</b><br><br>Ej: $10M, dur 4, spread 500→800 (+300 bps)<br>⇒ 300 × 4 = <b>12%</b> ⇒ <b>+$1.2M para el BUYER</b><br><i>El buyer (short credit) GANA cuando el spread se ensancha.</i>"
-    },
-    {
-      "id": "vol01-c099",
-      "lm": "LM5",
-      "tipo": "formula",
-      "q": "Las <b>2 legs</b> y el upfront",
-      "a": "<b>PROTECTION leg</b> = Σ PV(Expected Loss) &nbsp;<i>(¡es el CVA!)</i><br><b>PREMIUM leg</b> = Σ PV(cupones contingentes)<br><br><b>Upfront = PV(Protection) − PV(Premium)</b><br>Si <b>&gt; 0</b> ⇒ paga el <b>BUYER</b> · Si <b>&lt; 0</b> ⇒ paga el <b>SELLER</b>"
-    },
-    {
-      "id": "vol01-c100",
-      "lm": "LM5",
-      "tipo": "clasificacion",
-      "q": "Los <b>3 credit events</b>",
-      "a": "<b>1. Bankruptcy</b> — universalmente reconocido<br><b>2. Failure to pay</b> — no paga tras el grace period, <b>SIN</b> declararse en quiebra<br><b>3. Restructuring</b> — ⚠ <b>NO es credit event en EE.UU.</b> (allá se reestructura vía bankruptcy). Sí en otros países (Grecia).<br><br><i>Soberanos: también moratorium / repudiation.</i><br><b>ISDA Determinations Committee:</b> 15 miembros (10 dealers + 5 buy-side); hace falta <b>supermayoría de 12</b>."
-    },
-    {
-      "id": "vol01-c101",
-      "lm": "LM5",
-      "tipo": "clasificacion",
-      "q": "Los <b>índices CDS</b>: nombres y números",
-      "a": "<b>Norteamérica = CDX</b> · <b>Europa/Asia/Australia = iTraxx</b><br><br><b>CDX IG: 125</b> entidades · <b>CDX HY: 100</b><br><b>iTraxx Main: 125</b> · <b>iTraxx Crossover: hasta 75</b><br><br><b>IG</b> se cotiza en <b>SPREADS</b> · <b>HY</b> en <b>PRECIOS</b>. Todos <b>equally weighted</b>.<br><i>Coupons estandarizados: <b>1% = IG · 5% = HY</b></i>"
-    },
-    {
-      "id": "vol01-c102",
-      "lm": "LM5",
-      "tipo": "clasificacion",
-      "q": "<b>Cash</b> vs <b>Physical</b> settlement: ¿cuándo hay preferencia?",
-      "a": "Si tenés un bono que vale <b>MÁS</b> que el CTD ⇒ preferís <b>CASH</b> (cobrás el CDS sobre el CTD barato y vendés tu bono caro).<br>Si tenés <b>el CTD mismo</b> ⇒ <b>INDIFERENTE</b>.<br><br><i>El recovery lo fija una <b>AUCTION</b>; las partes aceptan el resultado aunque el recovery real difiera.</i>"
-    },
-    {
-      "id": "vol01-c103",
-      "lm": "LM5",
-      "tipo": "proceso",
-      "q": "Las <b>3 formas</b> de realizar el resultado de un CDS",
-      "a": "<b>1. Ejercer</b> ante un default<br><b>2. MONETIZAR / unwind:</b> entrar en un CDS <b>nuevo y OPUESTO</b> con los mismos términos. La diferencia entre el upfront viejo y el nuevo es la ganancia/pérdida.<br><b>3. Mantener a vencimiento</b> sin default: el <b>seller gana</b> (se quedó las primas), el buyer pierde el CDS."
-    },
-    {
-      "id": "vol01-c104",
-      "lm": "LM5",
-      "tipo": "proceso",
-      "q": "<b>Index CDS</b>: cómo calcular la exposición neta",
-      "a": "Exposición a cada nombre = <b>Notional / N</b> (equally weighted).<br><br>Ej: vendo <b>$500M</b> de CDX IG (125 nombres) y compro <b>$3M</b> de single-name sobre A:<br>· Vía índice: 500/125 = <b>$4M</b> (long)<br>· Neto: 4 − 3 = <b>$1M</b> · Hedgeado: <b>75%</b><br>· Si A defaultea, el índice sigue con <b>$496M</b>"
-    },
-    {
-      "id": "vol01-c105",
-      "lm": "LM5",
-      "tipo": "modelo",
-      "q": "<b>Long/short</b>: ¿por qué single-name e índice están INVERTIDOS?",
-      "a": "<b>SINGLE-NAME:</b> buyer de protección = <b>SHORT</b> credit · seller = <b>LONG</b> credit<br><br><b>INDEX CDS:</b> ⚠ <b>AL REVÉS</b> — el que <b>COMPRA el CDX</b> = <b>LONG</b> credit exposure<br><br><i>Por eso el currículo evita \"comprar/vender CDS\" y usa siempre <b>buy protection / sell protection</b>.</i>"
-    },
-    {
-      "id": "vol01-c106",
-      "lm": "LM5",
-      "tipo": "direccion",
-      "q": "<b>Curve trades</b>: ¿cuál es bullish y cuál bearish?",
-      "a": "<b>STEEPENER</b> = COMPRAR protección <b>LARGA</b> + VENDER protección <b>CORTA</b><br>⇒ En el corto plazo es <b>BULLISH</b> (el outlook cercano es <b>mejor</b> que el lejano)<br><br><b>FLATTENER</b> = COMPRAR protección <b>CORTA</b> + VENDER protección <b>LARGA</b><br>⇒ En el corto plazo es <b>BEARISH</b> (espera <b>problemas inminentes</b>)<br><br>⚠ Totalmente contraintuitivo — memorizalo."
-    },
-    {
-      "id": "vol01-c107",
-      "lm": "LM5",
-      "tipo": "direccion",
-      "q": "<b>Basis trade</b>: negative vs positive basis",
-      "a": "<b>Credit spread del bono = Bond yield − MRR</b><br><br><b>NEGATIVE basis:</b> spread <b>MAYOR en BONOS</b> ⇒ el bono está <b>barato</b> ⇒ <b>COMPRAR el bono + COMPRAR protección</b><br><b>POSITIVE basis:</b> spread mayor en <b>CDS</b><br><br><i>Ej: bono 7% − MRR 2.5% = <b>4.50%</b> vs CDS <b>4.25%</b> ⇒ negative basis ⇒ profit = <b>25 bps</b></i>"
-    },
-    {
-      "id": "vol01-c108",
-      "lm": "LM5",
-      "tipo": "direccion",
-      "q": "<b>Credit curve</b> del CDS: qué implica cada forma",
-      "a": "<b>FLAT</b> ⇒ hazard rate <b>constante</b> <i>(pero nunca queda perfectamente plana, por el descuento)</i><br><b>UPWARD</b> ⇒ mayor POD en años <b>POSTERIORES</b><br><b>DOWNWARD (invertida)</b> ⇒ mayor POD en años <b>TEMPRANOS</b>. <b>Poco común</b> — refleja <b>estrés severo de corto plazo</b>"
+      "q": "ROC / AUC",
+      "a": "ROC = TPR (y) vs. FPR (x) a distintos cutoffs. <b>AUC ≈ 1</b> casi perfecto; <b>0,5</b> azar. Más convexa = mejor. RMSE para regresión."
     }
   ],
   "traps": [
     {
       "id": "vol01-t-lm1-01",
       "lm": "LM1",
-      "star": true,
-      "title": "Forward vs spot: la dirección",
-      "body": "<p>Curva <b>upward</b> ⇒ forward <b>ENCIMA</b> del spot (f<sub>A,B−A</sub> &gt; z<sub>B</sub>); <b>downward</b> ⇒ <b>DEBAJO</b>. <b>Mnemónica:</b> el spot es el <b>promedio</b>, el forward el <b>marginal</b>. Si el promedio sube, el marginal está arriba.</p>"
+      "star": false,
+      "title": "La regresión no prueba causalidad",
+      "body": "Los coeficientes miden asociación condicional, no causa. Una relación puede ser espuria aunque sea significativa."
     },
     {
       "id": "vol01-t-lm1-02",
       "lm": "LM1",
       "star": false,
-      "title": "Notación f<sub>A,B−A</sub>",
-      "body": "<p>El subíndice es <b>(inicio, TENOR)</b>, no (inicio, fin). \"2-yr forward en 1 año\" = <b>f<sub>1,2</sub></b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm1-03",
-      "lm": "LM1",
-      "star": false,
-      "title": "z<sub>1</sub> &lt; y<sub>T</sub> &lt; z<sub>T</sub> (curva upward)",
-      "body": "<p>La YTM es un <b>promedio ponderado</b> de spots, sesgado al spot del flujo grande (el principal). Queda <b>entre</b> z<sub>1</sub> y z<sub>T</sub>, <b>no igual</b> a z<sub>T</sub>.</p>"
-    },
-    {
-      "id": "vol01-t-lm1-04",
-      "lm": "LM1",
-      "star": false,
-      "title": "Roll-down: se compra maturity <u>MAYOR</u>",
-      "body": "<p>Rolling down = comprar bonos <b>más largos</b> que el horizonte y venderlos <b>antes</b>. Marcar \"igual al horizonte\" es el error clásico.</p>"
-    },
-    {
-      "id": "vol01-t-lm1-05",
-      "lm": "LM1",
-      "star": false,
-      "title": "Over/undervalued con forwards",
-      "body": "<p>Spot esperado <b>&gt;</b> forward ⇒ <b>OVERvalued</b>. Spot esperado <b>&lt;</b> forward ⇒ <b>UNDERvalued</b>. El precio forward <b>sube</b> si el spot futuro resulta <b>MENOR</b> al forward.</p>"
-    },
-    {
-      "id": "vol01-t-lm1-06",
-      "lm": "LM1",
-      "star": false,
-      "title": "Local ≠ Unbiased expectations",
-      "body": "<p><b>Local:</b> retorno = risk-free <b>solo en períodos CORTOS</b>; <b>SÍ admite premiums</b> en largos ⇒ aplica a bonos <b>con riesgo</b>. <b>Unbiased:</b> todas las maturities <b>igual retorno</b> (risk-neutral).</p>"
-    },
-    {
-      "id": "vol01-t-lm1-07",
-      "lm": "LM1",
-      "star": false,
-      "title": "Segmented vs Preferred habitat",
-      "body": "<p><b>Segmented</b> = RÍGIDO (jamás salen del segmento). <b>Preferred habitat</b> = se <b>desvían</b> si el yield compensa. <i>Fallen angels forzados a vender = <b>segmented</b>.</i></p>"
-    },
-    {
-      "id": "vol01-t-lm1-08",
-      "lm": "LM1",
-      "star": false,
-      "title": "Liquidity preference ⇒ forward sesgado <u>al ALZA</u>",
-      "body": "<p>El premium hace que el forward <b>SOBREESTIME</b> el future spot y que la curva sea <b>típicamente upward</b>. El premium <b>NO decrece</b> con el plazo.</p>"
-    },
-    {
-      "id": "vol01-t-lm1-09",
-      "lm": "LM1",
-      "star": true,
-      "title": "Swap spread vs I-spread: el benchmark",
-      "body": "<p><b>Swap spread</b> = swap rate − <b>GOVERNMENT</b> (on-the-run). <b>I-spread</b> = YTM del bono − <b>SWAP rate</b>. Se cruzan fácil. El swap spread <b>puede ser NEGATIVO</b> post-2008 (récord −62 bps).</p>"
-    },
-    {
-      "id": "vol01-t-lm1-10",
-      "lm": "LM1",
-      "star": true,
-      "title": "Volatilidad: yield vs precio",
-      "body": "<p>En <b>YIELD</b>, los <b>CORTOS</b> son más volátiles. En <b>PRECIO</b>, los <b>LARGOS</b> varían más (duration). El examen <b>mezcla ambos deliberadamente</b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm1-11",
-      "lm": "LM1",
-      "star": false,
-      "title": "Σ Key rate durations = Effective duration",
-      "body": "<p>Solo si <b>TODOS</b> los key rates se mueven igual (shift paralelo). ⚠ <b>K<sub>S</sub> = −K<sub>1</sub> + K<sub>10</sub></b> (¡signo NEGATIVO en el corto!). K<sub>C</sub> = K<sub>1</sub> + K<sub>10</sub>.</p>"
-    },
-    {
-      "id": "vol01-t-lm1-12",
-      "lm": "LM1",
-      "star": false,
-      "title": "Bull/Bear × Flatten/Steepen",
-      "body": "<p><b>Bull</b> = yields BAJAN. <b>Bull flattening</b> (<i>flight to quality</i>): el <b>largo</b> baja más. <b>Bull steepening</b> (recorte de tasas): el <b>corto</b> baja más. <b>Bear flattening</b>: el corto sube más.</p>"
+      "title": "Interpretar b<sub>j</sub> sin 'lo demás constante'",
+      "body": "Cada b<sub>j</sub> es el efecto de X<sub>j</sub> <b>manteniendo constantes las otras X</b>, no el efecto total."
     },
     {
       "id": "vol01-t-lm2-01",
       "lm": "LM2",
-      "star": false,
-      "title": "Value additivity vs Dominance",
-      "body": "<p>Son los <b>2 TIPOS</b> de arbitraje. <b>Value additivity:</b> el todo ≠ suma de partes. <b>Dominance:</b> un payoff risk-free futuro con precio \"barato\". No los mezcles.</p>"
+      "star": true,
+      "title": "Adjusted R² solo sube",
+      "body": "Falso: R̄² <b>baja</b> si el |t| de la variable agregada es &lt; 1, y puede ser <b>negativo</b>."
     },
     {
       "id": "vol01-t-lm2-02",
       "lm": "LM2",
-      "star": false,
-      "title": "Spot ≠ YTM al descontar",
-      "body": "<p>Cada flujo va a <b>SU spot</b>. Descontar todo a la YTM <b>sobre-descuenta</b> los cupones tempranos si la curva es <b>upward</b> (sub-descuenta si es downward).</p>"
+      "star": true,
+      "title": "AIC vs. BIC invertidos",
+      "body": "<b>AIC → predicción</b>; <b>BIC → goodness of fit</b>. BIC penaliza más (prefiere modelos chicos). Menor es mejor en ambos."
     },
     {
       "id": "vol01-t-lm2-03",
       "lm": "LM2",
-      "star": true,
-      "title": "e<sup>2σ</sup> entre adyacentes · e<sup>4σ</sup> entre extremos",
-      "body": "<p>i<sub>1,H</sub> = i<sub>1,L</sub> × <b>e<sup>2σ</sup></b> (adyacentes, 2 std dev). Pero i<sub>2,HH</sub> = i<sub>2,LL</sub> × <b>e<sup>4σ</sup></b> (están 4σ aparte). ⚠ No uses 2σ entre los extremos.</p>"
+      "star": false,
+      "title": "Valor absoluto de AIC/BIC",
+      "body": "El valor por sí solo no significa nada: solo importan los valores <b>relativos</b> entre modelos con la misma Y."
     },
     {
       "id": "vol01-t-lm2-04",
       "lm": "LM2",
       "star": false,
-      "title": "Std dev = i<sub>0</sub> × σ (¡no σ sola!)",
-      "body": "<p>La desviación de la short rate es <b>i<sub>0</sub> × σ</b>. Por eso los movimientos son mayores con tasas altas y ≈0 cerca de cero (evita negativos).</p>"
-    },
-    {
-      "id": "vol01-t-lm2-05",
-      "lm": "LM2",
-      "star": false,
-      "title": "Backward induction: la tasa correcta",
-      "body": "<p>Se descuenta a la tasa <b>i del NODO</b> (inicio del período), con <b>0.5/0.5</b> y el <b>cupón C sumado</b>. Empezar en <b>maturity (= par)</b> y ir <b>derecha → izquierda</b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm2-06",
-      "lm": "LM2",
-      "star": false,
-      "title": "El promedio del árbol &gt; el forward",
-      "body": "<p>Tras calibrar, el promedio de i<sub>H</sub>/i<sub>L</sub> queda <b>LIGERAMENTE por encima</b> del forward implícito (por <b>lognormalidad</b>). No es exactamente igual.</p>"
-    },
-    {
-      "id": "vol01-t-lm2-07",
-      "lm": "LM2",
-      "star": false,
-      "title": "σ → 0 colapsa a la forward curve",
-      "body": "<p>Menor vol ⇒ nodos más juntos. Con <b>σ = 0 el árbol ES la forward curve</b> implícita. Mayor σ ⇒ más separación.</p>"
-    },
-    {
-      "id": "vol01-t-lm2-08",
-      "lm": "LM2",
-      "star": false,
-      "title": "Árbol = spot curve para <u>option-free</u>",
-      "body": "<p>Bien calibrados, dan <b>IDÉNTICO</b> valor (diferencia = redondeo). El árbol <b>agrega valor recién con embedded options</b> (flujos rate-dependent).</p>"
-    },
-    {
-      "id": "vol01-t-lm2-09",
-      "lm": "LM2",
-      "star": false,
-      "title": "Pathwise: PROMEDIAR, no sumar",
-      "body": "<p>Nº de paths = fila del <b>Triángulo de Pascal</b> (3-yr ⇒ <b>4 paths</b>). El valor es el <b>PROMEDIO</b> de los PV.</p>"
-    },
-    {
-      "id": "vol01-t-lm2-10",
-      "lm": "LM2",
-      "star": false,
-      "title": "Monte Carlo: más paths ≠ más exacto",
-      "body": "<p>Más paths dan <b>precisión estadística</b>, <b>NO</b> valor \"más verdadero\". Sirve para <b>path-dependent</b> (MBS). El <b>drift term</b> lo vuelve arbitrage-free.</p>"
-    },
-    {
-      "id": "vol01-t-lm2-11",
-      "lm": "LM2",
-      "star": true,
-      "title": "Equilibrium NO calza el mercado; AF sí",
-      "body": "<p><b>CIR/Vasicek</b> (equilibrium) pueden ser <b>inconsistentes</b> con los precios actuales. <b>Ho-Lee/KWF</b> (arbitrage-free) <b>calzan la curva</b> (drift <b>θ<sub>t</sub> time-dependent</b>) ⇒ preferidos para embedded options.</p>"
-    },
-    {
-      "id": "vol01-t-lm2-12",
-      "lm": "LM2",
-      "star": true,
-      "title": "¿Quién permite tasas negativas?",
-      "body": "<p><b>SÍ: Vasicek y Ho-Lee</b> (vol constante/normal). <b>NO: CIR</b> (vol ∝ <b>√r</b>) y <b>KWF</b> (lognormal). <i>CIR y Vasicek tienen el <b>mismo drift</b>; difieren solo en la <b>volatilidad</b>.</i></p>"
+      "title": "F conjunto ≠ suma de t individuales",
+      "body": "Con X correlacionadas, los t individuales no captan el poder explicativo compartido; hay que usar el <b>joint F-test</b>."
     },
     {
       "id": "vol01-t-lm3-01",
       "lm": "LM3",
-      "star": true,
-      "title": "El signo de la opción",
-      "body": "<p><b>Callable = straight − call.</b> <b>Putable = straight + put.</b> Si te dan el bono con opción y el straight, la opción sale <b>por diferencia</b> — cuidá el orden de la resta.</p>"
+      "star": false,
+      "title": "Unconditional heteroskedasticity es grave",
+      "body": "Falso: la <b>unconditional</b> no causa problemas mayores. La <b>conditional</b> es la problemática."
     },
     {
       "id": "vol01-t-lm3-02",
       "lm": "LM3",
       "star": true,
-      "title": "σ ↑: la opción SIEMPRE sube, el bono NO",
-      "body": "<p>σ ↑ ⇒ <b>ambas</b> opciones valen más. Pero el <b>BONO</b> va al revés: <b>callable BAJA</b>, <b>putable SUBE</b>. No confundas \"valor de la opción\" con \"valor del bono\".</p>"
+      "title": "Dirección del sesgo por hetero/serial",
+      "body": "Conditional hetero y serial positiva <b>subestiman</b> los SE → t inflados → <b>Type I</b>. Los coeficientes siguen insesgados."
     },
     {
       "id": "vol01-t-lm3-03",
       "lm": "LM3",
       "star": true,
-      "title": "Forma de la curva: call y put van OPUESTOS",
-      "body": "<p>Curva se <b>APLANA/INVIERTE</b> ⇒ call <b>MÁS</b>, put <b>MENOS</b>. Curva <b>UPWARD</b> ⇒ call <b>MENOS</b>, put <b>MÁS</b>. <i>Razón: con curva upward los forwards del árbol son altos ⇒ pocas chances de llamar, muchas de poner.</i></p>"
+      "title": "Multicolinealidad → Type I",
+      "body": "Al revés: infla SE → t chicos → <b>Type II</b>. Señal: <b>R² alto con coeficientes no significativos</b>."
     },
     {
       "id": "vol01-t-lm3-04",
       "lm": "LM3",
-      "star": true,
-      "title": "RESETEAR el valor en el nodo",
-      "body": "<p>Cuando la opción se ejerce, el valor se <b>resetea al STRIKE</b>, y ese <b>valor reseteado</b> es el que se descuenta hacia atrás. <b>Olvidarlo es el error de cálculo #1.</b></p>"
-    },
-    {
-      "id": "vol01-t-lm3-05",
-      "lm": "LM3",
       "star": false,
-      "title": "Regla de ejercicio: quién y contra qué",
-      "body": "<p><b>Issuer llama</b> si PV <b>&gt;</b> call price. <b>Investor pone</b> si PV <b>&lt;</b> put price. Siempre <b>PV de flujos futuros vs STRIKE</b>, nunca contra el precio de mercado.</p>"
-    },
-    {
-      "id": "vol01-t-lm3-06",
-      "lm": "LM3",
-      "star": false,
-      "title": "Opción sin valor (casos límite)",
-      "body": "<p>Call price muy <b>ALTO</b> o put price muy <b>BAJO</b> ⇒ nunca se ejerce ⇒ el bono vale <b>igual que el straight</b>. Cap por encima de toda tasa del árbol ⇒ floater vale <b>100</b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm3-07",
-      "lm": "LM3",
-      "star": true,
-      "title": "σ → OAS: callable y putable van OPUESTOS",
-      "body": "<p>Precio <b>FIJO</b> ⇒ el OAS <b>sigue al valor del modelo</b>. σ↑ ⇒ callable: <b>OAS BAJA</b> (inversa). Putable: <b>OAS SUBE</b> (directa). <b>Error clásico:</b> decirlo al revés. <i>Callable: 138.2 → 1.2 bps.</i></p>"
-    },
-    {
-      "id": "vol01-t-lm3-08",
-      "lm": "LM3",
-      "star": false,
-      "title": "Z-spread = OAS a vol CERO",
-      "body": "<p>No son conceptos distintos. El OAS se suma a <b>TODOS los forwards del árbol</b>, <b>no al yield</b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm3-09",
-      "lm": "LM3",
-      "star": false,
-      "title": "Modified duration NO sirve",
-      "body": "<p>Con embedded options los <b>flujos cambian</b> con las tasas ⇒ solo vale la <b>effective (option-adjusted) duration</b>. Al calcularla, el <b>OAS se mantiene CONSTANTE</b> entre PV<sub>−</sub> y PV<sub>+</sub>.</p>"
-    },
-    {
-      "id": "vol01-t-lm3-10",
-      "lm": "LM3",
-      "star": true,
-      "title": "AMBAS opciones ACORTAN la duration",
-      "body": "<p>EffDur<sub>callable</sub> ≤ straight <b>Y</b> EffDur<sub>putable</sub> ≤ straight. <b>La trampa: creer que el put la alarga.</b> Callable se acorta cuando las tasas <b>BAJAN</b>; putable cuando <b>SUBEN</b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm3-11",
-      "lm": "LM3",
-      "star": true,
-      "title": "One-sided: quién es sensible a qué",
-      "body": "<p><b>Callable: up-dur &gt; down-dur</b> (más sensible a <b>SUBAS</b>). <b>Putable: down-dur &gt; up-dur</b> (más sensible a <b>BAJAS</b>). Es <b>al revés</b> de lo que sugiere \"qué me protege\".</p>"
-    },
-    {
-      "id": "vol01-t-lm3-12",
-      "lm": "LM3",
-      "star": true,
-      "title": "Solo el CALLABLE puede tener convexity negativa",
-      "body": "<p>El <b>putable SIEMPRE</b> tiene convexity <b>POSITIVA</b> (tiene <b>piso</b>). El callable se vuelve <b>NEGATIVA</b> cuando el call está <b>near the money</b> (el upside queda <b>capado</b>).</p>"
-    },
-    {
-      "id": "vol01-t-lm3-13",
-      "lm": "LM3",
-      "star": false,
-      "title": "Key rate durations NEGATIVAS",
-      "body": "<p>Ocurren en maturities <b>CORTOS</b> para bonos <b>zero o de cupón muy bajo</b> (10-yr zero: 5-yr KRD = <b>−0.93</b>). <b>Con opciones</b>, el key rate que domina depende del <b>CUPÓN</b> (prob. de ejercicio), no solo del maturity.</p>"
-    },
-    {
-      "id": "vol01-t-lm3-14",
-      "lm": "LM3",
-      "star": false,
-      "title": "Convertible: minimum value = <b>MÁXIMO</b>",
-      "body": "<p>Es el <b>MAX</b>(conversion value ; straight value) — no el mínimo ni el promedio. Y es un <b>PISO MÓVIL</b>: el straight value cambia con tasas y spreads.</p>"
-    },
-    {
-      "id": "vol01-t-lm3-15",
-      "lm": "LM3",
-      "star": false,
-      "title": "Busted convertible = se mueve como BONO",
-      "body": "<p>Acción <b>muy por debajo</b> del conv. price ⇒ manda el <b>BONO</b> (tasas y spreads pesan mucho). Si la acción está <b>arriba</b> ⇒ se mueve como <b>ACCIÓN</b> y el credit spread casi <b>no lo afecta</b>.</p>"
+      "title": "Leer el Durbin–Watson",
+      "body": "DW ≈ 2 = sin serial correlation. <b>&lt; 2</b> positiva, <b>&gt; 2</b> negativa. DW ≈ 2(1−r)."
     },
     {
       "id": "vol01-t-lm4-01",
       "lm": "LM4",
       "star": true,
-      "title": "Fair value = VND <u>MENOS</u> CVA",
-      "body": "<p>El CVA se <b>RESTA</b>. Y el <b>VND NO cambia</b> si cambian POD, recovery o σ — <b>todo el efecto pasa por el CVA</b>.</p>"
+      "title": "High-leverage vs. outlier",
+      "body": "<b>Leverage</b> = extremo en <b>X</b>. <b>Outlier</b> = extremo en <b>Y</b>. No confundir."
     },
     {
       "id": "vol01-t-lm4-02",
       "lm": "LM4",
       "star": true,
-      "title": "La POD es CONDICIONAL (hazard rate)",
-      "body": "<p>POD<sub>t</sub> = h × (1−h)<sup>t−1</sup>, <b>no</b> h constante todos los años. ✔ <b>Chequeo: Σ POD + POS<sub>final</sub> = 100%.</b></p>"
+      "title": "Nº de dummies",
+      "body": "Para n categorías se usan <b>(n−1)</b> dummies; usar n cae en la <b>dummy variable trap</b>."
     },
     {
       "id": "vol01-t-lm4-03",
       "lm": "LM4",
-      "star": true,
-      "title": "Risk-neutral &gt; actual/histórica",
-      "body": "<p>Las risk-neutral son <b>MAYORES</b> (1.60% vs 1.00%). Razones: <b>default risk premium</b> por incertidumbre del <b>TIMING</b> + <b>liquidez e impuestos</b>. En valuación se usan las <b>risk-neutral</b>.</p>"
+      "star": false,
+      "title": "Logistic se estima por OLS",
+      "body": "Se estima por <b>maximum likelihood</b>. La pendiente es el cambio en el <b>log odds</b>, no en P."
     },
     {
       "id": "vol01-t-lm4-04",
       "lm": "LM4",
-      "star": true,
-      "title": "La exposure INCLUYE el cupón",
-      "body": "<p>Exposure = valor del bono <b>+ el cupón de esa fecha</b>. Y se descuenta al risk-free por los años que <b>faltan</b>. <b>Olvidar el cupón es error típico.</b></p>"
-    },
-    {
-      "id": "vol01-t-lm4-05",
-      "lm": "LM4",
-      "star": true,
-      "title": "POD y recovery: correlación POSITIVA",
-      "body": "<p>Con <b>precio y spread FIJOS</b>: recovery más <b>BAJO</b> ⇒ POD implícita más <b>BAJA</b> (se compensan). <i>Suena al revés, pero es así.</i></p>"
-    },
-    {
-      "id": "vol01-t-lm4-06",
-      "lm": "LM4",
       "star": false,
-      "title": "Duplicar POD &gt; halvear recovery",
-      "body": "<p>El spread es <b>más sensible a la POD</b>. Duplicar POD: 0.90% → <b>1.82%</b> (+92 bps). Halvear recovery: 0.90% → 1.21% (+31 bps).</p>"
-    },
-    {
-      "id": "vol01-t-lm4-07",
-      "lm": "LM4",
-      "star": false,
-      "title": "La migración SIEMPRE resta retorno",
-      "body": "<p><b>2 razones:</b> (1) probabilidades <b>sesgadas al downgrade</b>; (2) el spread <b>sube mucho más</b> en un downgrade de lo que baja en un upgrade. <b>Signo:</b> %ΔP = <b>−</b>ModDur × ΔSpread.</p>"
-    },
-    {
-      "id": "vol01-t-lm4-08",
-      "lm": "LM4",
-      "star": true,
-      "title": "Structural = POR QUÉ · Reduced-form = CUÁNDO",
-      "body": "<p><b>Structural:</b> default <b>ENDÓGENO</b> (assets &lt; barrier), inputs <b>NO observables</b>. <b>Reduced-form:</b> default <b>EXÓGENO</b> y aleatorio (Poisson), inputs <b>OBSERVABLES</b>. Se confunden constantemente.</p>"
-    },
-    {
-      "id": "vol01-t-lm4-09",
-      "lm": "LM4",
-      "star": false,
-      "title": "Equity = LONG call · Debtholders = SHORT call",
-      "body": "<p>Los <b>debtholders</b> son dueños de los activos y <b>ESCRIBIERON</b> (short) el call. <b>Visión put:</b> debtholders = <b>long bono risk-free + SHORT put</b>. El <b>limited liability</b> del accionista <b>ES</b> el put.</p>"
-    },
-    {
-      "id": "vol01-t-lm4-10",
-      "lm": "LM4",
-      "star": true,
-      "title": "σ afecta al CVA de un bono SIN opciones",
-      "body": "<p>Contraintuitivo: normalmente σ importa solo con embedded options. Pero con <b>credit risk</b>, σ cambia la <b>expected exposure</b> ⇒ mueve el <b>CVA</b> (baja un poco) ⇒ fair value <b>sube</b>. <b>El VND no cambia.</b></p>"
-    },
-    {
-      "id": "vol01-t-lm4-11",
-      "lm": "LM4",
-      "star": false,
-      "title": "DM vs Quoted Margin",
-      "body": "<p><b>QM</b> = spread <b>contractual FIJO</b>. <b>DM</b> = medida de <b>YIELD</b> (como la YTM). <b>Floater bajo la par ⇒ DM &gt; QM.</b> Sobre la par ⇒ DM &lt; QM.</p>"
-    },
-    {
-      "id": "vol01-t-lm4-12",
-      "lm": "LM4",
-      "star": true,
-      "title": "Curva de crédito invertida: 2 causas OPUESTAS",
-      "body": "<p>(a) <b>Buena:</b> expectativa de <b>MEJORA</b> (LBO, cíclica en el fondo). (b) <b>Mala: DISTRESS</b>. En distress el bono cotiza <b>al recovery</b> y el spread es un <b>ARTEFACTO ÓPTICO</b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm4-13",
-      "lm": "LM4",
-      "star": false,
-      "title": "Spreads y benchmark: CONTRACÍCLICOS",
-      "body": "<p>Economía <b>FUERTE</b> ⇒ benchmark yields <b>SUBEN</b> pero credit spreads <b>BAJAN</b>. Se mueven en <b>direcciones opuestas</b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm4-14",
-      "lm": "LM4",
-      "star": false,
-      "title": "Covered bond ≠ ABS",
-      "body": "<p><b>Covered: DUAL recourse</b> (issuer <b>Y</b> pool) + pool <b>DINÁMICO</b> ⇒ ratea <b>por encima</b> del emisor. <b>ABS/MBS:</b> recurso <b>solo al pool</b> + pool <b>estático</b> ⇒ prepayment risk.</p>"
-    },
-    {
-      "id": "vol01-t-anexo-01",
-      "lm": "ANEXO",
-      "star": false,
-      "title": "El cupón va DENTRO de la exposure",
-      "body": "<p>Exposure = valor del bono <b>+ cupón de esa fecha</b>. En un zero no hay cupón; en un bono con cupones, <b>siempre</b> va sumado.</p>"
-    },
-    {
-      "id": "vol01-t-anexo-02",
-      "lm": "ANEXO",
-      "star": true,
-      "title": "FRN: las probs del cupón están DESFASADAS",
-      "body": "<p><b>Valores</b> → probs de <b>SU</b> fecha. <b>Cupón</b> → probs de la fecha <b>ANTERIOR</b> (se fijó ahí, \"in arrears\"). <b>Señal de alarma: n+1 valores pero solo n cupones.</b></p>"
-    },
-    {
-      "id": "vol01-t-anexo-03",
-      "lm": "ANEXO",
-      "star": true,
-      "title": "Si h CAMBIA, no hay fórmula con potencias",
-      "body": "<p><b>POD<sub>t</sub> = h<sub>NUEVO</sub> × POS<sub>VIEJO</sub></b>. Hay que arrastrar el POS año por año. La fórmula h×(1−h)<sup>t−1</sup> <b>solo vale si h es CONSTANTE</b>.</p>"
-    },
-    {
-      "id": "vol01-t-anexo-04",
-      "lm": "ANEXO",
-      "star": true,
-      "title": "Probs de NODOS ≠ PODs",
-      "body": "<p>Las probs Pascal (0.0625 / 0.25 / <b>0.375</b>…) son de los <b>nodos de TASAS</b> (para la expected exposure). Las <b>PODs</b> son otra cosa. Conviven en la misma tabla pero <b>no se mezclan</b>.</p>"
-    },
-    {
-      "id": "vol01-t-anexo-05",
-      "lm": "ANEXO",
-      "star": false,
-      "title": "El VND NUNCA cambia con POD/recovery/σ",
-      "body": "<p>Solo depende de los <b>flujos y el benchmark</b>. Cambien POD, recovery o σ ⇒ solo se mueve el <b>CVA</b>.</p>"
-    },
-    {
-      "id": "vol01-t-anexo-06",
-      "lm": "ANEXO",
-      "star": true,
-      "title": "Chequeo obligatorio: Σ POD + POS<sub>final</sub> = 100%",
-      "body": "<p>Si no da 100%, hay un error en la cadena de PODs. <b>Es el control más rápido que existe.</b></p>"
-    },
-    {
-      "id": "vol01-t-anexo-07",
-      "lm": "ANEXO",
-      "star": false,
-      "title": "DM vs QM: el signo",
-      "body": "<p>Precio <b>BAJO</b> la par ⇒ <b>DM &gt; QM</b>. Precio <b>SOBRE</b> la par ⇒ DM &lt; QM. Un floater <b>flat sin credit risk</b> vale <b>exactamente 100</b> en cada nodo.</p>"
-    },
-    {
-      "id": "vol01-t-anexo-08",
-      "lm": "ANEXO",
-      "star": false,
-      "title": "Distressed: NO uses la tabla normal",
-      "body": "<p>Si el default es <b>inminente</b> y el bono cotiza al recovery: <b>CVA = VND − Recovery</b>, directo. El spread resultante <b>no es interpretable</b> como riesgo relativo por plazo.</p>"
-    },
-    {
-      "id": "vol01-t-anexo-09",
-      "lm": "ANEXO",
-      "star": false,
-      "title": "Recovery ↓ ⇒ POD implícita ↓",
-      "body": "<p>Solo con el <b>precio DADO</b>. El CVA está fijo: si sube el LGD, la POD debe <b>bajar</b>. <b>Correlación positiva.</b></p>"
-    },
-    {
-      "id": "vol01-t-anexo-10",
-      "lm": "ANEXO",
-      "star": false,
-      "title": "La YTM de un bono riesgoso asume NO DEFAULT",
-      "body": "<p>El \"3.77%\" es el retorno <b>si no defaultea</b>. Si defaultea, los IRR son catastróficos (<b>−57%</b>, −33%…) y dependen del <b>TIMING</b>.</p>"
+      "title": "df del studentized residual",
+      "body": "Usa <b>(n − k − 2)</b> grados de libertad; el umbral de leverage es <b>3(k+1)/n</b>."
     },
     {
       "id": "vol01-t-lm5-01",
       "lm": "LM5",
       "star": true,
-      "title": "Long/Short: single-name vs índice INVERTIDOS",
-      "body": "<p><b>Single-name:</b> buyer de protección = <b>SHORT</b> credit · seller = <b>LONG</b>. <b>Index CDS: AL REVÉS</b> — el que <b>compra el CDX</b> = <b>LONG</b> credit. <i>Pensá siempre en <b>\"buy/sell protection\"</b>.</i></p>"
+      "title": "Covariance stationarity es opcional para AR",
+      "body": "Es <b>requisito</b>. Sin ella (p. ej. unit root) el AR estimado es inválido."
     },
     {
       "id": "vol01-t-lm5-02",
       "lm": "LM5",
       "star": true,
-      "title": "Cheapest-to-deliver: subordinado NO califica",
-      "body": "<p>El CTD debe tener seniority <b>igual o superior</b> a la reference obligation. Un <b>subordinado a 20%</b> es más barato pero <b>NO califica</b>. Y el payoff se calcula sobre el <b>CTD</b>, aunque vos tengas otro bono.</p>"
+      "title": "Random walk tiene mean-reverting level",
+      "body": "No: b<sub>0</sub>/(1−b<sub>1</sub>) = 0/0 <b>indefinido</b>, y la varianza crece sin límite → no estacionario."
     },
     {
       "id": "vol01-t-lm5-03",
       "lm": "LM5",
       "star": false,
-      "title": "Restructuring NO es credit event en EE.UU.",
-      "body": "<p>Los 3 eventos: bankruptcy, failure to pay, restructuring — <b>pero en EE.UU. se reestructura vía bankruptcy</b> (que sí lo es). Sí es credit event en <b>otros países</b> (Grecia).</p>"
+      "title": "Signo en el mean-reverting level",
+      "body": "b<sub>0</sub>/(1−b<sub>1</sub>). Si el valor actual está <b>por debajo</b> → la serie <b>sube</b> (y viceversa)."
     },
     {
       "id": "vol01-t-lm5-04",
       "lm": "LM5",
       "star": false,
-      "title": "Failure to pay ≠ hace falta bankruptcy",
-      "body": "<p>Si no paga tras el <b>grace period</b>, <b>ES credit event</b> aunque NO se declare en quiebra. Y no importa si fue en un bono <b>subordinado</b>: <b>el credit event es del EMISOR</b>, no del bono.</p>"
+      "title": "Dickey–Fuller usa t normales",
+      "body": "Usa valores críticos <b>DF</b> especiales, no la t estándar. Se testea (b<sub>1</sub>−1)=0."
     },
     {
       "id": "vol01-t-lm5-05",
       "lm": "LM5",
       "star": false,
-      "title": "Cash vs physical: cuándo preferís cash",
-      "body": "<p>Si tenés un bono que vale <b>MÁS</b> que el CTD ⇒ preferís <b>CASH</b> (cobrás el CDS sobre el CTD barato y vendés tu bono caro). Si tenés <b>el CTD mismo</b> ⇒ <b>INDIFERENTE</b>.</p>"
+      "title": "Corregir unit root",
+      "body": "Se hace <b>first-differencing</b> y se corre el AR sobre las diferencias."
     },
     {
       "id": "vol01-t-lm5-06",
       "lm": "LM5",
+      "star": false,
+      "title": "Seasonal lag",
+      "body": "Autocorrelación significativa en el lag estacional (4 trimestral / 12 mensual) → agregar un <b>término de lag estacional</b>."
+    },
+    {
+      "id": "vol01-t-lm6-01",
+      "lm": "LM6",
       "star": true,
-      "title": "El signo del upfront premium",
-      "body": "<p>Spread <b>&gt;</b> coupon ⇒ paga el <b>BUYER</b> (precio &lt; 100). Spread <b>&lt;</b> coupon ⇒ paga el <b>SELLER</b> (upfront <b>negativo</b>, <b>precio &gt; 100</b>). <b>Precio = 100 − upfront%</b>.</p>"
+      "title": "Bias ↔ variance",
+      "body": "<b>Bias = underfitting = alto E<sub>in</sub></b>; <b>variance = overfitting = alto E<sub>out</sub></b>."
     },
     {
-      "id": "vol01-t-lm5-07",
-      "lm": "LM5",
-      "star": false,
-      "title": "Coupons estandarizados: 1% y 5%",
-      "body": "<p><b>1% = Investment Grade · 5% = High Yield.</b> El coupon <b>casi nunca</b> es el spread correcto — de ahí que exista el <b>upfront</b>.</p>"
-    },
-    {
-      "id": "vol01-t-lm5-08",
-      "lm": "LM5",
+      "id": "vol01-t-lm6-02",
+      "lm": "LM6",
       "star": true,
-      "title": "Curve trade: qué es bullish y qué bearish",
-      "body": "<p><b>STEEPENER</b> (compro protección <b>LARGA</b>, vendo corta) = <b>BULLISH</b> en el corto plazo. <b>FLATTENER</b> (compro protección <b>CORTA</b>, vendo larga) = <b>BEARISH</b> (espera <b>problemas inminentes</b>). <b>Contraintuitivo — memorizalo.</b></p>"
+      "title": "λ = 0 en LASSO",
+      "body": "Si λ=0, LASSO ≡ OLS. El penalty <b>crece</b> con el nº de features."
     },
     {
-      "id": "vol01-t-lm5-09",
-      "lm": "LM5",
+      "id": "vol01-t-lm6-03",
+      "lm": "LM6",
       "star": false,
-      "title": "Curva invertida = estrés de CORTO plazo",
-      "body": "<p>Downward ⇒ mayor POD en los años <b>TEMPRANOS</b>. Es <b>poco común</b>. Upward ⇒ mayor POD en años <b>POSTERIORES</b>.</p>"
+      "title": "K-fold con time-series",
+      "body": "K-fold CV <b>no</b> sirve con series temporales (barajar rompe el orden)."
     },
     {
-      "id": "vol01-t-lm5-10",
-      "lm": "LM5",
+      "id": "vol01-t-lm6-04",
+      "lm": "LM6",
+      "star": false,
+      "title": "Random forest usa todos los features",
+      "body": "Usa un <b>subset aleatorio de m &lt; n</b> por nodo. Además es black box (a diferencia del CART único)."
+    },
+    {
+      "id": "vol01-t-lm6-05",
+      "lm": "LM6",
+      "star": false,
+      "title": "Eigenvector vs. eigenvalue",
+      "body": "Eigen<b>vector</b> = dirección. Eigen<b>value</b> = % de varianza. PC1 = mayor eigenvalue."
+    },
+    {
+      "id": "vol01-t-lm6-06",
+      "lm": "LM6",
+      "star": false,
+      "title": "Agglomerative vs. divisive",
+      "body": "Aggl. = bottom-up, clusters chicos/locales. Divisive = top-down, clusters grandes/globales."
+    },
+    {
+      "id": "vol01-t-lm7-01",
+      "lm": "LM7",
       "star": true,
-      "title": "Basis: quién es negative y quién positive",
-      "body": "<p><b>NEGATIVE basis</b> = spread <b>MAYOR en BONOS</b> ⇒ <b>comprar el bono + comprar protección</b>. <b>POSITIVE basis</b> = spread mayor en <b>CDS</b>. <i>Se confunden constantemente.</i></p>"
+      "title": "Parameter vs. hyperparameter",
+      "body": "Parameter = aprendido (weights, coefs, support vectors). Hyperparameter = seteado a mano (λ, k, capas, p-threshold)."
     },
     {
-      "id": "vol01-t-lm5-11",
-      "lm": "LM5",
-      "star": false,
-      "title": "El P&amp;L: quién gana con el spread widening",
-      "body": "<p>El <b>BUYER</b> de protección (short credit) <b>GANA</b> cuando el spread <b>se ensancha</b>. <b>% Δ precio = Δspread × Duration.</b> Sin default de por medio.</p>"
+      "id": "vol01-t-lm7-02",
+      "lm": "LM7",
+      "star": true,
+      "title": "Precision vs. recall",
+      "body": "P ÷ predichos positivos (FP/Type I). R ÷ reales positivos (FN/Type II). R = TPR = sensitivity."
     },
     {
-      "id": "vol01-t-lm5-12",
-      "lm": "LM5",
+      "id": "vol01-t-lm7-03",
+      "lm": "LM7",
       "star": false,
-      "title": "Index CDS: la exposición es 1/N",
-      "body": "<p><b>Equally weighted.</b> $500M en CDX IG (125 nombres) ⇒ exposición a cada uno = <b>$4M</b>, no $500M. Al defaultear uno, el índice sigue con <b>notional reducido</b> ($496M).</p>"
+      "title": "Accuracy con clases desbalanceadas",
+      "body": "Accuracy engaña si el dataset está desbalanceado → usar <b>F1</b> (media armónica)."
     },
     {
-      "id": "vol01-t-lm5-13",
-      "lm": "LM5",
+      "id": "vol01-t-lm7-04",
+      "lm": "LM7",
       "star": false,
-      "title": "El spread converge a CERO al vencimiento",
-      "body": "<p>Sin default, el spread <b>tiende a cero</b> al acercarse el maturity (como un bono a la par). El <b>seller gana</b>; el <b>buyer pierde</b> el CDS — pero si tenía el bono, era su <b>seguro</b>.</p>"
+      "title": "Normalization vs. standardization",
+      "body": "Norm → [0,1], sensible a outliers, sin distribución conocida. Std → media 0/sd 1, requiere normalidad."
+    },
+    {
+      "id": "vol01-t-lm7-05",
+      "lm": "LM7",
+      "star": false,
+      "title": "Filtration vs. Selection",
+      "body": "Filtration = quitar <b>filas</b>; Selection = quitar <b>columnas</b>. Selection (prep) ≠ feature selection (exploration)."
+    },
+    {
+      "id": "vol01-t-lm7-06",
+      "lm": "LM7",
+      "star": false,
+      "title": "Stemming vs. lemmatization",
+      "body": "Stem = rule-based, puede no ser palabra real, más común. Lemma = raíz real, más caro. BOW pierde el orden → N-grams."
+    },
+    {
+      "id": "vol01-t-lm7-07",
+      "lm": "LM7",
+      "star": false,
+      "title": "TF-IDF alto",
+      "body": "TF-IDF alto = palabra frecuente en <b>pocos</b> documentos (única/importante). IDF = log(1/DF)."
+    },
+    {
+      "id": "vol01-t-lm7-08",
+      "lm": "LM7",
+      "star": false,
+      "title": "RMSE para clasificación",
+      "body": "RMSE es para <b>regresión/continuo</b>. Clasificación → confusion matrix, F1, ROC/AUC."
     }
   ],
   "problems": [
     {
       "id": "vol01-p01",
-      "lm": "LM1",
-      "title": "Forward rates desde los spots",
-      "given": "<b>Dado:</b> z<sub>1</sub> = 9%, z<sub>2</sub> = 10%, z<sub>3</sub> = 11% (spots anuales).",
-      "ask": "Calculá <b>f<sub>1,1</sub></b> (forward de 1 año, en 1 año) y <b>f<sub>2,1</sub></b> (forward de 1 año, en 2 años). ¿Son consistentes con la forma de la curva?",
-      "answer": "f<sub>1,1</sub> = <b>11.01%</b>  ·  f<sub>2,1</sub> = <b>13.03%</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Forward rate model: <span class=\"mono\">(1+z<sub>B</sub>)<sup>B</sup> = (1+z<sub>A</sub>)<sup>A</sup> × (1+f<sub>A,B−A</sub>)<sup>B−A</sup></span></span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>f<sub>1,1</sub>:</b> (1.10)² = (1.09) × (1 + f<sub>1,1</sub>) ⇒ f<sub>1,1</sub> = 1.21/1.09 − 1</span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>f<sub>2,1</sub>:</b> (1.11)³ = (1.10)² × (1 + f<sub>2,1</sub>) ⇒ f<sub>2,1</sub> = 1.367631/1.21 − 1</span></div>\n<div class=\"res\">f<sub>1,1</sub> = <b>11.01%</b>  ·  f<sub>2,1</sub> = <b>13.03%</b></div>\n<div class=\"warn\"><b>Consistencia:</b> curva <b>upward</b> ⇒ los forwards son <b>crecientes</b> (13.03% &gt; 11.01%) y quedan <b>por encima</b> de los spots. ✔<br/>\n<b>⚠ Notación:</b> f<sub>A,B−A</sub> = (inicio, <b>TENOR</b>). \"2-yr forward en 1 año\" sería f<sub>1,<b>2</b></sub> = [(1.11)³/(1.09)]<sup>1/2</sup> − 1 = <b>12.01%</b>.</div>"
+      "lm": "LM2",
+      "title": "Adjusted R²",
+      "given": "Una regresión con n=50 observaciones y k=5 variables tiene R²=0,6155.",
+      "ask": "Calcular el adjusted R².",
+      "answer": "R̄² = <b>0,5718</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>R̄² = 1 − [(n−1)/(n−k−1)]·(1−R²)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 1 − [(50−1)/(50−5−1)]·(1−0,6155)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 1 − (49/44)·(0,3845)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>= 1 − 1,1136·0,3845 = 1 − 0,4282</span></div><div class=\"res\">R̄² = <b>0,5718</b></div><div class=\"warn\">Con k≥1, siempre R̄² &lt; R² (0,5718 &lt; 0,6155).</div>"
     },
     {
       "id": "vol01-p02",
-      "lm": "LM1",
-      "title": "Bootstrapping: del par curve al spot",
-      "given": "<b>Dado:</b> par rates (cupón anual): 1yr = <b>5.00%</b>, 2yr = <b>5.97%</b>. Ya sabés que z<sub>1</sub> = 5%.",
-      "ask": "Calculá <b>z<sub>2</sub></b> (el spot de 2 años).",
-      "answer": "z<sub>2</sub> = <b>6.00%</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Un bono a la par vale 1 (por unidad). Sus flujos: cupón 0.0597 en t=1 y 1.0597 en t=2.</span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><span class=\"mono\">1 = 0.0597/(1.05) + 1.0597/(1+z<sub>2</sub>)²</span></span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span>0.0597/1.05 = 0.056857 ⇒ <span class=\"mono\">1.0597/(1+z<sub>2</sub>)² = 0.943143</span></span></div>\n<div class=\"step\"><span class=\"sn\">4.</span><span><span class=\"mono\">(1+z<sub>2</sub>)² = 1.0597/0.943143 = 1.1236</span> ⇒ 1+z<sub>2</sub> = √1.1236 = 1.06</span></div>\n<div class=\"res\">z<sub>2</sub> = <b>6.00%</b></div>\n<div class=\"warn\"><b>Lógica:</b> forward substitution — se resuelven los zeros <b>uno por uno, del más corto al más largo</b>, usando los ya conocidos. Siguiendo: par 6.91% ⇒ z<sub>3</sub> = <b>7%</b> · par 7.81% ⇒ z<sub>4</sub> = <b>8%</b>.</div>"
+      "lm": "LM2",
+      "title": "AIC de un modelo",
+      "given": "Modelo con n=50, k=4 y SSE = 56,6182.",
+      "ask": "Escribir la fórmula del AIC y su término de penalidad.",
+      "answer": "AIC = 50·ln(1,1324) + <b>10</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>AIC = n·ln(SSE/n) + 2(k+1)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 50·ln(56,6182/50) + 2(4+1)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Penalidad = 2(k+1) = 2·5 = 10</span></div><div class=\"res\">AIC = 50·ln(1,1324) + <b>10</b></div><div class=\"warn\">AIC se prefiere para predicción; menor AIC = mejor. BIC usaría ln(n)·(k+1) en vez de 2(k+1).</div>"
     },
     {
       "id": "vol01-p03",
-      "lm": "LM1",
-      "title": "Precio con spots vs YTM",
-      "given": "<b>Dado:</b> bono <b>3 años, cupón 5%</b>, valor par £100. Spots: z<sub>1</sub> = 9%, z<sub>2</sub> = 10%, z<sub>3</sub> = 11%.",
-      "ask": "Calculá el <b>precio</b>. Sabiendo que la YTM resultante es <b>10.93%</b>, ¿qué relación cumple con los spots?",
-      "answer": "Precio = <b>£85.49</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Cada flujo se descuenta a <b>SU</b> spot:</span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><span class=\"mono\">P = 5/(1.09) + 5/(1.10)² + 105/(1.11)³</span></span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><span class=\"mono\">P = 4.5872 + 4.1322 + 76.7723</span></span></div>\n<div class=\"res\">Precio = <b>£85.49</b></div>\n<div class=\"warn\"><b>La relación clave:</b> <b>z<sub>1</sub> (9%) &lt; y<sub>3</sub> (10.93%) &lt; z<sub>3</sub> (11%)</b><br/>\n        La YTM es un <b>promedio ponderado</b> de los spots, <b>sesgado hacia el spot del flujo más grande</b> (el principal) ⇒ queda mucho más cerca de z<sub>3</sub>.<br/>\n        ⚠ <b>Trampa:</b> la YTM <b>NO es igual</b> a z<sub>3</sub>.</div>"
+      "lm": "LM2",
+      "title": "Joint F-test",
+      "given": "Restricted (Factores 1–3): SSE=64,5176, df=46. Unrestricted (Factores 1–5): SSE=56,6182, df=44. n=50, k=5, q=2. F crítico(1%)=5,120.",
+      "ask": "Calcular el F conjunto y decidir sobre H<sub>0</sub>: b<sub>4</sub>=b<sub>5</sub>=0.",
+      "answer": "F = <b>3,0694</b> &lt; 5,120 → <b>no se rechaza</b> H<sub>0</sub>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>F = [(SSE_r − SSE_u)/q] / [SSE_u/(n−k−1)]</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= [(64,5176 − 56,6182)/2] / [56,6182/44]</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= (7,8994/2) / 1,2868 = 3,9497/1,2868</span></div><div class=\"res\">F = <b>3,0694</b> &lt; 5,120 → <b>no se rechaza</b> H<sub>0</sub></div><div class=\"warn\">No hay evidencia de que b4 o b5 ≠ 0; el F usa q y (n−k−1)=44 g.l.</div>"
     },
     {
       "id": "vol01-p04",
-      "lm": "LM1",
-      "title": "Rolling down the yield curve",
-      "given": "<b>Dado:</b> horizonte de inversión <b>2 años</b>. Par curve: 1yr 2%, 3yr 4%, 4yr <b>5%</b>, 5yr <b>6%</b>, 6yr <b>7%</b>. La curva se asume <b>estática</b>.<br/>\n<b>Estrategia A (match):</b> comprar el bono 5-yr al 6% a la par y mantenerlo 2 años ⇒ valor a los 2 años = <b>117.67</b>.<br/>\n<b>Estrategia B (roll-down):</b> comprar el bono 6-yr al 7% a la par, venderlo a los 2 años (le quedan 4 años, se valúa al 5%) ⇒ valor = <b>121.23</b>.",
-      "ask": "Calculá el <b>retorno anualizado</b> de cada estrategia y el <b>excess return</b>.",
-      "answer": "Excess return ≈ <b>10.10% − 8.48% ≈ 1.6% (≈2%)</b> a favor del roll-down",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Retorno anualizado = <span class=\"mono\">(Valor final / 100)<sup>1/2</sup> − 1</span></span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>Estrategia A:</b> (117.67/100)<sup>1/2</sup> − 1 = <b>8.476%</b></span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>Estrategia B:</b> (121.23/100)<sup>1/2</sup> − 1 = <b>10.10%</b></span></div>\n<div class=\"res\">Excess return ≈ <b>10.10% − 8.48% ≈ 1.6% (≈2%)</b> a favor del roll-down</div>\n<div class=\"warn\"><b>De dónde sale la ganancia:</b> mayor <b>cupón</b> (7% vs 6%) + mayor <b>ganancia de capital</b> al \"rodar\" hacia abajo por la curva.<br/>\n        ⚠ <b>Trampa clásica:</b> el roll-down exige comprar maturity <b>MAYOR</b> al horizonte y <b>vender antes</b> del vencimiento. Marcar \"maturity = horizonte\" es el error típico.<br/>\n        ⚠ Solo funciona si la curva <b>se mantiene upward y estática</b>.</div>"
+      "lm": "LM3",
+      "title": "Diagnóstico de multicolinealidad (VIF)",
+      "given": "Al regresar X<sub>3</sub> sobre las demás independientes se obtiene R²<sub>3</sub> = 0,90.",
+      "ask": "Calcular el VIF de X<sub>3</sub> e interpretarlo.",
+      "answer": "VIF = <b>10</b> → multicolinealidad <b>seria</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>VIF = 1/(1 − R²_j)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 1/(1 − 0,90) = 1/0,10</span></div><div class=\"res\">VIF = <b>10</b> → multicolinealidad <b>seria</b></div><div class=\"warn\">VIF&gt;5 preocupa, &gt;10 serio. Efecto: SE inflados → t chicos → Type II.</div>"
     },
     {
       "id": "vol01-p05",
-      "lm": "LM1",
-      "title": "Key rate durations (level, steepness, curvature)",
-      "given": "<b>Dado:</b> portafolio de <b>$300</b> = $100 en cada uno de tres <b>zero-coupon bonds</b> de <b>1, 5 y 10 años</b>.",
-      "ask": "Calculá la <b>effective duration</b> del portafolio y las tres key rate durations: <b>K<sub>L</sub></b> (level), <b>K<sub>S</sub></b> (steepness) y <b>K<sub>C</sub></b> (curvature).",
-      "answer": "K<sub>L</sub> = <b>5.3333</b>  ·  K<sub>S</sub> = <b>3.0</b>  ·  K<sub>C</sub> = <b>3.6667</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Cada zero pesa 1/3. Su duration ≈ su maturity (1, 5, 10).</span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>Effective duration</b> = 0.3333 × (1 + 5 + 10) = <b>5.3333</b></span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>Key rate durations individuales:</b> K<sub>1</sub> = 0.3333 · K<sub>5</sub> = 1.6667 · K<sub>10</sub> = 3.3333</span></div>\n<div class=\"step\"><span class=\"sn\">4.</span><span><b>K<sub>L</sub></b> = K<sub>1</sub> + K<sub>5</sub> + K<sub>10</sub> = (1 + 5 + 10)/[300 × 0.01] = <b>5.3333</b></span></div>\n<div class=\"step\"><span class=\"sn\">5.</span><span><b>K<sub>S</sub></b> = <b>−</b>K<sub>1</sub> + K<sub>10</sub> = −(1 − 10)/[300 × 0.01] = <b>3.0</b></span></div>\n<div class=\"step\"><span class=\"sn\">6.</span><span><b>K<sub>C</sub></b> = K<sub>1</sub> + K<sub>10</sub> = (1 + 10)/[300 × 0.01] = <b>3.6667</b></span></div>\n<div class=\"res\">K<sub>L</sub> = <b>5.3333</b>  ·  K<sub>S</sub> = <b>3.0</b>  ·  K<sub>C</sub> = <b>3.6667</b></div>\n<div class=\"warn\"><b>%ΔP</b> ≈ −5.3333·Δx<sub>L</sub> − 3.0·Δx<sub>S</sub> − 3.6667·Δx<sub>C</sub><br/>\n        ⚠ <b>Σ key rate durations = effective duration</b>, pero <b>solo si TODOS los key rates se mueven igual</b> (shift paralelo).<br/>\n        ⚠ <b>El signo:</b> K<sub>S</sub> lleva <b>signo NEGATIVO en el tramo corto</b>. Es la trampa más común.</div>"
+      "lm": "LM3",
+      "title": "Durbin–Watson",
+      "given": "Una regresión reporta una autocorrelación de los residuos de primer orden r = 0,45.",
+      "ask": "Aproximar el estadístico Durbin–Watson e indicar qué sugiere.",
+      "answer": "DW ≈ <b>1,10</b> → serial correlation <b>positiva</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>DW ≈ 2(1 − r)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 2(1 − 0,45) = 2(0,55)</span></div><div class=\"res\">DW ≈ <b>1,10</b> → serial correlation <b>positiva</b></div><div class=\"warn\">DW&lt;2 = positiva → SE subestimados → Type I. Corregir con Newey–West.</div>"
     },
     {
       "id": "vol01-p06",
-      "lm": "LM2",
-      "title": "Backward induction en el binomial tree",
-      "given": "<b>Dado:</b> bono <b>3 años, cupón 5%</b> (option-free). Árbol de tasas:<br/>\n<b>Time 0:</b> 2.0% · <b>Time 1:</b> 5.0% (up) / 3.0% (down) · <b>Time 2:</b> 8.0% (UU) / 6.0% (UD) / 4.0% (DD)",
-      "ask": "Calculá el valor del bono <b>hoy</b> por backward induction.",
-      "answer": "Valor del bono = <b>103.0287</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Time 3 (maturity):</b> el bono paga <b>105</b> (cupón + principal) en los 4 nodos.</span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>Time 2</b> — descontar 105 a la tasa de cada nodo:<br/>\n          105/1.08 = <b>97.2222</b> · 105/1.06 = <b>99.0566</b> · 105/1.04 = <b>100.9615</b></span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>Time 1</b> — <span class=\"mono\">V = [C + 0.5·V<sub>H</sub> + 0.5·V<sub>L</sub>] / (1+i)</span><br/>\n          @5%: (5 + 0.5×97.2222 + 0.5×99.0566)/1.05 = <b>98.2280</b><br/>\n          @3%: (5 + 0.5×99.0566 + 0.5×100.9615)/1.03 = <b>101.9506</b></span></div>\n<div class=\"step\"><span class=\"sn\">4.</span><span><b>Time 0</b> @2%: (5 + 0.5×98.2280 + 0.5×101.9506)/1.02</span></div>\n<div class=\"res\">Valor del bono = <b>103.0287</b></div>\n<div class=\"warn\">⚠ <b>Los 3 detalles que se olvidan:</b> (1) probabilidades <b>0.5/0.5</b>; (2) se descuenta a la tasa <b>DEL NODO</b> (inicio del período); (3) el <b>cupón C se SUMA</b> antes de descontar.<br/>\n        Se arranca <b>en maturity</b> y se va de <b>derecha a izquierda</b>.</div>"
+      "lm": "LM4",
+      "title": "Umbral de leverage",
+      "given": "Un modelo tiene k=3 variables independientes y n=60 observaciones.",
+      "ask": "Calcular el umbral de leverage por encima del cual una observación es potencialmente influyente.",
+      "answer": "Umbral = <b>0,20</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Umbral = 3·(k+1)/n</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 3·(3+1)/60 = 12/60</span></div><div class=\"res\">Umbral = <b>0,20</b></div><div class=\"warn\">Leverage = X extrema. El studentized residual (outlier en Y) usa (n−k−2)=55 g.l.</div>"
     },
     {
       "id": "vol01-p07",
-      "lm": "LM2",
-      "title": "Pathwise valuation (Triángulo de Pascal)",
-      "given": "<b>Dado:</b> bono <b>3 años, cupón 5%</b>. Los PV por cada path del árbol calibrado son:<br/>\n      Path 1 (HH) = <b>100.5298</b> · Path 2 (HL) = <b>102.3452</b> · Path 3 (LH) = <b>103.4794</b> · Path 4 (LL) = <b>104.8877</b>",
-      "ask": "¿Cuántos paths tiene un bono de 3 años y cuál es el <b>valor</b> del bono por pathwise valuation?",
-      "answer": "Valor = <b>102.8105</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Nº de paths</b> = fila del <b>Triángulo de Pascal</b>. Bono de 3 años ⇒ <b>2³ ÷ 2 = 4 paths</b> (HH / HL / LH / LL).</span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span>Se <b>PROMEDIAN</b> los PV (⚠ <b>no se suman</b>):</span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><span class=\"mono\">(100.5298 + 102.3452 + 103.4794 + 104.8877) / 4 = 411.2421 / 4</span></span></div>\n<div class=\"res\">Valor = <b>102.8105</b></div>\n<div class=\"warn\"><b>Verificación:</b> coincide con el valor por <b>backward induction</b> (102.8102, diferencia = redondeo). Ambos métodos son <b>arbitrage-free</b> ⇒ dan el mismo resultado. ✔<br/>\n<b>Ejemplo de un path:</b> Path 1 = 5/1.02 + 5/(1.02×1.04646) + 105/(1.02×1.04646×1.08167) = 100.5298</div>"
+      "lm": "LM4",
+      "title": "Logistic: de log odds a probabilidad",
+      "given": "Un modelo logístico da un logit (log odds) estimado de 0 para cierta observación.",
+      "ask": "Calcular la probabilidad P implícita.",
+      "answer": "P = <b>0,50</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>ln[P/(1−P)] = 0 → P/(1−P) = e⁰ = 1</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>P = 1/(1 + e^(−0)) = 1/(1+1)</span></div><div class=\"res\">P = <b>0,50</b></div><div class=\"warn\">Logit=0 ⇔ odds=1 ⇔ P=0,5. Se estima por maximum likelihood, no OLS.</div>"
     },
     {
       "id": "vol01-p08",
-      "lm": "LM3",
-      "title": "Callable bond a volatilidad CERO",
-      "given": "<b>Dado:</b> bono <b>3 años, cupón 4.25%</b>, <b>callable a la par</b> en los años 1 y 2. Forward rates: <b>Yr0 = 2.500%</b>, <b>Yr1 = 3.518%</b>, <b>Yr2 = 4.564%</b>. El straight bond vale <b>102.114</b>.",
-      "ask": "Calculá el valor del <b>callable bond</b> y el <b>valor del call option</b>. ¿En qué años se ejerce?",
-      "answer": "V<sub>callable</sub> = <b>101.707</b>  ·  V<sub>call</sub> = 102.114 − 101.707 = <b>0.407</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Year 2:</b> 104.250 / 1.04564 = <b>99.700</b><br/>\n          ¿Se llama? 99.700 <b>&lt;</b> 100 ⇒ <b>NO</b> (al emisor no le conviene pagar 100 por algo que vale 99.700).</span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>Year 1:</b> (99.700 + 4.250) / 1.03518 = <b>100.417</b><br/>\n          ¿Se llama? 100.417 <b>&gt;</b> 100 ⇒ <b>SÍ</b> ⇒ <b>RESETEAR el valor a 100</b>.</span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>Year 0:</b> (<b>100</b> + 4.250) / 1.02500  <i>(usando el valor RESETEADO)</i></span></div>\n<div class=\"res\">V<sub>callable</sub> = <b>101.707</b>  ·  V<sub>call</sub> = 102.114 − 101.707 = <b>0.407</b></div>\n<div class=\"warn\"><b>Regla de ejercicio del ISSUER:</b> llama si <b>PV de flujos futuros &gt; call price</b>.<br/>\n        ⚠ <b>El error #1:</b> olvidarse de <b>RESETEAR el valor al strike</b> en el nodo donde se ejerce. Ese valor reseteado es el que se descuenta hacia atrás.<br/>\n<b>Verificación:</b> V<sub>callable</sub> = V<sub>straight</sub> − V<sub>call</sub> ⇒ 102.114 − 0.407 = 101.707 ✔</div>"
+      "lm": "LM5",
+      "title": "Mean-reverting level (AR(1))",
+      "given": "Modelo AR(1) de gross margins de Intel: x<sub>t</sub> = 0,1513 + 0,7462·x<sub>t−1</sub>.",
+      "ask": "Calcular el mean-reverting level.",
+      "answer": "Nivel = <b>0,5961</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Nivel = b0/(1 − b1)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0,1513/(1 − 0,7462) = 0,1513/0,2538</span></div><div class=\"res\">Nivel = <b>0,5961</b></div><div class=\"warn\">Si el margen actual &lt; 0,5961 el modelo predice suba; si &gt; 0,5961, baja.</div>"
     },
     {
       "id": "vol01-p09",
-      "lm": "LM3",
-      "title": "Callable bond CON volatilidad (árbol σ=10%)",
-      "given": "<b>Dado:</b> mismo bono (3yr, 4.25%, callable @100 en yr 1 y 2), pero ahora con <b>σ = 10%</b>.<br/>\n      Árbol: <b>Yr0</b> 2.5000% · <b>Yr1</b> 3.8695% / 3.1681% · <b>Yr2</b> 5.5258% / 4.5242% / 3.7041%.<br/>\n      Valores en Yr2 ya calculados: <b>98.791</b> / <b>99.738</b> / <b>100.526</b> (este último ya reseteado a <b>100</b>).",
-      "ask": "Calculá el valor del <b>callable</b> hoy y el <b>call option</b>. Compará con el resultado a vol cero.",
-      "answer": "V<sub>callable</sub> = <b>101.540</b>  ·  V<sub>call</sub> = 102.114 − 101.540 = <b>0.574</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Yr1 (up) @3.8695%:</b> (4.250 + 0.5×98.791 + 0.5×99.738) / 1.038695 = <b>99.658</b><br/>\n          99.658 &lt; 100 ⇒ <b>NO se llama</b>.</span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>Yr1 (down) @3.1681%:</b> (4.250 + 0.5×99.738 + 0.5×<b>100</b>) / 1.031681 = <b>100.922</b><br/>\n          100.922 &gt; 100 ⇒ <b>SE LLAMA</b> ⇒ <b>resetear a 100</b>.</span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>Yr0 @2.5%:</b> (4.250 + 0.5×99.658 + 0.5×<b>100</b>) / 1.025</span></div>\n<div class=\"res\">V<sub>callable</sub> = <b>101.540</b>  ·  V<sub>call</sub> = 102.114 − 101.540 = <b>0.574</b></div>\n<div class=\"warn\"><b>Comparación con vol cero:</b> el call subió de <b>0.407</b> (σ=0%) a <b>0.574</b> (σ=10%) ⇒ el <b>callable BAJÓ</b> de 101.707 a 101.540. ✔<br/>\n<b>La regla:</b> σ ↑ ⇒ <b>toda opción vale más</b>. Pero como se <b>RESTA</b>, el <b>callable baja</b>. (Un <b>putable</b> con los mismos datos <b>subiría</b> a 102.522, con put = 0.408.)</div>"
+      "lm": "LM5",
+      "title": "Forecast a dos períodos (chain rule)",
+      "given": "Mismo AR(1): x<sub>t</sub> = 0,1513 + 0,7462·x<sub>t−1</sub>. El forecast a un período es x<sub>t+1</sub> = 0,6214.",
+      "ask": "Calcular el forecast a dos períodos x<sub>t+2</sub>.",
+      "answer": "x<sub>t+2</sub> = <b>0,6150</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>x_(t+2) = 0,1513 + 0,7462·x_(t+1)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0,1513 + 0,7462·(0,6214)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0,1513 + 0,4637</span></div><div class=\"res\">x<sub>t+2</sub> = <b>0,6150</b></div><div class=\"warn\">Chain rule: se sustituye el forecast previo. Se acerca al mean-reverting level 0,5961.</div>"
     },
     {
       "id": "vol01-p10",
-      "lm": "LM3",
-      "title": "Effective duration",
-      "given": "<b>Dado:</b> callable 4.25%, precio de mercado <b>PV<sub>0</sub> = 101.000</b> (OAS implícito = 28.55 bps). Shift de <b>±30 bps</b> en la curva, revaluando <b>con el mismo OAS</b>:<br/>\n<b>PV<sub>−</sub> = 101.599</b> (curva −30 bps) · <b>PV<sub>+</sub> = 100.407</b> (curva +30 bps)",
-      "ask": "Calculá la <b>effective duration</b> e interpretala.",
-      "answer": "Effective duration = <b>1.97</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><span class=\"mono\">EffDur = (PV<sub>−</sub> − PV<sub>+</sub>) / (2 × ΔCurve × PV<sub>0</sub>)</span></span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span>ΔCurve = 30 bps = <b>0.0030</b> (¡en decimal!)</span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><span class=\"mono\">EffDur = (101.599 − 100.407) / (2 × 0.0030 × 101.000)</span></span></div>\n<div class=\"step\"><span class=\"sn\">4.</span><span><span class=\"mono\">= 1.192 / 0.606</span></span></div>\n<div class=\"res\">Effective duration = <b>1.97</b></div>\n<div class=\"warn\"><b>Interpretación:</b> ante un shift <b>paralelo</b> de <b>+100 bps</b>, el bono cae <b>≈ 1.97%</b>.<br/>\n        ⚠ <b>Los 2 detalles críticos:</b> (1) el <b>OAS se mantiene CONSTANTE</b> entre PV<sub>−</sub> y PV<sub>+</sub>; (2) el árbol se <b>REGENERA</b> con la curva shifteada.<br/>\n        ⚠ <b>Modified duration NO sirve</b> con embedded options (los flujos cambian con las tasas).</div>"
+      "lm": "LM6",
+      "title": "LASSO: reconocer OLS",
+      "given": "Un analista corre una penalized regression (LASSO) y fija el hiperparámetro λ = 0.",
+      "ask": "¿A qué equivale el modelo resultante y por qué?",
+      "answer": "Equivale a una <b>OLS</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Penalty = λ·Σ|b̂k| = 0·Σ|b̂k| = 0</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Sin penalización, LASSO minimiza solo la SSR</span></div><div class=\"res\">Equivale a una <b>OLS</b></div><div class=\"warn\">λ es hiperparámetro; a mayor λ, más coeficientes van a 0 (feature selection).</div>"
     },
     {
       "id": "vol01-p11",
-      "lm": "LM3",
-      "title": "Effective convexity (¡negativa!)",
-      "given": "<b>Dado:</b> callable 4.25%, <b>PV<sub>0</sub> = 100.785</b> (OAS 40 bps). Shift ±30 bps:<br/>\n<b>PV<sub>−</sub> = 101.381</b> · <b>PV<sub>+</sub> = 100.146</b>",
-      "ask": "Calculá la <b>effective convexity</b>. ¿Qué te dice el signo?",
-      "answer": "EffCon = −0.043 / 0.000907 = <b>−47.41</b> ⇒ <b>NEGATIVA</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><span class=\"mono\">EffCon = [PV<sub>−</sub> + PV<sub>+</sub> − 2×PV<sub>0</sub>] / [(ΔCurve)² × PV<sub>0</sub>]</span></span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>Numerador:</b> 101.381 + 100.146 − 2×100.785 = 201.527 − 201.570 = <b>−0.043</b></span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>Denominador:</b> (0.003)² × 100.785 = 0.000009 × 100.785 = <b>0.000907</b></span></div>\n<div class=\"res\">EffCon = −0.043 / 0.000907 = <b>−47.41</b> ⇒ <b>NEGATIVA</b></div>\n<div class=\"warn\"><b>Qué significa:</b> el call está <b>near the money</b> ⇒ al bajar las tasas el precio queda <b>CAPADO</b> por el call price ⇒ el <b>upside es mucho menor que el downside</b>.<br/>\n        ⚠ <b>Solo el CALLABLE</b> puede tener convexity <b>negativa</b>. El <b>putable SIEMPRE</b> la tiene <b>positiva</b> (tiene <b>piso</b>). El straight: siempre positiva.<br/>\n<i>Nota: hay dos convenciones — algunos reportan la convexity \"cruda\" (como acá), otros la dividen por 100.</i></div>"
+      "lm": "LM7",
+      "title": "Confusion matrix — Precision, Recall, F1, Accuracy",
+      "given": "De 10 observaciones: TP=3, FP=1, FN=2, TN=4.",
+      "ask": "Calcular precision, recall, F1 y accuracy.",
+      "answer": "P=<b>0,75</b> · R=<b>0,60</b> · F1=<b>0,67</b> · Accuracy=<b>0,70</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>P = TP/(TP+FP) = 3/(3+1) = 0,75</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>R = TP/(TP+FN) = 3/(3+2) = 0,60</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>F1 = 2PR/(P+R) = (2·0,75·0,60)/(0,75+0,60) = 0,90/1,35</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Accuracy = (TP+TN)/total = (3+4)/10</span></div><div class=\"res\">P=<b>0,75</b> · R=<b>0,60</b> · F1=<b>0,67</b> · Accuracy=<b>0,70</b></div><div class=\"warn\">F1 queda cerca del menor entre P y R (no es promedio simple). P&gt;R: mejor evitando FP que FN.</div>"
     },
     {
       "id": "vol01-p12",
-      "lm": "LM3",
-      "title": "Capped floater",
-      "given": "<b>Dado:</b> floater <b>3 años</b> con <b>cap 4.500%</b>, σ = 10%. Tasas en Year 2: <b>5.5258%</b> / <b>4.5242%</b> / <b>3.7041%</b>. El valor calculado del capped floater es <b>99.761</b>.",
-      "ask": "¿En qué nodos <b>muerde</b> el cap? ¿Cuál es el <b>valor del cap</b>? ¿Por qué el floater vale menos de 100?",
-      "answer": "V<sub>cap</sub> = 100 − 99.761 = <b>0.239</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Cash flows en Year 3</b> (el cupón se fija con la tasa de Year 2 — \"in arrears\"):</span></div>\n<table class=\"center\">\n<thead><tr><th>Nodo Yr2</th><th>Ref rate</th><th>CF sin cap</th><th>CF con cap 4.500%</th></tr></thead>\n<tbody>\n<tr><td>Alto</td><td class=\"num\">5.5258%</td><td class=\"num\">105.5258</td><td class=\"num\"><b>104.500</b> ✂ CAPADO</td></tr>\n<tr><td>Medio</td><td class=\"num\">4.5242%</td><td class=\"num\">104.5242</td><td class=\"num\"><b>104.500</b> ✂ CAPADO</td></tr>\n<tr><td>Bajo</td><td class=\"num\">3.7041%</td><td class=\"num\">103.7041</td><td class=\"num\">103.7041 (sin tope)</td></tr>\n</tbody>\n</table>\n<div class=\"step\"><span class=\"sn\">2.</span><span>Un floater \"limpio\" (sin cap) vale <b>exactamente 100</b> (el cupón <b>es</b> la tasa de descuento).</span></div>\n<div class=\"res\">V<sub>cap</sub> = 100 − 99.761 = <b>0.239</b></div>\n<div class=\"warn\"><b>V<sub>capped floater</sub> = V<sub>straight</sub> − V<sub>cap</sub></b> ⇒ el <b>cap es una opción del ISSUER</b> (lo protege de tasas que suben) ⇒ <b>RESTA</b> valor al inversor ⇒ el bono vale <b>menos de 100</b>. ✔<br/>\n<b>El caso opuesto:</b> con un <b>floor de 3.500%</b>, el floater valdría <b>101.133</b> ⇒ V<sub>floor</sub> = <b>1.133</b> (el floor es del <b>INVESTOR</b> ⇒ <b>SUMA</b>).<br/>\n        ⚠ <b>Caso límite:</b> un cap de <b>5.600%</b> (por encima de <b>toda</b> tasa del árbol) ⇒ el floater vale <b>exactamente 100</b> (el cap no vale nada).</div>"
+      "lm": "LM7",
+      "title": "TF-IDF de una palabra",
+      "given": "La palabra aparece con TF (nivel oración) = 0,1538 y su document frequency es DF = 0,6665.",
+      "ask": "Calcular IDF y TF-IDF (usar log base 10).",
+      "answer": "IDF ≈ <b>0,176</b> · TF-IDF ≈ <b>0,0271</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>IDF = log(1/DF) = log(1/0,6665) = log(1,5004)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>IDF ≈ 0,1761</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>TF-IDF = TF × IDF = 0,1538 × 0,1761</span></div><div class=\"res\">IDF ≈ <b>0,176</b> · TF-IDF ≈ <b>0,0271</b></div><div class=\"warn\">TF-IDF alto = palabra frecuente en pocos docs. Palabras muy comunes (DF alto) → IDF y TF-IDF bajos.</div>"
     },
     {
       "id": "vol01-p13",
-      "lm": "LM3",
-      "title": "Convertible bond (caso Twitter)",
-      "given": "<b>Dado:</b> convertible de <b>$1,000</b> par, <b>conversion ratio 17.5</b>. Al 15-jun-2019: <b>precio de la acción = $35.14</b>, el <b>bono cotiza a 95.225%</b> del par, y el <b>straight value = $894.86</b>.",
-      "ask": "Calculá: <b>conversion value</b>, <b>minimum value</b>, <b>market conversion price</b>, <b>market conversion premium per share</b> y el <b>premium ratio</b>.",
-      "answer": "Minimum value = <b>$894.86</b> (manda el <b>straight value</b>)",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Conversion value</b> = Share price × Conv. ratio = 35.14 × 17.5 = <b>$614.95</b></span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>Minimum value</b> = <b>MAX</b>(Conversion value ; Straight value) = MAX(614.95 ; 894.86)</span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span>Precio del convertible = 95.225% × 1,000 = <b>$952.25</b></span></div>\n<div class=\"step\"><span class=\"sn\">4.</span><span><b>Market conversion price</b> = 952.25 / 17.5 = <b>$54.41</b></span></div>\n<div class=\"step\"><span class=\"sn\">5.</span><span><b>Premium per share</b> = 54.41 − 35.14 = <b>$19.27</b></span></div>\n<div class=\"step\"><span class=\"sn\">6.</span><span><b>Premium ratio</b> = 19.27 / 35.14 = <b>54.8%</b></span></div>\n<div class=\"res\">Minimum value = <b>$894.86</b> (manda el <b>straight value</b>)</div>\n<div class=\"warn\">⚠ <b>Minimum value es el MÁXIMO</b> de los dos, no el mínimo ni el promedio.<br/>\n<b>Lectura:</b> la acción está <b>muy por debajo</b> del conversion price ($57.14) ⇒ es un <b>BUSTED CONVERTIBLE</b> ⇒ se comporta como un <b>BONO</b> (tasas y credit spreads lo mueven mucho).<br/>\n        ⚠ El <b>straight value NO es fijo</b> — es un <b>PISO MÓVIL</b> que se mueve con tasas y spreads.<br/>\n<b>Arbitraje:</b> si el convertible cotizara <b>por debajo</b> del minimum value ⇒ comprarlo, convertir y vender las acciones.</div>"
-    },
-    {
-      "id": "vol01-p14",
-      "lm": "LM4",
-      "title": "CVA de un zero-coupon",
-      "given": "<b>Dado:</b> zero-coupon <b>5 años</b>, curva govt <b>flat 3%</b>, <b>hazard rate 1.25%</b>, <b>recovery 40%</b>.<br/>\n      Los PV de las expected losses ya calculados: <b>0.6470 · 0.6389 · 0.6309 · 0.6230 · 0.6152</b>",
-      "ask": "Calculá el <b>CVA</b>, el <b>VND</b>, el <b>fair value</b>, la <b>YTM</b> y el <b>credit spread</b>. Verificá con la aproximación.",
-      "answer": "CVA = <b>3.1549</b> · Fair value = <b>83.1060</b> · Spread = <b>77 bps</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>CVA</b> = Σ PV(Expected Loss) = 0.6470 + 0.6389 + 0.6309 + 0.6230 + 0.6152 = <b>3.1549</b></span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>VND</b> = 100 / (1.03)<sup>5</sup> = 100 × 0.862609 = <b>86.2609</b></span></div>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>Fair value</b> = VND − CVA = 86.2609 − 3.1549 = <b>83.1060</b></span></div>\n<div class=\"step\"><span class=\"sn\">4.</span><span><b>YTM</b> = (100 / 83.1060)<sup>1/5</sup> − 1 = <b>3.77%</b></span></div>\n<div class=\"step\"><span class=\"sn\">5.</span><span><b>Credit spread</b> = 3.77% − 3.00% = <b>0.77% (77 bps)</b></span></div>\n<div class=\"res\">CVA = <b>3.1549</b> · Fair value = <b>83.1060</b> · Spread = <b>77 bps</b></div>\n<div class=\"warn\"><b>Verificación con la aproximación:</b> Credit spread ≈ POD × (1 − Recovery) = 1.25% × 0.60 = <b>0.75%</b> ≈ 77 bps ✔<br/>\n<b>Chequeo de PODs:</b> Cumulative POD (6.0957%) + POS final (93.9043%) = <b>100%</b> ✔<br/>\n        ⚠ <b>La exposure del zero</b> = 100/(1.03)<sup>5−t</sup> — el principal descontado por los años que <b>FALTAN</b> (crece hacia el maturity).</div>"
-    },
-    {
-      "id": "vol01-p15",
-      "lm": "LM4",
-      "title": "CVA de un bono CON cupones (¡ojo con la exposure!)",
-      "given": "<b>Dado:</b> bono <b>3 años, cupón 5% anual</b>, curva govt <b>flat 2.5%</b>, <b>hazard rate 1.50%</b>, <b>recovery 40%</b>. El bono cotiza a <b>104</b>.",
-      "ask": "Calculá las <b>exposures</b>, el <b>CVA</b>, el <b>VND</b> y el <b>fair value</b>. ¿Está barato o caro?",
-      "answer": "Fair value = 107.1401 − 2.7222 = <b>104.4178</b> ⇒ cotiza a <b>104</b> ⇒ <b>UNDERVALUED</b> ⇒ <b>COMPRAR</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Exposure = valor del bono (flujos que FALTAN) + CUPÓN de esa fecha:</b><br/>\n<b>D1</b> = 5 + 5/1.025 + 105/1.025² = <b>109.8186</b><br/>\n<b>D2</b> = 5 + 105/1.025 = <b>107.4390</b><br/>\n<b>D3</b> = <b>105.0000</b> (cupón + principal)</span></div>\n<div class=\"step\"><span class=\"sn\">2.</span><span><b>PODs</b> (arrastrando el POS): D1 = 1.50% · D2 = 1.50%×98.50% = <b>1.4775%</b> · D3 = 1.50%×97.0225% = <b>1.4553%</b></span></div>\n<table class=\"center\">\n<thead><tr><th>D</th><th>Exposure</th><th>LGD (×0.60)</th><th>POD</th><th>DF</th><th>PV</th></tr></thead>\n<tbody>\n<tr><td>1</td><td class=\"num\">109.8186</td><td class=\"num\">65.8911</td><td class=\"num\">1.5000%</td><td class=\"num\">0.975610</td><td class=\"num\">0.9643</td></tr>\n<tr><td>2</td><td class=\"num\">107.4390</td><td class=\"num\">64.4634</td><td class=\"num\">1.4775%</td><td class=\"num\">0.951814</td><td class=\"num\">0.9066</td></tr>\n<tr><td>3</td><td class=\"num\">105.0000</td><td class=\"num\">63.0000</td><td class=\"num\">1.4553%</td><td class=\"num\">0.928599</td><td class=\"num\">0.8514</td></tr>\n<tr class=\"total\"><td colspan=\"5\" style=\"text-align:right;\">CVA =</td><td class=\"num\">2.7222</td></tr>\n</tbody>\n</table>\n<div class=\"step\"><span class=\"sn\">3.</span><span><b>VND</b> = 5/1.025 + 5/1.025² + 105/1.025³ = <b>107.1401</b></span></div>\n<div class=\"res\">Fair value = 107.1401 − 2.7222 = <b>104.4178</b> ⇒ cotiza a <b>104</b> ⇒ <b>UNDERVALUED</b> ⇒ <b>COMPRAR</b></div>\n<div class=\"warn\">⚠ <b>EL ERROR #1:</b> olvidarse de <b>SUMAR EL CUPÓN</b> a la exposure. La exposure es lo que el inversor <b>pierde</b> si defaultea en esa fecha — y en esa fecha <b>también deja de cobrar el cupón</b>.<br/>\n<b>Chequeo:</b> Cum. POD (4.4328%) + POS final (95.5672%) = <b>100%</b> ✔<br/>\n<b>Ojo:</b> acá la exposure <b>DECRECE</b> hacia el maturity (al revés que en el zero).</div>"
-    },
-    {
-      "id": "vol01-p16",
-      "lm": "LM4",
-      "title": "Expected exposure con probabilidades del árbol",
-      "given": "<b>Dado:</b> corporate <b>3.50%, 5 años</b>, árbol σ = 10%. Los <b>5 valores del bono en Date 4</b> son:<br/>\n<b>96.4659 · 97.6692 · 98.6769 · 99.5175 · 100.2165</b> (de arriba hacia abajo)",
-      "ask": "Calculá la <b>expected exposure</b> de Date 4. ¿Qué probabilidades usás?",
-      "answer": "Expected Exposure (Date 4) = <b>102.0931</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span><b>Las probabilidades</b> salen del <b>Triángulo de Pascal</b>. Date 4 ⇒ <b>5 nodos</b>, pesos <b>1-4-6-4-1</b> sobre <b>2<sup>4</sup> = 16</b>:</span></div>\n<table class=\"center\">\n<thead><tr><th>Nodo</th><th>Valor</th><th>Prob (Pascal/16)</th><th>Producto</th></tr></thead>\n<tbody>\n<tr><td>Top (UUUU)</td><td class=\"num\">96.4659</td><td class=\"num\">1/16 = 0.0625</td><td class=\"num\">6.0291</td></tr>\n<tr><td>2º</td><td class=\"num\">97.6692</td><td class=\"num\">4/16 = 0.2500</td><td class=\"num\">24.4173</td></tr>\n<tr><td>Centro</td><td class=\"num\">98.6769</td><td class=\"num\">6/16 = <b>0.3750</b></td><td class=\"num\">37.0038</td></tr>\n<tr><td>4º</td><td class=\"num\">99.5175</td><td class=\"num\">4/16 = 0.2500</td><td class=\"num\">24.8794</td></tr>\n<tr><td>Bottom (DDDD)</td><td class=\"num\">100.2165</td><td class=\"num\">1/16 = 0.0625</td><td class=\"num\">6.2635</td></tr>\n<tr class=\"total\"><td colspan=\"3\" style=\"text-align:right;\">E[valor] =</td><td class=\"num\">98.5932</td></tr>\n<tr class=\"total\"><td colspan=\"3\" style=\"text-align:right;\">+ Cupón (FIJO) =</td><td class=\"num\">+ 3.5000</td></tr>\n</tbody>\n</table>\n<div class=\"res\">Expected Exposure (Date 4) = <b>102.0931</b></div>\n<div class=\"warn\"><b>Probabilidades de nodos (Pascal):</b> D2 → 1-2-1/4 · D3 → 1-3-3-1/8 · <b>D4 → 1-4-6-4-1/16</b> · <b>D5 → 1-5-10-10-5-1/32</b><br/>\n        ⚠ <b>Estas NO son las PODs.</b> Son las probabilidades de los <b>nodos de TASAS</b>. Conviven en la misma tabla pero <b>no se mezclan</b>.<br/>\n        ⚠ <b>En un FRN el cupón TAMBIÉN es aleatorio:</b> los <b>valores</b> usan las probs de <b>su</b> fecha, pero el <b>cupón</b> usa las de la fecha <b>ANTERIOR</b> (se fijó ahí). Señal de alarma: <b>5 valores pero solo 4 cupones</b>.</div>"
-    },
-    {
-      "id": "vol01-p17",
-      "lm": "LM4",
-      "title": "POD / POS — hazard rate constante y variable",
-      "given": "<b>(a)</b> Bono a <b>10 años</b> con hazard rate <b>constante de 2%</b> anual.<br/>\n<b>(b)</b> Otro emisor: h = <b>0.50%</b> en los años 1–3, pero el crédito <b>empeora</b> y h pasa a <b>0.75%</b> en los años 4–5.",
-      "ask": "<b>(a)</b> ¿Cuál es la POD acumulada a 10 años?   <b>(b)</b> ¿Cuál es la <b>POD de Date 4</b>?",
-      "answer": "(a) POD a 10 años = <b>18.3%</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">a1.</span><span><b>POS</b> a 10 años = (1 − 0.02)<sup>10</sup> = 0.98<sup>10</sup> = <b>0.817 (81.7%)</b></span></div>\n<div class=\"step\"><span class=\"sn\">a2.</span><span><b>POD acumulada</b> = 1 − 0.817 = <b>0.183</b></span></div>\n<div class=\"res\">(a) POD a 10 años = <b>18.3%</b></div>\n<div class=\"warn\" style=\"margin-bottom:6px;\"><b>Insight:</b> un hazard rate <b>bajo</b> (2%) en un solo período se convierte en una POD <b>sorprendentemente ALTA</b> (18.3%) en 10 años. Por eso las <b>credit curves suben</b> con el plazo.</div>\n<div class=\"step\"><span class=\"sn\">b1.</span><span>⚠ Cuando <b>h CAMBIA</b>, <b>NO</b> hay fórmula con potencias. Hay que <b>arrastrar el POS</b>:</span></div>\n<div class=\"step\"><span class=\"sn\">b2.</span><span><b>POS después de D3</b> = (1 − 0.005)³ = <b>98.5075%</b></span></div>\n<div class=\"step\"><span class=\"sn\">b3.</span><span><b>POD<sub>D4</sub> = h<sub>NUEVO</sub> × POS<sub>VIEJO</sub></b> = <b>0.75%</b> × <b>98.5075%</b></span></div>\n<div class=\"res\">(b) POD<sub>D4</sub> = <b>0.7388%</b></div>\n<div class=\"warn\">⚠ <b>El error clásico:</b> aplicar h × (1−h)<sup>t−1</sup> con el h nuevo. Esa fórmula <b>SOLO vale si h es CONSTANTE</b>.<br/>\n        Siguiendo: POS tras D4 = 98.5075% − 0.7388% = 97.7687% ⇒ <b>POD<sub>D5</sub></b> = 0.75% × 97.7687% = <b>0.7333%</b><br/>\n        ✔ <b>Chequeo siempre:</b> Σ POD + POS<sub>final</sub> = <b>100%</b></div>"
-    },
-    {
-      "id": "vol01-p18",
-      "lm": "LM5",
-      "title": "CDS: upfront, P&L y basis trade",
-      "given": "<b>(a) Upfront:</b> CDS a 10 años sobre Kand Corp. Credit spread = <b>700 bps</b> · duration = <b>7</b> · coupon = <b>5%</b>.<br/>\n<b>(b) P&amp;L:</b> un inversor compra <b>$10M</b> de protección a 5 años (duration <b>4</b>). El spread pasa de <b>500 → 800 bps</b>.<br/>\n<b>(c) Basis:</b> bono de Tollunt a 5 años rinde <b>7%</b> · CDS comparable = <b>4.25%</b> · MRR = <b>2.5%</b>.",
-      "ask": "Calculá: <b>(a)</b> el upfront premium y quién lo paga · <b>(b)</b> el P&amp;L y para quién · <b>(c)</b> el basis y el trade.",
-      "answer": "(a) Upfront = <b>14.0%</b> del notional · lo paga el <b>BUYER</b> (spread &gt; coupon) · Precio = 100 − 14 = <b>86</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">a1.</span><span><span class=\"mono\">Upfront ≈ (Credit spread − Fixed coupon) × Duration</span></span></div>\n<div class=\"step\"><span class=\"sn\">a2.</span><span>= (700 − 500) bps × 7 = 200 bps × 7 = <b>1,400 bps</b></span></div>\n<div class=\"res\">(a) Upfront = <b>14.0%</b> del notional · lo paga el <b>BUYER</b> (spread &gt; coupon) · Precio = 100 − 14 = <b>86</b></div>\n<div class=\"step\" style=\"margin-top:6px;\"><span class=\"sn\">b1.</span><span><span class=\"mono\">% Δ precio ≈ Δ spread (bps) × Duration</span> = 300 bps × 4 = <b>12%</b></span></div>\n<div class=\"step\"><span class=\"sn\">b2.</span><span>P&amp;L = 12% × $10M</span></div>\n<div class=\"res\">(b) Profit = <b>$1.2M</b> para el <b>BUYER</b> de protección (está <b>short credit</b> ⇒ gana cuando el spread se <b>ensancha</b>)</div>\n<div class=\"step\" style=\"margin-top:6px;\"><span class=\"sn\">c1.</span><span><b>Credit spread del bono</b> = Bond yield − MRR = 7% − 2.5% = <b>4.50%</b></span></div>\n<div class=\"step\"><span class=\"sn\">c2.</span><span>Comparar: bono <b>4.50%</b> vs CDS <b>4.25%</b> ⇒ el spread es <b>MAYOR en el mercado de BONOS</b></span></div>\n<div class=\"step\"><span class=\"sn\">c3.</span><span>⇒ <b>NEGATIVE BASIS</b>. El credit risk está <b>barato en el CDS</b> y <b>caro en el bono</b> (= el bono está <b>subvaluado</b>).</span></div>\n<div class=\"res\">(c) <b>NEGATIVE basis</b> ⇒ <b>COMPRAR el bono + COMPRAR protección</b> ⇒ profit = 4.50 − 4.25 = <b>25 bps</b></div>\n<div class=\"warn\"><b>Regla del basis:</b> \"comprá el barato, vendé el caro\". <b>NEGATIVE basis = spread MAYOR en BONOS.</b><br/>\n        ⚠ <b>El signo del upfront:</b> spread <b>&gt;</b> coupon ⇒ paga el <b>BUYER</b> (precio &lt; 100). Spread <b>&lt;</b> coupon ⇒ paga el <b>SELLER</b> (upfront <b>negativo</b>, <b>precio &gt; 100</b>).<br/>\n<i>Ejemplo inverso: si el seller paga 2% de upfront con duration 4 y coupon IG de 100 bps ⇒ spread = 100 + (−50) = <b>50 bps</b> y precio = 100 − (−2) = <b>102</b>.</i></div>"
+      "lm": "LM7",
+      "title": "Detectar el escalado correcto",
+      "given": "Un feature 'income' tiene outliers y distribución desconocida; se lo quiere llevar al rango [0,1].",
+      "ask": "¿Qué técnica de scaling corresponde y cuál es su fórmula?",
+      "answer": "<b>Normalization</b>: (X−X<sub>min</sub>)/(X<sub>max</sub>−X<sub>min</sub>)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Rango [0,1] con distribución desconocida → normalization</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>X(norm) = (X − Xmin)/(Xmax − Xmin)</span></div><div class=\"res\"><b>Normalization</b>: (X−X<sub>min</sub>)/(X<sub>max</sub>−X<sub>min</sub>)</div><div class=\"warn\">Es sensible a outliers → removerlos antes. Standardization (μ,σ) requiere normalidad.</div>"
     }
   ],
   "highlights": [
     {
       "rank": 1,
-      "title": "σ ↑ ⇒ OAS del <b>callable BAJA</b>, del <b>putable SUBE</b>",
-      "body": "<p>Precio de mercado <b>FIJO</b> ⇒ el OAS <b>sigue al valor del modelo</b>. Toda opción sube con σ ⇒ todo depende del <b>signo</b>: <b>− callable</b> (inversa) · <b>+ putable</b> (directa).</p>"
+      "title": "Bias ↔ E<sub>in</sub> · Variance ↔ E<sub>out</sub>",
+      "body": "Bias=underfitting=alto error in-sample; variance=overfitting=alto error out-of-sample. (LM6)"
     },
     {
       "rank": 2,
-      "title": "<b>AMBAS</b> opciones ACORTAN la duration · solo el <b>callable</b> puede tener convexity <b>negativa</b>",
-      "body": "<p>EffDur<sub>callable</sub> ≤ straight <b>y</b> EffDur<sub>putable</sub> ≤ straight. El <b>putable SIEMPRE</b> tiene convexity <b>positiva</b> (tiene piso).</p>"
+      "title": "Parameter vs. Hyperparameter",
+      "body": "Parameter se aprende de los datos; hyperparameter se setea a mano (λ, k, capas, p-threshold). (LM7)"
     },
     {
       "rank": 3,
-      "title": "Curva se aplana ⇒ <b>call SUBE</b>, <b>put BAJA</b> (opuestos)",
-      "body": "<p>Con curva upward los forwards del árbol son <b>altos</b> ⇒ pocas chances de llamar, muchas de poner. Al invertirse, se da vuelta.</p>"
+      "title": "AIC → predicción · BIC → fit",
+      "body": "Menor es mejor; BIC penaliza más. Solo importan los valores relativos. (LM2)"
     },
     {
       "rank": 4,
-      "title": "<b>Fair value = VND − CVA</b> · el <b>VND nunca cambia</b>",
-      "body": "<p>Cambien POD, recovery o σ ⇒ <b>todo el efecto pasa por el CVA</b>. ✔ Chequeo: <b>Σ POD + POS<sub>final</sub> = 100%</b>. Y la <b>exposure INCLUYE el cupón</b>.</p>"
+      "title": "Adjusted R² puede bajar / ser negativo",
+      "body": "Sube solo si el |t| de la variable agregada &gt; 1. (LM2)"
     },
     {
       "rank": 5,
-      "title": "<b>Recovery ↓ ⇒ POD implícita ↓</b> (correlación POSITIVA)",
-      "body": "<p>Con el <b>precio DADO</b>: el CVA está fijo, así que si sube el LGD la POD debe <b>bajar</b>. Y <b>duplicar la POD pega MÁS</b> que halvear el recovery (+92 vs +31 bps).</p>"
+      "title": "Conditional hetero y serial+ → Type I",
+      "body": "Subestiman SE → t inflados. Multicolinealidad → Type II (R² alto, coefs no sig.). (LM3)"
     },
     {
       "rank": 6,
-      "title": "<b>Structural = POR QUÉ</b> (endógeno) · <b>Reduced-form = CUÁNDO</b> (exógeno)",
-      "body": "<p>Structural: inputs <b>NO observables</b> (los activos no cotizan). Reduced-form: inputs <b>OBSERVABLES</b>, para <b>valuar</b> deuda riesgosa y derivados.</p>"
+      "title": "Leverage = X extrema · Outlier = Y extrema",
+      "body": "Umbral leverage 3(k+1)/n; studentized residual con (n−k−2) df. (LM4)"
     },
     {
       "rank": 7,
-      "title": "CDS: <b>long/short INVERTIDO</b> entre single-name e índice",
-      "body": "<p>Single-name: buyer de protección = <b>SHORT</b> credit. <b>Index: el que compra el CDX = LONG credit.</b> Pensá siempre en <b>\"buy/sell protection\"</b>.</p>"
+      "title": "Random walk: sin mean-reverting level",
+      "body": "b0/(1−b1)=0/0; varianza crece. Unit root → first-differencing. (LM5)"
     },
     {
       "rank": 8,
-      "title": "<b>Steepener = BULLISH</b> · <b>Flattener = BEARISH</b> · <b>Negative basis = spread mayor en BONOS</b>",
-      "body": "<p>Negative basis ⇒ el bono está <b>barato</b> ⇒ <b>comprar el bono + comprar protección</b>.</p>"
+      "title": "Precision ÷ predichos · Recall ÷ reales",
+      "body": "FP=Type I, FN=Type II. Desbalance → F1, no accuracy. (LM7)"
     }
   ],
   "tables": [
     {
-      "id": "vol01-spreads",
-      "title": "Tabla Maestra de Spreads",
-      "lms": [
-        "LM1",
-        "LM3",
-        "LM4",
-        "LM5"
-      ],
-      "html": "<!-- ===== TABLA MAESTRA ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">★</span>\n<span class=\"ttl\">Los 9 Spreads — Definición · Benchmark · Qué Mide</span>\n<span class=\"los\">LM1 · LM3 · LM4 · LM5</span></div>\n<div class=\"sec-body\">\n<table>\n<thead>\n<tr>\n<th style=\"width:4%\">LM</th>\n<th style=\"width:11%\">Spread</th>\n<th style=\"width:21%\">Definición exacta</th>\n<th style=\"width:11%\">Benchmark<br/>(¿contra qué?)</th>\n<th style=\"width:19%\">Qué mide / captura</th>\n<th>Detalle que pincha el examen</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td class=\"lm\">1</td>\n<td class=\"nm\">Swap spread</td>\n<td>Swap rate <b>−</b> yield del gubernamental <b>on-the-run</b> de igual maturity</td>\n<td><b>Government bond</b> (on-the-run)</td>\n<td>Prima de crédito/liquidez del sector privado vs risk-free</td>\n<td>Ej: swap 5y 2.00% − Treasury 5y 1.70% = <b>30 bps</b>. ⚠ <b>Puede ser NEGATIVO</b> (30-yr US: récord <b>−62 bps</b> en nov-2008) por capital regulatorio a dealers + demanda de duration.</td>\n</tr>\n<tr>\n<td class=\"lm\">1</td>\n<td class=\"nm\">I-spread<br/>(ISPRD)</td>\n<td>YTM del bono <b>−</b> swap rate de igual maturity (interpolado)</td>\n<td><b>Swap curve</b></td>\n<td>Crédito/liquidez del bono <b>sobre la swap curve</b></td>\n<td>⚠ <b>Se confunde con el swap spread.</b> Swap spread = swap <b>vs govt</b>. I-spread = <b>bono vs swap</b>. Benchmarks distintos.</td>\n</tr>\n<tr>\n<td class=\"lm\">1</td>\n<td class=\"nm\">Z-spread</td>\n<td>Spread <b>CONSTANTE</b> añadido a <b>toda</b> la spot curve que iguala PV = precio de mercado</td>\n<td><b>Spot curve</b> (benchmark)</td>\n<td>Crédito/liquidez <b>sin</b> volatilidad de opción (<i>zero-volatility</i>)</td>\n<td>⚠ <b>Z-spread = OAS a volatilidad CERO.</b> No son conceptos distintos.</td>\n</tr>\n<tr>\n<td class=\"lm\">1</td>\n<td class=\"nm\">TED spread</td>\n<td><b>MRR − yield del T-bill</b> de igual maturity</td>\n<td><b>T-bill</b></td>\n<td>Riesgo de crédito/liquidez <b>SISTÉMICO</b> del interbancario</td>\n<td>Nombre = <b>T</b>-bill + <b>ED</b> (ticker de Eurodollar futures). ↑ = <b>estrés</b> (COVID-2020).</td>\n</tr>\n<tr>\n<td class=\"lm\">1</td>\n<td class=\"nm\">MRR–OIS<br/>(Libor-OIS)</td>\n<td>MRR <b>−</b> OIS rate<br/><span class=\"mini\">(OIS: la pata flotante es la media geométrica de la tasa overnight)</span></td>\n<td><b>OIS rate</b></td>\n<td>Salud del interbancario / <b>liquidez de fondeo</b></td>\n<td>SOFR / ESTR / CORRA (<i>secured overnight</i>) reemplazan a Libor.</td>\n</tr>\n<tr>\n<td class=\"lm\">3</td>\n<td class=\"nm\"><b>OAS</b><br/>(Option-Adjusted Spread)</td>\n<td>Spread <b>CONSTANTE</b> añadido a <b>TODOS los one-period FORWARD rates del árbol</b> que iguala el valor AF al precio de mercado. Se halla por <b>trial and error</b>.</td>\n<td><b>Forward rates del árbol</b> (benchmark + σ)</td>\n<td>Crédito + liquidez, <b>REMOVIENDO</b> el componente de opción</td>\n<td>⚠ Se suma a los <b>forwards del árbol</b>, NO al yield.<br/>⚠ <b>σ↑ ⇒ OAS del callable BAJA</b> (inversa) pero el del <b>putable SUBE</b> (directa). <i>Callable: 138.2 bps (σ=0%) → 1.2 bps (σ=30%).</i><br/><b>Uso:</b> OAS mayor que comparables = <b>cheap</b> (comprar); menor = <b>rich</b>.</td>\n</tr>\n<tr>\n<td class=\"lm\">4</td>\n<td class=\"nm\">Credit spread</td>\n<td>YTM del bono riesgoso <b>−</b> YTM del benchmark de igual maturity<br/><span class=\"mini\">(surge del <b>CVA</b>: Fair value = VND − CVA)</span></td>\n<td><b>Government / benchmark</b></td>\n<td>Compensación por <b>POD × LGD</b></td>\n<td><b>Aprox: ≈ POD anual × (1 − Recovery).</b><br/>⚠ <b>Duplicar la POD</b> pega <b>MÁS</b> que <b>halvear el recovery</b> (+92 bps vs +31 bps).<br/>⚠ En <b>distress</b> el spread es un <b>ARTEFACTO ÓPTICO</b> (bono cotiza al recovery).</td>\n</tr>\n<tr>\n<td class=\"lm\">4</td>\n<td class=\"nm\">Discount<br/>Margin (DM)</td>\n<td>El spread que, sumado a <b>todas</b> las tasas del árbol, hace que el <b>FRN</b> valga su fair value. <b>Trial and error.</b></td>\n<td><b>Índice de referencia</b> (MRR)</td>\n<td>El <b>\"YTM\" de un floater</b> — su medida de yield</td>\n<td>⚠ <b>DM ≠ Quoted Margin.</b> QM = spread <b>contractual FIJO</b>. DM = medida de <b>yield</b>.<br/><b>Precio &lt; par ⇒ DM &gt; QM</b> · Precio &gt; par ⇒ DM &lt; QM · Precio = 100 ⇒ DM = QM</td>\n</tr>\n<tr>\n<td class=\"lm\">5</td>\n<td class=\"nm\">CDS spread<br/>&amp; BASIS</td>\n<td><b>CDS spread</b> = la prima que compensa el credit risk (≈ credit spread del bono).<br/><b>Basis</b> = CDS spread <b>−</b> credit spread del bono</td>\n<td><b>El otro mercado</b><br/><span class=\"mini\">(bono ⇄ CDS)</span></td>\n<td>La <b>disparidad</b> de valuación entre el mercado de bonos y el de CDS</td>\n<td><b>Aprox: CDS spread ≈ (1 − RR) × POD</b><br/><b>NEGATIVE basis</b> = spread <b>MAYOR en BONOS</b> ⇒ comprar el bono + comprar protección.<br/><b>POSITIVE basis</b> = spread mayor en CDS.</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n<!-- ===== EQUIVALENCIAS Y PUENTES ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">A</span>\n<span class=\"ttl\">Equivalencias y Puentes entre Spreads</span>\n<span class=\"los\">Lo que el examen conecta</span></div>\n<div class=\"sec-body\">\n<div class=\"cols3\">\n<div class=\"insight\">\n<div class=\"h\">Z-spread = OAS a σ = 0</div>\n          Un bono <b>option-free</b> (o cualquier bono con σ=0) tiene <b>OAS = Z-spread</b>. Con volatilidad, el OAS <b>remueve</b> el valor de la opción y queda por debajo (callable) o por encima (putable) del Z-spread.\n        </div>\n<div class=\"insight\">\n<div class=\"h\">Protection leg del CDS = CVA</div>\n          El <b>PV de la protection leg</b> de un CDS <b>es el CVA</b> (Σ PV de expected losses). Por eso <b>CDS spread ≈ credit spread</b> del bono: ambos compensan <b>el mismo riesgo</b>. Cuando difieren ⇒ <b>basis trade</b>.\n        </div>\n<div class=\"insight\">\n<div class=\"h\">Credit spread ⇄ CVA</div>\n          Son <b>dos formas de expresar lo mismo</b>: el <b>CVA</b> es la compensación en <b>PV hoy</b> (ej. 3.1549); el <b>credit spread</b> es la misma compensación en <b>bps anuales</b> (ej. 77 bps por 5 años).\n        </div>\n</div>\n<div class=\"cols2\">\n<div>\n<h4>La descomposición del yield corporativo</h4>\n<div class=\"fml\">Expected real rate <b>+</b> Expected inflation = <b>BENCHMARK</b> <span class=\"mini\">(macro)</span></div>\n<div class=\"fml\">Credit risk <b>+</b> Liquidity <b>+</b> Taxation = <b>SPREAD</b> <span class=\"mini\">(micro)</span></div>\n<div class=\"keyrule\" style=\"font-size:10.5px;\">= Corporate bond yield</div>\n<p class=\"mini\"><b>XVA</b> — la familia de ajustes: <b>CVA</b> (credit, el más desarrollado) · <b>FVA</b> (funding) · <b>LVA</b> (liquidity) · <b>TVA</b> (taxation).</p>\n</div>\n<div>\n<h4>La descomposición del yield en el basis trade</h4>\n<div class=\"fml\">Bond yield = Risk-free <b>+</b> Funding spread <b>+</b> Credit spread</div>\n<div class=\"keyrule\" style=\"font-size:10.5px;\">Risk-free + Funding spread ≈ <b>MRR</b><br/>⇒ <b>Credit spread del bono = Bond yield − MRR</b></div>\n<p class=\"mini\">⚠ La descomposición <b>se complica</b> si el bono tiene <b>embedded options</b> (callable/convertible) o si <b>no cotiza cerca de la par</b>.</p>\n</div>\n</div>\n</div>\n</div>\n<!-- ===== DIRECCIONES ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">B</span>\n<span class=\"ttl\">Qué mueve a cada spread</span>\n<span class=\"los\">Direcciones que el examen pregunta</span></div>\n<div class=\"sec-body\">\n<table class=\"center\">\n<thead><tr><th style=\"width:20%\">Cambia…</th><th>OAS callable</th><th>OAS putable</th><th>Credit spread</th><th>Swap spread</th><th>Discount margin</th></tr></thead>\n<tbody>\n<tr><td style=\"text-align:left;\"><b>σ ↑</b> (volatilidad)</td><td><b>BAJA ↓</b><br/><span class=\"mini\">(inversa)</span></td><td><b>SUBE ↑</b><br/><span class=\"mini\">(directa)</span></td><td>≈ igual<br/><span class=\"mini\">(CVA baja un pelín)</span></td><td>—</td><td>—</td></tr>\n<tr><td style=\"text-align:left;\"><b>POD ↑</b></td><td>—</td><td>—</td><td><b>SUBE ↑</b> mucho</td><td>—</td><td><b>SUBE ↑</b></td></tr>\n<tr><td style=\"text-align:left;\"><b>Recovery ↓</b></td><td>—</td><td>—</td><td><b>SUBE ↑</b> (menos)</td><td>—</td><td><b>SUBE ↑</b></td></tr>\n<tr><td style=\"text-align:left;\"><b>Economía FUERTE</b></td><td>—</td><td>—</td><td><b>BAJA ↓</b><br/><span class=\"mini\">⚠ pero el benchmark yield <b>SUBE</b> — <b>CONTRACÍCLICOS</b></span></td><td><b>BAJA ↓</b></td><td><b>BAJA ↓</b></td></tr>\n<tr><td style=\"text-align:left;\"><b>Precio del FRN &lt; par</b></td><td>—</td><td>—</td><td>—</td><td>—</td><td><b>DM &gt; QM</b></td></tr>\n</tbody>\n</table>\n</div>\n</div>\n<!-- ===== TOP 3 ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">!</span>\n<span class=\"ttl\">Las 3 confusiones MÁS recurrentes del examen</span>\n<span class=\"los\">Si memorizás solo tres cosas, que sean estas</span></div>\n<div class=\"sec-body\">\n<div class=\"top3\">\n<div class=\"t3h\"><span class=\"r\">1</span>Swap spread vs I-spread vs Z-spread — <b>el benchmark es la clave</b></div>\n<p><b>Swap spread</b> = <b>swap rate</b> vs <b>GOBIERNO</b> · <b>I-spread</b> = <b>BONO</b> vs <b>SWAP CURVE</b> · <b>Z-spread</b> = <b>BONO</b> vs <b>SPOT CURVE</b> (constante sobre toda la curva).<br/>\n        La pregunta del examen nunca es \"¿qué es un spread?\" sino <b>\"¿contra qué benchmark?\"</b>. Si te confundís de benchmark, perdiste el punto. <b>Y recordá: Z-spread = OAS a vol cero.</b></p>\n</div>\n<div class=\"top3\">\n<div class=\"t3h\"><span class=\"r\">2</span>σ ↑ ⇒ el OAS del <b>callable BAJA</b>, pero el del <b>putable SUBE</b></div>\n<p><b>El precio de mercado está FIJO.</b> El OAS es lo que hace falta para llegar a ese precio, así que <b>sigue al valor del modelo</b>.<br/>\n        Como <b>toda opción sube con σ</b>, todo depende del <b>signo con que entra la opción</b>: <b>callable = straight − call</b> (valor del modelo <b>baja</b> ⇒ OAS <b>baja</b>) · <b>putable = straight + put</b> (valor del modelo <b>sube</b> ⇒ OAS <b>sube</b>).<br/>\n<i>Es el error clásico: decir que al caer σ el OAS del callable baja y el del putable sube — es exactamente al revés.</i></p>\n</div>\n<div class=\"top3\">\n<div class=\"t3h\"><span class=\"r\">3</span>Discount Margin ≠ Quoted Margin · y el signo del <b>basis</b></div>\n<p><b>QM</b> = spread <b>contractual FIJO</b> (como el cupón). <b>DM</b> = medida de <b>YIELD</b> (como la YTM). <b>FRN bajo la par ⇒ DM &gt; QM.</b><br/>\n        Y en el <b>basis trade</b>: <b>NEGATIVE basis = spread MAYOR en el mercado de BONOS</b> ⇒ el bono está <b>barato</b> ⇒ <b>comprar el bono + comprar protección</b>. <i>Ej: bono 4.50% vs CDS 4.25% ⇒ profit de <b>25 bps</b> al converger.</i></p>\n</div>\n</div>\n</div>\n<div class=\"foot\"><span>Tabla Maestra de Spreads · Paquete de Repaso 3/6</span><span>CFA 2026 L2 · Fixed Income Vol 6</span></div>"
-    },
-    {
-      "id": "vol01-signos",
-      "title": "Hoja de Signos y Direcciones",
+      "id": "vol01-metodo",
+      "title": "Método vs método",
       "lms": [
         "LM2",
         "LM3",
-        "LM4"
+        "LM4",
+        "LM5",
+        "LM6",
+        "LM7"
       ],
-      "html": "<!-- ===== 1. VOLATILIDAD ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">1</span>\n<span class=\"ttl\">Sube la VOLATILIDAD (σ ↑)</span>\n<span class=\"los\">LM2 · LM3 · LM4 — el input que más engaña</span></div>\n<div class=\"sec-body\">\n<table class=\"center\">\n<thead><tr>\n<th style=\"width:15%\">Instrumento</th><th>Valor de la OPCIÓN</th><th>Valor del BONO</th>\n<th>OAS</th><th>Effective Duration</th><th>Effective Convexity</th><th style=\"width:26%\">Por qué</th>\n</tr></thead>\n<tbody>\n<tr>\n<td class=\"inp\">Straight<br/>(option-free)</td>\n<td>—</td><td class=\"eq\"><b>=</b></td><td class=\"eq\"><b>=</b></td><td class=\"eq\"><b>=</b></td><td class=\"eq\"><b>=</b></td>\n<td style=\"text-align:left;\">La vol <b>no afecta</b> a un bono default-free sin opciones.</td>\n</tr>\n<tr>\n<td class=\"inp\">Callable</td>\n<td class=\"up\">↑ SUBE</td>\n<td class=\"dn\">↓ <b>BAJA</b></td>\n<td class=\"ci\">↓ <b>BAJA</b><br/><span class=\"cifont\">CONTRA-INTUITIVO</span></td>\n<td class=\"dn\">↓ (se acorta)</td>\n<td class=\"dn\">↓ (hacia negativa)</td>\n<td style=\"text-align:left;\">V = straight <b>− call</b>. El call sube ⇒ se <b>resta más</b> ⇒ el valor del modelo <b>baja</b> ⇒ hace falta <b>menos</b> spread ⇒ <b>OAS baja</b>.<br/><i>138.2 bps (σ=0%) → <b>1.2 bps</b> (σ=30%)</i></td>\n</tr>\n<tr>\n<td class=\"inp\">Putable</td>\n<td class=\"up\">↑ SUBE</td>\n<td class=\"up\">↑ <b>SUBE</b></td>\n<td class=\"ci\">↑ <b>SUBE</b><br/><span class=\"cifont\">CONTRA-INTUITIVO</span></td>\n<td class=\"dn\">↓ (se acorta)</td>\n<td class=\"up\">↑ (sigue positiva)</td>\n<td style=\"text-align:left;\">V = straight <b>+ put</b>. El put sube ⇒ se <b>suma más</b> ⇒ el valor del modelo <b>sube</b> ⇒ hace falta <b>más</b> spread ⇒ <b>OAS sube</b>.</td>\n</tr>\n<tr>\n<td class=\"inp\">Capped floater</td>\n<td class=\"up\">↑ (cap)</td><td class=\"dn\">↓ BAJA</td><td>—</td><td>—</td><td>—</td>\n<td style=\"text-align:left;\">Cap = opción del <b>ISSUER</b> ⇒ resta.</td>\n</tr>\n<tr>\n<td class=\"inp\">Floored floater</td>\n<td class=\"up\">↑ (floor)</td><td class=\"up\">↑ SUBE</td><td>—</td><td>—</td><td>—</td>\n<td style=\"text-align:left;\">Floor = opción del <b>INVESTOR</b> ⇒ suma.</td>\n</tr>\n<tr>\n<td class=\"inp\">Bono riesgoso<br/>option-free<br/><span class=\"mini\">(con credit risk)</span></td>\n<td>—</td>\n<td class=\"ci\">↑ SUBE<br/><span class=\"cifont\">un poquito</span></td>\n<td>—</td><td>—</td><td>—</td>\n<td style=\"text-align:left;\"><b>VND = igual</b> (103.5450 a σ=10% y σ=20%), pero el <b>CVA BAJA</b> (3.5394 → <b>3.5390</b>) ⇒ fair value <b>sube</b>.<br/><i>Por la <b>asimetría lognormal</b>: la expected exposure baja.</i></td>\n</tr>\n</tbody>\n</table>\n<div class=\"keyrule\" style=\"border-width:3px;\">\n        LA REGLA MADRE DEL OAS: <b>el precio de mercado está FIJO</b> ⇒ el <b>OAS sigue al VALOR DEL MODELO</b>.<br/>\n<span style=\"font-weight:400;font-size:9.4px;\">Toda opción sube con σ ⇒ lo único que hay que recordar es el <b>SIGNO de la opción</b>: <b>−</b> callable (OAS inversa) · <b>+</b> putable (OAS directa).</span>\n</div>\n</div>\n</div>\n<!-- ===== 2. NIVEL DE TASAS ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">2</span>\n<span class=\"ttl\">Cambia el NIVEL de las tasas</span>\n<span class=\"los\">LM3 — asimetrías y one-sided durations</span></div>\n<div class=\"sec-body\">\n<table class=\"center\">\n<thead><tr>\n<th style=\"width:14%\"></th><th colspan=\"3\">TASAS BAJAN ↓</th><th colspan=\"3\">TASAS SUBEN ↑</th>\n</tr>\n<tr>\n<th></th><th>Valor del bono</th><th>La opción está…</th><th>Duration</th>\n<th>Valor del bono</th><th>La opción está…</th><th>Duration</th>\n</tr></thead>\n<tbody>\n<tr>\n<td class=\"inp\">Straight</td>\n<td class=\"up\">↑ sube pleno<br/><span class=\"mini\">(+40%)</span></td><td>—</td><td class=\"eq\">≈ igual</td>\n<td class=\"dn\">↓ cae pleno<br/><span class=\"mini\">(−30%)</span></td><td>—</td><td class=\"eq\">≈ igual</td>\n</tr>\n<tr>\n<td class=\"inp\">Callable</td>\n<td class=\"ci\">↑ <b>CAPADO</b><br/><span class=\"mini\">solo +27%</span></td>\n<td><b>IN the money</b></td>\n<td class=\"dn\"><b>↓ se ACORTA</b></td>\n<td class=\"dn\">↓ cae casi como el straight</td>\n<td>OUT of the money</td>\n<td class=\"eq\">≈ straight</td>\n</tr>\n<tr>\n<td class=\"inp\">Putable</td>\n<td class=\"up\">↑ sube casi como el straight</td>\n<td>OUT of the money</td>\n<td class=\"eq\">≈ straight</td>\n<td class=\"ci\">↓ <b>AMORTIGUADO</b><br/><span class=\"mini\">solo −22%</span></td>\n<td><b>IN the money</b></td>\n<td class=\"dn\"><b>↓ se ACORTA</b></td>\n</tr>\n</tbody>\n</table>\n<div class=\"cols2\">\n<div>\n<h4>One-sided durations — la asimetría</h4>\n<table class=\"center\">\n<thead><tr><th>Bono (curva 4% flat, σ=15%)</th><th>EffDur</th><th>Up-dur</th><th>Down-dur</th><th>¿Más sensible a…?</th></tr></thead>\n<tbody>\n<tr><td style=\"text-align:left;\"><b>Callable</b> 4.5%, 5-yr, callable @100</td><td>1.39</td><td class=\"ci\">1.94</td><td>0.84</td><td class=\"ci\"><b>SUBAS</b> de tasa</td></tr>\n<tr><td style=\"text-align:left;\"><b>Putable</b> 4.1%, 5-yr, putable @100</td><td>3.00</td><td>1.49</td><td class=\"ci\">4.51</td><td class=\"ci\"><b>BAJAS</b> de tasa</td></tr>\n</tbody>\n</table>\n<p class=\"mini\" style=\"font-size:9.2px;\"><b>Callable: up-dur &gt; down-dur</b> (la baja está <b>capada</b> por el call ⇒ el precio no puede pasar de 100).<br/><b>Putable: down-dur &gt; up-dur</b> (la suba está <b>frenada</b> por el put).<br/>⚠ Es <b>exactamente al revés</b> de lo que sugiere la intuición del \"qué me protege\".</p>\n</div>\n<div>\n<div class=\"keyrule\">\n<b>AMBAS opciones ACORTAN la duration</b><br/>\n            EffDur<sub>callable</sub> <b>≤</b> EffDur<sub>straight</sub>  ·  EffDur<sub>putable</sub> <b>≤</b> EffDur<sub>straight</sub><br/>\n<span style=\"font-weight:400;font-size:9.2px;\">La trampa: creer que el put la <b>alarga</b>. Nunca.</span>\n</div>\n<div class=\"insight\">\n<div class=\"h\">Convexity — solo uno puede ser negativa</div>\n<b>Straight:</b> siempre <b>positiva</b> (baja)<br/>\n<b>Putable:</b> <b>SIEMPRE POSITIVA</b> (el precio tiene un <b>piso</b>)<br/>\n<b>Callable:</b> <b>PUEDE SER NEGATIVA</b> cuando el call está <b>near the money</b> (el upside queda <b>capado</b>) — ej. <b>−47.41</b>\n</div>\n</div>\n</div>\n</div>\n</div>\n<!-- ===== 3. FORMA DE LA CURVA ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">3</span>\n<span class=\"ttl\">Cambia la FORMA de la curva</span>\n<span class=\"los\">LM1 · LM3 — call y put van en direcciones OPUESTAS</span></div>\n<div class=\"sec-body\">\n<div class=\"cols2\">\n<div>\n<table class=\"center\">\n<thead><tr><th style=\"width:26%\">Forma de la curva</th><th>Valor del CALL</th><th>Valor del PUT</th></tr></thead>\n<tbody>\n<tr><td class=\"inp\">Upward sloping</td><td class=\"dn\">↓ menor (~8%)</td><td class=\"up\">↑ <b>MAYOR</b></td></tr>\n<tr><td class=\"inp\">Flat</td><td>medio (~10%)</td><td>medio</td></tr>\n<tr><td class=\"inp\">Downward (inverted)</td><td class=\"ci\">↑ <b>MAYOR</b> (&gt;12%)</td><td class=\"dn\">↓ menor</td></tr>\n</tbody>\n</table>\n<div class=\"keyrule ci\" style=\"border-width:3px;\">\n            ⚠ <b>CALL y PUT van en DIRECCIONES OPUESTAS</b><br/>\n<span style=\"font-weight:400;font-size:9.4px;\">Curva se <b>APLANA/INVIERTE</b> ⇒ call <b>SUBE</b>, put <b>BAJA</b>.<br/>Curva <b>UPWARD</b> ⇒ call <b>BAJA</b>, put <b>SUBE</b>.</span>\n</div>\n</div>\n<div>\n<div class=\"insight\">\n<div class=\"h\">La lógica está en los FORWARDS del árbol</div>\n            Curva <b>upward</b> ⇒ los one-period forwards del árbol son <b>ALTOS</b> ⇒ <b>pocas</b> chances de que el issuer <b>llame</b> (call vale menos) pero <b>muchas</b> de que el investor <b>ponga</b> (put vale más).<br/>\n            Al <b>aplanarse o invertirse</b>, muchos nodos tienen forwards <b>BAJOS</b> ⇒ el <b>call vale más</b> y el <b>put menos</b>.\n          </div>\n<h4>Relación curva ⇄ forward (LM1)</h4>\n<table class=\"center\">\n<thead><tr><th>Spot curve</th><th>El forward queda…</th><th>f al ↑ A</th></tr></thead>\n<tbody>\n<tr><td>Upward (z<sub>B</sub>&gt;z<sub>A</sub>)</td><td><b>ENCIMA</b> (f &gt; z<sub>B</sub>)</td><td>sube</td></tr>\n<tr><td>Flat</td><td>= spot</td><td>igual</td></tr>\n<tr><td>Downward</td><td><b>DEBAJO</b> (f &lt; z<sub>B</sub>)</td><td>baja</td></tr>\n</tbody>\n</table>\n<p class=\"mini\" style=\"font-size:9.2px;\"><b>Mnemónica:</b> el spot es un <b>promedio</b>; el forward es el dato <b>marginal</b>. Si el promedio sube, el próximo marginal está <b>arriba</b>.</p>\n</div>\n</div>\n</div>\n</div>\n<!-- ===== 4. PARAMETROS DE CREDITO ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">4</span>\n<span class=\"ttl\">Cambian los PARÁMETROS DE CRÉDITO (POD · Recovery)</span>\n<span class=\"los\">LM4 · LM5 — donde vive la trampa de la correlación</span></div>\n<div class=\"sec-body\">\n<table class=\"center\">\n<thead><tr>\n<th style=\"width:20%\">Cambia…</th><th>VND</th><th>CVA</th><th>Fair value</th><th>Credit spread</th><th style=\"width:32%\">Magnitud / detalle</th>\n</tr></thead>\n<tbody>\n<tr>\n<td class=\"inp\">POD ↑ (se duplica)<br/><span class=\"mini\">1.50% → 3.00%</span></td>\n<td class=\"ci\"><b>=</b> IGUAL</td><td class=\"up\">↑ 2.6984 → <b>5.3174</b></td><td class=\"dn\">↓ 101.7168 → 99.0978</td>\n<td class=\"up\">↑ 0.90% → <b>1.82%</b></td>\n<td style=\"text-align:left;\"><b>+92 bps</b> ⟵ <b>EL EFECTO MÁS FUERTE</b></td>\n</tr>\n<tr>\n<td class=\"inp\">Recovery ↓ (a la mitad)<br/><span class=\"mini\">40% → 20%</span></td>\n<td class=\"ci\"><b>=</b> IGUAL</td><td class=\"up\">↑ 2.6984 → 3.5978</td><td class=\"dn\">↓ 101.7168 → 100.8173</td>\n<td class=\"up\">↑ 0.90% → <b>1.21%</b></td>\n<td style=\"text-align:left;\"><b>+31 bps</b> — pega <b>MENOS</b> que duplicar la POD</td>\n</tr>\n<tr>\n<td class=\"inp\">Recovery ↓ <b>con PRECIO DADO</b><br/><span class=\"mini\">40% → 30%</span></td>\n<td><b>=</b></td><td><b>=</b> (lo fija el precio)</td><td><b>=</b> (dado)</td>\n<td class=\"ci\">POD implícita <b>↓ BAJA</b><br/><span class=\"cifont\">CONTRA-INTUITIVO</span></td>\n<td style=\"text-align:left;\">POD 1.25% → <b>1.0675%</b><br/><b>Correlación POSITIVA</b> entre POD y recovery.<br/><i>El CVA está fijo: si sube el LGD, la POD debe <b>bajar</b> para compensar.</i></td>\n</tr>\n<tr>\n<td class=\"inp\">POD <b>creciente</b> con el plazo</td>\n<td>—</td><td class=\"up\">↑ con el plazo</td><td>—</td>\n<td class=\"up\">↑ con el plazo</td>\n<td style=\"text-align:left;\">Genera una <b>credit curve UPWARD</b>: 62 bps (3y) → 86 bps (5y) → <b>132 bps</b> (10y)</td>\n</tr>\n<tr>\n<td class=\"inp\">Economía <b>FUERTE</b></td>\n<td>—</td><td class=\"dn\">↓</td><td class=\"up\">↑</td>\n<td class=\"ci\">↓ <b>BAJA</b><br/><span class=\"cifont\">pero el BENCHMARK SUBE</span></td>\n<td style=\"text-align:left;\">⚠ <b>CONTRACÍCLICOS</b>: los benchmark yields <b>suben</b> pero los credit spreads <b>bajan</b>. Se mueven en <b>direcciones opuestas</b>.</td>\n</tr>\n</tbody>\n</table>\n<div class=\"cols3\">\n<div class=\"insight\">\n<div class=\"h\">El VND NUNCA se mueve</div>\n          El VND solo depende de los <b>flujos y el benchmark</b>. Cambien POD, recovery o σ ⇒ <b>todo el efecto pasa por el CVA</b>. Es el chequeo más rápido para detectar un error.\n        </div>\n<div class=\"insight\">\n<div class=\"h\">Risk-neutral &gt; histórica</div>\n          Las PODs <b>risk-neutral SIEMPRE son MAYORES</b> que las históricas (<b>1.60% vs 1.00%</b>). Incorporan el <b>default risk premium</b> (incertidumbre del <b>timing</b>) + <b>liquidez e impuestos</b>.\n        </div>\n<div class=\"insight\">\n<div class=\"h\">Distress: el espejismo</div>\n          Con default inminente el bono cotiza <b>al recovery</b> y <b>CVA = VND − Recovery</b>. El spread resultante (17.11% a 5y vs 6.60% a 10y) es un <b>ARTEFACTO ÓPTICO</b> — no informa sobre riesgo relativo por plazo.\n        </div>\n</div>\n</div>\n</div>\n<!-- ===== 5. CDS ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">5</span>\n<span class=\"ttl\">CDS — Quién Gana y Quién Pierde</span>\n<span class=\"los\">LM5 — la terminología que se invierte</span></div>\n<div class=\"sec-body\">\n<div class=\"cols2\">\n<div>\n<table class=\"center\">\n<thead><tr><th style=\"width:26%\">Si el crédito…</th><th>Protection BUYER</th><th>Protection SELLER</th><th>Spread del CDS</th></tr></thead>\n<tbody>\n<tr><td class=\"inp\"><b>EMPEORA</b></td><td class=\"up\">↑ <b>GANA</b></td><td class=\"dn\">↓ pierde</td><td class=\"up\">↑ se ensancha</td></tr>\n<tr><td class=\"inp\"><b>MEJORA</b></td><td class=\"dn\">↓ pierde</td><td class=\"up\">↑ <b>GANA</b></td><td class=\"dn\">↓ se angosta</td></tr>\n<tr><td class=\"inp\">Llega al <b>vencimiento sin default</b></td><td class=\"dn\">↓ pierde el CDS<br/><span class=\"mini\">(pero era su <b>seguro</b>)</span></td><td class=\"up\">↑ <b>GANA</b> (se quedó las primas)</td><td class=\"dn\">↓ <b>converge a CERO</b></td></tr>\n</tbody>\n</table>\n<div class=\"keyrule ci\" style=\"border-width:3px;\">\n            ⚠ <b>LONG/SHORT ESTÁ INVERTIDO ENTRE SINGLE-NAME E ÍNDICE</b><br/>\n<span style=\"font-weight:400;font-size:9.4px;\">\n<b>Single-name:</b> buyer de protección = <b>SHORT</b> credit · seller = <b>LONG</b> credit<br/>\n<b>Index CDS:</b> el que <b>COMPRA el CDX</b> = <b>LONG</b> credit exposure<br/>\n<i>Por eso el currículo dice siempre <b>\"buy/sell protection\"</b>, nunca \"comprar/vender CDS\".</i></span>\n</div>\n</div>\n<div>\n<h4>Signos del upfront y del precio</h4>\n<table class=\"center\">\n<thead><tr><th>Si…</th><th>Upfront</th><th>¿Quién paga?</th><th>Precio del CDS</th></tr></thead>\n<tbody>\n<tr><td class=\"inp\">Spread <b>&gt;</b> Coupon</td><td class=\"up\">POSITIVO</td><td><b>BUYER</b> → seller</td><td class=\"dn\"><b>&lt; 100</b></td></tr>\n<tr><td class=\"inp\">Spread <b>&lt;</b> Coupon</td><td class=\"dn\">NEGATIVO</td><td class=\"ci\"><b>SELLER</b> → buyer</td><td class=\"ci\"><b>&gt; 100</b></td></tr>\n<tr><td class=\"inp\">Spread <b>=</b> Coupon</td><td>= 0</td><td>nadie</td><td>= 100</td></tr>\n</tbody>\n</table>\n<p class=\"mini\" style=\"font-size:9.2px;\"><b>Upfront ≈ (Credit spread − Fixed coupon) × Duration</b> · <b>Precio = 100 − Upfront%</b><br/>\n<i>Ej: upfront <b>−2%</b>, dur 4, coupon IG 100 bps ⇒ spread = 100 + (−50) = <b>50 bps</b> ⇒ precio = 100 − (−2) = <b>102</b></i></p>\n<div class=\"insight\">\n<div class=\"h\">Curve trades — al revés de lo que parece</div>\n<b>STEEPENER</b> (compro protección <b>LARGA</b>, vendo <b>CORTA</b>) ⇒ en el corto plazo es <b>BULLISH</b> (el outlook cercano es <b>MEJOR</b> que el lejano).<br/>\n<b>FLATTENER</b> (compro protección <b>CORTA</b>, vendo <b>LARGA</b>) ⇒ en el corto plazo es <b>BEARISH</b> (espera <b>problemas inminentes</b>).\n          </div>\n</div>\n</div>\n</div>\n</div>\n<!-- ===== TOP CONTRA-INTUITIVOS ===== -->\n<div class=\"sec\">\n<div class=\"sec-h\"><span class=\"num\">!</span>\n<span class=\"ttl\">Los 6 Efectos MÁS Contra-Intuitivos del Volumen</span>\n<span class=\"los\">Si el examen quiere hacerte caer, cae por acá</span></div>\n<div class=\"sec-body\">\n<div class=\"cols2\">\n<div>\n<div class=\"ci-box\">\n<div class=\"cih\"><span class=\"r\">1</span>σ ↑ ⇒ OAS del <b>callable BAJA</b>, del <b>putable SUBE</b></div>\n<p>Precio fijo ⇒ el OAS <b>sigue al valor del modelo</b>. Todo sale del <b>signo</b> de la opción (− callable, + putable). <b>El error clásico es decirlo al revés.</b></p>\n</div>\n<div class=\"ci-box\">\n<div class=\"cih\"><span class=\"r\">2</span>Curva se aplana ⇒ <b>call SUBE</b>, <b>put BAJA</b></div>\n<p>Van en <b>direcciones OPUESTAS</b>. Con curva upward los forwards del árbol son <b>altos</b> ⇒ pocas chances de llamar, muchas de poner.</p>\n</div>\n<div class=\"ci-box\">\n<div class=\"cih\"><span class=\"r\">3</span>Recovery ↓ ⇒ POD implícita <b>BAJA</b></div>\n<p>Solo cuando el <b>precio está DADO</b>. El CVA está fijo: si sube el LGD, la POD debe <b>bajar</b> para compensar. <b>Correlación POSITIVA.</b></p>\n</div>\n</div>\n<div>\n<div class=\"ci-box\">\n<div class=\"cih\"><span class=\"r\">4</span>La <b>volatilidad</b> afecta al CVA de un bono <b>SIN opciones</b></div>\n<p>El <b>VND no cambia</b>, pero σ mueve la <b>expected exposure</b> ⇒ mueve el <b>CVA</b> (baja un poco por la asimetría lognormal) ⇒ el fair value <b>sube</b>.</p>\n</div>\n<div class=\"ci-box\">\n<div class=\"cih\"><span class=\"r\">5</span>One-sided: el <b>callable</b> es más sensible a las <b>SUBAS</b></div>\n<p><b>Callable: up-dur &gt; down-dur</b> (la baja está capada). <b>Putable: down-dur &gt; up-dur</b>. Es al revés de lo que sugiere \"qué me protege\".</p>\n</div>\n<div class=\"ci-box\">\n<div class=\"cih\"><span class=\"r\">6</span><b>Steepener = BULLISH</b> · <b>Flattener = BEARISH</b></div>\n<p>En el <b>corto plazo</b>. El steepener implica que el outlook <b>cercano es mejor</b> que el lejano; el flattener, que hay <b>problemas inminentes</b>.</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"foot\"><span>Hoja de Signos y Direcciones · Paquete de Repaso 4/6</span><span>CFA 2026 L2 · Fixed Income Vol 6</span></div>"
+      "html": "<div class=\"wrap\">\n<div class=\"banner\"><b>Tabla método-vs-método</b> · Vol. 01 Quantitative Methods. Reemplaza la tabla IFRS vs US GAAP (este volumen no tiene contenido contable). Reúne las oposiciones examinables de los 7 LMs. Imprimir: <b>Ctrl/Cmd+P</b>, B&amp;N.</div>\n<h1>Método vs. método — Quant Vol. 01</h1>\n<div class=\"refdoc\">\n<section><h2>Regresión (LM2–LM4)</h2><table><caption>Selección de modelo, influencia, dummies, violaciones</caption><thead><tr><th style=\"width:17%\">A</th><th style=\"width:17%\">B</th><th>A — qué es</th><th>B — qué es</th></tr></thead><tbody><tr><td><b>AIC</b></td><td><b>BIC</b></td><td>n·ln(SSE/n)+2(k+1) ; preferido para predicción</td><td>n·ln(SSE/n)+ln(n)(k+1) ; penaliza más ; para goodness of fit</td></tr><tr><td><b>R²</b></td><td><b>Adjusted R²</b></td><td>Nunca baja al agregar variables</td><td>Sube solo si |t|&gt;1 ; puede bajar / ser negativo</td></tr><tr><td><b>High-leverage point</b></td><td><b>Outlier</b></td><td>Extremo en una X ; umbral 3(k+1)/n</td><td>Extremo en Y ; studentized residual, df n−k−2</td></tr><tr><td><b>Intercept dummy</b></td><td><b>Slope dummy</b></td><td>Desplaza el intercepto</td><td>Cambia la pendiente (interacción D×X)</td></tr><tr><td><b>Conditional hetero</b></td><td><b>Multicollinearity</b></td><td>Subestima SE → t inflados → Type I</td><td>Infla SE → t chicos → Type II (R² alto, coefs no sig.)</td></tr></tbody></table></section>\n<section><h2>Time-Series (LM5)</h2><table><caption>Modelos y estacionariedad</caption><thead><tr><th style=\"width:17%\">A</th><th style=\"width:17%\">B</th><th>A — qué es</th><th>B — qué es</th></tr></thead><tbody><tr><td><b>Linear trend</b></td><td><b>Log-linear trend</b></td><td>Cambio absoluto constante</td><td>Tasa de crecimiento constante (exponencial)</td></tr><tr><td><b>AR(p)</b></td><td><b>Random walk</b></td><td>Covariance stationary ; mean-reverting b0/(1−b1)</td><td>b0=0, b1=1 ; sin mean-reverting ; no estacionario</td></tr><tr><td><b>Covariance stationary</b></td><td><b>Unit root</b></td><td>Media/var/cov constantes ; AR válido</td><td>b1=1 ; no estacionario ; usar first-differencing</td></tr><tr><td><b>In-sample</b></td><td><b>Out-of-sample</b></td><td>Dentro del período de estimación</td><td>Fuera ; se compara por RMSE (menor = mejor)</td></tr></tbody></table></section>\n<section><h2>Machine Learning (LM6)</h2><table><caption>Algoritmos supervised vs. unsupervised y sus pares</caption><thead><tr><th style=\"width:17%\">A</th><th style=\"width:17%\">B</th><th>A — qué es</th><th>B — qué es</th></tr></thead><tbody><tr><td><b>Supervised</b></td><td><b>Unsupervised</b></td><td>Hay target Y (labeled) / predecir</td><td>No hay target / hallar estructura</td></tr><tr><td><b>Regression</b></td><td><b>Classification</b></td><td>Target continuo</td><td>Target categórico/ordinal</td></tr><tr><td><b>Penalized (LASSO)</b></td><td><b>OLS</b></td><td>Minimiza SSR + λΣ|b̂| ; feature selection</td><td>Minimiza solo SSR ; sin selección (λ=0 ≡ OLS)</td></tr><tr><td><b>SVM</b></td><td><b>KNN</b></td><td>Hyperplane de máximo margen ; lineal</td><td>Vecinos más cercanos ; no-paramétrico</td></tr><tr><td><b>CART</b></td><td><b>Random Forest</b></td><td>Un árbol interpretable</td><td>Muchos árboles (bagging + m&lt;n) ; black box</td></tr><tr><td><b>Voting</b></td><td><b>Bagging</b></td><td>Distintos algoritmos, voto (heterogéneo)</td><td>Mismo algoritmo, muestreo con reemplazo (homogéneo)</td></tr><tr><td><b>PCA</b></td><td><b>Clustering</b></td><td>Dimension reduction (combina features)</td><td>Agrupa observaciones (k-means/hierarchical)</td></tr><tr><td><b>K-Means</b></td><td><b>Hierarchical</b></td><td>k fijo a priori, sin jerarquía</td><td>Agglomerative/divisive, con jerarquía (dendrograma)</td></tr><tr><td><b>Agglomerative</b></td><td><b>Divisive</b></td><td>Bottom-up ; clusters chicos/locales</td><td>Top-down ; clusters grandes/globales</td></tr></tbody></table></section>\n<section><h2>Big Data (LM7)</h2><table><caption>Preparación, features y métricas</caption><thead><tr><th style=\"width:17%\">A</th><th style=\"width:17%\">B</th><th>A — qué es</th><th>B — qué es</th></tr></thead><tbody><tr><td><b>Normalization</b></td><td><b>Standardization</b></td><td>(X−Xmin)/(Xmax−Xmin) → [0,1] ; sensible a outliers</td><td>(X−μ)/σ → media 0/sd 1 ; requiere normalidad</td></tr><tr><td><b>Trimming</b></td><td><b>Winsorization</b></td><td>Elimina los extremos (5% trimmed)</td><td>Reemplaza por máx/mín no-outlier</td></tr><tr><td><b>Filtration</b></td><td><b>Selection</b></td><td>Quita filas no necesarias</td><td>Quita columnas no necesarias</td></tr><tr><td><b>Feature selection</b></td><td><b>Dimensionality reduction</b></td><td>Incluye/excluye features sin alterarlos</td><td>Crea combinaciones nuevas no correlacionadas</td></tr><tr><td><b>Feature selection</b></td><td><b>Feature engineering</b></td><td>Previene overfitting (quita ruido)</td><td>Previene underfitting (agrega estructura)</td></tr><tr><td><b>Stemming</b></td><td><b>Lemmatization</b></td><td>Stem (rule-based, puede no ser palabra real)</td><td>Lemma (raíz real, algorítmico, más caro)</td></tr><tr><td><b>Parameter</b></td><td><b>Hyperparameter</b></td><td>Aprendido de los datos (weights, coefs)</td><td>Seteado a mano (λ, k, capas, p-threshold)</td></tr><tr><td><b>Precision</b></td><td><b>Recall</b></td><td>TP/(TP+FP) ; costo FP/Type I alto</td><td>TP/(TP+FN) ; costo FN/Type II alto ; = TPR</td></tr><tr><td><b>Accuracy</b></td><td><b>F1 score</b></td><td>(TP+TN)/total ; solo si balanceado</td><td>2PR/(P+R) ; mejor si desbalanceado</td></tr></tbody></table></section>\n</div>\n<p style=\"font-size:11px;color:#666;margin-top:14px;\"><b>Los 3 más recurrentes:</b> AIC↔BIC (predicción vs. fit) · Parameter↔Hyperparameter · Precision↔Recall (FP/Type I vs. FN/Type II).</p>\n</div>"
+    },
+    {
+      "id": "vol01-signos",
+      "title": "Signos y direcciones",
+      "lms": [
+        "LM1",
+        "LM2",
+        "LM3",
+        "LM4",
+        "LM5",
+        "LM6",
+        "LM7"
+      ],
+      "html": "<div class=\"wrap\">\n<div class=\"banner\"><b>Hoja de signos y direcciones</b> · Vol. 01 Quant. Qué sube (↑) / baja (↓) / queda igual (=) ante cada decisión. La columna <b>⚠</b> marca lo <b>contra-intuitivo</b> (donde el examen pincha). Imprimir: <b>Ctrl/Cmd+P</b>, B&amp;N.</div>\n<h1>Signos y direcciones — Quant Vol. 01</h1>\n<h2>Regresión (LM1–LM4)</h2><table><thead><tr><th style=\"width:34%\">Situación / decisión</th><th style=\"width:24%\">Afecta a</th><th>Dirección / consecuencia</th><th class=\"c\" style=\"width:8%\">⚠</th></tr></thead><tbody><tr><td>Agregar una variable con |t| &gt; 1</td><td>Adjusted R²</td><td><b>↑ sube</b></td><td class=\"c\"></td></tr><tr><td>Agregar una variable con |t| &lt; 1</td><td>Adjusted R²</td><td><b>↓ baja</b> (¡puede quedar negativo!)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Agregar cualquier variable</td><td>R² (sin ajustar)</td><td><b>↑ o =</b> (nunca baja)</td><td class=\"c\"></td></tr><tr><td>Conditional heteroskedasticity</td><td>Standard errors</td><td><b>↓ subestimados</b> → t <b>↑ inflados</b> → Type I</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Serial correlation positiva</td><td>Standard errors</td><td><b>↓ subestimados</b> → t <b>↑ inflados</b> → Type I</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Multicolinealidad</td><td>Standard errors</td><td><b>↑ inflados</b> → t <b>↓ chicos</b> → Type II</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Multicolinealidad</td><td>R² del modelo</td><td><b>alto</b>, pero coeficientes <b>no significativos</b></td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Unconditional heteroskedasticity</td><td>Inferencia</td><td><b>= sin problema mayor</b></td><td class=\"c\"><b>⚠</b></td></tr></tbody></table>\n<h2>Time-Series (LM5)</h2><table><thead><tr><th style=\"width:34%\">Situación / decisión</th><th style=\"width:24%\">Afecta a</th><th>Dirección / consecuencia</th><th class=\"c\" style=\"width:8%\">⚠</th></tr></thead><tbody><tr><td>Valor actual &lt; mean-reverting level</td><td>Predicción del AR(1)</td><td>serie <b>↑ sube</b> hacia b0/(1−b1)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Valor actual &gt; mean-reverting level</td><td>Predicción del AR(1)</td><td>serie <b>↓ baja</b> hacia b0/(1−b1)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Random walk (b1=1)</td><td>Mean-reverting level</td><td><b>indefinido</b> (0/0)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Random walk</td><td>Varianza en el tiempo</td><td><b>↑ crece sin límite</b> → no estacionario</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Durbin–Watson &lt; 2</td><td>Serial correlation</td><td><b>positiva</b></td><td class=\"c\"></td></tr><tr><td>Durbin–Watson &gt; 2</td><td>Serial correlation</td><td><b>negativa</b></td><td class=\"c\"></td></tr><tr><td>Unit root sin corregir</td><td>AR estimado</td><td><b>inválido</b> → aplicar first-differencing</td><td class=\"c\"></td></tr></tbody></table>\n<h2>Machine Learning (LM6)</h2><table><thead><tr><th style=\"width:34%\">Situación / decisión</th><th style=\"width:24%\">Afecta a</th><th>Dirección / consecuencia</th><th class=\"c\" style=\"width:8%\">⚠</th></tr></thead><tbody><tr><td>↑ complejidad del modelo</td><td>Bias error</td><td><b>↓ baja</b></td><td class=\"c\"></td></tr><tr><td>↑ complejidad del modelo</td><td>Variance error</td><td><b>↑ sube</b></td><td class=\"c\"></td></tr><tr><td>Overfitting</td><td>Error out-of-sample (E<sub>out</sub>)</td><td><b>↑ alto</b> (E<sub>in</sub> bajo)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Underfitting</td><td>Error in-sample (E<sub>in</sub>)</td><td><b>↑ alto</b></td><td class=\"c\"></td></tr><tr><td>↑ λ (regularización) en LASSO</td><td>Nº de features / complejidad</td><td><b>↓ baja</b> (coefs → 0)</td><td class=\"c\"></td></tr><tr><td>λ = 0 en LASSO</td><td>Modelo</td><td><b>= OLS</b></td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Random forest vs. CART único</td><td>Interpretabilidad</td><td><b>↓ baja</b> (black box), aunque mejora accuracy</td><td class=\"c\"><b>⚠</b></td></tr></tbody></table>\n<h2>Big Data (LM7)</h2><table><thead><tr><th style=\"width:34%\">Situación / decisión</th><th style=\"width:24%\">Afecta a</th><th>Dirección / consecuencia</th><th class=\"c\" style=\"width:8%\">⚠</th></tr></thead><tbody><tr><td>Feature selection</td><td>Overfitting</td><td><b>↓ previene</b></td><td class=\"c\"></td></tr><tr><td>Feature engineering</td><td>Underfitting</td><td><b>↓ previene</b></td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Muchos features / pocos GL</td><td>Fit</td><td><b>overfitting</b></td><td class=\"c\"></td></tr><tr><td>Pocos features / dataset chico</td><td>Fit</td><td><b>underfitting</b></td><td class=\"c\"></td></tr><tr><td>Clases desbalanceadas</td><td>Accuracy como métrica</td><td><b>engañosa</b> → usar F1</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>DF (document frequency) alta</td><td>IDF y TF-IDF</td><td><b>↓ bajos</b> (palabra poco discriminante)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>p-threshold ↑ en logistic</td><td>Nº de clasificados como '1'</td><td><b>↓ baja</b></td><td class=\"c\"></td></tr></tbody></table>\n</div>"
     }
   ]
 }

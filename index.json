@@ -3,12 +3,12 @@
     {
       "id": "vol01",
       "order": 1,
-      "title": "Fixed Income",
+      "title": "Quantitative Methods",
       "file": "vol01.json",
       "counts": {
-        "flashcards": 108,
-        "traps": 76,
-        "problems": 18
+        "flashcards": 71,
+        "traps": 34,
+        "problems": 13
       }
     },
     {
@@ -56,6 +56,28 @@
       }
     },
     {
+      "id": "vol06",
+      "order": 6,
+      "title": "Fixed Income",
+      "file": "vol06.json",
+      "counts": {
+        "flashcards": 108,
+        "traps": 76,
+        "problems": 18
+      }
+    },
+    {
+      "id": "vol07",
+      "order": 7,
+      "title": "Derivatives",
+      "file": "vol07.json",
+      "counts": {
+        "flashcards": 60,
+        "traps": 20,
+        "problems": 18
+      }
+    },
+    {
       "id": "vol08",
       "order": 8,
       "title": "Alternative Investments",
@@ -64,6 +86,17 @@
         "flashcards": 120,
         "traps": 35,
         "problems": 18
+      }
+    },
+    {
+      "id": "vol09",
+      "order": 9,
+      "title": "Portfolio Management",
+      "file": "vol09.json",
+      "counts": {
+        "flashcards": 118,
+        "traps": 83,
+        "problems": 21
       }
     },
     {

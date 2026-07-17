@@ -273,3 +273,150 @@
 .refview .banner{display:none;}
 .refview .wrap{max-width:none;padding:0;}
 .refview th{background:#eee !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+
+/* --- estilos de referencia vol01 (formato nuevo), scopeados --- */
+.refview{ --ink:#000; --thin:#666; --hair:#bbb; --head:#eee; }
+.refview .wrap{ max-width:1000px; margin:0 auto; padding:24px 28px 60px; }
+.refview .sub{ font-size:12px; color:var(--thin); margin-bottom:10px; }
+.refview .hr{ border:0; border-top:2.5px solid var(--ink); margin:10px 0 18px; }
+.refview .banner{ border:1px solid var(--ink); padding:7px 12px; font-size:11px; margin-bottom:18px; }
+.refview b{ font-weight:700; }
+.refview .en{ font-style:italic; }
+.refview table{ width:100%; border-collapse:collapse; margin:8px 0; font-size:11.5px; }
+.refview th, .refview td{ border:1px solid var(--hair); padding:5px 7px; text-align:left; vertical-align:top; }
+.refview thead th{ background:var(--head); border-color:var(--thin); font-weight:700; }
+.refview td.c, .refview th.c{ text-align:center; }
+.refview .eq{ font-family:"SF Mono",ui-monospace,Menlo,monospace; }
+.refview .banner{ margin-bottom:14px; }
+.refview h2{ font-size:15px; border-bottom:2px solid #000; padding-bottom:3px; margin:20px 0 6px; }
+.refview caption{ text-align:left; font-weight:700; font-size:12px; margin:6px 0 2px; }
+@media print{.refview .banner{ display:none; }}
+.refview{ --ink:#000; --thin:#666; --hair:#bbb; --head:#eee; }
+.refview .wrap{ max-width:1000px; margin:0 auto; padding:24px 28px 60px; }
+.refview .sub{ font-size:12px; color:var(--thin); margin-bottom:10px; }
+.refview .hr{ border:0; border-top:2.5px solid var(--ink); margin:10px 0 18px; }
+.refview .banner{ border:1px solid var(--ink); padding:7px 12px; font-size:11px; margin-bottom:18px; }
+.refview b{ font-weight:700; }
+.refview .en{ font-style:italic; }
+.refview table{ width:100%; border-collapse:collapse; margin:8px 0; font-size:11.5px; }
+.refview th, .refview td{ border:1px solid var(--hair); padding:5px 7px; text-align:left; vertical-align:top; }
+.refview thead th{ background:var(--head); border-color:var(--thin); font-weight:700; }
+.refview td.c, .refview th.c{ text-align:center; }
+.refview .eq{ font-family:"SF Mono",ui-monospace,Menlo,monospace; }
+.refview .banner{ margin-bottom:14px; }
+.refview h2{ font-size:15px; border-bottom:2px solid #000; padding-bottom:3px; margin:20px 0 6px; }
+.refview .ci{ font-weight:700; }
+.refview td .up::after{ content:"↑"; }
+.refview td .dn::after{ content:"↓"; }
+.refview td .eq::after{ content:"="; }
+@media print{.refview .banner{ display:none; }}
+
+/* --- estilos de referencia vol07 (formato nuevo), scopeados --- */
+.refview{--ink:#000;--thin:#555;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:"Iowan Old Style",Palatino,Georgia,serif;--mono:"SFMono-Regular",Consolas,Menlo,monospace}
+.refview .wrap{max-width:1000px;margin:0 auto;padding:22px 26px 60px}
+.refview .printbar{border:1.5px solid var(--ink);padding:8px 12px;margin-bottom:20px;font-size:11.5px}
+.refview .printbar kbd{font-family:var(--mono);border:1px solid var(--ink);border-radius:3px;padding:0 5px;font-size:10.5px}
+.refview .eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.refview h2.lmh{font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--ink);padding-bottom:4px;margin:22px 0 8px}
+.refview table{width:100%;border-collapse:collapse;margin:6px 0 14px;font-size:11px;break-inside:avoid}
+.refview caption{caption-side:top;text-align:left;font-weight:700;font-size:11.5px;padding-bottom:4px}
+.refview th, .refview td{border:1px solid var(--ink);padding:5px 7px;text-align:left;vertical-align:top}
+.refview thead th{font-weight:700;border-bottom:2.5px solid var(--ink);background:#fff}
+.refview th.dim, .refview td.dim{width:130px;font-weight:600}
+.refview .eq{font-family:var(--serif)}
+.refview .flag{font-size:8.5px;border:1px solid var(--ink);padding:0 4px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;white-space:nowrap}
+.refview sub, .refview sup{font-size:.72em}
+.refview footer{margin-top:20px;border-top:1px solid var(--ink);padding-top:6px;font-size:9.5px;color:var(--thin)}
+@media print{.refview .printbar{display:none}
+.refview .wrap{max-width:none;padding:0}}
+.refview{--ink:#000;--thin:#555;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:"Iowan Old Style",Palatino,Georgia,serif;--mono:"SFMono-Regular",Consolas,Menlo,monospace}
+.refview .wrap{max-width:1000px;margin:0 auto;padding:22px 26px 60px}
+.refview .printbar{border:1.5px solid var(--ink);padding:8px 12px;margin-bottom:20px;font-size:11.5px}
+.refview .printbar kbd{font-family:var(--mono);border:1px solid var(--ink);border-radius:3px;padding:0 5px;font-size:10.5px}
+.refview .eyebrow{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.refview .legend{font-size:11px;color:var(--thin);margin-top:5px}
+.refview h2.lmh{font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid var(--ink);padding-bottom:4px;margin:22px 0 8px}
+.refview table{width:100%;border-collapse:collapse;margin:6px 0 14px;font-size:11px;break-inside:avoid}
+.refview caption{caption-side:top;text-align:left;font-weight:700;font-size:11.5px;padding-bottom:4px}
+.refview th, .refview td{border:1px solid var(--ink);padding:5px 7px;vertical-align:top}
+.refview thead th{font-weight:700;border-bottom:2.5px solid var(--ink);background:#fff}
+.refview td.k{font-weight:600}
+.refview .up{font-weight:700}
+.refview .dn{font-weight:700}
+.refview .eq0{color:var(--thin)}
+.refview .c{text-align:center}
+.refview .flag{font-size:8.5px;border:1px solid var(--ink);padding:0 4px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;white-space:nowrap;margin-left:4px}
+.refview .eq{font-family:var(--serif)}
+.refview sub, .refview sup{font-size:.72em}
+.refview footer{margin-top:20px;border-top:1px solid var(--ink);padding-top:6px;font-size:9.5px;color:var(--thin)}
+@media print{.refview .printbar{display:none}
+.refview .wrap{max-width:none;padding:0}}
+
+/* --- estilos de referencia vol09 (formato nuevo), scopeados --- */
+.refview{--ink:#111;--muted:#555;--faint:#888;--hair:#c2c2c2;--hairs:#8a8a8a;--th:#ececec;}
+.refview .sheet{max-width:1050px;margin:0 auto;padding:30px 36px 55px;}
+.refview .kick{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+.refview .sub{font-size:12.3px;color:var(--muted);}
+.refview .nota{font-size:11.5px;color:var(--faint);border-top:1px solid var(--hair);margin-top:9px;padding-top:7px;}
+.refview section{margin-top:24px;}
+.refview .sh{display:flex;align-items:baseline;gap:9px;border-bottom:1.5px solid var(--ink);padding-bottom:4px;margin-bottom:10px;}
+.refview .sh .n{font-family:Georgia,serif;font-size:19px;font-weight:700;min-width:26px;}
+.refview .sh .ti{font-size:17px;position:relative;top:2px;}
+.refview .sh h2{font-family:Georgia,serif;font-size:16.5px;margin:0;flex:1;}
+.refview .sh .lm{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:700;}
+.refview table{border-collapse:collapse;width:100%;margin:9px 0;font-size:11.2px;}
+.refview th, .refview td{border:1px solid var(--hair);padding:5px 8px;text-align:left;vertical-align:top;}
+.refview thead th{background:var(--th);font-weight:700;border-color:var(--hairs);}
+.refview tbody th{font-weight:700;background:#f7f7f7;width:15%;}
+.refview td.c{text-align:center;}
+.refview .eq{font-family:Georgia,serif;}
+.refview .key{border:1px solid var(--ink);border-left:6px solid var(--ink);padding:8px 12px;margin:10px 0;font-size:12px;}
+.refview .key .tag{font-size:9.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px;}
+.refview .key p{margin:4px 0 0;}
+.refview .top3{border:2px solid var(--ink);margin-top:26px;}
+.refview .top3 .bar{background:var(--ink);color:#fff;padding:8px 14px;font-family:Georgia,serif;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.refview .top3 .bd{padding:4px 16px 12px;}
+.refview .t3{display:flex;gap:11px;border-bottom:1px solid var(--hair);padding:9px 0;}
+.refview .t3:last-child{border-bottom:none;}
+.refview .t3 .r{font-family:Georgia,serif;font-weight:700;font-size:14px;min-width:22px;height:22px;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.refview .t3 .tx{font-size:12.2px;}
+@media print{.refview .sheet{max-width:none;padding:0 10mm;}
+.refview section, .refview table, .refview .key, .refview .top3{break-inside:avoid;}
+.refview .sh{break-after:avoid;}}
+.refview{--ink:#111;--muted:#555;--faint:#888;--hair:#c2c2c2;--hairs:#8a8a8a;--th:#ececec;}
+.refview .sheet{max-width:1050px;margin:0 auto;padding:30px 36px 55px;}
+.refview .kick{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+.refview .sub{font-size:12.3px;color:var(--muted);}
+.refview .lg{font-size:11.5px;color:var(--faint);border-top:1px solid var(--hair);margin-top:9px;padding-top:7px;}
+.refview .lg b{color:var(--ink);}
+.refview section{margin-top:24px;}
+.refview .sh{display:flex;align-items:baseline;gap:9px;border-bottom:1.5px solid var(--ink);padding-bottom:4px;margin-bottom:10px;}
+.refview .sh .n{font-family:Georgia,serif;font-size:19px;font-weight:700;min-width:26px;}
+.refview .sh .ti{font-size:17px;position:relative;top:2px;}
+.refview .sh h2{font-family:Georgia,serif;font-size:16.5px;margin:0;flex:1;}
+.refview .sh .lm{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:700;}
+.refview table{border-collapse:collapse;width:100%;margin:9px 0;font-size:11.2px;}
+.refview th, .refview td{border:1px solid var(--hair);padding:5px 8px;text-align:left;vertical-align:top;}
+.refview thead th{background:var(--th);font-weight:700;border-color:var(--hairs);}
+.refview tbody th{font-weight:700;background:#f7f7f7;}
+.refview td.c{text-align:center;}
+.refview .up{font-weight:700;white-space:nowrap;}
+.refview .dn{font-weight:700;white-space:nowrap;}
+.refview .eq{font-weight:700;color:var(--muted);white-space:nowrap;}
+.refview .amb{font-weight:700;white-space:nowrap;}
+.refview .ci{border:1.5px solid var(--ink);padding:0 4px;font-weight:800;font-size:9.5px;letter-spacing:.06em;white-space:nowrap;}
+.refview tr.ci-row td, .refview tr.ci-row th{border-left-width:1px;}
+.refview tr.ci-row th{border-left:4px solid var(--ink);}
+.refview .warn{border:1px solid var(--ink);border-left:6px solid var(--ink);padding:8px 12px;margin:10px 0;font-size:12px;}
+.refview .warn .tag{font-size:9.5px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;display:inline-flex;align-items:center;gap:5px;}
+.refview .warn p{margin:4px 0 0;}
+.refview .ciblock{border:2px solid var(--ink);margin-top:26px;}
+.refview .ciblock .bar{background:var(--ink);color:#fff;padding:8px 14px;font-family:Georgia,serif;font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.refview .ciblock .bd{padding:4px 16px 12px;}
+.refview .ci1{display:flex;gap:11px;border-bottom:1px solid var(--hair);padding:9px 0;}
+.refview .ci1:last-child{border-bottom:none;}
+.refview .ci1 .r{font-family:Georgia,serif;font-weight:700;font-size:14px;min-width:22px;height:22px;border:1.5px solid var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.refview .ci1 .tx{font-size:12.2px;}
+@media print{.refview .sheet{max-width:none;padding:0 10mm;}
+.refview section, .refview table, .refview .warn, .refview .ciblock{break-inside:avoid;}
+.refview .sh{break-after:avoid;}}
