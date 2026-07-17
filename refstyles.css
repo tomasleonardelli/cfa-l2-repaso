@@ -181,3 +181,95 @@
 .refview hr{border:none;border-top:1px solid #bbb;margin:9px 0}
 .refview sup, .refview sub{font-size:.72em}
 .refview section{break-inside:avoid}
+
+/* --- estilos de referencia vol08 (formato nuevo), scopeados --- */
+.refview{--ink:#000;--mut:#555;--soft:#999;--hair:#ddd}
+.refview .eq{display:block;font-family:'Cascadia Code',Consolas,monospace;text-align:center;padding:4px 0;font-size:.95em}
+.refview b{font-weight:700}
+.refview hdr{}
+.refview footer{border-top:2px solid var(--ink);padding:9px 22px;font-size:10px;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.refview table{width:100%;border-collapse:collapse;font-size:11px}
+.refview th, .refview td{border:1px solid var(--soft);padding:5px 7px;text-align:left;vertical-align:top}
+.refview th{background:#eee;font-size:10px;text-transform:uppercase;letter-spacing:.4px}
+@media print{}
+.refview .wrap{max-width:1080px;margin:0 auto;border:2px solid var(--ink)}
+.refview .bd{padding:15px 20px 22px}
+.refview h2{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;border-bottom:2px solid var(--ink);padding-bottom:5px;margin:18px 0 9px}
+.refview h2:first-child{margin-top:0}
+.refview h2 .lm{font-size:9.5px;border:1px solid var(--ink);padding:1px 6px;margin-left:8px;letter-spacing:.5px}
+.refview td:first-child{font-weight:700;width:16%}
+.refview .key{border:1.5px solid var(--ink);padding:9px 12px;margin-top:16px;font-size:11.5px}
+.refview .key b{text-transform:uppercase;font-size:10px;letter-spacing:.5px;display:block;margin-bottom:4px}
+.refview .key ol{margin-left:16px}
+.refview .key li{margin:3px 0}
+.refview .eqc{font-family:'Cascadia Code',Consolas,monospace;font-size:10.5px}
+@media print{.refview .wrap{border:none;max-width:none}
+.refview tr{break-inside:avoid}}
+.refview{--ink:#000;--mut:#555;--soft:#999;--hair:#ddd}
+.refview .eq{display:block;font-family:'Cascadia Code',Consolas,monospace;text-align:center;padding:4px 0;font-size:.95em}
+.refview b{font-weight:700}
+.refview hdr{}
+.refview footer{border-top:2px solid var(--ink);padding:9px 22px;font-size:10px;color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.refview table{width:100%;border-collapse:collapse;font-size:11px}
+.refview th, .refview td{border:1px solid var(--soft);padding:5px 7px;text-align:left;vertical-align:top}
+.refview th{background:#eee;font-size:10px;text-transform:uppercase;letter-spacing:.4px}
+@media print{}
+.refview .wrap{max-width:1100px;margin:0 auto;border:2px solid var(--ink)}
+.refview .bd{padding:15px 20px 22px}
+.refview h2{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;border-bottom:2px solid var(--ink);padding-bottom:5px;margin:18px 0 9px}
+.refview h2:first-child{margin-top:0}
+.refview h2 .lm{font-size:9.5px;border:1px solid var(--ink);padding:1px 6px;margin-left:8px;letter-spacing:.5px}
+.refview td:first-child{font-weight:700;width:22%}
+.refview .up{font-weight:700}
+.refview .dn{font-weight:700}
+.refview .ci{font-style:italic;font-size:10px;color:var(--mut)}
+.refview .star{font-weight:700}
+.refview .warn{border:1.5px solid var(--ink);padding:8px 11px;margin-top:14px;font-size:11.5px}
+.refview .warn b{text-transform:uppercase;font-size:10px;letter-spacing:.5px;display:block;margin-bottom:4px}
+.refview .lg{font-size:10.5px;color:var(--mut);border:1px dashed var(--soft);padding:7px 10px;margin-bottom:13px}
+@media print{.refview .wrap{border:none;max-width:none}
+.refview tr{break-inside:avoid}}
+
+/* --- estilos de referencia vol10 (formato nuevo), scopeados --- */
+.refview{--ink:#111;--thin:#999;--hair:#ccc;--hd:#eee;}
+.refview .wrap{max-width:1060px;margin:0 auto;padding:22px 26px 60px;}
+.refview .banner{border:1.5px solid var(--ink);padding:8px 14px;margin:0 0 20px;font-size:12px;display:flex;gap:10px;align-items:center;}
+.refview .banner b{font-weight:700;}
+.refview h2.grp{font-size:14px;font-weight:800;margin:22px 0 6px;text-transform:uppercase;letter-spacing:.03em;
+    border-bottom:2px solid var(--ink);padding-bottom:4px;display:flex;align-items:baseline;gap:8px;break-after:avoid;}
+.refview h2.grp .rn{border:1.5px solid var(--ink);border-radius:50%;width:22px;height:22px;display:inline-flex;
+    align-items:center;justify-content:center;font-size:12px;flex:none;}
+.refview h2.grp .duty{font-size:11px;font-weight:700;color:#555;margin-left:auto;}
+.refview table{width:100%;border-collapse:collapse;margin:0 0 8px;font-size:11px;break-inside:avoid;}
+.refview th, .refview td{border:1px solid var(--thin);padding:6px 8px;vertical-align:top;text-align:left;}
+.refview th{background:var(--hd);font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.02em;}
+.refview .code{font-weight:800;white-space:nowrap;}
+.refview .flag{display:inline-block;border:1.5px solid var(--ink);font-size:8.5px;font-weight:800;padding:0 5px;letter-spacing:.04em;}
+.refview b{font-weight:700;}
+.refview tr{break-inside:avoid;}
+.refview .top{border:1.5px solid var(--ink);margin:22px 0 0;break-inside:avoid;}
+.refview .top .th{font-weight:800;font-size:13px;padding:8px 12px;border-bottom:1.5px solid var(--ink);text-transform:uppercase;letter-spacing:.03em;}
+.refview .top ol{margin:0;padding:10px 12px 10px 30px;}
+.refview .top ol li{margin:6px 0;font-size:11.5px;}
+@media print{@page{margin:11mm;}
+.refview .banner{display:none;}
+.refview .wrap{max-width:none;padding:0;}
+.refview th{background:#eee !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.refview h2.grp{break-before:auto;}}
+.refview{--ink:#111;--thin:#999;--hair:#ccc;--hd:#eee;}
+.refview .wrap{max-width:1020px;margin:0 auto;padding:22px 26px 60px;}
+.refview .banner{border:1.5px solid var(--ink);padding:8px 14px;margin:0 0 20px;font-size:12px;display:flex;gap:10px;align-items:center;}
+.refview .banner b{font-weight:700;}
+.refview .legend{font-size:11px;margin:0 0 14px;display:flex;gap:16px;flex-wrap:wrap;}
+.refview table{width:100%;border-collapse:collapse;margin:0 0 8px;font-size:11.5px;}
+.refview th, .refview td{border:1px solid var(--thin);padding:7px 9px;vertical-align:top;text-align:left;}
+.refview th{background:var(--hd);font-weight:700;font-size:10.5px;text-transform:uppercase;letter-spacing:.02em;}
+.refview tr{break-inside:avoid;}
+.refview .verdict{white-space:nowrap;font-weight:800;text-align:center;}
+.refview .std{white-space:nowrap;font-weight:700;}
+.refview b{font-weight:700;}
+.refview .cimark{font-size:9px;font-weight:800;border:1.5px solid var(--ink);padding:0 4px;margin-left:4px;vertical-align:middle;}
+@media print{@page{margin:11mm;}
+.refview .banner{display:none;}
+.refview .wrap{max-width:none;padding:0;}
+.refview th{background:#eee !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}

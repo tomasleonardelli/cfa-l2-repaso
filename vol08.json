@@ -1,0 +1,1349 @@
+{
+  "id": "vol08",
+  "order": 8,
+  "title": "Alternative Investments",
+  "lms": [
+    {
+      "id": "LM1",
+      "title": "Introduction to Commodities and Commodity Derivatives"
+    },
+    {
+      "id": "LM2",
+      "title": "Overview of Types of Real Estate Investment"
+    },
+    {
+      "id": "LM3",
+      "title": "Investments in Real Estate through Publicly Traded Securities"
+    },
+    {
+      "id": "LM4",
+      "title": "Hedge Fund Strategies"
+    }
+  ],
+  "cardTypes": {
+    "concepto": "Concepto",
+    "formula": "Fórmula",
+    "clasificacion": "Clasificación",
+    "proceso": "Proceso",
+    "metodo": "Método vs método"
+  },
+  "flashcards": [
+    {
+      "id": "vol08-c001",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Cómo se valúa un commodity vs un activo financiero?",
+      "a": "Commodity = activo <b>físico</b>: valor = pronóstico descontado de <b>precios futuros</b> según oferta/demanda del bien. Equity/bond = activo financiero: valor = flujos de caja futuros (dividendos, cupones, utilidades) descontados. <b>No hay cash flows que proyectar en un commodity.</b>"
+    },
+    {
+      "id": "vol08-c002",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué es el <i>basis</i> en commodities?",
+      "a": "Basis = <b>Spot − Futures</b>. El <i>calendar spread</i> es distinto: (futuro cercano) − (futuro lejano), entre dos contratos del mismo commodity."
+    },
+    {
+      "id": "vol08-c003",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué es el <i>convenience yield</i> y cuándo sube?",
+      "a": "Beneficio no monetario de tener el <b>físico</b> disponible (buffer ante disrupción de suministro). <b>Sube cuando los inventarios escasean</b> → empuja la curva a <b>backwardation</b>. Trampa: no sube cuando abunda el inventario."
+    },
+    {
+      "id": "vol08-c004",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué implica un ciclo de vida <b>largo</b> de un commodity?",
+      "a": "Limita la capacidad de reacción del mercado ante shocks: nueva capacidad (minas, energía) tarda años. Ciclo corto (softs, livestock) → ajuste rápido de oferta."
+    },
+    {
+      "id": "vol08-c005",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Backwardation: ¿qué relación de precios describe?",
+      "a": "<b>Spot &gt; Futures</b> y contrato cercano &gt; lejano. Curva <b>decreciente</b>. Calendar spread <b>positivo</b>. Ejemplo típico: WTI crude oil."
+    },
+    {
+      "id": "vol08-c006",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Contango: ¿qué relación de precios describe?",
+      "a": "<b>Spot &lt; Futures</b> y contrato cercano &lt; lejano. Curva <b>creciente</b>. Calendar spread <b>negativo</b>. Ejemplo típico: lean hogs."
+    },
+    {
+      "id": "vol08-c007",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿La curva de futuros es permanente?",
+      "a": "<b>No.</b> Un mismo commodity puede oscilar entre contango y backwardation a lo largo del tiempo según inventarios, hedging y expectativas."
+    },
+    {
+      "id": "vol08-c008",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Ser <i>long</i> o <i>short</i> define si sos hedger o speculator?",
+      "a": "<b>No.</b> Cualquier posición (long o short) puede ser cobertura o especulación. Lo que define es el <b>motivo</b>: cubrir una exposición existente vs tomar riesgo direccional."
+    },
+    {
+      "id": "vol08-c009",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué componente explica casi toda la volatilidad de un índice de commodities?",
+      "a": "El <b>price (spot) return</b> — aporta ~97% de la volatilidad del índice. El roll y el collateral return son mucho menos volátiles."
+    },
+    {
+      "id": "vol08-c010",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Históricamente, ¿de dónde vino el grueso del retorno de largo plazo del S&amp;P GSCI?",
+      "a": "Del <b>collateral return</b> (tasas de interés). El <b>roll return fue negativo</b> (≈ −1.3% anual). Trampa: no asumir que el retorno vino del spot o del roll."
+    },
+    {
+      "id": "vol08-c011",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Total return de un futuro totalmente colateralizado",
+      "a": "<span class='eq'>Total return = Price return + Roll return + Collateral return</span>En un <b>índice</b> se suma además el <b>rebalance return</b> (por reponderar componentes)."
+    },
+    {
+      "id": "vol08-c012",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Fórmula del <b>price return</b>",
+      "a": "<span class='eq'>(P<sub>actual</sub> − P<sub>previo</sub>) / P<sub>previo</sub></span>"
+    },
+    {
+      "id": "vol08-c013",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Fórmula del <b>roll return</b>",
+      "a": "<span class='eq'>[(P<sub>cercano</sub> − P<sub>lejano</sub>) / P<sub>cercano</sub>] × % de la posición rolada</span>Denominador = precio del contrato <b>cercano</b>."
+    },
+    {
+      "id": "vol08-c014",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Fórmula del <b>collateral return</b>",
+      "a": "<span class='eq'>r<sub>f</sub> × (meses del período / 12)</span>Con colateral = 100% del notional. Si el período es 1 año completo, collateral return = r<sub>f</sub>."
+    },
+    {
+      "id": "vol08-c015",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Relación futures / spot con storage y convenience yield",
+      "a": "<span class='eq'>Futures = Spot + Storage costs − Convenience yield</span>Si el convenience yield supera al storage cost → futures &lt; spot → <b>backwardation</b>."
+    },
+    {
+      "id": "vol08-c016",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Signo del roll return según la curva",
+      "a": "Backwardation (cercano &gt; lejano) → roll <b>POSITIVO</b>. Contango (cercano &lt; lejano) → roll <b>NEGATIVO</b>. Curva plana → roll = 0."
+    },
+    {
+      "id": "vol08-c017",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Calcular: price 5%, roll 2.5%, colateral 100% a r<sub>f</sub> 2%, 1 año. ¿Total return?",
+      "a": "<b>9.5%</b> = 5% + 2.5% + 2%. El colateral al 100% del notional rinde el r<sub>f</sub> completo."
+    },
+    {
+      "id": "vol08-c018",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Rolar un futuro en <b>backwardation</b>: ¿comprás más o menos contratos?",
+      "a": "<b>Más contratos.</b> El futuro lejano cotiza más barato, así que para mantener la misma exposición en dólares hay que comprar más unidades."
+    },
+    {
+      "id": "vol08-c019",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Los 6 sectores de commodities",
+      "a": "<b>Energy</b> (petróleo, gas) · <b>Grains</b> (trigo, maíz, soja) · <b>Base metals</b> (cobre, aluminio) · <b>Livestock</b> (ganado) · <b>Precious metals</b> (oro, plata) · <b>Softs</b> (café, azúcar, algodón)."
+    },
+    {
+      "id": "vol08-c020",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Los 5 participantes del mercado de futuros de commodities",
+      "a": "<b>Hedgers</b> · <b>Traders/Investors</b> (liquidez y price discovery) · <b>Exchanges/Clearing houses</b> · <b>Analysts/Brokers</b> (uso no-trading) · <b>Regulators</b>."
+    },
+    {
+      "id": "vol08-c021",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Los 3 tipos de trading en la comunidad de commodities",
+      "a": "<b>Informed traders</b> (hedgers + speculators) · <b>Liquidity providers</b> (proveen seguro) · <b>Arbitrageurs</b> (inventarían el físico y arbitran)."
+    },
+    {
+      "id": "vol08-c022",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Los 4 tipos de commodity swaps",
+      "a": "<b>Excess return swap</b> (price + roll, sin colateral) · <b>Total return swap</b> (reset periódico por el total return) · <b>Basis swap</b> (diferencia entre dos referencias) · <b>Variance/Volatility swap</b> (varianza o vol observada vs fijada)."
+    },
+    {
+      "id": "vol08-c023",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Los 5 índices de commodities del currículo",
+      "a": "<b>S&amp;P GSCI</b> (historial más largo) · <b>Bloomberg (BCOM)</b> · <b>Deutsche Bank Liquid (DBLCI)</b> · <b>Thomson Reuters/CoreCommodity CRB</b> · <b>Rogers International (RICI)</b>."
+    },
+    {
+      "id": "vol08-c024",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Las 5 características que diferencian a los índices de commodities",
+      "a": "<b>Breadth/selection</b> (qué commodities) · <b>Weighting</b> (pesos y metodología) · <b>Rolling</b> (metodología y frecuencia) · <b>Rebalancing</b> (metodología y frecuencia) · <b>Governance</b> (quién decide la inclusión)."
+    },
+    {
+      "id": "vol08-c025",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Drivers de oferta y demanda de un commodity",
+      "a": "<b>Storability</b> (facilidad de almacenamiento) · <b>Geopolítica</b> (concentración productiva) · <b>Clima</b> (cosechas y demanda energética). Más el ciclo de vida (corto vs largo)."
+    },
+    {
+      "id": "vol08-c026",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "¿Por qué el roll return no se puede &quot;capturar&quot; de forma aislada?",
+      "a": "Es una <b>diferencia contable</b> al rolar de un contrato a otro, no un flujo separable. Backwardation NO garantiza total return positivo: Ilmanen mostró que ~40% de commodities con roll negativo igual tuvieron total return positivo."
+    },
+    {
+      "id": "vol08-c027",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "¿Qué es un futuro &quot;totalmente colateralizado&quot;?",
+      "a": "Posición sin apalancamiento: el colateral (cash/T-bills) iguala el <b>notional</b> del contrato. Por eso el collateral return se calcula sobre el 100% de la posición."
+    },
+    {
+      "id": "vol08-c028",
+      "lm": "LM1",
+      "tipo": "metodo",
+      "q": "Insurance theory (Keynes) vs Hedging pressure",
+      "a": "<b>Insurance</b>: solo los productores hedgean (venden forward) → futuro &lt; spot esperado → <b>normal backwardation</b>. <b>Hedging pressure</b>: productores <b>Y</b> consumidores hedgean; el <b>neto</b> define la curva."
+    },
+    {
+      "id": "vol08-c029",
+      "lm": "LM1",
+      "tipo": "metodo",
+      "q": "Hedging pressure: ¿qué pasa si dominan los compradores?",
+      "a": "Si los <b>compradores</b> (consumidores) hedgean más → empujan el futuro hacia arriba → <b>CONTANGO</b>. Si dominan los vendedores (productores) → <b>backwardation</b>. Balanceado → curva plana."
+    },
+    {
+      "id": "vol08-c030",
+      "lm": "LM1",
+      "tipo": "metodo",
+      "q": "Theory of storage: ¿cómo el inventario define la curva?",
+      "a": "Inventario <b>alto</b> → convenience yield bajo → oferta domina → <b>CONTANGO</b>. Inventario <b>bajo</b> → convenience yield alto → demanda domina → <b>BACKWARDATION</b>."
+    },
+    {
+      "id": "vol08-c031",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Cuál es el driver primario de valor de un inmueble?",
+      "a": "El <b>uso económico</b> actual y potencial de la propiedad (residencial o comercial)."
+    },
+    {
+      "id": "vol08-c032",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>NOI</b> y qué NO incluye?",
+      "a": "Rentabilidad operativa pura del activo físico. <b>NO incluye</b>: intereses/servicio de deuda, impuesto a las ganancias, depreciación, ni capex que mejora o cambia el uso económico. Por eso es independiente del financiamiento."
+    },
+    {
+      "id": "vol08-c033",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>Loss to Lease</b>?",
+      "a": "Diferencia entre las rentas de <b>mercado</b> y las rentas de los <b>contratos vigentes</b> (in-place). Se <b>resta</b> del GPRI para llegar al GRI."
+    },
+    {
+      "id": "vol08-c034",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué señala un Loss to Lease <b>positivo</b> (GRI &lt; GPRI)?",
+      "a": "Contratos <b>por debajo</b> del mercado → <b>undersupply</b> / mercado en expansión. Al renovar, las rentas suben a mercado → <b>crecimiento futuro</b> del ingreso."
+    },
+    {
+      "id": "vol08-c035",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué señala un Loss to Lease <b>negativo</b> (GRI &gt; GPRI)?",
+      "a": "Contratos <b>por encima</b> del mercado → <b>oversupply</b> / mercado en caída. Al vencer, las rentas bajan a mercado → <b>caída futura</b> del ingreso."
+    },
+    {
+      "id": "vol08-c036",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>rollover risk</b>?",
+      "a": "Riesgo de que, al vencer el contrato, el dueño pierda al inquilino o deba re-arrendar a menor precio. Mayor en contratos de plazo corto (ej. residencial, self-storage month-to-month)."
+    },
+    {
+      "id": "vol08-c037",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué incluye el <b>Property Maintenance Allowance</b>?",
+      "a": "Capex que <b>MANTIENE</b> el uso económico actual del inmueble. Se resta para llegar al NOI. Trampa: el capex que <b>mejora o cambia</b> el uso queda FUERA del NOI."
+    },
+    {
+      "id": "vol08-c038",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Por qué el real estate es un <b>inflation hedge</b>?",
+      "a": "Es un activo <b>físico</b> que genera retorno real; las rentas y los valores tienden a subir con la inflación (más aún con rentas indexadas o contratos NNN)."
+    },
+    {
+      "id": "vol08-c039",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>appraisal lag</b> (smoothing)?",
+      "a": "Las tasaciones laguean al mercado (al alza y a la baja) y son poco frecuentes → el índice se <b>suaviza</b>. Efectos: <b>subestima volatilidad</b> y <b>correlación</b>, y <b>SOBREESTIMA el Sharpe</b> → lleva a sobre-asignar a real estate."
+    },
+    {
+      "id": "vol08-c040",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es un <b>anchor tenant</b> y por qué importa?",
+      "a": "Inquilino grande que se compromete a ocupar buena parte del espacio antes de construir → <b>reduce el riesgo de desarrollo</b>. Típico en office y retail (malls)."
+    },
+    {
+      "id": "vol08-c041",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Por qué el real estate es ilíquido?",
+      "a": "Es <b>heterogéneo</b> (cada inmueble único), en mercados locales fragmentados, con transacciones <b>infrecuentes</b>, altos <b>costos de transacción</b>, alto valor unitario (indivisible) e información asimétrica."
+    },
+    {
+      "id": "vol08-c042",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Fórmula del <b>GPRI</b>",
+      "a": "<span class='eq'>GPRI = Renta de MERCADO × Superficie rentable</span>Ej. Pinebranch: 240 unidades × 1,200 ft² × AUD2.00/ft²/mes × 12 = <b>AUD6,912,000</b>."
+    },
+    {
+      "id": "vol08-c043",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Cascada completa del Income Statement inmobiliario",
+      "a": "GPRI <b>− Loss to Lease</b> = GRI <b>− Vacancy &amp; Collection − Concessions</b> = NRI <b>+ Other Income + Expense Recovery</b> = EGI <b>− OpEx − Maintenance Allowance</b> = <b>NOI</b>."
+    },
+    {
+      "id": "vol08-c044",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Tasa de vacancia implícita",
+      "a": "<span class='eq'>Vacancia = Vacancy Loss / Gross Rental Income</span>Se compara contra el promedio del mercado. Vacancia muy por debajo del mercado = poco upside vía ocupación."
+    },
+    {
+      "id": "vol08-c045",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Operating Expense Ratio (OER)",
+      "a": "<span class='eq'>OER = Operating Expenses / EGI</span>Mide eficiencia de administración. OER alto vs comparables → ineficiencia o edificio viejo/costoso."
+    },
+    {
+      "id": "vol08-c046",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Relación entre cap rate, r y g",
+      "a": "<span class='eq'>Cap rate = r − g</span>&nbsp;&nbsp;y&nbsp;&nbsp;<span class='eq'>Valor = NOI / cap rate</span><b>Mayor g → MENOR cap rate → MAYOR valor.</b>"
+    },
+    {
+      "id": "vol08-c047",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Loan-to-Value (LTV) y Debt Service Coverage (DSC)",
+      "a": "<span class='eq'>LTV = Deuda hipotecaria vigente / Valor actual de la propiedad</span><span class='eq'>DSC = NOI / Debt service (cuota total: interés + capital)</span>Ojo: DSC usa la <b>cuota completa</b>, no solo el interés."
+    },
+    {
+      "id": "vol08-c048",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Terminal value en un DCF inmobiliario",
+      "a": "<span class='eq'>TV = NOI<sub>n</sub> × (1 + g) / (r − g)</span>El DCF proyecta NOI período a período y capitaliza el residual."
+    },
+    {
+      "id": "vol08-c049",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Espectro riesgo-retorno del real estate (4 categorías)",
+      "a": "<b>Core</b> (income estable, bond-like) → <b>Core-Plus</b> (refurb. mínima) → <b>Value-Add</b> (espacio vacante, reposicionamiento) → <b>Opportunistic</b> (desarrollo nuevo, distressed, equity-like)."
+    },
+    {
+      "id": "vol08-c050",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Las 4 fases del ciclo inmobiliario",
+      "a": "<b>Recovery</b> (trough, poca construcción) → <b>Expansion</b> (ocupación y rentas suben, se construye) → <b>Oversupply</b> (llega el pipeline, glut) → <b>Recession</b> (más oferta + crédito ajustado)."
+    },
+    {
+      "id": "vol08-c051",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "En <b>oversupply</b>: ¿qué hacen NOI, DSC, tasas y LTV?",
+      "a": "NOI, DSC y las tasas de interés hacen <b>PICO y empiezan a caer</b>; el <b>LTV toca piso y empieza a SUBIR</b>. (Es la fase que más preguntan.)"
+    },
+    {
+      "id": "vol08-c052",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "En <b>recovery</b>: ¿qué hacen NOI, DSC, tasas y LTV?",
+      "a": "NOI, DSC y tasas <b>tocan piso y empiezan a subir</b>; el <b>LTV está en su PICO y empieza a caer</b>."
+    },
+    {
+      "id": "vol08-c053",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Estructuras de lease del currículo",
+      "a": "<b>Step-up</b> (subas pre-fijadas, NO contingentes) · <b>Indexed</b> (ajuste por CPI u otra variable) · <b>Overage/percentage rent</b> (% de ventas sobre un mínimo) · <b>NNN/triple net</b> (inquilino paga taxes, seguro, mantenimiento)."
+    },
+    {
+      "id": "vol08-c054",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Tipos de propiedad comercial y su driver estructural",
+      "a": "<b>Office</b>: remote/hybrid ↓ demanda. <b>Industrial/warehouse</b>: e-commerce ↑ demanda. <b>Retail</b>: ventas web ↓ demanda de malls. <b>Hospitality</b>: muy cíclico (viaje de negocios)."
+    },
+    {
+      "id": "vol08-c055",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "¿Qué REITs son defensivos y cuáles cíclicos?",
+      "a": "<b>Defensivos</b>: health care (demanda médica estable). <b>Cíclicos</b>: industrial y office (demanda volátil de sus inquilinos)."
+    },
+    {
+      "id": "vol08-c056",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Los 6 elementos del due diligence inmobiliario",
+      "a": "<b>Market review</b> · <b>Current lease review</b> · <b>Future lease outlook</b> · <b>Financial review</b> · <b>Documentation review</b> (legal/fiscal) · <b>Property inspection</b> (física/ambiental)."
+    },
+    {
+      "id": "vol08-c057",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "¿Cómo detectar un NOI &quot;inflado&quot; en el financial review?",
+      "a": "Buscando <b>sub-inversión en mantenimiento</b>: si el dueño recortó capex/OpEx para maquillar el NOI, ese NOI no es sostenible."
+    },
+    {
+      "id": "vol08-c058",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "¿Cómo se corrige el sesgo de smoothing de un índice appraisal-based?",
+      "a": "<b>&quot;Unsmoothing&quot;</b> del índice (des-suavizarlo estadísticamente) o usar un índice <b>transaction-based</b> en su lugar."
+    },
+    {
+      "id": "vol08-c059",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "¿Por qué el ciclo inmobiliario genera oversupply?",
+      "a": "Por el <b>lag de construcción</b>: la nueva oferta se decide en la expansión pero llega al mercado años después, justo cuando la demanda ya se enfrió."
+    },
+    {
+      "id": "vol08-c060",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "Los 3 enfoques de valuación inmobiliaria",
+      "a": "<b>Income</b> (direct capitalization: NOI/cap rate; o DCF con terminal value) · <b>Cost</b> (costo de reemplazo − depreciación) · <b>Sales comparison</b> (comparables recientes, price/ft², ajustado)."
+    },
+    {
+      "id": "vol08-c061",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "¿Cuándo el <b>cost approach</b> distorsiona el valor?",
+      "a": "En <b>oversupply</b>: el <b>replacement cost supera al market price</b>, así que el cost approach infla el valor. Sirve como <b>techo</b>: no pagar más que construir un comparable."
+    },
+    {
+      "id": "vol08-c062",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "Índices appraisal-based vs transaction-based",
+      "a": "<b>Appraisal-based</b>: usan tasaciones → sufren smoothing/lag. <b>Transaction-based</b>: <b>repeat sales</b> (ventas repetidas del mismo inmueble) o <b>hedonic</b> (regresión por características: size, age, location)."
+    },
+    {
+      "id": "vol08-c063",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué es un <b>Equity REIT</b> vs un <b>Mortgage REIT</b>?",
+      "a": "<b>Equity REIT</b>: posee y opera real estate income-producing (cobra <b>renta</b>). <b>Mortgage REIT</b>: hace o invierte en <b>préstamos</b> garantizados por real estate (cobra <b>intereses</b>)."
+    },
+    {
+      "id": "vol08-c064",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué porcentaje del income gravable debe distribuir un REIT?",
+      "a": "<b>90–100%</b> del income gravable. A cambio, obtiene exención del income tax corporativo (deduce los dividendos pagados)."
+    },
+    {
+      "id": "vol08-c065",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>NAVPS</b> y por qué es superior al book value?",
+      "a": "Valor de mercado de los activos menos el de los pasivos, dividido por acciones. Es superior al <b>book value</b> porque este se basa en <b>costo histórico</b> (y el real estate se deprecia contablemente aunque mantenga su valor)."
+    },
+    {
+      "id": "vol08-c066",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Por qué el FFO suma la depreciación?",
+      "a": "Porque el real estate <b>mantiene o aprecia</b> su valor en el largo plazo: la depreciación contable no refleja la realidad económica del activo."
+    },
+    {
+      "id": "vol08-c067",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué es el ajuste de <b>non-cash rent</b> (straight-line)?",
+      "a": "Los leases largos con step-ups se reconocen contablemente por la renta <b>promedio</b> del contrato. En los primeros años la renta cobrada es <b>menor</b> que la registrada → se resta esa diferencia (en NAVPS y en AFFO)."
+    },
+    {
+      "id": "vol08-c068",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué significa que un REIT cotice con <b>descuento</b> sobre el NAVPS?",
+      "a": "Precio &lt; NAVPS → posible <b>subvaluación</b>. Pero no es automático: el premium/discount puede justificarse por el valor del management, el leverage o el crecimiento esperado."
+    },
+    {
+      "id": "vol08-c069",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Por qué emitir acciones por debajo del NAVPS es un problema?",
+      "a": "Es <b>dilutivo</b> para los accionistas existentes: se vende participación en los activos por menos de lo que valen."
+    },
+    {
+      "id": "vol08-c070",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Qué es una <b>TRS</b> (taxable REIT subsidiary)?",
+      "a": "Subsidiaria <b>gravada</b> que un REIT usa para actividades <b>no calificadas</b> (brokerage, management de terceros, desarrollo for-sale). Trampa: el REIT no está exento de todo."
+    },
+    {
+      "id": "vol08-c071",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Fórmula del <b>FFO</b>",
+      "a": "<span class='eq'>FFO = Net income + D&amp;A (real estate) − Gains on sale + Impairments</span>Ojo el signo: se <b>restan</b> las ganancias por venta (y se <b>suman</b> las pérdidas por venta)."
+    },
+    {
+      "id": "vol08-c072",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Fórmula del <b>AFFO</b>",
+      "a": "<span class='eq'>AFFO = FFO − Non-cash (straight-line) rent − Recurring maintenance capex − Leasing commissions</span>También llamado FAD (funds available for distribution). Siempre <b>AFFO &lt; FFO</b>."
+    },
+    {
+      "id": "vol08-c073",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Fórmula del <b>NAVPS</b>",
+      "a": "<span class='eq'>NAVPS = (Valor de mercado de activos − Valor de mercado de pasivos) / Acciones en circulación</span>Se calcula <b>pre-tax</b> (antes de impuestos por liquidación)."
+    },
+    {
+      "id": "vol08-c074",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Método de NAVPS: pasos para valuar el real estate operativo",
+      "a": "NOI 12m <b>− non-cash rent + ajuste por adquisiciones</b> = pro forma cash NOI <b>× (1+g)</b> = cash NOI próximos 12m <b>÷ cap rate</b> = <b>valor del real estate operativo</b>."
+    },
+    {
+      "id": "vol08-c075",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Del valor del real estate operativo al NAVPS",
+      "a": "<b>+</b> cash, land for development, AR, prepaid = gross asset value <b>−</b> total debt <b>−</b> otros pasivos = NAV <b>÷</b> acciones = <b>NAVPS</b>."
+    },
+    {
+      "id": "vol08-c076",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "¿Qué activos se EXCLUYEN al calcular el NAVPS?",
+      "a": "<b>Goodwill</b>, <b>deferred financing costs</b> y <b>deferred tax assets</b> — para llegar a un valor económico &quot;duro&quot;. También se remueven pasivos &quot;blandos&quot; (deferred tax liabilities)."
+    },
+    {
+      "id": "vol08-c077",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "FFO: NI 160,638 + D&amp;A 76,100 + pérdida por venta 25,000. ¿FFO?",
+      "a": "<b>261,738</b>. Ojo: acá el ítem de venta era una <b>PÉRDIDA</b>, por eso se SUMA. Si hubiera sido ganancia, se restaría."
+    },
+    {
+      "id": "vol08-c078",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "AFFO: FFO 261,738 − non-cash rent 21,103 − capex recurrente 55,765. ¿AFFO?",
+      "a": "<b>184,870</b>. Con 55,689 acciones → AFFO/acción = <b>3.32</b>."
+    },
+    {
+      "id": "vol08-c079",
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "Los 4 tipos de publicly traded real estate securities",
+      "a": "<b>Equity REIT</b> · <b>Mortgage REIT</b> · <b>REOC</b> (real estate operating company, gravable) · <b>RMBS/CMBS</b> (deuda securitizada)."
+    },
+    {
+      "id": "vol08-c080",
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "¿Cuándo conviene una <b>REOC</b> en vez de un REIT?",
+      "a": "Cuando: no existe régimen REIT en la jurisdicción; se hace <b>desarrollo for-sale</b>; o se prestan servicios <b>no calificados</b> (brokerage, management de terceros)."
+    },
+    {
+      "id": "vol08-c081",
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "Ventajas de invertir en REITs (vs real estate privado)",
+      "a": "<b>Liquidez</b> · <b>transparencia</b> de precios · <b>diversificación</b> por tipo/geografía · carteras de alta calidad · gestión profesional · ingreso estable · <b>eficiencia fiscal</b> (single taxation)."
+    },
+    {
+      "id": "vol08-c082",
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "Desventajas de invertir en REITs",
+      "a": "<b>No retiene utilidades</b> (paga 90%+) → depende del mercado de capitales para crecer · costos regulatorios de empresa pública · <b>menor beneficio de diversificación</b> (correlaciona con la bolsa) · limitado en tipos de activos (necesita TRS)."
+    },
+    {
+      "id": "vol08-c083",
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "¿Qué analizar en un REIT más allá de los números?",
+      "a": "Ocupación, actividad de leasing, <b>rentas in-place vs mercado</b>, calendario de vencimientos, calidad crediticia de los inquilinos, leverage y governance."
+    },
+    {
+      "id": "vol08-c084",
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "¿Por qué los analistas reportan FFO más seguido que AFFO?",
+      "a": "Porque <b>AFFO tiene más error y variación de estimación</b> (no hay metodología universalmente aceptada, el capex recurrente y los vencimientos de leases son irregulares). FFO es más estable y comparable."
+    },
+    {
+      "id": "vol08-c085",
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "¿Cómo afecta el <b>leverage</b> a los múltiplos P/FFO y P/AFFO?",
+      "a": "Más leverage → <b>múltiplos más BAJOS</b> (FFO y AFFO son income <b>apalancado</b>). Trampa: el EV/EBITDA es pre-apalancamiento, así que no sufre el mismo efecto."
+    },
+    {
+      "id": "vol08-c086",
+      "lm": "LM3",
+      "tipo": "metodo",
+      "q": "FFO vs AFFO: ¿cuál usar y para qué?",
+      "a": "<b>FFO</b>: performance operativa continua; el &quot;P/E&quot; del sector REIT; más estable y reportada. <b>AFFO</b>: mejor medida de <b>income económico y capacidad de dividendo</b> (resta capex de mantenimiento), pero con más error de estimación."
+    },
+    {
+      "id": "vol08-c087",
+      "lm": "LM3",
+      "tipo": "metodo",
+      "q": "Los 3 enfoques de valuación de la acción de un REIT",
+      "a": "<b>NAV</b> (capitaliza el NOI a valor de mercado) · <b>Relative value</b> (P/FFO, P/AFFO, EV/EBITDA) · <b>DCF/DDM</b> (2 o 3 etapas; alto payout lo hace buen candidato)."
+    },
+    {
+      "id": "vol08-c088",
+      "lm": "LM3",
+      "tipo": "metodo",
+      "q": "REIT vs REOC: diferencias clave",
+      "a": "<b>REIT</b>: exento de income tax, dividend yield alto, <b>menos flexibilidad</b> operativa, menos crecimiento por reinversión. <b>REOC</b>: gravable, más flexibilidad, puede reinvertir y desarrollar for-sale."
+    },
+    {
+      "id": "vol08-c089",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Fees típicos de un hedge fund",
+      "a": "<b>Management fee: 1% o más</b> del AUM · <b>Incentive fee: 10–20%</b> de las ganancias. Los liquid alts NO cobran incentive fee."
+    },
+    {
+      "id": "vol08-c090",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué son los <b>liquid alts</b> y cuál es su costo?",
+      "a": "HF empaquetados como mutual funds / ETF / UCITS: liquidez diaria, más regulados, sin incentive fee. <b>Rinden ~100–200 bps menos por año</b> que los HF tradicionales → evidencia de una <b>prima de iliquidez</b>."
+    },
+    {
+      "id": "vol08-c091",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>netting risk</b>?",
+      "a": "Riesgo de pagar incentive fee a un equipo/fondo <b>ganador</b> mientras otro <b>pierde</b>. En <b>multi-strategy</b> lo absorbe el <b>GP</b>; en un <b>fund-of-funds</b> lo carga el <b>inversor</b>."
+    },
+    {
+      "id": "vol08-c092",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Por qué el merger arbitrage se compara con <b>vender un put</b>?",
+      "a": "Su payoff es &quot;bono + short put&quot;: ganancias <b>chicas y frecuentes</b> (el spread) y pérdidas <b>grandes y raras</b> (si el deal se rompe) → <b>skew negativo / left-tail risk</b>. Sharpe alto NO significa bajo riesgo."
+    },
+    {
+      "id": "vol08-c093",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>merger spread</b>?",
+      "a": "Diferencia entre el precio de mercado del target y el precio ofrecido en la adquisición. Se ensancha cuando hay más riesgo de que el deal falle (cross-border, integración vertical/antitrust)."
+    },
+    {
+      "id": "vol08-c094",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Por qué un deal <b>cross-border</b> tiene spread más ancho?",
+      "a": "Requiere <b>DOS aprobaciones</b> gubernamentales. Igual pasa con la integración vertical (riesgo antitrust): más riesgo regulatorio → más probabilidad de ruptura → spread más ancho."
+    },
+    {
+      "id": "vol08-c095",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué es el <b>gamma trading</b> en convertible arbitrage?",
+      "a": "Ajustar dinámicamente el hedge de equity (short delta-ajustado) a medida que el delta del convertible cambia. La ganancia viene de comprar <b>volatilidad implícita barata</b> embebida en el convertible."
+    },
+    {
+      "id": "vol08-c096",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué es &quot;crisis alpha&quot; en managed futures?",
+      "a": "Tendencia a <b>ganar cuando el mercado cae</b> (skew positivo / right-tail): los trend-followers se posicionan short en tendencias bajistas sostenidas. Balancea estrategias de skew negativo."
+    },
+    {
+      "id": "vol08-c097",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Por qué equity market neutral usa leverage ALTO?",
+      "a": "Al hedgear el beta, el retorno bruto es pequeño → necesita <b>apalancar</b> para lograr un perfil de retorno relevante. Trampa: &quot;bajo riesgo de mercado&quot; ≠ &quot;bajo leverage&quot;."
+    },
+    {
+      "id": "vol08-c098",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué busca un fondo de <b>life settlements</b> en una póliza?",
+      "a": "Pólizas con: <b>1)</b> surrender value bajo, <b>2)</b> primas bajas, y <b>3)</b> alta probabilidad de que el asegurado muera <b>antes</b> de lo actuarialmente previsto."
+    },
+    {
+      "id": "vol08-c099",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Por qué las estrategias <b>specialist</b> son valiosas en un portafolio?",
+      "a": "Generan retornos <b>no correlacionados</b> con los mercados financieros (dependen de mortalidad, catástrofes o volatilidad, no de la bolsa) → diversificación real, a cambio de iliquidez."
+    },
+    {
+      "id": "vol08-c100",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Qué mide la <b>volatility term structure</b> y el <b>smile/skew</b>?",
+      "a": "La estructura de volatilidad implícita a través de <b>plazos</b> (term structure) y a través de <b>strikes</b> (smile/skew). El vol trader busca dislocaciones ahí, vía option spreads, VIX futures y vol/variance swaps."
+    },
+    {
+      "id": "vol08-c101",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "¿Cómo queda un 60/40 al agregar 20% de hedge funds?",
+      "a": "<b>48% stocks / 32% bonds / 20% HF</b> (se reduce proporcionalmente). Efectos típicos: <b>↓ desvío estándar</b>, <b>↑ Sharpe</b>, <b>↑ Sortino</b>, a menudo ↓ max drawdown."
+    },
+    {
+      "id": "vol08-c102",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Exposiciones típicas del convertible bond arbitrage",
+      "a": "<b>~300% long</b> convertibles / <b>~200% short</b> equity. El short es menor porque está <b>delta-ajustado</b> (no es un hedge 1:1)."
+    },
+    {
+      "id": "vol08-c103",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Las 7 características distintivas de un hedge fund",
+      "a": "Menos restricciones regulatorias · mandatos flexibles (shorting, derivados) · universo de inversión amplio · estilos agresivos · uso liberal de <b>leverage</b> · restricciones de liquidez (lock-ups, gates) · <b>fees altos</b>."
+    },
+    {
+      "id": "vol08-c104",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Las 6 familias de estrategias de hedge funds",
+      "a": "<b>Equity-related</b> · <b>Event-driven</b> · <b>Relative value</b> · <b>Opportunistic</b> · <b>Specialist</b> · <b>Multi-manager</b>."
+    },
+    {
+      "id": "vol08-c105",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Exposiciones típicas de <b>long/short equity</b>",
+      "a": "Net long <b>40–60%</b>; bruto ~<b>70–90% long</b> y <b>20–50% short</b>. Skill principal = <b>stock picking</b> (el market timing es secundario y casi nadie lo hace bien)."
+    },
+    {
+      "id": "vol08-c106",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Dedicated short-selling vs short-biased",
+      "a": "<b>Dedicated short</b>: <b>60–120% short</b> siempre (nunca long). <b>Short-biased</b>: <b>30–60% net short</b>, puede tener algo de long value y cash."
+    },
+    {
+      "id": "vol08-c107",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Orden de prioridad en una liquidación",
+      "a": "<b>Senior secured → junior secured → unsecured → convertible → preferred → common.</b>"
+    },
+    {
+      "id": "vol08-c108",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "¿Qué pasa con las acciones viejas en una <b>reorganización</b>?",
+      "a": "La deuda se convierte en <b>equity nuevo</b> y las <b>acciones viejas se cancelan</b> (o se diluyen fuertemente). Alternativa: extensión de plazos de la deuda."
+    },
+    {
+      "id": "vol08-c109",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Leverage típico de distressed securities",
+      "a": "<b>Moderado a bajo: 1.2 a 1.7 veces NAV.</b> Por la volatilidad inherente y el sesgo long de la estrategia."
+    },
+    {
+      "id": "vol08-c110",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "Estrategias con leverage ALTO",
+      "a": "<b>Equity market neutral</b> · <b>Fixed-income arbitrage</b> · <b>Convertible arbitrage</b> · <b>Global macro</b> · <b>Managed futures</b> · <b>Multi-strategy</b>. (Bajo: dedicated short, distressed, reinsurance, FoF.)"
+    },
+    {
+      "id": "vol08-c111",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "¿Qué estrategias tienen <b>left-tail risk</b> (skew negativo)?",
+      "a": "<b>Merger arbitrage</b> · <b>Fixed-income arbitrage</b> · <b>Convertible arbitrage</b> · <b>equity market neutral apalancado</b> · short-vol. Todas &quot;venden seguro&quot;: ganan estable, pierden fuerte en estrés."
+    },
+    {
+      "id": "vol08-c112",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "¿Qué estrategias tienen <b>skew positivo</b> (right-tail)?",
+      "a": "<b>Managed futures</b> (crisis alpha) y <b>long volatility</b>. Pierden de a poco en calma pero pagan en la crisis: &quot;compran seguro&quot;."
+    },
+    {
+      "id": "vol08-c113",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "¿Cuál es el vehículo preferido de cada estrategia?",
+      "a": "<b>Limited partnership (LP)</b> por defecto (permite leverage e iliquidez). <b>Mutual fund / liquid alt</b> es viable en: <b>long/short equity</b>, <b>global macro</b> y <b>managed futures</b> (los más líquidos)."
+    },
+    {
+      "id": "vol08-c114",
+      "lm": "LM4",
+      "tipo": "clasificacion",
+      "q": "¿Por qué equity market neutral prefiere LP y no mutual fund?",
+      "a": "Porque los mutual funds tienen <b>límites regulatorios de leverage</b>, y EMN necesita leverage alto para que el retorno sea relevante."
+    },
+    {
+      "id": "vol08-c115",
+      "lm": "LM4",
+      "tipo": "proceso",
+      "q": "¿Cómo funciona el <b>conditional factor model</b>?",
+      "a": "Modelo lineal que estima betas a factores macro <b>en condiciones normales Y en crisis</b> (vía una dummy de estrés). Parte de 6 factores y, con <b>stepwise regression</b> (evita multicolinealidad), queda en <b>4</b>."
+    },
+    {
+      "id": "vol08-c116",
+      "lm": "LM4",
+      "tipo": "proceso",
+      "q": "Los 4 factores del conditional factor model",
+      "a": "<b>Equity</b> (S&amp;P 500) · <b>Credit</b> (spread Baa − Aaa) · <b>Currency</b> (índice USD) · <b>Volatility</b> (ΔVIX). El retorno NO explicado = <b>alpha + factores omitidos + error aleatorio</b>."
+    },
+    {
+      "id": "vol08-c117",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Global macro vs Managed futures",
+      "a": "Misma meta (capturar tendencias), distinta ejecución: <b>Global macro = DISCRECIONAL</b> (juicio del manager sobre temas macro); <b>Managed futures = SISTEMÁTICO</b> (trend-following por reglas). Ambos: muy líquidos y con leverage alto."
+    },
+    {
+      "id": "vol08-c118",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Fund-of-Funds vs Multi-Strategy",
+      "a": "<b>FoF</b>: asigna a fondos externos; mezcla más diversa; menos transparencia; reacción lenta; el <b>inversor</b> carga el netting risk. <b>Multi-strategy</b>: equipos internos; <b>TAA más rápida</b>; mejor fee (el <b>GP</b> absorbe el netting); más riesgo operativo y más leverage."
+    },
+    {
+      "id": "vol08-c119",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "¿Cuál rinde más: FoF o Multi-Strategy?",
+      "a": "<b>Multi-strategy suele superar al FoF</b>, pero con <b>más varianza</b> (usa más leverage). Ambos ofrecen retornos estables y baja volatilidad por diversificación."
+    },
+    {
+      "id": "vol08-c120",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Equity market neutral vs Long/short equity",
+      "a": "<b>EMN</b>: beta ≈ 0, retorno modesto, leverage alto, brilla en <b>debilidad de mercado</b>. <b>L/S equity</b>: net long 40–60%, retorno ≈ long-only con <b>SD ~50% menor</b>, mantiene beta."
+    }
+  ],
+  "traps": [
+    {
+      "id": "vol08-t-lm1-01",
+      "lm": "LM1",
+      "star": true,
+      "title": "Signo del roll return",
+      "body": "El instinto dice que rolar siempre cuesta. La regla: <b>backwardation (cercano &gt; lejano) → roll POSITIVO</b>; <b>contango (cercano &lt; lejano) → roll NEGATIVO</b>. El denominador de la fórmula es el precio del contrato <b>cercano</b>."
+    },
+    {
+      "id": "vol08-t-lm1-02",
+      "lm": "LM1",
+      "star": true,
+      "title": "Backwardation ≠ total return positivo",
+      "body": "No hay causalidad directa. Ilmanen mostró que ~<b>40% de los commodities con roll NEGATIVO igual tuvieron total return POSITIVO</b> (por el price y el collateral return). El roll es solo uno de los tres componentes."
+    },
+    {
+      "id": "vol08-t-lm1-03",
+      "lm": "LM1",
+      "star": true,
+      "title": "Convenience yield sube cuando ESCASEA",
+      "body": "Sube cuando los <b>inventarios están bajos</b> (vale más tener el físico como buffer) → empuja a <b>backwardation</b>. No cuando abunda el inventario."
+    },
+    {
+      "id": "vol08-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "Hedging pressure: quién empuja hacia dónde",
+      "body": "Si los <b>compradores</b> (consumidores) hedgean más → <b>CONTANGO</b>. Si los <b>vendedores</b> (productores) hedgean más → <b>backwardation</b>. Es contra-intuitivo: el exceso de demanda de cobertura sube el precio del futuro."
+    },
+    {
+      "id": "vol08-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "Long/short ≠ hedger/speculator",
+      "body": "Cualquier posición, long o short, puede ser cobertura o especulación. Lo que define es el <b>motivo</b>, no el lado del trade."
+    },
+    {
+      "id": "vol08-t-lm1-06",
+      "lm": "LM1",
+      "star": false,
+      "title": "De dónde vino el retorno del S&amp;P GSCI",
+      "body": "Históricamente el grueso del retorno de largo plazo vino del <b>collateral return</b> (tasas), NO del spot ni del roll (el roll fue <b>negativo</b>, ≈ −1.3% anual)."
+    },
+    {
+      "id": "vol08-t-lm1-07",
+      "lm": "LM1",
+      "star": false,
+      "title": "Calendar spread: signo y lectura",
+      "body": "Calendar spread <b>positivo</b> (cercano − lejano &gt; 0) → <b>backwardation</b>. <b>Negativo</b> → <b>contango</b>. No confundir con el basis (Spot − Futures)."
+    },
+    {
+      "id": "vol08-t-lm1-08",
+      "lm": "LM1",
+      "star": false,
+      "title": "Rolar en backwardation: comprás MÁS contratos",
+      "body": "El futuro lejano está <b>más barato</b>, así que para mantener la misma exposición en dólares hay que comprar <b>más</b> contratos, no menos."
+    },
+    {
+      "id": "vol08-t-lm2-01",
+      "lm": "LM2",
+      "star": true,
+      "title": "El NOI va ANTES de deuda e impuestos",
+      "body": "No restes intereses, servicio de deuda, income tax ni depreciación para llegar al NOI. El NOI mide el retorno del <b>activo físico</b>, independiente de cómo se financia."
+    },
+    {
+      "id": "vol08-t-lm2-02",
+      "lm": "LM2",
+      "star": false,
+      "title": "Maintenance allowance ≠ todo el capex",
+      "body": "Solo el capex que <b>MANTIENE</b> el uso actual entra en el NOI. El capex que <b>mejora o cambia</b> el uso económico queda FUERA."
+    },
+    {
+      "id": "vol08-t-lm2-03",
+      "lm": "LM2",
+      "star": true,
+      "title": "Signo del Loss to Lease",
+      "body": "<b>L2L positivo</b> (GRI &lt; GPRI) = contratos POR DEBAJO del mercado = <b>undersupply</b> = ingreso futuro SUBE al renovar. <b>L2L negativo</b> = contratos por encima = <b>oversupply</b> = ingreso futuro CAE."
+    },
+    {
+      "id": "vol08-t-lm2-04",
+      "lm": "LM2",
+      "star": true,
+      "title": "Cap rate = r − g",
+      "body": "Mayor crecimiento esperado (g) → <b>MENOR cap rate</b> → <b>MAYOR valor</b>. El instinto de &quot;más crecimiento, más tasa&quot; es el error clásico."
+    },
+    {
+      "id": "vol08-t-lm2-05",
+      "lm": "LM2",
+      "star": false,
+      "title": "Vacancia baja no siempre es buena",
+      "body": "Si la vacancia de la propiedad está muy por debajo del mercado, rinde sobre sus pares <b>pero tiene poco margen de upside</b> vía ocupación."
+    },
+    {
+      "id": "vol08-t-lm2-06",
+      "lm": "LM2",
+      "star": true,
+      "title": "Smoothing: subestima vol, SOBREESTIMA Sharpe",
+      "body": "El appraisal lag suaviza el índice → <b>subestima volatilidad y correlación</b> → <b>SOBREESTIMA el Sharpe</b> → lleva a <b>sobre-asignar</b> a real estate. Corrección: unsmooth o usar transaction-based."
+    },
+    {
+      "id": "vol08-t-lm2-07",
+      "lm": "LM2",
+      "star": false,
+      "title": "Cost approach infla el valor en oversupply",
+      "body": "En oversupply el <b>replacement cost SUPERA al market price</b>. Sirve como <b>techo</b> de valuación, no como estimador central."
+    },
+    {
+      "id": "vol08-t-lm2-08",
+      "lm": "LM2",
+      "star": false,
+      "title": "Ciclo: qué hace cada variable en oversupply",
+      "body": "En <b>oversupply</b>: NOI, DSC y tasas hacen <b>PICO y empiezan a caer</b>; el <b>LTV toca piso y empieza a SUBIR</b>. Es la fase que más preguntan."
+    },
+    {
+      "id": "vol08-t-lm2-09",
+      "lm": "LM2",
+      "star": false,
+      "title": "DSC usa la cuota COMPLETA",
+      "body": "<b>DSC = NOI / debt service</b>, y el debt service es la cuota total (interés <b>+</b> amortización de capital), no solo el interés."
+    },
+    {
+      "id": "vol08-t-lm3-01",
+      "lm": "LM3",
+      "star": true,
+      "title": "FFO: suma D&amp;A, RESTA gains de venta",
+      "body": "Las <b>ganancias</b> por venta de inmuebles NO son income sostenible → se <b>restan</b>. Las <b>pérdidas</b> se <b>suman</b>. Ojo con el signo del ítem que te den en el enunciado."
+    },
+    {
+      "id": "vol08-t-lm3-02",
+      "lm": "LM3",
+      "star": true,
+      "title": "AFFO siempre menor que FFO",
+      "body": "AFFO = FFO <b>−</b> non-cash rent <b>−</b> capex recurrente <b>−</b> leasing commissions. Es <b>mejor medida de capacidad de dividendo</b>, pero tiene <b>más error de estimación</b> (por eso se reporta menos)."
+    },
+    {
+      "id": "vol08-t-lm3-03",
+      "lm": "LM3",
+      "star": true,
+      "title": "Más leverage → múltiplos P/FFO más BAJOS",
+      "body": "FFO y AFFO son income <b>apalancado</b>, así que más deuda comprime el múltiplo. El <b>EV/EBITDA</b> es pre-apalancamiento y no sufre el mismo efecto."
+    },
+    {
+      "id": "vol08-t-lm3-04",
+      "lm": "LM3",
+      "star": false,
+      "title": "NAVPS: valor de MERCADO y PRE-TAX",
+      "body": "Usa valores de mercado (no book value), se calcula <b>antes de impuestos</b> por liquidación, y <b>EXCLUYE</b> goodwill, deferred financing costs y deferred tax assets."
+    },
+    {
+      "id": "vol08-t-lm3-05",
+      "lm": "LM3",
+      "star": false,
+      "title": "Premium/discount no es automáticamente caro/barato",
+      "body": "Un premium sobre el NAVPS puede estar <b>justificado</b> por el valor del management, el leverage o el crecimiento esperado. No concluir sobrevaluación de forma mecánica."
+    },
+    {
+      "id": "vol08-t-lm3-06",
+      "lm": "LM3",
+      "star": false,
+      "title": "Emitir por debajo del NAVPS es DILUTIVO",
+      "body": "Vender acciones a menos del valor de los activos por acción destruye valor para los accionistas existentes."
+    },
+    {
+      "id": "vol08-t-lm3-07",
+      "lm": "LM3",
+      "star": false,
+      "title": "El REIT no está exento de TODO",
+      "body": "Las actividades <b>no calificadas</b> (brokerage, management de terceros, desarrollo for-sale) van por una <b>TRS</b>, que SÍ paga impuestos."
+    },
+    {
+      "id": "vol08-t-lm3-08",
+      "lm": "LM3",
+      "star": false,
+      "title": "REITs públicos diversifican MENOS",
+      "body": "Su precio se mueve con la <b>bolsa</b>, no solo con el valor del real estate subyacente → menor beneficio de diversificación que el real estate privado."
+    },
+    {
+      "id": "vol08-t-lm4-01",
+      "lm": "LM4",
+      "star": true,
+      "title": "Macro = discrecional · Managed futures = sistemático",
+      "body": "Es la distinción más preguntada entre las dos estrategias <b>opportunistic</b>. Ambas: muy líquidas, leverage alto, capturan tendencias — pero una por <b>juicio</b> y la otra por <b>reglas</b>."
+    },
+    {
+      "id": "vol08-t-lm4-02",
+      "lm": "LM4",
+      "star": true,
+      "title": "Merger arb = vender un put",
+      "body": "Payoff &quot;bono + short put&quot;: ganancias chicas y frecuentes, pérdidas grandes y raras (deal break). <b>Sharpe alto NO significa bajo riesgo</b>: tiene <b>left-tail risk</b>, y los deals fallan más justo en el estrés de mercado."
+    },
+    {
+      "id": "vol08-t-lm4-03",
+      "lm": "LM4",
+      "star": false,
+      "title": "Equity market neutral usa leverage ALTO",
+      "body": "Al hedgear el beta el retorno bruto es chico → <b>necesita apalancar</b>. &quot;Bajo riesgo de mercado&quot; ≠ &quot;bajo leverage&quot;. Y ese leverage le mete <b>left-tail risk</b> en periodos de estrés."
+    },
+    {
+      "id": "vol08-t-lm4-04",
+      "lm": "LM4",
+      "star": true,
+      "title": "Netting risk: quién lo carga",
+      "body": "En <b>multi-strategy</b> lo absorbe el <b>GP</b> (mejor para el inversor). En un <b>fund-of-funds</b> lo carga el <b>INVERSOR</b> (paga incentive a cada fondo ganador sin compensar con los perdedores)."
+    },
+    {
+      "id": "vol08-t-lm4-05",
+      "lm": "LM4",
+      "star": false,
+      "title": "Orden de prioridad en liquidación",
+      "body": "<b>Senior secured → junior secured → unsecured → convertible → preferred → common.</b> El convertible va DESPUÉS del unsecured y ANTES del preferred."
+    },
+    {
+      "id": "vol08-t-lm4-06",
+      "lm": "LM4",
+      "star": false,
+      "title": "Convertible arb: 300% long / 200% short",
+      "body": "El short de equity es <b>menor</b> que el long de convertibles porque está <b>delta-ajustado</b> (no es un hedge 1:1). No invertir los números."
+    },
+    {
+      "id": "vol08-t-lm4-07",
+      "lm": "LM4",
+      "star": false,
+      "title": "Liquid alts rinden MENOS",
+      "body": "≈ <b>100–200 bps menos por año</b> que los HF tradicionales equivalentes → evidencia de una <b>prima de iliquidez</b> que no se puede empaquetar en formato mutual fund."
+    },
+    {
+      "id": "vol08-t-lm4-08",
+      "lm": "LM4",
+      "star": false,
+      "title": "Distressed: leverage MODERADO-BAJO (1.2–1.7× NAV)",
+      "body": "Contra el instinto de &quot;estrategia agresiva = mucho leverage&quot;. Por su volatilidad inherente y sesgo long, usa <b>poco</b> leverage. Resultados <b>binarios</b> (muy buenos o muy malos)."
+    },
+    {
+      "id": "vol08-t-lm4-09",
+      "lm": "LM4",
+      "star": false,
+      "title": "Cross-border / vertical → spread MÁS ANCHO",
+      "body": "Más riesgo regulatorio (dos aprobaciones, antitrust) → mayor probabilidad de ruptura → <b>spread más ancho</b> (más retorno potencial, más riesgo)."
+    },
+    {
+      "id": "vol08-t-lm4-10",
+      "lm": "LM4",
+      "star": false,
+      "title": "Las colas se compensan entre estrategias",
+      "body": "<b>Skew negativo</b> (merger arb, FI arb, convertible arb: &quot;venden seguro&quot;) vs <b>skew positivo</b> (managed futures, long-vol: &quot;compran seguro&quot;). Combinarlas equilibra el portafolio — por eso los HF bajan la SD y suben el Sharpe de un 60/40."
+    }
+  ],
+  "problems": [
+    {
+      "id": "vol08-p01",
+      "lm": "LM1",
+      "title": "Total return de un futuro (3 componentes)",
+      "given": "Un inversor toma una posición long en futuros de soja a <b>865.0</b>. Tres meses después rola el 100% de la posición: el contrato cercano cotiza a <b>877.0</b> y el lejano a <b>883.0</b>. El colateral rindió una tasa anualizada de <b>0.60%</b>.",
+      "ask": "Calcular el total return de la operación.",
+      "answer": "<b>0.853%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Price return = (877.0 − 865.0) / 865.0 = <b>+1.387%</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Roll return = [(877.0 − 883.0) / 877.0] × 100% = <b>−0.684%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Collateral return = (3 meses / 12 meses) × 0.60% = <b>+0.150%</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Total return = 1.387% − 0.684% + 0.150%</span></div><div class=\"res\"><b>0.853%</b></div><div class=\"warn\">El denominador del roll return es el precio del contrato <b>cercano</b> (877.0), no el lejano. Como cercano &lt; lejano, el mercado está en <b>contango</b> y el roll es <b>negativo</b>.</div>"
+    },
+    {
+      "id": "vol08-p02",
+      "lm": "LM1",
+      "title": "Total return anualizado",
+      "given": "Una inversora obtuvo un price return de <b>5%</b> y un roll return de <b>2.5%</b> en una posición de futuros mantenida <b>un año</b>, con colateral igual al <b>100%</b> de la posición a una tasa libre de riesgo de <b>2% anual</b>.",
+      "ask": "Calcular el total return anualizado (sin apalancamiento).",
+      "answer": "<b>9.5%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Total return = Price return + Roll return + Collateral return</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Collateral return = 2% anual × 100% del colateral = <b>2%</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Total return = 5% + 2.5% + 2%</span></div><div class=\"res\"><b>9.5%</b></div><div class=\"warn\">Con colateral al 100% y horizonte de un año, el collateral return es el r<sub>f</sub> completo — no hay que prorratearlo.</div>"
+    },
+    {
+      "id": "vol08-p03",
+      "lm": "LM1",
+      "title": "Rolar una posición: ¿cuántos contratos?",
+      "given": "Un inversor tiene una posición long de <b>$10,000</b> en futuros. El contrato actual (cercano al vencimiento) vale <b>$4.00</b> por contrato; el contrato lejano al que quiere rolar vale <b>$2.50</b>.",
+      "ask": "¿Qué transacciones necesita para mantener la misma exposición?",
+      "answer": "Vender <b>2,500</b> contratos cercanos y comprar <b>4,000</b> contratos lejanos",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Contratos actuales = $10,000 / $4.00 = <b>2,500 contratos</b> (los vende para cerrar)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Contratos nuevos = $10,000 / $2.50 = <b>4,000 contratos</b> (los compra)</span></div><div class=\"res\">Vender <b>2,500</b> contratos cercanos y comprar <b>4,000</b> contratos lejanos</div><div class=\"warn\">El lejano está más barato que el cercano → el mercado está en <b>backwardation</b> → hay que comprar <b>MÁS</b> contratos para mantener el mismo valor en dólares.</div>"
+    },
+    {
+      "id": "vol08-p04",
+      "lm": "LM1",
+      "title": "Signo del roll return desde la curva",
+      "given": "Contrato cercano: <b>877.0</b>. Contrato lejano: <b>883.0</b>. Se rola el 100% de la posición.",
+      "ask": "Determinar el estado de la curva, el signo del calendar spread y el signo del roll return.",
+      "answer": "Contango · spread negativo · roll return <b>negativo</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Calendar spread = cercano − lejano = 877.0 − 883.0 = <b>−6.0</b> → spread <b>negativo</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Cercano &lt; lejano → curva creciente → <b>CONTANGO</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Roll return = (−6.0 / 877.0) × 100% = <b>−0.684%</b> → <b>negativo</b></span></div><div class=\"res\">Contango · spread negativo · roll return <b>negativo</b></div><div class=\"warn\">Regla: contango → roll negativo; backwardation → roll positivo. El calendar spread tiene el mismo signo que el roll.</div>"
+    },
+    {
+      "id": "vol08-p05",
+      "lm": "LM1",
+      "title": "Total return swap sobre un índice",
+      "given": "Un total return swap sobre el S&amp;P GSCI con notional de <b>$25 millones</b>. El índice cerró en <b>2,582.23</b> en mayo y en <b>2,525.21</b> en junio.",
+      "ask": "Calcular el retorno del índice en junio e indicar quién paga a quién.",
+      "answer": "Retorno <b>−2.2082%</b>; el comprador (long) paga ≈ <b>$552,050</b> al vendedor",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Retorno = (2,525.21 − 2,582.23) / 2,582.23 = <b>−2.2082%</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>El índice <b>cayó</b> → el comprador del swap (posición long) debe pagar al vendedor</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Pago = 2.2082% × $25,000,000</span></div><div class=\"res\">Retorno <b>−2.2082%</b>; el comprador (long) paga ≈ <b>$552,050</b> al vendedor</div><div class=\"warn\">Si el índice <b>sube</b>, cobra el comprador (long); si <b>baja</b>, cobra el vendedor. El swap se resetea (liquida) periódicamente.</div>"
+    },
+    {
+      "id": "vol08-p06",
+      "lm": "LM1",
+      "title": "Curva de futuros con storage y convenience yield",
+      "given": "Un commodity tiene spot de <b>100</b>, costos de almacenamiento de <b>4</b> y convenience yield de <b>9</b> (todo en la misma unidad y horizonte).",
+      "ask": "Calcular el precio del futuro e identificar el estado de la curva.",
+      "answer": "Futures = <b>95</b> → <b>BACKWARDATION</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Futures = Spot + Storage costs − Convenience yield</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Futures = 100 + 4 − 9 = <b>95</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Futures (95) &lt; Spot (100) → curva decreciente</span></div><div class=\"res\">Futures = <b>95</b> → <b>BACKWARDATION</b></div><div class=\"warn\">Cuando el convenience yield <b>supera</b> al costo de almacenamiento (inventarios escasos), el futuro queda por debajo del spot → backwardation.</div>"
+    },
+    {
+      "id": "vol08-p07",
+      "lm": "LM2",
+      "title": "Wallonia Transit: NOI de un warehouse",
+      "given": "Warehouse single-tenant de <b>10,000 m²</b>, alquilado a <b>EUR52.50/m²</b> anuales. El inquilino cubre <b>property tax (12,500)</b> y <b>seguro (40,000)</b>. El lease permite recuperar <b>EUR10.25/m²</b> por servicios y reparaciones. Gastos del año: servicing y repairs <b>120,750</b>; property tax <b>12,500</b>; seguro <b>40,000</b>; maintenance allowance <b>100,000</b>.",
+      "ask": "Calcular el NOI.",
+      "answer": "<b>EUR406,750</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Gross rent = EUR52.50/m² × 10,000 m² = <b>EUR525,000</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Operating expense recovery = EUR10.25/m² × 10,000 m² = <b>EUR102,500</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>EGI = 525,000 + 102,500 + 12,500 (tax pass-through) + 40,000 (seguro pass-through) = <b>EUR680,000</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Operating expenses = 120,750 + 12,500 + 40,000 = <b>EUR173,250</b></span></div><div class=\"step\"><span class=\"sn\">5.</span><span>NOI = EGI − OpEx − Maintenance allowance = 680,000 − 173,250 − 100,000</span></div><div class=\"res\"><b>EUR406,750</b></div><div class=\"warn\">El property tax y el seguro aparecen <b>dos veces</b>: como ingreso (pass-through al inquilino) y como gasto. No omitir ninguno de los dos lados.</div>"
+    },
+    {
+      "id": "vol08-p08",
+      "lm": "LM2",
+      "title": "Pinebranch Estates: GPRI",
+      "given": "Propiedad multi-family con <b>240 unidades</b> de <b>1,200 ft²</b> promedio cada una. Renta de mercado: <b>AUD2.00 por ft² por mes</b>.",
+      "ask": "Calcular el GPRI anual.",
+      "answer": "<b>AUD6,912,000</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>GPRI = Renta de mercado × Superficie rentable (a plena ocupación)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>GPRI = 240 unidades × 1,200 ft² × AUD2.00/ft²/mes × 12 meses</span></div><div class=\"res\"><b>AUD6,912,000</b></div><div class=\"warn\">El GPRI usa la renta de <b>MERCADO</b> (no la contractual) y asume <b>100% de ocupación</b>. No restarle vacancia acá.</div>"
+    },
+    {
+      "id": "vol08-p09",
+      "lm": "LM2",
+      "title": "Pinebranch Estates: NOI",
+      "given": "GPRI = <b>AUD6,912,000</b>. Deducciones: Loss to Lease <b>128,200</b>, Vacancy &amp; Collection <b>791,236</b>, Concessions &amp; Adjustments <b>485,124</b>. Ingresos adicionales: Other Income <b>295,211</b>, Expense Recovery <b>525,800</b>. Gastos: Operating &amp; Leasing <b>2,753,000</b>, Property Maintenance Allowance <b>655,000</b>.",
+      "ask": "Calcular el NOI.",
+      "answer": "<b>AUD2,919,651</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Total deducciones = 128,200 + 791,236 + 485,124 = <b>1,404,560</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Total ingresos adicionales = 295,211 + 525,800 = <b>820,211</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Total gastos = 2,753,000 + 655,000 = <b>3,408,000</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>NOI = 6,912,000 + 820,211 − 1,404,560 − 3,408,000</span></div><div class=\"res\"><b>AUD2,919,651</b></div><div class=\"warn\">El <b>Property Maintenance Allowance</b> SÍ se resta para el NOI (es capex que mantiene el uso). No restar intereses ni impuesto a las ganancias.</div>"
+    },
+    {
+      "id": "vol08-p10",
+      "lm": "LM2",
+      "title": "Wallonia: LTV al cierre del primer año",
+      "given": "Propiedad comprada en <b>EUR3,750,000</b> con hipoteca de <b>EUR3,000,000</b> a 20 años, totalmente amortizable, al <b>4%</b> anual. Cuota anual = <b>EUR220,745</b>; el interés del primer año es <b>EUR120,000</b>. El valor de la propiedad se mantiene constante.",
+      "ask": "Calcular el LTV al final del primer año.",
+      "answer": "<b>0.773</b> (77.3%)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Amortización de capital del año 1 = 220,745 − 120,000 = <b>EUR100,745</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Deuda vigente = 3,000,000 − 100,745 = <b>EUR2,899,255</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>LTV = 2,899,255 / 3,750,000</span></div><div class=\"res\"><b>0.773</b> (77.3%)</div><div class=\"warn\">Solo la <b>porción de capital</b> de la cuota reduce la deuda. El interés no amortiza nada.</div>"
+    },
+    {
+      "id": "vol08-p11",
+      "lm": "LM2",
+      "title": "Wallonia: LTV tras una apreciación del 10%",
+      "given": "Deuda vigente = <b>EUR2,899,255</b>. La propiedad, comprada en <b>EUR3,750,000</b>, se aprecia un <b>10%</b>.",
+      "ask": "Calcular el nuevo LTV y describir la dirección del cambio.",
+      "answer": "<b>0.703</b> (70.3%) — el LTV <b>CAE</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Nuevo valor = 3,750,000 × 1.10 = <b>EUR4,125,000</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>LTV = 2,899,255 / 4,125,000</span></div><div class=\"res\"><b>0.703</b> (70.3%) — el LTV <b>CAE</b></div><div class=\"warn\">Sube el valor con la deuda constante → <b>baja</b> el leverage y <b>sube</b> el equity del dueño.</div>"
+    },
+    {
+      "id": "vol08-p12",
+      "lm": "LM2",
+      "title": "Wallonia: Debt Service Coverage y su sensibilidad",
+      "given": "NOI = <b>EUR406,750</b>; cuota anual de la hipoteca (interés + capital) = <b>EUR220,745</b>. Escenario alternativo: los costos de servicing suben y el NOI cae a <b>EUR382,600</b>.",
+      "ask": "Calcular el DSC en ambos escenarios.",
+      "answer": "DSC = <b>1.84</b> → cae a <b>1.73</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>DSC = NOI / Debt service</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>DSC base = 406,750 / 220,745 = <b>1.84</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>DSC revisado = 382,600 / 220,745 = <b>1.73</b></span></div><div class=\"res\">DSC = <b>1.84</b> → cae a <b>1.73</b></div><div class=\"warn\">El debt service es la <b>cuota completa</b> (interés + capital), no solo el interés. Mayores costos operativos reducen la capacidad de cubrir la deuda.</div>"
+    },
+    {
+      "id": "vol08-p13",
+      "lm": "LM2",
+      "title": "Chandra Shops: overage rent",
+      "given": "Local de <b>500 ft²</b>. Renta base original: <b>INR300/ft²/mes</b>. El nuevo lease baja la base un <b>10%</b> y agrega un <b>overage rent del 8%</b> sobre las ventas mensuales que excedan <b>INR1,000,000</b>. Ventas del mes: <b>INR1,250,000</b>.",
+      "ask": "Calcular la renta total del mes bajo el nuevo lease y compararla con el lease original.",
+      "answer": "<b>INR155,000</b> vs <b>INR150,000</b> del lease original (paga <b>INR5,000 más</b>)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Renta base original = INR300/ft² × 500 ft² = <b>INR150,000</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Nueva base = INR300 × 0.90 = INR270/ft² → 270 × 500 = <b>INR135,000</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Overage = 0.08 × (1,250,000 − 1,000,000) = <b>INR20,000</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Renta total nueva = 135,000 + 20,000 = <b>INR155,000</b></span></div><div class=\"res\"><b>INR155,000</b> vs <b>INR150,000</b> del lease original (paga <b>INR5,000 más</b>)</div><div class=\"warn\">El overage se calcula solo sobre el <b>exceso</b> por encima del umbral (250,000), no sobre las ventas totales.</div>"
+    },
+    {
+      "id": "vol08-p14",
+      "lm": "LM3",
+      "title": "NAVPS: valor del real estate operativo",
+      "given": "NOI de los últimos 12 meses = <b>$270,432</b>. Ajustes: non-cash rent <b>7,667</b> (se resta); impacto pleno de adquisiciones <b>4,534</b> (se suma). Crecimiento esperado del NOI para los próximos 12 meses: <b>1.5%</b>. Cap rate de comparables: <b>7.00%</b>.",
+      "ask": "Calcular el valor estimado del real estate operativo.",
+      "answer": "<b>$3,875,829</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Pro forma cash NOI = 270,432 − 7,667 + 4,534 = <b>$267,299</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Crecimiento próximos 12m = 267,299 × 1.5% = <b>$4,009</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Cash NOI estimado próximos 12m = 267,299 + 4,009 = <b>$271,308</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Valor = 271,308 / 0.07</span></div><div class=\"res\"><b>$3,875,829</b></div><div class=\"warn\">El NOI que se capitaliza es el de los <b>próximos</b> 12 meses (ya crecido), no el histórico. Y el non-cash rent se <b>resta</b>.</div>"
+    },
+    {
+      "id": "vol08-p15",
+      "lm": "LM3",
+      "title": "NAVPS por acción",
+      "given": "Valor del real estate operativo = <b>$3,875,829</b>. Otros activos: cash <b>65,554</b>, land for development <b>34,566</b>, cuentas por cobrar <b>45,667</b>, prepaid/otros <b>23,456</b>. Pasivos: deuda total <b>1,010,988</b>, otros pasivos <b>119,886</b>. Acciones en circulación: <b>55,689</b>.",
+      "ask": "Calcular el NAVPS.",
+      "answer": "<b>$52.33</b> por acción",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Gross asset value = 3,875,829 + 65,554 + 34,566 + 45,667 + 23,456 = <b>$4,045,072</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>NAV = 4,045,072 − 1,010,988 − 119,886 = <b>$2,914,198</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>NAVPS = 2,914,198 / 55,689</span></div><div class=\"res\"><b>$52.33</b> por acción</div><div class=\"warn\">Se <b>EXCLUYEN</b> goodwill, deferred financing costs y deferred tax assets. El NAVPS se calcula <b>pre-tax</b>.</div>"
+    },
+    {
+      "id": "vol08-p16",
+      "lm": "LM3",
+      "title": "Cálculo de FFO",
+      "given": "Office Equity REIT (SGD miles): Net income <b>160,638</b>; Depreciación y amortización <b>76,100</b>; <b>Pérdida</b> por venta de real estate depreciable <b>25,000</b>. Acciones: <b>55,689</b>.",
+      "ask": "Calcular el FFO y el FFO por acción.",
+      "answer": "FFO = <b>261,738</b> · FFO/acción = <b>4.70</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>FFO = Net income + D&amp;A ± resultado por venta de real estate</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Como el resultado por venta es una <b>PÉRDIDA</b>, se <b>suma</b>: 160,638 + 76,100 + 25,000</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>FFO = <b>261,738</b></span></div><div class=\"step\"><span class=\"sn\">4.</span><span>FFO por acción = 261,738 / 55,689</span></div><div class=\"res\">FFO = <b>261,738</b> · FFO/acción = <b>4.70</b></div><div class=\"warn\">Ojo el signo: las <b>ganancias</b> por venta se <b>RESTAN</b>; las <b>pérdidas</b> se <b>SUMAN</b>. Acá era pérdida.</div>"
+    },
+    {
+      "id": "vol08-p17",
+      "lm": "LM3",
+      "title": "Cálculo de AFFO",
+      "given": "FFO = <b>261,738</b>. Ajuste de non-cash (straight-line) rent = <b>21,103</b>. Capex de mantenimiento recurrente y comisiones de leasing = <b>55,765</b>. Acciones: <b>55,689</b>.",
+      "ask": "Calcular el AFFO y el AFFO por acción.",
+      "answer": "AFFO = <b>184,870</b> · AFFO/acción = <b>3.32</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>AFFO = FFO − non-cash rent − capex recurrente y leasing commissions</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>AFFO = 261,738 − 21,103 − 55,765 = <b>184,870</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>AFFO por acción = 184,870 / 55,689</span></div><div class=\"res\">AFFO = <b>184,870</b> · AFFO/acción = <b>3.32</b></div><div class=\"warn\">Ambos ítems se <b>restan</b> → el AFFO siempre es <b>menor</b> que el FFO. Es la mejor medida de capacidad de dividendo.</div>"
+    },
+    {
+      "id": "vol08-p18",
+      "lm": "LM3",
+      "title": "Múltiplos P/FFO y P/AFFO",
+      "given": "La acción cotiza a <b>$47.00</b>. FFO por acción = <b>4.70</b>; AFFO por acción = <b>3.32</b>. NAVPS = <b>$52.33</b>.",
+      "ask": "Calcular P/FFO y P/AFFO, e indicar si cotiza con premium o discount sobre el NAVPS.",
+      "answer": "P/FFO = <b>10.0×</b> · P/AFFO = <b>14.2×</b> · <b>Descuento</b> sobre NAVPS",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>P/FFO = 47.00 / 4.70 = <b>10.0×</b></span></div><div class=\"step\"><span class=\"sn\">2.</span><span>P/AFFO = 47.00 / 3.32 = <b>14.2×</b></span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Precio (47.00) &lt; NAVPS (52.33) → cotiza con <b>DESCUENTO</b> de 10.2%</span></div><div class=\"res\">P/FFO = <b>10.0×</b> · P/AFFO = <b>14.2×</b> · <b>Descuento</b> sobre NAVPS</div><div class=\"warn\">El P/AFFO es siempre <b>mayor</b> que el P/FFO (el denominador es menor). Un descuento sugiere posible subvaluación, pero puede estar justificado por management, leverage o crecimiento.</div>"
+    }
+  ],
+  "highlights": [
+    {
+      "rank": 1,
+      "title": "Signo del roll return",
+      "body": "Backwardation → roll POSITIVO. Contango → roll NEGATIVO. Denominador = precio del contrato cercano."
+    },
+    {
+      "rank": 2,
+      "title": "Cap rate = r − g",
+      "body": "Mayor g → MENOR cap rate → MAYOR valor. El error clásico es invertirlo."
+    },
+    {
+      "rank": 3,
+      "title": "FFO resta las gains de venta",
+      "body": "Suma D&amp;A e impairments; RESTA ganancias por venta (suma las pérdidas). AFFO siempre &lt; FFO."
+    },
+    {
+      "rank": 4,
+      "title": "Merger arb = short put",
+      "body": "Sharpe alto con left-tail risk. Ganancias chicas frecuentes, pérdida grande si el deal se rompe."
+    },
+    {
+      "rank": 5,
+      "title": "Macro discrecional vs Managed futures sistemático",
+      "body": "La distinción más preguntada dentro de opportunistic."
+    },
+    {
+      "rank": 6,
+      "title": "Smoothing sobreestima el Sharpe",
+      "body": "Appraisal lag → subestima vol y correlación → SOBREESTIMA Sharpe → sobre-asignación a real estate."
+    },
+    {
+      "rank": 7,
+      "title": "Loss to Lease positivo = upside futuro",
+      "body": "GRI &lt; GPRI = contratos bajo mercado = undersupply = las rentas suben al renovar."
+    },
+    {
+      "rank": 8,
+      "title": "Más leverage → P/FFO más BAJO",
+      "body": "FFO/AFFO son income apalancado. EV/EBITDA es pre-apalancamiento y no sufre el efecto."
+    }
+  ],
+  "tables": [
+    {
+      "id": "vol08-metodos",
+      "title": "Método vs método — comparaciones maestras",
+      "lms": [
+        "LM1",
+        "LM2",
+        "LM3",
+        "LM4"
+      ],
+      "html": "<div class=\"wrap\">\n<header><div><div class=\"crumb\">CFA 2026 · Level II · Vol. 8 — Alternative Investments</div>\n<h1>Tabla maestra — Método vs método</h1></div>\n<div class=\"meta\">Archivo 3/6<br/>Reemplaza IFRS vs GAAP</div></header>\n<div class=\"bd\">\n<p style=\"font-size:11.5px;color:var(--mut);border:1px dashed var(--soft);padding:8px 11px;margin-bottom:14px\">\n<b>Nota:</b> este volumen <b>no tiene diferencias IFRS vs US GAAP examinables</b>. Lo único cercano es el <i>straight-lining</i> de rentas de leases largos, que el currículo indica que se reconoce <b>igual bajo IFRS y US GAAP</b> (de ahí el ajuste de non-cash rent en NAVPS y AFFO). Por eso esta hoja cubre las <b>comparaciones método vs método</b>, que es donde el examen realmente discrimina en Alternative Investments.</p>\n<h2>1 · Teorías del retorno de futuros de commodities <span class=\"lm\">LM1</span></h2>\n<table>\n<tr><th>Teoría</th><th>Quién actúa</th><th>Mecanismo</th><th>Resultado en la curva</th></tr>\n<tr><td>Insurance (Keynes)</td><td>Solo productores (long físico)</td><td>Venden forward para asegurar precio; el especulador cobra una prima por asumir el riesgo</td><td>Futuro &lt; spot esperado → <b>normal backwardation</b></td></tr>\n<tr><td>Hedging pressure</td><td>Productores <b>y</b> consumidores</td><td>El <b>neto</b> de la presión de cobertura define la curva</td><td>Vendedores hedgean más → <b>backwardation</b>. Compradores hedgean más → <b>CONTANGO</b>. Balance → plana</td></tr>\n<tr><td>Theory of storage</td><td>Tenedores de inventario</td><td><span class=\"eqc\">Futures = Spot + Storage − Convenience yield</span></td><td>Inventario alto → CY bajo → <b>contango</b>. Inventario bajo → CY alto → <b>backwardation</b></td></tr>\n</table>\n<h2>2 · Componentes del total return de commodities <span class=\"lm\">LM1</span></h2>\n<table>\n<tr><th>Componente</th><th>Fórmula</th><th>Qué captura</th><th>Nota clave</th></tr>\n<tr><td>Price (spot) return</td><td class=\"eqc\">(P<sub>t</sub> − P<sub>t−1</sub>) / P<sub>t−1</sub></td><td>Movimiento del precio del contrato</td><td>Explica ~<b>97%</b> de la volatilidad del índice</td></tr>\n<tr><td>Roll return</td><td class=\"eqc\">[(P<sub>cercano</sub> − P<sub>lejano</sub>) / P<sub>cercano</sub>] × % rolado</td><td>Diferencia contable al rolar el contrato</td><td><b>+</b> en backwardation, <b>−</b> en contango. No se captura aislado</td></tr>\n<tr><td>Collateral return</td><td class=\"eqc\">r<sub>f</sub> × (meses / 12)</td><td>Yield del cash/T-bills que respalda la posición</td><td>Fue la <b>principal fuente</b> del retorno histórico del S&amp;P GSCI</td></tr>\n<tr><td>Rebalance return</td><td>—</td><td>Efecto de reponderar los componentes</td><td>Solo aplica a <b>índices</b>, no a un contrato individual</td></tr>\n</table>\n<h2>3 · Enfoques de valuación inmobiliaria <span class=\"lm\">LM2</span></h2>\n<table>\n<tr><th>Enfoque</th><th>Mecánica</th><th>Cuándo usarlo</th><th>Límite / distorsión</th></tr>\n<tr><td>Income — Direct capitalization</td><td class=\"eqc\">V = NOI / cap rate  ·  cap rate = r − g</td><td>Propiedades estabilizadas con NOI predecible</td><td>Muy sensible al cap rate. <b>↑g → ↓cap rate → ↑valor</b></td></tr>\n<tr><td>Income — DCF</td><td>Proyección de NOI + terminal value:<span class=\"eqc\">TV = NOI<sub>n</sub>(1+g) / (r − g)</span></td><td>Cash flows irregulares o en transición</td><td>Depende de supuestos de g y r a largo plazo</td></tr>\n<tr><td>Cost approach</td><td>Costo de reemplazo (terreno + construcción) − depreciación</td><td>Propiedades nuevas o sin comparables</td><td>En <b>oversupply</b>, replacement cost &gt; market price → <b>infla el valor</b>. Sirve como <b>techo</b></td></tr>\n<tr><td>Sales comparison</td><td>Comparables recientes (price/ft²), ajustados por size, age, location, condition, timing</td><td>Mercados líquidos con transacciones recientes</td><td>Requiere comparables genuinos; las transacciones recientes pesan más</td></tr>\n</table>\n<h2>4 · Índices inmobiliarios <span class=\"lm\">LM2</span></h2>\n<table>\n<tr><th>Tipo</th><th>Construcción</th><th>Investable</th><th>Sesgo / consecuencia</th></tr>\n<tr><td>Appraisal-based</td><td>Tasaciones periódicas (faltan transacciones del mismo inmueble)</td><td>No</td><td><b>Appraisal lag / smoothing</b>: subestima vol y correlación, <b>SOBREESTIMA el Sharpe</b> → sobre-asignación</td></tr>\n<tr><td>Transaction-based: repeat sales</td><td>Ventas repetidas del <b>mismo</b> inmueble</td><td>No</td><td>Menos smoothing, pero muestra pequeña y sesgada</td></tr>\n<tr><td>Transaction-based: hedonic</td><td>Regresión sobre características (size, age, location)</td><td>No</td><td>Depende de la especificación del modelo</td></tr>\n<tr><td>REIT-based</td><td>Precios de REITs listados</td><td><b>Sí</b> (ETF, mutual funds, UCITS)</td><td>Correlaciona <b>más</b> con equity/bond → menor diversificación</td></tr>\n</table>\n<h2>5 · FFO vs AFFO <span class=\"lm\">LM3</span></h2>\n<table>\n<tr><th></th><th>FFO</th><th>AFFO</th></tr>\n<tr><td>Fórmula</td><td class=\"eqc\">NI + D&amp;A − Gains on sale + Impairments</td><td class=\"eqc\">FFO − Non-cash rent − Recurring capex − Leasing commissions</td></tr>\n<tr><td>Qué mide</td><td>Performance operativa continua (excluye depreciación y resultados de venta)</td><td>Income económico sostenible / cash earnings (considera capex de mantenimiento)</td></tr>\n<tr><td>Uso</td><td>Es el <b>\"P/E\" del sector REIT</b>; más estable y comparable</td><td>Mejor proxy de <b>capacidad de dividendo</b>; base del juicio de inversión</td></tr>\n<tr><td>Contra</td><td>Ignora el capex necesario para mantener las propiedades</td><td><b>Más error de estimación</b> (sin metodología universal) → se reporta menos</td></tr>\n<tr><td>Relación</td><td colspan=\"2\"><b>AFFO &lt; FFO</b> siempre (el AFFO resta ítems adicionales)</td></tr>\n</table>\n<h2>6 · Enfoques de valuación de la acción REIT <span class=\"lm\">LM3</span></h2>\n<table>\n<tr><th>Enfoque</th><th>Mecánica</th><th>Ventaja</th><th>Desventaja</th></tr>\n<tr><td>NAV</td><td>Capitaliza el cash NOI a valor de mercado → NAVPS; compara con el precio</td><td>Benchmark fundamental de net worth (mercado privado activo)</td><td>Muy sensible al cap rate; ignora el valor del management y del leverage</td></tr>\n<tr><td>Relative value (P/FFO, P/AFFO)</td><td>Múltiplo sobre FFO/AFFO del año siguiente; comparar dentro del mismo tipo de propiedad</td><td>FFO disponible en Bloomberg/Refinitiv; comparación rápida</td><td>No captura valor intrínseco; <b>no ajusta por leverage</b>; P/FFO ignora capex recurrente</td></tr>\n<tr><td>DCF / DDM</td><td>DDM de 2 o 3 etapas (alto payout lo hace buen candidato); terminal value por múltiplos históricos</td><td>Captura el valor de los cash flows futuros</td><td>Depende de supuestos de crecimiento y de la tasa de descuento</td></tr>\n</table>\n<h2>7 · REIT vs REOC <span class=\"lm\">LM3</span></h2>\n<table>\n<tr><th></th><th>REIT</th><th>REOC</th></tr>\n<tr><td>Impuestos</td><td><b>Exento</b> de income tax (deduce dividendos pagados)</td><td>Empresa <b>gravable</b> normal</td></tr>\n<tr><td>Payout</td><td>Distribuye <b>90–100%</b> del income gravable</td><td>Sin obligación de distribuir</td></tr>\n<tr><td>Crecimiento</td><td>Poco crecimiento por reinversión → depende del <b>mercado de capitales</b></td><td>Puede reinvertir utilidades</td></tr>\n<tr><td>Flexibilidad</td><td><b>Menor</b>; actividades no calificadas requieren una <b>TRS</b> (gravada)</td><td><b>Mayor</b>: desarrollo for-sale, brokerage, management de terceros</td></tr>\n<tr><td>Dividend yield</td><td>Por encima del promedio</td><td>Normal</td></tr>\n</table>\n<h2>8 · Global macro vs Managed futures <span class=\"lm\">LM4</span></h2>\n<table>\n<tr><th></th><th>Global Macro</th><th>Managed Futures (CTA)</th></tr>\n<tr><td>Filosofía</td><td><b>DISCRECIONAL</b> (juicio del manager)</td><td><b>SISTEMÁTICO</b> (trend-following por reglas)</td></tr>\n<tr><td>Qué explota</td><td>Tendencias macro globales, con un rango amplio de instrumentos</td><td>Tendencias de precio en futuros/opciones de índices, commodities y FX</td></tr>\n<tr><td>Leverage / liquidez</td><td colspan=\"2\">Ambos: <b>leverage alto</b> y <b>muy líquidos</b> (los más aptos para liquid alts)</td></tr>\n<tr><td>Distribución</td><td>Heterogénea; diversifica en estrés pero con resultados dispares</td><td><b>Skew positivo / right-tail</b> en estrés — \"crisis alpha\"</td></tr>\n</table>\n<h2>9 · Fund-of-Funds vs Multi-Strategy <span class=\"lm\">LM4</span></h2>\n<table>\n<tr><th></th><th>Fund-of-Funds (FoF)</th><th>Multi-Strategy</th></tr>\n<tr><td>Estructura</td><td>Asigna capital a hedge funds <b>externos</b> separados</td><td>Equipos <b>internos</b> corren varias estrategias en un mismo fondo</td></tr>\n<tr><td>Ventaja</td><td>Mezcla de estrategias más <b>diversa</b></td><td><b>TAA más rápida</b>; mejor estructura de fee</td></tr>\n<tr><td><b>Netting risk</b></td><td>Lo carga el <b>INVERSOR</b> (paga incentive a cada fondo ganador sin compensar con los perdedores)</td><td>Lo absorbe el <b>GP</b> (mejor para el inversor)</td></tr>\n<tr><td>Contra</td><td>Menos transparencia; reacción lenta ante cambios</td><td>Mayor <b>riesgo operativo</b> manager-specific; más leverage → más varianza</td></tr>\n<tr><td>Performance</td><td colspan=\"2\"><b>Multi-strategy suele SUPERAR al FoF</b>, pero con más varianza (por el mayor leverage)</td></tr>\n</table>\n<h2>10 · Equity Market Neutral vs Long/Short Equity <span class=\"lm\">LM4</span></h2>\n<table>\n<tr><th></th><th>Equity Market Neutral</th><th>Long/Short Equity</th></tr>\n<tr><td>Exposición</td><td><b>Beta ≈ 0</b> (betas hedgeadas)</td><td><b>Net long 40–60%</b> (70–90% long / 20–50% short)</td></tr>\n<tr><td>Retorno</td><td><b>Modesto</b>, baja SD, mean reversion</td><td>≈ long-only pero con <b>SD ~50% menor</b></td></tr>\n<tr><td>Leverage</td><td><b>ALTO</b> (necesario para que el retorno sea relevante)</td><td>Variable (mayor en enfoques quant)</td></tr>\n<tr><td>Vehículo</td><td><b>LP preferido</b> (los mutual funds tienen límites de leverage)</td><td>LP <b>y</b> mutual fund / liquid alt</td></tr>\n<tr><td>Cuándo brilla</td><td>En <b>debilidad / vulnerabilidad de mercado</b> (no necesita beta)</td><td>En mercados alcistas con dispersión (stock picking)</td></tr>\n</table>\n<div class=\"key\">\n<b>Las 3 comparaciones más recurrentes del volumen</b>\n<ol>\n<li><b>Global macro (discrecional) vs Managed futures (sistemático)</b> — la distinción más preguntada dentro de opportunistic; ambas comparten leverage alto y liquidez, se separan por <b>filosofía</b>.</li>\n<li><b>FFO vs AFFO</b> — el signo (FFO <b>resta</b> gains de venta) y la relación (<b>AFFO &lt; FFO</b> siempre); AFFO mide capacidad de dividendo pero con más error de estimación.</li>\n<li><b>Netting risk: FoF vs Multi-strategy</b> — en multi-strategy lo absorbe el <b>GP</b>; en el FoF lo carga el <b>inversor</b>.</li>\n</ol>\n</div>\n</div>\n<footer><span>CFA® 2026 · L2 · Vol. 8 · Archivo 3/6 — Tabla maestra método vs método</span><span>Hoja de referencia · B&amp;W</span></footer>\n</div>"
+    },
+    {
+      "id": "vol08-signos",
+      "title": "Hoja de signos y direcciones",
+      "lms": [
+        "LM1",
+        "LM2",
+        "LM3",
+        "LM4"
+      ],
+      "html": "<div class=\"wrap\">\n<header><div><div class=\"crumb\">CFA 2026 · Level II · Vol. 8 — Alternative Investments</div>\n<h1>Hoja de signos y direcciones</h1></div>\n<div class=\"meta\">Archivo 4/6<br/>Dónde caza el examen</div></header>\n<div class=\"bd\">\n<div class=\"lg\"><b>Cómo leer:</b>  <b>↑</b> sube  ·  <b>↓</b> baja  ·  <b>=</b> sin cambio  ·  <b>★</b> efecto <b>contra-intuitivo</b> (el instinto dice lo opuesto). Este volumen no gira sobre assets/liabilities/equity, sino sobre <b>signos de retorno, dirección de curvas y sentido de los múltiplos</b>: ahí es donde el examen pincha.</div>\n<h2>1 · Curva de futuros y roll return <span class=\"lm\">LM1</span></h2>\n<table>\n<tr><th>Situación</th><th>Spot vs Futures</th><th>Cercano vs Lejano</th><th>Calendar spread</th><th>Roll return</th><th>Contratos al rolar</th></tr>\n<tr><td>Backwardation</td><td>Spot <b>&gt;</b> Futures</td><td>Cercano <b>&gt;</b> Lejano</td><td class=\"up\">Positivo (+)</td><td class=\"up\">POSITIVO (+)</td><td class=\"star\">★ Comprás <b>MÁS</b></td></tr>\n<tr><td>Curva plana</td><td>≈ igual</td><td>Cercano = Lejano</td><td>Cero</td><td>Cero (0)</td><td>Igual cantidad</td></tr>\n<tr><td>Contango</td><td>Spot <b>&lt;</b> Futures</td><td>Cercano <b>&lt;</b> Lejano</td><td class=\"dn\">Negativo (−)</td><td class=\"dn\">NEGATIVO (−)</td><td>Comprás <b>menos</b></td></tr>\n</table>\n<p class=\"ci\">★ En backwardation el contrato lejano está <b>más barato</b> → hacen falta <b>más</b> contratos para mantener la misma exposición en dólares.</p>\n<h2>2 · Qué mueve la curva de commodities <span class=\"lm\">LM1</span></h2>\n<table>\n<tr><th>Cambio</th><th>Convenience yield</th><th>Curva resultante</th><th>Roll return</th><th>Contra-intuitivo</th></tr>\n<tr><td>Inventarios <b>↓</b> (escasez)</td><td class=\"up\">↑ sube</td><td><b>Backwardation</b></td><td class=\"up\">↑ positivo</td><td class=\"star\">★ El CY sube cuando <b>ESCASEA</b>, no cuando abunda</td></tr>\n<tr><td>Inventarios <b>↑</b> (abundancia)</td><td class=\"dn\">↓ baja</td><td><b>Contango</b></td><td class=\"dn\">↓ negativo</td><td>—</td></tr>\n<tr><td><b>Compradores</b> (consumidores) hedgean más</td><td>—</td><td><b>CONTANGO</b></td><td class=\"dn\">↓ negativo</td><td class=\"star\">★ El exceso de demanda de cobertura <b>SUBE</b> el futuro</td></tr>\n<tr><td><b>Vendedores</b> (productores) hedgean más</td><td>—</td><td><b>Backwardation</b></td><td class=\"up\">↑ positivo</td><td>Es el caso de la insurance theory (Keynes)</td></tr>\n<tr><td>Storage costs <b>↑</b></td><td>—</td><td>Empuja a <b>contango</b></td><td class=\"dn\">↓</td><td>Futures = Spot + Storage − CY</td></tr>\n</table>\n<h2>3 · Income statement inmobiliario: qué entra y qué no <span class=\"lm\">LM2</span></h2>\n<table>\n<tr><th>Ítem</th><th>Efecto en el NOI</th><th>Nota</th></tr>\n<tr><td>Loss to Lease</td><td class=\"dn\">↓ Se <b>RESTA</b> del GPRI</td><td>GRI = GPRI − Loss to Lease</td></tr>\n<tr><td>Vacancy &amp; Collection</td><td class=\"dn\">↓ Se resta</td><td>Antes del NRI</td></tr>\n<tr><td>Concessions &amp; Adjustments</td><td class=\"dn\">↓ Se resta</td><td>Free rent, allowances. Fácil de pasar por alto</td></tr>\n<tr><td>Other Income · Expense Recovery</td><td class=\"up\">↑ Se <b>SUMAN</b></td><td>Llevan del NRI al EGI</td></tr>\n<tr><td>Operating Expenses</td><td class=\"dn\">↓ Se restan</td><td>Taxes, seguro, mgmt, utilities, repairs</td></tr>\n<tr><td>Property Maintenance Allowance</td><td class=\"dn\">↓ Se <b>RESTA</b></td><td class=\"star\">★ Es capex, <b>pero SÍ entra</b> en el NOI (mantiene el uso actual)</td></tr>\n<tr><td>Capex que <b>mejora/cambia</b> el uso</td><td>= <b>NO entra</b></td><td class=\"star\">★ Queda FUERA del NOI</td></tr>\n<tr><td>Intereses / servicio de deuda</td><td>= <b>NO entra</b></td><td>El NOI es <b>pre-financiamiento</b></td></tr>\n<tr><td>Impuesto a las ganancias</td><td>= <b>NO entra</b></td><td>El NOI es <b>pre-tax</b></td></tr>\n<tr><td>Depreciación</td><td>= <b>NO entra</b></td><td>—</td></tr>\n</table>\n<h2>4 · Direcciones en valuación inmobiliaria <span class=\"lm\">LM2</span></h2>\n<table>\n<tr><th>Cambio</th><th>Cap rate</th><th>Valor</th><th>Otros efectos</th></tr>\n<tr><td>Crecimiento esperado (g) <b>↑</b></td><td class=\"dn\">↓ BAJA</td><td class=\"up\">↑ SUBE</td><td class=\"star\">★ El error clásico: creer que más g sube el cap rate. <b>Cap rate = r − g</b></td></tr>\n<tr><td>Tasa de descuento (r) <b>↑</b></td><td class=\"up\">↑ sube</td><td class=\"dn\">↓ baja</td><td>—</td></tr>\n<tr><td>NOI <b>↑</b></td><td>=</td><td class=\"up\">↑ sube</td><td>V = NOI / cap rate</td></tr>\n<tr><td>Loss to Lease <b>positivo</b> (GRI &lt; GPRI)</td><td>—</td><td>—</td><td class=\"star\">★ Contratos <b>bajo</b> mercado → <b>undersupply</b> → ingreso futuro <b>SUBE</b> al renovar</td></tr>\n<tr><td>Loss to Lease <b>negativo</b> (GRI &gt; GPRI)</td><td>—</td><td>—</td><td>Contratos sobre mercado → <b>oversupply</b> → ingreso futuro <b>CAE</b></td></tr>\n<tr><td>Valor de la propiedad <b>↑</b> (deuda igual)</td><td>—</td><td>—</td><td>LTV <b>↓ baja</b> · equity del dueño <b>↑ sube</b></td></tr>\n<tr><td>Costos operativos <b>↑</b></td><td>—</td><td class=\"dn\">↓ baja</td><td>NOI ↓ → <b>DSC ↓ baja</b></td></tr>\n<tr><td>Contrato <b>NNN</b> (vs gross lease)</td><td>—</td><td>—</td><td>NOI <b>blindado</b> ante inflación (el inquilino absorbe los gastos)</td></tr>\n</table>\n<h2>5 · El ciclo inmobiliario, variable por variable <span class=\"lm\">LM2</span></h2>\n<table>\n<tr><th>Fase</th><th>Interest rates</th><th>NOI</th><th>DSC</th><th>LTV</th></tr>\n<tr><td>Recovery</td><td>Tocan piso, ↑</td><td>Toca piso, ↑</td><td>Toca piso, ↑</td><td class=\"star\">★ En su <b>PICO</b>, empieza a ↓</td></tr>\n<tr><td>Expansion</td><td class=\"up\">↑ subiendo</td><td class=\"up\">↑ subiendo</td><td class=\"up\">↑ sube</td><td class=\"dn\">↓ baja</td></tr>\n<tr><td>Oversupply</td><td class=\"star\">★ <b>PICO</b>, empieza a ↓</td><td class=\"star\">★ <b>PICO</b>, empieza a ↓</td><td class=\"star\">★ <b>PICO</b>, empieza a ↓</td><td class=\"star\">★ Toca <b>PISO</b>, empieza a ↑</td></tr>\n<tr><td>Recession</td><td>Bajo</td><td class=\"dn\">↓ cayendo</td><td class=\"dn\">↓ baja</td><td class=\"up\">↑ sube</td></tr>\n</table>\n<p class=\"ci\">★ <b>Oversupply</b> es la fase que más preguntan: todo hace pico y empieza a darse vuelta, salvo el LTV que toca piso y arranca a subir.</p>\n<h2>6 · Sesgos de índices inmobiliarios <span class=\"lm\">LM2</span></h2>\n<table>\n<tr><th>Efecto del appraisal lag (smoothing)</th><th>Dirección</th><th>Consecuencia práctica</th></tr>\n<tr><td>Volatilidad medida</td><td class=\"dn\">↓ SUBESTIMADA</td><td>El activo parece menos riesgoso de lo que es</td></tr>\n<tr><td>Correlación con otras clases</td><td class=\"dn\">↓ SUBESTIMADA</td><td>Parece mejor diversificador de lo que es</td></tr>\n<tr><td>Sharpe ratio</td><td class=\"up star\">★ ↑ <b>SOBREESTIMADO</b></td><td>Lleva a <b>SOBRE-ASIGNAR</b> a real estate en la optimización</td></tr>\n<tr><td>Corrección</td><td>—</td><td>\"Unsmooth\" el índice o usar uno <b>transaction-based</b></td></tr>\n</table>\n<h2>7 · Signos en FFO, AFFO y NAVPS <span class=\"lm\">LM3</span></h2>\n<table>\n<tr><th>Ítem</th><th>Signo</th><th>Va en</th><th>Nota</th></tr>\n<tr><td>Depreciación y amortización</td><td class=\"up\">+ SUMA</td><td>FFO</td><td>El real estate mantiene/aprecia su valor</td></tr>\n<tr><td><b>Ganancias</b> por venta de inmuebles</td><td class=\"dn star\">★ − <b>RESTA</b></td><td>FFO</td><td>No son income sostenible</td></tr>\n<tr><td><b>Pérdidas</b> por venta de inmuebles</td><td class=\"up star\">★ + <b>SUMA</b></td><td>FFO</td><td>Es el mismo ítem con signo invertido</td></tr>\n<tr><td>Impairments / write-downs</td><td class=\"up\">+ suma</td><td>FFO</td><td>—</td></tr>\n<tr><td>Non-cash (straight-line) rent</td><td class=\"dn\">− resta</td><td>AFFO <b>y</b> NAVPS</td><td>Aparece en los dos cálculos</td></tr>\n<tr><td>Capex de mantenimiento recurrente</td><td class=\"dn\">− resta</td><td>AFFO</td><td>Junto con leasing commissions</td></tr>\n<tr><td>Goodwill · deferred financing costs · deferred tax assets</td><td>= <b>SE EXCLUYEN</b></td><td>NAVPS</td><td>Se busca un valor económico \"duro\"</td></tr>\n<tr><td>Impuestos por liquidación</td><td>= <b>NO se provisionan</b></td><td>NAVPS</td><td class=\"star\">★ El NAVPS es <b>PRE-TAX</b></td></tr>\n<tr><td>Relación FFO / AFFO</td><td colspan=\"3\"><b>AFFO &lt; FFO</b> siempre (el AFFO resta ítems adicionales)</td></tr>\n</table>\n<h2>8 · Direcciones en múltiplos de REITs <span class=\"lm\">LM3</span></h2>\n<table>\n<tr><th>Cambio</th><th>P/FFO y P/AFFO</th><th>EV/EBITDA</th><th>Nota</th></tr>\n<tr><td>Crecimiento esperado de FFO/AFFO <b>↑</b></td><td class=\"up\">↑ múltiplo MÁS ALTO</td><td class=\"up\">↑</td><td>—</td></tr>\n<tr><td><b>Leverage ↑</b></td><td class=\"dn star\">★ ↓ múltiplo MÁS <b>BAJO</b></td><td>= no afectado igual</td><td class=\"star\">★ FFO/AFFO son income <b>apalancado</b>; EV/EBITDA es <b>pre-apalancamiento</b></td></tr>\n<tr><td>Riesgo del real estate o de la estructura de capital <b>↑</b></td><td class=\"dn\">↓ más bajo</td><td class=\"dn\">↓</td><td>—</td></tr>\n<tr><td>Precio <b>&lt;</b> NAVPS</td><td colspan=\"2\"><b>Descuento</b> → posible subvaluación</td><td class=\"star\">★ No es automático: puede justificarse por management, leverage o crecimiento</td></tr>\n<tr><td>Emitir acciones <b>bajo</b> el NAVPS</td><td colspan=\"2\"><b>DILUTIVO</b> para los accionistas existentes</td><td>—</td></tr>\n<tr><td>Relación P/AFFO vs P/FFO</td><td colspan=\"3\"><b>P/AFFO &gt; P/FFO</b> siempre (el denominador AFFO es menor)</td></tr>\n</table>\n<h2>9 · Leverage, vehículo y colas por estrategia HF <span class=\"lm\">LM4</span></h2>\n<table>\n<tr><th>Estrategia</th><th>Leverage</th><th>Vehículo</th><th>Cola / skew</th><th>Contra-intuitivo</th></tr>\n<tr><td>Equity market neutral</td><td class=\"up star\">★ <b>ALTO</b></td><td>LP (límites de leverage en mutual funds)</td><td>Left-tail (por el leverage)</td><td class=\"star\">★ \"Bajo riesgo de mercado\" ≠ bajo leverage</td></tr>\n<tr><td>Long/short equity</td><td>Variable</td><td>LP <b>y</b> liquid alt</td><td>Moderada</td><td>—</td></tr>\n<tr><td>Dedicated short</td><td class=\"dn\">Bajo</td><td>LP</td><td>Correlación <b>negativa</b></td><td>—</td></tr>\n<tr><td>Merger arbitrage</td><td>Moderado-alto</td><td>LP (existen liquid alts low-leverage)</td><td class=\"star\">★ <b>LEFT-TAIL</b> (short put)</td><td class=\"star\">★ Sharpe <b>alto</b> pero con cola izquierda grande</td></tr>\n<tr><td>Distressed</td><td class=\"dn star\">★ <b>MOD-BAJO</b> (1.2–1.7× NAV)</td><td>LP (ilíquido)</td><td><b>Binaria</b> / lumpy</td><td class=\"star\">★ Estrategia agresiva pero con <b>POCO</b> leverage</td></tr>\n<tr><td>Fixed-income arbitrage</td><td class=\"up\">ALTO</td><td>LP</td><td>Left-tail</td><td>El leverage <b>baja</b> con la complejidad del producto</td></tr>\n<tr><td>Convertible arbitrage</td><td class=\"up\">ALTO (300L / 200S)</td><td>LP</td><td>Left-tail</td><td class=\"star\">★ El short es <b>menor</b> que el long (delta-ajustado)</td></tr>\n<tr><td>Global macro</td><td class=\"up\">ALTO</td><td>LP <b>y</b> liquid alt</td><td>Heterogénea</td><td><b>Discrecional</b></td></tr>\n<tr><td>Managed futures</td><td class=\"up\">ALTO</td><td>LP <b>y</b> liquid alt</td><td class=\"up star\">★ <b>RIGHT-TAIL</b> (crisis alpha)</td><td><b>Sistemático</b></td></tr>\n<tr><td>Volatility trading</td><td>Variable</td><td>LP</td><td>Long-vol: right-tail · Short-vol: left-tail</td><td>—</td></tr>\n<tr><td>Reinsurance / life settlements</td><td class=\"dn\">Bajo</td><td>LP (muy ilíquido)</td><td><b>No correlacionada</b></td><td>—</td></tr>\n<tr><td>Fund-of-funds</td><td class=\"dn\">Bajo-moderado</td><td>FoF</td><td>Suavizada</td><td class=\"star\">★ Netting risk lo carga el <b>INVERSOR</b></td></tr>\n<tr><td>Multi-strategy</td><td class=\"up\">ALTO</td><td>LP</td><td>Tail risk por leverage</td><td class=\"star\">★ Netting risk lo absorbe el <b>GP</b></td></tr>\n</table>\n<h2>10 · Efecto de agregar hedge funds a un portafolio <span class=\"lm\">LM4</span></h2>\n<table>\n<tr><th>Métrica</th><th>Dirección al pasar de 60/40 a 48/32/20</th><th>Nota</th></tr>\n<tr><td>Desvío estándar</td><td class=\"dn\">↓ BAJA</td><td>Efecto diversificador</td></tr>\n<tr><td>Sharpe ratio</td><td class=\"up\">↑ SUBE</td><td>Return enhancer + diversifier</td></tr>\n<tr><td>Sortino ratio</td><td class=\"up\">↑ SUBE</td><td>Mejora también el riesgo a la baja</td></tr>\n<tr><td>Max drawdown</td><td class=\"dn\">↓ a menudo baja</td><td>Depende de las estrategias elegidas</td></tr>\n<tr><td>Retorno de liquid alts vs HF tradicional</td><td class=\"dn star\">★ ↓ <b>100–200 bps MENOS</b> por año</td><td class=\"star\">★ Evidencia de la <b>prima de iliquidez</b></td></tr>\n</table>\n<div class=\"warn\">\n<b>Los 6 signos que más se equivocan</b>\n1) <b>Roll return</b>: positivo en backwardation, negativo en contango (no al revés).  \n2) <b>Cap rate = r − g</b>: más crecimiento → cap rate MÁS BAJO → valor MÁS ALTO.  \n3) <b>FFO resta las ganancias</b> de venta (y suma las pérdidas).  \n4) <b>Más leverage → P/FFO MÁS BAJO</b>.  \n5) <b>Smoothing SOBREESTIMA el Sharpe</b> (aunque subestime la volatilidad).  \n6) <b>Loss to Lease positivo = upside futuro</b> (contratos por debajo del mercado).\n</div>\n</div>\n<footer><span>CFA® 2026 · L2 · Vol. 8 · Archivo 4/6 — Hoja de signos y direcciones</span><span>★ = efecto contra-intuitivo</span></footer>\n</div>"
+    }
+  ]
+}

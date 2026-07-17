@@ -1,0 +1,867 @@
+{
+  "id": "vol10",
+  "order": 10,
+  "title": "Ethical and Professional Standards",
+  "lms": [
+    {
+      "id": "LM1",
+      "title": "Code of Ethics and Standards of Professional Conduct"
+    },
+    {
+      "id": "LM2",
+      "title": "Guidance for Standards I–VII"
+    }
+  ],
+  "cardTypes": {
+    "concepto": "Concepto",
+    "clasificacion": "Clasificación",
+    "proceso": "Proceso",
+    "metodo": "Método vs método"
+  },
+  "flashcards": [
+    {
+      "id": "vol10-c001",
+      "lm": "LM1",
+      "tipo": "metodo",
+      "q": "¿Diferencia entre <b>Code of Ethics</b> y <b>Standards of Professional Conduct</b>?",
+      "a": "<b>Code</b> = principios <b>aspiracionales</b> de alto nivel (el <i>qué/porqué</i>). <b>Standards</b> = reglas <b>prácticas</b> de conducta que se <i>deben</i> cumplir (el <i>cómo</i>). Se leen como un todo entretejido."
+    },
+    {
+      "id": "vol10-c002",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "¿Cuántos componentes tiene el Code of Ethics y cuántos Standards?",
+      "a": "<b>6</b> componentes en el Code of Ethics · <b>7</b> Standards (I–VII) → 23 sub-standards."
+    },
+    {
+      "id": "vol10-c003",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Componente 5 del Code: ¿cómo termina la frase “Promote the integrity and viability of the global capital markets…”?",
+      "a": "“…<b>for the ultimate benefit of society</b>.” <b>Trampa:</b> las versiones truncadas (“…capital markets.” a secas) son incorrectas."
+    },
+    {
+      "id": "vol10-c004",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿A quiénes obligan el Code &amp; Standards?",
+      "a": "A <b>individuos</b>: CFA Institute members (incl. charterholders) y CFA candidates. Firms/reguladores pueden <i>adoptarlos</i>, pero la obligación es <b>personal</b>."
+    },
+    {
+      "id": "vol10-c005",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "¿Cuáles fueron los <b>3 cambios</b> de las 2023 Revisions?",
+      "a": "<b>1)</b> Nuevo <b>I(E) Competence</b>. <b>2)</b> Revisado <b>V(B)</b>: disclosure de servicios y costos. <b>3)</b> <b>VI(A)</b> renombrado a “Avoid or Disclose Conflicts” (agrega la opción de <i>evitar</i>). Trampa: son 3, no 4."
+    },
+    {
+      "id": "vol10-c006",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué exige el nuevo Standard <b>I(E) Competence</b> (2023)?",
+      "a": "Act with and <b>maintain</b> la competence necesaria para cumplir las responsabilidades profesionales. Formaliza lo que ya pedía el Code."
+    },
+    {
+      "id": "vol10-c007",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué agregó la revisión 2023 al Standard <b>V(B)</b>?",
+      "a": "Disclosure de la <b>nature of the services</b> provistos y los <b>costs to the client</b> asociados a esos servicios."
+    },
+    {
+      "id": "vol10-c008",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué cambió en <b>VI(A)</b> en 2023?",
+      "a": "Se renombró a <b>“Avoid or Disclose Conflicts”</b> y ahora obliga a <b>evitar O disclosear</b> el conflicto. Antes solo pedía disclose."
+    },
+    {
+      "id": "vol10-c009",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "¿Quiénes hacen cumplir el Code &amp; Standards (enforcement)?",
+      "a": "El <b>Board of Governors</b> tiene oversight del <b>Professional Conduct Program (PCP)</b>, que junto con el <b>Disciplinary Review Committee (DRC)</b> —voluntarios charterholders— hacen el enforcement."
+    },
+    {
+      "id": "vol10-c010",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "¿Cuáles son las <b>5 fuentes</b> de inquiry del PCP?",
+      "a": "1) <b>Self-disclosure</b> en el annual Professional Conduct Statement · 2) <b>written complaints</b> · 3) staff vía <b>media/regulatory</b> · 4) <b>proctors</b> el día del examen · 5) análisis post-examen + <b>redes sociales</b>."
+    },
+    {
+      "id": "vol10-c011",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "¿Qué <b>sanciones</b> puede imponer CFA Institute?",
+      "a": "<b>Public censure</b> · <b>suspension</b> de membership/uso de la designación · <b>revocation</b> del charter. Candidates: suspensión o prohibición de seguir en el CFA Program."
+    },
+    {
+      "id": "vol10-c012",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "¿Cuándo va un caso a un <b>panel del DRC</b>?",
+      "a": "Solo si el member/candidate <b>rechaza</b> los cargos y la sanción propuesta. Si los <b>acepta</b>, no hay panel. Trampa: no toda investigación termina en panel."
+    },
+    {
+      "id": "vol10-c013",
+      "lm": "LM1",
+      "tipo": "metodo",
+      "q": "<b>Code &amp; Standards</b> vs <b>Asset Manager Code (AMC)</b>: ¿a quién aplica cada uno?",
+      "a": "Code &amp; Standards → <b>individuos</b>. AMC → <b>firms</b> (asset managers). El AMC cubre 6 áreas: loyalty, investment process, trading, compliance, performance, disclosure."
+    },
+    {
+      "id": "vol10-c014",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Al declarar cumplimiento del Code &amp; Standards, ¿qué frase obligatoria se incluye?",
+      "a": "“…This claim <b>has not been verified by CFA Institute</b>.” CFA Institute <b>no verifica</b> el cumplimiento auto-declarado."
+    },
+    {
+      "id": "vol10-c015",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Si la ley aplicable y el Code &amp; Standards difieren, ¿qué se sigue?",
+      "a": "La <b>más estricta</b> (la que imponga mayor restricción o mayor protección al inversor). La ley es el <b>umbral mínimo</b>."
+    },
+    {
+      "id": "vol10-c016",
+      "lm": "LM1",
+      "tipo": "clasificacion",
+      "q": "Nombrá los 7 Standards (títulos).",
+      "a": "I Professionalism · II Integrity of Capital Markets · III Duties to Clients · IV Duties to Employers · V Investment Analysis, Recommendations &amp; Actions · VI Conflicts of Interest · VII Responsibilities as a CFA Member/Candidate."
+    },
+    {
+      "id": "vol10-c017",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>I(A) Knowledge of the Law</b>: ¿qué exige?",
+      "a": "Cumplir todas las laws/rules/regs aplicables (incl. Code &amp; Standards); en conflicto, la <b>más estricta</b>; <b>no participar</b> y <b>dissociate</b> de violaciones."
+    },
+    {
+      "id": "vol10-c018",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "I(A): ¿cuáles son los pasos para <b>dissociate</b> de una violación?",
+      "a": "Reportar a supervisor/compliance → si no se corrige, <b>alejarse</b>: sacar el nombre de reportes, pedir reasignación, rechazar el cliente; en casos extremos dejar el empleo."
+    },
+    {
+      "id": "vol10-c019",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "I(A): ¿el whistleblowing (reportar al regulador) es obligatorio?",
+      "a": "<b>No</b>, salvo que la ley lo exija. Lo obligatorio es <b>dissociate</b>. <b>CI:</b> tampoco hace falta ser experto en compliance/leyes."
+    },
+    {
+      "id": "vol10-c020",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>I(B) Independence &amp; Objectivity</b>: ¿qué exige?",
+      "a": "Reasonable care/judgment para lograr y mantener independencia y objetividad. No ofrecer/pedir/aceptar gift/benefit que razonablemente comprometa la independencia (propia o ajena)."
+    },
+    {
+      "id": "vol10-c021",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "I(B): ¿son iguales los gifts de un <b>cliente existente</b> que los de un tercero?",
+      "a": "No. Los de un <b>cliente existente</b> (servicio ya prestado) son menos problemáticos, pero igual hay que <b>disclosear al employer</b>. Viajes: usar transporte comercial/propio, no del sponsor. Un token modesto puede ser OK."
+    },
+    {
+      "id": "vol10-c022",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>I(C) Misrepresentation</b>: ¿qué exige y qué incluye el plagio?",
+      "a": "No hacer <b>knowingly</b> misrepresentations. <b>Plagio</b> = usar reportes/modelos/frases de otros sin atribución (incluye omitir la fuente)."
+    },
+    {
+      "id": "vol10-c023",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "I(C): ¿<b>garantizar</b> un retorno específico viola el standard?",
+      "a": "Sí, garantizar un retorno específico en un activo <b>volátil</b> es una misrepresentation. <b>CI:</b> sí se puede usar data de servicios estadísticos <b>reconocidos</b> sin citar."
+    },
+    {
+      "id": "vol10-c024",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>I(D) Misconduct</b>: ¿qué prohibe y sobre qué se enfoca?",
+      "a": "Prohibe dishonesty, fraud o deceit y actos que reflejen adversamente sobre la <b>professional reputation, integrity o competence</b>. Se enfoca en la reputación <b>profesional</b>."
+    },
+    {
+      "id": "vol10-c025",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "I(D): ¿la conducta personal viola siempre el standard?",
+      "a": "<b>CI:</b> conducta personal que no afecta la reputación profesional (ej. una discusión social) normalmente <b>no</b> viola; pero <b>fraud/deceit</b>, aun fuera del trabajo, <b>sí</b> viola."
+    },
+    {
+      "id": "vol10-c026",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>I(E) Competence</b>: ¿el nivel exigido es fijo?",
+      "a": "No. <b>Varía</b> con la naturaleza y complejidad del rol; se evalúa por facts &amp; circumstances. Si el rol se expande, hay que adquirir el nuevo knowledge/skill."
+    },
+    {
+      "id": "vol10-c027",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>II(A) Material Nonpublic Information</b>: ¿qué exige?",
+      "a": "Quien <b>posee</b> MNPI que podría afectar el valor <b>no debe actuar ni causar que otros actúen</b> sobre ella."
+    },
+    {
+      "id": "vol10-c028",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "II(A): ¿cuándo la info es <b>material</b> y cuándo <b>nonpublic</b>?",
+      "a": "<b>Material</b> = afectaría el precio / un investor razonable la querría. <b>Nonpublic</b> = aún no diseminada al mercado."
+    },
+    {
+      "id": "vol10-c029",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué es la <b>Mosaic theory</b> y viola II(A)?",
+      "a": "Combinar info <b>pública</b> + piezas <b>no-materiales nonpublic</b> para una conclusión. <b>NO viola</b>, aunque sea market-moving. <b>CI clásico.</b>"
+    },
+    {
+      "id": "vol10-c030",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "II(A): ¿qué es un <b>firewall</b> y cómo funciona?",
+      "a": "Barrera de información entre áreas; un empleado debe estar de <b>un solo lado</b> a la vez; se apoya en watch/restricted lists y control de comunicaciones interdepartamentales."
+    },
+    {
+      "id": "vol10-c031",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>II(B) Market Manipulation</b>: ¿qué prohibe y cuál es la clave?",
+      "a": "Prácticas que distorsionen precios o inflen el volumen con <b>intent to mislead</b>. Tipos: information-based y transaction-based. <b>CI:</b> la clave es la <b>intención</b>; estrategias legítimas no son manipulación."
+    },
+    {
+      "id": "vol10-c032",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>III(A) Loyalty, Prudence &amp; Care</b>: ¿qué exige?",
+      "a": "Duty of loyalty; reasonable care y prudent judgment; actuar en beneficio del cliente, poniendo su interés por sobre el del employer y el propio."
+    },
+    {
+      "id": "vol10-c033",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "III(A): en un <b>pension plan</b>, ¿quién es el cliente?",
+      "a": "Los <b>beneficiarios</b>, no el sponsor corporativo. <b>CI clásico.</b> Loyalty y proxy voting se ejercen en su interés; los soft dollars deben beneficiar al cliente."
+    },
+    {
+      "id": "vol10-c034",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>III(B) Fair Dealing</b>: ¿qué exige? ¿“fair” = “equal”?",
+      "a": "Tratar <b>fairly y objectively</b> a <b>todos</b> los clientes. <b>CI:</b> “fair” ≠ “equal”: se pueden ofrecer distintos niveles de servicio si se disclosean y están disponibles para todos."
+    },
+    {
+      "id": "vol10-c035",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "III(B): ¿cómo se logra un trato justo al diseminar recomendaciones?",
+      "a": "Limitar cuánta gente sabe antes; acortar el tiempo decisión→difusión; <b>diseminación simultánea</b>; trade allocation pro-rata / first-in, first-out."
+    },
+    {
+      "id": "vol10-c036",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "<b>III(C) Suitability</b>: ¿cuáles son los <b>dos regímenes</b>?",
+      "a": "<b>(1) Advisory:</b> inquiry del cliente + suitability + juicio en el <b>total portfolio</b>; actualizar. <b>(2) Mandate/strategy:</b> solo consistencia con los objetivos del <b>portfolio</b>. No mezclar."
+    },
+    {
+      "id": "vol10-c037",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "III(C): ¿cómo se juzga la suitability de un activo riesgoso?",
+      "a": "En el contexto del <b>total portfolio</b>, no security por security aislada. <b>CI:</b> un activo volátil puede ser suitable dentro del portfolio total."
+    },
+    {
+      "id": "vol10-c038",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "III(C): ¿qué hacer con un <b>unsolicited trade</b> no-suitable?",
+      "a": "Ejecutar solo tras explicar el impacto; si es material, actualizar el IPS o pedir instrucción por escrito, según la política de la firma."
+    },
+    {
+      "id": "vol10-c039",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>III(D) Performance Presentation</b>: ¿qué exige? ¿GIPS es obligatorio?",
+      "a": "Esfuerzos razonables para que el performance sea <b>fair, accurate y complete</b>. <b>CI:</b> <b>GIPS no es obligatorio</b> — es recomendado."
+    },
+    {
+      "id": "vol10-c040",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "<b>III(E) Confidentiality</b>: ¿cuáles son las <b>3 excepciones</b>?",
+      "a": "Romper confidencialidad solo si: (1) info sobre <b>actividad ilegal</b> del cliente, (2) disclosure <b>requerido por ley</b>, (3) el cliente <b>lo permite</b>."
+    },
+    {
+      "id": "vol10-c041",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "III(E): ¿cooperar con una investigación del <b>PCP</b> viola la confidencialidad?",
+      "a": "<b>No.</b> Es un carve-out específico: responder al Professional Conduct Program de CFA Institute no rompe el deber del III(E). <b>CI.</b>"
+    },
+    {
+      "id": "vol10-c042",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>IV(A) Loyalty</b>: ¿qué exige respecto del employer?",
+      "a": "Actuar en beneficio del employer; no privarlo de tus skills, no divulgar info confidencial ni causarle daño."
+    },
+    {
+      "id": "vol10-c043",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "IV(A): al <b>dejar el employer</b>, ¿qué podés y qué no?",
+      "a": "<b>CI:</b> el conocimiento/skill en la <b>memoria</b> es tuyo; los <b>archivos/client lists/records</b> son del employer. Se pueden hacer preparativos, pero no solicitar clientes antes de renunciar."
+    },
+    {
+      "id": "vol10-c044",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "IV(A): ¿cuándo se puede actuar <b>contra</b> el interés del employer (whistleblowing)?",
+      "a": "Solo para proteger la <b>integridad del mercado o de los clientes</b>. Es la excepción al deber de lealtad."
+    },
+    {
+      "id": "vol10-c045",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>IV(B) Additional Compensation</b>: ¿qué exige?",
+      "a": "No aceptar gifts/comp que compitan o creen conflicto con el employer <b>salvo written consent de todas las partes</b>. <b>CI:</b> no alcanza con avisar."
+    },
+    {
+      "id": "vol10-c046",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>IV(C) Responsibilities of Supervisors</b>: ¿qué exige?",
+      "a": "Esfuerzos razonables para que los supervisados cumplan. Incluye <b>detección</b>, no solo prevención. Requiere un sistema de compliance adecuado."
+    },
+    {
+      "id": "vol10-c047",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "IV(C): ¿qué hacer si el sistema de compliance es <b>inadecuado</b>?",
+      "a": "<b>Declinar por escrito</b> el rol de supervisión hasta que se corrija. <b>CI:</b> se puede delegar, pero la responsabilidad se <b>retiene</b>."
+    },
+    {
+      "id": "vol10-c048",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>V(A) Diligence &amp; Reasonable Basis</b>: ¿qué exige?",
+      "a": "(1) Diligencia, independencia y thoroughness. (2) <b>Reasonable and adequate basis</b>, apoyada en research apropiado, para todo análisis/recomendación/acción."
+    },
+    {
+      "id": "vol10-c049",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "V(A): ¿podés usar <b>third-party research</b>? ¿y quedar en un group report con el que no coincidís?",
+      "a": "Third-party: sí, pero hay que <b>verificar su solidez</b>. <b>CI:</b> tu nombre puede quedar en un group report con cuya conclusión no coincidís si el basis es razonable — no hace falta disentir públicamente."
+    },
+    {
+      "id": "vol10-c050",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>V(B) Communication w/ Clients</b>: ¿qué debe disclosearse?",
+      "a": "<b>Nature of services + costs</b> (2023), el investment process (y sus cambios), risks &amp; limitations; distinguir <b>fact vs opinion</b>; identificar los factores importantes."
+    },
+    {
+      "id": "vol10-c051",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>V(C) Record Retention</b>: ¿de quién son los records y cuánto se retienen?",
+      "a": "Son <b>propiedad de la firma</b> (no se llevan al cambiar de empleo). Sin requisito local, CFA Institute recomienda <b>7 años</b>."
+    },
+    {
+      "id": "vol10-c052",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>VI(A) Avoid or Disclose Conflicts</b> (2023): ¿qué exige?",
+      "a": "<b>Evitar</b> o hacer <b>full and fair disclosure</b> de todo conflicto que afecte independencia/objetividad y duties. La disclosure debe ser <b>prominente, en plain language y efectiva</b>."
+    },
+    {
+      "id": "vol10-c053",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "VI(A): ¿ser <b>board member</b> crea conflicto?",
+      "a": "Sí — dual duties. Hay que disclosear y gestionarlo. <b>CI 2023:</b> ahora existe la opción de <b>evitar</b> el conflicto, no solo disclosearlo."
+    },
+    {
+      "id": "vol10-c054",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>VI(B) Priority of Transactions</b>: ¿qué exige?",
+      "a": "Las transacciones de <b>clients y employer</b> tienen <b>prioridad</b> sobre aquellas donde el member es <b>beneficial owner</b>. Se usan blackout/restricted periods."
+    },
+    {
+      "id": "vol10-c055",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "VI(B): ¿cómo se trata una <b>cuenta familiar</b>?",
+      "a": "<b>CI:</b> si el member tiene beneficial interest → se trata como <b>personal</b>. Si es una cuenta familiar <b>fee-paying</b> como cualquier cliente → <b>no</b> discriminarla."
+    },
+    {
+      "id": "vol10-c056",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>VI(C) Referral Fees</b>: ¿qué y cuándo hay que disclosear?",
+      "a": "Disclosear a employer, clients y prospective clients toda comp <b>recibida o pagada</b> por recomendar productos/servicios. <b>CI:</b> antes/al momento del referral, e incluir la <b>naturaleza</b> del fee."
+    },
+    {
+      "id": "vol10-c057",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>VII(A) Conduct in CFA Programs</b>: ¿qué se puede y qué no?",
+      "a": "<b>CI:</b> <b>Sí</b> se puede expresar una opinión personal sobre CFA Institute/sus políticas. <b>No</b> se puede revelar contenido del examen ni violar las reglas de confidencialidad del día del examen."
+    },
+    {
+      "id": "vol10-c058",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "<b>VII(B) Reference to CFA</b>: ¿cómo se usa correctamente “CFA”?",
+      "a": "“CFA” es un <b>adjetivo</b>: “Jane Smith, CFA” ✓ / “Jane es una CFA” ✗. No designación parcial (“CFA Level II”), no implicar performance superior; “CFA candidate” solo si estás inscripto y rindiendo."
+    },
+    {
+      "id": "vol10-c059",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "VII(B): ¿qué prohibe exactamente?",
+      "a": "<b>Misrepresentar o exagerar</b> el significado o las implicaciones de la membership, la designación o la candidatura en el CFA Program."
+    },
+    {
+      "id": "vol10-c060",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "¿Qué dos elementos combina la Mosaic theory que la hacen lícita?",
+      "a": "Información <b>pública</b> + información <b>no-material nonpublic</b>. Si alguna pieza es material Y nonpublic, deja de ser mosaic y pasa a violar II(A)."
+    },
+    {
+      "id": "vol10-c061",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "VI(B): ¿qué son los <b>blackout/restricted periods</b>?",
+      "a": "Períodos en que el investment personnel involucrado en la decisión <b>no puede</b> operar el security para su cuenta, para que el trade del cliente tenga prioridad."
+    },
+    {
+      "id": "vol10-c062",
+      "lm": "LM2",
+      "tipo": "metodo",
+      "q": "III(C): advisory relationship vs managing to a mandate — ¿qué se compara la suitability contra?",
+      "a": "Advisory → contra la situación y objetivos del <b>cliente individual</b> (total portfolio). Mandate → contra los objetivos declarados del <b>portfolio/estrategia</b>, no del cliente."
+    },
+    {
+      "id": "vol10-c063",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué documento guía la interpretación del Code &amp; Standards?",
+      "a": "El <b>Standards of Practice Handbook</b>, con las secciones Guidance, Recommended Procedures y Application of the Standard."
+    },
+    {
+      "id": "vol10-c064",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "I(B): ¿qué problema plantea el <b>issuer-paid research</b>?",
+      "a": "Riesgo de sesgo a favor del emisor que paga. Se debe mantener objetividad, limitar la compensación a un flat fee y <b>disclosear</b> la relación; no atar el pago al resultado del rating."
+    },
+    {
+      "id": "vol10-c065",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "II(A): ¿usar <b>industry experts</b> (expert networks) viola el standard?",
+      "a": "No en sí mismo. Es válido <b>si</b> el experto no transmite MNPI. Actuar sobre MNPI obtenida por esa vía sí viola."
+    },
+    {
+      "id": "vol10-c066",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "V(B): ¿hay que distinguir hecho de opinión?",
+      "a": "Sí — en la presentación de análisis y recomendaciones hay que <b>distinguir fact vs opinion</b> y disclosear cambios materiales del proceso <b>promptly</b>."
+    },
+    {
+      "id": "vol10-c067",
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "¿Qué puede resolver el staff del PCP tras investigar, sin llegar a panel?",
+      "a": "Cerrar sin sanción, emitir una <b>cautionary letter</b>, o proponer cargos/sanciones (que el member puede aceptar — sin panel — o rechazar → panel del DRC)."
+    },
+    {
+      "id": "vol10-c068",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "IV(A): ¿la <b>independent practice</b> mientras se está empleado está permitida?",
+      "a": "Se permite prepararse, pero realizar independent practice que compita con el employer requiere su <b>consentimiento</b> (notificación de tipos de servicios, remuneración esperada, duración)."
+    }
+  ],
+  "traps": [
+    {
+      "id": "vol10-t-lm1-01",
+      "lm": "LM1",
+      "star": true,
+      "title": "“Ultimate benefit of society” va completo",
+      "body": "El 5º componente del Code termina <b>obligatoriamente</b> en “for the ultimate benefit of society”. Las versiones truncadas son incorrectas."
+    },
+    {
+      "id": "vol10-t-lm1-02",
+      "lm": "LM1",
+      "star": true,
+      "title": "Code → individuos; AMC → firms",
+      "body": "El Code &amp; Standards obligan a <b>individuos</b> (members/candidates). El <b>Asset Manager Code</b> aplica a <b>firms</b>. Firms pueden <i>adoptar</i> el Code, pero la obligación es personal."
+    },
+    {
+      "id": "vol10-t-lm1-03",
+      "lm": "LM1",
+      "star": true,
+      "title": "Exactamente 3 cambios en 2023",
+      "body": "<b>Uno nuevo</b> [I(E) Competence] + <b>dos revisados</b> [V(B) costos/servicios; VI(A) “avoid or disclose”]. No son cuatro; VI(A) no se eliminó, se renombró y amplió."
+    },
+    {
+      "id": "vol10-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "No toda investigación llega a panel del DRC",
+      "body": "El panel del DRC solo interviene si el member/candidate <b>rechaza</b> cargos y sanción. Si los acepta, se cierra sin panel; el staff también puede emitir una cautionary letter."
+    },
+    {
+      "id": "vol10-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "El claim de compliance no está verificado",
+      "body": "Toda declaración de cumplimiento incluye “This claim has <b>not been verified</b> by CFA Institute”. CFA Institute no verifica el cumplimiento auto-declarado."
+    },
+    {
+      "id": "vol10-t-lm1-06",
+      "lm": "LM1",
+      "star": false,
+      "title": "Aspiracional (Code) vs práctico (Standards)",
+      "body": "El <b>Code</b> son principios aspiracionales de alto nivel; los <b>Standards</b> son reglas prácticas de conducta. La pregunta suele pedir uno u otro por su naturaleza."
+    },
+    {
+      "id": "vol10-t-lm2-01",
+      "lm": "LM2",
+      "star": true,
+      "title": "Mosaic theory NO viola II(A)",
+      "body": "Combinar info <b>pública</b> + piezas <b>no-materiales nonpublic</b> —aunque mueva el mercado— no es violación. Solo viola actuar sobre info material <b>y</b> nonpublic."
+    },
+    {
+      "id": "vol10-t-lm2-02",
+      "lm": "LM2",
+      "star": true,
+      "title": "“Fair” no significa “equal” [III(B)]",
+      "body": "Se permiten distintos niveles de servicio si se <b>disclosean</b> y están <b>disponibles para todos</b>. Lo prohibido es la diseminación <b>selectiva</b> que perjudica a unos clientes."
+    },
+    {
+      "id": "vol10-t-lm2-03",
+      "lm": "LM2",
+      "star": true,
+      "title": "Suitability en el total portfolio [III(C)]",
+      "body": "Un activo riesgoso aislado puede ser <b>suitable</b> dentro del portfolio total. Además, no mezclar los dos regímenes: advisory (cliente) vs. managing to a mandate (objetivos del portfolio)."
+    },
+    {
+      "id": "vol10-t-lm2-04",
+      "lm": "LM2",
+      "star": true,
+      "title": "El cliente real en un pension plan [III(A)]",
+      "body": "El cliente son los <b>beneficiarios</b>, no el sponsor corporativo. Loyalty y proxy voting se ejercen en su interés."
+    },
+    {
+      "id": "vol10-t-lm2-05",
+      "lm": "LM2",
+      "star": true,
+      "title": "Al dejar el employer: memoria sí, archivos no [IV(A)]",
+      "body": "Podés usar el <b>conocimiento/skills</b> de la memoria y hacer preparativos; no llevarte client lists/records ni solicitar clientes antes de renunciar. Los records son de la firma [V(C)]."
+    },
+    {
+      "id": "vol10-t-lm2-06",
+      "lm": "LM2",
+      "star": true,
+      "title": "“CFA” es adjetivo [VII(B)]",
+      "body": "“Jane Smith, CFA” ✓. “a CFA” / “CFA Level II” ✗. No implicar performance superior. “CFA candidate” solo si inscripto/rindiendo."
+    },
+    {
+      "id": "vol10-t-lm2-07",
+      "lm": "LM2",
+      "star": false,
+      "title": "Whistleblowing casi nunca es obligatorio [I(A)]",
+      "body": "Reportar al regulador solo es obligatorio si la ley lo exige. Lo obligatorio es <b>dissociate</b> (reportar interno → alejarse si no se corrige)."
+    },
+    {
+      "id": "vol10-t-lm2-08",
+      "lm": "LM2",
+      "star": false,
+      "title": "Cooperar con el PCP no viola confidencialidad [III(E)]",
+      "body": "Responder a una investigación del Professional Conduct Program es un carve-out del deber del III(E)."
+    },
+    {
+      "id": "vol10-t-lm2-09",
+      "lm": "LM2",
+      "star": false,
+      "title": "Supervisor: delega pero no se libera [IV(C)]",
+      "body": "Se delega, pero la responsabilidad se <b>retiene</b>. Si el sistema de compliance es inadecuado, hay que <b>declinar por escrito</b> el rol hasta corregirlo."
+    },
+    {
+      "id": "vol10-t-lm2-10",
+      "lm": "LM2",
+      "star": false,
+      "title": "Additional comp: consent escrito de TODAS las partes [IV(B)]",
+      "body": "Un bono/regalo de un cliente por desempeño requiere <b>written consent de todas las partes</b> (cliente y employer), no solo avisar."
+    },
+    {
+      "id": "vol10-t-lm2-11",
+      "lm": "LM2",
+      "star": false,
+      "title": "Cuenta familiar fee-paying = como cualquier cliente [VI(B)]",
+      "body": "Si un familiar paga fees como cualquier cliente, <b>no</b> se subordina su cuenta. Solo se trata como personal si el member tiene beneficial ownership."
+    },
+    {
+      "id": "vol10-t-lm2-12",
+      "lm": "LM2",
+      "star": false,
+      "title": "Referral fees: disclosure previo y de la naturaleza [VI(C)]",
+      "body": "Disclosear <b>antes/al momento</b> del referral y precisar la naturaleza del fee (fijo, %, en especie). El disclosure posterior no cumple el propósito."
+    },
+    {
+      "id": "vol10-t-lm2-13",
+      "lm": "LM2",
+      "star": false,
+      "title": "Garantizar retornos = misrepresentation [I(C)]",
+      "body": "No se puede <b>garantizar</b> un retorno específico en un activo volátil. Sí se puede usar data de servicios estadísticos reconocidos sin citar."
+    },
+    {
+      "id": "vol10-t-lm2-14",
+      "lm": "LM2",
+      "star": false,
+      "title": "GIPS no es obligatorio [III(D)]",
+      "body": "Cumplir III(D) (performance fair/accurate/complete) <b>no</b> requiere GIPS; GIPS es recomendado."
+    }
+  ],
+  "problems": [
+    {
+      "id": "vol10-p01",
+      "lm": "LM2",
+      "title": "Analista y expert network",
+      "given": "Una analista contrata a un consultor de una red de expertos. El consultor, empleado actual de una empresa cotizada, le adelanta que la compañía reportará ganancias muy por encima del consenso la semana próxima. La analista compra el activo para sus clientes.",
+      "ask": "¿Viola algún standard? ¿Cuál y por qué?",
+      "answer": "<b>VIOLA Standard II(A)</b> Material Nonpublic Information: actuó sobre info material y nonpublic.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Identificar la info: earnings aún no reportados = <b>nonpublic</b>; muy por encima del consenso = <b>material</b>.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Es MNPI. El uso de expert networks es lícito, pero solo si el experto <b>no</b> transmite MNPI.</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Acá el consultor sí transmitió MNPI y la analista actuó.</span></div><div class=\"res\"><b>VIOLA Standard II(A)</b> Material Nonpublic Information: actuó sobre info material y nonpublic.</div><div class=\"warn\">No confundir con mosaic theory: acá una única pieza es material Y nonpublic, no una síntesis de piezas públicas/no-materiales.</div>"
+    },
+    {
+      "id": "vol10-p02",
+      "lm": "LM2",
+      "title": "Mosaic",
+      "given": "Un analista reúne datos públicos (filings, precios de insumos) y comentarios <b>no-materiales</b> de proveedores y clientes de una empresa. Combinándolos concluye que la empresa superará al consenso y publica una recomendación de compra que mueve el precio.",
+      "ask": "¿Viola algún standard?",
+      "answer": "<b>NO VIOLA.</b> Es mosaic theory, conducta permitida bajo II(A).",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Ninguna pieza individual es a la vez material y nonpublic.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>La conclusión es producto de <b>análisis</b> (mosaic theory), aunque mueva el mercado.</span></div><div class=\"res\"><b>NO VIOLA.</b> Es mosaic theory, conducta permitida bajo II(A).</div><div class=\"warn\">El examen presenta esto junto al caso de MNPI real para confundir: la clave es si alguna pieza es material Y nonpublic.</div>"
+    },
+    {
+      "id": "vol10-p03",
+      "lm": "LM2",
+      "title": "Group report en desacuerdo",
+      "given": "Un miembro de un equipo de research no coincide con la conclusión final del reporte grupal, pero el proceso de investigación fue riguroso y tiene una base razonable. Su nombre figura como parte del equipo.",
+      "ask": "¿Debe pedir que saquen su nombre para no violar V(A)?",
+      "answer": "<b>NO VIOLA V(A).</b> No necesita sacar su nombre ni disentir públicamente.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>V(A) exige reasonable and adequate basis, no unanimidad.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Si el reporte tiene base razonable, el miembro puede quedar asociado aunque discrepe.</span></div><div class=\"res\"><b>NO VIOLA V(A).</b> No necesita sacar su nombre ni disentir públicamente.</div><div class=\"warn\">Gotcha: intuitivamente uno cree que “no estar de acuerdo” obliga a disociarse; falso si el basis es razonable.</div>"
+    },
+    {
+      "id": "vol10-p04",
+      "lm": "LM2",
+      "title": "Regalo de un cliente",
+      "given": "Un gestor recibe de un <b>cliente existente</b>, tras un año de buen servicio, una invitación a un fin de semana en su casa de campo. El gestor lo comunica por escrito a su employer.",
+      "ask": "¿Viola I(B)?",
+      "answer": "<b>NO VIOLA</b> (con disclosure). Los gifts de clientes existentes se permiten si se disclosean al employer.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Regalo/beneficio de un <b>cliente existente</b> (servicio ya prestado) es menos problemático que de un tercero.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Lo disclosó al employer.</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>No hay indicio de que comprometa la objetividad hacia otros clientes.</span></div><div class=\"res\"><b>NO VIOLA</b> (con disclosure). Los gifts de clientes existentes se permiten si se disclosean al employer.</div><div class=\"warn\">Distinto sería un beneficio de una empresa <b>bajo análisis</b> o atado a resultados futuros: ahí sí comprometería la independencia.</div>"
+    },
+    {
+      "id": "vol10-p05",
+      "lm": "LM2",
+      "title": "Bono de un cliente sin consentimiento",
+      "given": "Un portfolio manager acepta de un cliente un bono en efectivo por superar el benchmark, sin avisar ni pedir permiso a su employer.",
+      "ask": "¿Viola algún standard?",
+      "answer": "<b>VIOLA Standard IV(B)</b> Additional Compensation Arrangements: faltó el consentimiento escrito de todas las partes.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Es additional compensation que compite/crea conflicto con el interés del employer.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>IV(B) exige <b>written consent de todas las partes</b> antes de aceptar.</span></div><div class=\"res\"><b>VIOLA Standard IV(B)</b> Additional Compensation Arrangements: faltó el consentimiento escrito de todas las partes.</div><div class=\"warn\">No alcanza con “avisar” después: el consent debe ser previo y de <b>todas</b> las partes.</div>"
+    },
+    {
+      "id": "vol10-p06",
+      "lm": "LM2",
+      "title": "Dejar el employer",
+      "given": "Antes de renunciar, una analista arma en su casa una base con nombres y contactos de clientes del employer para llevárselos, y copia modelos de research de la firma.",
+      "ask": "¿Viola IV(A)?",
+      "answer": "<b>VIOLA Standard IV(A)</b> Loyalty (y se vincula con V(C) Record Retention).",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Client lists, contactos y research son <b>propiedad de la firma</b>.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Copiarlos/llevárselos es misappropriation; solicitar clientes antes de irse también viola.</span></div><div class=\"res\"><b>VIOLA Standard IV(A)</b> Loyalty (y se vincula con V(C) Record Retention).</div><div class=\"warn\">Sí podría usar el <b>conocimiento/skills</b> de su memoria en el nuevo empleo; lo prohibido es llevarse archivos/listas.</div>"
+    },
+    {
+      "id": "vol10-p07",
+      "lm": "LM2",
+      "title": "Suitability de un activo riesgoso",
+      "given": "Un asesor incorpora una posición pequeña en un activo volátil de alto retorno esperado a la cartera de un cliente conservador, dentro de un portfolio globalmente diversificado y consistente con el IPS firmado.",
+      "ask": "¿Viola III(C)?",
+      "answer": "<b>NO VIOLA III(C).</b> El activo puede ser suitable dentro del portfolio total.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>La suitability se juzga en el contexto del <b>total portfolio</b>, no security por security.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>La posición es pequeña, diversificada y consistente con el IPS.</span></div><div class=\"res\"><b>NO VIOLA III(C).</b> El activo puede ser suitable dentro del portfolio total.</div><div class=\"warn\">Gotcha: aislar el activo (“es riesgoso, luego no suitable”) es el error; se evalúa el impacto en el portfolio completo.</div>"
+    },
+    {
+      "id": "vol10-p08",
+      "lm": "LM2",
+      "title": "Diseminación selectiva",
+      "given": "Un analista publica un cambio de recomendación a “buy”. Lo comunica primero por teléfono a tres clientes institucionales grandes y recién al día siguiente al resto de la cartera.",
+      "ask": "¿Viola algún standard?",
+      "answer": "<b>VIOLA Standard III(B)</b> Fair Dealing: diseminación selectiva.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>III(B) exige trato fair a todos al diseminar recomendaciones.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Dar ventaja temporal a algunos clientes perjudica a los demás.</span></div><div class=\"res\"><b>VIOLA Standard III(B)</b> Fair Dealing: diseminación selectiva.</div><div class=\"warn\">“Fair” no obliga a servicio idéntico, pero sí a que la <b>diseminación</b> de recomendaciones sea simultánea/justa.</div>"
+    },
+    {
+      "id": "vol10-p09",
+      "lm": "LM2",
+      "title": "Tiers de servicio disclosados",
+      "given": "Una firma ofrece un servicio “premium” con research más frecuente a clientes que pagan una tarifa mayor. El tier está <b>disclosado</b> y <b>disponible</b> para cualquier cliente que quiera contratarlo.",
+      "ask": "¿Viola III(B)?",
+      "answer": "<b>NO VIOLA III(B).</b> Los tiers de servicio son lícitos si se disclosean y están disponibles a todos.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>“Fair” ≠ “equal”: se permiten distintos niveles de servicio.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Está disclosado y disponible para todos.</span></div><div class=\"res\"><b>NO VIOLA III(B).</b> Los tiers de servicio son lícitos si se disclosean y están disponibles a todos.</div><div class=\"warn\">El límite: no puede haber diseminación selectiva que dé ventaja de <b>tiempo</b> en la misma recomendación.</div>"
+    },
+    {
+      "id": "vol10-p10",
+      "lm": "LM2",
+      "title": "Cliente real: pension plan",
+      "given": "Un gestor de un plan de pensiones corporativo recibe presión del CFO del sponsor para votar los proxies a favor del management de una empresa del portfolio, en contra del interés económico de los beneficiarios.",
+      "ask": "¿ A quién le debe lealtad y qué debe hacer?",
+      "answer": "<b>Debe votar en interés de los beneficiarios</b>; ceder a la presión del sponsor <b>VIOLA III(A)</b>.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>En un pension plan, el cliente son los <b>beneficiarios</b>, no el sponsor.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>El proxy voting se ejerce en interés económico de los beneficiarios.</span></div><div class=\"res\"><b>Debe votar en interés de los beneficiarios</b>; ceder a la presión del sponsor <b>VIOLA III(A)</b>.</div><div class=\"warn\">Gotcha clásico: el “cliente” parece la empresa que contrata, pero es el beneficiario del plan.</div>"
+    },
+    {
+      "id": "vol10-p11",
+      "lm": "LM2",
+      "title": "Cooperar con el PCP",
+      "given": "Durante una investigación del Professional Conduct Program de CFA Institute, se le pide a un member información que involucra datos de un cliente pertinentes al caso. El member la aporta.",
+      "ask": "¿Viola III(E) Confidentiality?",
+      "answer": "<b>NO VIOLA III(E).</b> Cooperar con el PCP no rompe el deber de confidencialidad.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>III(E) protege la confidencialidad del cliente…</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>…pero cooperar con una investigación del PCP es un <b>carve-out</b> reconocido.</span></div><div class=\"res\"><b>NO VIOLA III(E).</b> Cooperar con el PCP no rompe el deber de confidencialidad.</div><div class=\"warn\">Gotcha: parece un breach de confidencialidad, pero el PCP es una excepción específica.</div>"
+    },
+    {
+      "id": "vol10-p12",
+      "lm": "LM2",
+      "title": "Supervisor con sistema inadecuado",
+      "given": "A un member le ofrecen un rol de supervisión. Detecta que la firma <b>no tiene</b> un sistema de compliance adecuado para monitorear al equipo. Acepta igual el rol y “hace lo que puede”.",
+      "ask": "¿Viola IV(C)?",
+      "answer": "<b>VIOLA Standard IV(C)</b>: aceptó supervisar sin un sistema adecuado en lugar de declinar por escrito.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>IV(C) exige un sistema de supervisión adecuado (con detección).</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Si el sistema es inadecuado, debe <b>declinar por escrito</b> el rol hasta que se corrija.</span></div><div class=\"res\"><b>VIOLA Standard IV(C)</b>: aceptó supervisar sin un sistema adecuado en lugar de declinar por escrito.</div><div class=\"warn\">Delegar es válido, pero “hacer lo que se pueda” con un sistema inadecuado no cumple el deber.</div>"
+    },
+    {
+      "id": "vol10-p13",
+      "lm": "LM2",
+      "title": "Front-running",
+      "given": "Un gestor decide comprar un activo para varias cuentas de clientes. Antes de ejecutar esas órdenes, compra el mismo activo en su cuenta personal.",
+      "ask": "¿Viola algún standard?",
+      "answer": "<b>VIOLA Standard VI(B)</b> Priority of Transactions.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>VI(B) da <b>prioridad</b> a las transacciones de clientes/employer sobre las del beneficial owner.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Operar la cuenta propia antes = front-running.</span></div><div class=\"res\"><b>VIOLA Standard VI(B)</b> Priority of Transactions.</div><div class=\"warn\">Se corrige con blackout/restricted periods para el investment personnel.</div>"
+    },
+    {
+      "id": "vol10-p14",
+      "lm": "LM2",
+      "title": "Cuenta familiar fee-paying",
+      "given": "Un asesor gestiona la cuenta de su hermana, que paga las mismas fees que cualquier cliente. Para “evitar la apariencia de conflicto”, sistemáticamente la ejecuta <b>última</b>, después de todos los demás.",
+      "ask": "¿Es correcto?",
+      "answer": "<b>Incorrecto — VIOLA</b> el trato fair: debió tratarla como a cualquier cliente, no subordinarla.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Una cuenta familiar <b>fee-paying</b> es como cualquier cliente.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Subordinarla sistemáticamente la <b>perjudica</b> (discriminación).</span></div><div class=\"res\"><b>Incorrecto — VIOLA</b> el trato fair: debió tratarla como a cualquier cliente, no subordinarla.</div><div class=\"warn\">Solo se trata como “personal” si el member tiene <b>beneficial ownership</b> en la cuenta.</div>"
+    },
+    {
+      "id": "vol10-p15",
+      "lm": "LM2",
+      "title": "Referral fee revelado tarde",
+      "given": "Un asesor deriva clientes a un abogado tributario que le paga una comisión por cada referido. Se lo cuenta a los clientes <b>después</b> de que contrataron al abogado.",
+      "ask": "¿Viola VI(C)?",
+      "answer": "<b>VIOLA Standard VI(C)</b> Referral Fees: el disclosure llegó tarde.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>VI(C) exige disclosear referral fees a clients/prospects…</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>…<b>antes/al momento</b> del referral, para que el cliente evalúe el sesgo.</span></div><div class=\"res\"><b>VIOLA Standard VI(C)</b> Referral Fees: el disclosure llegó tarde.</div><div class=\"warn\">Además hay que revelar la <b>naturaleza</b> del fee (fijo, %, en especie).</div>"
+    },
+    {
+      "id": "vol10-p16",
+      "lm": "LM2",
+      "title": "Garantía de retorno",
+      "given": "Para cerrar una venta, un asesor le dice a un prospecto que un fondo de acciones “garantiza al menos 6% anual, como siempre lo ha hecho”.",
+      "ask": "¿Viola algún standard?",
+      "answer": "<b>VIOLA Standard I(C)</b> Misrepresentation.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Garantizar un retorno en un activo <b>volátil</b> es una misrepresentation.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>El performance pasado no garantiza el futuro.</span></div><div class=\"res\"><b>VIOLA Standard I(C)</b> Misrepresentation.</div><div class=\"warn\">Sí se pueden comunicar retornos <b>garantizados contractualmente</b> por el propio instrumento (ej. ciertos productos), pero no “garantizar” equity.</div>"
+    },
+    {
+      "id": "vol10-p17",
+      "lm": "LM2",
+      "title": "Uso de “CFA”",
+      "given": "Un charterholder imprime tarjetas que dicen “María Pérez, <b>CFA</b>”. Un colega candidato de Nivel II, inscripto y por rendir, se presenta como “CFA Level II candidate”. Un tercero pone “Juan, <b>a CFA</b>, con mejor performance que otros asesores”.",
+      "ask": "¿Quién(es) viola(n) VII(B)?",
+      "answer": "<b>Solo el tercero VIOLA VII(B)</b>: usa “CFA” como sustantivo e implica performance superior.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>“María Pérez, CFA” → uso correcto (adjetivo). OK.</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>“CFA Level II candidate” inscripto/rindiendo → referencia correcta a la candidatura. OK.</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>“a CFA” (sustantivo) + implicar performance superior → viola.</span></div><div class=\"res\"><b>Solo el tercero VIOLA VII(B)</b>: usa “CFA” como sustantivo e implica performance superior.</div><div class=\"warn\">“CFA” es adjetivo; no hay designación parcial; no se puede implicar mejor desempeño por tener la designación.</div>"
+    },
+    {
+      "id": "vol10-p18",
+      "lm": "LM1",
+      "title": "3 cambios de 2023",
+      "given": "En un item-set te preguntan cuántos y cuáles fueron los cambios de las 2023 Revisions. Una opción dice “cuatro cambios, incluyendo la eliminación de VI(A)”.",
+      "ask": "¿Es correcta esa opción?",
+      "answer": "<b>Incorrecta.</b> Son 3 cambios y VI(A) no se eliminó.",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Fueron <b>3</b>: I(E) nuevo, V(B) revisado (costos/servicios), VI(A) revisado (avoid-or-disclose).</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>VI(A) no se eliminó: se <b>renombró y amplió</b>.</span></div><div class=\"res\"><b>Incorrecta.</b> Son 3 cambios y VI(A) no se eliminó.</div><div class=\"warn\">Distractor típico: inflar el número de cambios o describir mal el de VI(A).</div>"
+    }
+  ],
+  "highlights": [
+    {
+      "rank": 1,
+      "title": "Mosaic theory NO viola [II(A)]",
+      "body": "Público + no-material nonpublic = OK, aunque mueva el mercado."
+    },
+    {
+      "rank": 2,
+      "title": "“Fair” ≠ “equal” [III(B)]",
+      "body": "Niveles de servicio distintos OK si se disclosean y están disponibles a todos."
+    },
+    {
+      "rank": 3,
+      "title": "Suitability en el total portfolio [III(C)]",
+      "body": "Activo riesgoso puede ser suitable en el portfolio total; no mezclar los 2 regímenes."
+    },
+    {
+      "rank": 4,
+      "title": "Cliente real = beneficiarios [III(A)]",
+      "body": "En un pension plan, no el sponsor corporativo."
+    },
+    {
+      "rank": 5,
+      "title": "Memoria sí, archivos no [IV(A)/V(C)]",
+      "body": "Al irse: knowledge de la memoria sí; client lists/records no (son de la firma)."
+    },
+    {
+      "rank": 6,
+      "title": "“CFA” es adjetivo [VII(B)]",
+      "body": "“Jane Smith, CFA” sí; “a CFA” / “CFA Level II” no."
+    },
+    {
+      "rank": 7,
+      "title": "3 cambios en 2023 [LM1]",
+      "body": "I(E) nuevo; V(B) costos/servicios; VI(A) avoid-or-disclose."
+    },
+    {
+      "rank": 8,
+      "title": "Dissociate sí, whistleblow no [I(A)]",
+      "body": "Alejarse es obligatorio; reportar al regulador solo si la ley lo exige."
+    }
+  ],
+  "tables": [
+    {
+      "id": "vol10-standards",
+      "title": "Tabla maestra Standard por Standard",
+      "lms": [
+        "LM1",
+        "LM2"
+      ],
+      "html": "<!-- ===== I ===== -->\n<h2 class=\"grp\"><span class=\"rn\">I</span> Professionalism <span class=\"duty\">I(A)\\u2013I(E)</span></h2>\n<table>\n<thead><tr><th style=\"width:11%\">Sub-std</th><th style=\"width:30%\">Qu\\u00e9 exige</th><th style=\"width:30%\">Violaci\\u00f3n t\\u00edpica</th><th>Recommended procedure</th></tr></thead>\n<tbody>\n<tr><td><span class=\"code\">I(A)</span> Knowledge of the Law</td>\n<td>Cumplir todas las laws/regs (incl. Code&amp;Standards); la <b>m\\u00e1s estricta</b>; no participar y <b>dissociate</b> de violaciones.</td>\n<td>Seguir asociado/inactivo ante una violaci\\u00f3n del cliente/employer; asumir que basta con la ley local siendo el Code m\\u00e1s estricto.</td>\n<td>Reportar a compliance \\u2192 si no se corrige, alejarse (sacar nombre, reasignaci\\u00f3n). Conocer las pol\\u00edticas de la firma; consultar legal.</td></tr>\n<tr><td><span class=\"code\">I(B)</span> Independence &amp; Objectivity</td>\n<td>Reasonable care para lograr/mantener independencia y objetividad; no gifts que la comprometan.</td>\n<td>Aceptar viajes/lujos del sponsor; sesgar un rating por presi\\u00f3n del emisor (issuer-paid); rec. de compra por relaci\\u00f3n de IB.</td>\n<td>Usar transporte comercial/propio; limitar/rechazar gifts; disclosear gifts de clientes al employer; muros entre research e IB.</td></tr>\n<tr><td><span class=\"code\">I(C)</span> Misrepresentation</td>\n<td>No misrepresentations <b>knowingly</b> en an\\u00e1lisis/rec./acciones.</td>\n<td><b>Plagio</b> (usar reportes/modelos sin cr\\u00e9dito); <b>garantizar</b> retornos en activos vol\\u00e1tiles; omitir hechos relevantes.</td>\n<td>Atribuir fuentes; mantener registros de respaldo; usar lenguaje factual; citar salvo servicios estad\\u00edsticos reconocidos.</td></tr>\n<tr><td><span class=\"code\">I(D)</span> Misconduct</td>\n<td>No dishonesty/fraud/deceit ni actos que da\\u00f1en la <b>reputaci\\u00f3n profesional</b>.</td>\n<td>Fraude/robo/deceit (aun fuera del trabajo); conducta que refleje sobre honesty/integrity/competence.</td>\n<td>C\\u00f3digo de conducta de la firma; separar la moral personal irrelevante de lo que afecta la reputaci\\u00f3n profesional.</td></tr>\n<tr><td><span class=\"code\">I(E)</span> Competence <span class=\"flag\">2023</span></td>\n<td>Act with and <b>maintain</b> la competence necesaria para el rol.</td>\n<td>Asumir tareas para las que no se tiene el knowledge/skill; no actualizarse cuando el rol se expande.</td>\n<td>Educaci\\u00f3n continua; declinar o derivar tareas fuera de la competencia; apoyarse en expertos cuando corresponde.</td></tr>\n</tbody>\n</table>\n<!-- ===== II ===== -->\n<h2 class=\"grp\"><span class=\"rn\">II</span> Integrity of Capital Markets <span class=\"duty\">II(A)\\u2013II(B)</span></h2>\n<table>\n<thead><tr><th style=\"width:11%\">Sub-std</th><th style=\"width:30%\">Qu\\u00e9 exige</th><th style=\"width:30%\">Violaci\\u00f3n t\\u00edpica</th><th>Recommended procedure</th></tr></thead>\n<tbody>\n<tr><td><span class=\"code\">II(A)</span> Material Nonpublic Information</td>\n<td>Con MNPI que afecte el valor: <b>no actuar</b> ni causar que otros act\\u00faen.</td>\n<td>Operar/pasar un dato material a\\u00fan no diseminado; actuar sobre lo o\\u00eddo de un insider o expert network.</td>\n<td><b>Firewall</b> (un empleado de un lado); watch/restricted lists; adopt/publicar la info antes de operar. <b>Mosaic theory es l\\u00edcita.</b></td></tr>\n<tr><td><span class=\"code\">II(B)</span> Market Manipulation</td>\n<td>No distorsionar precios ni inflar volumen con <b>intent to mislead</b>.</td>\n<td>Difundir rumores falsos (information-based); wash trades/corners/pump-and-dump (transaction-based).</td>\n<td>Documentar la l\\u00f3gica econ\\u00f3mica real de las operaciones; probar que no hay intenci\\u00f3n de enga\\u00f1ar.</td></tr>\n</tbody>\n</table>\n<!-- ===== III ===== -->\n<h2 class=\"grp\"><span class=\"rn\">III</span> Duties to Clients <span class=\"duty\">III(A)\\u2013III(E)</span></h2>\n<table>\n<thead><tr><th style=\"width:11%\">Sub-std</th><th style=\"width:30%\">Qu\\u00e9 exige</th><th style=\"width:30%\">Violaci\\u00f3n t\\u00edpica</th><th>Recommended procedure</th></tr></thead>\n<tbody>\n<tr><td><span class=\"code\">III(A)</span> Loyalty, Prudence &amp; Care</td>\n<td>Duty of loyalty; care/prudence; inter\\u00e9s del cliente por sobre employer y propio.</td>\n<td>Usar soft dollars en beneficio propio; ignorar el proxy voting; servir al sponsor y no a los <b>beneficiarios</b> del pension plan.</td>\n<td>Identificar al cliente real; pol\\u00edtica de soft commissions y de proxy voting; actuar en su mejor inter\\u00e9s.</td></tr>\n<tr><td><span class=\"code\">III(B)</span> Fair Dealing</td>\n<td>Trato <b>fair y objetivo</b> a todos al dar rec./acciones.</td>\n<td>Diseminaci\\u00f3n <b>selectiva</b>; dar ventaja a unos clientes; allocation que perjudica a algunos.</td>\n<td>Diseminaci\\u00f3n <b>simult\\u00e1nea</b>; limitar el pre-aviso; allocation pro-rata/FIFO. Distintos niveles de servicio OK si se disclosean.</td></tr>\n<tr><td><span class=\"code\">III(C)</span> Suitability</td>\n<td><b>Advisory:</b> inquiry + suitable + total portfolio. <b>Mandate:</b> consistencia con objetivos del portfolio.</td>\n<td>Juzgar un security aislado; no actualizar el IPS; ejecutar un unsolicited trade no-suitable sin salvaguardas.</td>\n<td>IPS escrito y actualizado; juzgar en el total portfolio; para unsolicited, explicar impacto y documentar.</td></tr>\n<tr><td><span class=\"code\">III(D)</span> Performance Presentation</td>\n<td>Performance <b>fair, accurate y complete</b>.</td>\n<td>Cherry-picking de cuentas; omitir cuentas terminadas; mostrar solo el mejor per\\u00edodo.</td>\n<td>Incluir todas las cuentas relevantes (composite); GIPS recomendado (no obligatorio); revelar supuestos.</td></tr>\n<tr><td><span class=\"code\">III(E)</span> Preservation of Confidentiality</td>\n<td>Confidencialidad salvo: (1) ilegal, (2) requerido por ley, (3) permiso del cliente.</td>\n<td>Divulgar info del cliente fuera de las 3 excepciones; fallas de seguridad de info electr\\u00f3nica.</td>\n<td>Proteger data; conocer las excepciones. <b>Cooperar con el PCP no viola el standard.</b></td></tr>\n</tbody>\n</table>\n<!-- ===== IV ===== -->\n<h2 class=\"grp\"><span class=\"rn\">IV</span> Duties to Employers <span class=\"duty\">IV(A)\\u2013IV(C)</span></h2>\n<table>\n<thead><tr><th style=\"width:11%\">Sub-std</th><th style=\"width:30%\">Qu\\u00e9 exige</th><th style=\"width:30%\">Violaci\\u00f3n t\\u00edpica</th><th>Recommended procedure</th></tr></thead>\n<tbody>\n<tr><td><span class=\"code\">IV(A)</span> Loyalty</td>\n<td>Actuar en beneficio del employer; no da\\u00f1arlo ni privarlo de tus skills.</td>\n<td>Llevarse client lists/records; solicitar clientes antes de renunciar; independent practice que compite sin consentimiento.</td>\n<td>Preparativos permitidos, no misappropriation; usar solo lo que est\\u00e1 en la <b>memoria</b>; pedir consentimiento para independent practice.</td></tr>\n<tr><td><span class=\"code\">IV(B)</span> Additional Compensation</td>\n<td>No comp que cree conflicto con el employer <b>salvo written consent de todas las partes</b>.</td>\n<td>Aceptar un bono/regalo de un cliente por desempe\\u00f1o sin consentimiento del employer.</td>\n<td>Obtener <b>consentimiento escrito de todas las partes</b> antes de aceptar; disclosear t\\u00e9rminos.</td></tr>\n<tr><td><span class=\"code\">IV(C)</span> Responsibilities of Supervisors</td>\n<td>Esfuerzos razonables para que los supervisados cumplan; incluye <b>detecci\\u00f3n</b>.</td>\n<td>Delegar y \\u201colvidarse\\u201d; aceptar supervisar con un sistema de compliance inadecuado.</td>\n<td>Sistema de compliance adecuado; si es inadecuado, <b>declinar por escrito</b> el rol hasta corregirlo.</td></tr>\n</tbody>\n</table>\n<!-- ===== V ===== -->\n<h2 class=\"grp\"><span class=\"rn\">V</span> Investment Analysis, Recommendations &amp; Actions <span class=\"duty\">V(A)\\u2013V(C)</span></h2>\n<table>\n<thead><tr><th style=\"width:11%\">Sub-std</th><th style=\"width:30%\">Qu\\u00e9 exige</th><th style=\"width:30%\">Violaci\\u00f3n t\\u00edpica</th><th>Recommended procedure</th></tr></thead>\n<tbody>\n<tr><td><span class=\"code\">V(A)</span> Diligence &amp; Reasonable Basis</td>\n<td>Diligencia + <b>reasonable and adequate basis</b> con research apropiado.</td>\n<td>Recomendar sin base adecuada; usar third-party research sin verificarla; confiar ciegamente en subadvisers.</td>\n<td>Verificar la solidez de third-party research; due diligence de external advisers; documentar la base.</td></tr>\n<tr><td><span class=\"code\">V(B)</span> Communication w/ Clients <span class=\"flag\">2023</span></td>\n<td>Disclosear servicios y <b>costos</b>, el proceso (y cambios), risks/limitations; distinguir <b>fact vs opinion</b>.</td>\n<td>Presentar opini\\u00f3n como hecho; ocultar costos/limitaciones; no informar cambios materiales del proceso.</td>\n<td>Reportes que separan hecho/opini\\u00f3n; disclosure de costos y riesgos; informar cambios <b>promptly</b>.</td></tr>\n<tr><td><span class=\"code\">V(C)</span> Record Retention</td>\n<td>Mantener records que respalden an\\u00e1lisis/rec./acciones.</td>\n<td>No conservar respaldos; llevarse records al cambiar de firma (son de la firma).</td>\n<td>Retener soportes (email, social incluidos); sin regla local, <b>7 a\\u00f1os</b> recomendado; records = propiedad de la firma.</td></tr>\n</tbody>\n</table>\n<!-- ===== VI ===== -->\n<h2 class=\"grp\"><span class=\"rn\">VI</span> Conflicts of Interest <span class=\"duty\">VI(A)\\u2013VI(C)</span></h2>\n<table>\n<thead><tr><th style=\"width:11%\">Sub-std</th><th style=\"width:30%\">Qu\\u00e9 exige</th><th style=\"width:30%\">Violaci\\u00f3n t\\u00edpica</th><th>Recommended procedure</th></tr></thead>\n<tbody>\n<tr><td><span class=\"code\">VI(A)</span> Avoid or Disclose Conflicts <span class=\"flag\">2023</span></td>\n<td><b>Evitar</b> o hacer full &amp; fair disclosure de conflictos; disclosure prominente, en plain language.</td>\n<td>No revelar stock ownership, board membership o conflictos cross-departamentales.</td>\n<td>Evitar el conflicto cuando se pueda; si no, disclosure prominente a employer y clients.</td></tr>\n<tr><td><span class=\"code\">VI(B)</span> Priority of Transactions</td>\n<td>Clients y employer tienen <b>prioridad</b> sobre trades donde el member es beneficial owner.</td>\n<td>Front-running; operar la cuenta propia antes que la del cliente; perjudicar una cuenta familiar fee-paying.</td>\n<td><b>Blackout/restricted periods</b>; reporting de holdings; tratar cuenta familiar fee-paying como a cualquier cliente.</td></tr>\n<tr><td><span class=\"code\">VI(C)</span> Referral Fees</td>\n<td>Disclosear a employer/clients/prospects toda comp <b>recibida o pagada</b> por recomendaciones.</td>\n<td>No revelar un referral fee (o revelarlo despu\\u00e9s del hecho); ocultar la naturaleza del fee.</td>\n<td>Disclosear <b>antes/al momento</b> del referral, con la <b>naturaleza</b> (fijo, %, en especie).</td></tr>\n</tbody>\n</table>\n<!-- ===== VII ===== -->\n<h2 class=\"grp\"><span class=\"rn\">VII</span> Responsibilities as a CFA Member/Candidate <span class=\"duty\">VII(A)\\u2013VII(B)</span></h2>\n<table>\n<thead><tr><th style=\"width:11%\">Sub-std</th><th style=\"width:30%\">Qu\\u00e9 exige</th><th style=\"width:30%\">Violaci\\u00f3n t\\u00edpica</th><th>Recommended procedure</th></tr></thead>\n<tbody>\n<tr><td><span class=\"code\">VII(A)</span> Conduct in CFA Programs</td>\n<td>No comprometer la reputaci\\u00f3n de CFA Institute ni la integridad/seguridad del examen.</td>\n<td>Revelar contenido del examen; violar reglas del d\\u00eda del examen; difundir material confidencial.</td>\n<td>Respetar la confidencialidad del examen. <b>S\\u00ed</b> se puede opinar sobre CFA Institute/pol\\u00edticas.</td></tr>\n<tr><td><span class=\"code\">VII(B)</span> Reference to CFA / Designation / Program</td>\n<td>No misrepresentar/exagerar el significado de membership, designaci\\u00f3n o candidatura.</td>\n<td>Usar \\u201cCFA\\u201d como sustantivo (\\u201ca CFA\\u201d); \\u201cCFA Level II\\u201d; implicar performance superior.</td>\n<td>\\u201cCFA\\u201d como <b>adjetivo</b> (\\u201cJane Smith, CFA\\u201d); \\u201cCFA candidate\\u201d solo si inscripto/rindiendo; sin designaci\\u00f3n parcial.</td></tr>\n</tbody>\n</table>\n<!-- ===== TOP 3 ===== -->\n<div class=\"top\">\n<div class=\"th\">Las 3 confusiones m\\u00e1s recurrentes en item-sets</div>\n<ol>\n<li><b>Mosaic theory [II(A)]:</b> combinar info p\\u00fablica + no-material nonpublic <b>no</b> es violaci\\u00f3n, aunque la conclusi\\u00f3n mueva el mercado. Solo viola actuar sobre info que es material <b>y</b> nonpublic.</li>\n<li><b>\\u201cFair\\u201d \\u2260 \\u201cequal\\u201d [III(B)] &amp; total portfolio [III(C)]:</b> se permiten distintos niveles de servicio si se disclosean; y la suitability se juzga en el portfolio total, no security por security.</li>\n<li><b>\\u201cCFA\\u201d es adjetivo [VII(B)]:</b> \\u201cJane Smith, CFA\\u201d s\\u00ed; \\u201ca CFA\\u201d / \\u201cCFA Level II\\u201d / implicar mejor performance, no.</li>\n</ol>\n</div>"
+    },
+    {
+      "id": "vol10-viola",
+      "title": "\\u00bfViola / No viola?",
+      "lms": [
+        "LM1",
+        "LM2"
+      ],
+      "html": "<table>\n<thead><tr><th style=\"width:44%\">Situaci\\u00f3n</th><th style=\"width:12%\">Veredicto</th><th style=\"width:10%\">Standard</th><th>Por qu\\u00e9</th></tr></thead>\n<tbody>\n<tr><td>Un analista combina informaci\\u00f3n <b>p\\u00fablica</b> con piezas <b>no-materiales nonpublic</b> y llega a una conclusi\\u00f3n que mueve el mercado. Opera sobre ella.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">II(A)</td>\n<td><b>Mosaic theory.</b> La conclusi\\u00f3n es producto de an\\u00e1lisis, no de info que sea a la vez material y nonpublic.</td></tr>\n<tr><td>Escucha por casualidad, en un ascensor, un dato material a\\u00fan no diseminado sobre una adquisici\\u00f3n, y compra el activo.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">II(A)</td>\n<td>Posee MNPI (material + nonpublic). Debe <b>no actuar</b>; el origen casual no lo habilita.</td></tr>\n<tr><td>Acepta de un <b>cliente existente</b> un regalo modesto (una lapicera, una cena razonable) tras completar el servicio, y lo disclosea al employer.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span></td><td class=\"std\">I(B)</td>\n<td>Un token modesto de un cliente, ya prestado el servicio y <b>disclosado</b>, no compromete razonablemente la independencia.</td></tr>\n<tr><td>Acepta un viaje de lujo pagado por la empresa que est\\u00e1 analizando, en un jet privado del emisor.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">I(B)</td>\n<td>El beneficio del emisor bajo an\\u00e1lisis puede comprometer la objetividad. Deb\\u00eda usar transporte comercial/propio.</td></tr>\n<tr><td>Su nombre queda en un <b>group research report</b> con cuya conclusi\\u00f3n no coincide, pero el basis del reporte es razonable y bien fundado.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">V(A)</td>\n<td>Si el proceso tiene reasonable basis, no hace falta disentir p\\u00fablicamente ni sacar el nombre.</td></tr>\n<tr><td><b>Garantiza</b> un retorno anual de 8% en un fondo de acciones para retener a un cliente.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">I(C)</td>\n<td>Misrepresentation: no se puede garantizar performance en un activo <b>vol\\u00e1til</b>.</td></tr>\n<tr><td>Usa datos de un <b>servicio estad\\u00edstico reconocido</b> (ej. \\u00edndices, tasas) sin citar la fuente en cada instancia.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">I(C)</td>\n<td>Excepci\\u00f3n a la atribuci\\u00f3n: la data de servicios estad\\u00edsticos reconocidos no requiere cita.</td></tr>\n<tr><td>Al renunciar, se lleva la <b>client list</b> y copias de research del employer para usarlas en la nueva firma.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">IV(A)</td>\n<td>Los records/listas son <b>propiedad de la firma</b>. Llevarlos es misappropriation.</td></tr>\n<tr><td>En la nueva firma usa el <b>conocimiento y las skills</b> que lleva en la memoria, sin copiar ning\\u00fan archivo.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">IV(A)</td>\n<td>El conocimiento en la memoria es propio; lo prohibido es llevarse archivos/listas o solicitar clientes antes de irse.</td></tr>\n<tr><td>Responde a una investigaci\\u00f3n del <b>PCP</b> de CFA Institute revelando informaci\\u00f3n de un cliente pertinente al caso.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">III(E)</td>\n<td>Cooperar con el Professional Conduct Program es un <b>carve-out</b> del deber de confidencialidad.</td></tr>\n<tr><td>Ofrece un <b>tier premium</b> de research a clientes que pagan m\\u00e1s, <b>disclosado</b> y <b>disponible</b> para todos los que quieran contratarlo.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">III(B)</td>\n<td>\\u201cFair\\u201d \\u2260 \\u201cequal\\u201d: distintos niveles de servicio son OK si se disclosean y est\\u00e1n disponibles a todos.</td></tr>\n<tr><td>Disemina una recomendaci\\u00f3n primero a un grupo de clientes favoritos y despu\\u00e9s al resto.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">III(B)</td>\n<td>Diseminaci\\u00f3n <b>selectiva</b> que perjudica a unos clientes frente a otros. Debe ser simult\\u00e1nea.</td></tr>\n<tr><td>Publica en redes su <b>opini\\u00f3n personal</b> criticando la dificultad o las pol\\u00edticas del CFA Program.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">VII(A)</td>\n<td>Se permite expresar opiniones personales sobre CFA Institute o sus pol\\u00edticas.</td></tr>\n<tr><td>Despu\\u00e9s de rendir, postea el <b>contenido de preguntas</b> reales del examen.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">VII(A)</td>\n<td>Compromete la confidencialidad/seguridad del examen. Prohibido revelar contenido.</td></tr>\n<tr><td>Tarjeta: \\u201cJohn Doe, <b>CFA</b>\\u201d.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span></td><td class=\"std\">VII(B)</td>\n<td>Uso correcto: \\u201cCFA\\u201d como <b>adjetivo</b> tras el nombre.</td></tr>\n<tr><td>Se describe como \\u201c<b>a CFA</b>\\u201d / \\u201cun CFA\\u201d o pone \\u201c<b>CFA Level II</b>\\u201d como si fuera una designaci\\u00f3n.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">VII(B)</td>\n<td>\\u201cCFA\\u201d no es sustantivo ni hay designaci\\u00f3n parcial por nivel.</td></tr>\n<tr><td>Inscripto y rindiendo el Nivel II, se presenta como \\u201c<b>CFA Level II candidate</b>\\u201d.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span></td><td class=\"std\">VII(B)</td>\n<td>Referencia correcta a la candidatura mientras est\\u00e1 registrado/rindiendo.</td></tr>\n<tr><td>Opera en una jurisdicci\\u00f3n cuya ley local es <b>menos estricta</b> que el Code &amp; Standards, y sigue solo la ley local.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">I(A)</td>\n<td>Debe seguir la norma <b>m\\u00e1s estricta</b>; la ley es el umbral m\\u00ednimo.</td></tr>\n<tr><td>No reporta al <b>regulador</b> la conducta il\\u00edcita de un colega (la ley no lo obliga), pero se aleja de la actividad.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">I(A)</td>\n<td>El whistleblowing no es obligatorio salvo mandato legal; lo obligatorio (dissociate) s\\u00ed lo cumpli\\u00f3.</td></tr>\n<tr><td>Detecta actividad ilegal en curso del employer y <b>sigue asociado e inactivo</b>, sin reportar internamente ni alejarse.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">I(A)</td>\n<td>La inacci\\u00f3n + asociaci\\u00f3n continua se interpreta como participaci\\u00f3n. Deb\\u00eda reportar y dissociate.</td></tr>\n<tr><td>Un supervisor <b>delega</b> tareas de compliance pero tiene un <b>sistema adecuado</b> y razonable de supervisi\\u00f3n.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span></td><td class=\"std\">IV(C)</td>\n<td>Se puede delegar; con sistema adecuado la responsabilidad de supervisi\\u00f3n est\\u00e1 cumplida.</td></tr>\n<tr><td>Acepta un rol de supervisor sabiendo que el <b>sistema de compliance es inadecuado</b>, sin objetar.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">IV(C)</td>\n<td>Deb\\u00eda <b>declinar por escrito</b> hasta que se corrija el sistema.</td></tr>\n<tr><td>Trata la cuenta <b>fee-paying</b> de un familiar (cliente regular) igual que a cualquier otro cliente, sin subordinarla.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">VI(B)</td>\n<td>Subordinarla ser\\u00eda discriminar a un cliente. Solo se trata como \\u201cpersonal\\u201d si el member tiene beneficial ownership.</td></tr>\n<tr><td>Ejecuta una <b>orden propia</b> en un activo antes que la orden pendiente del cliente en ese mismo activo.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">VI(B)</td>\n<td>Front-running: las transacciones del cliente tienen <b>prioridad</b> sobre las del beneficial owner.</td></tr>\n<tr><td>Acepta un <b>bono</b> de un cliente por buen desempe\\u00f1o <b>sin</b> consentimiento del employer.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">IV(B)</td>\n<td>Additional compensation requiere <b>written consent de todas las partes</b>.</td></tr>\n<tr><td>Coloca un activo riesgoso en la cartera y la evalúa <b>suitable</b> dentro de un <b>total portfolio</b> diversificado y consistente con el IPS.</td>\n<td class=\"verdict\"><span class=\"tag no\">NO VIOLA</span><span class=\"cimark\">CI</span></td><td class=\"std\">III(C)</td>\n<td>La suitability se juzga en el <b>total portfolio</b>, no security por security aislada.</td></tr>\n<tr><td>Recibe un <b>referral fee</b> por derivar clientes a otro asesor y lo revela <b>despu\\u00e9s</b> de concretada la relaci\\u00f3n.</td>\n<td class=\"verdict\"><span class=\"tag\">VIOLA</span></td><td class=\"std\">VI(C)</td>\n<td>El disclosure debe ser <b>previo/al momento</b> del referral, para que el cliente pueda evaluar el sesgo.</td></tr>\n</tbody>\n</table>"
+    }
+  ]
+}
