@@ -274,43 +274,6 @@
 .refview .wrap{max-width:none;padding:0;}
 .refview th{background:#eee !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
 
-/* --- estilos de referencia vol01 (formato nuevo), scopeados --- */
-.refview{ --ink:#000; --thin:#666; --hair:#bbb; --head:#eee; }
-.refview .wrap{ max-width:1000px; margin:0 auto; padding:24px 28px 60px; }
-.refview .sub{ font-size:12px; color:var(--thin); margin-bottom:10px; }
-.refview .hr{ border:0; border-top:2.5px solid var(--ink); margin:10px 0 18px; }
-.refview .banner{ border:1px solid var(--ink); padding:7px 12px; font-size:11px; margin-bottom:18px; }
-.refview b{ font-weight:700; }
-.refview .en{ font-style:italic; }
-.refview table{ width:100%; border-collapse:collapse; margin:8px 0; font-size:11.5px; }
-.refview th, .refview td{ border:1px solid var(--hair); padding:5px 7px; text-align:left; vertical-align:top; }
-.refview thead th{ background:var(--head); border-color:var(--thin); font-weight:700; }
-.refview td.c, .refview th.c{ text-align:center; }
-.refview .eq{ font-family:"SF Mono",ui-monospace,Menlo,monospace; }
-.refview .banner{ margin-bottom:14px; }
-.refview h2{ font-size:15px; border-bottom:2px solid #000; padding-bottom:3px; margin:20px 0 6px; }
-.refview caption{ text-align:left; font-weight:700; font-size:12px; margin:6px 0 2px; }
-@media print{.refview .banner{ display:none; }}
-.refview{ --ink:#000; --thin:#666; --hair:#bbb; --head:#eee; }
-.refview .wrap{ max-width:1000px; margin:0 auto; padding:24px 28px 60px; }
-.refview .sub{ font-size:12px; color:var(--thin); margin-bottom:10px; }
-.refview .hr{ border:0; border-top:2.5px solid var(--ink); margin:10px 0 18px; }
-.refview .banner{ border:1px solid var(--ink); padding:7px 12px; font-size:11px; margin-bottom:18px; }
-.refview b{ font-weight:700; }
-.refview .en{ font-style:italic; }
-.refview table{ width:100%; border-collapse:collapse; margin:8px 0; font-size:11.5px; }
-.refview th, .refview td{ border:1px solid var(--hair); padding:5px 7px; text-align:left; vertical-align:top; }
-.refview thead th{ background:var(--head); border-color:var(--thin); font-weight:700; }
-.refview td.c, .refview th.c{ text-align:center; }
-.refview .eq{ font-family:"SF Mono",ui-monospace,Menlo,monospace; }
-.refview .banner{ margin-bottom:14px; }
-.refview h2{ font-size:15px; border-bottom:2px solid #000; padding-bottom:3px; margin:20px 0 6px; }
-.refview .ci{ font-weight:700; }
-.refview td .up::after{ content:"↑"; }
-.refview td .dn::after{ content:"↓"; }
-.refview td .eq::after{ content:"="; }
-@media print{.refview .banner{ display:none; }}
-
 /* --- estilos de referencia vol07 (formato nuevo), scopeados --- */
 .refview{--ink:#000;--thin:#555;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:"Iowan Old Style",Palatino,Georgia,serif;--mono:"SFMono-Regular",Consolas,Menlo,monospace}
 .refview .wrap{max-width:1000px;margin:0 auto;padding:22px 26px 60px}
@@ -420,3 +383,54 @@
 @media print{.refview .sheet{max-width:none;padding:0 10mm;}
 .refview section, .refview table, .refview .warn, .refview .ciblock{break-inside:avoid;}
 .refview .sh{break-after:avoid;}}
+
+/* --- estilos de referencia vol01 (formato nuevo), scopeados --- */
+.refview{--ink:#000;--thin:#999;--soft:#f2f2f2;}
+.refview a{color:var(--ink);}
+.refview .printbar{border:1.5px solid var(--ink);padding:8px 12px;margin-bottom:16px;font-size:11px;
+  display:flex;align-items:center;gap:9px;}
+.refview .printbar kbd{border:1px solid var(--ink);border-radius:3px;padding:1px 5px;font-family:inherit;font-weight:700;}
+.refview h2{font-size:14px;border-bottom:2px solid var(--ink);padding-bottom:4px;margin:22px 0 11px;
+  display:flex;align-items:center;gap:7px;}
+.refview h2 .num{border:1.5px solid var(--ink);width:19px;height:19px;flex:0 0 19px;display:inline-flex;
+  align-items:center;justify-content:center;font-size:10px;font-weight:800;border-radius:50%;}
+.refview table{border-collapse:collapse;width:100%;margin:9px 0;font-size:11px;}
+.refview th, .refview td{border:1px solid var(--thin);padding:5px 7px;text-align:left;vertical-align:top;}
+.refview th{background:var(--soft);font-weight:800;font-size:10px;text-transform:uppercase;letter-spacing:.03em;}
+.refview table.master th{border-bottom:2px solid var(--ink);}
+.refview td.key{font-weight:800;background:var(--soft);white-space:nowrap;}
+.refview .eq{font-family:"Courier New",Courier,monospace;font-weight:700;}
+.refview b{font-weight:800;}
+.refview sub, .refview sup{font-size:.72em;}
+.refview .star{font-weight:800;}
+@media print{.refview .printbar, .refview .no-print{display:none!important;}
+.refview h2{page-break-after:avoid;}
+.refview .card, .refview .trap, .refview .qitem, .refview section, .refview tr{break-inside:avoid;}}
+.refview section{margin-bottom:24px;}
+.refview .pairs td:first-child{width:20%;}
+.refview{--ink:#000;--thin:#999;--soft:#f2f2f2;}
+.refview a{color:var(--ink);}
+.refview .printbar{border:1.5px solid var(--ink);padding:8px 12px;margin-bottom:16px;font-size:11px;
+  display:flex;align-items:center;gap:9px;}
+.refview .printbar kbd{border:1px solid var(--ink);border-radius:3px;padding:1px 5px;font-family:inherit;font-weight:700;}
+.refview h2{font-size:14px;border-bottom:2px solid var(--ink);padding-bottom:4px;margin:22px 0 11px;
+  display:flex;align-items:center;gap:7px;}
+.refview h2 .num{border:1.5px solid var(--ink);width:19px;height:19px;flex:0 0 19px;display:inline-flex;
+  align-items:center;justify-content:center;font-size:10px;font-weight:800;border-radius:50%;}
+.refview table{border-collapse:collapse;width:100%;margin:9px 0;font-size:11px;}
+.refview th, .refview td{border:1px solid var(--thin);padding:5px 7px;text-align:left;vertical-align:top;}
+.refview th{background:var(--soft);font-weight:800;font-size:10px;text-transform:uppercase;letter-spacing:.03em;}
+.refview table.master th{border-bottom:2px solid var(--ink);}
+.refview td.key{font-weight:800;background:var(--soft);white-space:nowrap;}
+.refview .eq{font-family:"Courier New",Courier,monospace;font-weight:700;}
+.refview b{font-weight:800;}
+.refview sub, .refview sup{font-size:.72em;}
+.refview .star{font-weight:800;}
+@media print{.refview .printbar, .refview .no-print{display:none!important;}
+.refview h2{page-break-after:avoid;}
+.refview .card, .refview .trap, .refview .qitem, .refview section, .refview tr{break-inside:avoid;}}
+.refview section{margin-bottom:22px;}
+.refview .dir td:nth-child(2){text-align:center;font-weight:800;white-space:nowrap;width:13%;}
+.refview .dir td:last-child{width:32%;}
+.refview .warncol{font-style:italic;}
+.refview .arrow{font-weight:800;}

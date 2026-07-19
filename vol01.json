@@ -44,498 +44,1135 @@
       "id": "vol01-c001",
       "lm": "LM1",
       "tipo": "concepto",
-      "q": "¿Qué agrega la multiple regression frente a la simple?",
-      "a": "Usa <b>dos o más</b> variables independientes para explicar la variación de Y. Mejor predicción/entendimiento… o relaciones espurias si se usa mal."
+      "q": "¿Qué agrega la multiple linear regression frente a la simple?",
+      "a": "Usa <b>dos o más</b> variables independientes para explicar la variación de Y. Mejor predicción/entendimiento; usada mal, da relaciones espurias."
     },
     {
       "id": "vol01-c002",
       "lm": "LM1",
       "tipo": "formula",
-      "q": "Modelo de regresión múltiple",
-      "a": "Y<sub>i</sub> = b<sub>0</sub> + b<sub>1</sub>X<sub>1i</sub> + b<sub>2</sub>X<sub>2i</sub> + … + b<sub>k</sub>X<sub>ki</sub> + ε<sub>i</sub>. Cada b<sub>j</sub> = efecto de X<sub>j</sub> <b>manteniendo las demás constantes</b>."
+      "q": "Ecuación de la MLR",
+      "a": "Y<sub>i</sub> = b<sub>0</sub> + b<sub>1</sub>X<sub>1i</sub> + … + b<sub>k</sub>X<sub>ki</sub> + ε<sub>i</sub>."
     },
     {
       "id": "vol01-c003",
       "lm": "LM1",
-      "tipo": "clasificacion",
-      "q": "Las 5 assumptions de la regresión",
-      "a": "1) Linealidad · 2) Homoskedasticity (varianza constante del error) · 3) Independencia de los errores (sin serial correlation) · 4) Normalidad de los errores · 5) Independencia entre las X (sin multicolinealidad exacta)."
+      "tipo": "concepto",
+      "q": "Interpretación de un slope b<sub>j</sub>",
+      "a": "Cambio esperado en Y por unidad de X<sub>j</sub>, <b>manteniendo constantes las demás X</b> (partial slope). No es el efecto total."
     },
     {
       "id": "vol01-c004",
       "lm": "LM1",
-      "tipo": "proceso",
-      "q": "Interpretar un residual plot para linealidad",
-      "a": "Residuos vs. X: si hay <b>patrón/curvatura</b> → la relación no es lineal (mala especificación de forma). Deben verse aleatorios alrededor de 0."
+      "tipo": "concepto",
+      "q": "Interpretación del intercepto b<sub>0</sub>",
+      "a": "Valor esperado de Y cuando <b>todas</b> las X = 0."
     },
     {
       "id": "vol01-c005",
       "lm": "LM1",
-      "tipo": "concepto",
-      "q": "Residual plot que revela heteroskedasticity",
-      "a": "Residuos que se <b>abren en abanico</b> (varían más al crecer X/Ŷ) → varianza del error no constante."
+      "tipo": "clasificacion",
+      "q": "Los 5 supuestos de la MLR",
+      "a": "1) Linealidad · 2) Homoskedasticity · 3) Independencia de los errores (sin serial correlation) · 4) Normalidad de los errores · 5) Independencia entre las X (sin multicolinealidad exacta)."
     },
     {
       "id": "vol01-c006",
       "lm": "LM1",
-      "tipo": "concepto",
-      "q": "¿Para qué sirve el supuesto de normalidad de los errores?",
-      "a": "Permite inferencia válida (t/F) especialmente en muestras chicas. Con n grande, el teorema central del límite ayuda aunque no sean normales."
+      "tipo": "formula",
+      "q": "Descomposición de la variación (SST)",
+      "a": "SST = SSR + SSE. SST = Σ(Y<sub>i</sub>−Ȳ)² · SSR = Σ(Ŷ<sub>i</sub>−Ȳ)² (explicada) · SSE = Σ(Y<sub>i</sub>−Ŷ<sub>i</sub>)² (residual)."
     },
     {
       "id": "vol01-c007",
-      "lm": "LM2",
-      "tipo": "formula",
-      "q": "Adjusted R²",
-      "a": "R̄² = 1 − [(n−1)/(n−k−1)]·(1 − R²). Ajusta por grados de libertad; <b>no</b> sube automáticamente al agregar variables."
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Residual plot para chequear linealidad",
+      "a": "Residuos vs. Ŷ (o vs. X): deben verse aleatorios alrededor de 0. Un <b>patrón/curvatura</b> → forma funcional mal especificada."
     },
     {
       "id": "vol01-c008",
-      "lm": "LM2",
-      "tipo": "concepto",
-      "q": "Adjusted R²: dos cosas contra-intuitivas",
-      "a": "Puede <b>bajar</b> al agregar una variable, y puede ser <b>negativo</b> (R² nunca baja de 0). Con k≥1, R² &gt; R̄² siempre."
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "Residual plot para chequear homoskedasticity",
+      "a": "Residuos que se <b>abren en abanico</b> (más dispersión al crecer Ŷ) → heteroskedasticity."
     },
     {
       "id": "vol01-c009",
-      "lm": "LM2",
-      "tipo": "concepto",
-      "q": "Regla del |t| = 1 en adjusted R²",
-      "a": "Al agregar una variable: si su |t-stat| &gt; 1 → R̄² <b>sube</b>; si |t-stat| &lt; 1 → R̄² <b>baja</b>. (|t|=1 no implica significancia al 5%.)"
+      "lm": "LM1",
+      "tipo": "proceso",
+      "q": "¿Cómo se lee un Normal Q-Q plot?",
+      "a": "Compara los residuos con una normal. Si están <b>sobre la recta 45°</b> → normales. Colas que se despegan → no-normalidad."
     },
     {
       "id": "vol01-c010",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Para qué sirve el supuesto de normalidad?",
+      "a": "Permite inferencia válida (t/F), sobre todo en muestras chicas. Con n grande el CLT ayuda aunque no sean normales."
+    },
+    {
+      "id": "vol01-c011",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Empirical duration desde una regresión de bonos",
+      "a": "El coeficiente (negativo) sobre el cambio en yields es la <b>empirical duration</b>. Ej.: b<sub>BY</sub> = −5,0585 → duration ≈ 5,0585."
+    },
+    {
+      "id": "vol01-c012",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "¿Qué revela un residual plot contra una X puntual?",
+      "a": "Si el patrón aparece contra <b>una</b> X específica → esa variable entra con la forma equivocada (falta cuadrático, log, etc.)."
+    },
+    {
+      "id": "vol01-c013",
+      "lm": "LM1",
+      "tipo": "concepto",
+      "q": "Multiple R vs. R²",
+      "a": "Multiple R = correlación entre Y y Ŷ. R² = Multiple R² = proporción de la variación de Y explicada por el modelo."
+    },
+    {
+      "id": "vol01-c014",
+      "lm": "LM1",
+      "tipo": "formula",
+      "q": "Standard error of estimate (SEE)",
+      "a": "SEE = √(SSE/(n−k−1)) = desvío estándar de los residuos. Menor SEE → mejor ajuste (en la escala de Y)."
+    },
+    {
+      "id": "vol01-c015",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Los 3 problemas del R² en MLR",
+      "a": "1) <b>Nunca baja</b> al agregar variables · 2) no dice si los coeficientes son significativos ni si hay sesgo · 3) no sirve para testear la significancia del modelo."
+    },
+    {
+      "id": "vol01-c016",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Adjusted R²",
+      "a": "R̄² = 1 − [(n−1)/(n−k−1)]·(1 − R²). Ajusta por grados de libertad."
+    },
+    {
+      "id": "vol01-c017",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Adjusted R²: dos hechos contra-intuitivos",
+      "a": "Puede <b>bajar</b> al agregar variables y puede ser <b>negativo</b> (R² nunca baja de 0). Con k≥1, R² &gt; R̄²."
+    },
+    {
+      "id": "vol01-c018",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Regla del |t| = 1 en adjusted R²",
+      "a": "Al agregar una variable: |t| &gt; 1 → R̄² <b>sube</b>; |t| &lt; 1 → R̄² <b>baja</b>. (|t|=1 no implica significancia.)"
+    },
+    {
+      "id": "vol01-c019",
       "lm": "LM2",
       "tipo": "formula",
       "q": "AIC (Akaike)",
       "a": "AIC = n·ln(SSE/n) + <b>2(k+1)</b>. Penalidad por parámetros = 2(k+1). Menor = mejor."
     },
     {
-      "id": "vol01-c011",
+      "id": "vol01-c020",
       "lm": "LM2",
       "tipo": "formula",
       "q": "BIC (Schwarz)",
-      "a": "BIC = n·ln(SSE/n) + <b>ln(n)·(k+1)</b>. Penaliza <b>más</b> que AIC (ln n &gt; 2) → prefiere modelos más parsimoniosos."
+      "a": "BIC = n·ln(SSE/n) + <b>ln(n)·(k+1)</b>. Penaliza más (ln n &gt; 2) → prefiere modelos más parsimoniosos."
     },
     {
-      "id": "vol01-c012",
+      "id": "vol01-c021",
       "lm": "LM2",
       "tipo": "metodo",
-      "q": "AIC vs. BIC: cuándo usar cada uno",
-      "a": "<b>AIC</b> → si el objetivo es <b>predicción</b>. <b>BIC</b> → si el objetivo es el mejor <b>goodness of fit</b>. En ambos, menor es mejor y solo importan los valores <b>relativos</b>."
+      "q": "AIC vs. BIC: cuándo cada uno",
+      "a": "<b>AIC</b> → si el objetivo es <b>predicción</b>. <b>BIC</b> → si es el mejor <b>goodness of fit</b>. Menor es mejor; solo importan los valores <b>relativos</b>."
     },
     {
-      "id": "vol01-c013",
+      "id": "vol01-c022",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Cuándo comparan modelos AIC/BIC?",
+      "a": "Solo entre modelos con la <b>misma variable dependiente</b>. El valor absoluto no significa nada por sí solo."
+    },
+    {
+      "id": "vol01-c023",
       "lm": "LM2",
       "tipo": "formula",
-      "q": "F-statistic global",
-      "a": "F = MSR / MSE = (SSR/k) / (SSE/(n−k−1)). Tests si <b>al menos un</b> coeficiente ≠ 0."
+      "q": "F-statistic global (general linear F)",
+      "a": "F = MSR/MSE = (SSR/k) / (SSE/(n−k−1)). Testea H<sub>0</sub>: <b>todos</b> los slopes = 0."
     },
     {
-      "id": "vol01-c014",
+      "id": "vol01-c024",
       "lm": "LM2",
       "tipo": "formula",
       "q": "Joint F-test (nested models)",
       "a": "F = [(SSE<sub>restricted</sub> − SSE<sub>unrestricted</sub>)/q] / [SSE<sub>unrestricted</sub>/(n−k−1)], con q y (n−k−1) g.l. q = nº de restricciones."
     },
     {
-      "id": "vol01-c015",
+      "id": "vol01-c025",
       "lm": "LM2",
-      "tipo": "proceso",
-      "q": "¿Por qué un joint F-test y no t individuales?",
-      "a": "Con variables correlacionadas hay <b>poder explicativo compartido</b> que los t individuales no captan. El F conjunto lo considera."
+      "tipo": "metodo",
+      "q": "Joint F-test vs. general linear F-test",
+      "a": "<b>General linear F</b>: todos los slopes = 0 (modelo entero). <b>Joint F</b>: un <b>subconjunto</b> de q slopes = 0 (nested vs. full)."
     },
     {
-      "id": "vol01-c016",
+      "id": "vol01-c026",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "¿Por qué joint F y no t individuales?",
+      "a": "Con X correlacionadas hay <b>poder explicativo compartido</b> que los t individuales no captan; el F conjunto sí."
+    },
+    {
+      "id": "vol01-c027",
       "lm": "LM2",
       "tipo": "clasificacion",
       "q": "Componentes de la ANOVA table",
-      "a": "Regression (SSR, df=k) · Residual (SSE, df=n−k−1) · Total (SST, df=n−1). MSR=SSR/k, MSE=SSE/(n−k−1). R²=SSR/SST."
+      "a": "Regression (SSR, df=k) · Residual (SSE, df=n−k−1) · Total (SST, df=n−1). MSR=SSR/k, MSE=SSE/(n−k−1)."
     },
     {
-      "id": "vol01-c017",
+      "id": "vol01-c028",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "t-test de un coeficiente individual",
+      "a": "t = b̂<sub>j</sub> / SE(b̂<sub>j</sub>), con (n−k−1) g.l. Idéntico a la regresión simple. Se rechaza si |t| &gt; t crítico."
+    },
+    {
+      "id": "vol01-c029",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Predicción del valor de Y",
+      "a": "Ŷ = b̂<sub>0</sub> + Σ b̂<sub>j</sub>X<sub>j</sub>, con los valores asumidos de cada X. Es un <b>punto</b>; el intervalo requiere el SE del forecast."
+    },
+    {
+      "id": "vol01-c030",
+      "lm": "LM2",
+      "tipo": "clasificacion",
+      "q": "Las 2 fuentes de error del forecast",
+      "a": "1) Error del <b>modelo</b> (incertidumbre en los coeficientes) · 2) error <b>aleatorio</b> (varianza del término de error)."
+    },
+    {
+      "id": "vol01-c031",
+      "lm": "LM2",
+      "tipo": "formula",
+      "q": "Prediction interval",
+      "a": "Ŷ ± t<sub>crítico</sub>·s<sub>f</sub>, con s<sub>f</sub> = standard error del forecast. Es <b>más ancho</b> que el CI de la media."
+    },
+    {
+      "id": "vol01-c032",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿Qué mide el adjusted R² en MLR?",
+      "a": "A diferencia de la simple, <b>no</b> tiene interpretación limpia como “% de variación explicada”. Es métrica de comparación entre modelos."
+    },
+    {
+      "id": "vol01-c033",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Log-likelihood en el output",
+      "a": "Mayor (más cerca de 0) = mejor ajuste. Se usa para AIC/BIC y el LR test. No se interpreta en aislamiento."
+    },
+    {
+      "id": "vol01-c034",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Significance F del ANOVA",
+      "a": "Es el p-value del F global. Si &lt; α → al menos un slope ≠ 0 → el modelo en conjunto es significativo."
+    },
+    {
+      "id": "vol01-c035",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "¿R² alto garantiza buen modelo?",
+      "a": "No: puede haber coeficientes no significativos, sesgo o violaciones de supuestos. Mirar t/F, residuos y adjusted R²."
+    },
+    {
+      "id": "vol01-c036",
+      "lm": "LM2",
+      "tipo": "concepto",
+      "q": "Brecha entre R² y adjusted R²",
+      "a": "A mayor k con poco aporte, mayor la brecha entre R² y R̄². Una brecha chica indica que la especificación se apoya en variables significativas."
+    },
+    {
+      "id": "vol01-c037",
+      "lm": "LM2",
+      "tipo": "proceso",
+      "q": "Verificar R² y adjusted R² desde la ANOVA",
+      "a": "R² = SSR/SST. R̄² con la fórmula de grados de libertad. Es el chequeo estándar de examen sobre el output."
+    },
+    {
+      "id": "vol01-c038",
       "lm": "LM3",
       "tipo": "clasificacion",
-      "q": "Fallas de forma funcional (misspecification)",
-      "a": "Variables <b>omitidas</b> · forma inapropiada de una variable · <b>escala</b> inapropiada · <b>pooling</b> inapropiado de datos. Pueden violar los supuestos."
+      "q": "Principios de buena especificación",
+      "a": "Razonamiento económico · parsimonia · buen desempeño out-of-sample · forma funcional adecuada · sin violaciones de supuestos."
     },
     {
-      "id": "vol01-c018",
+      "id": "vol01-c039",
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "Fallas de forma funcional",
+      "a": "Variables <b>omitidas</b> · forma inapropiada de una variable · <b>escala</b> inapropiada · <b>pooling</b> inapropiado de datos."
+    },
+    {
+      "id": "vol01-c040",
       "lm": "LM3",
       "tipo": "concepto",
+      "q": "Omitted variable bias",
+      "a": "Omitir una variable relevante <b>correlacionada</b> con las incluidas sesga los coeficientes → estimadores <b>sesgados e inconsistentes</b>."
+    },
+    {
+      "id": "vol01-c041",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "No-linealidad ajustada como lineal",
+      "a": "Si la relación real es no-lineal y se ajusta lineal → modelo mal especificado → <b>heteroskedasticity en los residuos</b> (no serial correlation)."
+    },
+    {
+      "id": "vol01-c042",
+      "lm": "LM3",
+      "tipo": "metodo",
       "q": "Unconditional vs. conditional heteroskedasticity",
       "a": "<b>Unconditional</b>: varianza del error <b>no</b> correlacionada con las X → sin problema mayor. <b>Conditional</b>: correlacionada con las X → problemática."
     },
     {
-      "id": "vol01-c019",
+      "id": "vol01-c043",
       "lm": "LM3",
       "tipo": "concepto",
-      "q": "Efecto de la conditional heteroskedasticity",
-      "a": "<b>Subestima</b> los standard errors → t-stats <b>inflados</b> → más <b>errores Type I</b> (falsos positivos de significancia)."
+      "q": "Consecuencia de la conditional hetero",
+      "a": "<b>Subestima</b> los standard errors → t-stats <b>inflados</b> → más errores <b>Type I</b>. Los coeficientes siguen insesgados."
     },
     {
-      "id": "vol01-c020",
+      "id": "vol01-c044",
       "lm": "LM3",
       "tipo": "proceso",
-      "q": "Test y corrección de heteroskedasticity",
-      "a": "Test: <b>Breusch–Pagan</b> (regresa residuos² sobre las X). Corrección: <b>robust/White</b> standard errors."
+      "q": "Breusch–Pagan (BP) test",
+      "a": "Regresá los <b>residuos²</b> sobre las X; estadístico χ² = <b>n·R²</b> (R² del paso 2), con k g.l. H<sub>0</sub>: no hay conditional hetero."
     },
     {
-      "id": "vol01-c021",
+      "id": "vol01-c045",
       "lm": "LM3",
       "tipo": "concepto",
-      "q": "Efecto de la serial correlation (positiva)",
-      "a": "Serial correlation positiva → SE <b>subestimados</b> → t-stats inflados → <b>Type I</b>. (Los coeficientes siguen insesgados.)"
+      "q": "Corrección de heteroskedasticity",
+      "a": "<b>Robust (White) standard errors</b>: corrigen los SE sin cambiar los coeficientes. También GLS."
     },
     {
-      "id": "vol01-c022",
+      "id": "vol01-c046",
       "lm": "LM3",
-      "tipo": "proceso",
-      "q": "Durbin–Watson: cómo leerlo",
-      "a": "DW ≈ 0 a 4. <b>DW ≈ 2</b> → sin serial correlation. <b>DW &lt; 2</b> → positiva. <b>DW &gt; 2</b> → negativa. DW ≈ 2(1−r)."
+      "tipo": "concepto",
+      "q": "Serial correlation (autocorrelation)",
+      "a": "Los errores están correlacionados entre observaciones (típico en series temporales). Positiva = errores del mismo signo se agrupan."
     },
     {
-      "id": "vol01-c023",
+      "id": "vol01-c047",
       "lm": "LM3",
-      "tipo": "proceso",
+      "tipo": "concepto",
+      "q": "Consecuencia de la serial correlation positiva",
+      "a": "SE <b>subestimados</b> → t-stats inflados → <b>Type I</b>. (Coeficientes insesgados salvo lagged dependent variables.)"
+    },
+    {
+      "id": "vol01-c048",
+      "lm": "LM3",
+      "tipo": "metodo",
+      "q": "BG test vs. DW test",
+      "a": "<b>Breusch–Godfrey</b>: general, sirve con lagged dependent variables. <b>Durbin–Watson</b>: solo primer orden y <b>NO válido</b> si hay lagged dependent (todo AR)."
+    },
+    {
+      "id": "vol01-c049",
+      "lm": "LM3",
+      "tipo": "formula",
+      "q": "Durbin–Watson",
+      "a": "DW ≈ 2(1 − r). <b>DW ≈ 2</b> sin serial correlation; <b>&lt; 2</b> positiva; <b>&gt; 2</b> negativa."
+    },
+    {
+      "id": "vol01-c050",
+      "lm": "LM3",
+      "tipo": "concepto",
       "q": "Corrección de serial correlation",
-      "a": "<b>Newey–West</b> standard errors (robustos a serial correlation y heteroskedasticity). También Breusch–Godfrey para detectar."
+      "a": "<b>Newey–West</b> standard errors (robustos a serial correlation y heteroskedasticity)."
     },
     {
-      "id": "vol01-c024",
+      "id": "vol01-c051",
       "lm": "LM3",
       "tipo": "concepto",
-      "q": "Efecto de la multicolinealidad",
-      "a": "SE <b>inflados</b> → t-stats muy chicos → <b>Type II</b>. Señal clásica: <b>R² alto pero coeficientes individualmente no significativos</b>."
+      "q": "Multicollinearity",
+      "a": "Dos o más X altamente correlacionadas entre sí. No sesga los coeficientes pero infla su varianza."
     },
     {
-      "id": "vol01-c025",
+      "id": "vol01-c052",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Consecuencia de la multicollinearity",
+      "a": "SE <b>inflados</b> → t-stats chicos → <b>Type II</b>. Señal clásica: <b>R² alto con coeficientes individualmente no significativos</b>."
+    },
+    {
+      "id": "vol01-c053",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Por qué las correlaciones pairwise no alcanzan?",
+      "a": "La multicolinealidad puede surgir de combinaciones de <b>3+ variables</b> aunque ningún par tenga correlación alta. Por eso se usa el VIF."
+    },
+    {
+      "id": "vol01-c054",
       "lm": "LM3",
       "tipo": "formula",
       "q": "VIF (variance inflation factor)",
-      "a": "VIF<sub>j</sub> = 1/(1 − R²<sub>j</sub>), donde R²<sub>j</sub> es de regresar X<sub>j</sub> sobre las otras X. <b>VIF &gt; 5</b> preocupa; <b>&gt; 10</b> serio. Corrección: quitar variables."
+      "a": "VIF<sub>j</sub> = 1/(1 − R²<sub>j</sub>), con R²<sub>j</sub> de regresar X<sub>j</sub> sobre las otras X. <b>&gt; 5</b> preocupa; <b>&gt; 10</b> serio."
     },
     {
-      "id": "vol01-c026",
+      "id": "vol01-c055",
+      "lm": "LM3",
+      "tipo": "clasificacion",
+      "q": "Las 3 soluciones a la multicolinealidad",
+      "a": "1) Quitar una de las variables correlacionadas · 2) usar una transformación/combinación · 3) aumentar el tamaño de la muestra."
+    },
+    {
+      "id": "vol01-c056",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿La multicolinealidad afecta el R²?",
+      "a": "No: el R² del modelo puede seguir alto. El problema está en la <b>significancia individual</b>, no en el ajuste global."
+    },
+    {
+      "id": "vol01-c057",
+      "lm": "LM3",
+      "tipo": "metodo",
+      "q": "Dirección del sesgo: las 3 violaciones",
+      "a": "Hetero cond. y serial+ → SE ↓ → Type I. Multicolinealidad → SE ↑ → Type II. Unconditional hetero → sin problema."
+    },
+    {
+      "id": "vol01-c058",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "¿Los coeficientes se sesgan con hetero/serial?",
+      "a": "No — siguen <b>insesgados y consistentes</b>. Lo que se rompe son los <b>standard errors</b> (y la inferencia)."
+    },
+    {
+      "id": "vol01-c059",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Excepción: lagged dependent + serial correlation",
+      "a": "Si el modelo incluye valores rezagados de Y y hay serial correlation → los coeficientes <b>sí</b> quedan sesgados e inconsistentes."
+    },
+    {
+      "id": "vol01-c060",
+      "lm": "LM3",
+      "tipo": "proceso",
+      "q": "Detectar omitted variable bias con residuos",
+      "a": "Graficá los residuos contra la variable sospechada; si aparece una relación clara → hay una variable omitida relevante."
+    },
+    {
+      "id": "vol01-c061",
+      "lm": "LM3",
+      "tipo": "concepto",
+      "q": "Inappropriate scaling / pooling",
+      "a": "Escalar mal (mezclar niveles y %) o combinar datos de poblaciones distintas (pooling) genera especificación inválida."
+    },
+    {
+      "id": "vol01-c062",
       "lm": "LM4",
       "tipo": "metodo",
       "q": "High-leverage point vs. outlier",
-      "a": "<b>High-leverage point</b>: valor extremo en una <b>X</b> (independiente). <b>Outlier</b>: valor extremo en la <b>Y</b> (dependiente). Ambos pueden ser influyentes."
+      "a": "<b>High-leverage point</b>: valor extremo en una <b>X</b>. <b>Outlier</b>: valor extremo en la <b>Y</b>. Ambos pueden ser influyentes."
     },
     {
-      "id": "vol01-c027",
+      "id": "vol01-c063",
       "lm": "LM4",
       "tipo": "formula",
-      "q": "Umbral de leverage",
-      "a": "Influyente si leverage &gt; <b>3·(k+1)/n</b>, con k = nº de X y n = observaciones."
+      "q": "Leverage (h<sub>ii</sub>): umbral",
+      "a": "Influyente si h<sub>ii</sub> &gt; <b>3·(k+1)/n</b>. Mide la distancia de la X respecto a su media."
     },
     {
-      "id": "vol01-c028",
+      "id": "vol01-c064",
       "lm": "LM4",
       "tipo": "formula",
       "q": "Studentized residual: grados de libertad",
-      "a": "Residuo / su adjusted standard error. Influyente si &gt; el t crítico con <b>(n − k − 2)</b> g.l."
+      "a": "Residuo / su adjusted standard error. Influyente si |t*| &gt; el t crítico con <b>(n − k − 2)</b> g.l."
     },
     {
-      "id": "vol01-c029",
+      "id": "vol01-c065",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Las 2 reglas de influencia (no confundir)",
+      "a": "Leverage usa umbral <b>3(k+1)/n</b> (mide X extrema). Studentized residual usa <b>t con (n−k−2) df</b> (mide Y extrema/outlier)."
+    },
+    {
+      "id": "vol01-c066",
+      "lm": "LM4",
+      "tipo": "proceso",
+      "q": "¿Qué hacer con un punto influyente?",
+      "a": "Investigar si es error de datos. Si es válido, no borrarlo automáticamente; considerar transformaciones o reportar con y sin él."
+    },
+    {
+      "id": "vol01-c067",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Un punto con leverage alto puede no ser outlier",
+      "a": "X extrema pero residuo minúsculo → alto leverage, bajo studentized residual. Son métricas distintas."
+    },
+    {
+      "id": "vol01-c068",
       "lm": "LM4",
       "tipo": "concepto",
       "q": "Dummy (indicator) variable",
       "a": "Representa una variable cualitativa; toma <b>1</b> (verdadero) o <b>0</b> (falso)."
     },
     {
-      "id": "vol01-c030",
+      "id": "vol01-c069",
       "lm": "LM4",
       "tipo": "concepto",
-      "q": "¿Cuántas dummies para n categorías?",
-      "a": "<b>(n − 1)</b> dummies (la omitida es la categoría base). Incluir n cae en la <b>dummy variable trap</b> (colinealidad perfecta)."
+      "q": "Regla n − 1 para dummies",
+      "a": "Para n categorías se usan <b>(n − 1)</b> dummies (la omitida es la base). Usar n cae en la <b>dummy variable trap</b> (colinealidad perfecta)."
     },
     {
-      "id": "vol01-c031",
+      "id": "vol01-c070",
       "lm": "LM4",
       "tipo": "metodo",
       "q": "Intercept dummy vs. slope dummy",
-      "a": "<b>Intercept dummy</b>: suma/resta al intercepto (desplaza la recta). <b>Slope dummy</b> (interacción): cambia la <b>pendiente</b> (D×X)."
+      "a": "<b>Intercept dummy</b> (D): suma/resta al intercepto → desplaza la recta. <b>Slope dummy</b> (D×X, interaction): cambia la <b>pendiente</b>."
     },
     {
-      "id": "vol01-c032",
+      "id": "vol01-c071",
+      "lm": "LM4",
+      "tipo": "proceso",
+      "q": "Cómo se combinan los coeficientes con dummies",
+      "a": "Para la categoría marcada: intercepto efectivo = b<sub>0</sub> + b<sub>dummy</sub>; pendiente efectiva = b<sub>1</sub> + b<sub>interaction</sub>."
+    },
+    {
+      "id": "vol01-c072",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Interaction term negativo",
+      "a": "Un slope dummy negativo (ej. −0,2) significa que, para el grupo marcado, la sensibilidad de Y a X es <b>menor</b> que la del grupo base."
+    },
+    {
+      "id": "vol01-c073",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Por qué no sirve el linear probability model",
+      "a": "Con Y binaria, OLS puede predecir P &lt; 0 o &gt; 1 y genera heteroskedasticity → viola supuestos. Se usa logit."
+    },
+    {
+      "id": "vol01-c074",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Odds y log odds",
+      "a": "Odds = P/(1−P). Log odds (logit) = ln[P/(1−P)]. El logit modela el log odds como lineal en las X."
+    },
+    {
+      "id": "vol01-c075",
       "lm": "LM4",
       "tipo": "formula",
       "q": "Logistic regression (logit)",
-      "a": "ln[P/(1−P)] = b<sub>0</sub> + b<sub>1</sub>X<sub>1</sub> + … El lado izquierdo es el <b>log odds</b> (logit). P = 1/(1+e<sup>−(…)</sup>)."
+      "a": "ln[P/(1−P)] = b<sub>0</sub> + b<sub>1</sub>X<sub>1</sub> + … Se estima por <b>maximum likelihood</b> (no OLS)."
     },
     {
-      "id": "vol01-c033",
+      "id": "vol01-c076",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "De log odds a probabilidad",
+      "a": "P = odds/(1 + odds) = 1/(1 + e<sup>−(b<sub>0</sub>+…)</sup>). <b>OJO</b>: odds→P es <b>odds/(1+odds)</b>, no P/(1−P) (esa es la inversa)."
+    },
+    {
+      "id": "vol01-c077",
       "lm": "LM4",
       "tipo": "concepto",
-      "q": "Estimación e interpretación del logit",
-      "a": "Se estima por <b>maximum likelihood</b> (no OLS). Cada pendiente = cambio en el <b>log odds</b> por unidad de X, con lo demás constante."
+      "q": "Interpretación de un slope del logit",
+      "a": "Es el cambio en el <b>log odds</b> por unidad de X (con lo demás constante). e<sup>b</sup> = cambio multiplicativo en los <b>odds</b>."
     },
     {
-      "id": "vol01-c034",
+      "id": "vol01-c078",
       "lm": "LM4",
       "tipo": "concepto",
-      "q": "¿Por qué logistic y no lineal para binaria?",
-      "a": "La lineal puede dar probabilidades &lt; 0 o &gt; 1 y viola supuestos. La logística acota P en (0,1) vía la función sigmoide."
+      "q": "El efecto marginal del logit (contra-intuitivo)",
+      "a": "El cambio en <b>probabilidad</b> por unidad de X <b>no es constante</b>: depende del nivel de las X. El signo sí sigue al del coeficiente."
     },
     {
-      "id": "vol01-c035",
+      "id": "vol01-c079",
+      "lm": "LM4",
+      "tipo": "proceso",
+      "q": "Estimar el efecto marginal (método del currículo)",
+      "a": "1) P base con las medias · 2) subir la variable un poco (ej. +0,01) · 3) nueva P · 4) efecto marginal = ΔP contra la P base."
+    },
+    {
+      "id": "vol01-c080",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "¿Cuándo asumir que es un logit?",
+      "a": "No basta con Y=0/1. La señal es que digan “logistic/logit” <b>o</b> pidan interpretar en <b>odds/probability</b>. Si no, podría ser un modelo mal especificado."
+    },
+    {
+      "id": "vol01-c081",
+      "lm": "LM4",
+      "tipo": "metodo",
+      "q": "Pseudo-R² vs. R² tradicional",
+      "a": "El logit no tiene R² clásico. El <b>pseudo-R²</b> (McFadden) no se interpreta como % de varianza; solo compara modelos con la misma Y."
+    },
+    {
+      "id": "vol01-c082",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Log-Likelihood en el logit",
+      "a": "Siempre negativa; más cerca de 0 = mejor ajuste. No es significativa por sí sola; sirve para comparar."
+    },
+    {
+      "id": "vol01-c083",
+      "lm": "LM4",
+      "tipo": "formula",
+      "q": "Likelihood Ratio (LR) test",
+      "a": "LR = −2·(LL<sub>restricted</sub> − LL<sub>unrestricted</sub>), distribuido χ² con df = nº de restricciones. Testea la significancia conjunta del logit."
+    },
+    {
+      "id": "vol01-c084",
+      "lm": "LM4",
+      "tipo": "proceso",
+      "q": "Predecir con un logit",
+      "a": "Usar <b>solo las variables significativas</b>, armar el logit, pasar a odds y luego a P = odds/(1+odds)."
+    },
+    {
+      "id": "vol01-c085",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Signo del efecto marginal",
+      "a": "Sigue siempre al <b>signo del coeficiente</b>: coeficiente negativo → subir esa X <b>baja</b> la probabilidad."
+    },
+    {
+      "id": "vol01-c086",
+      "lm": "LM4",
+      "tipo": "concepto",
+      "q": "Estimación por maximum likelihood",
+      "a": "El logit no minimiza SSR; maximiza la verosimilitud de observar los 1/0 dados los X. Por eso no hay R² clásico."
+    },
+    {
+      "id": "vol01-c087",
       "lm": "LM5",
       "tipo": "metodo",
       "q": "Linear trend vs. log-linear trend",
-      "a": "<b>Linear</b>: cambio <b>absoluto</b> constante por período (y = b0 + b1·t). <b>Log-linear</b>: tasa de <b>crecimiento</b> constante / exponencial (ln y = b0 + b1·t)."
+      "a": "<b>Linear</b>: cambio <b>absoluto</b> constante (y = b0 + b1·t). <b>Log-linear</b>: tasa de <b>crecimiento</b> constante / exponencial (ln y = b0 + b1·t)."
     },
     {
-      "id": "vol01-c036",
+      "id": "vol01-c088",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Predicción de un log-linear trend",
+      "a": "ŷ = e<sup>(b̂<sub>0</sub> + b̂<sub>1</sub>t)</sup>. <b>No</b> te quedes en el ln: hay que exponenciar. Ej. Starbucks: e<sup>8,9742</sup> = $7.896,7 M."
+    },
+    {
+      "id": "vol01-c089",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Tasa de crecimiento de un log-linear",
+      "a": "Growth rate = e<sup>b<sub>1</sub></sup> − 1 (no b<sub>1</sub>). Ej.: e<sup>0,0295</sup> − 1 = 2,994%."
+    },
+    {
+      "id": "vol01-c090",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Cuándo log-linear en vez de linear?",
+      "a": "Cuando la serie crece a <b>tasa constante</b> (exponencial): los residuos del linear trend muestran patrón/persistencia."
+    },
+    {
+      "id": "vol01-c091",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Limitación de los trend models (DW)",
+      "a": "El Durbin–Watson suele revelar <b>serial correlation</b> en los residuos → el trend model es inadecuado y conviene un AR."
+    },
+    {
+      "id": "vol01-c092",
       "lm": "LM5",
       "tipo": "clasificacion",
-      "q": "Covariance stationary: 3 condiciones",
-      "a": "1) Media constante · 2) Varianza constante · 3) Covarianza constante con valores rezagados. <b>Requisito para usar AR.</b>"
+      "q": "Covariance stationarity: 3 requisitos",
+      "a": "1) Media constante y finita · 2) Varianza constante y finita · 3) Covarianza consigo misma (a cada lag fijo) constante y finita. Requisito para AR."
     },
     {
-      "id": "vol01-c037",
+      "id": "vol01-c093",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Qué pasa si la serie no es stationary?",
+      "a": "Los resultados no tienen significado económico, b<sub>1</sub> queda <b>sesgado</b> y los tests de hipótesis son <b>inválidos</b>."
+    },
+    {
+      "id": "vol01-c094",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "AR(p) model",
+      "a": "x<sub>t</sub> = b<sub>0</sub> + b<sub>1</sub>x<sub>t−1</sub> + … + b<sub>p</sub>x<sub>t−p</sub> + ε<sub>t</sub>. La variable se explica por sus propios rezagos."
+    },
+    {
+      "id": "vol01-c095",
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Validar un AR: autocorrelación de residuos",
+      "a": "1) Estimar el AR · 2) autocorrelaciones de los residuos (SE = 1/√T) · 3) testear si alguna es significativa. Si <b>ninguna</b> lo es → bien especificado."
+    },
+    {
+      "id": "vol01-c096",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Por qué el DW no sirve en un AR?",
+      "a": "Porque las independientes incluyen valores pasados de Y (lagged dependent). Usar las <b>autocorrelaciones de los residuos</b>, no el DW."
+    },
+    {
+      "id": "vol01-c097",
       "lm": "LM5",
       "tipo": "formula",
       "q": "Mean-reverting level de un AR(1)",
-      "a": "x<sub>t</sub> = b<sub>0</sub> / (1 − b<sub>1</sub>). Si el valor actual está por debajo → sube; por encima → baja."
+      "a": "x<sub>t</sub> = b<sub>0</sub>/(1 − b<sub>1</sub>). Ej. Intel: 0,1513/(1−0,7462) = 0,5961. Debajo → sube; encima → baja."
     },
     {
-      "id": "vol01-c038",
+      "id": "vol01-c098",
       "lm": "LM5",
       "tipo": "proceso",
       "q": "Chain rule of forecasting",
-      "a": "Para x<sub>t+2</sub>: primero se predice x<sub>t+1</sub> y se sustituye en el AR(1). Ej. Intel: x<sub>t+2</sub> = 0,1513 + 0,7462·(0,6214) = <b>0,6150</b>."
+      "a": "x̂<sub>t+1</sub> usa el valor <b>observado</b>; x̂<sub>t+2</sub> sustituye el <b>pronóstico</b> x̂<sub>t+1</sub>. Ej. Intel: 0,63 → 0,6214 → 0,6150."
     },
     {
-      "id": "vol01-c039",
-      "lm": "LM5",
-      "tipo": "proceso",
-      "q": "¿El AR ajusta bien? — autocorrelación de residuos",
-      "a": "Se testea si las <b>autocorrelaciones de los residuos</b> son significativas. Si <b>ninguna</b> lo es → el modelo está bien especificado."
-    },
-    {
-      "id": "vol01-c040",
-      "lm": "LM5",
-      "tipo": "metodo",
-      "q": "In-sample vs. out-of-sample; criterio RMSE",
-      "a": "Out-of-sample = datos fuera del período de estimación. Se compara con <b>RMSE</b>; <b>menor RMSE out-of-sample</b> = mejor modelo de forecasting."
-    },
-    {
-      "id": "vol01-c041",
-      "lm": "LM5",
-      "tipo": "clasificacion",
-      "q": "Random walk",
-      "a": "x<sub>t</sub> = x<sub>t−1</sub> + ε<sub>t</sub> (es decir b<sub>0</sub>=0, b<sub>1</sub>=1). <b>Con drift</b>: b<sub>0</sub> ≠ 0, b<sub>1</sub>=1."
-    },
-    {
-      "id": "vol01-c042",
+      "id": "vol01-c099",
       "lm": "LM5",
       "tipo": "concepto",
-      "q": "¿Por qué un random walk no es estacionario?",
-      "a": "Mean-reverting level = b<sub>0</sub>/(1−b<sub>1</sub>) = 0/0 <b>indefinido</b>, y la <b>varianza crece sin límite</b> con el tiempo."
+      "q": "Varianza del forecast multi-período",
+      "a": "Cuantos más períodos hacia adelante, <b>mayor</b> la varianza del pronóstico (más incertidumbre)."
     },
     {
-      "id": "vol01-c043",
+      "id": "vol01-c100",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "RMSE: in-sample vs. out-of-sample",
+      "a": "<b>RMSE</b> compara precisión <b>out-of-sample</b> (menor = mejor). El standard error de la regresión compara <b>in-sample</b>. “El futuro siempre es out-of-sample.”"
+    },
+    {
+      "id": "vol01-c101",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Inestabilidad de los coeficientes",
+      "a": "Los coeficientes de un time-series model pueden ser <b>inestables entre períodos</b>; elegir el período muestral correcto es clave."
+    },
+    {
+      "id": "vol01-c102",
+      "lm": "LM5",
+      "tipo": "formula",
+      "q": "Random walk",
+      "a": "x<sub>t</sub> = x<sub>t−1</sub> + ε<sub>t</sub> (b<sub>0</sub>=0, b<sub>1</sub>=1). <b>Con drift</b>: b<sub>0</sub> ≠ 0, b<sub>1</sub>=1."
+    },
+    {
+      "id": "vol01-c103",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Por qué un random walk no es stationary?",
+      "a": "Mean-reverting level = 0/0 <b>indefinido</b>, y var(x<sub>t</sub>) = (t−1)σ² → <b>∞</b> (crece sin límite)."
+    },
+    {
+      "id": "vol01-c104",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "First-differencing",
+      "a": "y<sub>t</sub> = x<sub>t</sub> − x<sub>t−1</sub>. La serie diferenciada <b>sí</b> es covariance stationary; su mean-reverting level = 0/(1−0) = 0. Se corre el AR sobre las diferencias."
+    },
+    {
+      "id": "vol01-c105",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "La trampa del R² (caso JPY/USD)",
+      "a": "El modelo en <b>niveles</b> tenía R²=0,9897 y el diferenciado R²=0,0008 — y el correcto es el de 0,0008. <b>No</b> se elige el modelo por el R²."
+    },
+    {
+      "id": "vol01-c106",
       "lm": "LM5",
       "tipo": "concepto",
       "q": "Unit root",
-      "a": "b<sub>1</sub> = 1 → la serie tiene una raíz unitaria y es <b>no estacionaria</b>. Un AR estimado sobre ella da resultados inválidos."
+      "a": "b<sub>1</sub> = 1 → raíz unitaria → serie <b>no estacionaria</b>. Un AR sobre ella es inválido (el t no sigue la distribución t)."
     },
     {
-      "id": "vol01-c044",
+      "id": "vol01-c107",
       "lm": "LM5",
       "tipo": "proceso",
       "q": "Dickey–Fuller test",
-      "a": "Se regresa Δx<sub>t</sub> = (b<sub>1</sub>−1)·x<sub>t−1</sub> + … y se testea H<sub>0</sub>: (b<sub>1</sub>−1) = 0 con <b>valores críticos DF</b> (no t normales). No rechazar → unit root."
+      "a": "Regresá x<sub>t</sub>−x<sub>t−1</sub> = b<sub>0</sub> + g<sub>1</sub>·x<sub>t−1</sub> + ε<sub>t</sub>, con g<sub>1</sub> = (b<sub>1</sub>−1). H<sub>0</sub>: g<sub>1</sub>=0 (hay unit root). Valores críticos DF <b>revisados</b> (más grandes)."
     },
     {
-      "id": "vol01-c045",
+      "id": "vol01-c108",
       "lm": "LM5",
       "tipo": "concepto",
-      "q": "Corregir un unit root",
-      "a": "<b>First-differencing</b>: modelar y<sub>t</sub> = x<sub>t</sub> − x<sub>t−1</sub>, que sí es covariance stationary, y correr el AR sobre las diferencias."
+      "q": "Hipótesis del Dickey–Fuller",
+      "a": "H<sub>0</sub>: g<sub>1</sub> = 0 → <b>hay</b> unit root (no estacionaria). H<sub>a</sub>: g<sub>1</sub> &lt; 0 → no hay unit root (estacionaria)."
     },
     {
-      "id": "vol01-c046",
+      "id": "vol01-c109",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Simple MA vs. MA(q) model",
+      "a": "<b>Simple MA</b>: promedio de valores <b>observados</b>, pesos iguales; suaviza; va por detrás. <b>MA(q)</b>: combinación de <b>términos de error</b> (ε) con pesos distintos; pronostica."
+    },
+    {
+      "id": "vol01-c110",
+      "lm": "LM5",
+      "tipo": "metodo",
+      "q": "Distinguir AR de MA por las autocorrelaciones",
+      "a": "<b>AR</b>: autocorrelaciones empiezan grandes y <b>declinan gradualmente</b>. <b>MA(q)</b>: <b>caen a cero de golpe</b> tras q. La mayoría de las series → AR."
+    },
+    {
+      "id": "vol01-c111",
       "lm": "LM5",
       "tipo": "proceso",
-      "q": "Seasonality: detección y corrección",
-      "a": "Autocorrelación de residuos significativa en el <b>lag estacional</b> (ej. lag 4 trimestral, 12 mensual). Se corrige <b>agregando un término de lag estacional</b> al AR."
+      "q": "Seasonality: detección",
+      "a": "Autocorrelación significativa del <b>residuo</b> en el lag estacional. Trimestral → lag 4; mensual → lag 12. Ej. Starbucks: 4ª autocorr = 0,7630, t = 6,47."
     },
     {
-      "id": "vol01-c047",
+      "id": "vol01-c112",
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Corregir seasonality",
+      "a": "Agregar un <b>término de lag estacional</b> al AR (ej. x<sub>t−4</sub>). Starbucks: el R² pasó de 0,2044 a 0,7032 al corregirla."
+    },
+    {
+      "id": "vol01-c113",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "ARMA: por qué el currículo no lo recomienda",
+      "a": "Parámetros muy <b>inestables</b>; elegir p y q es “más arte que ciencia”; no usar con &lt; 80 obs. Un AR suele pronosticar igual de bien con menos complejidad."
+    },
+    {
+      "id": "vol01-c114",
       "lm": "LM5",
       "tipo": "concepto",
       "q": "ARCH(1)",
-      "a": "La varianza del error depende del error² del período anterior: σ²<sub>t</sub> = a<sub>0</sub> + a<sub>1</sub>·ε²<sub>t−1</sub>. Se testea regresando residuos² sobre residuos² rezagados; a<sub>1</sub> significativo → ARCH."
+      "a": "La varianza del error depende del error² del período anterior: σ²<sub>t</sub> = a<sub>0</sub> + a<sub>1</sub>·ε²<sub>t−1</sub>."
     },
     {
-      "id": "vol01-c048",
+      "id": "vol01-c115",
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Test de ARCH(1)",
+      "a": "Regresá los <b>residuos²</b> contra <b>un lag</b> de los residuos². Si a<sub>1</sub> es significativo → hay ARCH(1) → los t-stats del AR original <b>no son válidos</b>."
+    },
+    {
+      "id": "vol01-c116",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "Beneficio del ARCH",
+      "a": "Permite <b>predecir la varianza</b>: σ̂²<sub>t+1</sub> = â<sub>0</sub> + â<sub>1</sub>·ε̂²<sub>t</sub> (elevar el error al cuadrado). Corrección del modelo: GLS."
+    },
+    {
+      "id": "vol01-c117",
+      "lm": "LM5",
+      "tipo": "clasificacion",
+      "q": "Cointegration: los 5 escenarios",
+      "a": "Solo <b>2</b> permiten regresión lineal válida: (1) ninguna tiene unit root; (5) ambas tienen unit root <b>y están cointegradas</b>. Las mezclas (2,3,4) → spurious."
+    },
+    {
+      "id": "vol01-c118",
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Engle–Granger test",
+      "a": "Corré la regresión, tomá los <b>residuos</b> y aplicáles Dickey–Fuller. Rechazar H<sub>0</sub> (error sin unit root) → <b>cointegradas</b> → regresión válida. Valores críticos de Engle–Granger."
+    },
+    {
+      "id": "vol01-c119",
+      "lm": "LM5",
+      "tipo": "concepto",
+      "q": "¿Sobre qué se testea la cointegración?",
+      "a": "Sobre el <b>término de error</b> de la regresión (no sobre las series originales)."
+    },
+    {
+      "id": "vol01-c120",
+      "lm": "LM5",
+      "tipo": "proceso",
+      "q": "Los 9 pasos del time-series forecasting",
+      "a": "Objetivo → graficar → ¿trend? → ¿covariance stationary? → AR → autocorrelaciones de residuos → ¿seasonality? → ¿ARCH? → out-of-sample/RMSE."
+    },
+    {
+      "id": "vol01-c121",
       "lm": "LM6",
       "tipo": "clasificacion",
       "q": "Las 3 clases de ML",
       "a": "<b>Supervised</b> (hay target Y, labeled) · <b>Unsupervised</b> (sin target) · <b>Deep learning / Reinforcement</b> (tareas complejas no-lineales)."
     },
     {
-      "id": "vol01-c049",
+      "id": "vol01-c122",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Terminología ML ↔ regresión",
+      "a": "Target = Y · Features = X · Training = estimar · Labeled data = pares (X,Y) conocidos."
+    },
+    {
+      "id": "vol01-c123",
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Supervised: regression vs. classification",
+      "a": "Target <b>continuo</b> → regression. Target <b>categórico/ordinal</b> → classification."
+    },
+    {
+      "id": "vol01-c124",
       "lm": "LM6",
       "tipo": "metodo",
       "q": "Bias error vs. variance error",
-      "a": "<b>Bias</b> → underfitting → alto error <b>in-sample</b>. <b>Variance</b> → overfitting → alto error <b>out-of-sample</b>."
+      "a": "<b>Bias</b> → underfitting → alto error <b>in-sample</b>. <b>Variance</b> → overfitting → alto error <b>out-of-sample</b>. <b>Base error</b> = ruido irreducible."
     },
     {
-      "id": "vol01-c050",
+      "id": "vol01-c125",
+      "lm": "LM6",
+      "tipo": "metodo",
+      "q": "Learning curve vs. fitting curve",
+      "a": "<b>Learning</b>: accuracy vs. tamaño del training. <b>Fitting</b>: error vs. complejidad; óptimo donde se cruzan bias y variance."
+    },
+    {
+      "id": "vol01-c126",
       "lm": "LM6",
       "tipo": "proceso",
       "q": "K-fold cross-validation",
-      "a": "Datos en k submuestras; k−1 entrenan, 1 valida; se repite k veces. Media de errores ≈ E<sub>out</sub>. <b>k típico 5 o 10</b>. <b>No sirve con time-series.</b>"
+      "a": "k submuestras; k−1 entrenan, 1 valida; se repite k veces; media ≈ E<sub>out</sub>. <b>k típico 5 o 10</b>. <b>No sirve con time-series.</b>"
     },
     {
-      "id": "vol01-c051",
+      "id": "vol01-c127",
       "lm": "LM6",
       "tipo": "formula",
       "q": "Penalty de LASSO",
-      "a": "Penalty = λ·Σ|b̂<sub>k</sub>|, con λ &gt; 0. Minimiza SSR + penalty. Hace <b>feature selection</b> (lleva coeficientes a 0). Si λ=0 → OLS."
+      "a": "Minimiza SSR + λ·Σ|b̂<sub>k</sub>|, con λ &gt; 0. Hace <b>feature selection</b> (coefs → 0). Si λ=0 → OLS."
     },
     {
-      "id": "vol01-c052",
+      "id": "vol01-c128",
       "lm": "LM6",
       "tipo": "concepto",
-      "q": "SVM en una línea",
-      "a": "Clasificador lineal que halla el hyperplane con <b>máximo margen</b>; los <b>support vectors</b> son los puntos más cercanos que lo definen."
+      "q": "SVM: qué mueve el boundary",
+      "a": "Hyperplane de <b>máximo margen</b>; lo definen los <b>support vectors</b> (puntos más cercanos). Agregar datos <b>lejanos</b> no cambia el boundary."
     },
     {
-      "id": "vol01-c053",
+      "id": "vol01-c129",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Soft margin classification",
+      "a": "Cuando los datos no son separables, permite errores penalizados y minimiza el <b>error total</b>, sin exigir el margen más ancho a toda costa."
+    },
+    {
+      "id": "vol01-c130",
       "lm": "LM6",
       "tipo": "concepto",
       "q": "KNN: elegir k",
-      "a": "Clasifica por mayoría de los k vecinos. k par → empates; k chico → sensible a outliers; k grande → diluye. No-paramétrico."
+      "a": "Mayoría de los k vecinos. k par → empates; k chico → sensible a outliers; k grande → diluye. No-paramétrico, sensible a features irrelevantes."
     },
     {
-      "id": "vol01-c054",
+      "id": "vol01-c131",
       "lm": "LM6",
       "tipo": "concepto",
       "q": "CART",
-      "a": "Árbol binario (root/decision/terminal). Sirve para <b>clasificación y regresión</b>. Terminal: mayoría (clasif.) o media (regr.). <b>Interpretable.</b>"
+      "a": "Árbol binario (root/decision/terminal). Clasificación <b>y</b> regresión. Terminal: mayoría (clasif.) o media (regr.). <b>Interpretable.</b>"
     },
     {
-      "id": "vol01-c055",
+      "id": "vol01-c132",
+      "lm": "LM6",
+      "tipo": "proceso",
+      "q": "Regularización de un CART",
+      "a": "Max depth · min population por nodo · max decision nodes · o <b>pruning</b> (podar ramas de poco poder tras construir)."
+    },
+    {
+      "id": "vol01-c133",
       "lm": "LM6",
       "tipo": "metodo",
       "q": "Voting vs. bagging",
       "a": "<b>Voting</b>: distintos algoritmos, voto mayoritario (heterogéneo). <b>Bagging</b>: mismo algoritmo, n datasets por muestreo <b>con reemplazo</b> (homogéneo)."
     },
     {
-      "id": "vol01-c056",
+      "id": "vol01-c134",
       "lm": "LM6",
       "tipo": "concepto",
       "q": "Random forest",
       "a": "Muchos CART vía bagging + <b>subset aleatorio de m &lt; n features</b> por nodo. Reduce variance/overfitting, pero es <b>black box</b>."
     },
     {
-      "id": "vol01-c057",
+      "id": "vol01-c135",
       "lm": "LM6",
       "tipo": "metodo",
       "q": "Eigenvector vs. eigenvalue (PCA)",
-      "a": "<b>Eigenvector</b> = dirección / variable compuesta no correlacionada. <b>Eigenvalue</b> = % de varianza explicada. Retener hasta 85–95% (scree plot)."
+      "a": "Eigen<b>vector</b> = dirección / variable compuesta no correlacionada. Eigen<b>value</b> = % de varianza explicada. Retener hasta 85–95% (scree plot)."
     },
     {
-      "id": "vol01-c058",
+      "id": "vol01-c136",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "PCA: para qué y su costo",
+      "a": "Reduce dimensión combinando features correlacionados en componentes no correlacionados. Costo: los componentes <b>no tienen interpretación económica</b> directa."
+    },
+    {
+      "id": "vol01-c137",
+      "lm": "LM6",
+      "tipo": "proceso",
+      "q": "K-means",
+      "a": "Particiona en <b>k clusters</b> (k fijo a priori) minimizando distancia intra-cluster y maximizando la inter-cluster. Depende de los centroides iniciales → correr varias veces."
+    },
+    {
+      "id": "vol01-c138",
       "lm": "LM6",
       "tipo": "metodo",
-      "q": "K-means vs. hierarchical",
-      "a": "<b>K-means</b>: k fijo a priori, sin relación entre clusters. <b>Hierarchical</b>: agglomerative (chicos) o divisive (grandes), con jerarquía; dendrograma."
+      "q": "Agglomerative vs. divisive (hierarchical)",
+      "a": "<b>Agglomerative</b> (bottom-up): clusters chicos/locales. <b>Divisive</b> (top-down): clusters grandes/globales. Se visualiza con dendrograma."
     },
     {
-      "id": "vol01-c059",
+      "id": "vol01-c139",
       "lm": "LM6",
       "tipo": "concepto",
       "q": "Neural network: estructura",
-      "a": "Input · hidden layer(s) · output. Cada nodo = summation + <b>activation no-lineal</b> (ReLU/sigmoid). <b>DNN</b> = ≥ 2 hidden layers."
+      "a": "Input · hidden layer(s) · output. Cada nodo = summation + <b>activation no-lineal</b> (ReLU/sigmoid). Forward + backward propagation ajustan los weights."
     },
     {
-      "id": "vol01-c060",
+      "id": "vol01-c140",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Deep learning (DNN)",
+      "a": "Red con <b>≥ 2 hidden layers</b> (hasta &gt;20). Base del deep learning. Ej. Culkin–Das: 6 inputs, 4 capas de 100 neuronas, R²=99,8%."
+    },
+    {
+      "id": "vol01-c141",
+      "lm": "LM6",
+      "tipo": "concepto",
+      "q": "Reinforcement learning",
+      "a": "Un <b>agent</b> maximiza su <b>reward</b> en un <b>environment</b> vía millones de trial & error. Sin datos etiquetados ni feedback instantáneo."
+    },
+    {
+      "id": "vol01-c142",
+      "lm": "LM6",
+      "tipo": "proceso",
+      "q": "Elegir el algoritmo (flowchart)",
+      "a": "¿Muchos features correlacionados? → PCA. ¿Numerical prediction? → LASSO (lineal)/CART·RF·NN (no-lineal). ¿Classification? labeled → KNN/SVM o CART/RF/NN; unlabeled → K-means (nº conocido)/hierarchical (desconocido)."
+    },
+    {
+      "id": "vol01-c143",
       "lm": "LM7",
       "tipo": "proceso",
       "q": "5 pasos de un proyecto de datos",
       "a": "1 Conceptualization · 2 Data collection · 3 Data prep &amp; wrangling · 4 Data exploration · 5 Model training. (Iterativo.)"
     },
     {
-      "id": "vol01-c061",
+      "id": "vol01-c144",
+      "lm": "LM7",
+      "tipo": "clasificacion",
+      "q": "Las 4 V del big data",
+      "a": "<b>Volume · Velocity · Variety · Veracity.</b> En texto, el foco es variety y veracity."
+    },
+    {
+      "id": "vol01-c145",
       "lm": "LM7",
       "tipo": "clasificacion",
       "q": "6 errores de cleansing (structured)",
-      "a": "Incompleteness · Invalidity · Inaccuracy · Inconsistency · Non-uniformity · Duplication."
+      "a": "Incompleteness · Invalidity · Inaccuracy · Inconsistency · Non-uniformity · Duplication. (El cleansing es lo que más tiempo consume.)"
     },
     {
-      "id": "vol01-c062",
+      "id": "vol01-c146",
       "lm": "LM7",
       "tipo": "clasificacion",
       "q": "5 transformaciones de preprocessing",
       "a": "Extraction · Aggregation · <b>Filtration</b> (filas) · <b>Selection</b> (columnas) · Conversion."
     },
     {
-      "id": "vol01-c063",
+      "id": "vol01-c147",
+      "lm": "LM7",
+      "tipo": "metodo",
+      "q": "Trimming vs. winsorization (outliers)",
+      "a": "<b>Trimming</b>: <b>eliminar</b> los extremos (ej. 5% trimmed). <b>Winsorization</b>: <b>reemplazar</b> por el máx/mín no-outlier."
+    },
+    {
+      "id": "vol01-c148",
       "lm": "LM7",
       "tipo": "metodo",
       "q": "Normalization vs. standardization",
       "a": "<b>Norm</b>: (X−X<sub>min</sub>)/(X<sub>max</sub>−X<sub>min</sub>) → [0,1], sensible a outliers. <b>Std</b>: (X−μ)/σ → media 0/sd 1, requiere normalidad."
     },
     {
-      "id": "vol01-c064",
-      "lm": "LM7",
-      "tipo": "metodo",
-      "q": "Trimming vs. winsorization",
-      "a": "<b>Trimming</b>: <b>eliminar</b> los extremos (ej. 5% trimmed). <b>Winsorization</b>: <b>reemplazar</b> por el máx/mín no-outlier."
-    },
-    {
-      "id": "vol01-c065",
+      "id": "vol01-c149",
       "lm": "LM7",
       "tipo": "proceso",
       "q": "Normalización de texto (4 pasos)",
-      "a": "Lowercasing · remover stop words · <b>stemming</b> (stem, rule-based) · <b>lemmatization</b> (lemma, real, más caro)."
+      "a": "Lowercasing · remover stop words · <b>stemming</b> (stem, rule-based) · <b>lemmatization</b> (lemma real, más caro)."
     },
     {
-      "id": "vol01-c066",
+      "id": "vol01-c150",
+      "lm": "LM7",
+      "tipo": "metodo",
+      "q": "Stemming vs. lemmatization",
+      "a": "Stemming → <b>stem</b> (puede no ser palabra real, rule-based, más común). Lemmatization → <b>lemma</b> (palabra real, algorítmico, más caro)."
+    },
+    {
+      "id": "vol01-c151",
       "lm": "LM7",
       "tipo": "concepto",
-      "q": "BOW vs. N-grams",
-      "a": "<b>BOW</b>: conjunto de tokens, <b>sin orden</b>. <b>N-grams</b>: secuencias (uni/bi/trigram) que <b>rescatan el orden</b>. DTM = filas docs × columnas tokens."
+      "q": "BOW vs. N-grams vs. DTM",
+      "a": "<b>BOW</b>: tokens sin orden. <b>N-grams</b>: secuencias que rescatan el orden. <b>DTM</b>: filas = docs, columnas = tokens, celdas = conteo."
     },
     {
-      "id": "vol01-c067",
+      "id": "vol01-c152",
+      "lm": "LM7",
+      "tipo": "clasificacion",
+      "q": "Data exploration (structured): 3 tareas",
+      "a": "EDA (visualizar/resumir) · Feature selection (quedarse con los significativos) · Feature engineering (crear/optimizar features)."
+    },
+    {
+      "id": "vol01-c153",
+      "lm": "LM7",
+      "tipo": "metodo",
+      "q": "Feature selection vs. dimensionality reduction",
+      "a": "Selection: incluye/excluye features <b>sin alterarlos</b>. Dim. reduction (PCA): crea <b>combinaciones nuevas</b> no correlacionadas."
+    },
+    {
+      "id": "vol01-c154",
+      "lm": "LM7",
+      "tipo": "metodo",
+      "q": "Feature selection vs. engineering (efecto en el fit)",
+      "a": "Feature <b>selection</b> previene <b>overfitting</b> (quita ruido). Feature <b>engineering</b> previene <b>underfitting</b> (agrega estructura)."
+    },
+    {
+      "id": "vol01-c155",
+      "lm": "LM7",
+      "tipo": "clasificacion",
+      "q": "Feature selection en texto",
+      "a": "<b>DF</b> (frecuencia) · <b>chi-square</b> (discriminación) · <b>mutual information</b> (MI=0 igual en todas las clases; MI→1 concentrado en una)."
+    },
+    {
+      "id": "vol01-c156",
+      "lm": "LM7",
+      "tipo": "formula",
+      "q": "TF, DF, IDF, TF-IDF",
+      "a": "TF = palabras/oración. DF = docs con el token/total. IDF = log(1/DF). <b>TF-IDF = TF × IDF</b>. Alto = frecuente en pocos docs (único)."
+    },
+    {
+      "id": "vol01-c157",
+      "lm": "LM7",
+      "tipo": "clasificacion",
+      "q": "Method selection (model training)",
+      "a": "Por tipo de dato: numérico→CART; texto→GLM/SVM; imagen/voz→NN/deep learning. Dataset <b>wide</b>→SVM; <b>long</b>→NN."
+    },
+    {
+      "id": "vol01-c158",
       "lm": "LM7",
       "tipo": "formula",
       "q": "Precision y Recall",
       "a": "P = TP/(TP+FP) (costo de <b>FP/Type I</b> alto). R = TP/(TP+FN) (costo de <b>FN/Type II</b> alto). R = sensitivity = TPR."
     },
     {
-      "id": "vol01-c068",
+      "id": "vol01-c159",
       "lm": "LM7",
       "tipo": "formula",
       "q": "Accuracy y F1",
-      "a": "Accuracy = (TP+TN)/total (solo si balanceado). <b>F1</b> = 2PR/(P+R), media armónica (mejor si <b>desbalanceado</b>)."
+      "a": "Accuracy = (TP+TN)/total (solo si balanceado). <b>F1</b> = 2PR/(P+R), media armónica (mejor si desbalanceado)."
     },
     {
-      "id": "vol01-c069",
+      "id": "vol01-c160",
+      "lm": "LM7",
+      "tipo": "concepto",
+      "q": "ROC / AUC y RMSE",
+      "a": "ROC = TPR (y) vs. FPR (x). <b>AUC ≈ 1</b> casi perfecto; <b>0,5</b> azar. <b>RMSE</b> = √[Σ(Pred−Act)²/n], para regresión (menor = mejor)."
+    },
+    {
+      "id": "vol01-c161",
       "lm": "LM7",
       "tipo": "metodo",
       "q": "Parameter vs. hyperparameter",
-      "a": "<b>Parameter</b>: aprendido de los datos (weights, coeficientes, support vectors). <b>Hyperparameter</b>: seteado a mano (λ, k, nº capas, p-threshold)."
+      "a": "<b>Parameter</b>: aprendido de los datos (weights, coefs, support vectors). <b>Hyperparameter</b>: seteado a mano (λ, k, capas, p-threshold)."
     },
     {
-      "id": "vol01-c070",
+      "id": "vol01-c162",
       "lm": "LM7",
-      "tipo": "formula",
-      "q": "TF-IDF",
-      "a": "TF-IDF = TF × IDF, con IDF = log(1/DF). <b>Alto</b> = frecuente en <b>pocos</b> docs (único, importante); bajo = en muchos docs."
-    },
-    {
-      "id": "vol01-c071",
-      "lm": "LM7",
-      "tipo": "concepto",
-      "q": "ROC / AUC",
-      "a": "ROC = TPR (y) vs. FPR (x) a distintos cutoffs. <b>AUC ≈ 1</b> casi perfecto; <b>0,5</b> azar. Más convexa = mejor. RMSE para regresión."
+      "tipo": "proceso",
+      "q": "Tuning: grid search y fitting curve",
+      "a": "Grid search prueba combinaciones de hiperparámetros con CV. Poca λ → overfitting (variance); mucha λ → underfitting (bias). Ceiling analysis = qué sub-modelo tunear."
     }
   ],
   "traps": [
@@ -543,57 +1180,106 @@
       "id": "vol01-t-lm1-01",
       "lm": "LM1",
       "star": false,
-      "title": "La regresión no prueba causalidad",
-      "body": "Los coeficientes miden asociación condicional, no causa. Una relación puede ser espuria aunque sea significativa."
+      "title": "Significancia ≠ causalidad",
+      "body": "Un coeficiente significativo mide asociación condicional, no causa. Puede ser espurio."
     },
     {
       "id": "vol01-t-lm1-02",
       "lm": "LM1",
+      "star": true,
+      "title": "b<sub>j</sub> es un efecto parcial",
+      "body": "Cada b<sub>j</sub> es el efecto de X<sub>j</sub> <b>manteniendo constantes las otras X</b>, no el efecto total/marginal simple."
+    },
+    {
+      "id": "vol01-t-lm1-03",
+      "lm": "LM1",
       "star": false,
-      "title": "Interpretar b<sub>j</sub> sin 'lo demás constante'",
-      "body": "Cada b<sub>j</sub> es el efecto de X<sub>j</sub> <b>manteniendo constantes las otras X</b>, no el efecto total."
+      "title": "Patrón en el residual plot",
+      "body": "Residuos con patrón/curvatura → forma funcional mal especificada. Deben verse aleatorios alrededor de 0."
+    },
+    {
+      "id": "vol01-t-lm1-04",
+      "lm": "LM1",
+      "star": false,
+      "title": "Q-Q plot: colas",
+      "body": "La no-normalidad se ve en las <b>colas</b> que se despegan de la recta 45°, no en el centro."
+    },
+    {
+      "id": "vol01-t-lm1-05",
+      "lm": "LM1",
+      "star": false,
+      "title": "SEE está en unidades de Y",
+      "body": "El standard error of estimate está en la <b>escala de Y</b>; no se compara entre modelos con distinta Y."
     },
     {
       "id": "vol01-t-lm2-01",
       "lm": "LM2",
-      "star": true,
-      "title": "Adjusted R² solo sube",
+      "star": false,
+      "title": "Adjusted R² 'solo sube'",
       "body": "Falso: R̄² <b>baja</b> si el |t| de la variable agregada es &lt; 1, y puede ser <b>negativo</b>."
     },
     {
       "id": "vol01-t-lm2-02",
       "lm": "LM2",
       "star": true,
-      "title": "AIC vs. BIC invertidos",
-      "body": "<b>AIC → predicción</b>; <b>BIC → goodness of fit</b>. BIC penaliza más (prefiere modelos chicos). Menor es mejor en ambos."
+      "title": "AIC vs. BIC",
+      "body": "<b>AIC → predicción</b>; <b>BIC → goodness of fit</b>. BIC penaliza más (ln n &gt; 2). Menor es mejor en ambos."
     },
     {
       "id": "vol01-t-lm2-03",
       "lm": "LM2",
       "star": false,
       "title": "Valor absoluto de AIC/BIC",
-      "body": "El valor por sí solo no significa nada: solo importan los valores <b>relativos</b> entre modelos con la misma Y."
+      "body": "Solo importan los valores <b>relativos</b> entre modelos con la misma Y; el valor solo no dice nada."
     },
     {
       "id": "vol01-t-lm2-04",
       "lm": "LM2",
       "star": false,
-      "title": "F conjunto ≠ suma de t individuales",
-      "body": "Con X correlacionadas, los t individuales no captan el poder explicativo compartido; hay que usar el <b>joint F-test</b>."
+      "title": "Joint F ≠ suma de t",
+      "body": "Con X correlacionadas los t individuales no captan el poder compartido; hay que usar el <b>joint F-test</b>."
+    },
+    {
+      "id": "vol01-t-lm2-05",
+      "lm": "LM2",
+      "star": true,
+      "title": "Joint F vs. general linear F",
+      "body": "General linear F: <b>todos</b> los slopes = 0. Joint F: un <b>subconjunto</b> de q slopes = 0 (nested vs. full)."
+    },
+    {
+      "id": "vol01-t-lm2-06",
+      "lm": "LM2",
+      "star": false,
+      "title": "Prediction interval vs. CI",
+      "body": "El prediction interval es <b>más ancho</b>: suma el error aleatorio del término de error, no solo la incertidumbre de la media."
+    },
+    {
+      "id": "vol01-t-lm2-07",
+      "lm": "LM2",
+      "star": false,
+      "title": "R² no testea significancia",
+      "body": "El R²/adjusted R² no sirven para testear el ajuste del modelo; para eso está el F del ANOVA."
+    },
+    {
+      "id": "vol01-t-lm2-08",
+      "lm": "LM2",
+      "star": false,
+      "title": "df del t-test en MLR",
+      "body": "Los t individuales usan <b>(n−k−1)</b> g.l., no (n−2)."
     },
     {
       "id": "vol01-t-lm3-01",
       "lm": "LM3",
       "star": false,
-      "title": "Unconditional heteroskedasticity es grave",
+      "title": "Unconditional hetero es grave",
       "body": "Falso: la <b>unconditional</b> no causa problemas mayores. La <b>conditional</b> es la problemática."
     },
     {
       "id": "vol01-t-lm3-02",
       "lm": "LM3",
       "star": true,
-      "title": "Dirección del sesgo por hetero/serial",
-      "body": "Conditional hetero y serial positiva <b>subestiman</b> los SE → t inflados → <b>Type I</b>. Los coeficientes siguen insesgados."
+      "title": "Dirección del sesgo hetero/serial",
+      "body": "Conditional hetero y serial positiva <b>subestiman</b> los SE → t inflados → <b>Type I</b>. Coeficientes insesgados."
     },
     {
       "id": "vol01-t-lm3-03",
@@ -606,78 +1292,211 @@
       "id": "vol01-t-lm3-04",
       "lm": "LM3",
       "star": false,
-      "title": "Leer el Durbin–Watson",
-      "body": "DW ≈ 2 = sin serial correlation. <b>&lt; 2</b> positiva, <b>&gt; 2</b> negativa. DW ≈ 2(1−r)."
+      "title": "BP: estadístico n·R²",
+      "body": "El Breusch–Pagan usa χ² = <b>n·R²</b> del paso 2 (residuos² sobre X), con k g.l."
+    },
+    {
+      "id": "vol01-t-lm3-05",
+      "lm": "LM3",
+      "star": true,
+      "title": "DW inválido en un AR",
+      "body": "El Durbin–Watson <b>no</b> sirve si hay lagged dependent variables (todo AR). Usar BG o autocorrelaciones de residuos."
+    },
+    {
+      "id": "vol01-t-lm3-06",
+      "lm": "LM3",
+      "star": true,
+      "title": "No-linealidad → heteroskedasticity",
+      "body": "Una relación no-lineal ajustada como lineal produce <b>heteroskedasticity</b> en los residuos, <b>no</b> serial correlation."
+    },
+    {
+      "id": "vol01-t-lm3-07",
+      "lm": "LM3",
+      "star": false,
+      "title": "Omitted variable → sesgo",
+      "body": "Omitir una variable relevante correlacionada sesga los coeficientes (inconsistentes); es distinto de hetero/serial."
+    },
+    {
+      "id": "vol01-t-lm3-08",
+      "lm": "LM3",
+      "star": false,
+      "title": "Pairwise correlation no basta",
+      "body": "La multicolinealidad puede venir de <b>3+ variables</b> sin que ningún par correlacione alto. Usar VIF."
+    },
+    {
+      "id": "vol01-t-lm3-09",
+      "lm": "LM3",
+      "star": false,
+      "title": "Lagged dependent + serial",
+      "body": "Excepción: con lagged dependent y serial correlation, los coeficientes <b>sí</b> quedan sesgados e inconsistentes."
     },
     {
       "id": "vol01-t-lm4-01",
       "lm": "LM4",
       "star": true,
       "title": "High-leverage vs. outlier",
-      "body": "<b>Leverage</b> = extremo en <b>X</b>. <b>Outlier</b> = extremo en <b>Y</b>. No confundir."
+      "body": "<b>Leverage</b> = extremo en <b>X</b>. <b>Outlier</b> = extremo en <b>Y</b>. No confundir las métricas."
     },
     {
       "id": "vol01-t-lm4-02",
       "lm": "LM4",
       "star": true,
-      "title": "Nº de dummies",
-      "body": "Para n categorías se usan <b>(n−1)</b> dummies; usar n cae en la <b>dummy variable trap</b>."
+      "title": "Las dos reglas de influencia",
+      "body": "Leverage: umbral <b>3(k+1)/n</b>. Studentized residual: t con <b>(n−k−2)</b> df. Cada una mide algo distinto."
     },
     {
       "id": "vol01-t-lm4-03",
       "lm": "LM4",
       "star": false,
-      "title": "Logistic se estima por OLS",
-      "body": "Se estima por <b>maximum likelihood</b>. La pendiente es el cambio en el <b>log odds</b>, no en P."
+      "title": "Nº de dummies",
+      "body": "Para n categorías se usan <b>(n−1)</b> dummies; usar n cae en la <b>dummy variable trap</b>."
     },
     {
       "id": "vol01-t-lm4-04",
       "lm": "LM4",
       "star": false,
-      "title": "df del studentized residual",
-      "body": "Usa <b>(n − k − 2)</b> grados de libertad; el umbral de leverage es <b>3(k+1)/n</b>."
+      "title": "Logistic se estima por OLS",
+      "body": "Se estima por <b>maximum likelihood</b>. El slope es el cambio en el <b>log odds</b>."
+    },
+    {
+      "id": "vol01-t-lm4-05",
+      "lm": "LM4",
+      "star": true,
+      "title": "Odds→Prob = odds/(1+odds)",
+      "body": "P = odds/(1+odds), <b>no</b> P/(1−P) (esa es la inversa, prob→odds). Denominadores distintos."
+    },
+    {
+      "id": "vol01-t-lm4-06",
+      "lm": "LM4",
+      "star": true,
+      "title": "El efecto marginal del logit no es constante",
+      "body": "El cambio en <b>probabilidad</b> depende del nivel de las X. El signo sí sigue al del coeficiente."
+    },
+    {
+      "id": "vol01-t-lm4-07",
+      "lm": "LM4",
+      "star": true,
+      "title": "Y=0/1 no implica logit por sí solo",
+      "body": "La señal es que digan “logistic/logit” o pidan interpretar en odds/probability. Si no, puede ser un modelo mal especificado."
+    },
+    {
+      "id": "vol01-t-lm4-08",
+      "lm": "LM4",
+      "star": false,
+      "title": "Pseudo-R² no es % de varianza",
+      "body": "El pseudo-R² del logit solo compara modelos con la misma Y; no se interpreta como el R² clásico."
+    },
+    {
+      "id": "vol01-t-lm4-09",
+      "lm": "LM4",
+      "star": false,
+      "title": "Slope dummy vs. intercept dummy",
+      "body": "Intercept dummy desplaza el intercepto; slope dummy (D×X) cambia la <b>pendiente</b>."
+    },
+    {
+      "id": "vol01-t-lm4-10",
+      "lm": "LM4",
+      "star": false,
+      "title": "LR test: fórmula",
+      "body": "LR = −2·(LL<sub>restricted</sub> − LL<sub>unrestricted</sub>), χ² con df = nº de restricciones."
     },
     {
       "id": "vol01-t-lm5-01",
       "lm": "LM5",
       "star": true,
-      "title": "Covariance stationarity es opcional para AR",
-      "body": "Es <b>requisito</b>. Sin ella (p. ej. unit root) el AR estimado es inválido."
+      "title": "La trampa del R² (niveles vs. diferencias)",
+      "body": "JPY/USD: niveles R²=0,9897 vs. diferenciado 0,0008 — y el <b>correcto</b> es 0,0008. No se elige el modelo por el R²."
     },
     {
       "id": "vol01-t-lm5-02",
       "lm": "LM5",
       "star": true,
-      "title": "Random walk tiene mean-reverting level",
-      "body": "No: b<sub>0</sub>/(1−b<sub>1</sub>) = 0/0 <b>indefinido</b>, y la varianza crece sin límite → no estacionario."
+      "title": "DW en un AR es una trampa deliberada",
+      "body": "El software lo imprime igual, pero es <b>inválido</b> en un AR. Testear las autocorrelaciones de los residuos (SE=1/√T)."
     },
     {
       "id": "vol01-t-lm5-03",
       "lm": "LM5",
-      "star": false,
-      "title": "Signo en el mean-reverting level",
-      "body": "b<sub>0</sub>/(1−b<sub>1</sub>). Si el valor actual está <b>por debajo</b> → la serie <b>sube</b> (y viceversa)."
+      "star": true,
+      "title": "Log-linear: hay que exponenciar",
+      "body": "Predicted = e<sup>(b̂<sub>0</sub>+b̂<sub>1</sub>t)</sup>. Quedarse en el ln (ej. 8,97) da un número absurdo; e<sup>8,9742</sup>=$7.896,7 M."
     },
     {
       "id": "vol01-t-lm5-04",
       "lm": "LM5",
       "star": false,
-      "title": "Dickey–Fuller usa t normales",
-      "body": "Usa valores críticos <b>DF</b> especiales, no la t estándar. Se testea (b<sub>1</sub>−1)=0."
+      "title": "Tasa de crecimiento del log-linear",
+      "body": "Es e<sup>b<sub>1</sub></sup> − 1, <b>no</b> b<sub>1</sub>. (e<sup>0,0295</sup>−1 = 2,994%.)"
     },
     {
       "id": "vol01-t-lm5-05",
       "lm": "LM5",
       "star": false,
-      "title": "Corregir unit root",
-      "body": "Se hace <b>first-differencing</b> y se corre el AR sobre las diferencias."
+      "title": "Covariance stationarity es requisito",
+      "body": "Sin ella, b<sub>1</sub> está sesgado y los tests son inválidos. No es opcional para un AR."
     },
     {
       "id": "vol01-t-lm5-06",
       "lm": "LM5",
       "star": false,
-      "title": "Seasonal lag",
-      "body": "Autocorrelación significativa en el lag estacional (4 trimestral / 12 mensual) → agregar un <b>término de lag estacional</b>."
+      "title": "Random walk: mean-reverting indefinido",
+      "body": "b<sub>0</sub>/(1−b<sub>1</sub>) = 0/0 <b>indefinido</b>, y var(x<sub>t</sub>)=(t−1)σ²→∞. La serie diferenciada sí tiene nivel = 0."
+    },
+    {
+      "id": "vol01-t-lm5-07",
+      "lm": "LM5",
+      "star": false,
+      "title": "Unit root: no se puede correr un AR",
+      "body": "Si b<sub>1</sub>=1, el t no sigue la distribución t → el AR es inválido. Hay que first-difference."
+    },
+    {
+      "id": "vol01-t-lm5-08",
+      "lm": "LM5",
+      "star": false,
+      "title": "Dickey–Fuller: valores críticos revisados",
+      "body": "Se testea g<sub>1</sub>=(b<sub>1</sub>−1)=0 con valores críticos DF <b>más grandes</b> en valor absoluto (no la t normal)."
+    },
+    {
+      "id": "vol01-t-lm5-09",
+      "lm": "LM5",
+      "star": false,
+      "title": "Simple MA ≠ MA(q) model",
+      "body": "Simple MA: valores observados, pesos iguales, suaviza. MA(q): términos de error (ε) con pesos distintos, pronostica."
+    },
+    {
+      "id": "vol01-t-lm5-10",
+      "lm": "LM5",
+      "star": true,
+      "title": "Distinguir AR de MA",
+      "body": "AR: autocorrelaciones declinan gradualmente. MA(q): caen a cero de golpe tras q. La mayoría de las series → AR."
+    },
+    {
+      "id": "vol01-t-lm5-11",
+      "lm": "LM5",
+      "star": false,
+      "title": "Seasonal lag: 4 vs. 12",
+      "body": "Trimestral → lag 4; mensual → lag 12. Se detecta por la autocorrelación del residuo en ese lag."
+    },
+    {
+      "id": "vol01-t-lm5-12",
+      "lm": "LM5",
+      "star": true,
+      "title": "ARCH: residuos AL CUADRADO",
+      "body": "Se regresan los residuos² contra un lag de los residuos². Predicción de varianza: σ̂²<sub>t+1</sub>=â<sub>0</sub>+â<sub>1</sub>·ε̂²<sub>t</sub>. Corrección: GLS."
+    },
+    {
+      "id": "vol01-t-lm5-13",
+      "lm": "LM5",
+      "star": true,
+      "title": "Cointegration: o ninguna o las dos",
+      "body": "Solo válido si (1) ninguna tiene unit root, o (5) ambas tienen unit root <b>y</b> están cointegradas. Cualquier mezcla → spurious."
+    },
+    {
+      "id": "vol01-t-lm5-14",
+      "lm": "LM5",
+      "star": false,
+      "title": "Engle–Granger se testea sobre el error",
+      "body": "Dickey–Fuller sobre los <b>residuos</b> de la regresión (no las series). Rechazar H<sub>0</sub> → cointegradas → válida."
     },
     {
       "id": "vol01-t-lm6-01",
@@ -703,23 +1522,37 @@
     {
       "id": "vol01-t-lm6-04",
       "lm": "LM6",
-      "star": false,
-      "title": "Random forest usa todos los features",
-      "body": "Usa un <b>subset aleatorio de m &lt; n</b> por nodo. Además es black box (a diferencia del CART único)."
+      "star": true,
+      "title": "SVM: datos lejanos no mueven el boundary",
+      "body": "Solo los <b>support vectors</b> (puntos cercanos) definen el boundary; agregar datos lejanos no lo cambia."
     },
     {
       "id": "vol01-t-lm6-05",
+      "lm": "LM6",
+      "star": false,
+      "title": "Random forest: subset de features",
+      "body": "Usa un <b>subset aleatorio de m &lt; n</b> features por nodo, no todos. Pierde la interpretabilidad del CART único."
+    },
+    {
+      "id": "vol01-t-lm6-06",
       "lm": "LM6",
       "star": false,
       "title": "Eigenvector vs. eigenvalue",
       "body": "Eigen<b>vector</b> = dirección. Eigen<b>value</b> = % de varianza. PC1 = mayor eigenvalue."
     },
     {
-      "id": "vol01-t-lm6-06",
+      "id": "vol01-t-lm6-07",
       "lm": "LM6",
       "star": false,
       "title": "Agglomerative vs. divisive",
       "body": "Aggl. = bottom-up, clusters chicos/locales. Divisive = top-down, clusters grandes/globales."
+    },
+    {
+      "id": "vol01-t-lm6-08",
+      "lm": "LM6",
+      "star": false,
+      "title": "K-means: k a priori",
+      "body": "k se fija antes; el resultado depende de los centroides iniciales → correr varias veces."
     },
     {
       "id": "vol01-t-lm7-01",
@@ -739,162 +1572,234 @@
       "id": "vol01-t-lm7-03",
       "lm": "LM7",
       "star": false,
-      "title": "Accuracy con clases desbalanceadas",
-      "body": "Accuracy engaña si el dataset está desbalanceado → usar <b>F1</b> (media armónica)."
+      "title": "Accuracy con desbalance",
+      "body": "Accuracy engaña si las clases están desbalanceadas → usar <b>F1</b> (media armónica)."
     },
     {
       "id": "vol01-t-lm7-04",
-      "lm": "LM7",
-      "star": false,
-      "title": "Normalization vs. standardization",
-      "body": "Norm → [0,1], sensible a outliers, sin distribución conocida. Std → media 0/sd 1, requiere normalidad."
-    },
-    {
-      "id": "vol01-t-lm7-05",
       "lm": "LM7",
       "star": false,
       "title": "Filtration vs. Selection",
       "body": "Filtration = quitar <b>filas</b>; Selection = quitar <b>columnas</b>. Selection (prep) ≠ feature selection (exploration)."
     },
     {
+      "id": "vol01-t-lm7-05",
+      "lm": "LM7",
+      "star": false,
+      "title": "Normalization vs. standardization",
+      "body": "Norm → [0,1], sensible a outliers. Std → media 0/sd 1, requiere normalidad."
+    },
+    {
       "id": "vol01-t-lm7-06",
       "lm": "LM7",
       "star": false,
-      "title": "Stemming vs. lemmatization",
-      "body": "Stem = rule-based, puede no ser palabra real, más común. Lemma = raíz real, más caro. BOW pierde el orden → N-grams."
+      "title": "Selection→overfitting / engineering→underfitting",
+      "body": "Feature selection quita ruido (previene overfitting); feature engineering agrega estructura (previene underfitting)."
     },
     {
       "id": "vol01-t-lm7-07",
       "lm": "LM7",
       "star": false,
       "title": "TF-IDF alto",
-      "body": "TF-IDF alto = palabra frecuente en <b>pocos</b> documentos (única/importante). IDF = log(1/DF)."
+      "body": "TF-IDF alto = palabra frecuente en <b>pocos</b> documentos (única/importante). DF alta → IDF y TF-IDF bajos."
     },
     {
       "id": "vol01-t-lm7-08",
       "lm": "LM7",
       "star": false,
-      "title": "RMSE para clasificación",
-      "body": "RMSE es para <b>regresión/continuo</b>. Clasificación → confusion matrix, F1, ROC/AUC."
+      "title": "RMSE es para regresión",
+      "body": "RMSE = datos continuos/regresión. Clasificación → confusion matrix, F1, ROC/AUC."
     }
   ],
   "problems": [
     {
       "id": "vol01-p01",
-      "lm": "LM2",
-      "title": "Adjusted R²",
-      "given": "Una regresión con n=50 observaciones y k=5 variables tiene R²=0,6155.",
-      "ask": "Calcular el adjusted R².",
-      "answer": "R̄² = <b>0,5718</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>R̄² = 1 − [(n−1)/(n−k−1)]·(1−R²)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 1 − [(50−1)/(50−5−1)]·(1−0,6155)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 1 − (49/44)·(0,3845)</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>= 1 − 1,1136·0,3845 = 1 − 0,4282</span></div><div class=\"res\">R̄² = <b>0,5718</b></div><div class=\"warn\">Con k≥1, siempre R̄² &lt; R² (0,5718 &lt; 0,6155).</div>"
+      "lm": "LM1",
+      "title": "Predicción con MLR — bond index",
+      "given": "RET = 0,0023 − 5,0585·ΔBY − 2,1901·ΔCS. Se asume ΔBY = 0,005 y ΔCS = 0,001.",
+      "ask": "Calcular el expected excess return del índice.",
+      "answer": "RET ≈ <b>−2,52%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>RET = 0,0023 − 5,0585·(0,005) − 2,1901·(0,001)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0,0023 − 0,0252925 − 0,0021901</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= −0,0252</span></div><div class=\"res\">RET ≈ <b>−2,52%</b></div><div class=\"warn\">El coeficiente −5,0585 es la empirical duration (holding CS constant).</div>"
     },
     {
       "id": "vol01-p02",
-      "lm": "LM2",
-      "title": "AIC de un modelo",
-      "given": "Modelo con n=50, k=4 y SSE = 56,6182.",
-      "ask": "Escribir la fórmula del AIC y su término de penalidad.",
-      "answer": "AIC = 50·ln(1,1324) + <b>10</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>AIC = n·ln(SSE/n) + 2(k+1)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 50·ln(56,6182/50) + 2(4+1)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Penalidad = 2(k+1) = 2·5 = 10</span></div><div class=\"res\">AIC = 50·ln(1,1324) + <b>10</b></div><div class=\"warn\">AIC se prefiere para predicción; menor AIC = mejor. BIC usaría ln(n)·(k+1) en vez de 2(k+1).</div>"
+      "lm": "LM1",
+      "title": "Predicción con Fama-French 3 factores",
+      "given": "RETRF = 1,5324 + 0,5892·MKTRF − 0,8719·SMB − 0,0560·HML. Se asume MKTRF=1, SMB=4, HML=−2.",
+      "ask": "Calcular el retorno esperado del portafolio.",
+      "answer": "RETRF = <b>−1,2540%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Intercepto: +1,5324</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>MKTRF: 0,5892·(1) = +0,5892</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>SMB: −0,8719·(4) = −3,4876</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>HML: −0,0560·(−2) = +0,1120</span></div><div class=\"step\"><span class=\"sn\">5.</span><span>Suma = 1,5324 + 0,5892 − 3,4876 + 0,1120</span></div><div class=\"res\">RETRF = <b>−1,2540%</b></div><div class=\"warn\">⚠ Errata del currículo: la solución oficial usa el intercepto redondeado 1,534 y llega a −1,2524. Con el 1,5324 del enunciado, el exacto es −1,2540. Usá el coeficiente dado.</div>"
     },
     {
       "id": "vol01-p03",
       "lm": "LM2",
-      "title": "Joint F-test",
-      "given": "Restricted (Factores 1–3): SSE=64,5176, df=46. Unrestricted (Factores 1–5): SSE=56,6182, df=44. n=50, k=5, q=2. F crítico(1%)=5,120.",
-      "ask": "Calcular el F conjunto y decidir sobre H<sub>0</sub>: b<sub>4</sub>=b<sub>5</sub>=0.",
-      "answer": "F = <b>3,0694</b> &lt; 5,120 → <b>no se rechaza</b> H<sub>0</sub>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>F = [(SSE_r − SSE_u)/q] / [SSE_u/(n−k−1)]</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= [(64,5176 − 56,6182)/2] / [56,6182/44]</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= (7,8994/2) / 1,2868 = 3,9497/1,2868</span></div><div class=\"res\">F = <b>3,0694</b> &lt; 5,120 → <b>no se rechaza</b> H<sub>0</sub></div><div class=\"warn\">No hay evidencia de que b4 o b5 ≠ 0; el F usa q y (n−k−1)=44 g.l.</div>"
+      "title": "Adjusted R²",
+      "given": "Regresión con n=50, k=5, R²=0,6155.",
+      "ask": "Calcular el adjusted R².",
+      "answer": "R̄² = <b>0,5718</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>R̄² = 1 − [(n−1)/(n−k−1)]·(1−R²)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 1 − [(49)/(44)]·(1−0,6155)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 1 − 1,1136·0,3845 = 1 − 0,4282</span></div><div class=\"res\">R̄² = <b>0,5718</b></div><div class=\"warn\">Con k≥1, siempre R̄² &lt; R² (0,5718 &lt; 0,6155).</div>"
     },
     {
       "id": "vol01-p04",
-      "lm": "LM3",
-      "title": "Diagnóstico de multicolinealidad (VIF)",
-      "given": "Al regresar X<sub>3</sub> sobre las demás independientes se obtiene R²<sub>3</sub> = 0,90.",
-      "ask": "Calcular el VIF de X<sub>3</sub> e interpretarlo.",
-      "answer": "VIF = <b>10</b> → multicolinealidad <b>seria</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>VIF = 1/(1 − R²_j)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 1/(1 − 0,90) = 1/0,10</span></div><div class=\"res\">VIF = <b>10</b> → multicolinealidad <b>seria</b></div><div class=\"warn\">VIF&gt;5 preocupa, &gt;10 serio. Efecto: SE inflados → t chicos → Type II.</div>"
+      "lm": "LM2",
+      "title": "Joint F-test (nested models)",
+      "given": "Restricted (Factores 1–3): SSE=64,5176. Unrestricted (Factores 1–5): SSE=56,6182, df=44. q=2. F crítico(1%)=5,120.",
+      "ask": "Calcular el F conjunto y decidir sobre H₀: b₄=b₅=0.",
+      "answer": "F = <b>3,0694</b> &lt; 5,120 → <b>no se rechaza</b> H₀",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>F = [(SSE_r − SSE_u)/q] / [SSE_u/(n−k−1)]</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= [(64,5176 − 56,6182)/2] / [56,6182/44]</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= (7,8994/2)/1,2868 = 3,9497/1,2868</span></div><div class=\"res\">F = <b>3,0694</b> &lt; 5,120 → <b>no se rechaza</b> H₀</div><div class=\"warn\">No hay evidencia de que b₄ o b₅ ≠ 0.</div>"
     },
     {
       "id": "vol01-p05",
-      "lm": "LM3",
-      "title": "Durbin–Watson",
-      "given": "Una regresión reporta una autocorrelación de los residuos de primer orden r = 0,45.",
-      "ask": "Aproximar el estadístico Durbin–Watson e indicar qué sugiere.",
-      "answer": "DW ≈ <b>1,10</b> → serial correlation <b>positiva</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>DW ≈ 2(1 − r)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 2(1 − 0,45) = 2(0,55)</span></div><div class=\"res\">DW ≈ <b>1,10</b> → serial correlation <b>positiva</b></div><div class=\"warn\">DW&lt;2 = positiva → SE subestimados → Type I. Corregir con Newey–West.</div>"
+      "lm": "LM2",
+      "title": "AIC de un modelo",
+      "given": "Modelo con n=50, k=4 y SSE=56,6182.",
+      "ask": "Escribir el AIC y su término de penalidad.",
+      "answer": "AIC = 50·ln(1,1324) + <b>10</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>AIC = n·ln(SSE/n) + 2(k+1)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 50·ln(56,6182/50) + 2·(4+1)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Penalidad = 2(k+1) = 10</span></div><div class=\"res\">AIC = 50·ln(1,1324) + <b>10</b></div><div class=\"warn\">BIC usaría ln(n)·(k+1) en vez de 2(k+1); penaliza más.</div>"
     },
     {
       "id": "vol01-p06",
-      "lm": "LM4",
-      "title": "Umbral de leverage",
-      "given": "Un modelo tiene k=3 variables independientes y n=60 observaciones.",
-      "ask": "Calcular el umbral de leverage por encima del cual una observación es potencialmente influyente.",
-      "answer": "Umbral = <b>0,20</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Umbral = 3·(k+1)/n</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 3·(3+1)/60 = 12/60</span></div><div class=\"res\">Umbral = <b>0,20</b></div><div class=\"warn\">Leverage = X extrema. El studentized residual (outlier en Y) usa (n−k−2)=55 g.l.</div>"
+      "lm": "LM3",
+      "title": "Breusch–Pagan test",
+      "given": "Regresión BP (residuos² sobre las X): n=96, R²=0,06511. χ² crítico = 11,07 (5 g.l., 5%).",
+      "ask": "Calcular el estadístico BP y concluir.",
+      "answer": "χ² = <b>6,251</b> → <b>no se rechaza</b> H₀ (no hay conditional hetero)",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>χ²_BP = n × R²</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 96 × 0,06511 = 6,251</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>6,251 &lt; 11,07</span></div><div class=\"res\">χ² = <b>6,251</b> → <b>no se rechaza</b> H₀ (no hay conditional hetero)</div><div class=\"warn\">El estadístico es n·R² del paso 2, no del modelo original.</div>"
     },
     {
       "id": "vol01-p07",
-      "lm": "LM4",
-      "title": "Logistic: de log odds a probabilidad",
-      "given": "Un modelo logístico da un logit (log odds) estimado de 0 para cierta observación.",
-      "ask": "Calcular la probabilidad P implícita.",
-      "answer": "P = <b>0,50</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>ln[P/(1−P)] = 0 → P/(1−P) = e⁰ = 1</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>P = 1/(1 + e^(−0)) = 1/(1+1)</span></div><div class=\"res\">P = <b>0,50</b></div><div class=\"warn\">Logit=0 ⇔ odds=1 ⇔ P=0,5. Se estima por maximum likelihood, no OLS.</div>"
+      "lm": "LM3",
+      "title": "Variance Inflation Factor (VIF)",
+      "given": "Al regresar X₁ sobre las demás independientes se obtiene R²₁ = 0,748.",
+      "ask": "Calcular el VIF de X₁ e interpretarlo.",
+      "answer": "VIF = <b>3,968</b> → &lt; 5, sin problema",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>VIF = 1/(1 − R²_j)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 1/(1 − 0,748) = 1/0,252</span></div><div class=\"res\">VIF = <b>3,968</b> → &lt; 5, sin problema</div><div class=\"warn\">VIF&gt;5 preocupa, &gt;10 serio. La multicolinealidad infla SE → Type II.</div>"
     },
     {
       "id": "vol01-p08",
-      "lm": "LM5",
-      "title": "Mean-reverting level (AR(1))",
-      "given": "Modelo AR(1) de gross margins de Intel: x<sub>t</sub> = 0,1513 + 0,7462·x<sub>t−1</sub>.",
-      "ask": "Calcular el mean-reverting level.",
-      "answer": "Nivel = <b>0,5961</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Nivel = b0/(1 − b1)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0,1513/(1 − 0,7462) = 0,1513/0,2538</span></div><div class=\"res\">Nivel = <b>0,5961</b></div><div class=\"warn\">Si el margen actual &lt; 0,5961 el modelo predice suba; si &gt; 0,5961, baja.</div>"
+      "lm": "LM3",
+      "title": "Durbin–Watson aproximado",
+      "given": "Una regresión reporta autocorrelación de primer orden de los residuos r = 0,45.",
+      "ask": "Aproximar el DW e indicar qué sugiere.",
+      "answer": "DW ≈ <b>1,10</b> → serial correlation <b>positiva</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>DW ≈ 2(1 − r)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 2(1 − 0,45) = 2(0,55)</span></div><div class=\"res\">DW ≈ <b>1,10</b> → serial correlation <b>positiva</b></div><div class=\"warn\">DW&lt;2 = positiva. ⚠ Inválido si el modelo tiene lagged dependent variables.</div>"
     },
     {
       "id": "vol01-p09",
-      "lm": "LM5",
-      "title": "Forecast a dos períodos (chain rule)",
-      "given": "Mismo AR(1): x<sub>t</sub> = 0,1513 + 0,7462·x<sub>t−1</sub>. El forecast a un período es x<sub>t+1</sub> = 0,6214.",
-      "ask": "Calcular el forecast a dos períodos x<sub>t+2</sub>.",
-      "answer": "x<sub>t+2</sub> = <b>0,6150</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>x_(t+2) = 0,1513 + 0,7462·x_(t+1)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0,1513 + 0,7462·(0,6214)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0,1513 + 0,4637</span></div><div class=\"res\">x<sub>t+2</sub> = <b>0,6150</b></div><div class=\"warn\">Chain rule: se sustituye el forecast previo. Se acerca al mean-reverting level 0,5961.</div>"
+      "lm": "LM4",
+      "title": "Umbral de leverage",
+      "given": "Modelo con k=2 variables y n=15 observaciones.",
+      "ask": "Calcular el umbral de leverage.",
+      "answer": "Umbral = <b>0,60</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Umbral = 3·(k+1)/n</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 3·(2+1)/15 = 3·(3/15) = 3·0,20</span></div><div class=\"res\">Umbral = <b>0,60</b></div><div class=\"warn\">Leverage = X extrema. El studentized residual (outlier en Y) usa (n−k−2)=11 g.l.</div>"
     },
     {
       "id": "vol01-p10",
-      "lm": "LM6",
-      "title": "LASSO: reconocer OLS",
-      "given": "Un analista corre una penalized regression (LASSO) y fija el hiperparámetro λ = 0.",
-      "ask": "¿A qué equivale el modelo resultante y por qué?",
-      "answer": "Equivale a una <b>OLS</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Penalty = λ·Σ|b̂k| = 0·Σ|b̂k| = 0</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Sin penalización, LASSO minimiza solo la SSR</span></div><div class=\"res\">Equivale a una <b>OLS</b></div><div class=\"warn\">λ es hiperparámetro; a mayor λ, más coeficientes van a 0 (feature selection).</div>"
+      "lm": "LM4",
+      "title": "Logit — de log odds a probabilidad",
+      "given": "En un logit de recompra de acciones, el intercepto (log odds con todas las X en 0) es −0,4738.",
+      "ask": "Calcular la probabilidad implícita.",
+      "answer": "P = <b>0,3837 → 38,37%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>odds = e^(−0,4738) = 0,6226</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>P = odds/(1+odds) = 0,6226/(1+0,6226)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0,6226/1,6226</span></div><div class=\"res\">P = <b>0,3837 → 38,37%</b></div><div class=\"warn\">⚠ Odds→Prob es odds/(1+odds), no P/(1−P). Estimado por max likelihood.</div>"
     },
     {
       "id": "vol01-p11",
-      "lm": "LM7",
-      "title": "Confusion matrix — Precision, Recall, F1, Accuracy",
-      "given": "De 10 observaciones: TP=3, FP=1, FN=2, TN=4.",
-      "ask": "Calcular precision, recall, F1 y accuracy.",
-      "answer": "P=<b>0,75</b> · R=<b>0,60</b> · F1=<b>0,67</b> · Accuracy=<b>0,70</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>P = TP/(TP+FP) = 3/(3+1) = 0,75</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>R = TP/(TP+FN) = 3/(3+2) = 0,60</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>F1 = 2PR/(P+R) = (2·0,75·0,60)/(0,75+0,60) = 0,90/1,35</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Accuracy = (TP+TN)/total = (3+4)/10</span></div><div class=\"res\">P=<b>0,75</b> · R=<b>0,60</b> · F1=<b>0,67</b> · Accuracy=<b>0,70</b></div><div class=\"warn\">F1 queda cerca del menor entre P y R (no es promedio simple). P&gt;R: mejor evitando FP que FN.</div>"
+      "lm": "LM4",
+      "title": "Logit — cambio en probabilidad (crecimiento EPS)",
+      "given": "El coeficiente sobre 'growth' en un logit de aumento de dividendos es −3,13. Se pregunta el cambio en probabilidad al subir growth 1%.",
+      "ask": "Calcular el cambio en probabilidad.",
+      "answer": "Δ P = <b>0,0419 → 4,19%</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Δ ln(odds) = −3,13 (para +1%)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Δ odds = e^(−3,13) = 0,0437</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Δ P = 0,0437/(1+0,0437) = 0,0437/1,0437</span></div><div class=\"res\">Δ P = <b>0,0419 → 4,19%</b></div><div class=\"warn\">Proceso en dos pasos: coef → odds (e^coef) → probabilidad (odds/(1+odds)).</div>"
     },
     {
       "id": "vol01-p12",
-      "lm": "LM7",
-      "title": "TF-IDF de una palabra",
-      "given": "La palabra aparece con TF (nivel oración) = 0,1538 y su document frequency es DF = 0,6665.",
-      "ask": "Calcular IDF y TF-IDF (usar log base 10).",
-      "answer": "IDF ≈ <b>0,176</b> · TF-IDF ≈ <b>0,0271</b>",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>IDF = log(1/DF) = log(1/0,6665) = log(1,5004)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>IDF ≈ 0,1761</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>TF-IDF = TF × IDF = 0,1538 × 0,1761</span></div><div class=\"res\">IDF ≈ <b>0,176</b> · TF-IDF ≈ <b>0,0271</b></div><div class=\"warn\">TF-IDF alto = palabra frecuente en pocos docs. Palabras muy comunes (DF alto) → IDF y TF-IDF bajos.</div>"
+      "lm": "LM4",
+      "title": "Likelihood Ratio (LR) test del logit",
+      "given": "Logit de recompras: Log-Likelihood = −304,20; LL del modelo nulo (solo intercepto) = −312,68. 3 variables restringidas. χ² crítico(3, 5%)=7,815.",
+      "ask": "Calcular el LR y concluir.",
+      "answer": "LR = <b>16,96</b> → <b>se rechaza</b> H₀ → el modelo es significativo",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>LR = −2·(LL_restricted − LL_unrestricted)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= −2·(−312,68 − (−304,20))</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= −2·(−8,48) = 16,96</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>16,96 &gt; 7,815</span></div><div class=\"res\">LR = <b>16,96</b> → <b>se rechaza</b> H₀ → el modelo es significativo</div><div class=\"warn\">La LL siempre es negativa; más cerca de 0 = mejor ajuste.</div>"
     },
     {
       "id": "vol01-p13",
+      "lm": "LM5",
+      "title": "Log-linear trend — Starbucks",
+      "given": "Modelo log-linear de ventas: ln ŷ = 6,7617 + 0,0295·t. Se pide el forecast para t = 75.",
+      "ask": "Calcular el valor pronosticado (en $M).",
+      "answer": "ŷ ≈ <b>$7.896,7 M</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>ln ŷ = 6,7617 + 0,0295·(75)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 6,7617 + 2,2125 = 8,9742</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>ŷ = e^(8,9742)</span></div><div class=\"res\">ŷ ≈ <b>$7.896,7 M</b></div><div class=\"warn\">⚠ No te quedes en 8,97: hay que exponenciar. La tasa de crecimiento es e^0,0295−1 = 2,994%, no 2,95%.</div>"
+    },
+    {
+      "id": "vol01-p14",
+      "lm": "LM5",
+      "title": "Mean-reverting level (AR(1))",
+      "given": "AR(1) de gross margins de Intel: x_t = 0,1513 + 0,7462·x_(t−1).",
+      "ask": "Calcular el mean-reverting level.",
+      "answer": "Nivel = <b>0,5961</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Nivel = b₀/(1 − b₁)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>= 0,1513/(1 − 0,7462) = 0,1513/0,2538</span></div><div class=\"res\">Nivel = <b>0,5961</b></div><div class=\"warn\">Si el margen actual &lt; 0,5961 el modelo predice suba; si &gt; 0,5961, baja.</div>"
+    },
+    {
+      "id": "vol01-p15",
+      "lm": "LM5",
+      "title": "Chain rule — forecast a 2 períodos",
+      "given": "Mismo AR(1): x_t = 0,1513 + 0,7462·x_(t−1). El gross margin actual observado es 0,63.",
+      "ask": "Calcular el forecast a dos períodos (x_(t+2)).",
+      "answer": "x̂_(t+2) = <b>0,6150</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>x̂_(t+1) = 0,1513 + 0,7462·(0,63) = 0,6214</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>x̂_(t+2) = 0,1513 + 0,7462·(0,6214)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>= 0,1513 + 0,4637</span></div><div class=\"res\">x̂_(t+2) = <b>0,6150</b></div><div class=\"warn\">El 2º período usa el <b>pronóstico</b> del 1º (no el observado). Se acerca al nivel 0,5961.</div>"
+    },
+    {
+      "id": "vol01-p16",
+      "lm": "LM5",
+      "title": "Comparar modelos por RMSE",
+      "given": "Para pronosticar la inflación CPI out-of-sample: AR(1) da RMSE=1,9014 y AR(2) da RMSE=1,4157.",
+      "ask": "¿Qué modelo elegir y en qué proporción mejora?",
+      "answer": "Elegir <b>AR(2)</b> (RMSE 74,46% del AR(1))",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Menor RMSE = más preciso out-of-sample</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>AR(2): 1,4157 &lt; 1,9014 (AR(1))</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>Ratio = 1,4157/1,9014 = 0,7446</span></div><div class=\"res\">Elegir <b>AR(2)</b> (RMSE 74,46% del AR(1))</div><div class=\"warn\">RMSE compara out-of-sample; el standard error de la regresión compara in-sample.</div>"
+    },
+    {
+      "id": "vol01-p17",
+      "lm": "LM5",
+      "title": "Dickey–Fuller — transformación",
+      "given": "Se sospecha un unit root (b₁=1) en una serie AR(1): x_t = b₀ + b₁·x_(t−1) + ε_t.",
+      "ask": "Escribir la ecuación transformada del test y su H₀.",
+      "answer": "Δx_t = b₀ + <b>g₁·x_(t−1)</b> + ε_t ; H₀: g₁=0",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Restar x_(t−1): x_t − x_(t−1) = b₀ + (b₁−1)·x_(t−1) + ε_t</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Definir g₁ = (b₁ − 1)</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>H₀: g₁ = 0 (hay unit root)</span></div><div class=\"res\">Δx_t = b₀ + <b>g₁·x_(t−1)</b> + ε_t ; H₀: g₁=0</div><div class=\"warn\">Valores críticos DF revisados (más grandes en |·|), no la t normal.</div>"
+    },
+    {
+      "id": "vol01-p18",
+      "lm": "LM6",
+      "title": "LASSO — reconocer OLS",
+      "given": "Un analista corre una penalized regression (LASSO) y fija el hiperparámetro λ = 0.",
+      "ask": "¿A qué equivale el modelo y por qué?",
+      "answer": "Equivale a una <b>OLS</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Penalty = λ·Σ|b̂k| = 0·Σ|b̂k| = 0</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>Sin penalización queda solo la SSR</span></div><div class=\"res\">Equivale a una <b>OLS</b></div><div class=\"warn\">A mayor λ, más coeficientes van a 0 (feature selection). λ es hiperparámetro.</div>"
+    },
+    {
+      "id": "vol01-p19",
       "lm": "LM7",
-      "title": "Detectar el escalado correcto",
+      "title": "Confusion matrix — P, R, F1, Accuracy",
+      "given": "De 10 observaciones: TP=3, FP=1, FN=2, TN=4.",
+      "ask": "Calcular precision, recall, F1 y accuracy.",
+      "answer": "P=<b>0,75</b> · R=<b>0,60</b> · F1=<b>0,67</b> · Accuracy=<b>0,70</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>P = TP/(TP+FP) = 3/4 = 0,75</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>R = TP/(TP+FN) = 3/5 = 0,60</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>F1 = 2PR/(P+R) = (2·0,75·0,60)/1,35 = 0,90/1,35</span></div><div class=\"step\"><span class=\"sn\">4.</span><span>Accuracy = (TP+TN)/total = 7/10</span></div><div class=\"res\">P=<b>0,75</b> · R=<b>0,60</b> · F1=<b>0,67</b> · Accuracy=<b>0,70</b></div><div class=\"warn\">F1 queda cerca del menor entre P y R (media armónica), no es promedio simple.</div>"
+    },
+    {
+      "id": "vol01-p20",
+      "lm": "LM7",
+      "title": "TF-IDF de una palabra",
+      "given": "Una palabra tiene TF (nivel oración) = 0,1538 y document frequency DF = 0,6665 (usar log base 10).",
+      "ask": "Calcular IDF y TF-IDF.",
+      "answer": "IDF ≈ <b>0,176</b> · TF-IDF ≈ <b>0,0271</b>",
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>IDF = log(1/DF) = log(1/0,6665) = log(1,5004)</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>IDF ≈ 0,1761</span></div><div class=\"step\"><span class=\"sn\">3.</span><span>TF-IDF = TF × IDF = 0,1538 × 0,1761</span></div><div class=\"res\">IDF ≈ <b>0,176</b> · TF-IDF ≈ <b>0,0271</b></div><div class=\"warn\">DF alta (palabra común) → IDF y TF-IDF bajos (poco discriminante).</div>"
+    },
+    {
+      "id": "vol01-p21",
+      "lm": "LM7",
+      "title": "Elegir el scaling correcto",
       "given": "Un feature 'income' tiene outliers y distribución desconocida; se lo quiere llevar al rango [0,1].",
-      "ask": "¿Qué técnica de scaling corresponde y cuál es su fórmula?",
+      "ask": "¿Qué técnica corresponde y su fórmula?",
       "answer": "<b>Normalization</b>: (X−X<sub>min</sub>)/(X<sub>max</sub>−X<sub>min</sub>)",
-      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Rango [0,1] con distribución desconocida → normalization</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>X(norm) = (X − Xmin)/(Xmax − Xmin)</span></div><div class=\"res\"><b>Normalization</b>: (X−X<sub>min</sub>)/(X<sub>max</sub>−X<sub>min</sub>)</div><div class=\"warn\">Es sensible a outliers → removerlos antes. Standardization (μ,σ) requiere normalidad.</div>"
+      "solution": "<div class=\"step\"><span class=\"sn\">1.</span><span>Rango [0,1] + distribución desconocida → normalization</span></div><div class=\"step\"><span class=\"sn\">2.</span><span>X(norm) = (X − Xmin)/(Xmax − Xmin)</span></div><div class=\"res\"><b>Normalization</b>: (X−X<sub>min</sub>)/(X<sub>max</sub>−X<sub>min</sub>)</div><div class=\"warn\">Sensible a outliers → removerlos antes. Standardization (μ,σ) requiere normalidad.</div>"
     }
   ],
   "highlights": [
@@ -905,67 +1810,52 @@
     },
     {
       "rank": 2,
+      "title": "La trampa del R² en time-series",
+      "body": "Un random walk tiene R² altísimo por construcción; el modelo correcto puede tener R²≈0. Deciden estacionariedad y unit-root test. (LM5)"
+    },
+    {
+      "rank": 3,
+      "title": "Odds→Prob = odds/(1+odds)",
+      "body": "No es P/(1−P) (esa es la inversa). Logit por max likelihood; el efecto marginal no es constante. (LM4)"
+    },
+    {
+      "rank": 4,
+      "title": "Dirección del sesgo: 3 violaciones",
+      "body": "Conditional hetero y serial+ → SE↓ → Type I. Multicolinealidad → SE↑ → Type II. Unconditional → sin problema. (LM3)"
+    },
+    {
+      "rank": 5,
+      "title": "AIC → predicción · BIC → fit",
+      "body": "Menor es mejor; BIC penaliza más; solo valores relativos. Adjusted R² sube solo si |t| de la variable &gt; 1. (LM2)"
+    },
+    {
+      "rank": 6,
+      "title": "Log-linear: exponenciar y e^b₁−1",
+      "body": "Predicted = e^(b̂₀+b̂₁t); crecimiento = e^b₁−1, no b₁. (LM5)"
+    },
+    {
+      "rank": 7,
       "title": "Parameter vs. Hyperparameter",
       "body": "Parameter se aprende de los datos; hyperparameter se setea a mano (λ, k, capas, p-threshold). (LM7)"
     },
     {
-      "rank": 3,
-      "title": "AIC → predicción · BIC → fit",
-      "body": "Menor es mejor; BIC penaliza más. Solo importan los valores relativos. (LM2)"
-    },
-    {
-      "rank": 4,
-      "title": "Adjusted R² puede bajar / ser negativo",
-      "body": "Sube solo si el |t| de la variable agregada &gt; 1. (LM2)"
-    },
-    {
-      "rank": 5,
-      "title": "Conditional hetero y serial+ → Type I",
-      "body": "Subestiman SE → t inflados. Multicolinealidad → Type II (R² alto, coefs no sig.). (LM3)"
-    },
-    {
-      "rank": 6,
-      "title": "Leverage = X extrema · Outlier = Y extrema",
-      "body": "Umbral leverage 3(k+1)/n; studentized residual con (n−k−2) df. (LM4)"
-    },
-    {
-      "rank": 7,
-      "title": "Random walk: sin mean-reverting level",
-      "body": "b0/(1−b1)=0/0; varianza crece. Unit root → first-differencing. (LM5)"
-    },
-    {
       "rank": 8,
-      "title": "Precision ÷ predichos · Recall ÷ reales",
-      "body": "FP=Type I, FN=Type II. Desbalance → F1, no accuracy. (LM7)"
+      "title": "Leverage = X extrema · Outlier = Y extrema",
+      "body": "Umbral leverage 3(k+1)/n; studentized residual con (n−k−2) df. Dummies: n−1 para n categorías. (LM4)"
     }
   ],
   "tables": [
     {
       "id": "vol01-metodo",
-      "title": "Método vs método",
-      "lms": [
-        "LM2",
-        "LM3",
-        "LM4",
-        "LM5",
-        "LM6",
-        "LM7"
-      ],
-      "html": "<div class=\"wrap\">\n<div class=\"banner\"><b>Tabla método-vs-método</b> · Vol. 01 Quantitative Methods. Reemplaza la tabla IFRS vs US GAAP (este volumen no tiene contenido contable). Reúne las oposiciones examinables de los 7 LMs. Imprimir: <b>Ctrl/Cmd+P</b>, B&amp;N.</div>\n<h1>Método vs. método — Quant Vol. 01</h1>\n<div class=\"refdoc\">\n<section><h2>Regresión (LM2–LM4)</h2><table><caption>Selección de modelo, influencia, dummies, violaciones</caption><thead><tr><th style=\"width:17%\">A</th><th style=\"width:17%\">B</th><th>A — qué es</th><th>B — qué es</th></tr></thead><tbody><tr><td><b>AIC</b></td><td><b>BIC</b></td><td>n·ln(SSE/n)+2(k+1) ; preferido para predicción</td><td>n·ln(SSE/n)+ln(n)(k+1) ; penaliza más ; para goodness of fit</td></tr><tr><td><b>R²</b></td><td><b>Adjusted R²</b></td><td>Nunca baja al agregar variables</td><td>Sube solo si |t|&gt;1 ; puede bajar / ser negativo</td></tr><tr><td><b>High-leverage point</b></td><td><b>Outlier</b></td><td>Extremo en una X ; umbral 3(k+1)/n</td><td>Extremo en Y ; studentized residual, df n−k−2</td></tr><tr><td><b>Intercept dummy</b></td><td><b>Slope dummy</b></td><td>Desplaza el intercepto</td><td>Cambia la pendiente (interacción D×X)</td></tr><tr><td><b>Conditional hetero</b></td><td><b>Multicollinearity</b></td><td>Subestima SE → t inflados → Type I</td><td>Infla SE → t chicos → Type II (R² alto, coefs no sig.)</td></tr></tbody></table></section>\n<section><h2>Time-Series (LM5)</h2><table><caption>Modelos y estacionariedad</caption><thead><tr><th style=\"width:17%\">A</th><th style=\"width:17%\">B</th><th>A — qué es</th><th>B — qué es</th></tr></thead><tbody><tr><td><b>Linear trend</b></td><td><b>Log-linear trend</b></td><td>Cambio absoluto constante</td><td>Tasa de crecimiento constante (exponencial)</td></tr><tr><td><b>AR(p)</b></td><td><b>Random walk</b></td><td>Covariance stationary ; mean-reverting b0/(1−b1)</td><td>b0=0, b1=1 ; sin mean-reverting ; no estacionario</td></tr><tr><td><b>Covariance stationary</b></td><td><b>Unit root</b></td><td>Media/var/cov constantes ; AR válido</td><td>b1=1 ; no estacionario ; usar first-differencing</td></tr><tr><td><b>In-sample</b></td><td><b>Out-of-sample</b></td><td>Dentro del período de estimación</td><td>Fuera ; se compara por RMSE (menor = mejor)</td></tr></tbody></table></section>\n<section><h2>Machine Learning (LM6)</h2><table><caption>Algoritmos supervised vs. unsupervised y sus pares</caption><thead><tr><th style=\"width:17%\">A</th><th style=\"width:17%\">B</th><th>A — qué es</th><th>B — qué es</th></tr></thead><tbody><tr><td><b>Supervised</b></td><td><b>Unsupervised</b></td><td>Hay target Y (labeled) / predecir</td><td>No hay target / hallar estructura</td></tr><tr><td><b>Regression</b></td><td><b>Classification</b></td><td>Target continuo</td><td>Target categórico/ordinal</td></tr><tr><td><b>Penalized (LASSO)</b></td><td><b>OLS</b></td><td>Minimiza SSR + λΣ|b̂| ; feature selection</td><td>Minimiza solo SSR ; sin selección (λ=0 ≡ OLS)</td></tr><tr><td><b>SVM</b></td><td><b>KNN</b></td><td>Hyperplane de máximo margen ; lineal</td><td>Vecinos más cercanos ; no-paramétrico</td></tr><tr><td><b>CART</b></td><td><b>Random Forest</b></td><td>Un árbol interpretable</td><td>Muchos árboles (bagging + m&lt;n) ; black box</td></tr><tr><td><b>Voting</b></td><td><b>Bagging</b></td><td>Distintos algoritmos, voto (heterogéneo)</td><td>Mismo algoritmo, muestreo con reemplazo (homogéneo)</td></tr><tr><td><b>PCA</b></td><td><b>Clustering</b></td><td>Dimension reduction (combina features)</td><td>Agrupa observaciones (k-means/hierarchical)</td></tr><tr><td><b>K-Means</b></td><td><b>Hierarchical</b></td><td>k fijo a priori, sin jerarquía</td><td>Agglomerative/divisive, con jerarquía (dendrograma)</td></tr><tr><td><b>Agglomerative</b></td><td><b>Divisive</b></td><td>Bottom-up ; clusters chicos/locales</td><td>Top-down ; clusters grandes/globales</td></tr></tbody></table></section>\n<section><h2>Big Data (LM7)</h2><table><caption>Preparación, features y métricas</caption><thead><tr><th style=\"width:17%\">A</th><th style=\"width:17%\">B</th><th>A — qué es</th><th>B — qué es</th></tr></thead><tbody><tr><td><b>Normalization</b></td><td><b>Standardization</b></td><td>(X−Xmin)/(Xmax−Xmin) → [0,1] ; sensible a outliers</td><td>(X−μ)/σ → media 0/sd 1 ; requiere normalidad</td></tr><tr><td><b>Trimming</b></td><td><b>Winsorization</b></td><td>Elimina los extremos (5% trimmed)</td><td>Reemplaza por máx/mín no-outlier</td></tr><tr><td><b>Filtration</b></td><td><b>Selection</b></td><td>Quita filas no necesarias</td><td>Quita columnas no necesarias</td></tr><tr><td><b>Feature selection</b></td><td><b>Dimensionality reduction</b></td><td>Incluye/excluye features sin alterarlos</td><td>Crea combinaciones nuevas no correlacionadas</td></tr><tr><td><b>Feature selection</b></td><td><b>Feature engineering</b></td><td>Previene overfitting (quita ruido)</td><td>Previene underfitting (agrega estructura)</td></tr><tr><td><b>Stemming</b></td><td><b>Lemmatization</b></td><td>Stem (rule-based, puede no ser palabra real)</td><td>Lemma (raíz real, algorítmico, más caro)</td></tr><tr><td><b>Parameter</b></td><td><b>Hyperparameter</b></td><td>Aprendido de los datos (weights, coefs)</td><td>Seteado a mano (λ, k, capas, p-threshold)</td></tr><tr><td><b>Precision</b></td><td><b>Recall</b></td><td>TP/(TP+FP) ; costo FP/Type I alto</td><td>TP/(TP+FN) ; costo FN/Type II alto ; = TPR</td></tr><tr><td><b>Accuracy</b></td><td><b>F1 score</b></td><td>(TP+TN)/total ; solo si balanceado</td><td>2PR/(P+R) ; mejor si desbalanceado</td></tr></tbody></table></section>\n</div>\n<p style=\"font-size:11px;color:#666;margin-top:14px;\"><b>Los 3 más recurrentes:</b> AIC↔BIC (predicción vs. fit) · Parameter↔Hyperparameter · Precision↔Recall (FP/Type I vs. FN/Type II).</p>\n</div>"
+      "title": "",
+      "lms": [],
+      "html": "<section><h2><span class=\"num\">1</span>LM2 — Model fit</h2><table class=\"master pairs\"><tr><th>Dimensión</th><th></th><th></th></tr><tr><td class=\"key\">AIC vs. BIC</td><th style=\"text-transform:none\">AIC</th><th style=\"text-transform:none\">BIC</th></tr><tr><td class=\"key\">Fórmula</td><td>n·ln(SSE/n) + 2(k+1)</td><td>n·ln(SSE/n) + ln(n)(k+1)</td></tr><tr><td class=\"key\">Cuándo</td><td>Objetivo = <b>predicción</b></td><td>Objetivo = mejor <b>goodness of fit</b></td></tr><tr><td class=\"key\">Penalidad</td><td>Menor (2)</td><td>Mayor (ln n &gt; 2) → más parsimonioso</td></tr><tr><td class=\"key\">R² vs. Adjusted R²</td><th style=\"text-transform:none\">R²</th><th style=\"text-transform:none\">Adjusted R²</th></tr><tr><td class=\"key\">Al sumar variable</td><td>Nunca baja</td><td>Sube solo si |t| &gt; 1; puede ser negativo</td></tr><tr><td class=\"key\">Joint F vs. General linear F</td><th style=\"text-transform:none\">Joint F-test</th><th style=\"text-transform:none\">General linear F</th></tr><tr><td class=\"key\">Testea</td><td>Un subconjunto de q slopes = 0 (nested)</td><td>Todos los slopes = 0 (modelo entero)</td></tr></table></section><section><h2><span class=\"num\">2</span>LM3 — Misspecification</h2><table class=\"master pairs\"><tr><th>Dimensión</th><th></th><th></th></tr><tr><td class=\"key\">Heteroskedasticity</td><th style=\"text-transform:none\">Unconditional</th><th style=\"text-transform:none\">Conditional</th></tr><tr><td class=\"key\">Correlación con X</td><td>No</td><td>Sí</td></tr><tr><td class=\"key\">Problema</td><td>Sin problema mayor</td><td>SE↓ → t↑ → Type I</td></tr><tr><td class=\"key\">Tests</td><th style=\"text-transform:none\">Breusch–Pagan</th><th style=\"text-transform:none\">Breusch–Godfrey / DW</th></tr><tr><td class=\"key\">Detecta</td><td>Conditional hetero (χ²=n·R²)</td><td>Serial correlation (BG general; DW inválido en AR)</td></tr><tr><td class=\"key\">Correcciones</td><th style=\"text-transform:none\">Robust (White) SE</th><th style=\"text-transform:none\">Newey–West SE</th></tr><tr><td class=\"key\">Corrige</td><td>Heteroskedasticity</td><td>Serial correlation + hetero</td></tr><tr><td class=\"key\">Dirección del sesgo</td><th style=\"text-transform:none\">Hetero cond. / Serial+</th><th style=\"text-transform:none\">Multicollinearity</th></tr><tr><td class=\"key\">Efecto en SE</td><td>SE↓ → t↑ → <b>Type I</b></td><td>SE↑ → t↓ → <b>Type II</b></td></tr></table></section><section><h2><span class=\"num\">3</span>LM4 — Extensions</h2><table class=\"master pairs\"><tr><th>Dimensión</th><th></th><th></th></tr><tr><td class=\"key\">Puntos influyentes</td><th style=\"text-transform:none\">Leverage (h<sub>ii</sub>)</th><th style=\"text-transform:none\">Studentized residual</th></tr><tr><td class=\"key\">Mide</td><td>X extrema</td><td>Y extrema (outlier)</td></tr><tr><td class=\"key\">Umbral</td><td>h<sub>ii</sub> &gt; 3(k+1)/n</td><td>|t*| &gt; t con (n−k−2) df</td></tr><tr><td class=\"key\">Dummies</td><th style=\"text-transform:none\">Intercept dummy</th><th style=\"text-transform:none\">Slope dummy (D×X)</th></tr><tr><td class=\"key\">Efecto</td><td>Desplaza el intercepto</td><td>Cambia la pendiente</td></tr><tr><td class=\"key\">Y binaria</td><th style=\"text-transform:none\">Linear probability model</th><th style=\"text-transform:none\">Logistic (logit)</th></tr><tr><td class=\"key\">Estado</td><td>Error a evitar (P&lt;0 o &gt;1, hetero)</td><td>Correcto: ln[P/(1−P)], max likelihood</td></tr><tr><td class=\"key\">Coef → P</td><th style=\"text-transform:none\">Odds → Prob</th><th style=\"text-transform:none\">Prob → Odds</th></tr><tr><td class=\"key\">Fórmula</td><td>P = odds/(1+odds)</td><td>odds = P/(1−P)</td></tr></table></section><section><h2><span class=\"num\">4</span>LM5 — Time-series</h2><table class=\"master pairs\"><tr><th>Dimensión</th><th></th><th></th></tr><tr><td class=\"key\">Trend</td><th style=\"text-transform:none\">Linear</th><th style=\"text-transform:none\">Log-linear</th></tr><tr><td class=\"key\">Modela</td><td>Cambio absoluto constante</td><td>Tasa de crecimiento constante (exponencial)</td></tr><tr><td class=\"key\">Forecast / growth</td><td>ŷ = b̂₀+b̂₁t</td><td>ŷ = e^(b̂₀+b̂₁t); growth = e^b₁−1</td></tr><tr><td class=\"key\">Moving average</td><th style=\"text-transform:none\">Simple MA</th><th style=\"text-transform:none\">MA(q) model</th></tr><tr><td class=\"key\">Usa</td><td>Valores observados, pesos iguales (suaviza)</td><td>Términos de error ε, pesos distintos (pronostica)</td></tr><tr><td class=\"key\">AR vs. MA (autocorr.)</td><th style=\"text-transform:none\">AR</th><th style=\"text-transform:none\">MA(q)</th></tr><tr><td class=\"key\">Patrón</td><td>Declinan gradualmente</td><td>Caen a cero de golpe tras q</td></tr><tr><td class=\"key\">Unit-root / cointegración</td><th style=\"text-transform:none\">Dickey–Fuller</th><th style=\"text-transform:none\">Engle–Granger</th></tr><tr><td class=\"key\">Testea</td><td>Unit root en la serie (g₁=b₁−1)</td><td>Unit root en los <b>residuos</b> de la regresión</td></tr><tr><td class=\"key\">Comparar modelos</td><th style=\"text-transform:none\">RMSE</th><th style=\"text-transform:none\">SE de la regresión</th></tr><tr><td class=\"key\">Ámbito</td><td>Out-of-sample (menor=mejor)</td><td>In-sample</td></tr></table></section><section><h2><span class=\"num\">5</span>LM6 — Machine learning</h2><table class=\"master pairs\"><tr><th>Dimensión</th><th></th><th></th></tr><tr><td class=\"key\">Aprendizaje</td><th style=\"text-transform:none\">Supervised</th><th style=\"text-transform:none\">Unsupervised</th></tr><tr><td class=\"key\">Target</td><td>Sí (labeled)</td><td>No</td></tr><tr><td class=\"key\">Error</td><th style=\"text-transform:none\">Bias</th><th style=\"text-transform:none\">Variance</th></tr><tr><td class=\"key\">Asociado a</td><td>Underfitting / alto E<sub>in</sub></td><td>Overfitting / alto E<sub>out</sub></td></tr><tr><td class=\"key\">Ensembles</td><th style=\"text-transform:none\">Voting</th><th style=\"text-transform:none\">Bagging</th></tr><tr><td class=\"key\">Algoritmos</td><td>Distintos (heterogéneo)</td><td>Mismo, muestreo con reemplazo (homogéneo)</td></tr><tr><td class=\"key\">Clustering jerárquico</td><th style=\"text-transform:none\">Agglomerative</th><th style=\"text-transform:none\">Divisive</th></tr><tr><td class=\"key\">Dirección</td><td>Bottom-up (chicos/locales)</td><td>Top-down (grandes/globales)</td></tr><tr><td class=\"key\">PCA</td><th style=\"text-transform:none\">Eigenvector</th><th style=\"text-transform:none\">Eigenvalue</th></tr><tr><td class=\"key\">Representa</td><td>Dirección / composite no correlacionado</td><td>% de varianza explicada</td></tr></table></section><section><h2><span class=\"num\">6</span>LM7 — Big data</h2><table class=\"master pairs\"><tr><th>Dimensión</th><th></th><th></th></tr><tr><td class=\"key\">Outliers</td><th style=\"text-transform:none\">Trimming</th><th style=\"text-transform:none\">Winsorization</th></tr><tr><td class=\"key\">Acción</td><td>Eliminar los extremos</td><td>Reemplazar por el máx/mín no-outlier</td></tr><tr><td class=\"key\">Escalado</td><th style=\"text-transform:none\">Normalization</th><th style=\"text-transform:none\">Standardization</th></tr><tr><td class=\"key\">Fórmula</td><td>(X−Xmin)/(Xmax−Xmin) → [0,1]</td><td>(X−μ)/σ → media 0, sd 1</td></tr><tr><td class=\"key\">Texto</td><th style=\"text-transform:none\">Stemming</th><th style=\"text-transform:none\">Lemmatization</th></tr><tr><td class=\"key\">Salida</td><td>Stem (rule-based)</td><td>Lemma (palabra real, más caro)</td></tr><tr><td class=\"key\">Preprocessing</td><th style=\"text-transform:none\">Filtration</th><th style=\"text-transform:none\">Selection</th></tr><tr><td class=\"key\">Quita</td><td>Filas</td><td>Columnas</td></tr><tr><td class=\"key\">Exploration</td><th style=\"text-transform:none\">Feature selection</th><th style=\"text-transform:none\">Feature engineering</th></tr><tr><td class=\"key\">Previene</td><td>Overfitting (quita ruido)</td><td>Underfitting (agrega estructura)</td></tr><tr><td class=\"key\">Model training</td><th style=\"text-transform:none\">Parameter</th><th style=\"text-transform:none\">Hyperparameter</th></tr><tr><td class=\"key\">Origen</td><td>Aprendido de los datos</td><td>Seteado a mano (λ, k, capas)</td></tr><tr><td class=\"key\">Clasificación</td><th style=\"text-transform:none\">Precision</th><th style=\"text-transform:none\">Recall</th></tr><tr><td class=\"key\">Divide por</td><td>Predichos positivos (FP/Type I)</td><td>Reales positivos (FN/Type II)</td></tr></table></section>"
     },
     {
       "id": "vol01-signos",
-      "title": "Signos y direcciones",
-      "lms": [
-        "LM1",
-        "LM2",
-        "LM3",
-        "LM4",
-        "LM5",
-        "LM6",
-        "LM7"
-      ],
-      "html": "<div class=\"wrap\">\n<div class=\"banner\"><b>Hoja de signos y direcciones</b> · Vol. 01 Quant. Qué sube (↑) / baja (↓) / queda igual (=) ante cada decisión. La columna <b>⚠</b> marca lo <b>contra-intuitivo</b> (donde el examen pincha). Imprimir: <b>Ctrl/Cmd+P</b>, B&amp;N.</div>\n<h1>Signos y direcciones — Quant Vol. 01</h1>\n<h2>Regresión (LM1–LM4)</h2><table><thead><tr><th style=\"width:34%\">Situación / decisión</th><th style=\"width:24%\">Afecta a</th><th>Dirección / consecuencia</th><th class=\"c\" style=\"width:8%\">⚠</th></tr></thead><tbody><tr><td>Agregar una variable con |t| &gt; 1</td><td>Adjusted R²</td><td><b>↑ sube</b></td><td class=\"c\"></td></tr><tr><td>Agregar una variable con |t| &lt; 1</td><td>Adjusted R²</td><td><b>↓ baja</b> (¡puede quedar negativo!)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Agregar cualquier variable</td><td>R² (sin ajustar)</td><td><b>↑ o =</b> (nunca baja)</td><td class=\"c\"></td></tr><tr><td>Conditional heteroskedasticity</td><td>Standard errors</td><td><b>↓ subestimados</b> → t <b>↑ inflados</b> → Type I</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Serial correlation positiva</td><td>Standard errors</td><td><b>↓ subestimados</b> → t <b>↑ inflados</b> → Type I</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Multicolinealidad</td><td>Standard errors</td><td><b>↑ inflados</b> → t <b>↓ chicos</b> → Type II</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Multicolinealidad</td><td>R² del modelo</td><td><b>alto</b>, pero coeficientes <b>no significativos</b></td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Unconditional heteroskedasticity</td><td>Inferencia</td><td><b>= sin problema mayor</b></td><td class=\"c\"><b>⚠</b></td></tr></tbody></table>\n<h2>Time-Series (LM5)</h2><table><thead><tr><th style=\"width:34%\">Situación / decisión</th><th style=\"width:24%\">Afecta a</th><th>Dirección / consecuencia</th><th class=\"c\" style=\"width:8%\">⚠</th></tr></thead><tbody><tr><td>Valor actual &lt; mean-reverting level</td><td>Predicción del AR(1)</td><td>serie <b>↑ sube</b> hacia b0/(1−b1)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Valor actual &gt; mean-reverting level</td><td>Predicción del AR(1)</td><td>serie <b>↓ baja</b> hacia b0/(1−b1)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Random walk (b1=1)</td><td>Mean-reverting level</td><td><b>indefinido</b> (0/0)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Random walk</td><td>Varianza en el tiempo</td><td><b>↑ crece sin límite</b> → no estacionario</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Durbin–Watson &lt; 2</td><td>Serial correlation</td><td><b>positiva</b></td><td class=\"c\"></td></tr><tr><td>Durbin–Watson &gt; 2</td><td>Serial correlation</td><td><b>negativa</b></td><td class=\"c\"></td></tr><tr><td>Unit root sin corregir</td><td>AR estimado</td><td><b>inválido</b> → aplicar first-differencing</td><td class=\"c\"></td></tr></tbody></table>\n<h2>Machine Learning (LM6)</h2><table><thead><tr><th style=\"width:34%\">Situación / decisión</th><th style=\"width:24%\">Afecta a</th><th>Dirección / consecuencia</th><th class=\"c\" style=\"width:8%\">⚠</th></tr></thead><tbody><tr><td>↑ complejidad del modelo</td><td>Bias error</td><td><b>↓ baja</b></td><td class=\"c\"></td></tr><tr><td>↑ complejidad del modelo</td><td>Variance error</td><td><b>↑ sube</b></td><td class=\"c\"></td></tr><tr><td>Overfitting</td><td>Error out-of-sample (E<sub>out</sub>)</td><td><b>↑ alto</b> (E<sub>in</sub> bajo)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Underfitting</td><td>Error in-sample (E<sub>in</sub>)</td><td><b>↑ alto</b></td><td class=\"c\"></td></tr><tr><td>↑ λ (regularización) en LASSO</td><td>Nº de features / complejidad</td><td><b>↓ baja</b> (coefs → 0)</td><td class=\"c\"></td></tr><tr><td>λ = 0 en LASSO</td><td>Modelo</td><td><b>= OLS</b></td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Random forest vs. CART único</td><td>Interpretabilidad</td><td><b>↓ baja</b> (black box), aunque mejora accuracy</td><td class=\"c\"><b>⚠</b></td></tr></tbody></table>\n<h2>Big Data (LM7)</h2><table><thead><tr><th style=\"width:34%\">Situación / decisión</th><th style=\"width:24%\">Afecta a</th><th>Dirección / consecuencia</th><th class=\"c\" style=\"width:8%\">⚠</th></tr></thead><tbody><tr><td>Feature selection</td><td>Overfitting</td><td><b>↓ previene</b></td><td class=\"c\"></td></tr><tr><td>Feature engineering</td><td>Underfitting</td><td><b>↓ previene</b></td><td class=\"c\"><b>⚠</b></td></tr><tr><td>Muchos features / pocos GL</td><td>Fit</td><td><b>overfitting</b></td><td class=\"c\"></td></tr><tr><td>Pocos features / dataset chico</td><td>Fit</td><td><b>underfitting</b></td><td class=\"c\"></td></tr><tr><td>Clases desbalanceadas</td><td>Accuracy como métrica</td><td><b>engañosa</b> → usar F1</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>DF (document frequency) alta</td><td>IDF y TF-IDF</td><td><b>↓ bajos</b> (palabra poco discriminante)</td><td class=\"c\"><b>⚠</b></td></tr><tr><td>p-threshold ↑ en logistic</td><td>Nº de clasificados como '1'</td><td><b>↓ baja</b></td><td class=\"c\"></td></tr></tbody></table>\n</div>"
+      "title": "",
+      "lms": [],
+      "html": "<section><h2><span class=\"num\">1</span>LM2</h2><table class=\"master dir\"><tr><th>Si…</th><th>Dirección</th><th>Consecuencia</th><th>⚠ Contra-intuitivo</th></tr><tr><td>Agregar variable (aporta poco, |t|&lt;1)</td><td class=\"arrow\">R² = / ↑</td><td>Adjusted R² <b>baja</b> aunque R² no baje</td><td class=\"warncol\">⚠ R̄² puede ser negativo</td></tr><tr><td>Agregar variable (|t|&gt;1)</td><td class=\"arrow\">Adj ↑</td><td>Adjusted R² sube</td><td>—</td></tr><tr><td>Más períodos adelante (forecast)</td><td class=\"arrow\">Var ↑</td><td>El prediction interval se ensancha</td><td>—</td></tr></table></section><section><h2><span class=\"num\">2</span>LM3</h2><table class=\"master dir\"><tr><th>Si…</th><th>Dirección</th><th>Consecuencia</th><th>⚠ Contra-intuitivo</th></tr><tr><td>Conditional heteroskedasticity</td><td class=\"arrow\">SE ↓</td><td>t inflado → más rechazos → <b>Type I</b></td><td class=\"warncol\">⚠ los coeficientes siguen insesgados</td></tr><tr><td>Serial correlation positiva</td><td class=\"arrow\">SE ↓</td><td>t inflado → <b>Type I</b></td><td class=\"warncol\">⚠ con lagged dependent: sesga los coeficientes</td></tr><tr><td>Multicollinearity</td><td class=\"arrow\">SE ↑</td><td>t chico → no se rechaza → <b>Type II</b></td><td class=\"warncol\">⚠ el R² se mantiene alto (señal clave)</td></tr><tr><td>R²ⱼ de X sobre las demás ↑</td><td class=\"arrow\">VIF ↑</td><td>Más multicolinealidad (VIF=1/(1−R²ⱼ))</td><td class=\"warncol\">⚠ VIF&gt;5 preocupa, &gt;10 serio</td></tr></table></section><section><h2><span class=\"num\">3</span>LM4</h2><table class=\"master dir\"><tr><th>Si…</th><th>Dirección</th><th>Consecuencia</th><th>⚠ Contra-intuitivo</th></tr><tr><td>Coeficiente del logit positivo</td><td class=\"arrow\">P ↑</td><td>Subir esa X aumenta la probabilidad</td><td class=\"warncol\">⚠ magnitud del efecto marginal NO constante</td></tr><tr><td>Coeficiente del logit negativo</td><td class=\"arrow\">P ↓</td><td>Subir esa X baja la probabilidad</td><td>—</td></tr><tr><td>Log-Likelihood se acerca a 0</td><td class=\"arrow\">Ajuste ↑</td><td>Mejor ajuste del logit</td><td class=\"warncol\">⚠ siempre negativa; solo compara</td></tr></table></section><section><h2><span class=\"num\">4</span>LM5</h2><table class=\"master dir\"><tr><th>Si…</th><th>Dirección</th><th>Consecuencia</th><th>⚠ Contra-intuitivo</th></tr><tr><td>DW &lt; 2 / = 2 / &gt; 2</td><td class=\"arrow\">+ / 0 / −</td><td>Serial correlation positiva / nula / negativa</td><td class=\"warncol\">⚠ DW inválido en cualquier AR</td></tr><tr><td>b₁ → 1 (unit root)</td><td class=\"arrow\">No estac.</td><td>La serie deja de ser covariance stationary</td><td class=\"warncol\">⚠ el R² sube por construcción (engaña)</td></tr><tr><td>Coeficiente b₁ del log-linear</td><td class=\"arrow\">growth</td><td>Tasa = e^b₁ − 1</td><td class=\"warncol\">⚠ no es b₁ directamente</td></tr><tr><td>Autocorr. del residuo en lag estacional</td><td class=\"arrow\">≠ 0</td><td>Hay seasonality → agregar lag (4 trim / 12 mens)</td><td>—</td></tr><tr><td>a₁ del test ARCH significativo</td><td class=\"arrow\">Var pred.</td><td>La varianza es predecible; t-stats del AR inválidos</td><td class=\"warncol\">⚠ corregir con GLS</td></tr></table></section><section><h2><span class=\"num\">5</span>LM6 / LM7</h2><table class=\"master dir\"><tr><th>Si…</th><th>Dirección</th><th>Consecuencia</th><th>⚠ Contra-intuitivo</th></tr><tr><td>λ (LASSO) ↑</td><td class=\"arrow\">features ↓</td><td>Más coeficientes a 0; bias ↑, variance ↓</td><td class=\"warncol\">⚠ λ=0 equivale a OLS</td></tr><tr><td>k (KNN) ↑</td><td class=\"arrow\">suaviza</td><td>Variance ↓, bias ↑</td><td class=\"warncol\">⚠ k par → empates</td></tr><tr><td>Complejidad del modelo ↑</td><td class=\"arrow\">var ↑</td><td>Bias ↓ pero riesgo de overfitting</td><td>—</td></tr><tr><td>Document frequency (DF) ↑</td><td class=\"arrow\">IDF ↓</td><td>TF-IDF ↓ → palabra común, poco discriminante</td><td class=\"warncol\">⚠ TF-IDF alto = frecuente en POCOS docs</td></tr><tr><td>Clases desbalanceadas</td><td class=\"arrow\">usar F1</td><td>Accuracy engaña; F1 = 2PR/(P+R)</td><td>—</td></tr></table></section>"
     }
   ]
 }
